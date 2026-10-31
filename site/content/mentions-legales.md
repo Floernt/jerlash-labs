@@ -7,14 +7,14 @@ description: "Éditeur, hébergeur, licences et conditions d'utilisation du site
 
 Le site iavocat.be est édité par Florian Ernotte, à titre personnel.
 
-- Profession : avocat, inscrit au barreau de [À COMPLÉTER]
+- Profession : avocat, inscrit au barreau de Liège-Huy depuis 2014 ; spécialiste agréé en droit des technologies de l'information et de la communication
 - Titre professionnel obtenu en Belgique ; règles professionnelles : code de déontologie de l'avocat (avocats.be) [À VÉRIFIER : référence exacte et lien]
-- Cabinet d'exercice : Avroy Avocats, [À COMPLÉTER : adresse]
+- Cabinet d'exercice : Avroy Avocats, Liège, [À COMPLÉTER : adresse]
 - Numéro d'entreprise (BCE) : [À COMPLÉTER]
 - Assujettissement à la TVA : [À COMPLÉTER]
 - Contact : [À COMPLÉTER : adresse électronique]
 
-[À VÉRIFIER : liste des mentions exigées par le Code de droit économique pour un site de prestataire de services, et par les règles de communication de l'Ordre, pour un site personnel d'avocat qui ne propose pas de services]
+[À VÉRIFIER : liste des mentions exigées par le Code de droit économique et par les règles de communication de l'Ordre pour le site personnel d'un avocat]
 
 ## Hébergement
 

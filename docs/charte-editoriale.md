@@ -6,6 +6,10 @@ Fonctionnel et opérationnel. Chaque page répond à une question pratique : qu'
 
 Les mises en garde font partie du contenu. Elles sont concrètes (que peut-il arriver, que faire) et proportionnées. Pas de développement philosophique : si un sujet appelle une réflexion de fond, une phrase et un lien vers reflexions.florianernotte.be suffisent.
 
+## Communication de l'avocat
+
+Décision de Florian du 2026-10-31. Le site ne mentionne pas la notion d'offre et n'annonce aucun service que Florian fournit. Il est joignable : les rubriques « Contact » donnent une adresse pour écrire au sujet du site, de ses outils et de ses guides. Pas d'invitation à confier un dossier, pas d'appel à prendre contact en fin de page.
+
 ## Ton
 
 Un avocat qui explique à un confrère ce qu'il a testé. Première personne admise quand elle apporte une information ("j'ai testé avec 40 pièces, le traitement a pris..."). Pas de promesse, pas de superlatif, pas de dramatisation des enjeux.
