@@ -1,0 +1,19 @@
+fichier: RE maintenance.eml
+de: Marc Delvaux <m.delvaux@helpdesk-partners.example>
+a: Sophie Lambert <s.lambert@logistique-mosane.example>
+date: Wed, 26 Feb 2025 09:14:00 +0100
+objet: RE: Maintenance Flotta - reprise au 1er avril
+---
+Bonjour Madame Lambert,
+
+Merci pour votre message de lundi.
+
+Je vous confirme que nous reprendrons la maintenance de Flotta à partir du 1er avril 2025, aux mêmes conditions que celles prévues dans votre contrat actuel. Notre équipe de support à Gand compte douze techniciens, dont trois ont été formés sur Flotta par l'éditeur.
+
+Je peux vous proposer une réunion de présentation la semaine prochaine, à Namur ou en visioconférence, pour vous présenter notre organisation et répondre à vos questions sur les délais d'intervention.
+
+Bien à vous,
+
+Marc
+Account manager
++32 9 123 45 67

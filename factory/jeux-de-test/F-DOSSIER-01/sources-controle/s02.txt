@@ -1,0 +1,38 @@
+fichier: licence Codexia v2 SIGNE.docx
+auteur: jmasset
+---
+PROJET – version 2 du 12.02.2024 – sous réserve de l'accord du client
+
+CONTRAT DE LICENCE D'UTILISATION DU LOGICIEL « FLOTTA »
+
+ENTRE
+
+Codexia SRL, dont le siège est établi rue des Guillemins 112, 4000 Liège, BCE 0712.345.630, représentée par Monsieur Thomas Renard, gérant (« le Concédant »),
+
+ET
+
+Logistique Mosane SA, dont le siège est établi quai de la Batte 7, 5000 Namur, BCE 0456.781.215, représentée par [à compléter] (« le Licencié »).
+
+Article 1 – Objet
+Le Concédant concède au Licencié un droit non exclusif et non cessible d'utiliser le logiciel de gestion de flotte « Flotta ».
+
+Article 2 – Étendue de la licence
+La licence est consentie pour [40 / 50 ?] utilisateurs nommés.
+[Commentaire JM : le client souhaite 50, Codexia propose 40 – à valider]
+
+Article 3 – Redevance
+Redevance annuelle de 26.000 EUR hors TVA.
+[Commentaire JM : nous demandons 22.000 EUR]
+
+Article 4 – Durée
+Le contrat prend effet le 1er avril 2024 pour une durée de trois ans.
+[Commentaire JM : le client préfère cinq ans]
+
+Article 5 – Conditions générales
+Les conditions générales du Concédant s'appliquent intégralement.
+[Commentaire JM : refuser la primauté des CG – voir art. 6 de notre contre-proposition]
+
+Fait à ……………, le ……………
+
+Pour Codexia SRL                                   Pour Logistique Mosane SA
+……………………                                          ……………………

@@ -2,7 +2,7 @@
 id: P01
 titre: Inventaire d'un dossier contractuel
 type: outil public
-statut: idée
+statut: vérification (0.1.0, mode local)
 priorité: à définir
 source: zenzen-sol/legal-prompts, skill matter-intake (v0.4.0)
 licence_source: MIT
@@ -59,4 +59,4 @@ Temps : [À COMPLÉTER]. Délai : [À COMPLÉTER].
 
 ## 10. Prochaine étape
 
-Constituer le jeu de test fictif F-DOSSIER-01.
+0.1.0 livré le 2026-10-31 en mode local (outils/inventaire-dossier), mesuré sur F-DOSSIER-01 (dossier de développement et dossier de contrôle). Mode avec IA : ADR-015, proposée, à trancher par Florian.

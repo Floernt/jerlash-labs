@@ -1,0 +1,29 @@
+fichier: contrat licence ok.docx
+auteur: Pieter Claes
+---
+CONTRAT DE LICENCE DE LOGICIEL « SUBSIDIA »
+
+Entre :
+
+Datavolt NV, dont le siège est établi Mechelsesteenweg 45, 2000 Antwerpen, inscrite à la BCE sous le numéro 0654.321.913, représentée par Monsieur Pieter Claes, gedelegeerd bestuurder, ci-après « le Concédant » ;
+
+et
+
+Les Ateliers du Condroz ASBL, dont le siège est établi rue de la Station 3, 4557 Tinlot, inscrite à la BCE sous le numéro 0412.398.765, représentée par Madame Anne Goffin, présidente, ci-après « le Licencié ».
+
+Article 1 – Objet
+Le Concédant concède au Licencié une licence d'utilisation du logiciel de gestion de subsides « Subsidia » pour dix utilisateurs.
+
+Article 2 – Redevance
+Redevance annuelle de 3.600 EUR hors TVA.
+
+Article 3 – Entiercement des sources
+Le Concédant dépose le code source du logiciel auprès d'un agent d'entiercement indépendant. Le Licencié pourra obtenir la remise du code source en cas de faillite du Concédant ou de cessation de la maintenance pendant plus de soixante jours.
+
+Article 4 – Durée
+Trois ans à compter de la signature.
+
+Fait à Liège le 8 juin 2021 en deux exemplaires.
+
+Pour Datavolt NV                      Pour Les Ateliers du Condroz ASBL
+(get.) P. Claes                       (signé) A. Goffin

@@ -1,0 +1,10 @@
+{
+ "outil": "P01 inventaire-dossier, mode local",
+ "version_mesuree": "0.1.0",
+ "date": "2026-10-31",
+ "note": "Proportion minimale de pièces dont le champ est juste. Dossier de contrôle : valeurs mesurées à la version 0.1.0, sans réglage sur ce dossier.",
+ "planchers": {
+  "developpement": {"type": 1.0, "statut": 1.0, "date": 1.0, "parties": 1.0, "rattache_a": 1.0, "fait_foi": 1.0, "alertes": 1.0},
+  "controle": {"type": 0.87, "statut": 0.87, "date": 0.81, "parties": 0.68, "rattache_a": 0.5, "fait_foi": 0.93}
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "jeu": "F-DOSSIER-01 contrôle", "version": "1.0",
+ "pieces": {
+  "Document1.docx": {
+   "type": "contrat", "statut": "signé", "date": "2024-03-14",
+   "parties": ["Codexia SRL", "Logistique Mosane SA"],
+   "rattache_a": null, "fait_foi": true,
+   "remarque": "Contrat principal : licence Flotta signée le 14 mars 2024, cinq ans jusqu'au 31 mars 2029. Nom de fichier non parlant ; le statut ne ressort que des mentions « (signé) »."
+  },
+  "licence Codexia v2 SIGNE.docx": {
+   "type": "contrat", "statut": "projet", "date": "2024-02-12",
+   "parties": ["Codexia SRL", "Logistique Mosane SA"],
+   "rattache_a": "Document1.docx", "fait_foi": false,
+   "remarque": "Malgré « SIGNE » dans le nom du fichier, c'est le projet v2 du 12.02.2024 avec commentaires et blocs de signature vides."
+  },
+  "licence Codexia v1.docx": {
+   "type": "contrat", "statut": "projet", "date": "2024-01-29",
+   "parties": ["Codexia SRL", "Logistique Mosane SA"],
+   "rattache_a": "Document1.docx", "fait_foi": false,
+   "remarque": "Premier projet de Codexia du 29/01/2024 ; sa clause de cession libre (art. 5) n'a pas été reprise dans le contrat signé."
+  },
+  "CG.docx": {
+   "type": "conditions générales", "statut": "sans objet", "date": "2023-09-01",
+   "parties": ["Codexia SRL"],
+   "rattache_a": "Document1.docx", "fait_foi": false,
+   "remarque": "Conditions générales de Codexia, version du 1er septembre 2023, visées à l'article 6 de la licence ; leur art. 5 (cession sur simple notification) contredit l'art. 14 du contrat de maintenance."
+  },
+  "version finale DEF2.docx": {
+   "type": "contrat", "statut": "signé", "date": "2024-04-02",
+   "parties": ["Codexia SRL", "Logistique Mosane SA"],
+   "rattache_a": "Document1.docx", "fait_foi": true,
+   "remarque": "Contrat de maintenance signé, accessoire de la licence ; date écrite en toutes lettres (« deux avril deux mille vingt-quatre ») ; art. 14 subordonne la cession à l'accord du client."
+  },
+  "Avenant 1.docx": {
+   "type": "avenant", "statut": "signé", "date": "2025-01-15",
+   "parties": ["Codexia SRL", "Logistique Mosane SA"],
+   "rattache_a": "Document1.docx", "fait_foi": true,
+   "remarque": "Avenant n° 1 signé le 15.01.2025 : 80 utilisateurs et redevance portée à 34.500 EUR à partir du 1er avril 2025."
+  },
+  "Avenant 2 - final.docx": {
+   "type": "avenant", "statut": "projet", "date": "2025-03-03",
+   "parties": ["Codexia SRL", "Logistique Mosane SA"],
+   "rattache_a": "Document1.docx", "fait_foi": false,
+   "remarque": "Malgré « final » dans le nom, projet non signé du 3 mars 2025 prolongeant la licence jusqu'au 31 mars 2032 ; ne doit pas être traité comme en vigueur."
+  },
+  "lettre 10-02.docx": {
+   "type": "courrier", "statut": "signé", "date": "2025-02-10",
+   "parties": ["Codexia SRL", "Logistique Mosane SA"],
+   "rattache_a": "version finale DEF2.docx", "fait_foi": true,
+   "remarque": "Courrier recommandé signé de Codexia sollicitant l'accord sur la cession du contrat de maintenance à Helpdesk Partners BV au 1er avril 2025 ; Helpdesk Partners BV est mentionnée mais n'est ni expéditrice ni destinataire."
+  },
+  "Document3.docx": {
+   "type": "courrier", "statut": "projet", "date": "2025-02-20",
+   "parties": ["Logistique Mosane SA", "Codexia SRL"],
+   "rattache_a": "version finale DEF2.docx", "fait_foi": false,
+   "remarque": "Projet de réponse non envoyé (« NE PAS ENVOYER »), date de la lettre laissée en blanc ; évoque une résiliation au 31 mars 2025 que la note interne juge tardive."
+  },
+  "RE maintenance.eml": {
+   "type": "courriel", "statut": "sans objet", "date": "2025-02-26",
+   "parties": ["Helpdesk Partners BV", "Logistique Mosane SA"],
+   "rattache_a": "version finale DEF2.docx", "fait_foi": false,
+   "remarque": "La société expéditrice n'apparaît que dans l'adresse électronique (helpdesk-partners) ; annonce la reprise de la maintenance alors que l'accord du client n'est pas donné."
+  },
+  "Fwd cession.eml": {
+   "type": "courriel", "statut": "sans objet", "date": "2025-02-18",
+   "parties": ["Logistique Mosane SA"],
+   "rattache_a": "version finale DEF2.docx", "fait_foi": false,
+   "remarque": "Courriel de la cliente à son avocate sur la cession de la maintenance et la prolongation envisagée ; destinataire sans forme sociale."
+  },
+  "Avenant 2.eml": {
+   "type": "courriel", "statut": "sans objet", "date": "2025-03-04",
+   "parties": ["Codexia SRL", "Logistique Mosane SA"],
+   "rattache_a": "Document1.docx", "fait_foi": false,
+   "remarque": "Transmission du projet d'avenant n° 2 ; le nom de fichier en « Avenant 2 » ne doit pas le faire classer comme avenant."
+  },
+  "note.txt": {
+   "type": "note interne", "statut": "sans objet", "date": "2025-02-21",
+   "parties": [],
+   "rattache_a": null, "fait_foi": false,
+   "remarque": "Note interne de l'avocate : analyse cession, non-renouvellement de la maintenance, recommandation de ne pas signer l'avenant n° 2 ; signale que « contrat licence ok » appartient à un autre dossier."
+  },
+  "modele licence.docx": {
+   "type": "modèle", "statut": "sans objet", "date": null,
+   "parties": [],
+   "rattache_a": null, "fait_foi": false,
+   "remarque": "Gabarit vierge avec champs [●] ; aucune partie."
+  },
+  "contrat licence ok.docx": {
+   "type": "précédent", "statut": "signé", "date": "2021-06-08",
+   "parties": ["Datavolt NV", "Les Ateliers du Condroz ASBL"],
+   "rattache_a": null, "fait_foi": false,
+   "remarque": "Contrat signé d'un autre dossier (Datavolt NV / ASBL), conservé pour sa clause d'entiercement ; ne fait pas partie du dossier Logistique Mosane malgré un nom de fichier trompeur."
+  },
+  "scan0042.pdf": {
+   "type": "non lu", "statut": "inconnu", "date": null,
+   "parties": [],
+   "rattache_a": null, "fait_foi": null,
+   "remarque": "Scan sans couche texte : contenu inconnu, à faire lire (OCR) avant toute conclusion."
+  }
+ },
+ "dossier": {
+  "contrat_principal": "Document1.docx",
+  "etat": "Licence Flotta signée le 14 mars 2024 et modifiée par l'avenant n° 1 signé le 15 janvier 2025 ; contrat de maintenance signé le 2 avril 2024 dont Codexia SRL demande la cession à Helpdesk Partners BV, sans accord du client à ce jour ; avenant n° 2 de prolongation au stade de projet.",
+  "documents_qui_font_foi": ["Document1.docx", "version finale DEF2.docx", "Avenant 1.docx", "lettre 10-02.docx"],
+  "alertes_attendues": [
+   "« licence Codexia v2 SIGNE.docx » est un projet malgré son nom.",
+   "« Avenant 2 - final.docx » est un projet non signé de prolongation jusqu'en 2032.",
+   "Cession du contrat de maintenance à Helpdesk Partners BV demandée, accord du client requis (art. 14) et non donné ; les CG (art. 5) prévoient l'inverse.",
+   "Le projet de réponse « Document3.docx » mentionne une résiliation au 31 mars 2025 hors délai de préavis.",
+   "« contrat licence ok.docx » appartient à un autre dossier (Datavolt NV / Les Ateliers du Condroz ASBL).",
+   "« scan0042.pdf » n'a pas pu être lu."
+  ]
+ }
+}

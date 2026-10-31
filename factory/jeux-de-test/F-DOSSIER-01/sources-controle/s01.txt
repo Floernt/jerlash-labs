@@ -1,0 +1,50 @@
+fichier: Document1.docx
+auteur: Claire Dubois
+---
+CONTRAT DE LICENCE D'UTILISATION DU LOGICIEL « FLOTTA »
+
+ENTRE
+
+Codexia SRL, société à responsabilité limitée dont le siège est établi rue des Guillemins 112, 4000 Liège, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0712.345.630, valablement représentée par Monsieur Thomas Renard, gérant,
+
+ci-après « le Concédant »,
+
+ET
+
+Logistique Mosane SA, société anonyme dont le siège est établi quai de la Batte 7, 5000 Namur, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0456.781.215, valablement représentée par Madame Sophie Lambert, administratrice déléguée,
+
+ci-après « le Licencié ».
+
+IL EST CONVENU CE QUI SUIT :
+
+Article 1 – Objet
+Le Concédant concède au Licencié, qui l'accepte, un droit non exclusif et non cessible d'utiliser le logiciel de gestion de flotte « Flotta » (ci-après « le Logiciel ») aux conditions du présent contrat.
+
+Article 2 – Étendue de la licence
+La licence est consentie pour cinquante (50) utilisateurs nommés, sur le territoire de l'Union européenne, pour les seuls besoins internes du Licencié.
+
+Article 3 – Redevance
+En contrepartie de la licence, le Licencié verse au Concédant une redevance annuelle de 24.000 EUR hors TVA, payable par anticipation le 1er avril de chaque année.
+
+Article 4 – Durée
+Le présent contrat prend effet le 1er avril 2024 pour une durée de cinq ans, soit jusqu'au 31 mars 2029. Il pourra être prolongé par avenant écrit signé des deux parties.
+
+Article 5 – Maintenance
+La maintenance corrective et évolutive du Logiciel fait l'objet d'un contrat distinct.
+
+Article 6 – Conditions générales
+Les conditions générales de licence du Concédant, dans leur version du 1er septembre 2023, s'appliquent pour autant qu'elles ne dérogent pas au présent contrat. En cas de contradiction, le présent contrat prévaut.
+
+Article 7 – Résiliation
+Chaque partie peut résilier le présent contrat en cas de manquement grave de l'autre partie, non réparé dans les trente jours d'une mise en demeure adressée par envoi recommandé.
+
+Article 8 – Droit applicable et juridiction
+Le présent contrat est régi par le droit belge. Tout litige relève de la compétence exclusive des tribunaux de l'arrondissement judiciaire de Liège, division Liège.
+
+Fait à Liège, le 14 mars 2024, en deux exemplaires originaux, chaque partie reconnaissant avoir reçu le sien.
+
+Pour Codexia SRL
+(signé) Thomas Renard, gérant
+
+Pour Logistique Mosane SA
+(signé) Sophie Lambert, administratrice déléguée

@@ -1,0 +1,21 @@
+fichier: Fwd cession.eml
+de: Sophie Lambert <s.lambert@logistique-mosane.example>
+a: Julie Masset <j.masset@masset-avocats.example>
+date: Tue, 18 Feb 2025 16:42:00 +0100
+objet: TR: courrier Codexia - cession maintenance
+---
+Maître,
+
+Je vous transmets le courrier recommandé reçu de Codexia le 12 février. Ils veulent transférer la maintenance de Flotta à une société de Gand que nous ne connaissons pas.
+
+Pouvons-nous refuser ? Nos chauffeurs dépendent du logiciel tous les jours et nous ne pouvons pas nous permettre une interruption du support.
+
+Par ailleurs, Codexia nous parle d'un avenant pour prolonger la licence jusqu'en 2032. Je préférerais attendre de voir comment se passe la reprise de la maintenance avant de m'engager.
+
+Pouvez-vous me préparer un projet de réponse ?
+
+Bien cordialement,
+
+Sophie Lambert
+Administratrice déléguée
+Logistique Mosane SA

@@ -10,6 +10,31 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-10-31 - P01 Inventaire d'un dossier (mode local), F-DOSSIER-01, matrice des fournisseurs
+Fait :
+- Matrice des fournisseurs d'IA (ADR-010, point 4) dans docs/fournisseurs-ia.md :
+  - Anthropic, OpenAI, Mistral, Google ; sources officielles consultées le 2026-10-31 ;
+  - 22 points [À VÉRIFIER] ;
+  - constat : l'API directe d'Anthropic ne documente pas de traitement dans l'UE ; OpenAI, Mistral et Vertex AI en documentent un.
+- Jeu F-DOSSIER-01 v1.0, en deux parties :
+  - dossier de développement : 12 pièces, docx, eml, txt et un scan PDF sans texte ;
+  - dossier de contrôle : 16 pièces, rédigé par un agent sans accès au code ;
+  - générateur, inventaire attendu, évaluation, planchers de non-régression.
+- Outil outils/inventaire-dossier 0.1.0, mode local, sans IA :
+  - registre .docx (vérifié dans Word), .md et .json ;
+  - alertes ;
+  - fenêtre et ligne de commande ;
+  - 36 tests.
+- Relecture indépendante : 4 défauts bloquants et 9 à corriger, tous corrigés et testés (verifications/2026-10-31-securite.md).
+Mesure, dossier de contrôle : type 14/16, statut 14/16, fait foi 15/16, date 13/16, parties 11/16, rattachement 8/16.
+Incident de méthode, consigné dans resultats/2026-10-31-P01-v0.1.0.md : une règle plus stricte, issue de la relecture, faisait régresser le contrôle. Le test de non-régression l'a bloquée et la règle mesurée a été rétablie. Les totaux du contrôle ont donc guidé ce choix.
+Décisions : ADR-015 (mode IA de P01), Proposée, à trancher par Florian. Aucun code d'appel à une IA n'est écrit.
+Points ouverts (Florian) :
+- trancher ADR-015 : principe de l'envoi d'extraits pseudonymisés, options B ou C, fournisseurs proposés ;
+- relire docs/fournisseurs-ia.md ;
+- tester la fenêtre de P01.
+Prochaine étape : selon ADR-015, mode IA de P01 avec P09 en amont, ou amélioration des règles avec un nouveau dossier de contrôle.
+
 ## 2026-10-31 - P09 Lite (pseudonymisation) et jeu F-IDENT-01
 Fait :
 - Jeu F-IDENT-01 v1.0, en deux parties :

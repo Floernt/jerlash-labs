@@ -1,0 +1,3 @@
+fichier: scan0042.pdf
+---
+Scan sans couche texte.

@@ -1,0 +1,22 @@
+fichier: licence Codexia v1.docx
+auteur: Claire Dubois
+---
+Projet établi par Codexia SRL – 29/01/2024
+
+CONTRAT DE LICENCE
+
+Entre Codexia SRL (BCE 0712.345.630), ci-après « le Concédant », et Logistique Mosane SA (BCE 0456.781.215), ci-après « le Licencié ».
+
+1. Le Concédant concède au Licencié le droit d'utiliser le logiciel « Flotta » pour trente (30) utilisateurs nommés.
+
+2. Le Licencié verse une redevance annuelle de 28.000 EUR hors TVA.
+
+3. Le contrat est conclu pour une durée de trois ans à compter du 1er avril 2024, renouvelable tacitement par périodes d'un an.
+
+4. Les conditions générales du Concédant font partie intégrante du contrat et prévalent sur toute autre stipulation.
+
+5. Le Concédant peut céder le présent contrat à toute société de son choix sans l'accord du Licencié.
+
+Signatures :
+Pour le Concédant : ………………
+Pour le Licencié : ………………

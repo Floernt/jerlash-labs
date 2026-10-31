@@ -1,0 +1,26 @@
+fichier: MODELE - contrat de fourniture (cabinet).docx
+auteur: Cabinet
+---
+MODÈLE — CONTRAT DE FOURNITURE
+
+ENTRE :
+
+[NOM DU CLIENT] [FORME], dont le siège est établi [ADRESSE], inscrite à la BCE sous le numéro [●], représentée par [●],
+
+ET :
+
+[NOM DU FOURNISSEUR] [FORME], dont le siège est établi [ADRESSE], inscrite à la BCE sous le numéro [●], représentée par [●].
+
+Article 1. Objet
+[Décrire les biens ou services.]
+
+Article 2. Prix
+[Prix unitaire] EUR hors TVA. [Clause d'indexation : préciser l'indice et le plafond.]
+
+Article 3. Durée
+[Durée] à compter du [date]. [Préavis de résiliation.]
+
+Article 4. Conditions générales
+Les conditions générales du fournisseur ne s'appliquent pas.
+
+Note d'utilisation : vérifier la clause de juridiction selon le siège des parties.

@@ -1,0 +1,17 @@
+fichier: modele licence.docx
+auteur: Secrétariat
+---
+CONTRAT DE LICENCE DE LOGICIEL – MODÈLE
+
+Entre [DÉNOMINATION DU CONCÉDANT], [forme sociale], dont le siège est établi [adresse], BCE [●], représentée par [●], ci-après « le Concédant »,
+
+et [DÉNOMINATION DU LICENCIÉ], [forme sociale], dont le siège est établi [adresse], BCE [●], représentée par [●], ci-après « le Licencié ».
+
+Article 1 – Objet : [description du logiciel].
+Article 2 – Étendue : [nombre] utilisateurs ; territoire : [●].
+Article 3 – Redevance : [montant] EUR HTVA par [an / mois].
+Article 4 – Durée : [●] ans à compter du [●].
+Article 5 – Entiercement des sources (escrow) : [option].
+Article 6 – Droit applicable : droit belge ; tribunaux de [●].
+
+Fait à [lieu], le [date], en [nombre] exemplaires.

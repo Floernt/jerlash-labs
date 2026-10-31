@@ -1,0 +1,34 @@
+fichier: lettre 10-02.docx
+auteur: Thomas Renard
+---
+Codexia SRL
+Rue des Guillemins 112
+4000 Liège
+BCE 0712.345.630
+
+Logistique Mosane SA
+À l'attention de Madame Sophie Lambert
+Quai de la Batte 7
+5000 Namur
+
+Liège, le 10 février 2025
+
+Par envoi recommandé
+
+Objet : contrat de maintenance du logiciel « Flotta » – cession à Helpdesk Partners BV
+
+Madame,
+
+Dans le cadre de la réorganisation de nos activités, nous avons décidé de confier l'ensemble de nos activités de maintenance à la société Helpdesk Partners BV, dont le siège est établi Kortrijksesteenweg 220, 9000 Gent (KBO 0876.543.270).
+
+Conformément à l'article 14 du contrat de maintenance conclu le 2 avril 2024, nous sollicitons votre accord sur la cession de ce contrat à Helpdesk Partners BV, avec effet au 1er avril 2025. Les conditions de prix et les niveaux de service demeurent inchangés.
+
+Le contrat de licence du 14 mars 2024 n'est pas concerné par cette opération et reste conclu avec notre société.
+
+Nous vous saurions gré de nous faire part de votre position au plus tard le 28 février 2025.
+
+Veuillez agréer, Madame, l'expression de nos salutations distinguées.
+
+(signé)
+Thomas Renard
+Gérant

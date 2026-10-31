@@ -1,0 +1,19 @@
+fichier: Avenant 2.eml
+de: Claire Dubois <c.dubois@codexia.example>
+a: Sophie Lambert <s.lambert@logistique-mosane.example>
+date: Tue, 4 Mar 2025 11:05:00 +0100
+objet: Flotta - proposition d'avenant n° 2
+---
+Chère Madame Lambert,
+
+Comme convenu lors de notre appel, vous trouverez en annexe notre proposition d'avenant n° 2 au contrat de licence du 14 mars 2024, qui prolonge la licence de trois ans avec une réduction de 5 % de la redevance.
+
+L'article 3 relatif à la maintenance reste ouvert ; nous attendons votre retour sur la reprise par Helpdesk Partners BV.
+
+N'hésitez pas à me contacter pour toute question.
+
+Bien à vous,
+
+Claire Dubois
+Juriste
+Codexia SRL

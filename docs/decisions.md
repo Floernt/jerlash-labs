@@ -100,7 +100,7 @@ Décision (2026-10-31) :
 1. Les outils sans IA distante s'exécutent en mode A (navigateur entièrement local) ou B (application locale). P05 Lite est une application locale Python, sans dépendance externe et sans aucun accès réseau (vérifié par test).
 2. Un outil qui appelle une IA distante est une application locale (mode B). La clé est lue depuis une variable d'environnement ou un fichier .env local ignoré par git, jamais écrite dans un journal ni dans un rapport. L'application n'ouvre aucun port accessible depuis le réseau (écoute limitée à 127.0.0.1 si une interface web locale est nécessaire).
 3. L'appel direct depuis une page web avec clé saisie dans le navigateur est exclu par défaut. Une exception exige une ADR propre.
-4. Avant le premier outil à IA distante : matrice fournisseur x authentification x données envoyées x source officielle x date, établie à partir de la documentation officielle à jour [À FAIRE avant P09/P01].
+4. Avant le premier outil à IA distante : matrice fournisseur x authentification x données envoyées x source officielle x date, établie à partir de la documentation officielle à jour. Établie le 2026-10-31 : docs/fournisseurs-ia.md (à revoir à chaque version d'un outil à IA).
 
 ## ADR-011 - Premier outil : P05 Lite
 Date : 2026-10-31
@@ -130,3 +130,15 @@ Contexte : la fiche P09 envisageait la bibliothèque stella anonymize (Rust, Apa
 Options : A) règles en Python, bibliothèque standard seule ; B) stella anonymize ; C) modèle local de reconnaissance d'entités.
 Décision : A pour la version 0.1.0. Application locale (mode B d'ADR-010), sans IA ni réseau, relecture obligatoire avant enregistrement, table de correspondance locale pour rétablir les noms. F-IDENT-01 comporte un jeu de développement et un jeu de contrôle rédigé par un agent sans accès au code ; seul le second est publié comme mesure.
 Conséquences : mesure publiée sur la fiche (jeu de contrôle : rappel 63 %, précision 98 % ; noms de personnes 45 %). B et C restent à qualifier sur F-IDENT-01 ; un nouveau jeu de contrôle sera nécessaire dès que l'actuel aura servi à régler l'outil.
+
+## ADR-015 - P01 : mode avec IA distante
+Date : 2026-10-31
+Statut : Proposée (à trancher par Florian ; aucun code d'appel à une IA n'est écrit avant sa décision)
+Contexte : P01 0.1.0 fonctionne par règles, en local. Sur le dossier de contrôle F-DOSSIER-01, le rattachement des pièces (8/16) et les parties (11/16) sont ses points faibles ; un modèle de langue y apporterait vraisemblablement le plus. La matrice des fournisseurs exigée par ADR-010 (point 4) est établie dans docs/fournisseurs-ia.md (sources officielles consultées le 2026-10-31, 22 points [À VÉRIFIER]).
+Constats de la matrice utiles à la décision : l'API directe d'Anthropic ne documente pas de traitement dans l'UE ; OpenAI (point d'accès UE, sous condition de ZDR), Mistral (point d'accès UE) et Google Vertex AI (multirégion eu) en documentent un. Aucun fournisseur ne permet à l'outil de vérifier que le ZDR est actif : il ne peut afficher que la déclaration de l'utilisateur.
+Options :
+A) pas de mode IA pour P01 ; améliorer les règles (avec un nouveau dossier de contrôle) ;
+B) mode IA optionnel, application locale (ADR-010 mode B) : seuls les extraits nécessaires partent (intitulé, premières et dernières lignes de chaque pièce, en-têtes de courriel), après pseudonymisation par P09 et confirmation explicite de l'utilisateur, avec affichage préalable du fournisseur, du point d'accès, de la taille, du coût estimé et de la déclaration de conservation ; fournisseur au choix dans un fichier de configuration ;
+C) comme B, mais limité aux fournisseurs qui documentent un traitement dans l'UE.
+Recommandation : B, avec un écran d'envoi qui affiche le lieu de traitement déclaré, et C comme réglage par défaut. Le mode local reste le mode par défaut ; le mode IA complète les champs « à vérifier » et propose les rattachements, chaque proposition étant marquée comme venant du modèle.
+Points que Florian doit trancher : la compatibilité de principe de l'envoi d'extraits pseudonymisés avec le secret professionnel (docs/fournisseurs-ia.md §5.5) ; le choix entre B et C ; la liste des fournisseurs proposés.

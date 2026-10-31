@@ -1,0 +1,89 @@
+{
+ "jeu": "F-DOSSIER-01",
+ "version": "1.0",
+ "note": "Inventaire attendu du dossier fictif Brasserie du Condroz / Embouteillages de la Meuse. Les types et statuts suivent le vocabulaire de l'outil P01 ; les champs « remarque » indiquent ce qu'un relecteur doit trouver dans le registre, sans exiger une formulation.",
+ "pieces": {
+  "2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx": {
+   "type": "contrat", "statut": "signé", "date": "2023-03-15",
+   "parties": ["Brasserie du Condroz SRL", "Embouteillages de la Meuse SA"],
+   "rattache_a": null, "fait_foi": true,
+   "remarque": "contrat principal ; effet au 1er avril 2023, trois ans, préavis de six mois ; conditions générales exclues sauf leur article 7"
+  },
+  "Contrat fourniture v3 (projet Meuse) - commentaires.docx": {
+   "type": "contrat", "statut": "projet", "date": "2023-02-20",
+   "parties": ["Brasserie du Condroz SRL", "Embouteillages de la Meuse SA"],
+   "rattache_a": "2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx", "fait_foi": false,
+   "remarque": "version antérieure non signée, différente du contrat signé (prix, durée, conditions générales) ; contient des commentaires de négociation"
+  },
+  "Avenant 1 - prix 2024 - signé.docx": {
+   "type": "avenant", "statut": "signé", "date": "2024-01-10",
+   "parties": ["Brasserie du Condroz SRL", "Embouteillages de la Meuse SA"],
+   "rattache_a": "2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx", "fait_foi": true,
+   "remarque": "prix de 0,22 EUR pour l'année 2024 seulement"
+  },
+  "Avenant 2 - volumes 2025 - projet.docx": {
+   "type": "avenant", "statut": "projet", "date": null,
+   "parties": ["Brasserie du Condroz SRL", "Embouteillages de la Meuse SA"],
+   "rattache_a": "2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx", "fait_foi": false,
+   "remarque": "non signé, non daté ; déclaré sans objet par la lettre de résiliation du 27 juin 2025"
+  },
+  "CG Embouteillages Meuse 2022.docx": {
+   "type": "conditions générales", "statut": "sans objet", "date": "2022-01-01",
+   "parties": ["Embouteillages de la Meuse SA"],
+   "rattache_a": "2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx", "fait_foi": false,
+   "remarque": "applicables au contrat pour leur seul article 7 (réclamations), selon l'article 4 du contrat"
+  },
+  "2025-06-27 Lettre de résiliation - recommandé.docx": {
+   "type": "courrier", "statut": "signé", "date": "2025-06-27",
+   "parties": ["Brasserie du Condroz SRL", "Embouteillages de la Meuse SA"],
+   "rattache_a": "2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx", "fait_foi": true,
+   "remarque": "résiliation avec préavis de six mois, du 1er juillet au 31 décembre 2025 ; la preuve de l'envoi recommandé n'est pas au dossier"
+  },
+  "RE négociation avenant 2.eml": {
+   "type": "courriel", "statut": "sans objet", "date": "2025-02-18",
+   "parties": ["Embouteillages de la Meuse SA", "Brasserie du Condroz SRL"],
+   "rattache_a": "Avenant 2 - volumes 2025 - projet.docx", "fait_foi": false,
+   "remarque": "désaccord sur le prix de l'avenant 2 (0,215 contre 0,225 EUR)"
+  },
+  "Réclamation lot 2024-117.eml": {
+   "type": "courriel", "statut": "sans objet", "date": "2024-10-21",
+   "parties": ["Brasserie du Condroz SRL", "Embouteillages de la Meuse SA"],
+   "rattache_a": "2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx", "fait_foi": false,
+   "remarque": "réclamation sur le fondement de l'article 7 des conditions générales"
+  },
+  "MODELE - contrat de fourniture (cabinet).docx": {
+   "type": "modèle", "statut": "sans objet", "date": null, "parties": [],
+   "rattache_a": null, "fait_foi": false,
+   "remarque": "modèle du cabinet, hors du dossier contractuel"
+  },
+  "Précédent - contrat distribution Ardenne Boissons.docx": {
+   "type": "précédent", "statut": "signé", "date": "2021-09-04",
+   "parties": ["Ardenne Boissons SRL", "Cave du Val SA"],
+   "rattache_a": null, "fait_foi": false,
+   "remarque": "contrat d'un autre client : à signaler, ne doit pas être traité comme une pièce du dossier"
+  },
+  "notes réunion 03-03-2025.txt": {
+   "type": "note interne", "statut": "sans objet", "date": "2025-03-03", "parties": [],
+   "rattache_a": null, "fait_foi": false,
+   "remarque": "note interne du cabinet"
+  },
+  "Scan contrat signé 2023.pdf": {
+   "type": "non lu", "statut": "inconnu", "date": null, "parties": [],
+   "rattache_a": null, "fait_foi": null,
+   "remarque": "PDF sans couche texte : à examiner à la main ; le nom suggère un exemplaire signé du contrat"
+  }
+ },
+ "dossier": {
+  "contrat_principal": "2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx",
+  "etat": "résilié par lettre du 27 juin 2025, fin du préavis le 31 décembre 2025",
+  "documents_qui_font_foi": ["2023-03-15 Contrat de fourniture Condroz-Meuse - signé.docx",
+                             "Avenant 1 - prix 2024 - signé.docx",
+                             "2025-06-27 Lettre de résiliation - recommandé.docx"],
+  "alertes_attendues": [
+   "pièce d'un autre client (Précédent - contrat distribution Ardenne Boissons.docx)",
+   "PDF non lu (Scan contrat signé 2023.pdf)",
+   "avenant 2 non signé",
+   "preuve de l'envoi recommandé de la résiliation absente"
+  ]
+ }
+}

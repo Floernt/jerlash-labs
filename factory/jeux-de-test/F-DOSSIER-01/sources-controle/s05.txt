@@ -1,0 +1,38 @@
+fichier: version finale DEF2.docx
+auteur: Sophie Lambert
+---
+CONTRAT DE MAINTENANCE DU LOGICIEL « FLOTTA »
+
+Entre :
+
+Codexia SRL, BCE 0712.345.630, rue des Guillemins 112, 4000 Liège, représentée par Monsieur Thomas Renard, gérant, ci-après « le Prestataire » ;
+
+Et :
+
+Logistique Mosane SA, BCE 0456.781.215, quai de la Batte 7, 5000 Namur, représentée par Madame Sophie Lambert, administratrice déléguée, ci-après « le Client ».
+
+Préambule
+Le présent contrat est l'accessoire du contrat de licence d'utilisation du logiciel « Flotta » conclu entre les parties le 14 mars 2024.
+
+Article 1 – Prestations
+Le Prestataire assure la maintenance corrective (correction des anomalies) et évolutive (mises à jour) du logiciel, ainsi qu'un service d'assistance téléphonique les jours ouvrables de 8 h à 18 h.
+
+Article 2 – Niveaux de service
+Les anomalies bloquantes sont prises en charge dans les quatre heures ouvrables de leur signalement.
+
+Article 3 – Prix
+Le prix forfaitaire annuel est de 6.500 EUR hors TVA, indexé chaque année selon l'indice Agoria.
+
+Article 4 – Durée
+Le contrat est conclu pour une durée d'un an à compter du 1er avril 2024 et se renouvelle tacitement par périodes d'un an, sauf résiliation par l'une des parties moyennant un préavis de trois mois avant l'échéance.
+
+Article 14 – Cession
+Le Prestataire ne peut céder le présent contrat qu'avec l'accord préalable et écrit du Client, lequel ne peut être refusé sans juste motif.
+
+Article 15 – Résiliation pour manquement
+En cas de non-respect répété des niveaux de service, le Client peut résilier le contrat sans indemnité, par envoi recommandé.
+
+Fait à Namur, le deux avril deux mille vingt-quatre, en deux exemplaires.
+
+Pour le Prestataire,                     Pour le Client,
+(signé) T. Renard                         (signé) S. Lambert

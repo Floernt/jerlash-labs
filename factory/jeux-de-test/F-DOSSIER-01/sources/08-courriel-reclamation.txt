@@ -1,0 +1,14 @@
+fichier: Réclamation lot 2024-117.eml
+de: Marc Delhaise <marc@brasserie-condroz.example>
+a: Service clients <clients@embouteillages-meuse.example>
+date: Mon, 21 Oct 2024 09:15:00 +0200
+objet: Réclamation lot 2024-117 — bouchons défectueux
+---
+Madame, Monsieur,
+
+Le lot 2024-117, livré le 16 octobre 2024, présente un défaut de bouchage sur environ 4 % des bouteilles. Conformément à l'article 7 de vos conditions générales, rendu applicable par l'article 4 de notre contrat du 15 mars 2023, nous vous adressons la présente réclamation dans le délai de huit jours.
+
+Nous vous remercions de nous indiquer comment vous comptez remplacer les bouteilles concernées.
+
+Marc Delhaise
+Brasserie du Condroz SRL

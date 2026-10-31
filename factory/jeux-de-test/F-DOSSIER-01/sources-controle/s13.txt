@@ -1,0 +1,17 @@
+fichier: note.txt
+---
+NOTE INTERNE – dossier Logistique Mosane / Codexia
+Rédigée par JM le 21 février 2025
+
+1. La licence Flotta a été signée le 14 mars 2024 pour cinq ans, puis étendue à 80 utilisateurs par l'avenant n° 1 de janvier 2025. Elle n'est pas concernée par la cession annoncée.
+
+2. Le contrat de maintenance (signé le 2 avril 2024) interdit sa cession sans l'accord écrit du client, qui ne peut être refusé sans juste motif (art. 14). Les conditions générales de Codexia autorisent une cession sur simple notification (art. 5), mais le contrat de licence fait primer les stipulations particulières sur les CG ; il faudra vérifier si ce raisonnement vaut aussi pour la maintenance, qui ne renvoie pas expressément aux CG.
+
+3. Le client peut aussi ne pas renouveler la maintenance : préavis de trois mois avant l'échéance du 31 mars. Le délai est dépassé pour 2025 ; la prochaine fenêtre est le 31 décembre 2025.
+Attention : le projet de réponse (Document3) évoque une résiliation au 31 mars 2025 – à corriger.
+
+4. Ne pas signer l'avenant n° 2 (prolongation jusqu'en 2032) tant que la question de la maintenance n'est pas réglée.
+
+À faire : demander à Helpdesk Partners les garanties sur les niveaux de service ; corriger le projet de réponse.
+
+PS : le fichier « contrat licence ok » est le contrat Datavolt de 2021 (autre dossier), gardé comme exemple de clause d'escrow.

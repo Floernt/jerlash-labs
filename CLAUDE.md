@@ -79,10 +79,10 @@ Commandes (depuis la racine du dépôt) :
 
 - vérifier tout (secrets, tests, archive, site, liens) : `python scripts/verifier.py` ; avant publication : `--publication`
 - prévisualiser le site : `hugo server --source site`
-- tests d'un outil : `cd outils/<slug> && python -m unittest discover -s tests -v` (outils : controle-avant-envoi, pseudonymisation)
+- tests d'un outil : `cd outils/<slug> && python -m unittest discover -s tests -v` (outils : controle-avant-envoi, pseudonymisation, inventaire-dossier)
 - mesurer la pseudonymisation sur F-IDENT-01 : `python factory/jeux-de-test/F-IDENT-01/evaluer.py` (ne jamais régler une règle d'après le jeu de contrôle)
 - archive d'un outil et mise à jour de sa fiche (version, taille, SHA-256) : `python scripts/empaqueter.py --fiche`
-- régénérer un jeu de test : `python -I factory/jeux-de-test/<jeu>/generer.py` (F-DOCX-01, F-IDENT-01)
+- régénérer un jeu de test : `python -I factory/jeux-de-test/<jeu>/generer.py` (F-DOCX-01, F-IDENT-01, F-DOSSIER-01) ; mesurer l'inventaire : `python factory/jeux-de-test/F-DOSSIER-01/evaluer.py`
 - activer le contrôle des secrets avant commit (une fois par clone) : `git config core.hooksPath .githooks`
 - déployer : push sur `main` ; le workflow `.github/workflows/publier.yml` vérifie, construit et publie (bloqué tant qu'il reste des marqueurs `[À ...]` dans le contenu publié).
 
