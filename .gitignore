@@ -1,0 +1,21 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+secrets/
+
+# Données de test réelles : interdites dans le dépôt
+donnees-reelles/
+*.client.*
+
+# Dépendances et build
+node_modules/
+dist/
+build/
+.venv/
+__pycache__/
+
+# Système
+.DS_Store
+Thumbs.db
