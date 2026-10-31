@@ -1,0 +1,35 @@
+[[ORGANISATION:Distrifruits]] SRL
+Siège : [[ADRESSE:Grand-Route 120, 4367 Crisnée]]
+Numéro d'entreprise : [[NUMERO_ENTREPRISE:0665.432.173]] — RPM Liège, division Liège
+
+PROCÈS-VERBAL DE L'ASSEMBLÉE GÉNÉRALE ORDINAIRE DU 9 JUIN 2026
+
+La séance est ouverte à 18 heures sous la présidence de Mme [[PERSONNE:Martine Vanderheyden]], administratrice.
+
+Sont présents ou représentés les actionnaires suivants :
+
+1. Mme [[PERSONNE:Martine Vanderheyden]], domiciliée [[ADRESSE:rue de Fexhe 41, 4367 Crisnée]], titulaire de 600 actions ;
+2. M. [[PERSONNE:Luc Vanderheyden]], domicilié [[ADRESSE:rue de Fexhe 41, 4367 Crisnée]], titulaire de 300 actions ;
+3. La société [[ORGANISATION:Holding Ardennaise]] SA, numéro d'entreprise [[NUMERO_ENTREPRISE:0532.098.745]], représentée par M. [[PERSONNE:Olivier Thiry]], titulaire de 100 actions.
+
+Total : 1.000 actions sur 1.000.
+
+M. [[PERSONNE:Luc VANDERHEYDEN]] est désigné comme secrétaire. Il n'est pas désigné de scrutateur.
+
+ORDRE DU JOUR
+
+1. Approbation des comptes annuels clôturés au 31 décembre 2025.
+2. Décharge à l'organe d'administration.
+3. Rémunération de l'administratrice.
+
+DÉLIBÉRATIONS
+
+Première résolution. L'assemblée approuve les comptes annuels, qui présentent un bénéfice à reporter de 48.312,17 EUR. Cette résolution est adoptée à l'unanimité.
+
+Deuxième résolution. Par vote spécial, l'assemblée donne décharge à Mme [[PERSONNE:Vanderheyden]] pour l'exercice de son mandat.
+
+Troisième résolution. La rémunération de l'administratrice est fixée à 3.500,00 EUR brut par mois, versée sur le compte [[IBAN:BE37 7325 5501 2328]].
+
+L'ordre du jour étant épuisé, la séance est levée à 18 heures 40.
+
+[[PERSONNE:Martine Vanderheyden]], présidente           [[PERSONNE:Luc Vanderheyden]], secrétaire

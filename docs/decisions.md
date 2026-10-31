@@ -122,3 +122,11 @@ Statut : Acceptée (choix de Florian, d'après l'examen de quickadd.obsidian.gui
 Contexte : le premier style (texte à empattement, titres système, aucun accent) était jugé trop strict.
 Décision : police Inter 4.1 (InterVariable, romain et italique), servie par le site depuis site/static/fonts, licence SIL Open Font License 1.1 (fichier LICENSE-Inter.txt joint), téléchargée depuis la publication officielle github.com/rsms/inter (v4.1). Accent brique (#a23d24 en clair, #ef9478 en sombre), fond papier, cartes surélevées, page d'accueil en sections.
 Conséquences : environ 740 Ko de polices, mises en cache par le navigateur ; aucune ressource externe (CSP font-src 'self' inchangée). Empreintes SHA-256 : InterVariable.woff2 693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3 ; InterVariable-Italic.woff2 e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a.
+
+## ADR-014 - P09 Lite : pseudonymisation par règles, sans dépendance
+Date : 2026-10-31
+Statut : Proposée (décision déléguée par Florian le 2026-10-31 ("continue à build les outils"), à valider)
+Contexte : la fiche P09 envisageait la bibliothèque stella anonymize (Rust, Apache-2.0). Le plan d'amélioration (A07) exige une mesure du rappel et de la précision par catégorie sur F-IDENT-01 avant toute mise à disposition.
+Options : A) règles en Python, bibliothèque standard seule ; B) stella anonymize ; C) modèle local de reconnaissance d'entités.
+Décision : A pour la version 0.1.0. Application locale (mode B d'ADR-010), sans IA ni réseau, relecture obligatoire avant enregistrement, table de correspondance locale pour rétablir les noms. F-IDENT-01 comporte un jeu de développement et un jeu de contrôle rédigé par un agent sans accès au code ; seul le second est publié comme mesure.
+Conséquences : mesure publiée sur la fiche (jeu de contrôle : rappel 63 %, précision 98 % ; noms de personnes 45 %). B et C restent à qualifier sur F-IDENT-01 ; un nouveau jeu de contrôle sera nécessaire dès que l'actuel aura servi à régler l'outil.

@@ -1,0 +1,34 @@
+CR entretien – 14/10/2025 – 10h-11h15 – bureau Charleroi
+Dossier : [[REFERENCE:2025/CH/0458]] – [[PERSONNE:BENALI]] c/ [[ORGANISATION:LHE]]
+Présents : cliente ([[PERSONNE:FZB]]), son fils [[PERSONNE:Rayan]], moi. Stagiaire ([[PERSONNE:Maxime]]) en prise de notes.
+
+Identité
+- Mme [[PERSONNE:Fatima-Zahra Benali]], ° [[DATE_NAISSANCE:3 août 1979]]
+- adr. : [[ADRESSE:rue de Montigny 128 bte 4, 6000 Charleroi]]
+- gsm [[TELEPHONE:0498/27.64.15]] – mail perso [[EMAIL:fz.benali79@gmail.com]]
+- fils [[PERSONNE:Rayan Benali]], ° [[DATE_NAISSANCE:30/11/2001]], NN [[NUMERO_NATIONAL:01113019797]] (à vérifier, carte d’identité pas apportée) – l’a conduite, attend dans la voiture ([[PLAQUE:1-RBX-776]]), pb de stationnement
+
+Employeur
+- [[ORGANISATION:Logistique Hainaut Express]] SRL ("[[ORGANISATION:LHE]]"), BCE [[NUMERO_ENTREPRISE:0799812411]]
+- siège [[ADRESSE:Zoning de Jumet, rue de l’Industrie 22, 6040 Jumet]]
+- CP 140.03 (transport routier) – env. 85 travailleurs
+- resp. RH : [[PERSONNE:Sandrine Lecocq]] ; patron : [[PERSONNE:Dirk Van Hoof]] ("[[PERSONNE:Dirk]]" pour tout le monde)
+
+Faits
+- Engagée 01/03/2012, CDI, employée administrative, dernier brut mensuel 3.412 €
+- 26/09 : convoquée par [[PERSONNE:Lecocq]], reproche = achats perso avec la Visa société n° [[CARTE_BANCAIRE:4974012345678907]] (Carrefour, Zalando, ± 1.900 € sur 8 mois)
+- 29/09 : licenciement pour motif grave, lettre recommandée 01/10 – délai art. 35 loi 3/7/1978 ?? -> vérifier les 3 jours ouvrables (fait connu quand ?)
+- cliente : "[[PERSONNE:Dirk]] m’avait dit que je pouvais l’utiliser et rembourser en fin de mois" – accord verbal, pas d’écrit
+- remboursements faits depuis son compte allemand (ancien emploi à Aachen) [[IBAN:DE89 3704 0044 0532 0130 00]] → extraits à demander
+- collègue prêt à témoigner : [[PERSONNE:Ilse]] (compta), [[PERSONNE:Ilse Martens]], [[TELEPHONE:+32(0)71 30 58 44]] (ligne directe bureau ?)
+
+À faire
+1. Lettre de contestation motif grave à [[ORGANISATION:LHE]] (copie [[PERSONNE:Lecocq]])
+2. Demander C4 + décompte de sortie
+3. Cliente envoie relevés Visa + extraits DE par mail
+4. Délai de prescription : 1 an après fin du contrat (art. 15 LCT) – noter au 29/09/2026
+5. Vérifier si [[PERSONNE:Van Hoof]] est encore gérant (Moniteur)
+
+Honoraires : provision 750 € HTVA demandée, virement sur compte tiers cabinet. Aide juridique ? Non, revenus au-dessus du plafond.
+
+Impression : cliente crédible, très affectée. [[PERSONNE:Rayan]] plus remonté que sa mère – parle de "porter l’affaire sur TikTok", je l’ai découragé.

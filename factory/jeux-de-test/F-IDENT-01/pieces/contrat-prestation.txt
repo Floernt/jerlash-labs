@@ -1,0 +1,42 @@
+CONTRAT DE PRESTATION DE SERVICES
+
+ENTRE :
+
+Atelier Numérique Meuse SRL, dont le siège est établi quai de Rome 25, 4000 Liège, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0456.712.325, représentée par son gérant, M. Julien Dethier,
+
+ci-après dénommée « le Prestataire »,
+
+ET :
+
+La société anonyme Boulangeries Lemaire, dont le siège est établi chaussée de Tongres 310, 4000 Rocourt, TVA BE 0812.345.603, représentée par Mme Sophie Lemaire, administratrice déléguée,
+
+ci-après dénommée « le Client ».
+
+Article 1. Objet
+
+Le Prestataire développe pour le Client un logiciel de gestion des commandes, conformément au cahier des charges annexé (annexe 1).
+
+Article 2. Prix et paiement
+
+2.1. Le prix forfaitaire s'élève à 24.500,00 EUR hors TVA.
+
+2.2. Les factures sont payables à trente jours sur le compte BE15 0017 6543 2130 ouvert au nom du Prestataire.
+
+Article 3. Interlocuteurs
+
+Pour le Prestataire : M. Julien Dethier, julien.dethier@atelier-meuse.example, +32 4 222 33 44.
+
+Pour le Client : M. Kevin Lambotte, responsable informatique, k.lambotte@boulangeries-lemaire.example, 0498/76.54.32.
+
+Article 4. Confidentialité
+
+Chaque partie garde confidentielles les informations reçues de l'autre partie pendant la durée du contrat et cinq ans après son terme.
+
+Article 5. Droit applicable
+
+Le contrat est soumis au droit belge. Les tribunaux de l'arrondissement de Liège sont seuls compétents.
+
+Fait à Liège, le 14 octobre 2026, en deux exemplaires.
+
+Pour Atelier Numérique Meuse SRL : Julien Dethier, gérant.
+Pour Boulangeries Lemaire SA : Sophie Lemaire, administratrice déléguée.

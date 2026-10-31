@@ -10,6 +10,32 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-10-31 - P09 Lite (pseudonymisation) et jeu F-IDENT-01
+Fait :
+- Jeu F-IDENT-01 v1.0, en deux parties :
+  - jeu de développement : 6 textes, 102 entités ;
+  - jeu de contrôle : 8 textes, 186 entités, rédigé par un agent sans accès au code ;
+  - générateur avec contrôle des sommes de contrôle, et évaluation par catégorie. Le contenu du jeu de contrôle n'est jamais affiché par défaut.
+- Outil outils/pseudonymisation 0.1.0 :
+  - règles en bibliothèque standard, douze catégories, propagation des noms ;
+  - marqueurs cohérents, table de correspondance locale, rétablissement ;
+  - fenêtre qui impose la relecture, ligne de commande ;
+  - 67 tests.
+- Relecture indépendante du code : 4 défauts bloquants et 9 à corriger, tous corrigés et couverts par un test. Détail dans verifications/2026-10-31-securite.md.
+- Fiche du site, nouveauté, archive et empreinte. Intégration à scripts/verifier.py (tests de tous les outils) et à scripts/empaqueter.py.
+Mesure publiée, jeu de contrôle :
+- rappel de 63 %, précision de 98 % ;
+- identifiants à somme de contrôle et courriels : 100 % ;
+- noms de personnes : 45 % ;
+- références de dossier : 20 %.
+Sur le jeu de développement, le rappel est de 100 %, ce qui ne mesure que l'ajustement des règles.
+Décisions : ADR-014 (P09 Lite par règles, sans dépendance), Proposée.
+Points ouverts (Florian) :
+- valider ADR-014 et la manière de publier la mesure ;
+- tester la fenêtre de P09 ;
+- les deux adresses de contact des fiches portent les marqueurs n° 15 et 16.
+Prochaine étape : choisir entre améliorer la détection des noms (modèle local, liste de noms des parties), ce qui imposera un nouveau jeu de contrôle, et passer à l'outil suivant (P01, F-DOSSIER-01).
+
 ---
 
 ## 2026-10-31 - Nouvelle identité visuelle du site

@@ -16,4 +16,4 @@ Jeux prévus :
 
 - F-DOSSIER-01 : dossier contractuel de prestation de services, avec avenants et échanges (P01, P02, P03).
 - F-DOCX-01 : contrat .docx chargé de pièges (commentaires, métadonnées, renvois cassés) (P04, P05).
-- F-IDENT-01 : textes contenant des identifiants belges fictifs (P09).
+- F-IDENT-01 : textes contenant des identifiants belges fictifs (P09), livré : jeu de développement et jeu de contrôle.

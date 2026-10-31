@@ -1,0 +1,9 @@
+# Termes à remplacer en tout cas, un par ligne. Les lignes qui commencent par # sont ignorées.
+# Sans catégorie, le terme est remplacé par [TERME_1], [TERME_2]...
+# Pour choisir la catégorie : CATÉGORIE | texte
+# Catégories : PERSONNE, ORGANISATION, ADRESSE, NUMERO_NATIONAL, NUMERO_ENTREPRISE, IBAN, CARTE_BANCAIRE,
+#              EMAIL, TELEPHONE, DATE_NAISSANCE, PLAQUE, REFERENCE, TERME
+# Exemples fictifs :
+PERSONNE | Jean Exemple
+ORGANISATION | Brasserie Exemple
+Projet Lumière

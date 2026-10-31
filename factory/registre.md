@@ -12,10 +12,10 @@ Tenu par `ops-factory`. Une ligne par projet. Mettre à jour à chaque changemen
 | P06 | Simulateur de négociation | idée | dépend de P04, P10 | lecture de l'architecture source | architecte | 2026-10-31 |
 | P07 | Mémoire de dossier | idée | | test sur dossier fictif | developpeur | 2026-10-31 |
 | P08 | Revue tabulaire | idée | | choix outil ou guide | Florian | 2026-10-31 |
-| P09 | Pseudonymisation locale | idée | | test de la bibliothèque sur texte belge fictif | architecte | 2026-10-31 |
+| P09 | Pseudonymisation (P09 Lite 0.1.0, ADR-014) | vérification | marqueurs [À COMPLÉTER] du site | Florian : tester la fenêtre, valider ADR-014 et la mesure publiée | Florian | 2026-10-31 |
 | P10 | Composant .docx | idée | ADR-002 | prototype d'évaluation | architecte | 2026-10-31 |
 | P11 | Composant conversion | idée | | mesure installation et temps | architecte | 2026-10-31 |
-| P12 | Banc d'essai | cadrage | | F-DOCX-01 v1.0 livré et branché sur la CI ; créer F-IDENT-01 puis F-DOSSIER-01 | testeur | 2026-10-31 |
+| P12 | Banc d'essai | cadrage | | F-DOCX-01 et F-IDENT-01 v1.0 livrés et branchés sur la CI ; créer F-DOSSIER-01 | testeur | 2026-10-31 |
 | P13 | Guide plateformes open source | idée | après lancement | aucune | redacteur | 2026-10-31 |
 | F01 | Méthode d'ingénierie | idée | ADR-009 | test open-pstack sur dépôt jetable | ops-factory | 2026-10-31 |
 | F02 | Revue UX | intégré | | aucune | ops-factory | 2026-10-31 |

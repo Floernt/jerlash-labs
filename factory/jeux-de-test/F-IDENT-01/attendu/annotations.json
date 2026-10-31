@@ -1,0 +1,745 @@
+{
+ "jeu": "F-IDENT-01",
+ "version": "1.0",
+ "pieces": {
+  "conclusions-bail.txt": [
+   {
+    "categorie": "REFERENCE",
+    "debut": 79,
+    "fin": 88,
+    "texte": "24/1234/A"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 125,
+    "fin": 140,
+    "texte": "Thomas Wilmotte"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 148,
+    "fin": 160,
+    "texte": "12 mars 1978"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 190,
+    "fin": 205,
+    "texte": "78.03.12-047.88"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 217,
+    "fin": 246,
+    "texte": "rue des Glacis 14, 4000 Liège"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 283,
+    "fin": 297,
+    "texte": "Claire Hanquet"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 335,
+    "fin": 377,
+    "texte": "boulevard de la Sauvenière 102, 4000 Liège"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 379,
+    "fin": 412,
+    "texte": "c.hanquet@cabinet-exemple.example"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 428,
+    "fin": 442,
+    "texte": "Nadia Bensalem"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 451,
+    "fin": 461,
+    "texte": "21/09/1985"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 474,
+    "fin": 518,
+    "texte": "avenue de l'Observatoire 7 bte 3, 4000 Liège"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 592,
+    "fin": 600,
+    "texte": "Wilmotte"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 627,
+    "fin": 635,
+    "texte": "Bensalem"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 657,
+    "fin": 688,
+    "texte": "rue Saint-Gilles 58, 4000 Liège"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 772,
+    "fin": 791,
+    "texte": "BE14 0631 2345 6783"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 860,
+    "fin": 868,
+    "texte": "Bensalem"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 935,
+    "fin": 948,
+    "texte": "0475 12 34 56"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1024,
+    "fin": 1039,
+    "texte": "Fabrice Lonneux"
+   },
+   {
+    "categorie": "PLAQUE",
+    "debut": 1077,
+    "fin": 1086,
+    "texte": "1-ABC-123"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1374,
+    "fin": 1382,
+    "texte": "Bensalem"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1460,
+    "fin": 1474,
+    "texte": "Claire HANQUET"
+   }
+  ],
+  "contrat-prestation.txt": [
+   {
+    "categorie": "ORGANISATION",
+    "debut": 44,
+    "fin": 67,
+    "texte": "Atelier Numérique Meuse"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 98,
+    "fin": 125,
+    "texte": "quai de Rome 25, 4000 Liège"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 189,
+    "fin": 201,
+    "texte": "0456.712.325"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 234,
+    "fin": 248,
+    "texte": "Julien Dethier"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 315,
+    "fin": 335,
+    "texte": "Boulangeries Lemaire"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 362,
+    "fin": 399,
+    "texte": "chaussée de Tongres 310, 4000 Rocourt"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 405,
+    "fin": 420,
+    "texte": "BE 0812.345.603"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 442,
+    "fin": 456,
+    "texte": "Sophie Lemaire"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 820,
+    "fin": 839,
+    "texte": "BE15 0017 6543 2130"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 923,
+    "fin": 937,
+    "texte": "Julien Dethier"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 939,
+    "fin": 975,
+    "texte": "julien.dethier@atelier-meuse.example"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 977,
+    "fin": 992,
+    "texte": "+32 4 222 33 44"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1015,
+    "fin": 1029,
+    "texte": "Kevin Lambotte"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 1057,
+    "fin": 1096,
+    "texte": "k.lambotte@boulangeries-lemaire.example"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 1098,
+    "fin": 1111,
+    "texte": "0498/76.54.32"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 1473,
+    "fin": 1496,
+    "texte": "Atelier Numérique Meuse"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1503,
+    "fin": 1517,
+    "texte": "Julien Dethier"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 1532,
+    "fin": 1552,
+    "texte": "Boulangeries Lemaire"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1558,
+    "fin": 1572,
+    "texte": "Sophie Lemaire"
+   }
+  ],
+  "contrat-prestation.docx": [
+   {
+    "categorie": "ORGANISATION",
+    "debut": 44,
+    "fin": 67,
+    "texte": "Atelier Numérique Meuse"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 98,
+    "fin": 125,
+    "texte": "quai de Rome 25, 4000 Liège"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 189,
+    "fin": 201,
+    "texte": "0456.712.325"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 234,
+    "fin": 248,
+    "texte": "Julien Dethier"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 315,
+    "fin": 335,
+    "texte": "Boulangeries Lemaire"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 362,
+    "fin": 399,
+    "texte": "chaussée de Tongres 310, 4000 Rocourt"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 405,
+    "fin": 420,
+    "texte": "BE 0812.345.603"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 442,
+    "fin": 456,
+    "texte": "Sophie Lemaire"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 820,
+    "fin": 839,
+    "texte": "BE15 0017 6543 2130"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 923,
+    "fin": 937,
+    "texte": "Julien Dethier"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 939,
+    "fin": 975,
+    "texte": "julien.dethier@atelier-meuse.example"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 977,
+    "fin": 992,
+    "texte": "+32 4 222 33 44"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1015,
+    "fin": 1029,
+    "texte": "Kevin Lambotte"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 1057,
+    "fin": 1096,
+    "texte": "k.lambotte@boulangeries-lemaire.example"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 1098,
+    "fin": 1111,
+    "texte": "0498/76.54.32"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 1473,
+    "fin": 1496,
+    "texte": "Atelier Numérique Meuse"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1503,
+    "fin": 1517,
+    "texte": "Julien Dethier"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 1532,
+    "fin": 1552,
+    "texte": "Boulangeries Lemaire"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1558,
+    "fin": 1572,
+    "texte": "Sophie Lemaire"
+   }
+  ],
+  "courrier-client.txt": [
+   {
+    "categorie": "PERSONNE",
+    "debut": 7,
+    "fin": 22,
+    "texte": "Isabelle Gérard"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 23,
+    "fin": 46,
+    "texte": "Rue du Pont 9, 4500 Huy"
+   },
+   {
+    "categorie": "REFERENCE",
+    "debut": 57,
+    "fin": 69,
+    "texte": "2026/0457/FE"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 169,
+    "fin": 182,
+    "texte": "Robert Gérard"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 286,
+    "fin": 299,
+    "texte": "Robert Gérard"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 313,
+    "fin": 327,
+    "texte": "5 janvier 1962"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 345,
+    "fin": 356,
+    "texte": "62010522264"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 375,
+    "fin": 394,
+    "texte": "Pierre-Yves Collard"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 554,
+    "fin": 566,
+    "texte": "Alain Gérard"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 594,
+    "fin": 610,
+    "texte": "BE24340098765438"
+   },
+   {
+    "categorie": "CARTE_BANCAIRE",
+    "debut": 700,
+    "fin": 719,
+    "texte": "4111 1111 1111 1111"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 800,
+    "fin": 812,
+    "texte": "04 223 45 67"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 828,
+    "fin": 863,
+    "texte": "secretariat@cabinet-exemple.example"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 944,
+    "fin": 958,
+    "texte": "Claire Hanquet"
+   }
+  ],
+  "pv-assemblee.txt": [
+   {
+    "categorie": "ORGANISATION",
+    "debut": 0,
+    "fin": 12,
+    "texte": "Distrifruits"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 25,
+    "fin": 54,
+    "texte": "Grand-Route 120, 4367 Crisnée"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 77,
+    "fin": 89,
+    "texte": "0665.432.173"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 243,
+    "fin": 263,
+    "texte": "Martine Vanderheyden"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 348,
+    "fin": 368,
+    "texte": "Martine Vanderheyden"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 381,
+    "fin": 410,
+    "texte": "rue de Fexhe 41, 4367 Crisnée"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 445,
+    "fin": 461,
+    "texte": "Luc Vanderheyden"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 473,
+    "fin": 502,
+    "texte": "rue de Fexhe 41, 4367 Crisnée"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 545,
+    "fin": 563,
+    "texte": "Holding Ardennaise"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 588,
+    "fin": 600,
+    "texte": "0532.098.745"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 621,
+    "fin": 634,
+    "texte": "Olivier Thiry"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 700,
+    "fin": 716,
+    "texte": "Luc VANDERHEYDEN"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1195,
+    "fin": 1207,
+    "texte": "Vanderheyden"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 1360,
+    "fin": 1379,
+    "texte": "BE37 7325 5501 2328"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1449,
+    "fin": 1469,
+    "texte": "Martine Vanderheyden"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1492,
+    "fin": 1508,
+    "texte": "Luc Vanderheyden"
+   }
+  ],
+  "sans-donnees.txt": [],
+  "variantes.txt": [
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 79,
+    "fin": 90,
+    "texte": "85092116385"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 93,
+    "fin": 108,
+    "texte": "03.06.17-081.28"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 111,
+    "fin": 126,
+    "texte": "91 11 30 354 55"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 129,
+    "fin": 142,
+    "texte": "690714 118 87"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 168,
+    "fin": 180,
+    "texte": "BE0456712325"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 183,
+    "fin": 195,
+    "texte": "0812 345 603"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 202,
+    "fin": 217,
+    "texte": "BE 0665 432 173"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 230,
+    "fin": 246,
+    "texte": "BE15001765432130"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 249,
+    "fin": 268,
+    "texte": "be24 3400 9876 5438"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 271,
+    "fin": 304,
+    "texte": "FR76 3000 6000 0112 3456 7890 189"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 320,
+    "fin": 338,
+    "texte": "+32 (0)4 223 45 67"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 341,
+    "fin": 358,
+    "texte": "0032 475 12 34 56"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 361,
+    "fin": 373,
+    "texte": "0475/123.456"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 376,
+    "fin": 393,
+    "texte": "+33 6 12 34 56 78"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 408,
+    "fin": 434,
+    "texte": "Prenom.Nom@Exemple.example"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 437,
+    "fin": 473,
+    "texte": "info+dossier@cabinet-exemple.example"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 488,
+    "fin": 499,
+    "texte": "DUPONT Jean"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 507,
+    "fin": 522,
+    "texte": "Van den Bossche"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 541,
+    "fin": 550,
+    "texte": "de Lannoy"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 559,
+    "fin": 578,
+    "texte": "Anne-Sophie Lejeune"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 595,
+    "fin": 609,
+    "texte": "Pieter D’Hondt"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 618,
+    "fin": 633,
+    "texte": "Élodie Fraipont"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 660,
+    "fin": 678,
+    "texte": "Jean-Pierre MOREAU"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 717,
+    "fin": 729,
+    "texte": "Karim Haddad"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 747,
+    "fin": 761,
+    "texte": "Lucie Maréchal"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 775,
+    "fin": 790,
+    "texte": "Garage Derouaux"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 804,
+    "fin": 816,
+    "texte": "Immo Condroz"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 835,
+    "fin": 850,
+    "texte": "Les Amis du Val"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 864,
+    "fin": 894,
+    "texte": "avenue Rogier 19/2, 4000 Liège"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 897,
+    "fin": 924,
+    "texte": "Place du Marché 1, 4500 Huy"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 927,
+    "fin": 953,
+    "texte": "Kerkstraat 12, 3000 Leuven"
+   },
+   {
+    "categorie": "PLAQUE",
+    "debut": 965,
+    "fin": 974,
+    "texte": "2-XYZ-987"
+   }
+  ]
+ }
+}

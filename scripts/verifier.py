@@ -50,12 +50,15 @@ def verifier_secrets() -> None:
 
 def verifier_outils() -> None:
     print("\n[2] Outils : tests automatiques")
-    r = lancer([sys.executable, "-m", "unittest", "discover", "-s", "tests"],
-               cwd=os.path.join(DEPOT, "outils", "controle-avant-envoi"))
-    bilan = [l for l in r.stderr.splitlines() if l.startswith(("Ran ", "OK", "FAILED"))]
-    if r.returncode:
-        print(r.stderr[-4000:])
-    etape(r.returncode == 0, "controle-avant-envoi : " + " / ".join(bilan))
+    racine = os.path.join(DEPOT, "outils")
+    for outil in sorted(os.listdir(racine)):
+        if not os.path.isdir(os.path.join(racine, outil, "tests")):
+            continue
+        r = lancer([sys.executable, "-m", "unittest", "discover", "-s", "tests"], cwd=os.path.join(racine, outil))
+        bilan = [l for l in r.stderr.splitlines() if l.startswith(("Ran ", "OK", "FAILED"))]
+        if r.returncode:
+            print(r.stderr[-4000:])
+        etape(r.returncode == 0, f"{outil} : " + " / ".join(bilan))
 
 
 def verifier_archive() -> None:
@@ -143,8 +146,9 @@ def verifier_typographie() -> None:
 def verifier_marqueurs(publication: bool) -> None:
     print("\n[5] Marqueurs de travail dans ce qui sera publié")
     trouves = []
-    racines = [os.path.join(SITE, "content"), os.path.join(SITE, "static"),
-               os.path.join(DEPOT, "outils", "controle-avant-envoi", "FICHE.md")]
+    racines = [os.path.join(SITE, "content"), os.path.join(SITE, "static")] + [
+        os.path.join(DEPOT, "outils", o, "FICHE.md") for o in sorted(os.listdir(os.path.join(DEPOT, "outils")))
+        if os.path.isfile(os.path.join(DEPOT, "outils", o, "FICHE.md"))]
     for racine in racines:
         chemins = [racine] if os.path.isfile(racine) else \
             [os.path.join(r, n) for r, _d, ns in os.walk(racine) for n in ns if n.endswith((".md", ".txt"))]

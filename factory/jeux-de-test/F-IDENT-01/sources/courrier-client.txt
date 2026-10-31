@@ -1,0 +1,23 @@
+Madame [[PERSONNE:Isabelle Gérard]]
+[[ADRESSE:Rue du Pont 9, 4500 Huy]]
+
+N/Réf. : [[REFERENCE:2026/0457/FE]]
+V/Réf. : votre courriel du 20 octobre 2026
+
+Liège, le 27 octobre 2026
+
+Concerne : succession de M. [[PERSONNE:Robert Gérard]]
+
+Madame,
+
+Je fais suite à notre entretien de lundi dernier au sujet de la succession de votre père, M. [[PERSONNE:Robert Gérard]], né à Huy le [[DATE_NAISSANCE:5 janvier 1962]] (numéro national [[NUMERO_NATIONAL:62010522264]]).
+
+Le notaire, Me [[PERSONNE:Pierre-Yves Collard]], m'a confirmé que la déclaration de succession doit être déposée avant le 15 décembre. Il me demande de lui communiquer le numéro de compte de votre frère, M. [[PERSONNE:Alain Gérard]], qui m'a indiqué le compte [[IBAN:BE24340098765438]].
+
+Votre frère m'a également transmis la carte de crédit de votre père, portant le numéro [[CARTE_BANCAIRE:4111 1111 1111 1111]], que je vous suggère de faire bloquer sans attendre.
+
+Vous pouvez me joindre au [[TELEPHONE:04 223 45 67]] ou à l'adresse [[EMAIL:secretariat@cabinet-exemple.example]].
+
+Je vous prie d'agréer, Madame, l'expression de mes sentiments distingués.
+
+Me [[PERSONNE:Claire Hanquet]]

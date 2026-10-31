@@ -39,14 +39,14 @@
 - [ ] Vérifier dans la documentation à jour de Claude Code le format des agents, commandes, skills et hooks, et la possibilité pour un sous-agent d'en appeler un autre
 - [ ] Décider AM-001 (hook mémoire) et AM-002 (détection de secrets)
 - [ ] Concevoir les composants cle-api, fournisseurs et cout
-- [ ] Créer les jeux de test F-DOSSIER-01, F-IDENT-01 (F-DOCX-01 livré)
+- [ ] Créer le jeu de test F-DOSSIER-01 (F-DOCX-01 et F-IDENT-01 livrés)
 
 ## Projets issus de l'exploration de github.com/zenzen-sol (2026-10-31)
 
 Fiches dans projets/. Ordre proposé, à valider.
 
 Composants et fondations
-- [ ] P09 Pseudonymisation locale (stella/anonymize) - priorité haute, premier outil candidat
+- [x] P09 Pseudonymisation locale - P09 Lite 0.1.0 (outils/pseudonymisation, ADR-014) ; stella et modèle local à qualifier
 - [ ] P11 Conversion locale des pièces (Docling) - conditionne P01, P06, P08
 - [ ] P10 Édition .docx dans le navigateur (docx-editor) - conditionne P02 à P06
 - [ ] P12 Banc d'essai sur cas fictifs
@@ -78,10 +78,10 @@ Traiter les P0 avant les P1, sauf dépendance technique justifiée par écrit. C
 - [ ] A01 (P0) : Clarifier les modes d'exécution et sécuriser le BYOK ; rédiger puis faire arbitrer ADR-010. Voir PLAN_AMELIORATIONS.md §3.
 - [x] A02 (P0, socle livré : secrets en pré-commit et CI, audit des imports réseau, test sans réseau) : Modèle de menace et contrôles de sécurité exécutables (secrets en pré-commit et CI, flux réseau testés, dépendances). Voir PLAN_AMELIORATIONS.md §3.
 - [ ] A03 (P0) : Corriger les assertions de conformité et de responsabilité (ADR-004, cahier des charges, sécurité, fiche outil). Voir PLAN_AMELIORATIONS.md §3.
-- [~] A04 (P0, F-DOCX-01 et CI bloquante livrés ; F-IDENT-01 et F-DOSSIER-01 restent) : Passer P12 en priorité haute ; créer F-DOCX-01, F-IDENT-01, F-DOSSIER-01 ; CI bloquante. Voir PLAN_AMELIORATIONS.md §4.
+- [~] A04 (P0, F-DOCX-01, F-IDENT-01 et CI bloquante livrés ; F-DOSSIER-01 reste) : Passer P12 en priorité haute ; créer F-DOCX-01, F-IDENT-01, F-DOSSIER-01 ; CI bloquante. Voir PLAN_AMELIORATIONS.md §4.
 - [ ] A05 (P0) : Parcours léger / standard / renforcé ; preuves observables ; pas d'auto-certification. Voir PLAN_AMELIORATIONS.md §4.
 - [x] A06 (P0, P05 Lite 0.1.0 développé et testé ; pilote à faire) : P05 Lite comme premier outil candidat : contrôle .docx non destructif, sans IA ni clé. Voir PLAN_AMELIORATIONS.md §5.
-- [ ] A07 (P0) : P09 après P05 ; mesurer rappel et précision par catégorie sur F-IDENT-01. Voir PLAN_AMELIORATIONS.md §5.
+- [x] A07 (P0, mesure publiée : jeu de contrôle F-IDENT-01, rappel 63 %, précision 98 %) : P09 après P05 ; mesurer rappel et précision par catégorie sur F-IDENT-01. Voir PLAN_AMELIORATIONS.md §5.
 - [ ] A08 (P0) : Prototypes de faisabilité ciblés pour P04, P10, P11 avant tout composant complet. Voir PLAN_AMELIORATIONS.md §5.
 - [ ] A09 (P1) : Validation du besoin avant le statut prêt (nouveaux champs de fiche projet). Voir PLAN_AMELIORATIONS.md §6.
 - [ ] A10 (P1) : Contrat de confiance public dans la fiche outil. Voir PLAN_AMELIORATIONS.md §6.

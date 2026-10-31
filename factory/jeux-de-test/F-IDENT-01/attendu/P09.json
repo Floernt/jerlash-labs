@@ -1,0 +1,16 @@
+{
+ "outil": "P09 pseudonymisation",
+ "version_mesuree": "0.1.0",
+ "date": "2026-10-31",
+ "note": "Planchers de non-régression : une modification qui fait passer une valeur sous son plancher fait échouer les tests. Les planchers du jeu de contrôle sont les valeurs mesurées à la version 0.1.0, sans réglage sur ce jeu, après les corrections de la relecture indépendante (qui ne portaient pas sur ce jeu).",
+ "planchers": {
+  "developpement": {"rappel": 1.0, "precision": 0.99},
+  "controle": {"rappel": 0.62, "precision": 0.97,
+               "rappel_par_categorie": {"NUMERO_NATIONAL": 1.0, "NUMERO_ENTREPRISE": 1.0, "IBAN": 1.0,
+                                        "CARTE_BANCAIRE": 1.0, "EMAIL": 1.0}}
+ },
+ "faux_positifs_admis": {
+  "sans-donnees.txt": ["20231104512"],
+  "controle/08-note-veille-sans-donnees.txt": ["Cour eur. D.H., 7"]
+ }
+}

@@ -29,6 +29,11 @@ OUTILS = {
         "version": os.path.join(DEPOT, "outils", "controle-avant-envoi", "src", "controle_avant_envoi", "__init__.py"),
         "fiche": os.path.join(DEPOT, "site", "content", "outils", "controle-avant-envoi.md"),
     },
+    "pseudonymisation": {
+        "dossier": os.path.join(DEPOT, "outils", "pseudonymisation"),
+        "version": os.path.join(DEPOT, "outils", "pseudonymisation", "src", "pseudonymisation", "__init__.py"),
+        "fiche": os.path.join(DEPOT, "site", "content", "outils", "pseudonymisation.md"),
+    },
 }
 
 

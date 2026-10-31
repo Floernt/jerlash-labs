@@ -2,7 +2,7 @@
 id: P09
 titre: Pseudonymisation locale avant envoi à une IA
 type: outil public et composant
-statut: idée
+statut: vérification (P09 Lite 0.1.0)
 priorité: haute (conditionne plusieurs outils)
 source: stella/anonymize (bibliothèque tierce, repérée via le fork stella de Sol Irvine)
 licence_source: Apache-2.0
@@ -41,9 +41,9 @@ Licence : Apache-2.0, fichier NOTICE et mentions à reprendre.
 
 ## 7. Critères d'acceptation
 
-- [ ] Aucun appel réseau (vérifié dans les outils de développement du navigateur).
-- [ ] Taux de détection mesuré sur un jeu de test fictif belge, publié sur la fiche.
-- [ ] Avertissement sur les limites visible avant export.
+- [x] Aucun appel réseau (application locale : test statique des imports et parcours exécuté réseau neutralisé).
+- [x] Taux de détection mesuré sur un jeu de test fictif belge, publié sur la fiche.
+- [x] Avertissement sur les limites visible avant export.
 
 ## 8. Appétit
 
@@ -55,4 +55,4 @@ Licence : Apache-2.0, fichier NOTICE et mentions à reprendre.
 
 ## 10. Prochaine étape
 
-Tester la bibliothèque sur un texte fictif belge et mesurer ce qu'elle détecte.
+P09 Lite 0.1.0 livré le 2026-10-31 (outils/pseudonymisation, ADR-014) : règles sans dépendance, mesure publiée sur F-IDENT-01. Ensuite : test de la fenêtre par Florian ; qualification de stella anonymize et d'un modèle local sur F-IDENT-01 avec un nouveau jeu de contrôle.

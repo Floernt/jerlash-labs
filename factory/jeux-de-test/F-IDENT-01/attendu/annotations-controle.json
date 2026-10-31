@@ -1,0 +1,1137 @@
+{
+ "jeu": "F-IDENT-01",
+ "version": "1.0",
+ "pieces": {
+  "controle/01-jugement-entreprise-liege.txt": [
+   {
+    "categorie": "REFERENCE",
+    "debut": 112,
+    "fin": 122,
+    "texte": "A/25/01873"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 157,
+    "fin": 183,
+    "texte": "Menuiserie Lejeune et Fils"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 216,
+    "fin": 250,
+    "texte": "4020 Liège, quai de la Boverie 112"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 285,
+    "fin": 297,
+    "texte": "0764.821.343"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 341,
+    "fin": 358,
+    "texte": "Charlotte Halleux"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 396,
+    "fin": 422,
+    "texte": "rue Louvrex 55, 4000 Liège"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 436,
+    "fin": 447,
+    "texte": "Immo Ourthe"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 477,
+    "fin": 523,
+    "texte": "avenue de la Résistance 8 bte 3, 4630 Soumagne"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 558,
+    "fin": 573,
+    "texte": "BE 0891 234 515"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 617,
+    "fin": 637,
+    "texte": "Pierre-Yves de Thier"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 771,
+    "fin": 782,
+    "texte": "Marc Lhoest"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 843,
+    "fin": 869,
+    "texte": "Menuiserie Lejeune et Fils"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 982,
+    "fin": 1014,
+    "texte": "rue Saint-Gilles 301, 4000 Liège"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1069,
+    "fin": 1089,
+    "texte": "Georges Vandenberghe"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1416,
+    "fin": 1433,
+    "texte": "Fabienne Maréchal"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1454,
+    "fin": 1466,
+    "texte": "Vandenberghe"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 1993,
+    "fin": 2004,
+    "texte": "Immo Ourthe"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2025,
+    "fin": 2033,
+    "texte": "Maréchal"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2213,
+    "fin": 2229,
+    "texte": "Abdelkader Ouali"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 2563,
+    "fin": 2574,
+    "texte": "Immo Ourthe"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 2588,
+    "fin": 2614,
+    "texte": "Menuiserie Lejeune et Fils"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2912,
+    "fin": 2930,
+    "texte": "Jean-Luc Defraigne"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2945,
+    "fin": 2958,
+    "texte": "Henri Collard"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2962,
+    "fin": 2975,
+    "texte": "Didier Schyns"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 3012,
+    "fin": 3025,
+    "texte": "Nadia Bouhali"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 3039,
+    "fin": 3049,
+    "texte": "N. BOUHALI"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 3065,
+    "fin": 3075,
+    "texte": "H. COLLARD"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 3079,
+    "fin": 3088,
+    "texte": "D. SCHYNS"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 3092,
+    "fin": 3107,
+    "texte": "J.-L. DEFRAIGNE"
+   }
+  ],
+  "controle/02-courriels-confreres-bail.txt": [
+   {
+    "categorie": "PERSONNE",
+    "debut": 5,
+    "fin": 18,
+    "texte": "Karim Bensaïd"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 20,
+    "fin": 48,
+    "texte": "k.bensaid@bensaid-avocats.be"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 92,
+    "fin": 108,
+    "texte": "Sophie Van Damme"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 110,
+    "fin": 136,
+    "texte": "svandamme@vdm-law.brussels"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 143,
+    "fin": 173,
+    "texte": "secretariat@bensaid-avocats.be"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 204,
+    "fin": 210,
+    "texte": "Yılmaz"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 213,
+    "fin": 226,
+    "texte": "Sablon Invest"
+   },
+   {
+    "categorie": "REFERENCE",
+    "debut": 240,
+    "fin": 253,
+    "texte": "SVD/2025/0347"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 276,
+    "fin": 282,
+    "texte": "Sophie"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 360,
+    "fin": 371,
+    "texte": "Ayşe Yılmaz"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 470,
+    "fin": 506,
+    "texte": "chaussée d'Ixelles 214, 1050 Ixelles"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 815,
+    "fin": 831,
+    "texte": "BE97363124578049"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 972,
+    "fin": 985,
+    "texte": "Sablon Invest"
+   },
+   {
+    "categorie": "REFERENCE",
+    "debut": 1083,
+    "fin": 1090,
+    "texte": "25A1196"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1120,
+    "fin": 1133,
+    "texte": "Karim Bensaïd"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 1165,
+    "fin": 1201,
+    "texte": "Avenue Louise 367/12, 1050 Bruxelles"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 1205,
+    "fin": 1220,
+    "texte": "+32 2 538 41 07"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 1227,
+    "fin": 1240,
+    "texte": "0476/83.12.59"
+   },
+   {
+    "categorie": "REFERENCE",
+    "debut": 1254,
+    "fin": 1264,
+    "texte": "KB/LOC/118"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1299,
+    "fin": 1315,
+    "texte": "Sophie Van Damme"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 1317,
+    "fin": 1343,
+    "texte": "svandamme@vdm-law.brussels"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1390,
+    "fin": 1403,
+    "texte": "Karim Bensaïd"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1430,
+    "fin": 1436,
+    "texte": "Yılmaz"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 1439,
+    "fin": 1452,
+    "texte": "Sablon Invest"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 1488,
+    "fin": 1501,
+    "texte": "Sablon Invest"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 1507,
+    "fin": 1519,
+    "texte": "BE0671395297"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1617,
+    "fin": 1623,
+    "texte": "Yılmaz"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1641,
+    "fin": 1672,
+    "texte": "Thibaut de Ghellinck d'Elseghem"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1878,
+    "fin": 1889,
+    "texte": "Jef Wouters"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 1953,
+    "fin": 1967,
+    "texte": "02 / 640 18 77"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 1993,
+    "fin": 2010,
+    "texte": "0032 495 22 61 80"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2027,
+    "fin": 2043,
+    "texte": "Sophie Van Damme"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 2052,
+    "fin": 2059,
+    "texte": "VDM Law"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 2060,
+    "fin": 2093,
+    "texte": "Rue Defacqz 78, 1060 Saint-Gilles"
+   }
+  ],
+  "controle/03-mise-en-demeure.txt": [
+   {
+    "categorie": "PERSONNE",
+    "debut": 0,
+    "fin": 14,
+    "texte": "Hélène Rasquin"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 43,
+    "fin": 79,
+    "texte": "Boulevard Frère-Orban 11, 5000 Namur"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 85,
+    "fin": 97,
+    "texte": "081 22 47 93"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 100,
+    "fin": 127,
+    "texte": "h.rasquin@rasquin-avocat.be"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 187,
+    "fin": 216,
+    "texte": "info@dakwerken-vercauteren.be"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 219,
+    "fin": 240,
+    "texte": "Dakwerken Vercauteren"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 264,
+    "fin": 279,
+    "texte": "Wim Vercauteren"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 293,
+    "fin": 318,
+    "texte": "Kerkstraat 41, 9300 Aalst"
+   },
+   {
+    "categorie": "REFERENCE",
+    "debut": 333,
+    "fin": 344,
+    "texte": "HR/2025-219"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 356,
+    "fin": 370,
+    "texte": "Toitures Mathy"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 377,
+    "fin": 398,
+    "texte": "Dakwerken Vercauteren"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 501,
+    "fin": 515,
+    "texte": "Toitures Mathy"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 546,
+    "fin": 586,
+    "texte": "Chaussée de Charleroi 245, 5030 Gembloux"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 592,
+    "fin": 604,
+    "texte": "0456.123.791"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 733,
+    "fin": 762,
+    "texte": "Dorpsstraat 3, 9420 Erpe-Mere"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 872,
+    "fin": 885,
+    "texte": "Bart Goossens"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 1159,
+    "fin": 1181,
+    "texte": "NL16 INGB 0004 1287 31"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1262,
+    "fin": 1267,
+    "texte": "Mathy"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 1577,
+    "fin": 1596,
+    "texte": "BE09 0682 3479 1557"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2063,
+    "fin": 2077,
+    "texte": "Hélène Rasquin"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2090,
+    "fin": 2103,
+    "texte": "Olivier Mathy"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 2113,
+    "fin": 2144,
+    "texte": "olivier.mathy@toitures-mathy.be"
+   }
+  ],
+  "controle/04-cession-parts-srl.txt": [
+   {
+    "categorie": "ORGANISATION",
+    "debut": 31,
+    "fin": 55,
+    "texte": "Brasserie du Val de Salm"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 82,
+    "fin": 109,
+    "texte": "MARCHAL Luc, Albert, Joseph"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 128,
+    "fin": 143,
+    "texte": "28 février 1965"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 173,
+    "fin": 188,
+    "texte": "65.02.28-411.31"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 200,
+    "fin": 237,
+    "texte": "Rue du Vieux Marché 17, 6690 Vielsalm"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 281,
+    "fin": 290,
+    "texte": "Ewa NOWAK"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 319,
+    "fin": 329,
+    "texte": "05/06/1987"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 347,
+    "fin": 360,
+    "texte": "870605 072 95"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 373,
+    "fin": 408,
+    "texte": "Grand-Rue 54 boîte 2, 6600 Bastogne"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 499,
+    "fin": 523,
+    "texte": "Brasserie du Val de Salm"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 550,
+    "fin": 584,
+    "texte": "Route de Lierneux 3, 6690 Vielsalm"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 684,
+    "fin": 696,
+    "texte": "1023.456.797"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 869,
+    "fin": 892,
+    "texte": "Anne-Catherine Lambotte"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1761,
+    "fin": 1773,
+    "texte": "Benoît Kinet"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 1905,
+    "fin": 1929,
+    "texte": "LU28 0019 4006 4475 0000"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 2016,
+    "fin": 2035,
+    "texte": "be81 0018 2345 6924"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2275,
+    "fin": 2282,
+    "texte": "Marchal"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2461,
+    "fin": 2466,
+    "texte": "Nowak"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2531,
+    "fin": 2546,
+    "texte": "Jacques Marchal"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2954,
+    "fin": 2964,
+    "texte": "L. Marchal"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2986,
+    "fin": 2994,
+    "texte": "E. Nowak"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 3017,
+    "fin": 3027,
+    "texte": "L. Marchal"
+   }
+  ],
+  "controle/05-expertise-medicale.txt": [
+   {
+    "categorie": "PERSONNE",
+    "debut": 50,
+    "fin": 67,
+    "texte": "Fabrice Lardinois"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 123,
+    "fin": 161,
+    "texte": "Avenue Cardinal Mercier 46, 5000 Namur"
+   },
+   {
+    "categorie": "REFERENCE",
+    "debut": 180,
+    "fin": 192,
+    "texte": "FL-2025-0712"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 204,
+    "fin": 228,
+    "texte": "Assurances Meuse-Condroz"
+   },
+   {
+    "categorie": "REFERENCE",
+    "debut": 232,
+    "fin": 245,
+    "texte": "AMC/24/887105"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 261,
+    "fin": 286,
+    "texte": "Nathalie DETHIER-BOGAERTS"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 294,
+    "fin": 304,
+    "texte": "23.09.1991"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 310,
+    "fin": 321,
+    "texte": "91092326846"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 333,
+    "fin": 364,
+    "texte": "rue des Tilleuls 9, 5101 Erpent"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 457,
+    "fin": 474,
+    "texte": "Khadija El Amrani"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 510,
+    "fin": 527,
+    "texte": "Stefaan Verhaegen"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 580,
+    "fin": 587,
+    "texte": "Dethier"
+   },
+   {
+    "categorie": "PLAQUE",
+    "debut": 670,
+    "fin": 679,
+    "texte": "1-GHT-482"
+   },
+   {
+    "categorie": "PLAQUE",
+    "debut": 752,
+    "fin": 759,
+    "texte": "2ABX917"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 777,
+    "fin": 791,
+    "texte": "Grégory Pirard"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1319,
+    "fin": 1326,
+    "texte": "Yannick"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1441,
+    "fin": 1450,
+    "texte": "El Amrani"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1454,
+    "fin": 1463,
+    "texte": "Verhaegen"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1575,
+    "fin": 1584,
+    "texte": "Verhaegen"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2357,
+    "fin": 2369,
+    "texte": "F. Lardinois"
+   }
+  ],
+  "controle/06-pv-audition.txt": [
+   {
+    "categorie": "REFERENCE",
+    "debut": 113,
+    "fin": 133,
+    "texte": "BR.21.L3.045821/2025"
+   },
+   {
+    "categorie": "REFERENCE",
+    "debut": 151,
+    "fin": 168,
+    "texte": "BR.52.F1.12477/25"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 217,
+    "fin": 234,
+    "texte": "Laurent Hendrickx"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 375,
+    "fin": 381,
+    "texte": "DIALLO"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 392,
+    "fin": 406,
+    "texte": "Mamadou Saliou"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 415,
+    "fin": 425,
+    "texte": "12/04/1978"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 462,
+    "fin": 477,
+    "texte": "78.04.12-153.86"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 489,
+    "fin": 555,
+    "texte": "Rue de la Brasserie 12 / Brouwerijstraat 12, 1050 Ixelles / Elsene"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 562,
+    "fin": 578,
+    "texte": "+32 485 61 22 09"
+   },
+   {
+    "categorie": "CARTE_BANCAIRE",
+    "debut": 881,
+    "fin": 900,
+    "texte": "5355 2200 1234 5678"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 920,
+    "fin": 939,
+    "texte": "BE26 0634 1872 9029"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 976,
+    "fin": 986,
+    "texte": "Le Tram 81"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 990,
+    "fin": 1011,
+    "texte": "Chaussée de Wavre 402"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1110,
+    "fin": 1115,
+    "texte": "Kevin"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1488,
+    "fin": 1493,
+    "texte": "Kevin"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1590,
+    "fin": 1594,
+    "texte": "Kéké"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1700,
+    "fin": 1704,
+    "texte": "Lien"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1831,
+    "fin": 1848,
+    "texte": "Thomas Vanderelst"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 1850,
+    "fin": 1863,
+    "texte": "0471.33.90.12"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1914,
+    "fin": 1926,
+    "texte": "Lien De Smet"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 1935,
+    "fin": 1950,
+    "texte": "17 janvier 2003"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 1955,
+    "fin": 1968,
+    "texte": "030117-084.87"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 1981,
+    "fin": 2017,
+    "texte": "Brusselsesteenweg 188, 3080 Tervuren"
+   },
+   {
+    "categorie": "PLAQUE",
+    "debut": 2135,
+    "fin": 2144,
+    "texte": "1-KZD-305"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2295,
+    "fin": 2312,
+    "texte": "Mamadou S. Diallo"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 2347,
+    "fin": 2359,
+    "texte": "L. Hendrickx"
+   }
+  ],
+  "controle/07-compte-rendu-entretien.txt": [
+   {
+    "categorie": "REFERENCE",
+    "debut": 67,
+    "fin": 79,
+    "texte": "2025/CH/0458"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 82,
+    "fin": 88,
+    "texte": "BENALI"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 92,
+    "fin": 95,
+    "texte": "LHE"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 116,
+    "fin": 119,
+    "texte": "FZB"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 131,
+    "fin": 136,
+    "texte": "Rayan"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 154,
+    "fin": 160,
+    "texte": "Maxime"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 197,
+    "fin": 216,
+    "texte": "Fatima-Zahra Benali"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 220,
+    "fin": 231,
+    "texte": "3 août 1979"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 241,
+    "fin": 282,
+    "texte": "rue de Montigny 128 bte 4, 6000 Charleroi"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 289,
+    "fin": 302,
+    "texte": "0498/27.64.15"
+   },
+   {
+    "categorie": "EMAIL",
+    "debut": 316,
+    "fin": 337,
+    "texte": "fz.benali79@gmail.com"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 345,
+    "fin": 357,
+    "texte": "Rayan Benali"
+   },
+   {
+    "categorie": "DATE_NAISSANCE",
+    "debut": 361,
+    "fin": 371,
+    "texte": "30/11/2001"
+   },
+   {
+    "categorie": "NUMERO_NATIONAL",
+    "debut": 376,
+    "fin": 387,
+    "texte": "01113019797"
+   },
+   {
+    "categorie": "PLAQUE",
+    "debut": 472,
+    "fin": 481,
+    "texte": "1-RBX-776"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 517,
+    "fin": 543,
+    "texte": "Logistique Hainaut Express"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 550,
+    "fin": 553,
+    "texte": "LHE"
+   },
+   {
+    "categorie": "NUMERO_ENTREPRISE",
+    "debut": 561,
+    "fin": 571,
+    "texte": "0799812411"
+   },
+   {
+    "categorie": "ADRESSE",
+    "debut": 580,
+    "fin": 630,
+    "texte": "Zoning de Jumet, rue de l’Industrie 22, 6040 Jumet"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 699,
+    "fin": 714,
+    "texte": "Sandrine Lecocq"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 726,
+    "fin": 739,
+    "texte": "Dirk Van Hoof"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 742,
+    "fin": 746,
+    "texte": "Dirk"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 880,
+    "fin": 886,
+    "texte": "Lecocq"
+   },
+   {
+    "categorie": "CARTE_BANCAIRE",
+    "debut": 936,
+    "fin": 952,
+    "texte": "4974012345678907"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1162,
+    "fin": 1166,
+    "texte": "Dirk"
+   },
+   {
+    "categorie": "IBAN",
+    "debut": 1339,
+    "fin": 1366,
+    "texte": "DE89 3704 0044 0532 0130 00"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1419,
+    "fin": 1423,
+    "texte": "Ilse"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1434,
+    "fin": 1446,
+    "texte": "Ilse Martens"
+   },
+   {
+    "categorie": "TELEPHONE",
+    "debut": 1448,
+    "fin": 1465,
+    "texte": "+32(0)71 30 58 44"
+   },
+   {
+    "categorie": "ORGANISATION",
+    "debut": 1540,
+    "fin": 1543,
+    "texte": "LHE"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1551,
+    "fin": 1557,
+    "texte": "Lecocq"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1753,
+    "fin": 1761,
+    "texte": "Van Hoof"
+   },
+   {
+    "categorie": "PERSONNE",
+    "debut": 1970,
+    "fin": 1975,
+    "texte": "Rayan"
+   }
+  ],
+  "controle/08-note-veille-sans-donnees.txt": []
+ }
+}

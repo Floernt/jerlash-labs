@@ -1,0 +1,21 @@
+Variantes typographiques des mêmes catégories de données.
+
+Numéros nationaux : [[NUMERO_NATIONAL:85092116385]] ; [[NUMERO_NATIONAL:03.06.17-081.28]] ; [[NUMERO_NATIONAL:91 11 30 354 55]] ; [[NUMERO_NATIONAL:690714 118 87]].
+
+Numéros d'entreprise : [[NUMERO_ENTREPRISE:BE0456712325]] ; [[NUMERO_ENTREPRISE:0812 345 603]] ; TVA [[NUMERO_ENTREPRISE:BE 0665 432 173]].
+
+Comptes : [[IBAN:BE15001765432130]] ; [[IBAN:be24 3400 9876 5438]] ; [[IBAN:FR76 3000 6000 0112 3456 7890 189]].
+
+Téléphones : [[TELEPHONE:+32 (0)4 223 45 67]] ; [[TELEPHONE:0032 475 12 34 56]] ; [[TELEPHONE:0475/123.456]] ; [[TELEPHONE:+33 6 12 34 56 78]].
+
+Courriels : [[EMAIL:Prenom.Nom@Exemple.example]] ; [[EMAIL:info+dossier@cabinet-exemple.example]].
+
+Personnes : [[PERSONNE:DUPONT Jean]] et Mme [[PERSONNE:Van den Bossche]] ont signé avec M. [[PERSONNE:de Lannoy]]. Maître [[PERSONNE:Anne-Sophie Lejeune]] représentait M. [[PERSONNE:Pieter D’Hondt]]. Madame [[PERSONNE:Élodie Fraipont]] était absente. Le témoin, [[PERSONNE:Jean-Pierre MOREAU]], a confirmé.
+
+Contexte : épouse de M. [[PERSONNE:Karim Haddad]], représentée par [[PERSONNE:Lucie Maréchal]].
+
+Sociétés : [[ORGANISATION:Garage Derouaux]] SRL et la SA [[ORGANISATION:Immo Condroz]], ainsi que l'ASBL [[ORGANISATION:Les Amis du Val]].
+
+Adresses : [[ADRESSE:avenue Rogier 19/2, 4000 Liège]] ; [[ADRESSE:Place du Marché 1, 4500 Huy]] ; [[ADRESSE:Kerkstraat 12, 3000 Leuven]].
+
+Plaque : [[PLAQUE:2-XYZ-987]].
