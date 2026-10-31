@@ -5,8 +5,8 @@
     <header>
       <h1>{{ .Title }}</h1>
       <p class="meta">
-        {{- with .Params.niveau }}Niveau : {{ partial "libelles.html" (dict "type" "niveau" "valeur" .) }}{{ end }}
-        {{- with .Params.derniere_verification }}{{ if $.Params.niveau }} · {{ end }}Dernière vérification : {{ partial "date.html" . }}{{ end }}
+        {{- with .Params.niveau }}Niveau : {{ partial "libelles.html" (dict "type" "niveau" "valeur" .) }}{{ end }}
+        {{- with .Params.derniere_verification }}{{ if $.Params.niveau }} · {{ end }}Dernière vérification : {{ partial "date.html" . }}{{ end }}
       </p>
     </header>
 

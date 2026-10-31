@@ -1,34 +1,112 @@
+{{- /*
+  Page d'accueil en sections. Les textes viennent du front matter de content/_index.md :
+  bandeau, trajet (trajet des données), principes, etapes. Les outils et les lectures
+  sont tirés des sections du site.
+*/ -}}
 {{ define "main" }}
-<div class="conteneur">
-  <article class="contenu">
-    <h1>{{ .Title | default site.Title }}</h1>
-    {{ .Content }}
-  </article>
+{{- $p := .Params }}
+<div class="conteneur accueil">
+
+  {{- with $p.bandeau }}
+  <section class="bandeau" aria-labelledby="titre-accueil">
+    <h1 class="bandeau__titre" id="titre-accueil">{{ .titre }}</h1>
+    {{- with .texte }}<p class="bandeau__texte">{{ . }}</p>{{ end }}
+    {{- with .actions }}
+    <p class="bandeau__actions">
+      {{- range . }}
+      <a class="bouton{{ if .secondaire }} bouton--secondaire{{ end }}" href="{{ .lien | relURL }}">{{ .libelle }}</a>
+      {{- end }}
+    </p>
+    {{- end }}
+  </section>
+  {{- end }}
+
+  {{- with $p.trajet }}
+  <section class="trajet" aria-labelledby="titre-trajet">
+    <h2 class="trajet__titre" id="titre-trajet">{{ .titre }}</h2>
+    {{- with .intro }}<p class="trajet__intro">{{ . }}</p>{{ end }}
+    <dl class="trajet__lignes">
+      {{- range .lignes }}
+      <div class="trajet__ligne">
+        <dt class="trajet__lieu">{{ .lieu }}</dt>
+        <dd class="trajet__contenu{{ if .nul }} trajet__contenu--nul{{ end }}">
+          {{- .contenu }}
+          {{- with .precision }}<span class="trajet__precision">{{ . }}</span>{{ end -}}
+        </dd>
+      </div>
+      {{- end }}
+    </dl>
+  </section>
+  {{- end }}
+
+  {{- with $p.principes }}
+  <section class="section-accueil" aria-labelledby="titre-principes">
+    <h2 class="section-accueil__titre" id="titre-principes">{{ .titre }}</h2>
+    <ul class="principes">
+      {{- range .liste }}
+      <li>
+        <h3 class="principes__titre">{{ .titre }}</h3>
+        <p>{{ .texte }}</p>
+      </li>
+      {{- end }}
+    </ul>
+  </section>
+  {{- end }}
 
   {{- with site.GetPage "/outils" }}
-  {{- $outils := .RegularPages.ByLastmod.Reverse | first 5 }}
+  {{- $outils := .RegularPages.ByLastmod.Reverse | first 6 }}
   {{- if $outils }}
-  <section class="bloc-accueil" aria-labelledby="titre-derniers-outils">
-    <h2 id="titre-derniers-outils">Derniers outils</h2>
-    <ul class="liste-contenus">
+  <section class="section-accueil" aria-labelledby="titre-outils">
+    <h2 class="section-accueil__titre" id="titre-outils">Les outils</h2>
+    <ul class="liste-contenus liste-contenus--cartes">
       {{- range $outils }}{{ partial "resume-outil.html" . }}{{ end }}
     </ul>
-    <p><a href="{{ .RelPermalink }}">Tous les outils</a></p>
+    <p class="section-accueil__suite"><a href="{{ .RelPermalink }}">Tous les outils, classés par tâche</a></p>
   </section>
   {{- end }}
   {{- end }}
 
-  {{- with site.GetPage "/guides" }}
-  {{- $guides := .RegularPages.ByLastmod.Reverse | first 5 }}
-  {{- if $guides }}
-  <section class="bloc-accueil" aria-labelledby="titre-derniers-guides">
-    <h2 id="titre-derniers-guides">Derniers guides</h2>
-    <ul class="liste-contenus">
-      {{- range $guides }}{{ partial "resume-article.html" . }}{{ end }}
-    </ul>
-    <p><a href="{{ .RelPermalink }}">Tous les guides</a></p>
+  {{- with $p.etapes }}
+  <section class="section-accueil" aria-labelledby="titre-etapes">
+    <h2 class="section-accueil__titre" id="titre-etapes">{{ .titre }}</h2>
+    {{- with .intro }}<p class="section-accueil__intro">{{ . }}</p>{{ end }}
+    <ol class="etapes">
+      {{- range .liste }}
+      <li>
+        <h3 class="etapes__titre">{{ .titre }}</h3>
+        <p>{{ .texte }}</p>
+      </li>
+      {{- end }}
+    </ol>
+    {{- with .lien }}<p class="section-accueil__suite"><a href="{{ . | relURL }}">{{ $p.etapes.libelle_lien }}</a></p>{{ end }}
   </section>
   {{- end }}
+
+  {{- $guides := slice }}{{ with site.GetPage "/guides" }}{{ $guides = .RegularPages.ByLastmod.Reverse | first 4 }}{{ end }}
+  {{- $articles := slice }}{{ with site.GetPage "/automatiser" }}{{ $articles = .RegularPages.ByWeight | first 4 }}{{ end }}
+  {{- if or $guides $articles }}
+  <section class="section-accueil" aria-labelledby="titre-a-lire">
+    <h2 class="section-accueil__titre" id="titre-a-lire">À lire</h2>
+    <div class="a-lire">
+      {{- with $guides }}
+      <div>
+        <h3><a href="{{ (site.GetPage "/guides").RelPermalink }}">Guides</a></h3>
+        <ul class="liste-contenus">
+          {{- range . }}{{ partial "resume-article.html" (dict "page" . "niveau" 4) }}{{ end }}
+        </ul>
+      </div>
+      {{- end }}
+      {{- with $articles }}
+      <div>
+        <h3><a href="{{ (site.GetPage "/automatiser").RelPermalink }}">Automatiser une prestation</a></h3>
+        <ul class="liste-contenus">
+          {{- range . }}{{ partial "resume-article.html" (dict "page" . "niveau" 4) }}{{ end }}
+        </ul>
+      </div>
+      {{- end }}
+    </div>
+  </section>
   {{- end }}
+
 </div>
 {{ end }}

@@ -1,12 +1,12 @@
 ---
-title: "Automatiser ou ne pas automatiser ? Une grille en quatre critères"
-description: "Quatre critères notés de 1 à 3 pour décider si une prestation juridique peut être automatisée : complexité perçue, enjeu, standardisation, urgence."
-resume: "Quatre critères notés de 1 à 3 pour décider si une prestation juridique peut être automatisée : complexité perçue, enjeu, standardisation, urgence."
+title: "Automatiser ou ne pas automatiser ? Une grille en quatre critères"
+description: "Quatre critères notés de 1 à 3 pour décider si une prestation juridique peut être automatisée : complexité perçue, enjeu, standardisation, urgence."
+resume: "Quatre critères notés de 1 à 3 pour décider si une prestation juridique peut être automatisée : complexité perçue, enjeu, standardisation, urgence."
 date: 2026-10-31
 weight: 10
 ---
 
-Chaque semaine, un avocat entrepreneur me pose une variante de la même question : « Est-ce que je peux automatiser ça ?» La réponse courte est : parfois oui, parfois non, et la distinction n’est pas toujours là où on la croit.
+Chaque semaine, un avocat entrepreneur me pose une variante de la même question : « Est-ce que je peux automatiser ça ? » La réponse courte est : parfois oui, parfois non, et la distinction n’est pas toujours là où on la croit.
 
 Avant de se lancer dans l’automatisation d’une prestation, il y a quatre variables à examiner. Elles ne donnent pas une réponse définitive, mais elles permettent d’éviter deux erreurs symétriques : automatiser ce qui ne devrait pas l’être, et ne pas automatiser ce qui pourrait l’être sans risque.
 
@@ -14,7 +14,7 @@ Avant de se lancer dans l’automatisation d’une prestation, il y a quatre var
 
 Ce n’est pas la complexité réelle de la prestation qui compte ici, c’est la complexité ressentie par quelqu’un qui ne connaît pas la matière. Un pacte d’actionnaires est objectivement complexe. Mais un fondateur qui n’en a jamais négocié peut penser que ChatGPT lui suffira. À l’inverse, une mise en demeure paraît simple, mais un client pressé préférera la déléguer plutôt que de tâtonner.
 
-La question à se poser : si ce client essaie de faire la chose lui-même avec l’IAG, va-t-il s’y perdre ? Si oui, l’automatisation peut aller loin sans dévaloriser la prestation. Si non, le produit automatisé doit être visiblement supérieur à ce que le client produirait seul, sans quoi il ne voit pas la valeur ajoutée.
+La question à se poser : si ce client essaie de faire la chose lui-même avec l’IAG, va-t-il s’y perdre ? Si oui, l’automatisation peut aller loin sans dévaloriser la prestation. Si non, le produit automatisé doit être visiblement supérieur à ce que le client produirait seul, sans quoi il ne voit pas la valeur ajoutée.
 
 ## L’enjeu financier ou patrimonial
 

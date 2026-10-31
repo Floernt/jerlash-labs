@@ -134,6 +134,12 @@ def verifier_site(exiger_hugo: bool) -> None:
         shutil.rmtree(sortie, ignore_errors=True)
 
 
+def verifier_typographie() -> None:
+    print("\n[4 bis] Typographie française du site")
+    r = lancer([sys.executable, "scripts/typographie.py", "--verifier"])
+    etape(r.returncode == 0, "espaces insécables en place" if r.returncode == 0 else r.stdout.strip())
+
+
 def verifier_marqueurs(publication: bool) -> None:
     print("\n[5] Marqueurs de travail dans ce qui sera publié")
     trouves = []
@@ -167,6 +173,7 @@ def main(argv=None) -> int:
     verifier_outils()
     verifier_archive()
     verifier_site(args.exiger_hugo)
+    verifier_typographie()
     verifier_marqueurs(args.publication)
     echecs = [m for ok, m in resultats if not ok]
     print(f"\n{len(resultats) - len(echecs)}/{len(resultats)} vérifications réussies.")

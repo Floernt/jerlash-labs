@@ -115,3 +115,10 @@ Statut : Acceptée (choix de Florian)
 Contexte : deux articles rédigés pour iavocat.be en mars 2026 (grille en quatre critères, matrice standardisation x enjeu) ne trouvaient pas de place dans l'arborescence, et le cahier des charges excluait le contenu réflexif.
 Décision : création d'une rubrique "Automatiser une prestation" pour les contenus pratiques sur le modèle économique du cabinet. Les textes sources sont conservés dans contenus/automatiser-une-prestation/ jusqu'à l'initialisation du site.
 Conséquences : la charte éditoriale s'applique à ces textes ; leur relecture avant publication porte notamment sur les invitations à prendre contact en fin d'article, au regard des règles de communication de l'avocat [À VÉRIFIER]. Autres candidats à examiner : tutoriel de veille Claude Cowork, fiches "avocat entrepreneur", livre blanc (dossier parent).
+
+## ADR-013 - Identité visuelle : police Inter auto-hébergée, accent brique
+Date : 2026-10-31
+Statut : Acceptée (choix de Florian, d'après l'examen de quickadd.obsidian.guide)
+Contexte : le premier style (texte à empattement, titres système, aucun accent) était jugé trop strict.
+Décision : police Inter 4.1 (InterVariable, romain et italique), servie par le site depuis site/static/fonts, licence SIL Open Font License 1.1 (fichier LICENSE-Inter.txt joint), téléchargée depuis la publication officielle github.com/rsms/inter (v4.1). Accent brique (#a23d24 en clair, #ef9478 en sombre), fond papier, cartes surélevées, page d'accueil en sections.
+Conséquences : environ 740 Ko de polices, mises en cache par le navigateur ; aucune ressource externe (CSP font-src 'self' inchangée). Empreintes SHA-256 : InterVariable.woff2 693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3 ; InterVariable-Italic.woff2 e564f652916db6c139570fefb9524a77c4d48f30c92928de9db19b6b5c7a262a.

@@ -6,13 +6,13 @@ derniere_verification: 2026-10-31
 draft: true
 ---
 
-Brouillon : plan du guide. Il ne sera publié qu'après vérification de chaque fait dans la documentation officielle des fournisseurs (ADR-010, point 4).
+Brouillon : plan du guide. Il ne sera publié qu'après vérification de chaque fait dans la documentation officielle des fournisseurs (ADR-010, point 4).
 
 ## Les jetons (tokens) en entrée et en sortie
 
 [À COMPLÉTER]
 
-## Estimer le coût d'un usage type [À VÉRIFIER : tarifs officiels datés, par fournisseur et par modèle]
+## Estimer le coût d'un usage type [À VÉRIFIER : tarifs officiels datés, par fournisseur et par modèle]
 
 [À COMPLÉTER]
 
@@ -26,4 +26,4 @@ Brouillon : plan du guide. Il ne sera publié qu'après vérification de chaque 
 
 ## Sources
 
-[À COMPLÉTER : pages officielles consultées, avec date]
+[À COMPLÉTER : pages officielles consultées, avec date]

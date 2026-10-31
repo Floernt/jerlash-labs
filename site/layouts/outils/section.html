@@ -22,7 +22,7 @@
   {{- with $outils }}
   {{- if $groupes }}
   <nav class="sommaire-taches" aria-label="Tâches">
-    <p class="meta">Aller à une tâche :</p>
+    <p class="meta">Aller à une tâche :</p>
     <ul>
       {{- range $groupes }}
       {{- if where .Pages "Section" "outils" }}
@@ -38,7 +38,7 @@
   {{- with where .Pages "Section" "outils" }}
   <section class="groupe-taches" aria-labelledby="tache-{{ $terme.Title | urlize }}">
     <h2 id="tache-{{ $terme.Title | urlize }}">{{ $terme.LinkTitle }}</h2>
-    <ul class="liste-contenus">
+    <ul class="liste-contenus liste-contenus--cartes">
       {{- range .ByTitle }}{{ partial "resume-outil.html" . }}{{ end }}
     </ul>
   </section>
@@ -50,7 +50,7 @@
   {{- with $sansTache }}
   <section class="groupe-taches" aria-labelledby="tache-autres">
     <h2 id="tache-autres">Autres outils</h2>
-    <ul class="liste-contenus">
+    <ul class="liste-contenus liste-contenus--cartes">
       {{- range . }}{{ partial "resume-outil.html" . }}{{ end }}
     </ul>
   </section>

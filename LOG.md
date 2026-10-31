@@ -12,6 +12,11 @@ Prochaine étape :
 
 ---
 
+## 2026-10-31 - Nouvelle identité visuelle du site
+Fait : examen de quickadd.obsidian.guide (Astro, Inter, accent unique, cartes surélevées, accueil en sections) ; choix de Florian : Inter auto-hébergée, accent terracotta (brique #a23d24), accueil en sections. Nouvelle feuille de style (contrastes AA mesurés), page d'accueil (bandeau, trajet des données, trois règles, outils en cartes, démarrage en trois étapes, à lire), fiche outil avec carte d'identité en colonne latérale, catalogue en cartes, étapes numérotées dans les guides. scripts/typographie.py : espaces insécables du français, contrôlés par scripts/verifier.py (16/16).
+Décisions : ADR-013.
+Prochaine étape : inchangée (marqueurs, comptes GitHub et OVH).
+
 ## 2026-10-31 - Réalisation : P05 Lite, site, vérification, CI
 Fait :
 - Décisions déléguées par Florian (ADR-002 Hugo, ADR-005 chemins, ADR-006 MIT / CC BY 4.0, ADR-007 Factory avec trois parcours, ADR-008, ADR-009 option C, ADR-010 modes d'exécution). Décisions de Florian : éditeur à titre personnel, hébergement GitHub Pages, domaine chez OVH (ADR-003), P05 en application locale.

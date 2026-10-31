@@ -18,7 +18,7 @@
     </div>
     <div>
       <dt>IA distante</dt>
-      <dd>{{ if isset $p "ia" }}{{ if $p.ia }}Oui : des données partent vers un fournisseur d'IA{{ else }}Non{{ end }}{{ else }}{{ $nonPrecise }}{{ end }}</dd>
+      <dd>{{ if isset $p "ia" }}{{ if $p.ia }}Oui : des données partent vers un fournisseur d'IA{{ else }}Non{{ end }}{{ else }}{{ $nonPrecise }}{{ end }}</dd>
     </div>
     <div>
       <dt>Clé API</dt>
@@ -47,7 +47,7 @@
     <p><a class="bouton" href="{{ . | relURL }}" download>Télécharger{{ with $p.version }} la version {{ . }}{{ end }}{{ with $p.taille }} ({{ . }}){{ end }}</a></p>
     {{- with $p.sha256 }}
     <p class="empreinte">
-      <span class="empreinte__libelle">Empreinte SHA-256 du fichier :</span>
+      <span class="empreinte__libelle">Empreinte SHA-256 du fichier :</span>
       <code>{{ . }}</code>
     </p>
     {{- end }}

@@ -1,17 +1,22 @@
-{{- /* Fiche outil : carte d'identité en tête, puis le corps de la fiche */ -}}
+{{- /* Fiche outil : titre et chapeau, puis le corps de la fiche ; la carte d'identité
+   passe en colonne latérale sur grand écran et reste en tête sur petit écran. */ -}}
 {{ define "main" }}
 <div class="conteneur">
-  <article class="contenu">
-    <header>
+  <article class="fiche">
+    <header class="fiche__entete">
       <h1>{{ .Title }}</h1>
       {{- with .Params.resume }}
       <p class="chapeau">{{ . }}</p>
       {{- end }}
     </header>
 
-    {{ partial "carte-identite.html" . }}
+    <aside class="fiche__carte" aria-label="Carte d'identité de l'outil">
+      {{ partial "carte-identite.html" . }}
+    </aside>
 
-    {{ .Content }}
+    <div class="fiche__texte contenu">
+      {{ .Content }}
+    </div>
   </article>
 </div>
 {{ end }}
