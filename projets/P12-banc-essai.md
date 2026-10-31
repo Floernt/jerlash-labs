@@ -3,7 +3,7 @@ id: P12
 titre: Banc d'essai des outils sur cas fictifs
 type: outillage factory (publiable ensuite)
 statut: idée
-priorité: moyenne
+priorité: haute (A04)
 source: idée inspirée de LQ Assess (LegalQuants), connu uniquement par un extrait LinkedIn
 licence_source: sans objet (aucun code repris)
 dépend_de: []

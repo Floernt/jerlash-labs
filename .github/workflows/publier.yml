@@ -1,0 +1,54 @@
+# Construction et publication du site sur GitHub Pages (ADR-003).
+# Publication bloquée tant que des marqueurs [À COMPLÉTER] / [À VÉRIFIER] / [À DÉCIDER] subsistent.
+# Reconstruction hebdomadaire : l'avertissement des guides anciens est calculé à la construction.
+name: Publication
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  construire:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.148.2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer Hugo extended (version figée, ADR-002)
+        run: |
+          wget -q -O hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+      - name: Vérification de publication
+        run: python scripts/verifier.py --exiger-hugo --publication
+      - name: Archives des outils
+        run: python scripts/empaqueter.py
+      - name: Construction
+        run: hugo --source site --destination "$GITHUB_WORKSPACE/public" --minify --panicOnWarning
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deployer:
+    needs: construire
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+    steps:
+      - id: deploiement
+        uses: actions/deploy-pages@v4

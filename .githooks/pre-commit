@@ -1,0 +1,9 @@
+#!/bin/sh
+# Refuse le commit si un secret probable est présent dans les fichiers indexés.
+# Activation (une fois par clone) : git config core.hooksPath .githooks
+PYTHON=$(command -v python3 || command -v python)
+if [ -z "$PYTHON" ]; then
+  echo "pre-commit : Python introuvable, contrôle des secrets impossible. Commit refusé." >&2
+  exit 1
+fi
+exec "$PYTHON" "$(git rev-parse --show-toplevel)/scripts/detecter_secrets.py" --indexe

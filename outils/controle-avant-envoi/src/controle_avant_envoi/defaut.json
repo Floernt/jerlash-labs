@@ -1,0 +1,15 @@
+{
+  "marqueurs": [
+    {"libelle": "Blanc à compléter", "motif": "\\[\\s*(?:●|•|…|\\.{3}|_{2,}|[xX]{2,}|\\?+)?\\s*\\]"},
+    {"libelle": "Mention de travail", "motif": "(?i)\\[\\s*(?:à|a)\\s+(?:compléter|completer|vérifier|verifier|confirmer|définir|definir|préciser|preciser|adapter)[^\\]]*\\]"},
+    {"libelle": "Suite de X", "motif": "\\b[xX]{3,}\\b"},
+    {"libelle": "Note de travail", "motif": "\\b(?:TODO|TBC|TBD|NDLR)\\b"},
+    {"libelle": "Mention « note interne »", "motif": "(?i)\\bnote\\s+interne\\b"},
+    {"libelle": "Points d'interrogation en série", "motif": "\\?{3,}"}
+  ],
+  "domaines_internes": ["sharepoint.com", "onedrive", "1drv.ms", "localhost", ".local/", ".intra", "intranet"],
+  "champs_revelateurs": ["AUTHOR", "USERNAME", "USERINITIALS", "USERADDRESS", "FILENAME", "DOCPROPERTY",
+                         "DOCVARIABLE", "LASTSAVEDBY", "TEMPLATE", "INCLUDETEXT", "INCLUDEPICTURE", "LINK",
+                         "INFO", "TITLE", "SUBJECT", "KEYWORDS", "COMMENTS", "IMPORT"],
+  "termes_sensibles": []
+}

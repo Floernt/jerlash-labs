@@ -1,0 +1,27 @@
+# Vérification de chaque modification : secrets, tests des outils, archive, site.
+# Les versions des actions sont à revérifier lors de l'activation du dépôt GitHub (ADR-003).
+name: Vérification
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.148.2
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Installer Hugo extended (version figée, ADR-002)
+        run: |
+          wget -q -O hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i hugo.deb
+      - name: Vérification complète
+        run: python scripts/verifier.py --exiger-hugo

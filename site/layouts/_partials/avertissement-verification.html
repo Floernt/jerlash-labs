@@ -1,0 +1,20 @@
+{{- /*
+  Avertissement affiché lorsqu'un guide n'a pas été vérifié depuis plus de N mois
+  (params.guides_mois_avant_avertissement, 6 par défaut).
+  Le calcul se fait au moment de la construction du site : il faut reconstruire
+  le site régulièrement pour que l'avertissement apparaisse à temps.
+*/ -}}
+{{- $mois := site.Params.guides_mois_avant_avertissement | default 6 -}}
+{{- $limite := now.AddDate 0 (int (mul -1 $mois)) 0 -}}
+{{- with .Params.derniere_verification -}}
+  {{- $d := time.AsTime . -}}
+  {{- if $d.Before $limite }}
+<div class="avertissement" role="note">
+  <p><strong>Attention :</strong> ce guide n'a pas été vérifié depuis plus de {{ $mois }} mois (dernière vérification le {{ partial "date.html" $d }}). Certaines informations, notamment les écrans, les prix ou les conditions des fournisseurs, peuvent avoir changé.</p>
+</div>
+  {{- end -}}
+{{- else }}
+<div class="avertissement" role="note">
+  <p><strong>Attention :</strong> la date de dernière vérification de ce guide n'est pas indiquée. Certaines informations peuvent ne plus être à jour.</p>
+</div>
+{{- end -}}

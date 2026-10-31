@@ -62,6 +62,16 @@ Sortie :
 Travail : rétrospective (`/factory-retro`) ; ops-factory reporte les enseignements dans les standards ou les composants (via `ameliorations.md`).
 Revue de la fiche publique tous les six mois.
 
+## Parcours (ADR-007, A05)
+
+Le parcours est choisi et noté dans le registre avant le développement.
+
+- Léger : contenu ou correction mineure. Relecture et `python scripts/verifier.py`.
+- Standard : outil local sans IA distante ni donnée de dossier. Étapes 2 à 5 ; rapports test et sécurité.
+- Renforcé : données de dossier, clé API ou IA distante. Toutes les étapes, quatre rapports, contre-vérification sécurité par un autre agent que l'auteur.
+
+En cas de doute : renforcé. Un rapport doit citer des preuves observables (commande, sortie, version) ; `python scripts/verifier.py` doit passer, et `--publication` avant le statut « publié ».
+
 ## Statuts
 
 idée, prêt, cadrage, prototype, vérification, publié, archivé, abandonné. Un projet bloqué garde son statut et porte la mention "bloqué" avec la raison.

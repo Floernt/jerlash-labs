@@ -26,8 +26,8 @@ Compromission du compte d'hébergement ou du DNS : réponse : authentification �
 
 ## Site
 
-- HTTPS obligatoire, HSTS.
-- En-têtes : Content-Security-Policy, X-Content-Type-Options: nosniff, Referrer-Policy: strict-origin-when-cross-origin, Permissions-Policy restrictive.
+- HTTPS obligatoire (GitHub Pages, "Enforce HTTPS").
+- GitHub Pages ne permet pas d'en-têtes HTTP personnalisés (ADR-003) : Content-Security-Policy et Referrer-Policy posées en balises <meta> ; aucun JavaScript, aucun formulaire sur le site.
 - Pas de cookie, pas de traceur, pas de police externe.
 - Journaux de l'hébergeur : durée de conservation à documenter dans la politique de confidentialité `[À VÉRIFIER auprès de l'hébergeur retenu]`.
 

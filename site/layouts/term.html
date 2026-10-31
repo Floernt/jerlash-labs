@@ -1,0 +1,15 @@
+{{- /* Outils associés à une tâche */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="contenu">
+    <p class="meta"><a href="{{ with site.GetPage "/outils" }}{{ .RelPermalink }}{{ end }}">Outils</a> · tâche</p>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+  {{- with .Pages.ByTitle }}
+  <ul class="liste-contenus">
+    {{- range . }}{{ partial "resume-outil.html" (dict "page" . "niveau" 2) }}{{ end }}
+  </ul>
+  {{- end }}
+</div>
+{{ end }}

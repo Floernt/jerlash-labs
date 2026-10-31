@@ -1,0 +1,20 @@
+{{- /*
+  Élément de liste d'un guide ou d'un article.
+  Contexte : la page (titre de niveau 3), ou dict "page" <page> "niveau" <2|3>.
+*/ -}}
+{{- $p := . -}}{{- $n := 3 -}}
+{{- if reflect.IsMap . }}{{ $p = .page }}{{ $n = .niveau | default 3 }}{{ end -}}
+{{- with $p -}}
+<li class="liste-contenus__element">
+  <h{{ $n }} class="liste-contenus__titre"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h{{ $n }}>
+  {{- $elements := slice }}
+  {{- with .Params.niveau }}{{ $elements = $elements | append (printf "Niveau : %s" (partial "libelles.html" (dict "type" "niveau" "valeur" .))) }}{{ end }}
+  {{- with .Params.derniere_verification }}{{ $elements = $elements | append (printf "vérifié le %s" (partial "date.html" .)) }}{{ else }}{{ if and (eq .Section "automatiser") (not .Date.IsZero) }}{{ $elements = $elements | append (partial "date.html" .Date) }}{{ end }}{{ end }}
+  {{- with $elements }}
+  <p class="meta">{{ delimit . " · " | safeHTML }}</p>
+  {{- end }}
+  {{- with .Params.resume | default .Description }}
+  <p>{{ . }}</p>
+  {{- end }}
+</li>
+{{- end -}}

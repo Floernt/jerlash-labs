@@ -139,7 +139,7 @@ Points à vérifier avant mise en ligne. Ce document ne tranche aucun d'entre eu
 
 - Publicité et communication de l'avocat : conformité du site avec les règles applicables (avocats.be et règlement du barreau d'inscription) `[À VÉRIFIER]`.
 - Mentions obligatoires d'un site professionnel en droit belge (identification, numéro d'entreprise, ordre professionnel, etc.) `[À VÉRIFIER]`.
-- Site personnel ou site du cabinet : qui est l'éditeur, quel lien avec Avroy Avocats, quel accord du cabinet `[À DÉCIDER]`.
+- Éditeur : Florian Ernotte à titre personnel (décision du 2026-10-31). Mention de son cabinet d'exercice et accord éventuel d'Avroy Avocats `[À VÉRIFIER]`.
 - RGPD : le site ne collecte rien, mais la politique de confidentialité doit l'expliquer, ainsi que le traitement réalisé par l'hébergeur (journaux serveur).
 - Outils : rappeler que l'avocat reste responsable du respect du secret professionnel et de ses obligations RGPD lorsqu'il envoie des données à un fournisseur d'IA avec sa propre clé. Le site informe, il n'endosse pas cette responsabilité.
 - Règlement européen sur l'IA (AI Act) : vérifier si des obligations de transparence s'appliquent aux outils publiés `[À VÉRIFIER]`.
@@ -148,7 +148,7 @@ Points à vérifier avant mise en ligne. Ce document ne tranche aucun d'entre eu
 
 ## 13. Identité visuelle
 
-À définir. Question préalable : le site reprend-il la charte d'Avroy Avocats ou une identité propre ? `[À DÉCIDER]`
+Identité propre, sobre (éditeur à titre personnel).
 
 Indications de départ : sobriété, lisibilité, typographie adaptée à la lecture longue, aucune imagerie de robot ou de cerveau lumineux.
 
@@ -172,15 +172,15 @@ Phase 2, lancement : guides "Démarrer", premier outil, relecture juridique des 
 
 Phase 3, rythme : publication régulière d'outils et de guides, journal des nouveautés.
 
-Aucune date n'est fixée à ce stade `[À COMPLÉTER]`.
+Aucune date n'est fixée. État au 2026-10-31 : phases 0 et 1 réalisées, phase 2 en préparation (voir LOG.md).
 
 ## 16. Questions ouvertes
 
-1. Éditeur du site : Florian à titre personnel ou le cabinet ?
+1. Éditeur du site : Florian Ernotte à titre personnel (tranché le 2026-10-31).
 2. Public : Belgique francophone seulement, ou francophonie au sens large ?
 3. Code source des outils publié ou non, et sous quelle licence ?
 4. Gratuité de principe ?
-5. Hébergeur et outil de génération du site.
+5. Hébergeur et outil de génération du site : GitHub Pages et Hugo (ADR-002, ADR-003).
 6. Mesure d'audience : oui ou non ?
 7. Place de l'anglais (une partie du public legal tech est anglophone).
 8. Liens avec florianernotte.be et reflexions.florianernotte.be : renvois croisés, menu commun ?

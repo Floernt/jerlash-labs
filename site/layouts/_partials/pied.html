@@ -1,0 +1,21 @@
+<footer class="pied-site">
+  <div class="conteneur">
+    <nav aria-label="Pied de page">
+      <ul class="menu-pied">
+        {{- range site.Menus.pied }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{- end }}
+        {{- with site.GetPage "/nouveautes" }}
+          {{- with .OutputFormats.Get "rss" }}
+        <li><a href="{{ .RelPermalink }}" type="application/rss+xml">Nouveautés (flux RSS)</a></li>
+          {{- end }}
+        {{- end }}
+      </ul>
+    </nav>
+    <p class="licences">
+      Textes sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.
+      Code des outils sous licence MIT.
+    </p>
+    <p class="licences">Ce site ne dépose aucun cookie et n'utilise aucun traceur.</p>
+  </div>
+</footer>

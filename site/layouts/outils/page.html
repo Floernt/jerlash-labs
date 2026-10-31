@@ -1,0 +1,17 @@
+{{- /* Fiche outil : carte d'identité en tête, puis le corps de la fiche */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <article class="contenu">
+    <header>
+      <h1>{{ .Title }}</h1>
+      {{- with .Params.resume }}
+      <p class="chapeau">{{ . }}</p>
+      {{- end }}
+    </header>
+
+    {{ partial "carte-identite.html" . }}
+
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}

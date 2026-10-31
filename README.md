@@ -13,4 +13,8 @@ Auteur et éditeur : Florian Ernotte.
 
 ## Statut
 
-Phase 0 : cadrage. Aucun code produit.
+Phase 2 (lancement) en préparation, 2026-10-31.
+
+- Premier outil : `outils/controle-avant-envoi` (P05 Lite 0.1.0), testé sur le jeu F-DOCX-01.
+- Site Hugo complet dans `site/` ; publication bloquée tant que les marqueurs `[À COMPLÉTER]` / `[À VÉRIFIER]` ne sont pas levés (`python scripts/verifier.py --publication`).
+- Reste à faire par Florian : voir `LOG.md`, dernière entrée.

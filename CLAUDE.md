@@ -60,8 +60,11 @@ Règles :
   projets/                  fiches projet
   factory/                  pipeline, registre, standards, composants, jeux de test, mémoire
   contenus/                 textes sources à intégrer au site (rubriques éditoriales, ADR-012)
-  site/                     code source du site iavocat.be
+  site/                     code source du site iavocat.be (Hugo)
   outils/<slug>/            un dossier autonome par outil
+  scripts/                  vérification, empaquetage, détection de secrets
+  .github/workflows/        CI (verifier.yml) et publication GitHub Pages (publier.yml)
+  .githooks/                hook pre-commit (secrets)
   .claude/agents/           agents de la Factory
   .claude/commands/         commandes personnalisées Claude Code
   .claude/skills/           skills du projet
@@ -69,14 +72,18 @@ Règles :
 
 ## Stack technique
 
-À décider (voir `docs/decisions.md`, ADR-002 et ADR-003). Tant que ce n'est pas tranché, ne pas initialiser de framework.
+- Site : Hugo extended 0.148.2, sans thème ni npm (ADR-002), hébergé sur GitHub Pages, domaine chez OVH (ADR-003). Pas de JavaScript ; CSP en balise meta.
+- Outils : applications locales Python 3.10+, bibliothèque standard seule tant que possible (ADR-010). Tests `unittest`.
 
-Commandes (à compléter une fois la stack choisie) :
+Commandes (depuis la racine du dépôt) :
 
-- installer : `[À COMPLÉTER]`
-- lancer en local : `[À COMPLÉTER]`
-- construire : `[À COMPLÉTER]`
-- déployer : `[À COMPLÉTER]`
+- vérifier tout (secrets, tests, archive, site, liens) : `python scripts/verifier.py` ; avant publication : `--publication`
+- prévisualiser le site : `hugo server --source site`
+- tests d'un outil : `cd outils/controle-avant-envoi && python -m unittest discover -s tests -v`
+- archive d'un outil et mise à jour de sa fiche (version, taille, SHA-256) : `python scripts/empaqueter.py --fiche`
+- régénérer un jeu de test : `python -I factory/jeux-de-test/F-DOCX-01/generer.py`
+- activer le contrôle des secrets avant commit (une fois par clone) : `git config core.hooksPath .githooks`
+- déployer : push sur `main` ; le workflow `.github/workflows/publier.yml` vérifie, construit et publie (bloqué tant qu'il reste des marqueurs `[À ...]` dans le contenu publié).
 
 ## Langue et style
 

@@ -25,19 +25,26 @@ Conséquences : un seul nom à faire connaître ; l'isolation technique entre ou
 
 ## ADR-002 - Générateur de site
 Date : 2026-10-31
-Statut : Proposée
+Statut : Acceptée (Décision déléguée par Florian le 2026-10-31 ("décide pour réaliser un projet abouti"), révisable)
 Contexte : site de contenu, majoritairement statique, rédigé en Markdown, avec quelques pages outils interactives.
-Options : Astro, Eleventy, Hugo, HTML écrit à la main. `[À COMPARER au moment du choix, sur la base de la documentation à jour]`
-Décision : à prendre.
+Options : Astro, Eleventy, Hugo, HTML écrit à la main.
+Décision (2026-10-31) : Hugo extended, version figée 0.148.2 (celle installée sur le poste de Florian), sans thème tiers, gabarits écrits dans site/layouts. Raisons : binaire unique sans arbre de dépendances npm (surface d'attaque de la chaîne d'approvisionnement réduite, A02), Markdown natif, flux RSS et plan du site intégrés, aucune JavaScript produite par défaut. Astro et Eleventy demandent node_modules ; le HTML à la main ne gère ni RSS ni gabarits.
+Conséquences : commandes dans CLAUDE.md ; toute montée de version de Hugo est un changement consigné.
 Conséquences : conditionne les commandes indiquées dans CLAUDE.md.
 
 ## ADR-003 - Hébergement
 Date : 2026-10-31
-Statut : Proposée
-Contexte : site statique, pas de backend. Contraintes : HTTPS, en-têtes de sécurité configurables, sous-domaines, localisation des journaux.
-Options : hébergeur actuel de florianernotte.be `[À COMPLÉTER]`, Cloudflare Pages, Netlify, GitHub Pages, hébergeur européen.
-Décision : à prendre.
-Conséquences : GitHub Pages ne permet pas, à ma connaissance, de définir librement des en-têtes HTTP `[À VÉRIFIER]`, ce qui compte pour la Content-Security-Policy.
+Statut : Acceptée (choix de Florian, 2026-10-31)
+Contexte : site statique, pas de backend. Contraintes : HTTPS, en-têtes de sécurité, localisation des journaux.
+Options : Cloudflare Pages, Netlify, GitHub Pages, hébergeur européen.
+Décision : GitHub Pages, domaine iavocat.be enregistré chez OVH. Construction et déploiement par GitHub Actions (Hugo figé, ADR-002).
+Conséquences :
+- GitHub Pages ne permet pas de définir des en-têtes HTTP. La Content-Security-Policy et la Referrer-Policy sont posées en balises <meta> dans chaque page. Ne peuvent pas être appliqués : frame-ancestors, X-Frame-Options, Permissions-Policy, X-Content-Type-Options, HSTS configurable. Risque jugé acceptable parce que le site ne contient ni JavaScript, ni formulaire, ni clé API, et que les outils s'exécutent hors du site (ADR-010). À réexaminer si une page interactive est ajoutée.
+- HTTPS : option "Enforce HTTPS" à activer dans les réglages du dépôt après validation du certificat [À VÉRIFIER lors du déploiement].
+- DNS chez OVH : enregistrements A/AAAA de l'apex vers les adresses GitHub Pages et vérification du domaine dans GitHub [À VÉRIFIER dans la documentation GitHub au moment de la configuration] ; 2FA sur OVH et GitHub.
+- Journaux et adresses IP traités par GitHub : à décrire dans la politique de confidentialité à partir de la déclaration de confidentialité de GitHub [À VÉRIFIER].
+- Le dépôt doit être public (ou compte payant) ; cohérent avec la licence MIT (ADR-006).
+- Remplace la décision Cloudflare Pages prise le même jour.
 
 ## ADR-004 - Outils locaux, clé de l'utilisateur, aucun backend
 Date : 2026-10-31
@@ -48,47 +55,52 @@ Note de correction (2026-10-31) : la version initiale affirmait "pas de responsa
 
 ## ADR-005 - Chemins ou sous-domaines pour les outils
 Date : 2026-10-31
-Statut : Proposée
+Statut : Acceptée (Décision déléguée par Florian le 2026-10-31 ("décide pour réaliser un projet abouti"), révisable)
 Options : A) iavocat.be/outils/<slug> ; B) <slug>.iavocat.be ; C) fiches en chemins, outils exécutables en sous-domaines.
-Recommandation : C, pour isoler chaque page qui manipule une clé API.
-Décision : à prendre.
+Recommandation initiale : C, pour isoler chaque page qui manipule une clé API.
+Décision (2026-10-31) : A, chemins (iavocat.be/outils/<slug>). Aucun outil ne s'exécute dans le navigateur avec une clé (ADR-010), l'argument d'isolation de l'option C tombe. Si un outil navigateur manipulant une clé est un jour admis par décision spécifique, il sera publié sur son propre sous-domaine.
 
 ## ADR-006 - Publication et licence du code
 Date : 2026-10-31
-Statut : Proposée
+Statut : Acceptée (Décision déléguée par Florian le 2026-10-31 ("décide pour réaliser un projet abouti"), révisable)
 Contexte : un outil local auquel on confie une clé et des documents inspire davantage confiance si son code est lisible.
 Options : code ouvert (licence MIT, Apache 2.0, EUPL ou autre), code fermé, mixte.
-Décision : à prendre.
+Décision (2026-10-31) : code des outils sous licence MIT (compatible avec les sources MIT reprises, lisible, réutilisable par les cabinets) ; textes du site sous licence Creative Commons Attribution 4.0 (CC BY 4.0). Résultats de test publiés avec chaque outil.
 
 ## ADR-007 - Organisation de la production en Factory
 Date : 2026-10-31
-Statut : Proposée
+Statut : Acceptée avec modification (Décision déléguée par Florian le 2026-10-31 ("décide pour réaliser un projet abouti"), révisable)
 Contexte : plusieurs outils à produire avec des agents Claude Code ; besoin de cohérence et de contrôle.
 Décision proposée : circuit unique (factory/pipeline.md), agents spécialisés, agent ops-factory chargé des contrôles de passage et de l'amélioration de la Factory, validation de Florian aux étapes "prêt" et "publié".
 Conséquences : chaque outil laisse une trace (spécification, rapports, rétrospective) ; la Factory s'enrichit à chaque projet.
+Modification (2026-10-31, A05) : trois parcours, léger (contenu, correction mineure), standard (outil local sans IA distante ni donnée de dossier), renforcé (données de dossier, clés, IA distante). En cas de doute, renforcé. Un passage d'étape exige des preuves observables (commande exécutée, sortie, version) ; l'auteur d'une fonctionnalité ne certifie pas seul sa conformité.
 
 ## ADR-008 - Réutilisation de projets tiers
 Date : 2026-10-31
-Statut : Proposée
+Statut : Acceptée (Décision déléguée par Florian le 2026-10-31 ("décide pour réaliser un projet abouti"), révisable)
 Contexte : plusieurs fiches reprennent des projets open source (MIT, Apache-2.0, AGPL-3.0) ou s'en inspirent.
 Décision proposée : MIT et Apache-2.0 acceptés avec mentions de licence conservées et fichier TIERS.md par outil ; AGPL-3.0 exclu pour le code embarqué sauf décision contraire ; projet sans licence identifiée : aucun texte ni code repris, seulement l'idée.
 Conséquences : vérification de licence obligatoire à l'étape "prêt".
 
 ## ADR-009 - Plugins tiers dans le dépôt (open-pstack, skillboxing)
 Date : 2026-10-31
-Statut : Proposée
+Statut : Acceptée (Décision déléguée par Florian le 2026-10-31 ("décide pour réaliser un projet abouti"), révisable)
 Options : A) installer les plugins d'origine, figés sur une version ; B) reprendre leurs principes dans des agents et skills internes (solution livrée) ; C) B maintenant, réévaluer A après un mois d'usage.
 Recommandation : C.
-Décision : à prendre.
+Décision (2026-10-31) : C. Réévaluation fin novembre 2026.
 
 ## ADR-010 - Modes d'exécution, BYOK et secrets
 Date : 2026-10-31
-Statut : Proposée (PLAN_AMELIORATIONS.md, A01)
+Statut : Acceptée (Décision déléguée par Florian le 2026-10-31 ("décide pour réaliser un projet abouti"), révisable), point 4 restant à exécuter
 Contexte : docs/principes-outils.md admettait l'appel direct d'une API depuis une page web avec une clé saisie dans le navigateur, sans décision spécifique ni modèle de menace.
 Options à documenter : A) navigateur entièrement local, sans IA distante ; B) application ou service local sur le poste, qui appelle éventuellement une API distante ; C) modèle exécuté sur la machine de l'utilisateur. Appel direct depuis le navigateur avec clé : uniquement par décision spécifique, sur la base de la documentation officielle du fournisseur, du modèle de menace et de tests.
 À produire avant arbitrage : matrice fournisseur x mode d'exécution x authentification x données envoyées x source officielle x date de vérification ; politique de secrets (clés dédiées, limites de dépense, révocation, absence de journalisation).
 Mesure conservatoire en attendant : aucun outil ne manipule de clé API tant que son architecture n'a pas été approuvée.
-Décision : à prendre.
+Décision (2026-10-31) :
+1. Les outils sans IA distante s'exécutent en mode A (navigateur entièrement local) ou B (application locale). P05 Lite est une application locale Python, sans dépendance externe et sans aucun accès réseau (vérifié par test).
+2. Un outil qui appelle une IA distante est une application locale (mode B). La clé est lue depuis une variable d'environnement ou un fichier .env local ignoré par git, jamais écrite dans un journal ni dans un rapport. L'application n'ouvre aucun port accessible depuis le réseau (écoute limitée à 127.0.0.1 si une interface web locale est nécessaire).
+3. L'appel direct depuis une page web avec clé saisie dans le navigateur est exclu par défaut. Une exception exige une ADR propre.
+4. Avant le premier outil à IA distante : matrice fournisseur x authentification x données envoyées x source officielle x date, établie à partir de la documentation officielle à jour [À FAIRE avant P09/P01].
 
 ## ADR-011 - Premier outil : P05 Lite
 Date : 2026-10-31

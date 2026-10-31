@@ -12,6 +12,23 @@ Prochaine étape :
 
 ---
 
+## 2026-10-31 - Réalisation : P05 Lite, site, vérification, CI
+Fait :
+- Décisions déléguées par Florian (ADR-002 Hugo, ADR-005 chemins, ADR-006 MIT / CC BY 4.0, ADR-007 Factory avec trois parcours, ADR-008, ADR-009 option C, ADR-010 modes d'exécution). Décisions de Florian : éditeur à titre personnel, hébergement GitHub Pages, domaine chez OVH (ADR-003), P05 en application locale.
+- outils/controle-avant-envoi : P05 Lite 0.1.0, Python bibliothèque standard, quatorze contrôles, fenêtre, ligne de commande, rapports texte/HTML/JSON, 42 tests. Relecture indépendante par un agent distinct : 3 défauts bloquants et 7 à corriger, tous corrigés et couverts par un test (verifications/2026-10-31-securite.md).
+- factory/jeux-de-test/F-DOCX-01 : générateur reproductible, cinq pièces, résultats attendus ; pièces piégée et propre ouvertes sans erreur dans Word.
+- site/ : Hugo, gabarits (agent), contenu : accueil, fiche P05, guide « Utiliser un outil en local », précautions, à propos, mentions légales, confidentialité, rubrique « Automatiser une prestation » (deux articles, invitations à prendre contact retirées), nouveautés et RSS ; trois guides API en brouillon (plan seulement).
+- scripts/ : verifier.py (secrets, tests, archive, site, liens, marqueurs), empaqueter.py (archive reproductible, empreinte reportée sur la fiche), detecter_secrets.py ; hook pre-commit ; workflows GitHub (vérification, publication bloquée par les marqueurs).
+Vérifications : python scripts/verifier.py : 15/15 ; --publication : échoue sur 17 marqueurs, comme attendu.
+Décisions : ADR-002, 003, 005 à 010 acceptées.
+Points ouverts (Florian) :
+- lever les marqueurs [À COMPLÉTER] / [À VÉRIFIER] du site (contact, barreau, BCE, spécialisation, comités, mentions légales, journaux GitHub, libellés de l'installateur Python) ;
+- trancher les cinq points de outils/controle-avant-envoi/verifications/2026-10-31-deontologie.md ;
+- tester la fenêtre de P05 à la main et lister les incidents vécus au cabinet (nouveaux pièges pour F-DOCX-01) ;
+- créer le dépôt GitHub public, activer Pages (source GitHub Actions), DNS OVH, Enforce HTTPS, 2FA ; revérifier les versions des actions GitHub ;
+- relire les deux articles de la rubrique dans leur version site.
+Prochaine étape : levée des marqueurs puis publication ; ensuite F-IDENT-01 et P09.
+
 ## 2026-10-31 - Préparation du projet : premiers arbitrages, rubrique, git
 Fait : examen du dossier iavocat et des contenus du dossier parent ; fiche P05 découpée en P05 Lite / P05 avancé (priorité haute, dépendances du MVP séparées) ; rubrique "Automatiser une prestation" ajoutée au cahier des charges (v0.3) avec import des deux articles en Markdown dans contenus/automatiser-une-prestation/ ; backlog, registre, plan §13 et CLAUDE.md mis à jour ; dépôt git local initialisé, sans remote.
 Décisions : ADR-011 (premier outil P05 Lite) et ADR-012 (rubrique "Automatiser une prestation"), acceptées par Florian.

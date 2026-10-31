@@ -1,0 +1,4 @@
+# Sorties et fichiers temporaires de Hugo
+public/
+resources/
+.hugo_build.lock

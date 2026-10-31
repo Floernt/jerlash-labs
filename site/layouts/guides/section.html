@@ -1,0 +1,16 @@
+{{- /* Liste des guides (ordre : poids, puis date, puis titre) */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="contenu">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+  {{- with .Pages }}
+  <ul class="liste-contenus">
+    {{- range . }}{{ partial "resume-article.html" (dict "page" . "niveau" 2) }}{{ end }}
+  </ul>
+  {{- else }}
+  <p>Aucun guide publié pour l'instant.</p>
+  {{- end }}
+</div>
+{{ end }}

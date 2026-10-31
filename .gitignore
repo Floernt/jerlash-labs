@@ -19,3 +19,6 @@ __pycache__/
 # Système
 .DS_Store
 Thumbs.db
+
+# Archives des outils, reconstruites par scripts/empaqueter.py
+site/static/telechargements/

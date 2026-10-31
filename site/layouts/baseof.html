@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode | default "fr-BE" }}">
+<head>
+  <meta charset="utf-8">
+  {{- /* Hébergement GitHub Pages : pas d'en-têtes HTTP personnalisés, la politique de sécurité passe par des balises meta. frame-ancestors est ignoré dans une balise meta. */}}
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- partial "entete-meta.html" . }}
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  {{ partial "entete.html" . }}
+  <main id="contenu" tabindex="-1">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "pied.html" . }}
+</body>
+</html>

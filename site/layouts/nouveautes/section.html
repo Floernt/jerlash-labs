@@ -1,0 +1,27 @@
+{{- /* Journal public des versions : entrées complètes, de la plus récente à la plus ancienne */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="contenu">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    {{- with .OutputFormats.Get "rss" }}
+    <p><a href="{{ .RelPermalink }}" type="application/rss+xml">S'abonner au flux RSS des nouveautés</a></p>
+    {{- end }}
+  </header>
+  {{- with .Pages.ByDate.Reverse }}
+  <ol class="journal">
+    {{- range . }}
+    <li class="journal__entree">
+      <article>
+        <h2 class="journal__titre"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{- if not .Date.IsZero }}<p class="meta">{{ partial "date.html" .Date }}</p>{{ end }}
+        <div class="contenu">{{ .Content }}</div>
+      </article>
+    </li>
+    {{- end }}
+  </ol>
+  {{- else }}
+  <p>Aucune nouveauté pour l'instant.</p>
+  {{- end }}
+</div>
+{{ end }}

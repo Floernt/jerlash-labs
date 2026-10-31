@@ -1,0 +1,34 @@
+{{ define "main" }}
+<div class="conteneur">
+  <article class="contenu">
+    <h1>{{ .Title | default site.Title }}</h1>
+    {{ .Content }}
+  </article>
+
+  {{- with site.GetPage "/outils" }}
+  {{- $outils := .RegularPages.ByLastmod.Reverse | first 5 }}
+  {{- if $outils }}
+  <section class="bloc-accueil" aria-labelledby="titre-derniers-outils">
+    <h2 id="titre-derniers-outils">Derniers outils</h2>
+    <ul class="liste-contenus">
+      {{- range $outils }}{{ partial "resume-outil.html" . }}{{ end }}
+    </ul>
+    <p><a href="{{ .RelPermalink }}">Tous les outils</a></p>
+  </section>
+  {{- end }}
+  {{- end }}
+
+  {{- with site.GetPage "/guides" }}
+  {{- $guides := .RegularPages.ByLastmod.Reverse | first 5 }}
+  {{- if $guides }}
+  <section class="bloc-accueil" aria-labelledby="titre-derniers-guides">
+    <h2 id="titre-derniers-guides">Derniers guides</h2>
+    <ul class="liste-contenus">
+      {{- range $guides }}{{ partial "resume-article.html" . }}{{ end }}
+    </ul>
+    <p><a href="{{ .RelPermalink }}">Tous les guides</a></p>
+  </section>
+  {{- end }}
+  {{- end }}
+</div>
+{{ end }}

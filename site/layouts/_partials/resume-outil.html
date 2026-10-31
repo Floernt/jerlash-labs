@@ -1,0 +1,20 @@
+{{- /*
+  Élément de liste d'un outil (catalogue, accueil, page de tâche).
+  Contexte : la page de l'outil (titre de niveau 3), ou dict "page" <page> "niveau" <2|3>
+  pour respecter la hiérarchie des titres de la page qui affiche la liste.
+*/ -}}
+{{- $p := . -}}{{- $n := 3 -}}
+{{- if reflect.IsMap . }}{{ $p = .page }}{{ $n = .niveau | default 3 }}{{ end -}}
+{{- with $p -}}
+<li class="liste-contenus__element">
+  <h{{ $n }} class="liste-contenus__titre"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h{{ $n }}>
+  <p class="meta">
+    {{- with .Params.version }}Version {{ . }}{{ end }}
+    {{- with .Params.statut }} <span class="pastille pastille--{{ . | urlize }}">{{ partial "libelles.html" (dict "type" "statut" "valeur" .) }}</span>{{ end }}
+    {{- with .Params.mise_a_jour }} · mis à jour le {{ partial "date.html" . }}{{ end }}
+  </p>
+  {{- with .Params.resume | default .Description }}
+  <p>{{ . }}</p>
+  {{- end }}
+</li>
+{{- end -}}

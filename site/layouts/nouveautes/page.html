@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="conteneur">
+  <article class="contenu">
+    <header>
+      <h1>{{ .Title }}</h1>
+      {{- if not .Date.IsZero }}
+      <p class="meta">{{ partial "date.html" .Date }}</p>
+      {{- end }}
+    </header>
+    {{ .Content }}
+    <p><a href="{{ .CurrentSection.RelPermalink }}">Toutes les nouveautés</a></p>
+  </article>
+</div>
+{{ end }}

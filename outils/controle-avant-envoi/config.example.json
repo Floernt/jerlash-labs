@@ -1,0 +1,5 @@
+{
+  "_lisez_moi": "Copiez ce fichier sous le nom config.json et passez-le avec --config. Chaque clé présente remplace la valeur par défaut (src/controle_avant_envoi/defaut.json). Aucune clé API : l'outil n'en utilise pas.",
+  "termes_sensibles": ["Nom d'un autre client", "Référence d'un autre dossier"],
+  "domaines_internes": ["sharepoint.com", "onedrive", "1drv.ms", "intranet", "votre-cabinet.local"]
+}

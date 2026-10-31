@@ -1,0 +1,24 @@
+{{- /* Titre, description, liens canoniques, feuilles de style, flux RSS, données structurées */ -}}
+{{- $titre := site.Title -}}
+{{- if not .IsHome }}{{ $titre = printf "%s | %s" .Title site.Title }}{{ end -}}
+{{- $description := .Description | default .Params.resume -}}
+{{- if and (not $description) (eq .Kind "term") }}{{ $description = printf "Outils d'iavocat.be pour la tâche « %s »." .Title }}{{ end -}}
+{{- $description = $description | default site.Params.description -}}
+<title>{{ $titre }}</title>
+<meta name="description" content="{{ $description | plainify }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+{{- $css := slice (resources.Get "css/principal.css") (resources.Get "css/coloration.css") | resources.Concat "css/site.css" | minify | fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{- with site.GetPage "/nouveautes" }}
+  {{- with .OutputFormats.Get "rss" }}
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="Nouveautés de {{ site.Title }}">
+  {{- end }}
+{{- end }}
+<meta property="og:title" content="{{ .Title | default site.Title }}">
+<meta property="og:description" content="{{ $description | plainify }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{- partial "donnees-structurees.html" . }}

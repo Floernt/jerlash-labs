@@ -486,7 +486,7 @@ Une livraison est considérée comme terminée uniquement si :
 - [ ] Accepte-t-on les trois parcours Factory (léger/standard/renforcé) ?
 - [ ] Quel degré d'ouverture du code et des résultats de test souhaite-t-on rendre public ?
 - [ ] Quel public pilote et quels premiers critères de valeur retient-on ?
-- [ ] Qui sera l'éditeur juridique du site et quelle relation exacte est prévue avec Avroy Avocats ?
+- [x] Qui sera l'éditeur juridique du site et quelle relation exacte est prévue avec Avroy Avocats ? → Florian Ernotte à titre personnel (2026-10-31) ; relation avec le cabinet [À VÉRIFIER]
 
 ---
 

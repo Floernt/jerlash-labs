@@ -1,0 +1,5 @@
+# Un terme par ligne. Les lignes qui commencent par # sont ignorées.
+# Majuscules et accents ne comptent pas : « societe x » trouve aussi « Société X ».
+# Gardez ce fichier hors de tout dossier partagé : il contient des noms de clients.
+Nom d'un autre client
+Référence d'un autre dossier

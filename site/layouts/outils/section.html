@@ -1,0 +1,62 @@
+{{- /* Catalogue des outils, groupé par tâche (taxonomie « taches ») */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="contenu">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+
+  {{- $outils := .RegularPages }}
+
+  {{- /* Groupes de tâches : d'abord l'ordre de params.ordre_taches, puis les autres par ordre alphabétique */}}
+  {{- $entrees := site.Taxonomies.taches.Alphabetical }}
+  {{- $groupes := slice }}
+  {{- range site.Params.ordre_taches }}
+    {{- $voulu := . | urlize }}
+    {{- range $entrees }}{{ if eq (.Page.Title | urlize) $voulu }}{{ $groupes = $groupes | append . }}{{ end }}{{ end }}
+  {{- end }}
+  {{- range $entrees }}
+    {{- if not (in $groupes .) }}{{ $groupes = $groupes | append . }}{{ end }}
+  {{- end }}
+
+  {{- with $outils }}
+  {{- if $groupes }}
+  <nav class="sommaire-taches" aria-label="Tâches">
+    <p class="meta">Aller à une tâche :</p>
+    <ul>
+      {{- range $groupes }}
+      {{- if where .Pages "Section" "outils" }}
+      <li><a href="#tache-{{ .Page.Title | urlize }}">{{ .Page.LinkTitle }}</a></li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </nav>
+  {{- end }}
+
+  {{- range $groupes }}
+  {{- $terme := .Page }}
+  {{- with where .Pages "Section" "outils" }}
+  <section class="groupe-taches" aria-labelledby="tache-{{ $terme.Title | urlize }}">
+    <h2 id="tache-{{ $terme.Title | urlize }}">{{ $terme.LinkTitle }}</h2>
+    <ul class="liste-contenus">
+      {{- range .ByTitle }}{{ partial "resume-outil.html" . }}{{ end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- end }}
+
+  {{- $sansTache := slice }}
+  {{- range $outils }}{{ if not .Params.taches }}{{ $sansTache = $sansTache | append . }}{{ end }}{{ end }}
+  {{- with $sansTache }}
+  <section class="groupe-taches" aria-labelledby="tache-autres">
+    <h2 id="tache-autres">Autres outils</h2>
+    <ul class="liste-contenus">
+      {{- range . }}{{ partial "resume-outil.html" . }}{{ end }}
+    </ul>
+  </section>
+  {{- end }}
+  {{- else }}
+  <p>Aucun outil publié pour l'instant.</p>
+  {{- end }}
+</div>
+{{ end }}

@@ -1,0 +1,4 @@
+Contact: mailto:[À COMPLÉTER]
+Expires: 2027-10-31T00:00:00.000Z
+Preferred-Languages: fr, en
+Canonical: https://iavocat.be/.well-known/security.txt

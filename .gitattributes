@@ -1,0 +1,9 @@
+# Fins de ligne LF partout : l'archive téléchargeable et son empreinte SHA-256
+# doivent être identiques sur Windows, macOS et en intégration continue.
+* text=auto eol=lf
+*.docx binary
+*.docm binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.ico binary

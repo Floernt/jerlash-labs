@@ -1,0 +1,18 @@
+{{- /* Guide : niveau, date de dernière vérification et avertissement si la vérification est ancienne */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <article class="contenu">
+    <header>
+      <h1>{{ .Title }}</h1>
+      <p class="meta">
+        {{- with .Params.niveau }}Niveau : {{ partial "libelles.html" (dict "type" "niveau" "valeur" .) }}{{ end }}
+        {{- with .Params.derniere_verification }}{{ if $.Params.niveau }} · {{ end }}Dernière vérification : {{ partial "date.html" . }}{{ end }}
+      </p>
+    </header>
+
+    {{ partial "avertissement-verification.html" . }}
+
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}

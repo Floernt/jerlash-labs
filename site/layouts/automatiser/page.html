@@ -1,0 +1,16 @@
+{{ define "main" }}
+<div class="conteneur">
+  <article class="contenu">
+    <header>
+      <h1>{{ .Title }}</h1>
+      {{- if not .Date.IsZero }}
+      <p class="meta">Publié le {{ partial "date.html" .Date }}</p>
+      {{- end }}
+      {{- with .Params.resume }}
+      <p class="chapeau">{{ . }}</p>
+      {{- end }}
+    </header>
+    {{ .Content }}
+  </article>
+</div>
+{{ end }}

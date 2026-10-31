@@ -1,0 +1,49 @@
+{
+  "jeu": "F-DOCX-01",
+  "version_jeu": "1.0",
+  "outil": "P05 controle-avant-envoi",
+  "regle": "Chaque piège listé doit être détecté (statut + extrait attendu). Une pièce illisible doit produire le niveau 'erreur', jamais 'rien_detecte'.",
+  "pieces": {
+    "contrat-pieges.docx": {
+      "niveau": "a_traiter",
+      "controles": {
+        "commentaires": {"statut": "detecte", "contient": ["Anne Dupont (fictif)", "50.000 EUR"]},
+        "modifications": {"statut": "detecte", "min": 4, "contient": ["Insertion par Jean Martin", "Suppression par Jean Martin", "15.000 EUR", "Mise en forme modifiée", "En-tête (header1.xml)"]},
+        "texte_masque": {"statut": "detecte", "min": 4, "contient": ["Texte masqué", "20.000 EUR", "Texte écrit en blanc", "taille minuscule", "NoteInterne"]},
+        "marqueurs": {"statut": "detecte", "contient": ["Blanc à compléter", "Mention de travail", "Suite de X", "Texte surligné"]},
+        "proprietes": {"statut": "detecte", "contient": ["Auteur : Anne Dupont", "Stagiaire Cabinet Fictif", "Société : Cabinet Fictif SRL", "Responsable : Associé fictif", "NumeroDossier : 2026/0123-DURAND", "Mots-clés : dossier 2026/0123"]},
+        "personnes": {"statut": "detecte", "contient": ["Anne Dupont (fictif)", "Jean Martin (fictif)", "Stagiaire Cabinet Fictif"]},
+        "champs": {"statut": "detecte", "contient": ["Champ FILENAME \\p", "Champ AUTHOR"], "absent": ["Champ PAGE"]},
+        "liens": {"statut": "detecte", "contient": ["adresse interne", "sharepoint.com", "Modèle attaché", "serveur-fictif"]},
+        "reglages": {"statut": "detecte", "contient": ["suivi des modifications est activé", "ClientDossier = DURAND-2026-0123"]},
+        "images": {"statut": "detecte", "contient": ["EXIF"]},
+        "notes": {"statut": "detecte", "contient": ["courriel interne"]},
+        "termes": {"statut": "non_verifie"},
+        "macros": {"statut": "non_detecte"},
+        "objets": {"statut": "non_detecte"}
+      }
+    },
+    "contrat-pieges.docx+termes": {
+      "fichier": "contrat-pieges.docx",
+      "termes": ["autre-client sa", "DURAND-2026-0123", "Société Inexistante"],
+      "niveau": "a_traiter",
+      "controles": {
+        "termes": {"statut": "detecte", "contient": ["« autre-client sa » trouvé", "« DURAND-2026-0123 » trouvé", "Réglages du document"], "absent": ["Société Inexistante"]}
+      }
+    },
+    "contrat-propre.docx": {
+      "niveau": "rien_detecte",
+      "tous_sauf": {"termes": "non_verifie"},
+      "statut_par_defaut": "non_detecte"
+    },
+    "contrat-macros.docm": {
+      "niveau": "a_traiter",
+      "controles": {
+        "macros": {"statut": "detecte", "contient": ["vbaProject.bin"]},
+        "objets": {"statut": "detecte", "contient": ["Feuille_de_calcul_Microsoft_Excel.xlsx"]}
+      }
+    },
+    "contrat-protege.docx": {"niveau": "erreur", "erreur_contient": "protégé par mot de passe"},
+    "contrat-tronque.docx": {"niveau": "erreur", "erreur_contient": "endommagé"}
+  }
+}

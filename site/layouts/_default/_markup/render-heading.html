@@ -1,0 +1,9 @@
+{{- /*
+  Titres avec lien d'ancrage, pour pouvoir citer une section précise.
+  Le lien est placé à côté du titre (et non dedans) pour ne pas alourdir le nom du titre
+  lu par les lecteurs d'écran ; son intitulé accessible reprend le texte du titre.
+*/ -}}
+<div class="titre-ancre">
+<h{{ .Level }} id="{{ .Anchor }}"{{ range $k, $v := .Attributes }}{{ if ne $k "id" }} {{ $k }}="{{ $v }}"{{ end }}{{ end }}>{{ .Text }}</h{{ .Level }}>
+<a class="ancre" href="#{{ .Anchor }}" aria-label="Lien vers la section « {{ .PlainText }} »"><span aria-hidden="true">#</span></a>
+</div>

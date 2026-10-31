@@ -1,0 +1,32 @@
+{{- /*
+  Données structurées JSON-LD minimales.
+  Un bloc <script type="application/ld+json"> est un bloc de données : le navigateur ne l'exécute pas,
+  il n'est donc pas soumis à script-src et n'entre pas en conflit avec default-src 'none'.
+*/ -}}
+{{- $auteur := dict "@type" "Person" "name" site.Params.auteur -}}
+{{- $donnees := dict -}}
+{{- if .IsHome -}}
+  {{- $donnees = dict
+      "@context" "https://schema.org"
+      "@type" "WebSite"
+      "name" site.Title
+      "url" site.Home.Permalink
+      "inLanguage" site.Language.LanguageCode
+      "description" site.Params.description -}}
+{{- else if and .IsPage (in (slice "guides" "automatiser") .Section) -}}
+  {{- $type := cond (eq .Section "guides") "TechArticle" "Article" -}}
+  {{- $donnees = dict
+      "@context" "https://schema.org"
+      "@type" $type
+      "headline" .Title
+      "description" (.Description | default .Params.resume | default "" | plainify)
+      "inLanguage" site.Language.LanguageCode
+      "url" .Permalink
+      "mainEntityOfPage" .Permalink
+      "author" $auteur -}}
+  {{- if not .Date.IsZero }}{{ $donnees = merge $donnees (dict "datePublished" (.Date.Format "2006-01-02")) }}{{ end -}}
+  {{- if not .Lastmod.IsZero }}{{ $donnees = merge $donnees (dict "dateModified" (.Lastmod.Format "2006-01-02")) }}{{ end -}}
+{{- end -}}
+{{- with $donnees }}
+<script type="application/ld+json">{{ . | jsonify | safeJS }}</script>
+{{- end }}

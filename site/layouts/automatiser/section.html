@@ -1,0 +1,16 @@
+{{- /* Rubrique « Automatiser une prestation » : articles du plus récent au plus ancien */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="contenu">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+  {{- with .Pages.ByDate.Reverse }}
+  <ul class="liste-contenus">
+    {{- range . }}{{ partial "resume-article.html" (dict "page" . "niveau" 2) }}{{ end }}
+  </ul>
+  {{- else }}
+  <p>Aucun article publié pour l'instant.</p>
+  {{- end }}
+</div>
+{{ end }}

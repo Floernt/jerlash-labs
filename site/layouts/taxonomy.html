@@ -1,0 +1,14 @@
+{{- /* Liste des tâches (taxonomie « taches ») */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="contenu">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+  </header>
+  <ul class="liste-simple">
+    {{- range .Data.Terms.Alphabetical }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a> ({{ .Count }})</li>
+    {{- end }}
+  </ul>
+</div>
+{{ end }}
