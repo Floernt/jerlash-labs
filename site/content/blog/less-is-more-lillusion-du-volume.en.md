@@ -4,7 +4,7 @@ date: 2025-06-25
 description: "Faced with the promises of AI, many lawyers give in to the temptation to “feed it everything”."
 slug: "less-is-more-illusion-of-volume"
 traduction:
-  source: "78db0ed567601010053c09028769c1389946fa07"
+  source: "9459ff5ff43dd0503cfff8c8a10e50b266f12739"
 ---
 
 --- 

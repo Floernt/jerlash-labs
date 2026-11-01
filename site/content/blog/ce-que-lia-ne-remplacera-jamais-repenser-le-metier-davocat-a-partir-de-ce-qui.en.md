@@ -4,7 +4,7 @@ date: 2025-06-13
 description: "Everyone is worried about whether AI will replace lawyers."
 slug: "what-ai-will-never-replace"
 traduction:
-  source: "f15769df505d48a36cc50764da519046822a8550"
+  source: "fdd91985f3bb40138ea82f1249733f25e45760f7"
 ---
 
 Everyone is worried about whether AI will replace lawyers. What if we asked the opposite question instead: what, in this profession, has stood the test of time — and why? A shift in perspective to refocus practice on what matters.

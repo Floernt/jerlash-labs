@@ -4,7 +4,7 @@ date: 2025-06-13
 description: "While some tech leaders are going back to coding so as not to miss the revolution under way, many legal professionals are still debating the “relevance” of AI."
 slug: "ai-is-moving-forward"
 traduction:
-  source: "a0e37d26b1223413a7604808af331a73b76a8202"
+  source: "b6e53ee37f4fbca9c8a65ee202278db83d7e0b77"
 ---
 
 While some tech leaders are going back to coding so as not to miss the revolution under way, many legal professionals are still debating the “relevance” of AI. By waiting for everything to be regulated, we mainly risk missing the moment. For the question is no longer whether AI will transform the way we work — but how each of us can start engaging with it, right now, at our own scale.
