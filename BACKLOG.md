@@ -9,9 +9,10 @@ Règle depuis le 2026-11-01 : livrer plutôt que construire. Un seul chantier da
 - [x] Sections outils, guides, automatiser, nouveautés et précautions retirées du site publié (brouillons)
 - [ ] Florian : créer le dépôt GitHub public `jerlash-labs`, donner son URL et le nom du compte
 - [ ] URGENT, Florian : mentions légales et confidentialité retirées du site le 2026-11-01 pour publier sans attendre ; à remettre dès que possible (adresse de contact, adresse du cabinet, BCE, TVA, référence déontologique, journaux GitHub), avec la phrase de contact de la page À propos et security.txt
-- [ ] Comprendre pourquoi la vérification complète échoue sur le serveur Linux de GitHub (elle passe sous Windows) : journal de l'étape « Vérification complète » à relever
+- [ ] Vérification complète en échec sur Linux : les archives zip des outils n'ont pas la même empreinte que sous Windows (compression différente) ; rendre l'empaquetage reproductible d'un système à l'autre avant de publier un outil
 - [ ] Florian : relire la page d'accueil, les 9 articles importés (dont 4 aux en-têtes vides : titre tiré du nom de fichier) et leurs dates (date du fichier)
-- [ ] Pousser sur GitHub, activer Pages (source : GitHub Actions), publication verte
+- [x] Pousser sur GitHub, activer Pages (source : GitHub Actions), publication verte : en ligne sur jerlash.eu le 2026-11-01
+- [ ] Florian : cocher « Enforce HTTPS » dans Settings → Pages dès que le certificat est délivré, puis relancer la publication (liens canoniques en https)
 
 ## Ensuite
 

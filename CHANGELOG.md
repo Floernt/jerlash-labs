@@ -2,9 +2,11 @@
 
 Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessions est dans `LOG.md`, ce qui reste à faire dans `BACKLOG.md`.
 
-## Non publié (en cours)
+## 2026-11-01 - Site jerlash.labs 0.1.0, publié sur jerlash.eu
 
-- Site jerlash.labs 0.1.0, prêt à publier dès que les 11 marqueurs des pages légales sont levés : identité jerlash (Schibsted Grotesk, IBM Plex Mono, fonds pixel), accueil, blog de 9 articles importés depuis `articles/`, à propos, mentions légales, confidentialité. Publication GitHub Pages sous un sous-chemin (ADR-022).
+- Identité jerlash (Schibsted Grotesk, IBM Plex Mono, fonds pixel), accueil, blog de 9 articles importés depuis `articles/`, page À propos (ADR-022).
+- Publication GitHub Pages par GitHub Actions, domaine jerlash.eu.
+- Retiré provisoirement : mentions légales, confidentialité, phrase de contact et security.txt (à remettre en priorité, voir `BACKLOG.md`).
 
 ## Historique antérieur (rien de publié)
 
