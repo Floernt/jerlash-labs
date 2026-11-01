@@ -5,7 +5,7 @@ date: 2025-12-30
 description: "The more time passes, the clearer it becomes that we are living through a turning point."
 slug: "ai-and-the-lawyer-delegating-the-known-thinking-the-unknown"
 traduction:
-  source: "7196231f19527c7beab8321b37602ff82265343e"
+  source: "237499ffa64cc416425b288760e25f8ebbf8ef11"
 ---
 
 > The arrival of generative AI is not just one more technical advance in the arsenal of tools used by law firms. It marks a genuine paradigm shift: for the first time, we can entrust the known to machines, and devote our energy to what our profession is really about: thinking the unknown, guiding, and committing ourselves.
