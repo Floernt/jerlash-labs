@@ -10,6 +10,44 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-01 - P01 0.2.0, mode IA
+Fait :
+- Spécification projets/P01-mode-ia-spec.md, validée par Florian : l'IA ne traite que les parties et le rattachement ; un seul envoi par dossier ; seuils 14/16 et 13/16 sur le dossier de contrôle (plus mauvais de trois exécutions).
+- P01 embarque connecteur-ia et pseudonymisation (COMPOSANTS.md, ADR-021). analyse.inventorier découpé en classer et conclure. Nouveau module ia.py : extraits plafonnés (2 000 caractères par pièce, 80 000 au total), numéros à la place des noms de fichiers, pseudonymisation P09 avec une table unique, réponse JSON contrôlée (pièce inconnue, marqueur inconnu, auto-rattachement écartés et signalés), fusion (confirmé, « (modèle) », « (à vérifier) » avec alerte).
+- Ligne de commande : confirmation « oui », registre refusé avant tout envoi ; fenêtre : écran d'envoi du connecteur, appel dans un fil d'exécution. Sans configuration ni clé, l'outil s'arrête.
+- Tests : 50 (dont 12 du mode IA et 3 de la fenêtre) avec un faux fournisseur sur 127.0.0.1, tout autre accès réseau bloqué ; seul le connecteur importe des modules réseau. evaluer.py --ia mesure le mode IA (trois exécutions, plus mauvais résultat, coût), vérifié à blanc sur le faux fournisseur.
+- Version 0.2.0 : README, CHANGELOG, SPEC, FICHE, TIERS, config-ia.example.json, page du site (trajet des données, coût, installation) ; archive reconstruite. config-ia.json ajouté au .gitignore. scripts/verifier.py : 22/22.
+Non fait : aucun appel réel (il faut la clé de Florian) ; mesure du mode IA laissée en marqueur [À COMPLÉTER], qui bloque la publication.
+Points ouverts (Florian) : créer config-ia.json et .env, lancer `python factory/jeux-de-test/F-DOSSIER-01/evaluer.py --ia --executions 3`, comparer aux seuils ; tester la fenêtre sur un dossier réel ; valider ADR-018.
+Prochaine étape : selon la mesure, ajuster la consigne sur le seul dossier de développement, puis brancher le mode IA dans P02, P03, P05 et P09.
+
+## 2026-11-01 - ADR-021 : outils autonomes, composants dupliqués
+Fait : principe posé par Florian (un avocat doit pouvoir essayer un outil seul, sans télécharger les autres). ADR-021 (Acceptée) : chaque outil embarque dans son src/ une copie des composants qu'il utilise (connecteur IA, pseudonymisation de P09), déclarée dans COMPOSANTS.md. scripts/synchroniser_composants.py copie ; son mode --verifier est branché dans scripts/verifier.py. CLAUDE.md, règle 10.
+Décisions : ADR-021 (Acceptée).
+Prochaine étape : brancher le connecteur et la pseudonymisation dans P01 (premier outil à IA), puis essai réel avec la clé de Florian.
+
+## 2026-11-01 - ADR-020 : connecteur IA commun (proposée)
+Fait : compatibilité du format Chat Completions vérifiée sur la documentation officielle (OpenAI natif ; Anthropic, couche de compatibilité « stable » mais présentée comme non destinée à la production à long terme ; Mistral ; API Gemini en bêta ; Ollama local ; Vertex AI exclu faute de clé simple). ADR-020 : un seul client urllib, requête minimale sans temperature ni response_format, JSON demandé dans la consigne et validé, préréglages par fournisseur, tests sur faux serveur local.
+Décisions : ADR-020 (Acceptée par Florian).
+Réalisé ensuite : composant factory/composants/connecteur-ia 0.1.0 (configuration et préréglages, clé par environnement ou .env, estimation du coût, écran d'envoi tkinter avec texte modifiable et case à cocher, appel, extraction du JSON) ; 18 tests contre un faux fournisseur sur 127.0.0.1 ; essai automatique de l'écran d'envoi. scripts/verifier.py lance aussi les tests des composants.
+Points ouverts (Florian) : point d'accès UE de Mistral [À VÉRIFIER] ; aucun appel réel encore fait (il faut une clé).
+Prochaine étape : brancher le connecteur dans P01 (choisir comment inclure le composant dans l'archive de l'outil), puis un premier essai réel avec la clé de Florian.
+
+## 2026-11-01 - ADR-019 : connexion API en BYOK dans tous les outils
+Fait : décision de Florian de simplifier. ADR-019 (Acceptée) remplace ADR-015 : chaque outil intègre une connexion à une API d'IA avec la clé de l'avocat ; sans clé, l'outil ne fonctionne pas (révision du même jour ; exception : pseudonymisation locale de P09, filtre avant envoi) ; fournisseur au choix libre (Anthropic compris) ; avant envoi, P09, affichage du texte et case à cocher ; plus de condition préalable liée à P09. Objection consignée dans l'ADR (lignes directrices AVOCATS.BE et OVB, p. 3 ; P09 à 45 % sur les noms). docs/deontologie-ia.md : la grille des prestataires devient une information affichée. CLAUDE.md, règle 4, mise à jour.
+Décisions : ADR-019 (Acceptée), ADR-015 (Remplacée).
+Points ouverts (Florian) : valider ADR-018 ; URL et date des lignes directrices belges [À VÉRIFIER].
+Prochaine étape : ADR d'architecture du connecteur IA commun (factory/composants/), puis, outil par outil, ce que l'IA apporte et quels extraits partent.
+
+## 2026-11-01 - ADR-015 révisée (déontologie), bibliothèque de références
+Fait :
+- bibliotheque/ (ADR-018, Proposée) : catalogue, fiches avec passages cités et pages, originaux dans bibliotheque/sources/ ignoré par git. Deux documents : lignes directrices AVOCATS.BE et OVB sur l'IA ; guide du CNB du 13 mars 2026.
+- docs/deontologie-ia.md : règle belge (pseudonymiser ; jamais d'information couverte par le secret dans un outil d'IA, sauf « environnement fermé avec des garanties adéquates »), risques d'un envoi vers une API, lecture proposée (modèle local = environnement fermé ; API distante = garanties contractuelles appréciées par l'avocat), critères d'un prestataire conforme, fournisseurs admis d'après la matrice.
+- ADR-015 révisée : nouvelles options D (modèle local) et E (D d'abord, puis API limitée aux prestataires conformes, désactivée par défaut) ; recommandation E. L'API directe d'Anthropic est exclue faute de traitement UE. Le mode distant est conditionné à une meilleure détection des noms par P09 (45 % sur le jeu de contrôle).
+Décisions : ADR-015 acceptée par Florian (option E : modèle local d'abord, nationalité affichée sans exclure), ADR-018 (Proposée).
+Points ouverts (Florian) : valider ADR-018 ; URL officielles et date des lignes directrices belges [À VÉRIFIER].
+Prochaine étape : cadrer le mode IA local de P01 (choix de l'environnement d'exécution et d'un modèle à poids ouverts, mesure sur F-DOSSIER-01).
+
 ## 2026-11-01 - P03 Lite Conditions particulières et générales, F-CPCG-01
 Fait :
 - Jeu F-CPCG-01 v1.0, en deux parties :

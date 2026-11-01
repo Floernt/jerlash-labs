@@ -1,21 +1,27 @@
-"""Fenêtre graphique (tkinter, inclus dans Python). Aucun accès réseau.
+"""Fenêtre graphique (tkinter, inclus dans Python).
 
-Le seul appel externe est l'ouverture du registre Word enregistré sur le disque, par le programme
-associé aux fichiers .docx (os.startfile, Windows).
+Le seul accès réseau est l'appel au fournisseur d'IA configuré, par le connecteur embarqué, après
+l'écran d'envoi. L'autre appel externe est l'ouverture du registre Word enregistré sur le disque, par le
+programme associé aux fichiers .docx (os.startfile, Windows).
 """
 
 from __future__ import annotations
 
 import os
+import queue
 import sys
+import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
-from . import __version__
-from .__main__ import dossier_par_defaut, ecrire_registre
-from .analyse import inventorier
+from connecteur_ia import ErreurConnecteur
+from connecteur_ia.interface import confirmer_envoi
+
+from . import __version__, ia
+from .__main__ import dossier_par_defaut, ecrire_registre, refuser_si_dans_le_dossier
+from .analyse import classer
 from .lecture import ErreurLecture, lire_dossier
-from .rapport import AVERTISSEMENT, COLONNES, lignes
+from .rapport import AVERTISSEMENT_IA, COLONNES, lignes, mode
 
 
 class Application(ttk.Frame):
@@ -25,6 +31,8 @@ class Application(ttk.Frame):
         self.sortie = dossier_par_defaut()
         self.registre: str | None = None
         self.inventaire = None
+        self.config_ia: str | None = None   # None : config-ia.json à la racine de l'outil
+        self.synchrone = False               # True dans les tests : l'appel se fait sans fil d'exécution
         racine.title(f"Inventaire d'un dossier {__version__} — iavocat.be")
         racine.minsize(1000, 620)
         self.grid(sticky="nsew")
@@ -36,8 +44,9 @@ class Application(ttk.Frame):
 
         ttk.Label(self, text="Inventaire d'un dossier contractuel", font=("Segoe UI", 13, "bold")).grid(sticky="w")
         ttk.Label(self, wraplength=960, justify="left", text=(
-            "Les pièces sont lues sur cet ordinateur, sans IA ni connexion réseau, et ne sont jamais modifiées. "
-            + AVERTISSEMENT)).grid(sticky="w", pady=(4, 10))
+            "Les pièces sont lues sur cet ordinateur et ne sont jamais modifiées. Des extraits pseudonymisés sont "
+            "envoyés au fournisseur d'IA de votre configuration, avec votre clé, après votre relecture. "
+            + AVERTISSEMENT_IA)).grid(sticky="w", pady=(4, 10))
 
         options = ttk.Frame(self)
         options.grid(sticky="ew", pady=(0, 8))
@@ -76,27 +85,90 @@ class Application(ttk.Frame):
             self.sortie = chemin
             self.etiquette_sortie.configure(text=chemin)
 
+    def vider(self, etat: str = "") -> None:
+        """Rien de l'essai précédent ne reste affiché : pas de mélange entre deux dossiers."""
+        self.inventaire, self.registre = None, None
+        self.liste.delete(*self.liste.get_children())
+        self.ecrire_details("")
+        self.etat.configure(text=etat)
+
+    def echec(self, e: Exception) -> None:
+        # lancée par pythonw, une erreur non affichée serait perdue
+        self.racine.configure(cursor="")
+        self.vider()
+        connue = isinstance(e, (ErreurLecture, ErreurConnecteur, OSError))
+        messagebox.showerror("Inventaire", str(e) if connue else f"Erreur inattendue ({type(e).__name__}) : {e}")
+
+    def lancer(self, travail, suite) -> None:
+        """Exécute l'appel au fournisseur hors de la boucle de la fenêtre, qui reste réactive."""
+        if self.synchrone:
+            try:
+                resultat = travail()
+            except Exception as e:
+                self.echec(e)
+                return
+            suite(resultat)
+            return
+        file: queue.Queue = queue.Queue()
+        threading.Thread(target=lambda: file.put(self._essayer(travail)), daemon=True).start()
+
+        def attendre():
+            try:
+                ok, resultat = file.get_nowait()
+            except queue.Empty:
+                self.racine.after(150, attendre)
+                return
+            if ok:
+                suite(resultat)
+            else:
+                self.echec(resultat)
+
+        self.racine.after(150, attendre)
+
+    @staticmethod
+    def _essayer(travail):
+        try:
+            return True, travail()
+        except Exception as e:
+            return False, e
+
     def choisir(self) -> None:
+        try:
+            config, cle = ia.charger_acces(ia.dossier_outil(), self.config_ia)
+        except Exception as e:  # sans configuration ni clé, l'outil ne fonctionne pas (ADR-019)
+            self.echec(e)
+            return
         dossier = filedialog.askdirectory(title="Dossier à inventorier")
         if not dossier:
             return
         self.racine.configure(cursor="watch")
         self.racine.update_idletasks()
         try:
+            refuser_si_dans_le_dossier(self.sortie, os.path.abspath(dossier))
             pieces, ignores = lire_dossier(dossier)
-            inventaire = inventorier(dossier, pieces, ignores)
-            fichiers = ecrire_registre(inventaire, self.sortie)
-        except Exception as e:  # lancée par pythonw, une erreur non affichée serait perdue
-            # Rien de l'essai précédent ne reste affiché : pas de mélange entre deux dossiers.
-            self.inventaire, self.registre = None, None
-            self.liste.delete(*self.liste.get_children())
-            self.ecrire_details("")
-            self.etat.configure(text="")
-            message = str(e) if isinstance(e, (ErreurLecture, OSError)) else f"Erreur inattendue ({type(e).__name__}) : {e}"
-            messagebox.showerror("Inventaire", message)
+            inventaire = classer(dossier, pieces, ignores)
+            envoi = ia.preparer_envoi(inventaire)
+        except Exception as e:
+            self.echec(e)
             return
-        finally:
-            self.racine.configure(cursor="")
+        self.racine.configure(cursor="")
+        texte = envoi.texte
+        if not envoi.vide:
+            texte = confirmer_envoi(self.racine, config, ia.CONSIGNE, envoi.texte)
+            if texte is None:
+                self.vider("Envoi annulé : rien n'a été envoyé, aucun registre n'a été écrit.")
+                return
+        self.vider(f"Envoi à {config.fournisseur} en cours…")
+        self.racine.configure(cursor="watch")
+
+        def travail():
+            ia.completer(inventaire, envoi, texte, config, cle)
+            return inventaire, ecrire_registre(inventaire, self.sortie)
+
+        self.lancer(travail, lambda r: self.afficher(dossier, *r))
+
+    def afficher(self, dossier: str, inventaire, fichiers: list[str]) -> None:
+        self.racine.configure(cursor="")
         self.inventaire = inventaire
         self.registre = fichiers[0]
         self.etiquette_dossier.configure(text=dossier)
@@ -106,7 +178,8 @@ class Application(ttk.Frame):
                               tags=("alerte",) if fiche.alertes else ())
         self.liste.tag_configure("alerte", foreground="#a23d24")
         self.etat.configure(text=f"{len(self.inventaire.fiches)} pièces ; {len(self.inventaire.alertes)} alerte(s). "
-                                 f"État : {self.inventaire.etat}. Registre : {self.registre}")
+                                 f"État : {self.inventaire.etat}. Mode : {mode(self.inventaire)}. "
+                                 f"Registre : {self.registre}")
         self.ecrire_details("\n".join(f"– {a}" for a in self.inventaire.alertes) or "Aucune alerte.")
 
     def ecrire_details(self, texte: str) -> None:

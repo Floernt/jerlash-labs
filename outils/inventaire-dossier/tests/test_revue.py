@@ -14,7 +14,6 @@ from email.message import EmailMessage
 from unittest import mock
 
 import aide
-from inventaire_dossier.__main__ import main as cli
 from inventaire_dossier.analyse import inventorier
 from inventaire_dossier.lecture import Piece, lire_dossier
 from inventaire_dossier.rapport import en_docx
@@ -49,17 +48,21 @@ class SortieHorsDuDossier(unittest.TestCase):
     def contenu(self):
         return sorted(os.listdir(self.dossier))
 
+    def cli(self, arguments):
+        with aide.Fournisseur() as fournisseur:
+            return aide.cli_ia(arguments, fournisseur, self.tmp)
+
     @unittest.skipUnless(sys.platform == "win32", "casse indifférente : Windows")
     def test_autre_casse(self):
-        self.assertEqual(cli([self.dossier, "--sortie", os.path.join(self.tmp, "dossier client", "registres")]), 2)
+        self.assertEqual(self.cli([self.dossier, "--sortie", os.path.join(self.tmp, "dossier client", "registres")]), 2)
         self.assertEqual(self.contenu(), ["piece.txt"])
 
     @unittest.skipUnless(sys.platform == "win32", "jonction : Windows")
     def test_jonction_vers_le_dossier(self):
         lien = os.path.join(self.tmp, "raccourci")
         subprocess.run(["cmd", "/c", "mklink", "/J", lien, self.dossier], check=True, capture_output=True)
-        self.assertEqual(cli([self.dossier, "--sortie", lien]), 2)
-        self.assertEqual(cli([self.dossier, "--sortie", os.path.join(lien, "sous")]), 2)
+        self.assertEqual(self.cli([self.dossier, "--sortie", lien]), 2)
+        self.assertEqual(self.cli([self.dossier, "--sortie", os.path.join(lien, "sous")]), 2)
         self.assertEqual(self.contenu(), ["piece.txt"])
 
 
@@ -165,11 +168,14 @@ class PiecesEchappees(unittest.TestCase):
             pathlib.Path(tmp, "abime.docx").write_bytes(bytes(donnees))
             pieces, _ = lire_dossier(tmp)
             self.assertTrue(pieces[0].non_lu)
-            self.assertIn(cli([tmp, "--liste"]), (0, 1))
+            with tempfile.TemporaryDirectory() as conf, aide.Fournisseur() as fournisseur:
+                self.assertIn(aide.cli_ia([tmp, "--liste"], fournisseur, conf), (0, 1))
+                self.assertEqual(fournisseur.recus, [])  # aucune pièce lisible : rien n'est envoyé
 
     def test_dossier_vide(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            self.assertEqual(cli([tmp, "--liste"]), 1)
+        with tempfile.TemporaryDirectory() as tmp, tempfile.TemporaryDirectory() as conf, \
+                aide.Fournisseur() as fournisseur:
+            self.assertEqual(aide.cli_ia([tmp, "--liste"], fournisseur, conf), 1)
 
     def test_texte_utf16(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -220,19 +226,40 @@ class Fenetre(unittest.TestCase):
         messagebox.showerror = self.ancien
         self.racine.destroy()
 
-    def test_erreur_affichee_et_rien_de_melange(self):
+    def choisir(self, confirmer=lambda _p, _c, _s, texte: texte):
         from tkinter import filedialog
-        with tempfile.TemporaryDirectory() as sortie:
-            self.app.sortie = sortie
-            with mock.patch.object(filedialog, "askdirectory", return_value=aide.PIECES):
-                self.app.choisir()
+        with mock.patch.object(filedialog, "askdirectory", return_value=aide.PIECES), \
+                mock.patch("inventaire_dossier.interface.confirmer_envoi", side_effect=confirmer):
+            self.app.choisir()
+
+    def test_erreur_affichee_et_rien_de_melange(self):
+        with tempfile.TemporaryDirectory() as sortie, aide.Fournisseur() as fournisseur:
+            self.app.sortie, self.app.synchrone = sortie, True
+            self.app.config_ia = fournisseur.config(sortie)
+            self.choisir()
             self.assertIsNotNone(self.app.registre)
-            with mock.patch.object(filedialog, "askdirectory", return_value=aide.PIECES), \
-                    mock.patch("inventaire_dossier.interface.ecrire_registre", side_effect=RuntimeError("panne")):
-                self.app.choisir()
+            self.assertIn("faux-modele", self.app.etat.cget("text"))
+            with mock.patch("inventaire_dossier.interface.ecrire_registre", side_effect=RuntimeError("panne")):
+                self.choisir()
         self.assertTrue(self.erreurs)
         self.assertIsNone(self.app.registre)
         self.assertEqual(self.app.liste.get_children(), ())
+
+    def test_envoi_annule_rien_ne_part(self):
+        with tempfile.TemporaryDirectory() as sortie, aide.Fournisseur() as fournisseur:
+            self.app.sortie, self.app.synchrone = sortie, True
+            self.app.config_ia = fournisseur.config(sortie)
+            self.choisir(confirmer=lambda *_a: None)
+            self.assertEqual(fournisseur.recus, [])
+            self.assertEqual([n for n in os.listdir(sortie) if n != "config-ia.json"], [])
+        self.assertIn("annulé", self.app.etat.cget("text"))
+
+    def test_sans_configuration_l_outil_ne_fonctionne_pas(self):
+        with tempfile.TemporaryDirectory() as vide:
+            self.app.config_ia = os.path.join(vide, "config-ia.json")
+            self.choisir()
+        self.assertTrue(any("configuration IA" in str(e) for e in self.erreurs), self.erreurs)
+        self.assertIsNone(self.app.registre)
 
 
 if __name__ == "__main__":

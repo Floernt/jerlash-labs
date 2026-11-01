@@ -1,5 +1,18 @@
 # Journal des versions
 
+## 0.2.0 - 2026-11-01
+
+Mode IA (ADR-019, projets/P01-mode-ia-spec.md).
+
+- Un modèle d'IA, avec la clé de l'avocat, propose les parties et les rattachements. Le type, le statut, la date et le document qui fait foi restent établis par règles.
+- Un seul envoi par dossier : extraits plafonnés, numéros à la place des noms de fichiers, pseudonymisation locale par la copie embarquée de P09. La table de correspondance ne quitte pas le poste.
+- Écran d'envoi (fenêtre) ou confirmation « oui » (ligne de commande) : texte exact, fournisseur, déclarations, coût estimé.
+- Fusion : valeur confirmée, proposée par le modèle (« (modèle) ») ou en désaccord avec les règles (« (à vérifier) », avec une alerte). Les propositions invalides sont écartées et signalées.
+- Le registre indique le fournisseur, le modèle, les jetons et le coût.
+- Sans configuration ni clé, l'outil ne fonctionne pas. Le registre refusé dans le dossier inventorié l'est avant tout envoi.
+- Composants embarqués (ADR-021) : connecteur-ia 0.1.0, pseudonymisation 0.1.0.
+- Tests : faux fournisseur local, réseau limité à 127.0.0.1, seul le connecteur importe des modules réseau.
+
 ## 0.1.0 - 2026-10-31
 
 Première version (P01, mode local).

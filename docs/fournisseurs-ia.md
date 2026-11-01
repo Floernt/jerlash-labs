@@ -248,6 +248,9 @@ Aucun identifiant de modèle ni tarif dans le code. Le tableau de la section 2 e
 
 ### 5.5 Points que l'avocat doit vérifier (sans conclusion à sa place)
 
+Les règles déontologiques applicables et les critères d'un « prestataire conforme » sont analysés dans `docs/deontologie-ia.md` (2026-11-01).
+
+
 - La compatibilité de l'envoi d'extraits de pièces avec le secret professionnel et les règles déontologiques applicables (dont les règlements de l'OVB ou d'AVOCATS.BE sur l'usage des outils informatiques), au regard de la conservation déclarée par chaque fournisseur.
 - Sa qualité au regard du RGPD (responsable de traitement pour les données de dossier, en principe), la base de licéité, et la présence éventuelle de catégories particulières (art. 9) ou de données pénales (art. 10).
 - La validité de l'acceptation du DPA par simple acceptation des conditions, et les sous-traitants ultérieurs listés.

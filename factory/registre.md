@@ -4,7 +4,7 @@ Tenu par `ops-factory`. Une ligne par projet. Mettre à jour à chaque changemen
 
 | ID | Titre | Statut | Bloqué | Prochaine action | Responsable | Mis à jour |
 |---|---|---|---|---|---|---|
-| P01 | Inventaire d'un dossier (0.1.0, mode local) | vérification | ADR-015 (mode IA) à trancher | Florian : tester la fenêtre, trancher ADR-015 | Florian | 2026-10-31 |
+| P01 | Inventaire d'un dossier (0.2.0, mode IA, ADR-019) | vérification | mesure réelle du mode IA (clé de Florian) | Florian : config-ia.json et .env, puis `evaluer.py --ia --executions 3` ; tester la fenêtre sur un dossier réel | Florian | 2026-11-01 |
 | P02 | Glossaire des définitions (P02 Lite 0.1.0, rapport seul, ADR-016) | vérification | marqueurs [À COMPLÉTER] du site | Florian : tester la fenêtre, valider ADR-016 ; la restructuration attend P10 | Florian | 2026-11-01 |
 | P03 | Conditions particulières et générales (P03 Lite 0.1.0, rapport seul, ADR-017) | vérification | marqueurs [À COMPLÉTER] du site | Florian : tester la fenêtre, valider ADR-017 ; la séparation en deux documents attend P10 | Florian | 2026-11-01 |
 | P04 | Propositions de modifications | idée | | prototype technique modifications suivies | architecte | 2026-10-31 |

@@ -1,0 +1,90 @@
+{
+  "openai": {
+    "description": "API OpenAI, format natif.",
+    "fournisseur": "OpenAI",
+    "adresse": "https://api.openai.com/v1",
+    "variable_cle": "OPENAI_API_KEY",
+    "modele": "gpt-6.1-terra",
+    "tarif_entree": 1.0,
+    "tarif_sortie": 5.0,
+    "tarifs_releves_le": "2026-10-31",
+    "informations": {
+      "lieu_traitement": "mondial par défaut ; Europe (EEE et Suisse) possible par projet, sous condition de ZDR ou équivalent",
+      "conservation": "journaux de surveillance des abus jusqu'à 30 jours",
+      "zdr": "possible après approbation d'OpenAI",
+      "entrainement": "non, sauf adhésion explicite",
+      "nationalite": "société américaine ; contrat conclu avec OpenAI Ireland pour un client de l'EEE",
+      "source": "docs/fournisseurs-ia.md, section 3.2",
+      "releve_le": "2026-10-31"
+    }
+  },
+  "anthropic": {
+    "description": "API Claude, par sa couche de compatibilité (ADR-020).",
+    "fournisseur": "Anthropic",
+    "adresse": "https://api.anthropic.com/v1",
+    "variable_cle": "ANTHROPIC_API_KEY",
+    "modele": "claude-sonnet-5-5",
+    "tarif_entree": 2.0,
+    "tarif_sortie": 10.0,
+    "tarifs_releves_le": "2026-10-31",
+    "informations": {
+      "lieu_traitement": "mondial ou États-Unis ; aucune option UE sur l'API directe",
+      "conservation": "les sources d'Anthropic se contredisent (30 jours, ou pas de conservation par défaut) [À VÉRIFIER]",
+      "zdr": "sur demande à l'équipe commerciale",
+      "entrainement": "non par défaut",
+      "nationalite": "société américaine",
+      "remarque": "couche de compatibilité présentée par Anthropic comme non destinée à la production à long terme ; une clé non rattachée à un espace de travail exige l'en-tête anthropic-workspace-id",
+      "source": "docs/fournisseurs-ia.md, section 3.1 ; platform.claude.com/docs/en/api/openai-sdk",
+      "releve_le": "2026-11-01"
+    }
+  },
+  "mistral": {
+    "description": "La Plateforme de Mistral AI. Le modèle est à choisir (éviter les modèles Preview et Labs).",
+    "fournisseur": "Mistral AI",
+    "adresse": "https://api.mistral.ai/v1",
+    "variable_cle": "MISTRAL_API_KEY",
+    "modele": "",
+    "informations": {
+      "lieu_traitement": "point d'accès mondial sans engagement de lieu ; point d'accès UE (api.eu.mistral.ai) à confirmer [À VÉRIFIER]",
+      "conservation": "30 jours glissants pour la surveillance des abus [À VÉRIFIER]",
+      "zdr": "sur demande motivée, offres payantes",
+      "entrainement": "textes contradictoires ; modèles Preview et Labs utilisables pour l'entraînement [À VÉRIFIER]",
+      "nationalite": "société française",
+      "source": "docs/fournisseurs-ia.md, section 3.3 ; docs.mistral.ai/resources/migration-guides",
+      "releve_le": "2026-11-01"
+    }
+  },
+  "gemini": {
+    "description": "API Gemini (Google AI Studio), offre payante uniquement. Le modèle est à choisir.",
+    "fournisseur": "Google (API Gemini)",
+    "adresse": "https://generativelanguage.googleapis.com/v1beta/openai",
+    "variable_cle": "GEMINI_API_KEY",
+    "modele": "",
+    "informations": {
+      "lieu_traitement": "non documenté [À VÉRIFIER]",
+      "conservation": "55 jours (surveillance des abus)",
+      "zdr": "non disponible sur cette API",
+      "entrainement": "oui en gratuit, non en payant",
+      "nationalite": "société américaine",
+      "remarque": "compatibilité encore en bêta selon Google",
+      "source": "docs/fournisseurs-ia.md, section 3.4 ; ai.google.dev/gemini-api/docs/openai",
+      "releve_le": "2026-11-01"
+    }
+  },
+  "local": {
+    "description": "Modèle exécuté sur cet ordinateur (par exemple Ollama). Le modèle est à choisir.",
+    "fournisseur": "Modèle local",
+    "adresse": "http://localhost:11434/v1",
+    "cle_requise": false,
+    "modele": "",
+    "informations": {
+      "lieu_traitement": "sur cet ordinateur",
+      "conservation": "aucune transmission à un tiers",
+      "zdr": "sans objet",
+      "entrainement": "sans objet",
+      "nationalite": "sans objet",
+      "source": "docs.ollama.com/api/openai-compatibility",
+      "releve_le": "2026-11-01"
+    }
+  }
+}

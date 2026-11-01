@@ -1,5 +1,6 @@
 # Secrets
 .env
+config-ia.json
 .env.*
 !.env.example
 *.key
@@ -15,6 +16,9 @@ dist/
 build/
 .venv/
 __pycache__/
+
+# Textes de tiers : originaux non redistribués (ADR-018)
+bibliotheque/sources/
 
 # Système
 .DS_Store

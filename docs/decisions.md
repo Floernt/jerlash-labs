@@ -133,15 +133,27 @@ Conséquences : mesure publiée sur la fiche (jeu de contrôle : rappel 63 %, pr
 
 ## ADR-015 - P01 : mode avec IA distante
 Date : 2026-10-31
-Statut : Proposée (à trancher par Florian ; aucun code d'appel à une IA n'est écrit avant sa décision)
+Statut : Remplacée (par ADR-019, le 2026-11-01). Décision antérieure : option E, acceptée le 2026-11-01 puis abandonnée le même jour.
 Contexte : P01 0.1.0 fonctionne par règles, en local. Sur le dossier de contrôle F-DOSSIER-01, le rattachement des pièces (8/16) et les parties (11/16) sont ses points faibles ; un modèle de langue y apporterait vraisemblablement le plus. La matrice des fournisseurs exigée par ADR-010 (point 4) est établie dans docs/fournisseurs-ia.md (sources officielles consultées le 2026-10-31, 22 points [À VÉRIFIER]).
 Constats de la matrice utiles à la décision : l'API directe d'Anthropic ne documente pas de traitement dans l'UE ; OpenAI (point d'accès UE, sous condition de ZDR), Mistral (point d'accès UE) et Google Vertex AI (multirégion eu) en documentent un. Aucun fournisseur ne permet à l'outil de vérifier que le ZDR est actif : il ne peut afficher que la déclaration de l'utilisateur.
+Cadre déontologique (révision du 2026-11-01, analyse complète dans docs/deontologie-ia.md, sources dans bibliotheque/) :
+- AVOCATS.BE et OVB, lignes directrices sur l'IA : l'avocat pseudonymise les données personnelles (p. 2) et « ne communique jamais de documents ou d'informations couverts par le secret professionnel ou une obligation de confidentialité dans un outil d'IA », sauf s'il est « absolument certain » de travailler « dans un environnement fermé avec des garanties adéquates » (p. 3).
+- CNB, guide du 13 mars 2026 (éclairant, non contraignant en Belgique) : les engagements de non-réutilisation ne sont « ni prouvables ni vérifiables » ; seules la pseudonymisation préalable et l'installation du modèle sur les systèmes du cabinet éliminent le risque de souveraineté (p. 15) ; vigilance sur la réidentification par recoupement (p. 13).
+- Les extraits que P01 enverrait (intitulés, premières et dernières lignes des pièces, en-têtes de courriel) sont des informations du dossier. La pseudonymisation par P09 ne les fait pas sortir du secret à coup sûr, et P09 Lite 0.1.0 ne trouve aujourd'hui que 45 % des noms de personnes sur le jeu de contrôle.
 Options :
 A) pas de mode IA pour P01 ; améliorer les règles (avec un nouveau dossier de contrôle) ;
-B) mode IA optionnel, application locale (ADR-010 mode B) : seuls les extraits nécessaires partent (intitulé, premières et dernières lignes de chaque pièce, en-têtes de courriel), après pseudonymisation par P09 et confirmation explicite de l'utilisateur, avec affichage préalable du fournisseur, du point d'accès, de la taille, du coût estimé et de la déclaration de conservation ; fournisseur au choix dans un fichier de configuration ;
-C) comme B, mais limité aux fournisseurs qui documentent un traitement dans l'UE.
-Recommandation : B, avec un écran d'envoi qui affiche le lieu de traitement déclaré, et C comme réglage par défaut. Le mode local reste le mode par défaut ; le mode IA complète les champs « à vérifier » et propose les rattachements, chaque proposition étant marquée comme venant du modèle.
-Points que Florian doit trancher : la compatibilité de principe de l'envoi d'extraits pseudonymisés avec le secret professionnel (docs/fournisseurs-ia.md §5.5) ; le choix entre B et C ; la liste des fournisseurs proposés.
+B) mode IA optionnel vers une API distante, tout fournisseur configuré, après pseudonymisation et confirmation ;
+C) comme B, limité aux fournisseurs qui documentent un traitement dans l'UE ;
+D) mode IA avec un modèle exécuté sur le poste de l'avocat (ADR-010 mode C) : aucune donnée ne quitte la machine ; c'est l'« environnement fermé » au sens strict ;
+E) D en premier, puis, en complément optionnel, une API distante limitée aux « prestataires conformes » au sens de docs/deontologie-ia.md §4 (offre professionnelle, pas d'entraînement, ZDR ou conservation courte documentée, traitement UE, contrat article 28 RGPD, pas de fonction avec état), désactivée par défaut, après pseudonymisation, relecture du texte à envoyer et confirmation explicite.
+Recommandation (révisée le 2026-11-01, à la demande de Florian : usage local, ou API vers un prestataire conforme) : E.
+1. Le mode local sans IA reste le mode par défaut de P01.
+2. Premier mode IA : modèle local (D). Il faut d'abord choisir l'environnement d'exécution et un modèle à poids ouverts, puis mesurer installation, temps et qualité sur F-DOSSIER-01 (lien avec P11). Les noms et versions sont `[À VÉRIFIER]` au moment du choix.
+3. Mode distant ensuite, uniquement vers les fournisseurs admis (d'après la matrice du 2026-10-31 : Mistral point d'accès UE, Vertex AI multirégion eu, OpenAI point d'accès Europe avec ZDR ; l'API directe d'Anthropic est exclue faute de traitement UE). Condition préalable : améliorer la détection des noms par P09 et la mesurer sur un nouveau jeu de contrôle.
+4. L'écran d'envoi dit clairement que l'outil ne peut ni vérifier les garanties du fournisseur ni certifier un « environnement fermé » : l'appréciation reste celle de l'avocat. Il affiche la nationalité du prestataire et le lieu de traitement déclaré.
+5. Chaque proposition du modèle (local ou distant) est marquée comme telle et reste « à vérifier ».
+Décision (2026-11-01) : E, telle que recommandée. Lecture retenue : « environnement fermé » = modèle local ; « garanties adéquates » d'une API distante = garanties contractuelles appréciées par l'avocat (docs/deontologie-ia.md §3). La nationalité du prestataire est affichée sur l'écran d'envoi, sans exclure. Ordre : modèle local d'abord ; le mode distant attend l'amélioration de la détection des noms par P09.
+Conséquences : aucun code d'appel à une API distante pour P01 avant cette amélioration et sa mesure sur un nouveau jeu de contrôle. Prochaine étape : cadrer le mode IA local (environnement d'exécution, modèle à poids ouverts, mesure sur F-DOSSIER-01), ce qui demandera une ADR propre.
 
 ## ADR-016 - P02 Lite : rapport sur les définitions, par règles, sans modifier le contrat
 Date : 2026-11-01
@@ -158,3 +170,70 @@ Contexte : la fiche P03 prévoit de produire, à partir d'un contrat négocié, 
 Options : A) attendre P10 ; B) un rapport par règles, en local, qui classe chaque bloc (particulières, générales, mixte) et liste les données propres à l'opération et les renvois internes ; C) B avec un classement par IA.
 Décision : B pour la version 0.1.0. Application locale (mode B d'ADR-010), bibliothèque standard seule. Mesure sur F-CPCG-01, avec un jeu de contrôle rédigé par un agent sans accès au code.
 Conséquences : la question ouverte de la fiche (produire en plus un modèle anonymisé) reste ouverte ; elle rejoint P09, qui pseudonymise déjà un texte. Le classement est une proposition : la question de savoir si une clause peut être déplacée sans changer l'effet du contrat (ordre de priorité entre documents, opposabilité des conditions générales) relève de l'avocat, pas de l'outil.
+
+## ADR-018 - Bibliothèque de références
+Date : 2026-11-01
+Statut : Proposée (demande de Florian du 2026-11-01 : classer les textes de référence dans le dépôt pour les réutiliser, et préparer une curation de contenu par le site)
+Contexte : les décisions et les fiches d'outils citent des textes déontologiques (lignes directrices AVOCATS.BE et OVB, guide du CNB). Ces textes appartiennent à leurs auteurs. Le dépôt est destiné à être public (ADR-003, ADR-006).
+Options : A) copier les PDF dans le dépôt versionné ; B) dossier bibliotheque/ avec catalogue et fiches versionnés (métadonnées, résumé présenté comme tel, passages cités mot pour mot avec la page) et originaux dans bibliotheque/sources/, ignoré par git ; C) uniquement des liens externes.
+Décision : B.
+Conséquences : les documents du dépôt citent la fiche, pas le PDF. Les URL officielles et les dates d'adoption inconnues portent [À VÉRIFIER]. Une rubrique de veille sur le site (curation) et un script de synchronisation depuis OneDrive restent à cadrer ; ils feront l'objet d'une fiche projet le moment venu.
+
+## ADR-019 - Tous les outils : connexion à une API d'IA, en BYOK
+Date : 2026-11-01
+Statut : Acceptée (décision de Florian du 2026-11-01 : « tous les produits doivent intégrer une connexion à une API pour inférence IA. On simplifie et on est en mode BYOK »)
+Remplace : ADR-015. Complète : ADR-004, ADR-010 (point 2), ADR-016 et ADR-017 (option C désormais ouverte).
+Contexte : ADR-015 réservait l'IA à un modèle local d'abord, puis à une liste de prestataires conformes, sous condition d'une meilleure détection des noms par P09. Florian simplifie : chaque outil intègre une connexion à une API d'IA, avec la clé de l'avocat.
+Objection consignée (Claude, 2026-11-01) : les lignes directrices AVOCATS.BE et OVB n'admettent la communication d'informations couvertes par le secret à un outil d'IA que dans un « environnement fermé avec des garanties adéquates » (p. 3), et P09 Lite 0.1.0 ne trouve que 45 % des noms de personnes sur son jeu de contrôle. Florian maintient la décision : l'usage de l'IA « relève de la liberté et de la responsabilité de l'avocat(e) » (p. 1), et c'est l'avocat qui choisit son fournisseur et ce qu'il envoie.
+Décision :
+1. Chaque outil (P01, P02, P03, P05, P09 et les suivants) intègre une connexion à une API d'IA. Application locale (ADR-010, mode B) ; la clé de l'avocat est lue depuis une variable d'environnement ou un fichier .env ignoré par git, jamais journalisée.
+2. Sans clé, l'outil ne fonctionne pas (révision de Florian du 2026-11-01 : « faire au plus simple »). Il l'indique clairement et renvoie au guide d'obtention d'une clé. Exception : la pseudonymisation locale de P09 reste sans IA, parce qu'elle est le filtre appliqué avant tout envoi (point 4) ; la faire passer par une API enverrait le texte non pseudonymisé.
+3. Choix du fournisseur libre, y compris l'API directe d'Anthropic et un modèle local exposant une API. Pas de liste d'admission. La grille de docs/deontologie-ia.md §4 devient une information affichée.
+4. Avant chaque envoi : pseudonymisation locale par P09, affichage du texte qui va partir (l'avocat peut corriger ce que P09 a manqué), écran d'envoi (fournisseur, point d'accès, lieu de traitement et conservation déclarés, nationalité du prestataire, coût estimé, rappel que l'outil ne vérifie pas les garanties du fournisseur), case à cocher. Rien ne part sans elle.
+5. Seuls les extraits nécessaires à la tâche partent ; chaque proposition du modèle est marquée comme telle et reste « à vérifier ».
+6. Plus de condition préalable liée à P09 ; l'amélioration de la détection des noms reste prioritaire.
+Conséquences :
+- Un composant commun « connecteur IA » (factory/composants/) porte l'appel aux fournisseurs, l'écran d'envoi et la configuration (fournisseur, point d'accès, modèle, tarifs datés, conservation déclarée), selon docs/fournisseurs-ia.md §5. Son architecture (API natives par fournisseur ou format commun, gestion des erreurs, estimation du coût, tests sans réseau) fera l'objet d'une ADR propre avant tout code.
+- Chaque outil devra définir ce que l'IA y apporte et quels extraits partent ; c'est à préciser fiche par fiche.
+- Les modes par règles de P01, P02, P03 et P05 cessent d'être des produits. Leur code peut servir de prétraitement ; les jeux de test devront mesurer le résultat avec IA, ce qui suppose une clé et un coût à chaque mesure, et des résultats qui varient d'une exécution à l'autre.
+- Connecteur : le plus simple possible (décision de Florian). Piste à vérifier dans l'ADR du connecteur : un seul format d'appel compatible avec l'API d'OpenAI, si les fournisseurs retenus l'acceptent [À VÉRIFIER, notamment pour Anthropic].
+- Les fiches du site devront décrire le mode IA, le fait que des données quittent le poste et la responsabilité de l'avocat.
+
+## ADR-020 - Connecteur IA commun : un seul format d'appel (Chat Completions)
+Date : 2026-11-01
+Statut : Acceptée (Florian, 2026-11-01)
+Contexte : ADR-019 impose une connexion à une API d'IA dans chaque outil, avec libre choix du fournisseur. Pour rester simple, le connecteur ne parle qu'un format d'appel : POST {adresse}/chat/completions, clé en `Authorization: Bearer`, réponse lue dans `choices[0].message.content` et `usage`. Vérification de la compatibilité sur la documentation officielle, consultée le 2026-11-01 :
+- OpenAI : format natif (https://api.openai.com/v1).
+- Anthropic : couche de compatibilité, adresse https://api.anthropic.com/v1/, statut « stable », mais « primarily intended to test and compare model capabilities, and is not considered a long-term or production-ready solution for most use cases ». Limites utiles : `response_format` n'accepte que `json_schema` avec `strict: true` ; `temperature` inférieure à 1 et `top_p` provoquent une erreur 400 sur les modèles récents ; pas d'entrée de fichier ; en-tête `anthropic-workspace-id` requis pour une clé non rattachée à un espace de travail. Source : https://platform.claude.com/docs/en/api/openai-sdk.
+- Mistral : « The Mistral Chat Completions API follows the same request structure as OpenAI » ; adresse https://api.mistral.ai/v1. Le point d'accès UE (api.eu.mistral.ai) n'est pas mentionné dans ce guide [À VÉRIFIER]. Source : https://docs.mistral.ai/resources/migration-guides.
+- Google, API Gemini : https://generativelanguage.googleapis.com/v1beta/openai/, clé Gemini en Bearer ; « still in beta ». Source : https://ai.google.dev/gemini-api/docs/openai.
+- Google Vertex AI : « Only Google Cloud Auth is supported using the OpenAI library » ; jeton d'accès valable une heure, à renouveler. Incompatible avec une simple clé. Source : https://docs.cloud.google.com/vertex-ai/generative-ai/docs/start/openai.
+- Modèle local (Ollama) : http://localhost:11434/v1/ ; une valeur de clé est exigée par le client mais ignorée. Source : https://docs.ollama.com/api/openai-compatibility.
+Options : A) un client par fournisseur, avec son API native ; B) un seul client au format Chat Completions, adresse configurable ; C) une bibliothèque tierce d'abstraction (contraire à ADR-010 : bibliothèque standard tant que possible).
+Décision : B.
+1. Composant factory/composants/connecteur-ia/, Python bibliothèque standard (urllib), une fonction d'appel unique.
+2. Requête minimale : `model`, `messages` (un message système, un message utilisateur), `max_tokens`. Pas de `temperature`, de `top_p`, de `response_format`, d'outils ni de fonction avec état : c'est ce qui passe chez tous les fournisseurs listés. Le modèle est invité à répondre en JSON dans la consigne ; le connecteur extrait et valide ce JSON, et signale une réponse illisible au lieu de deviner.
+3. Configuration par outil (fichier non versionné, `config.example` versionné) : adresse, modèle, nom de la variable qui contient la clé, en-têtes supplémentaires éventuels (`anthropic-workspace-id`), tarifs et date de relevé, et la fiche d'information du fournisseur (lieu de traitement, conservation déclarée, ZDR déclaré, nationalité) affichée sur l'écran d'envoi (ADR-019, point 4).
+4. Préréglages fournis pour OpenAI, Anthropic, Mistral, API Gemini et modèle local. Vertex AI n'est pas proposé (pas de clé simple).
+5. Coût estimé avant envoi à partir des tarifs configurés ; coût réel calculé après coup à partir de `usage`.
+6. Tests sans réseau : un faux serveur sur 127.0.0.1 (http.server) qui imite les réponses et les erreurs (401, 429, 500, réponse non JSON). Aucun test n'appelle un vrai fournisseur ; une mesure réelle se lance à la main, avec la clé de Florian.
+Conséquences :
+- Anthropic prévient que cette couche n'est pas une solution de production à long terme ; un passage à l'API native resterait possible plus tard, sans changer les outils, puisque tout passe par le connecteur.
+- L'API Gemini est en bêta ; les paramètres non listés y sont ignorés sans erreur.
+- Le point d'accès UE de Mistral reste à confirmer avant de le proposer comme préréglage.
+- La consigne JSON sans `response_format` peut produire des réponses mal formées : le connecteur doit le détecter et l'outil le signaler.
+
+## ADR-021 - Outils autonomes : chaque outil embarque sa copie des composants
+Date : 2026-11-01
+Statut : Acceptée (principe posé par Florian le 2026-11-01)
+Contexte : le connecteur IA (ADR-020) et la pseudonymisation (P09) servent à plusieurs outils. Florian : un avocat doit pouvoir télécharger et essayer un seul outil, sans les autres, « quitte à dupliquer les fonctionnalités de l'un vers l'autre ». L'objectif est de le rassurer sur un premier usage, avant qu'il élargisse sa boîte à outils.
+Options : A) une bibliothèque commune à installer à côté des outils ; B) copie des composants ajoutée au moment de l'empaquetage seulement ; C) copie versionnée dans le dossier de chaque outil, synchronisée par un script et contrôlée par la vérification.
+Décision : C.
+1. Un outil ne dépend d'aucun autre outil ni d'aucun fichier hors de son dossier. Le dossier de l'outil dans le dépôt est exactement ce qui est téléchargé.
+2. Les composants utilisés sont copiés dans `outils/<slug>/src/` et déclarés dans `outils/<slug>/COMPOSANTS.md` (nom, version, source).
+3. Une copie ne se modifie jamais dans l'outil : on modifie la source (factory/composants/ ou l'outil d'origine, pour P09), puis `python scripts/synchroniser_composants.py`. `scripts/verifier.py` échoue si une copie s'écarte de sa source.
+4. Un composant mis à jour impose de republier chaque outil qui l'embarque (nouvelle archive, nouvelle empreinte).
+Conséquences :
+- Chaque outil qui envoie un texte à une IA embarque le connecteur IA et la pseudonymisation de P09.
+- L'archive de chaque outil grossit un peu ; la duplication est voulue.
+- Les tests d'un composant restent dans sa source ; un outil teste son propre usage du composant.

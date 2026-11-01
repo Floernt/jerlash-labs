@@ -1,0 +1,11 @@
+{
+  "prereglage": "mistral",
+  "modele": "[À COMPLÉTER : identifiant du modèle choisi]",
+  "tarif_entree": null,
+  "tarif_sortie": null,
+  "tarifs_releves_le": "",
+  "max_jetons_sortie": 4000,
+  "informations": {
+    "zdr": "non demandé"
+  }
+}

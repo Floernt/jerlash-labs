@@ -4,9 +4,7 @@ Briques communes à plusieurs outils. Un composant naît quand deux outils ont l
 
 | Composant | Rôle | Statut | Fiche |
 |---|---|---|---|
-| cle-api | saisie, conservation en mémoire, option de mémorisation avec avertissement | à concevoir | |
-| fournisseurs | appel uniforme aux API (Anthropic, OpenAI, modèle local), modèles en configuration | à concevoir | |
-| cout | estimation du coût avant lancement, tarifs datés | à concevoir | |
+| connecteur-ia | appel unique au format Chat Completions (OpenAI, Anthropic, Mistral, API Gemini, modèle local), configuration, écran d'envoi, coût | 0.1.0, à brancher (ADR-020) | connecteur-ia/README.md |
 | docx | lecture, modifications suivies, export | évaluation | P10 |
 | conversion | pièces vers texte structuré avec pages | évaluation | P11 |
 | pseudonymisation | détection et remplacement local | évaluation | P09 |

@@ -1,4 +1,6 @@
-# Spécification - Inventaire d'un dossier (P01, mode local)
+# Spécification - Inventaire d'un dossier (P01)
+
+Version 0.2.0 - 2026-11-01 : mode IA, spécifié dans `projets/P01-mode-ia-spec.md` (dépôt) ; les sections ci-dessous décrivent les règles, inchangées, et la mesure de la version 0.1.0.
 
 Version 0.1.0 - 2026-10-31 - Parcours Factory : renforcé (pièces de dossier, ADR-007)
 
@@ -21,7 +23,7 @@ Inclus :
 - fenêtre et ligne de commande.
 
 Exclus :
-- le mode avec IA (ADR-015, proposée) ;
+- le mode avec IA (ajouté en 0.2.0, ADR-019) ;
 - la lecture des PDF, qui demande une dépendance, et la reconnaissance de caractères (P11) ;
 - les courriels .msg ;
 - l'analyse juridique des clauses ;

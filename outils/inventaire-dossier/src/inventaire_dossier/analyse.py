@@ -45,6 +45,7 @@ class Fiche:
     indices: list[str] = field(default_factory=list)
     alertes: list[str] = field(default_factory=list)
     signe_par_le_texte: bool = False
+    source: dict = field(default_factory=dict)   # champ -> "modèle" ou "divergence" (absent : règles)
 
 
 @dataclass
@@ -55,6 +56,7 @@ class Inventaire:
     contrat_principal: str | None = None
     etat: str = ""
     alertes: list[str] = field(default_factory=list)
+    ia: dict | None = None   # fournisseur, modèle, date, jetons, coût ; None : règles seules
 
 
 def iso(jour: int, mois: int, annee: int) -> str | None:
@@ -353,7 +355,8 @@ def synthese(inventaire: Inventaire) -> None:
             inventaire.etat += f" ; un courrier ({f.piece.chemin}) mentionne une résiliation : à vérifier"
 
 
-def inventorier(dossier: str, pieces: list[Piece], ignores: list[str]) -> Inventaire:
+def classer(dossier: str, pieces: list[Piece], ignores: list[str]) -> Inventaire:
+    """Classement par règles, pièce par pièce puis sur le dossier, sans alertes ni synthèse."""
     fiches = [Fiche(p) for p in pieces]
     for f in fiches:
         classer_type(f)
@@ -364,7 +367,16 @@ def inventorier(dossier: str, pieces: list[Piece], ignores: list[str]) -> Invent
     rattacher(fiches)
     for f in fiches:
         fait_foi(f)
-    inventaire = Inventaire(os.path.abspath(dossier), fiches, ignores)
+    return Inventaire(os.path.abspath(dossier), fiches, ignores)
+
+
+def conclure(inventaire: Inventaire) -> Inventaire:
+    """Alertes et synthèse, une fois les parties et les rattachements arrêtés (après le modèle, en 0.2.0)."""
     alerter(inventaire)
     synthese(inventaire)
     return inventaire
+
+
+def inventorier(dossier: str, pieces: list[Piece], ignores: list[str]) -> Inventaire:
+    """Inventaire par règles seules : référence de mesure, et première étape du mode IA."""
+    return conclure(classer(dossier, pieces, ignores))

@@ -1,0 +1,9 @@
+{
+  "_lisez_moi": "Copiez ce fichier sous le nom config-ia.json, dans ce dossier. Choisissez un préréglage (openai, anthropic, mistral, gemini, local) et l'identifiant exact du modèle. La clé API ne se met pas ici : placez-la dans le fichier .env de ce dossier (par exemple MISTRAL_API_KEY=...). Les tarifs servent à estimer le coût avant l'envoi ; indiquez la date où vous les avez relevés.",
+  "prereglage": "mistral",
+  "modele": "[À COMPLÉTER : identifiant du modèle choisi]",
+  "tarif_entree": null,
+  "tarif_sortie": null,
+  "tarifs_releves_le": "",
+  "max_jetons_sortie": 4000
+}

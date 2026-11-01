@@ -50,15 +50,27 @@ def verifier_secrets() -> None:
 
 def verifier_outils() -> None:
     print("\n[2] Outils : tests automatiques")
-    racine = os.path.join(DEPOT, "outils")
-    for outil in sorted(os.listdir(racine)):
-        if not os.path.isdir(os.path.join(racine, outil, "tests")):
+    dossiers = [os.path.join(DEPOT, base, nom)
+                for base in ("outils", os.path.join("factory", "composants"))
+                for nom in sorted(os.listdir(os.path.join(DEPOT, base)))]
+    for dossier in dossiers:
+        if not os.path.isdir(os.path.join(dossier, "tests")):
             continue
-        r = lancer([sys.executable, "-m", "unittest", "discover", "-s", "tests"], cwd=os.path.join(racine, outil))
+        outil = os.path.basename(dossier)
+        r = lancer([sys.executable, "-m", "unittest", "discover", "-s", "tests"], cwd=dossier)
         bilan = [l for l in r.stderr.splitlines() if l.startswith(("Ran ", "OK", "FAILED"))]
         if r.returncode:
             print(r.stderr[-4000:])
         etape(r.returncode == 0, f"{outil} : " + " / ".join(bilan))
+
+
+def verifier_composants() -> None:
+    print("\n[2b] Composants copiés dans les outils (ADR-021)")
+    r = lancer([sys.executable, "scripts/synchroniser_composants.py", "--verifier"])
+    sortie = r.stdout.strip().splitlines()
+    if r.returncode:
+        print(r.stdout)
+    etape(r.returncode == 0, sortie[-1] if sortie else r.stderr.strip())
 
 
 def verifier_archive() -> None:
@@ -175,6 +187,7 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     verifier_secrets()
     verifier_outils()
+    verifier_composants()
     verifier_archive()
     verifier_site(args.exiger_hugo)
     verifier_typographie()

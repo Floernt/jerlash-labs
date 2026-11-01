@@ -1,11 +1,15 @@
 """Ligne de commande.
 
     python -m inventaire_dossier                         ouvre la fenêtre
-    python -m inventaire_dossier DOSSIER [--sortie DOSSIER] [--liste]
+    python -m inventaire_dossier DOSSIER [--sortie DOSSIER] [--liste] [--config config-ia.json]
+
+Les règles classent le dossier sur cet ordinateur. Un extrait pseudonymisé de chaque pièce est ensuite
+affiché, puis envoyé au fournisseur d'IA configuré après confirmation (« oui ») : le modèle propose les
+parties et les rattachements (ADR-019). Sans configuration ni clé API, l'outil ne fonctionne pas.
 
 Écrit le registre en trois formats (.docx, .md, .json) dans le dossier de sortie, jamais dans le
 dossier inventorié. Aucune pièce n'est modifiée. --liste affiche l'inventaire sans rien écrire.
-Code de sortie : 0 aucune alerte, 1 alertes à examiner, 2 erreur.
+Code de sortie : 0 aucune alerte, 1 alertes à examiner, 2 erreur ou envoi refusé.
 """
 
 from __future__ import annotations
@@ -15,10 +19,12 @@ import os
 import pathlib
 import sys
 
-from . import __version__
-from .analyse import inventorier
+from connecteur_ia import ErreurConnecteur, estimer, resume_envoi
+
+from . import __version__, ia
+from .analyse import classer
 from .lecture import ErreurLecture, lire_dossier
-from .rapport import AVERTISSEMENT, en_docx, en_json, en_markdown, lignes
+from .rapport import avertissement, en_docx, en_json, en_markdown, lignes
 
 
 def dossier_par_defaut() -> str:
@@ -84,7 +90,7 @@ def afficher(inventaire) -> str:
                       f"se rapporte à : {ligne[6]} ; fait foi : {ligne[7]}")
     sortie += ["", "Alertes :" if inventaire.alertes else "Alertes : aucune."]
     sortie += [f"  - {a}" for a in inventaire.alertes]
-    sortie += ["", AVERTISSEMENT]
+    sortie += ["", avertissement(inventaire)]
     return "\n".join(sortie)
 
 
@@ -93,23 +99,40 @@ def main(argv: list[str] | None = None) -> int:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
         sys.stderr.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(prog="inventaire_dossier", description=(
-        "Dresse l'inventaire d'un dossier contractuel sur cet ordinateur, sans IA ni réseau, sans modifier les pièces."))
+        "Dresse l'inventaire d'un dossier contractuel, sans modifier les pièces. Les parties et les rattachements "
+        "sont proposés par le modèle d'IA configuré, à partir d'extraits pseudonymisés que vous validez."))
     parser.add_argument("dossier", nargs="?", help="dossier à inventorier (sous-dossiers compris)")
     parser.add_argument("--sortie", metavar="DOSSIER", help="où écrire le registre (par défaut : Documents\\Inventaire dossier)")
     parser.add_argument("--liste", action="store_true", help="affiche l'inventaire sans rien écrire")
+    parser.add_argument("--config", metavar="FICHIER",
+                        help="configuration IA (par défaut : config-ia.json à la racine de l'outil)")
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     args = parser.parse_args(argv)
     if not args.dossier:
         from .interface import main as interface
         return interface()
     try:
+        config, cle = ia.charger_acces(ia.dossier_outil(), args.config)
+        sortie = args.sortie or dossier_par_defaut()
+        if not args.liste:  # avant tout envoi : un registre refusé ne doit rien coûter
+            refuser_si_dans_le_dossier(sortie, os.path.abspath(args.dossier))
         pieces, ignores = lire_dossier(args.dossier)
-        inventaire = inventorier(args.dossier, pieces, ignores)
+        inventaire = classer(args.dossier, pieces, ignores)
+        envoi = ia.preparer_envoi(inventaire)
+        if not envoi.vide:
+            print("Texte qui sera envoyé (pseudonymisé ; la table de correspondance reste sur cet ordinateur) :\n")
+            print(envoi.texte)
+            print("\n" + "\n".join(resume_envoi(config, estimer(config, ia.CONSIGNE, envoi.texte))) + "\n")
+            reponse = input(f"Envoyer ce texte à {config.fournisseur} ? Tapez « oui » pour confirmer : ")
+            if reponse.strip().lower() != "oui":
+                print("Envoi annulé : rien n'a été envoyé, aucun registre n'a été écrit.", file=sys.stderr)
+                return 2
+        ia.completer(inventaire, envoi, envoi.texte, config, cle)
         print(afficher(inventaire))
         if not args.liste:
-            for chemin in ecrire_registre(inventaire, args.sortie or dossier_par_defaut()):
+            for chemin in ecrire_registre(inventaire, sortie):
                 print(f"Registre : {chemin}")
-    except (ErreurLecture, OSError) as e:
+    except (ErreurLecture, ErreurConnecteur, OSError, EOFError) as e:
         print(f"Erreur : {e}", file=sys.stderr)
         return 2
     except Exception as e:  # jamais le code 1, qui signifie « alertes à examiner »

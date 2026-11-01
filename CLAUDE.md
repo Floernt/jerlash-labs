@@ -24,18 +24,21 @@ Le site est fonctionnel et opérationnel. Il ne contient pas de réflexion philo
 - `projets/` : fiches projet (index dans `projets/README.md`).
 - `factory/` : organisation de la production des outils (voir ci-dessous).
 - `docs/veille/` : notes de veille sur les sources d'idées.
+- `docs/deontologie-ia.md` : risques et critères déontologiques pour tout envoi vers une IA distante (support de l'ADR-015).
+- `bibliotheque/` : textes de référence (lignes directrices AVOCATS.BE et OVB, guide du CNB), à citer par leur fiche.
 
 ## Règles de travail pour Claude Code
 
 1. Ne rien inventer. Si une information manque ou peut avoir changé (nom de modèle, prix d'une API, paramètre d'API, règle déontologique, obligation légale), écrire `[À VÉRIFIER]` et le signaler dans la réponse plutôt que de deviner.
 2. Avant d'écrire du code qui appelle une API d'IA, consulter la documentation officielle à jour du fournisseur. Les noms de modèles et les en-têtes changent : ils vont dans un fichier de configuration, jamais en dur dans plusieurs fichiers.
 3. Aucune clé API, aucun secret, aucune donnée de client ou de dossier dans le dépôt. Les fichiers `.env` sont ignorés par git. En cas de doute sur un fichier, demander avant de le committer.
-4. Aucun outil n'envoie de donnée vers un serveur contrôlé par iavocat.be. Aucun outil ne manipule de clé API avant l'approbation de son architecture (ADR-010). Les seuls flux sortants autorisés vont de la machine de l'utilisateur vers le fournisseur d'IA qu'il a choisi.
+4. Aucun outil n'envoie de donnée vers un serveur contrôlé par iavocat.be. Chaque outil intègre une connexion à une API d'IA en BYOK (ADR-019), par le composant commun `factory/composants/connecteur-ia` (ADR-020), jamais par un appel écrit dans l'outil. Les seuls flux sortants autorisés vont de la machine de l'utilisateur vers le fournisseur d'IA qu'il a choisi.
 5. Pas de traceur tiers, pas de cookie non essentiel, pas de police ou de script chargé depuis un CDN sans décision consignée dans `docs/decisions.md`.
 6. Toute décision d'architecture ou de structure est consignée dans `docs/decisions.md` (nouvelle entrée ADR), avec le statut "Proposée" tant que Florian ne l'a pas validée.
 7. À la fin de chaque session, ajouter une entrée dans `LOG.md` (commande `/cloture-session`).
 8. Un nouvel outil passe par la Factory : fiche dans `projets/`, puis `/factory-lancer <ID>`. La commande `/nouvel-outil <slug>` ne sert qu'à créer le dossier d'un outil dont la fiche est au statut "cadrage".
 9. Changements limités à ce qui est demandé. Pas de refonte non sollicitée.
+10. Chaque outil est autonome (ADR-021) : il ne dépend que de son propre dossier. Les composants communs y sont copiés par `python scripts/synchroniser_composants.py` et ne se modifient jamais dans l'outil.
 
 ## Factory
 
@@ -56,6 +59,7 @@ Règles :
   LOG.md                    journal des sessions
   BACKLOG.md                tâches par phase
   docs/                     cahier des charges et documents de référence
+  bibliotheque/             textes de référence : catalogue et fiches versionnés, originaux non versionnés (ADR-018)
   templates/                gabarits (fiche projet, fiche outil, guide)
   projets/                  fiches projet
   factory/                  pipeline, registre, standards, composants, jeux de test, mémoire
@@ -81,6 +85,7 @@ Commandes (depuis la racine du dépôt) :
 - prévisualiser le site : `hugo server --source site`
 - tests d'un outil : `cd outils/<slug> && python -m unittest discover -s tests -v` (outils : controle-avant-envoi, pseudonymisation, inventaire-dossier)
 - mesurer la pseudonymisation sur F-IDENT-01 : `python factory/jeux-de-test/F-IDENT-01/evaluer.py` (ne jamais régler une règle d'après le jeu de contrôle)
+- copier les composants communs dans les outils qui les déclarent (`COMPOSANTS.md`) : `python scripts/synchroniser_composants.py`
 - archive d'un outil et mise à jour de sa fiche (version, taille, SHA-256) : `python scripts/empaqueter.py --fiche`
 - régénérer un jeu de test : `python -I factory/jeux-de-test/<jeu>/generer.py` (F-DOCX-01, F-IDENT-01, F-DOSSIER-01) ; mesurer l'inventaire : `python factory/jeux-de-test/F-DOSSIER-01/evaluer.py`
 - activer le contrôle des secrets avant commit (une fois par clone) : `git config core.hooksPath .githooks`

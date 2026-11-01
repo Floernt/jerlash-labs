@@ -6,4 +6,6 @@ L'idée d'un registre des pièces d'un dossier contractuel s'inspire de la skill
 
 La lecture prudente des .docx reprend la démarche des outils Contrôle avant envoi et Pseudonymisation du même dépôt.
 
-Dépendances d'exécution : aucune hors de la bibliothèque standard de Python (zipfile, xml.etree, email, tkinter, json, hashlib).
+Dépendances d'exécution : aucune hors de la bibliothèque standard de Python (zipfile, xml.etree, email, tkinter, json, hashlib, urllib pour l'appel au fournisseur).
+
+Composants du projet iavocat.be copiés dans `src/` (ADR-021, même licence) : connecteur-ia et pseudonymisation. Voir `COMPOSANTS.md`.

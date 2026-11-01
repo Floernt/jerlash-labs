@@ -18,7 +18,31 @@ from .analyse import Fiche, Inventaire
 
 AVERTISSEMENT = ("Inventaire établi par règles, sans IA. Chaque type, statut ou rattachement est une "
                  "proposition fondée sur l'indice indiqué : vérifiez-la avant de vous y fier.")
+AVERTISSEMENT_IA = ("Type, statut, date et document qui fait foi : établis par règles. Parties et rattachements : "
+                    "complétés par un modèle d'IA à partir d'extraits pseudonymisés ; « (modèle) » signale une valeur "
+                    "proposée par le modèle, « (à vérifier) » un désaccord avec les règles. Chaque valeur est une "
+                    "proposition fondée sur l'indice indiqué : vérifiez-la avant de vous y fier.")
 COLONNES = ["N°", "Pièce", "Type", "Statut", "Date", "Parties", "Se rapporte à", "Fait foi"]
+MARQUES = {"modèle": " (modèle)", "divergence": " (à vérifier)"}
+
+
+def avertissement(inventaire: Inventaire) -> str:
+    return AVERTISSEMENT_IA if inventaire.ia is not None else AVERTISSEMENT
+
+
+def mode(inventaire: Inventaire) -> str:
+    if inventaire.ia is None:
+        return "règles seules, sans IA"
+    i = inventaire.ia
+    cout = f", coût {i['cout_usd']:.4f} USD" if i.get("cout_usd") is not None else ""
+    jetons = (f", {i['jetons_entree']} + {i['jetons_sortie']} jetons"
+              if i.get("jetons_entree") is not None and i.get("jetons_sortie") is not None else "")
+    return (f"règles et IA : {i['fournisseur']}, modèle {i['modele']}, envoi du {i['envoye_le']}{jetons}{cout}"
+            + (f" ({i['note']})" if i.get("note") else ""))
+
+
+def marque(f: Fiche, champ: str) -> str:
+    return MARQUES.get(f.source.get(champ, ""), "")
 
 
 RE_INTERDITS = re.compile("[^\t\n\r -퟿-�\U00010000-\U0010ffff]")
@@ -36,18 +60,23 @@ def fait_foi(f: Fiche) -> str:
 
 def lignes(inventaire: Inventaire) -> list[list[str]]:
     numeros = {f.piece.chemin: str(i) for i, f in enumerate(inventaire.fiches, start=1)}
-    return [[numeros[f.piece.chemin], f.piece.chemin, f.type, f.statut, f.date or "—", ", ".join(f.parties) or "—",
-             f"n° {numeros[f.rattache_a]}" if f.rattache_a else "—", fait_foi(f)] for f in inventaire.fiches]
+    return [[numeros[f.piece.chemin], f.piece.chemin, f.type, f.statut, f.date or "—",
+             (", ".join(f.parties) + marque(f, "parties")) if f.parties else "—",
+             f"n° {numeros[f.rattache_a]}{marque(f, 'rattache_a')}" if f.rattache_a else "—", fait_foi(f)]
+            for f in inventaire.fiches]
 
 
 def en_dict(inventaire: Inventaire) -> dict:
     return {
-        "outil": "inventaire-dossier (iavocat.be)", "version": __version__, "mode": "local, sans IA",
+        "outil": "inventaire-dossier (iavocat.be)", "version": __version__, "mode": mode(inventaire),
+        "ia": inventaire.ia,
         "etabli_le": datetime.datetime.now().isoformat(timespec="seconds"), "dossier": inventaire.dossier,
-        "avertissement": AVERTISSEMENT, "contrat_principal": inventaire.contrat_principal, "etat": inventaire.etat,
-        "alertes": inventaire.alertes, "fichiers_ignores": inventaire.ignores,
+        "avertissement": avertissement(inventaire), "contrat_principal": inventaire.contrat_principal,
+        "etat": inventaire.etat, "alertes": inventaire.alertes, "fichiers_ignores": inventaire.ignores,
         "pieces": [{"chemin": f.piece.chemin, "type": f.type, "statut": f.statut, "date": f.date,
                     "parties": f.parties, "rattache_a": f.rattache_a, "fait_foi": f.fait_foi,
+                    "source": {"parties": f.source.get("parties", "règles"),
+                               "rattache_a": f.source.get("rattache_a", "règles")},
                     "indices": f.indices, "alertes": f.alertes, "format": f.piece.format, "taille": f.piece.taille,
                     "sha256": f.piece.sha256, "modifie_le": f.piece.modifie_le, "auteur": f.piece.auteur,
                     "modifie_par": f.piece.modifie_par, "non_lu": f.piece.non_lu,
@@ -66,7 +95,7 @@ def cellule_md(texte: str) -> str:
 def en_markdown(inventaire: Inventaire) -> str:
     sortie = [f"# Inventaire du dossier {inventaire.dossier}", "",
               f"Établi le {datetime.date.today().isoformat()} par l'outil inventaire-dossier {__version__} (iavocat.be).",
-              "", f"> {AVERTISSEMENT}", "", "## Synthèse", "",
+              f"Mode : {mode(inventaire)}.", "", f"> {avertissement(inventaire)}", "", "## Synthèse", "",
               f"- Contrat principal : {inventaire.contrat_principal or 'non identifié'}",
               f"- État : {inventaire.etat}", f"- Pièces : {len(inventaire.fiches)}", "", "## Alertes", ""]
     sortie += [f"- {cellule_md(a)}" for a in inventaire.alertes] or ["Aucune."]
@@ -112,7 +141,7 @@ def tableau(entetes: list[str], contenu: list[list[str]], largeurs: list[int]) -
 def en_docx(inventaire: Inventaire) -> bytes:
     corps = [p("Inventaire du dossier", "Titre"), p(inventaire.dossier),
              p(f"Établi le {datetime.date.today().isoformat()} par l'outil inventaire-dossier {__version__} (iavocat.be)."),
-             p(AVERTISSEMENT, gras=True), p("Synthèse", "Titre1"),
+             p(f"Mode : {mode(inventaire)}."), p(avertissement(inventaire), gras=True), p("Synthèse", "Titre1"),
              p(f"Contrat principal : {inventaire.contrat_principal or 'non identifié'}"),
              p(f"État : {inventaire.etat}"), p(f"Pièces : {len(inventaire.fiches)}"), p("Alertes", "Titre1")]
     corps += [p(f"– {a}") for a in inventaire.alertes] or [p("Aucune.")]

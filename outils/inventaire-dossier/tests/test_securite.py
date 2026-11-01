@@ -1,22 +1,16 @@
-"""Garanties : pas de réseau, pièces intactes, registre hors du dossier, entrées hostiles, registre lisible."""
+"""Garanties : réseau limité au fournisseur configuré, pièces intactes, registre hors du dossier,
+entrées hostiles, registre lisible."""
 
 import io
 import os
 import pathlib
 import shutil
-import socket
 import tempfile
 import unittest
 import zipfile
-from unittest import mock
 
 import aide
-from inventaire_dossier.__main__ import main as cli
 from inventaire_dossier.lecture import lire_dossier
-
-
-def interdit(*_a, **_k):
-    raise AssertionError("tentative d'accès réseau")
 
 
 def empreinte_du_dossier(dossier):
@@ -25,36 +19,38 @@ def empreinte_du_dossier(dossier):
 
 
 class Garanties(unittest.TestCase):
-    def test_parcours_complet_sans_reseau_et_pieces_intactes(self):
-        with tempfile.TemporaryDirectory() as tmp:
+    def test_parcours_complet_reseau_limite_au_fournisseur_et_pieces_intactes(self):
+        with tempfile.TemporaryDirectory() as tmp, aide.Fournisseur() as fournisseur:
             dossier = os.path.join(tmp, "dossier")
             shutil.copytree(aide.PIECES, dossier)
             avant = empreinte_du_dossier(dossier)
-            with mock.patch.object(socket.socket, "connect", interdit), \
-                    mock.patch.object(socket, "create_connection", interdit), \
-                    mock.patch.object(socket, "getaddrinfo", interdit):
-                code = cli([dossier, "--sortie", os.path.join(tmp, "registres")])
+            with aide.reseau_local_seulement():
+                code = aide.cli_ia([dossier, "--sortie", os.path.join(tmp, "registres")], fournisseur, tmp)
             self.assertEqual(empreinte_du_dossier(dossier), avant)
             self.assertEqual(code, 1)  # le jeu contient des alertes
             self.assertEqual(len(os.listdir(os.path.join(tmp, "registres"))), 3)
+            self.assertEqual(len(fournisseur.recus), 1)  # un seul envoi pour tout le dossier
 
-    def test_registre_refuse_dans_le_dossier_inventorie(self):
-        with tempfile.TemporaryDirectory() as tmp:
+    def test_registre_refuse_dans_le_dossier_inventorie_avant_tout_envoi(self):
+        with tempfile.TemporaryDirectory() as tmp, aide.Fournisseur() as fournisseur:
             dossier = os.path.join(tmp, "dossier")
             shutil.copytree(aide.PIECES, dossier)
-            self.assertEqual(cli([dossier, "--sortie", os.path.join(dossier, "sous")]), 2)
+            self.assertEqual(aide.cli_ia([dossier, "--sortie", os.path.join(dossier, "sous")], fournisseur, tmp), 2)
             self.assertFalse(os.path.exists(os.path.join(dossier, "sous")))
+            self.assertEqual(fournisseur.recus, [])
 
     def test_aucun_registre_remplace(self):
-        with tempfile.TemporaryDirectory() as tmp:
+        with tempfile.TemporaryDirectory() as tmp, aide.Fournisseur() as fournisseur:
             sortie = os.path.join(tmp, "r")
-            cli([aide.PIECES, "--sortie", sortie])
-            cli([aide.PIECES, "--sortie", sortie])
+            aide.cli_ia([aide.PIECES, "--sortie", sortie], fournisseur, tmp)
+            aide.cli_ia([aide.PIECES, "--sortie", sortie], fournisseur, tmp)
             self.assertEqual(len(os.listdir(sortie)), 6)
 
-    def test_aucun_module_reseau(self):
-        self.assertEqual(aide.auditer_imports(aide.SRC), [])
+    def test_seul_le_connecteur_importe_des_modules_reseau(self):
+        self.assertEqual(aide.auditer_imports(aide.SRC, exclus=("connecteur_ia",)), [])
         self.assertEqual(aide.auditer_imports(aide.OUTIL, recursif=False), [])
+        reseau = aide.auditer_imports(os.path.join(aide.SRC, "connecteur_ia"))
+        self.assertTrue(reseau and all(v.startswith("connecteur.py:") for v in reseau), reseau)
 
     def test_fichiers_hostiles_non_lus_sans_planter(self):
         with tempfile.TemporaryDirectory() as tmp:
