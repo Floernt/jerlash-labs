@@ -4,7 +4,7 @@ date: 2026-06-13
 description: "There is a lot of talk about generative AI as a drafting assistant."
 slug: "ai-to-read-better"
 traduction:
-  source: "042d4a728383abe095db3ae5e16a6a241a1e1f9a"
+  source: "87db670bc5ff50dd465493f2db5a5b78d31d6bae"
 ---
 
 There is a lot of talk about generative AI as a drafting assistant. Less as an outstanding reader. It is not (only) a matter of marginal productivity, of a few minutes saved here and there. It is a deeper shift: the ability to digest, cross-reference and prioritise masses of information that no human could absorb alone. Entire functions of analysis, monitoring and preparation are being redefined — not automated as they were, but transformed by tools that bear no resemblance to their predecessors.
