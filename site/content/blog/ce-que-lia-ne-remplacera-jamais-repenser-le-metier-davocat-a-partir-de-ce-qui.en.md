@@ -1,11 +1,10 @@
 ---
-draft: true
 title: "What AI will never replace. Rethinking the lawyer’s profession from what endures"
 date: 2026-06-13
 description: "Everyone is worried about whether AI will replace lawyers."
 slug: "what-ai-will-never-replace"
 traduction:
-  source: "1cd8a26e404be936c77d061ba44aaeb177a26817"
+  source: "2f673f6288effcca5accbaabe09f1b483b373626"
 ---
 
 Everyone is worried about whether AI will replace lawyers. What if we asked the opposite question instead: what, in this profession, has stood the test of time — and why? A shift in perspective to refocus practice on what matters.

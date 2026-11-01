@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Et si l’IA servait d’abord à mieux lire"
 date: 2026-06-13
 description: "On parle beaucoup de l’IA générative comme d’un assistant de rédaction."
