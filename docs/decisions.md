@@ -249,3 +249,15 @@ Décision :
 4. Amende ADR-002 : les seuls scripts sont `js/bundle.js` du design system et son lanceur `js/init.js` (une ligne), servis par le site (fonds pixel). CSP `script-src 'self'` ; aucun script en ligne, aucun script externe. La vérification le contrôle.
 5. Dépôt GitHub public `jerlash-labs`, publication d'abord à l'adresse gratuite de GitHub Pages. Le domaine est choisi plus tard (« .labs » n'est pas une extension existante).
 Conséquences : tout le reste passe au backlog. Le code des outils reste dans le dépôt, sans lien depuis le site.
+
+## ADR-023 - Site bilingue : le français maître, l'anglais traduit sur demande
+Date : 2026-11-01
+Statut : Proposée
+Contexte : Florian veut une version anglaise de tout le site sans écrire deux fois. Il rédige et corrige en français ; l'IA traduit quand il le demande et doit savoir, sans tout relire, ce qui manque ou a changé.
+Décision :
+1. Hugo multilingue, français par défaut, chaque langue sous son préfixe : `/fr/` et `/en/` (`defaultContentLanguageInSubdir`). La racine redirige vers `/fr/`. Les adresses publiées avant (`/blog/...`, `/a-propos/`) redirigent vers `/fr/...` par des alias ; le flux `/blog/index.xml` devient `/fr/blog/index.xml` (pas de redirection possible pour un fichier XML sur GitHub Pages).
+2. Traduction par nom de fichier : `content/x.md` (français) et `content/x.en.md` (anglais) côte à côte. Toutes les pages sont traduites, brouillons compris (`draft` identique). Slug anglais fixé à la création de la traduction. Aucune mention « traduction » sur les pages anglaises (choix de Florian).
+3. Le français est la seule version qu'on modifie. Chaque traduction porte dans son front matter l'empreinte git du texte français traduit (`traduction.source`). `scripts/traductions.py` compare : à traduire, obsolète, orphelin, brouillon divergent ; `--diff` montre ce qui a changé en français depuis la dernière traduction. La commande `/traduire` met l'anglais à jour et le marque.
+4. Libellés des gabarits dans `site/i18n/fr.yaml` (maître) et `en.yaml`. Guillemets français du typographer limités au français ; `scripts/typographie.py` ignore les `*.en.md`.
+5. La vérification signale les traductions en retard sans bloquer : le français peut être publié avant sa traduction.
+Conséquences : toutes les URL publiées changent (redirections en place). Le blog importé reçoit ses alias depuis `scripts/importer_articles.py`, qui ignore les traductions. Une page 404 est copiée à la racine à la publication.

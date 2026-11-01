@@ -1,40 +1,40 @@
 {{- /* Carte d'identité d'un outil (paramètres de front matter de la fiche) */ -}}
 {{- $p := .Params -}}
-{{- $nonPrecise := "Non précisé" -}}
+{{- $nonPrecise := T "non_precise" -}}
 <section class="carte-identite" aria-labelledby="titre-carte-identite">
-  <h2 id="titre-carte-identite">Carte d'identité</h2>
+  <h2 id="titre-carte-identite">{{ T "carte_identite" }}</h2>
   <dl>
     <div>
-      <dt>Version</dt>
+      <dt>{{ T "version" }}</dt>
       <dd>{{ $p.version | default $nonPrecise }}</dd>
     </div>
     <div>
-      <dt>Statut</dt>
+      <dt>{{ T "statut" }}</dt>
       <dd>{{ with $p.statut }}<span class="pastille pastille--{{ . | urlize }}">{{ partial "libelles.html" (dict "type" "statut" "valeur" .) }}</span>{{ else }}{{ $nonPrecise }}{{ end }}</dd>
     </div>
     <div>
-      <dt>Mode d'exécution</dt>
+      <dt>{{ T "mode_execution" }}</dt>
       <dd>{{ with $p.mode }}{{ partial "libelles.html" (dict "type" "mode" "valeur" .) }}{{ else }}{{ $nonPrecise }}{{ end }}</dd>
     </div>
     <div>
-      <dt>IA distante</dt>
-      <dd>{{ if isset $p "ia" }}{{ if $p.ia }}Oui : des données partent vers un fournisseur d'IA{{ else }}Non{{ end }}{{ else }}{{ $nonPrecise }}{{ end }}</dd>
+      <dt>{{ T "ia_distante" }}</dt>
+      <dd>{{ if isset $p "ia" }}{{ if $p.ia }}{{ T "ia_oui" }}{{ else }}{{ T "non" }}{{ end }}{{ else }}{{ $nonPrecise }}{{ end }}</dd>
     </div>
     <div>
-      <dt>Clé API</dt>
-      <dd>{{ if isset $p "cle_api" }}{{ if $p.cle_api }}Oui, votre propre clé{{ else }}Non{{ end }}{{ else }}{{ $nonPrecise }}{{ end }}</dd>
+      <dt>{{ T "cle_api" }}</dt>
+      <dd>{{ if isset $p "cle_api" }}{{ if $p.cle_api }}{{ T "cle_api_oui" }}{{ else }}{{ T "non" }}{{ end }}{{ else }}{{ $nonPrecise }}{{ end }}</dd>
     </div>
     <div>
-      <dt>Licence</dt>
+      <dt>{{ T "licence" }}</dt>
       <dd>{{ $p.licence | default $nonPrecise }}</dd>
     </div>
     <div>
-      <dt>Mise à jour</dt>
+      <dt>{{ T "mise_a_jour" }}</dt>
       <dd>{{ with $p.mise_a_jour }}{{ partial "date.html" . }}{{ else }}{{ $nonPrecise }}{{ end }}</dd>
     </div>
     {{- with .GetTerms "taches" }}
     <div>
-      <dt>Tâches</dt>
+      <dt>{{ T "taches" }}</dt>
       <dd>
         {{- range $i, $t := . }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}">{{ $t.LinkTitle }}</a>{{ end -}}
       </dd>
@@ -44,15 +44,15 @@
 
   {{- with $p.telechargement }}
   <div class="telechargement">
-    <p><a class="bouton" href="{{ . | relURL }}" download>Télécharger{{ with $p.version }} la version {{ . }}{{ end }}{{ with $p.taille }} ({{ . }}){{ end }}</a></p>
+    <p><a class="bouton" href="{{ . | relURL }}" download>{{ T "telecharger" }}{{ with $p.version }} {{ T "telecharger_version" . }}{{ end }}{{ with $p.taille }} ({{ . }}){{ end }}</a></p>
     {{- with $p.sha256 }}
     <p class="empreinte">
-      <span class="empreinte__libelle">Empreinte SHA-256 du fichier :</span>
+      <span class="empreinte__libelle">{{ T "empreinte" }}</span>
       <code>{{ . }}</code>
     </p>
     {{- end }}
   </div>
   {{- else }}
-  <p class="meta">Aucun fichier à télécharger pour l'instant.</p>
+  <p class="meta">{{ T "aucun_fichier" }}</p>
   {{- end }}
 </section>

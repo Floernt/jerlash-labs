@@ -1,7 +1,9 @@
-{{- /* Affiche une date en français (« 31 octobre 2026 », « 1er novembre 2026 ») dans une balise <time>. Accepte une date ou une chaîne. */ -}}
+{{- /* Affiche une date dans la langue de la page (« 31 octobre 2026 », « 1er novembre 2026 », « 1 November 2026 ») dans une balise <time>. Accepte une date ou une chaîne. */ -}}
 {{- with . -}}
 {{- $d := time.AsTime . -}}
 {{- $texte := $d | time.Format ":date_long" -}}
-{{- if eq $d.Day 1 }}{{ $texte = replaceRE `^1 ` "1er " $texte }}{{ end -}}
+{{- /* Anglais britannique (« 25 June 2025 ») : le format long de Hugo pour « en » est américain. */ -}}
+{{- if eq site.Language.Lang "en" }}{{ $texte = $d.Format "2 January 2006" }}{{ end -}}
+{{- if and (eq site.Language.Lang "fr") (eq $d.Day 1) }}{{ $texte = replaceRE `^1 ` "1er " $texte }}{{ end -}}
 <time datetime="{{ $d.Format "2006-01-02" }}">{{ $texte }}</time>
 {{- end -}}

@@ -1,22 +1,31 @@
-{{- /* Titre, description, lien canonique, feuilles de style, flux RSS, données structurées */ -}}
+{{- /* Titre, description, lien canonique, versions linguistiques, feuilles de style, flux RSS, données structurées */ -}}
 {{- $titre := site.Title -}}
 {{- if not .IsHome }}{{ $titre = printf "%s | %s" .Title site.Title }}{{ end -}}
 {{- $description := .Description | default site.Params.description -}}
 <title>{{ $titre }}</title>
 <meta name="description" content="{{ $description | plainify }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{- /* Versions linguistiques (ADR-023) : la page elle-même, ses traductions, et le français par défaut. */}}
+{{- if .IsTranslated }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+{{- if eq .Language.Lang (index site.Sites 0).Language.Lang }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}
+{{- end }}
+{{- end }}
 <meta name="color-scheme" content="light">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 {{- $css := slice (resources.Get "css/tokens.css") (resources.Get "css/composants.css") (resources.Get "css/principal.css") (resources.Get "css/coloration.css") | resources.Concat "css/site.css" | minify | fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 {{- with site.GetPage "/blog" }}
   {{- with .OutputFormats.Get "rss" }}
-<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="Blog de {{ site.Title }}">
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ T "blog_de" site.Title }}">
   {{- end }}
 {{- end }}
 <meta property="og:title" content="{{ .Title | default site.Title }}">
 <meta property="og:description" content="{{ $description | plainify }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:locale" content="fr_BE">
+<meta property="og:locale" content="{{ site.Params.locale }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 {{- partial "donnees-structurees.html" . }}

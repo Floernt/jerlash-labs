@@ -5,7 +5,7 @@
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     {{- with .OutputFormats.Get "rss" }}
-    <p><a href="{{ .RelPermalink }}" type="application/rss+xml">S'abonner au flux RSS des nouveautés</a></p>
+    <p><a href="{{ .RelPermalink }}" type="application/rss+xml">{{ T "abonnement_nouveautes" }}</a></p>
     {{- end }}
   </header>
   {{- with .Pages.ByDate.Reverse }}
@@ -21,7 +21,7 @@
     {{- end }}
   </ol>
   {{- else }}
-  <p>Aucune nouveauté pour l'instant.</p>
+  <p>{{ T "aucune_nouveaute" }}</p>
   {{- end }}
 </div>
 {{ end }}

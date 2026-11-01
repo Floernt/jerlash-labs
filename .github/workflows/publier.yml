@@ -39,6 +39,8 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Construction (adresse fournie par GitHub Pages ; aucune archive d'outil publiée, ADR-022)
         run: hugo --source site --destination "$GITHUB_WORKSPACE/public" --minify --panicOnWarning --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Page 404 à la racine (GitHub Pages ; site bilingue sous /fr/ et /en/, ADR-023)
+        run: cp public/fr/404.html public/404.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

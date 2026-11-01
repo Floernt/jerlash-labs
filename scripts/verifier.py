@@ -117,7 +117,9 @@ def verifier_site(exiger_hugo: bool) -> None:
     sortie = tempfile.mkdtemp(prefix="iavocat-site-")
     try:
         r = lancer(["hugo", "--source", SITE, "--destination", sortie, "--cleanDestinationDir",
-                    "--panicOnWarning", "--printPathWarnings", "--quiet"])
+                    "--panicOnWarning", "--printPathWarnings", "--quiet",
+                    # Sans verrou : la vérification construit ailleurs et peut tourner pendant un « hugo server ».
+                    "--noBuildLock"])
         if not etape(r.returncode == 0, "construction Hugo sans erreur ni avertissement"):
             print(r.stdout[-3000:], r.stderr[-3000:])
             return
@@ -147,7 +149,7 @@ def verifier_site(exiger_hugo: bool) -> None:
               + ("" if not defauts else " — " + "; ".join(defauts[:5])))
         etape(not externes, "aucune ressource chargée depuis un domaine tiers" + ("" if not externes else " — " + "; ".join(externes[:5])))
         etape(not liens_morts, "liens internes valides" + ("" if not liens_morts else " — " + "; ".join(liens_morts[:10])))
-        for attendu in ("blog/index.xml", "sitemap.xml", ".nojekyll", "js/bundle.js"):
+        for attendu in ("index.html", "fr/blog/index.xml", "en/blog/index.xml", "sitemap.xml", ".nojekyll", "js/bundle.js"):
             etape(os.path.isfile(os.path.join(sortie, attendu)), f"fichier produit : {attendu}")
     finally:
         shutil.rmtree(sortie, ignore_errors=True)
@@ -160,6 +162,16 @@ def verifier_blog() -> None:
     if r.returncode:
         print(r.stdout)
     etape(r.returncode == 0, sortie[-1] if sortie else r.stderr.strip())
+
+
+def verifier_traductions() -> None:
+    print("\n[4 quater] Traductions anglaises (ADR-023)")
+    r = lancer([sys.executable, "scripts/traductions.py"])
+    sortie = r.stdout.strip().splitlines()
+    # Avertissement seulement : le français, version maître, peut être publié avant sa traduction.
+    if r.returncode:
+        print("\n".join("    " + l for l in sortie[:-1]))
+    print(("  ok    " if r.returncode == 0 else "  avert. ") + (sortie[-1] if sortie else r.stderr.strip()))
 
 
 def verifier_typographie() -> None:
@@ -207,6 +219,7 @@ def main(argv=None) -> int:
     verifier_site(args.exiger_hugo)
     verifier_typographie()
     verifier_blog()
+    verifier_traductions()
     verifier_marqueurs(args.publication)
     echecs = [m for ok, m in resultats if not ok]
     print(f"\n{len(resultats) - len(echecs)}/{len(resultats)} vérifications réussies.")

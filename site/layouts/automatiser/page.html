@@ -4,7 +4,7 @@
     <header>
       <h1>{{ .Title }}</h1>
       {{- if not .Date.IsZero }}
-      <p class="meta">Publié le {{ partial "date.html" .Date }}</p>
+      <p class="meta">{{ T "publie_le" }} {{ partial "date.html" .Date }}</p>
       {{- end }}
       {{- with .Params.resume }}
       <p class="chapeau">{{ . }}</p>

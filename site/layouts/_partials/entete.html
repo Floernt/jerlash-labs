@@ -1,11 +1,20 @@
 <header class="ia-header">
   <a class="ia-header__logo" href="{{ site.Home.RelPermalink }}"{{ if .IsHome }} aria-current="page"{{ end }}><img src="{{ "images/logo-horizontal.svg" | relURL }}" alt="jerlash.labs" width="160" height="24"></a>
-  <nav class="ia-header__nav" aria-label="Navigation principale">
+  <nav class="ia-header__nav" aria-label="{{ T "navigation_principale" }}">
     {{- $page := . }}
     {{- range site.Menus.principal }}
     {{- $actuel := false }}
     {{- with .Page }}{{ $actuel = or (eq $page .) ($page.IsDescendant .) }}{{ end }}
     <a href="{{ .URL }}"{{ if $actuel }} aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{- end }}
+    {{- /* Autre langue (ADR-023) : la traduction de la page si elle existe, sinon l'accueil de cette langue. */}}
+    {{- range site.Sites }}
+    {{- if ne .Language.Lang site.Language.Lang }}
+    {{- $lang := .Language }}
+    {{- $cible := .Home }}
+    {{- range $page.Translations }}{{ if eq .Language.Lang $lang.Lang }}{{ $cible = . }}{{ end }}{{ end }}
+    <a class="ia-header__langue" href="{{ $cible.RelPermalink }}" hreflang="{{ $lang.LanguageCode }}" lang="{{ $lang.LanguageCode }}" aria-label="{{ $lang.LanguageName }}">{{ upper $lang.Lang }}</a>
+    {{- end }}
     {{- end }}
   </nav>
 </header>

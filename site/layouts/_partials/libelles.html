@@ -1,21 +1,6 @@
 {{- /*
-  Libellés lisibles des valeurs de front matter.
+  Libellés lisibles des valeurs de front matter, dans la langue de la page (i18n : statut_…, mode_…, niveau_…).
   Usage : partial "libelles.html" (dict "type" "statut" "valeur" .Params.statut)
 */ -}}
-{{- $libelles := dict
-  "statut" (dict
-    "brouillon" "Brouillon"
-    "test" "En test"
-    "publié" "Publié"
-    "publie" "Publié")
-  "mode" (dict
-    "local" "Application locale, sur votre ordinateur"
-    "navigateur" "Dans le navigateur, entièrement en local"
-    "modele-local" "Modèle d'IA exécuté sur votre ordinateur")
-  "niveau" (dict
-    "debutant" "Débutant"
-    "intermediaire" "Intermédiaire"
-    "avance" "Avancé")
--}}
-{{- $valeur := printf "%v" .valeur -}}
-{{- return (index (index $libelles .type) $valeur | default $valeur) -}}
+{{- $valeur := printf "%v" .valeur | replaceRE "é" "e" -}}
+{{- return (T (printf "%s_%s" .type $valeur) | default .valeur) -}}

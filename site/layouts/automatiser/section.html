@@ -10,7 +10,7 @@
     {{- range . }}{{ partial "resume-article.html" (dict "page" . "niveau" 2) }}{{ end }}
   </ul>
   {{- else }}
-  <p>Aucun article publié pour l'instant.</p>
+  <p>{{ T "aucun_article" }}</p>
   {{- end }}
 </div>
 {{ end }}

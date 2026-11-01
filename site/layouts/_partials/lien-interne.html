@@ -1,0 +1,12 @@
+{{- /*
+  Adresse d'un lien interne écrit « /page/ » (chemin du contenu français) : la page dans la langue courante
+  si elle existe (slug traduit, ADR-023), sinon le chemin préfixé de la langue. Ancre (#…) conservée.
+  Usage : partial "lien-interne.html" "/a-propos/"
+*/ -}}
+{{- $chemin := . -}}
+{{- $ancre := "" -}}
+{{- with findRESubmatch `^([^#]*)(#.*)?$` . 1 }}{{ $chemin = index (index . 0) 1 }}{{ $ancre = index (index . 0) 2 }}{{ end -}}
+{{- $url := "" -}}
+{{- with site.GetPage (strings.TrimSuffix "/" $chemin | default "/") }}{{ $url = .RelPermalink }}{{ end -}}
+{{- if not $url }}{{ $url = $chemin | strings.TrimPrefix "/" | relLangURL }}{{ end -}}
+{{- return (print $url $ancre) -}}

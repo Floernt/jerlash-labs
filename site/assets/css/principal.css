@@ -16,6 +16,8 @@ main:focus { outline: none; }
 
 /* --- En-tête : la navigation reste visible sur petit écran (deux liens) --- */
 .ia-header__logo img { width: auto; }
+/* Lien vers l'autre langue (ADR-023), séparé des rubriques par un filet */
+.ia-header__nav .ia-header__langue { padding-left: var(--space-6); border-left: var(--stroke-hairline) solid var(--line); color: var(--ink-muted); }
 
 /* --- Accueil -------------------------------------------------------------- */
 .accueil-heros { padding-left: 0; padding-right: 0; }
@@ -92,6 +94,7 @@ main:focus { outline: none; }
 @media (max-width: 640px) {
   .conteneur { padding: 0 var(--space-4); }
   .ia-header__nav { display: flex; gap: var(--space-4); }
+  .ia-header__nav .ia-header__langue { padding-left: var(--space-4); }
   .tete-page { padding-top: var(--space-12); }
   .prose { font-size: 17px; line-height: 28px; }
 }

@@ -2,7 +2,7 @@
 {{ define "main" }}
 <div class="conteneur">
   <header class="tete-page">
-    <p class="ia-eyebrow">Blog</p>
+    <p class="ia-eyebrow">{{ T "blog" }}</p>
     <h1 class="tete-page__titre">{{ .Title }}</h1>
     {{- with .Content }}<div class="tete-page__chapeau">{{ . }}</div>{{ end }}
   </header>

@@ -21,8 +21,8 @@
 
   {{- with $outils }}
   {{- if $groupes }}
-  <nav class="sommaire-taches" aria-label="Tâches">
-    <p class="meta">Aller à une tâche :</p>
+  <nav class="sommaire-taches" aria-label="{{ T "taches" }}">
+    <p class="meta">{{ T "aller_a_une_tache" }}</p>
     <ul>
       {{- range $groupes }}
       {{- if where .Pages "Section" "outils" }}
@@ -49,14 +49,14 @@
   {{- range $outils }}{{ if not .Params.taches }}{{ $sansTache = $sansTache | append . }}{{ end }}{{ end }}
   {{- with $sansTache }}
   <section class="groupe-taches" aria-labelledby="tache-autres">
-    <h2 id="tache-autres">Autres outils</h2>
+    <h2 id="tache-autres">{{ T "autres_outils" }}</h2>
     <ul class="liste-contenus liste-contenus--cartes">
       {{- range . }}{{ partial "resume-outil.html" . }}{{ end }}
     </ul>
   </section>
   {{- end }}
   {{- else }}
-  <p>Aucun outil publié pour l'instant.</p>
+  <p>{{ T "aucun_outil" }}</p>
   {{- end }}
 </div>
 {{ end }}

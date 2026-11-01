@@ -2,6 +2,7 @@
 title: "L’IA et l’avocat - déléguer le connu, penser l’inconnu"
 date: 2025-12-30
 description: "Plus le temps passe, plus on constate qu'on assiste à un moment charnière."
+aliases: ["/blog/lia-et-lavocat-deleguer-le-connu-penser-linconnu/"]
 # Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 

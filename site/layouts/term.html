@@ -2,7 +2,7 @@
 {{ define "main" }}
 <div class="conteneur">
   <header class="contenu">
-    <p class="meta"><a href="{{ with site.GetPage "/outils" }}{{ .RelPermalink }}{{ end }}">Outils</a> · tâche</p>
+    <p class="meta"><a href="{{ with site.GetPage "/outils" }}{{ .RelPermalink }}{{ end }}">{{ T "outils" }}</a> · {{ T "tache" }}</p>
     <h1>{{ .Title }}</h1>
     {{ .Content }}
   </header>

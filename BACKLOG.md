@@ -14,6 +14,14 @@ Règle depuis le 2026-11-01 : livrer plutôt que construire. Un seul chantier da
 - [x] Pousser sur GitHub, activer Pages (source : GitHub Actions), publication verte : en ligne sur jerlash.eu le 2026-11-01
 - [ ] Florian : cocher « Enforce HTTPS » dans Settings → Pages dès que le certificat est délivré, puis relancer la publication (liens canoniques en https)
 
+## Maintenant (ajouté le 2026-11-01 à la demande de Florian) : version anglaise du site (ADR-023, proposée)
+
+- [x] Hugo multilingue `/fr/` et `/en/`, libellés i18n, lien FR/EN, hreflang, redirections des anciennes adresses
+- [x] `scripts/traductions.py` (état, diff, marquage) et commande `/traduire`
+- [x] Traduction initiale des 35 pages
+- [ ] Florian : valider ADR-023, relire l'anglais (accueil, À propos, articles), compléter `docs/glossaire-traduction.md`
+- [ ] PR `dev` → `main`
+
 ## Ensuite
 
 - [ ] Réorganiser le répertoire du projet (nom jerlash.labs, dossiers, fichiers hors dépôt)

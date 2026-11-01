@@ -81,8 +81,9 @@ def convertir(chemin: str) -> tuple[str, str]:
         corps = "\n".join(lignes[1:]).strip("\n")
     date = entete.get("date") or datetime.date.fromtimestamp(os.path.getmtime(chemin)).isoformat()
     description = entete.get("description") or premiere_phrase(corps)
+    # Alias : l'adresse sans préfixe de langue, publiée avant le site bilingue, redirige vers /fr/ (ADR-023).
     contenu = (f"---\ntitle: {yaml(titre)}\ndate: {date}\ndescription: {yaml(description)}\n"
-               f"# {MARQUE}\n---\n\n{corps}\n")
+               f"aliases: [\"/blog/{slug(titre)}/\"]\n# {MARQUE}\n---\n\n{corps}\n")
     return f"{slug(titre)}.md", corriger_markdown(contenu)
 
 
@@ -101,7 +102,8 @@ def attendus(source: str) -> dict[str, str]:
 def presents() -> dict[str, str]:
     resultat = {}
     for nom in sorted(os.listdir(BLOG)):
-        if nom.endswith(".md") and nom != "_index.md":
+        # Les traductions (x.en.md, ADR-023) ne viennent pas de la source : jamais retirées ni comparées ici.
+        if nom.endswith(".md") and nom != "_index.md" and not re.search(r"\.[a-z]{2}\.md$", nom):
             texte = io.open(os.path.join(BLOG, nom), encoding="utf-8").read()
             if MARQUE in texte:
                 resultat[nom] = texte
