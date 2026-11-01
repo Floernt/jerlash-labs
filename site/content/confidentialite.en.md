@@ -3,7 +3,7 @@ title: "Privacy"
 slug: "privacy"
 description: "The data processed when you visit jerlash.labs."
 traduction:
-  source: "b86994de4cc90350dea5883443c20b16a5b884d8"
+  source: "92d0cbfbc31f42f3d9c39115cf79a84a40a0ed47"
 ---
 
 ## In brief

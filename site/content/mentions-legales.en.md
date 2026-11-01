@@ -3,7 +3,7 @@ title: "Legal notice"
 slug: "legal-notice"
 description: "Publisher, host, licences and terms of use of the jerlash.labs site."
 traduction:
-  source: "fdd33c6b9343c08a51cc8e3f1b5fb5ce833bfd7f"
+  source: "08702209f995dda6e2a02d1f5f635cb9706e20ab"
 ---
 
 ## Publisher
