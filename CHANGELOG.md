@@ -2,6 +2,12 @@
 
 Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessions est dans `LOG.md`, ce qui reste à faire dans `BACKLOG.md`.
 
+## 2026-11-01 - Version anglaise du site, archives reproductibles
+
+- Site bilingue `/fr/` et `/en/`, français maître, anglais traduit sur demande par `/traduire` (ADR-023, proposée) ; 35 pages traduites.
+- Accueil : nouveau héros et section « Pourquoi jerlash.labs ? ».
+- Archives des outils et jeux de test reproductibles sous Linux comme sous Windows.
+
 ## 2026-11-01 - Site jerlash.labs 0.1.0, publié sur jerlash.eu
 
 - Identité jerlash (Schibsted Grotesk, IBM Plex Mono, fonds pixel), accueil, blog de 9 articles importés depuis `articles/`, page À propos (ADR-022).
