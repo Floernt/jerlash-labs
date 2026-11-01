@@ -1,8 +1,9 @@
-# Configuration Hugo du site iavocat.be
+# Configuration Hugo du site jerlash.labs (ADR-022)
 # Version de Hugo figée : extended 0.148.2 (ADR-002). Aucun thème tiers.
 
-baseURL = "https://iavocat.be/"
-title = "iavocat.be"
+# Adresse définitive passée à la construction par la publication (--baseURL, GitHub Pages)
+baseURL = "/"
+title = "jerlash.labs"
 languageCode = "fr-BE"
 defaultContentLanguage = "fr"
 timeZone = "Europe/Brussels"
@@ -13,11 +14,14 @@ titleCaseStyle = "firstupper"
 enableRobotsTXT = false
 # Pas de balise meta « generator »
 disableHugoGeneratorInject = true
+# Pages de taxonomie désactivées tant que les outils sont en brouillon (ADR-022)
+disableKinds = ["taxonomy", "term"]
 # URL sans accents (ex. /taches/preparer-un-document/)
 removePathAccents = true
 
 # Taxonomie unique : les tâches auxquelles répond un outil
 [taxonomies]
+  # Taxonomie des outils (sections en brouillon, ADR-022)
   tache = "taches"
 
 # Formats produits : RSS uniquement pour la section Nouveautés (voir cascade)
@@ -31,15 +35,8 @@ removePathAccents = true
 [[cascade]]
   outputs = ["html", "rss"]
   [cascade.target]
-    path = "/nouveautes"
+    path = "/blog"
     kind = "section"
-
-# Page de la taxonomie : titre accentué et description par défaut
-[[cascade]]
-  title = "Tâches"
-  description = "Les outils d'iavocat.be classés par tâche : préparer un document, vérifier, analyser un dossier, comparer, structurer."
-  [cascade.target]
-    kind = "taxonomy"
 
 [services.rss]
   limit = 50
@@ -76,7 +73,7 @@ removePathAccents = true
     endLevel = 3
 
 [params]
-  description = "Outils locaux pour avocats et guides pratiques : clés API, facturation à l'usage, confidentialité des données, installation."
+  description = "Intelligence artificielle et pratique d'un cabinet d'avocats : articles de Florian Ernotte, et bientôt les outils qu'il construit."
   auteur = "Florian Ernotte"
   # Ordre d'affichage des tâches dans le catalogue des outils (clés de la taxonomie).
   # Les tâches absentes de cette liste s'affichent ensuite, par ordre alphabétique.
@@ -86,35 +83,23 @@ removePathAccents = true
 
 [menus]
   [[menus.principal]]
-    name = "Outils"
-    pageRef = "/outils"
+    name = "Blog"
+    pageRef = "/blog"
     weight = 10
-  [[menus.principal]]
-    name = "Guides"
-    pageRef = "/guides"
-    weight = 20
-  [[menus.principal]]
-    name = "Automatiser une prestation"
-    pageRef = "/automatiser"
-    weight = 30
-  [[menus.principal]]
-    name = "Précautions"
-    pageRef = "/precautions"
-    weight = 40
   [[menus.principal]]
     name = "À propos"
     pageRef = "/a-propos"
-    weight = 50
-  [[menus.principal]]
-    name = "Nouveautés"
-    pageRef = "/nouveautes"
-    weight = 60
+    weight = 20
 
+  [[menus.pied]]
+    name = "À propos"
+    pageRef = "/a-propos"
+    weight = 10
   [[menus.pied]]
     name = "Mentions légales"
     pageRef = "/mentions-legales"
-    weight = 10
+    weight = 20
   [[menus.pied]]
     name = "Confidentialité"
     pageRef = "/confidentialite"
-    weight = 20
+    weight = 30

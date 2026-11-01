@@ -1,10 +1,12 @@
-# CLAUDE.md - iavocat.be
+# CLAUDE.md - jerlash.labs (anciennement iavocat.be)
 
 Ce fichier est lu par Claude Code au début de chaque session. Il donne le contexte du projet et les règles de travail. Le détail du projet se trouve dans `docs/cahier-des-charges.md`.
 
 ## Le projet en bref
 
-iavocat.be est le site de Florian Ernotte, avocat (Avroy Avocats). Il publie deux choses :
+Depuis le 2026-11-01 (ADR-022) : le projet s'appelle jerlash.labs. Priorité : livrer plutôt que construire. Un seul chantier à la fois, celui de la section « Maintenant » de `BACKLOG.md` ; tout le reste attend au backlog. Ce qui est livré entre dans `CHANGELOG.md`. Le site publié se limite à l'accueil, au blog, à la page À propos et aux pages légales ; les outils et les autres rubriques sont en brouillon (`draft: true`).
+
+Historique, ci-dessous : iavocat.be est le site de Florian Ernotte, avocat (Avroy Avocats). Il publie deux choses :
 
 1. Des outils pour avocats construits avec l'IA, utilisables en local, sur lesquels l'avocat branche sa propre clé API (principe BYOK, "bring your own key").
 2. Des guides techniques et pratiques : comment obtenir et sécuriser une clé API, comment fonctionne la facturation, ce que devient une donnée envoyée à un fournisseur, comment installer et utiliser un outil.
@@ -58,6 +60,7 @@ Règles :
   README.md                 présentation du dépôt
   LOG.md                    journal des sessions
   BACKLOG.md                tâches par phase
+  CHANGELOG.md              ce qui est livré, par date
   docs/                     cahier des charges et documents de référence
   bibliotheque/             textes de référence : catalogue et fiches versionnés, originaux non versionnés (ADR-018)
   templates/                gabarits (fiche projet, fiche outil, guide)
@@ -83,6 +86,7 @@ Commandes (depuis la racine du dépôt) :
 
 - vérifier tout (secrets, tests, archive, site, liens) : `python scripts/verifier.py` ; avant publication : `--publication`
 - prévisualiser le site : `hugo server --source site`
+- importer dans le blog les articles « statuts: à publier » de `../articles` (hors dépôt) : `python scripts/importer_articles.py` ; on corrige la source, jamais la copie
 - tests d'un outil : `cd outils/<slug> && python -m unittest discover -s tests -v` (outils : controle-avant-envoi, pseudonymisation, inventaire-dossier)
 - mesurer la pseudonymisation sur F-IDENT-01 : `python factory/jeux-de-test/F-IDENT-01/evaluer.py` (ne jamais régler une règle d'après le jeu de contrôle)
 - copier les composants communs dans les outils qui les déclarent (`COMPOSANTS.md`) : `python scripts/synchroniser_composants.py`

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Nouveautés"
 description: "Journal des outils et guides publiés ou mis à jour sur iavocat.be. Également disponible en flux RSS."
 ---

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Glossaire des définitions"
 description: "Relever les termes définis d'un contrat et ce qui cloche : définition répétée ou divergente, terme jamais employé, majuscules sans définition, graphie qui dérive. Sur votre ordinateur, sans IA."
 resume: "L'outil lit un contrat Word et produit son glossaire, avec les points à examiner : définition répétée ou divergente, terme défini jamais employé, terme écrit avec des majuscules sans définition, graphie différente."

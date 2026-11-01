@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Quatre cases pour savoir où joue votre cabinet"
 description: "Croiser standardisation et enjeu pour positionner une prestation automatisée et choisir sa logique de tarification."
 resume: "Croiser standardisation et enjeu pour positionner une prestation automatisée et choisir sa logique de tarification."

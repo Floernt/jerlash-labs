@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Conditions particulières et générales 0.1.0"
 description: "Cinquième outil : repérer ce qui est propre à l'opération dans un contrat négocié, article par article, sans IA."
 date: 2026-11-01

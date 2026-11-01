@@ -1,6 +1,8 @@
-# iavocat.be
+# jerlash.labs
 
-Dépôt du site iavocat.be : outils pour avocats construits avec l'IA, utilisables en local avec la clé API de l'utilisateur, et guides techniques pour s'en servir correctement.
+Dépôt du site jerlash.labs (anciennement iavocat.be) : articles sur l'intelligence artificielle dans la pratique d'un cabinet d'avocats et, ensuite, les outils construits avec l'IA, avec leur code, leurs coûts et leurs limites (ADR-022).
+
+Publié : le site Hugo de `site/` (accueil, blog, à propos, mentions légales, confidentialité). Les outils (`outils/`) et les autres rubriques restent en brouillon ; voir `BACKLOG.md` et `CHANGELOG.md`.
 
 Auteur et éditeur : Florian Ernotte.
 

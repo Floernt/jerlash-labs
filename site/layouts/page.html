@@ -1,9 +1,13 @@
-{{- /* Gabarit par défaut des pages simples (précautions, à propos, mentions légales, confidentialité) */ -}}
+{{- /* Pages simples : à propos, mentions légales, confidentialité. */ -}}
 {{ define "main" }}
 <div class="conteneur">
-  <article class="contenu">
-    <h1>{{ .Title }}</h1>
-    {{ .Content }}
+  <article class="article">
+    <header class="tete-page">
+      <h1 class="tete-page__titre">{{ .Title }}</h1>
+    </header>
+    <div class="prose">
+      {{ .Content }}
+    </div>
   </article>
 </div>
 {{ end }}

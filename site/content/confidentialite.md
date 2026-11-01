@@ -1,11 +1,11 @@
 ---
 title: "Confidentialité"
-description: "Les données traitées lors de la visite d'iavocat.be et lors de l'usage de ses outils."
+description: "Les données traitées lors de la visite de jerlash.labs."
 ---
 
 ## En bref
 
-Le site ne dépose aucun cookie, ne mesure pas l'audience et ne charge aucune ressource d'un autre site. Les outils ne transmettent rien à iavocat.be.
+Le site ne dépose aucun cookie, ne mesure pas l'audience et ne charge aucune ressource d'un autre site. Son seul script, servi par le site lui-même, dessine les fonds décoratifs.
 
 ## Visite du site
 
@@ -18,10 +18,6 @@ Responsable du traitement pour le site : Florian Ernotte (coordonnées dans les
 ## Contact par courriel
 
 Si vous écrivez à l'adresse de contact, votre message et votre adresse électronique sont conservés le temps nécessaire pour y répondre et suivre l'éventuel problème signalé. Ils ne sont utilisés à aucune autre fin.
-
-## Usage des outils
-
-Les outils s'exécutent sur votre ordinateur. Les documents, listes et rapports restent sur votre machine. Lorsqu'un outil fait appel à un fournisseur d'IA, les données envoyées le sont depuis votre ordinateur, avec votre compte, sous votre contrat avec ce fournisseur ; elles ne passent pas par iavocat.be. La fiche de chaque outil décrit ce trajet.
 
 ## Vos droits
 

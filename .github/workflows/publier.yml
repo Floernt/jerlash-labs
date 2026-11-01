@@ -35,10 +35,10 @@ jobs:
           sudo dpkg -i hugo.deb
       - name: Vérification de publication
         run: python scripts/verifier.py --exiger-hugo --publication
-      - name: Archives des outils
-        run: python scripts/empaqueter.py
-      - name: Construction
-        run: hugo --source site --destination "$GITHUB_WORKSPACE/public" --minify --panicOnWarning
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Construction (adresse fournie par GitHub Pages ; aucune archive d'outil publiée, ADR-022)
+        run: hugo --source site --destination "$GITHUB_WORKSPACE/public" --minify --panicOnWarning --baseURL "${{ steps.pages.outputs.base_url }}/"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: public

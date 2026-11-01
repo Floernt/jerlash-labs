@@ -1,0 +1,6 @@
+{{- /* Liens du contenu : un lien interne écrit « /page/ » reçoit le chemin de base du site
+       (publication sous un sous-chemin, par exemple <compte>.github.io/jerlash-labs/). */ -}}
+{{- $url := .Destination -}}
+{{- if and (hasPrefix $url "/") (not (hasPrefix $url "//")) }}{{ $url = $url | strings.TrimPrefix "/" | relURL }}{{ end -}}
+<a href="{{ $url | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if strings.HasPrefix $url "http" }} rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- /* */ -}}

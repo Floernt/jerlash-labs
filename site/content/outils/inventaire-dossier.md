@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Inventaire d'un dossier"
 description: "Dresser le registre des pièces d'un dossier contractuel : type, statut, date, parties, version qui fait foi, et ce qui ne devrait pas s'y trouver. Règles sur votre ordinateur, parties et rattachements proposés par un modèle d'IA, avec votre clé."
 resume: "L'outil parcourt le dossier d'une affaire contractuelle et produit un registre des pièces en Word, avec des alertes : acte non signé, pièce d'un autre client, scan illisible, envoi recommandé sans preuve."

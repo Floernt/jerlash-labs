@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Conditions particulières et générales"
 description: "Repérer, article par article, ce qui est propre à l'opération dans un contrat négocié : noms, adresses, montants, dates, identifiants. Pour séparer conditions particulières et générales, ou réutiliser le contrat comme modèle. Sur votre ordinateur, sans IA."
 resume: "L'outil lit un contrat Word, repère dans chaque article les données propres à l'opération et propose un classement : conditions particulières, conditions générales, ou clause générale à épurer avant réutilisation."

@@ -13,7 +13,7 @@
       "url" site.Home.Permalink
       "inLanguage" site.Language.LanguageCode
       "description" site.Params.description -}}
-{{- else if and .IsPage (in (slice "guides" "automatiser") .Section) -}}
+{{- else if and .IsPage (in (slice "guides" "automatiser" "blog") .Section) -}}
   {{- $type := cond (eq .Section "guides") "TechArticle" "Article" -}}
   {{- $donnees = dict
       "@context" "https://schema.org"

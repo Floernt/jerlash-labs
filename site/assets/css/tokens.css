@@ -1,0 +1,20 @@
+/* jerlash — generated from tokens.json */
+@font-face{font-family:'Schibsted Grotesk';src:url(../fonts/schibsted-grotesk-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Schibsted Grotesk';src:url(../fonts/schibsted-grotesk-latin-400-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Schibsted Grotesk';src:url(../fonts/schibsted-grotesk-latin-500-normal.woff2) format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Schibsted Grotesk';src:url(../fonts/schibsted-grotesk-latin-600-normal.woff2) format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Schibsted Grotesk';src:url(../fonts/schibsted-grotesk-latin-700-normal.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url(../fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'IBM Plex Mono';src:url(../fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');font-weight:500;font-style:normal;font-display:swap}
+:root,[data-theme="light"]{--paper:#FAF9F6;--paper-raised:#FFFFFF;--paper-sunk:#F1EFEA;--ink:#1C1A16;--ink-muted:#5C574D;--ink-faint:#8F8A7E;--line:#E4E1DA;--line-strong:var(--ink-faint);--brique:#BD4A2A;--on-brique:#FCFAF5;--brique-text:#A8401F;--brique-deep:#7A2E1B;--brique-tint:#F2D6C9;--bleu:#7F9CE3;--on-bleu:#1C1A16;--bleu-text:#2E4C9E;--bleu-tint:#DCE3F6;--focus:var(--bleu-text);--success:#2F6B4F;--warning:#8A5A00;--code-bg:#1C1A16;--code-ink:#F2EDE3;--code-muted:#ADA697;--code-accent:#F08A63}
+[data-theme="dark"]{--paper:#15130F;--paper-raised:#1F1C17;--paper-sunk:#0E0C09;--ink:#F2EDE3;--ink-muted:#ADA697;--ink-faint:#77715F;--line:#38332A;--line-strong:var(--ink-faint);--brique:#E2683F;--on-brique:#15130F;--brique-text:#F08A63;--brique-deep:#F5B79E;--brique-tint:#3A2017;--bleu:#93AEEE;--on-bleu:#15130F;--bleu-text:#A9C0F5;--bleu-tint:#1E2740;--focus:var(--bleu-text);--success:#7CC4A0;--warning:#E0B45C;--code-bg:#0E0C09;--code-ink:#F2EDE3;--code-muted:#ADA697;--code-accent:#F08A63}
+:root{--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;--space-8:32px;--space-12:48px;--space-16:64px;--space-24:96px;--radius-0:0;--radius-sm:2px;--radius-pill:999px;--pixel-fin:4px;--pixel-moyen:6px;--pixel-gros:10px;--stroke-hairline:1px;--stroke-focus:2px;--font-sans:"Schibsted Grotesk", system-ui, sans-serif;--font-mono:"IBM Plex Mono", ui-monospace, monospace}
+.display{font-family:var(--font-sans);font-size:72px;line-height:72px;font-weight:600;letter-spacing:-0.035em}
+.h1{font-family:var(--font-sans);font-size:48px;line-height:52px;font-weight:600;letter-spacing:-0.03em}
+.h2{font-family:var(--font-sans);font-size:32px;line-height:38px;font-weight:600;letter-spacing:-0.02em}
+.h3{font-family:var(--font-sans);font-size:22px;line-height:28px;font-weight:600;letter-spacing:-0.01em}
+.lead{font-family:var(--font-sans);font-size:19px;line-height:30px;font-weight:400}
+.body{font-family:var(--font-sans);font-size:16px;line-height:26px;font-weight:400}
+.small{font-family:var(--font-sans);font-size:14px;line-height:22px;font-weight:400}
+.label{font-family:var(--font-mono);font-size:12px;line-height:16px;font-weight:500;letter-spacing:0.08em}
+.code{font-family:var(--font-mono);font-size:14px;line-height:22px;font-weight:400}

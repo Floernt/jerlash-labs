@@ -23,7 +23,9 @@ DEPOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(DEPOT, "site")
 HUGO_VERSION = "0.148.2"
 MARQUEURS = re.compile(r"\[À (?:COMPLÉTER|VÉRIFIER|DÉCIDER|VALIDER)[^\]]*\]")
-CSP = "default-src 'none'"
+CSP = "default-src 'none'; script-src 'self';"
+# Seuls scripts admis : ceux du design system, servis par le site (ADR-022).
+SCRIPTS_ADMIS = ("js/bundle.js", "js/init.js")
 
 resultats: list[tuple[bool, str]] = []
 
@@ -88,7 +90,9 @@ class Collecteur(HTMLParser):
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == "script" and a.get("type") != "application/ld+json":
-            self.scripts.append(a.get("src", "inline"))
+            src = a.get("src", "")
+            if not (src.startswith("/") and src.lstrip("/").endswith(SCRIPTS_ADMIS)):
+                self.scripts.append(src or "inline")
         if tag == "style" or "style" in a:
             self.styles_inline += 1
         if tag == "meta" and a.get("http-equiv", "").lower() == "content-security-policy" and CSP in a.get("content", ""):
@@ -139,14 +143,23 @@ def verifier_site(exiger_hugo: bool) -> None:
                 cible = os.path.join(sortie, lien.split("#")[0].split("?")[0].lstrip("/"))
                 if not (os.path.isfile(cible) or os.path.isfile(os.path.join(cible, "index.html"))):
                     liens_morts.append(f"{rel} -> {lien}")
-        etape(not defauts, f"{len(pages)} pages : CSP présente, aucun script, aucun style en ligne"
+        etape(not defauts, f"{len(pages)} pages : CSP présente, aucun script hors design system, aucun style en ligne"
               + ("" if not defauts else " — " + "; ".join(defauts[:5])))
         etape(not externes, "aucune ressource chargée depuis un domaine tiers" + ("" if not externes else " — " + "; ".join(externes[:5])))
         etape(not liens_morts, "liens internes valides" + ("" if not liens_morts else " — " + "; ".join(liens_morts[:10])))
-        for attendu in ("nouveautes/index.xml", "sitemap.xml", "CNAME", ".nojekyll", ".well-known/security.txt"):
+        for attendu in ("blog/index.xml", "sitemap.xml", ".nojekyll", ".well-known/security.txt", "js/bundle.js"):
             etape(os.path.isfile(os.path.join(sortie, attendu)), f"fichier produit : {attendu}")
     finally:
         shutil.rmtree(sortie, ignore_errors=True)
+
+
+def verifier_blog() -> None:
+    print("\n[4 ter] Blog : articles conformes à leur source (ADR-022)")
+    r = lancer([sys.executable, "scripts/importer_articles.py", "--verifier"])
+    sortie = r.stdout.strip().splitlines()
+    if r.returncode:
+        print(r.stdout)
+    etape(r.returncode == 0, sortie[-1] if sortie else r.stderr.strip())
 
 
 def verifier_typographie() -> None:
@@ -158,9 +171,8 @@ def verifier_typographie() -> None:
 def verifier_marqueurs(publication: bool) -> None:
     print("\n[5] Marqueurs de travail dans ce qui sera publié")
     trouves = []
-    racines = [os.path.join(SITE, "content"), os.path.join(SITE, "static")] + [
-        os.path.join(DEPOT, "outils", o, "FICHE.md") for o in sorted(os.listdir(os.path.join(DEPOT, "outils")))
-        if os.path.isfile(os.path.join(DEPOT, "outils", o, "FICHE.md"))]
+    # Les fiches des outils (outils/*/FICHE.md) ne sont plus publiées tant que les outils sont en brouillon (ADR-022).
+    racines = [os.path.join(SITE, "content"), os.path.join(SITE, "static")]
     for racine in racines:
         chemins = [racine] if os.path.isfile(racine) else \
             [os.path.join(r, n) for r, _d, ns in os.walk(racine) for n in ns if n.endswith((".md", ".txt"))]
@@ -191,6 +203,7 @@ def main(argv=None) -> int:
     verifier_archive()
     verifier_site(args.exiger_hugo)
     verifier_typographie()
+    verifier_blog()
     verifier_marqueurs(args.publication)
     echecs = [m for ok, m in resultats if not ok]
     print(f"\n{len(resultats) - len(echecs)}/{len(resultats)} vérifications réussies.")

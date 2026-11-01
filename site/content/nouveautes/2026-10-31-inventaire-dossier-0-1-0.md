@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Inventaire d'un dossier 0.1.0"
 description: "Troisième outil : le registre des pièces d'un dossier contractuel, avec leur statut, la version qui fait foi et les alertes utiles, sans IA."
 date: 2026-10-31

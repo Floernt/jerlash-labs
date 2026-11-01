@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Outils"
 description: "Catalogue des outils d'iavocat.be, classés par tâche. Chaque outil s'exécute sur votre ordinateur."
 ---

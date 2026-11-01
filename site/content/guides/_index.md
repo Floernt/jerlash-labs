@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Guides"
 description: "Guides pratiques pour installer et utiliser les outils d'iavocat.be, et comprendre ce que deviennent vos données."
 ---

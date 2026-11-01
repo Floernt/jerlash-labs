@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Glossaire des définitions 0.1.0"
 description: "Quatrième outil : le glossaire d'un contrat et ses défauts de définition, sans IA."
 date: 2026-11-01

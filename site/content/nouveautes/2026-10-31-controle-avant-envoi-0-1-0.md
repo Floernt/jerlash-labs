@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Contrôle avant envoi 0.1.0"
 description: "Première version de l'outil Contrôle avant envoi : vérifier un document Word avant de l'envoyer, sans IA et sans réseau."
 date: 2026-10-31

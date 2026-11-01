@@ -1,0 +1,2 @@
+Schibsted Grotesk et IBM Plex Mono : polices sous licence SIL Open Font License 1.1
+(https://openfontlicense.org). Fichiers repris du design system jerlash (ADR-022).

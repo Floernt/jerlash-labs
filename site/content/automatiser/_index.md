@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Automatiser une prestation"
 description: "Deux grilles pratiques pour décider quelles prestations d'un cabinet d'avocats automatiser, et comment les proposer."
 ---

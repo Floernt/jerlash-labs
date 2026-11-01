@@ -1,15 +1,15 @@
 ---
 title: "À propos"
-description: "Florian Ernotte, avocat au barreau de Liège-Huy, publie sur iavocat.be les outils qu'il construit pour la pratique et les guides pour s'en servir."
+description: "Florian Ernotte, avocat au barreau de Liège-Huy, écrit sur jerlash.labs sur l'intelligence artificielle dans la pratique d'un cabinet d'avocats."
 ---
 
 Je suis Florian Ernotte, avocat au barreau de Liège-Huy depuis 2014 et cofondateur d'Avroy Avocats, à Liège. Je suis spécialiste agréé en droit des technologies de l'information et de la communication par le barreau de Liège-Huy. Ma pratique couvre le droit des sociétés, les contrats, la fiscalité, les entreprises en difficulté et les crypto-actifs.
 
-Depuis l'arrivée des grands modèles de langage, je conçois des outils d'intelligence artificielle pour la pratique d'un cabinet : structuration de playbooks contractuels, assistants spécialisés, intégration de l'IA dans les processus de travail. iavocat.be est le site où je publie ces outils, à titre personnel, avec la documentation nécessaire pour qu'un confrère puisse les utiliser.
+Depuis l'arrivée des grands modèles de langage, je conçois des outils d'intelligence artificielle pour la pratique d'un cabinet : structuration de playbooks contractuels, assistants spécialisés, intégration de l'IA dans les processus de travail. jerlash.labs est le site où je publie, à titre personnel, mes articles sur ces sujets et, ensuite, ces outils, avec la documentation nécessaire pour qu'un confrère puisse les utiliser.
 
 ## Pourquoi ce site
 
-Publier oblige à terminer : un outil qui a une fiche, des tests et une page de limites est un outil fini. Publier permet aussi de recueillir les retours d'autres avocats, qui voient des cas que je ne vois pas.
+Publier oblige à terminer : un article publié ou un outil qui a une fiche, des tests et une page de limites est un travail fini. Publier permet aussi de recueillir les retours d'autres avocats, qui voient des cas que je ne vois pas.
 
 Les réflexions de fond sur le droit, la technique et l'intelligence artificielle ont leur place sur [Réflexions](https://reflexions.florianernotte.be/). Ici, chaque page répond à une question pratique.
 
@@ -44,9 +44,8 @@ Les réflexions de fond sur le droit, la technique et l'intelligence artificiell
 
 ## Principes
 
-- Les outils s'exécutent sur votre ordinateur. iavocat.be ne reçoit aucun document.
-- Le code est ouvert, sous licence MIT ; les textes du site sont sous licence Creative Commons Attribution 4.0.
-- Chaque fiche décrit le trajet des données, les tests réalisés et les limites connues.
+- Les textes du site sont sous licence Creative Commons Attribution 4.0 ; le code des outils sera publié sous licence MIT.
+- Chaque outil publié décrira le trajet des données, les tests réalisés et les limites connues.
 - Rien n'est payant et rien n'est vendu.
 
 ## Contact

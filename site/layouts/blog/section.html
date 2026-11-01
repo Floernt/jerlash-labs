@@ -1,0 +1,15 @@
+{{- /* Liste des articles du blog, du plus récent au plus ancien. */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="tete-page">
+    <p class="ia-eyebrow">Blog</p>
+    <h1 class="tete-page__titre">{{ .Title }}</h1>
+    {{- with .Content }}<div class="tete-page__chapeau">{{ . }}</div>{{ end }}
+  </header>
+  <div class="grille-cartes">
+    {{- range $i, $a := .Pages.ByDate.Reverse }}
+    {{ partial "carte-article.html" (dict "page" $a "rang" $i) }}
+    {{- end }}
+  </div>
+</div>
+{{ end }}

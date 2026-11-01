@@ -10,6 +10,17 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-01 - jerlash.labs : site de base, blog, cap sur la livraison
+Fait :
+- Décision de Florian : le projet devient jerlash.labs ; livrer plutôt que construire. ADR-022 (Acceptée). BACKLOG.md réécrit (Maintenant, Ensuite, Plus tard) ; CHANGELOG.md créé.
+- Travail en cours commité (ADR-015 à 021, connecteur IA, P01 0.2.0).
+- Identité jerlash (jerlash-identite.zip) appliquée au site Hugo : tokens et composants du design system, polices Schibsted Grotesk et IBM Plex Mono, logo, fonds pixel (bundle.js + init.js, CSP script-src 'self'). Nouvel accueil, en-tête, pied de page, gabarits du blog et des pages.
+- 18 pages (outils, guides, automatiser, nouveautés, précautions) passées en brouillon ; taxonomie désactivée ; CNAME retiré ; pages légales et À propos renommées jerlash.labs.
+- scripts/importer_articles.py : 9 articles « statuts: à publier » importés depuis ../articles (hors dépôt), mode --verifier branché dans scripts/verifier.py.
+- Publication : adresse fournie par actions/configure-pages, liens internes compatibles avec un sous-chemin (vérifié en construisant sous /jerlash-labs/) ; archives des outils plus publiées. scripts/verifier.py : 23/23.
+Points ouverts (Florian) : créer le dépôt public jerlash-labs ; 11 marqueurs des pages légales (adresse de contact, mentions légales, journaux GitHub) ; relire l'accueil et les articles.
+Prochaine étape : push sur GitHub, activation de Pages, publication.
+
 ## 2026-11-01 - P01 0.2.0, mode IA
 Fait :
 - Spécification projets/P01-mode-ia-spec.md, validée par Florian : l'IA ne traite que les parties et le rattachement ; un seul envoi par dossier ; seuils 14/16 et 13/16 sur le dossier de contrôle (plus mauvais de trois exécutions).

@@ -1,21 +1,22 @@
+<div class="pied-bande ia-pixel" data-pixel="horizon" data-fg="brique" data-bg="paper" data-cell="pixel-moyen" aria-hidden="true"></div>
 <footer class="pied-site">
-  <div class="conteneur">
-    <nav aria-label="Pied de page">
-      <ul class="menu-pied">
-        {{- range site.Menus.pied }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-        {{- end }}
-        {{- with site.GetPage "/nouveautes" }}
-          {{- with .OutputFormats.Get "rss" }}
-        <li><a href="{{ .RelPermalink }}" type="application/rss+xml">Nouveautés (flux RSS)</a></li>
-          {{- end }}
-        {{- end }}
-      </ul>
+  <div class="conteneur pied-site__interieur">
+    <div class="pied-site__appel">
+      <p class="pied-site__surtitre">// Contact</p>
+      <p class="pied-site__phrase">Une remarque sur un article, une question ?</p>
+      <p><a href="{{ "a-propos/#contact" | relURL }}">Me contacter</a></p>
+    </div>
+    <nav class="pied-site__nav" aria-label="Pied de page">
+      {{- range site.Menus.pied }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      {{- end }}
+      {{- with site.GetPage "/blog" }}{{ with .OutputFormats.Get "rss" }}
+      <a href="{{ .RelPermalink }}" type="application/rss+xml">Flux RSS</a>
+      {{- end }}{{ end }}
+      <span>© {{ now.Year }} jerlash.labs</span>
     </nav>
-    <p class="licences">
-      Textes sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>.
-      Code des outils sous licence MIT.
-    </p>
-    <p class="licences">Ce site ne dépose aucun cookie et n'utilise aucun traceur.</p>
+  </div>
+  <div class="conteneur">
+    <p class="pied-site__licences">Textes sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>. Ce site ne dépose aucun cookie et n'utilise aucun traceur.</p>
   </div>
 </footer>

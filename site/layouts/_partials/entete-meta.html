@@ -1,19 +1,17 @@
-{{- /* Titre, description, liens canoniques, feuilles de style, flux RSS, données structurées */ -}}
+{{- /* Titre, description, lien canonique, feuilles de style, flux RSS, données structurées */ -}}
 {{- $titre := site.Title -}}
 {{- if not .IsHome }}{{ $titre = printf "%s | %s" .Title site.Title }}{{ end -}}
-{{- $description := .Description | default .Params.resume -}}
-{{- if and (not $description) (eq .Kind "term") }}{{ $description = printf "Outils d'iavocat.be pour la tâche « %s »." .Title }}{{ end -}}
-{{- $description = $description | default site.Params.description -}}
+{{- $description := .Description | default site.Params.description -}}
 <title>{{ $titre }}</title>
 <meta name="description" content="{{ $description | plainify }}">
 <link rel="canonical" href="{{ .Permalink }}">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
-{{- $css := slice (resources.Get "css/principal.css") (resources.Get "css/coloration.css") | resources.Concat "css/site.css" | minify | fingerprint "sha256" }}
+{{- $css := slice (resources.Get "css/tokens.css") (resources.Get "css/composants.css") (resources.Get "css/principal.css") (resources.Get "css/coloration.css") | resources.Concat "css/site.css" | minify | fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-{{- with site.GetPage "/nouveautes" }}
+{{- with site.GetPage "/blog" }}
   {{- with .OutputFormats.Get "rss" }}
-<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="Nouveautés de {{ site.Title }}">
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="Blog de {{ site.Title }}">
   {{- end }}
 {{- end }}
 <meta property="og:title" content="{{ .Title | default site.Title }}">

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Utiliser un outil en local"
 description: "Installer Python, télécharger un outil d'iavocat.be, vérifier son empreinte SHA-256 et le lancer sur Windows."
 niveau: "debutant"

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Contrôle avant envoi"
 description: "Vérifier un document Word avant de l'envoyer : commentaires, modifications suivies, texte masqué, propriétés, noms d'autres dossiers. Sans IA, sans réseau."
 resume: "Avant d'envoyer un document Word, l'outil recherche ce qui ne devrait pas partir avec lui et localise chaque élément. Il ne modifie jamais le document."

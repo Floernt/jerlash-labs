@@ -237,3 +237,15 @@ Conséquences :
 - Chaque outil qui envoie un texte à une IA embarque le connecteur IA et la pseudonymisation de P09.
 - L'archive de chaque outil grossit un peu ; la duplication est voulue.
 - Les tests d'un composant restent dans sa source ; un outil teste son propre usage du composant.
+
+## ADR-022 - jerlash.labs : nom, identité, site de base
+Date : 2026-11-01
+Statut : Acceptée (décision de Florian du 2026-11-01 : « livrer plutôt que construire »)
+Contexte : après deux jours de travail, rien n'est publié. Le projet prend le nom jerlash.labs, avec une identité fournie (jerlash-identite.zip : design system et maquette).
+Décision :
+1. Le site est un site Hugo de base aux couleurs de jerlash : accueil, blog, à propos, mentions légales, confidentialité. Les sections outils, guides, automatiser, nouveautés et précautions sont conservées en brouillon, hors du site publié, jusqu'à ce qu'un contenu soit prêt.
+2. Le blog reprend les articles du dossier `articles` marqués « statuts: à publier », par `scripts/importer_articles.py`. Le dossier source reste hors du dépôt public : les brouillons restent privés.
+3. Remplace ADR-013 (identité visuelle) : polices Schibsted Grotesk et IBM Plex Mono (SIL OFL), auto-hébergées ; couleurs et composants du design system.
+4. Amende ADR-002 : les seuls scripts sont `js/bundle.js` du design system et son lanceur `js/init.js` (une ligne), servis par le site (fonds pixel). CSP `script-src 'self'` ; aucun script en ligne, aucun script externe. La vérification le contrôle.
+5. Dépôt GitHub public `jerlash-labs`, publication d'abord à l'adresse gratuite de GitHub Pages. Le domaine est choisi plus tard (« .labs » n'est pas une extension existante).
+Conséquences : tout le reste passe au backlog. Le code des outils reste dans le dépôt, sans lien depuis le site.

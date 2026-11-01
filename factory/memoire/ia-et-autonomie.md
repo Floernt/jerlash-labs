@@ -1,5 +1,7 @@
 # IA dans les outils et autonomie des outils
 
+Cap depuis le 2026-11-01 (ADR-022) : le projet s'appelle jerlash.labs ; livrer plutôt que construire. Un seul chantier à la fois (BACKLOG.md, « Maintenant ») ; ne pas relancer de développement d'outil sans décision de Florian. Hugo : `relURL` ne préfixe pas un chemin qui commence par « / » (publication sous /jerlash-labs/) ; retirer le « / » avant.
+
 Décisions de Florian du 2026-11-01 et leurs raisons. Voir aussi [[contexte]].
 
 ## Choix de Florian

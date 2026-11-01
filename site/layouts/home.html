@@ -1,112 +1,54 @@
-{{- /*
-  Page d'accueil en sections. Les textes viennent du front matter de content/_index.md :
-  bandeau, trajet (trajet des données), principes, etapes. Les outils et les lectures
-  sont tirés des sections du site.
-*/ -}}
+{{- /* Accueil : héros (front matter « heros » de content/_index.md), derniers articles du blog, « pourquoi ce site ». */ -}}
 {{ define "main" }}
 {{- $p := .Params }}
-<div class="conteneur accueil">
-
-  {{- with $p.bandeau }}
-  <section class="bandeau" aria-labelledby="titre-accueil">
-    <h1 class="bandeau__titre" id="titre-accueil">{{ .titre }}</h1>
-    {{- with .texte }}<p class="bandeau__texte">{{ . }}</p>{{ end }}
-    {{- with .actions }}
-    <p class="bandeau__actions">
-      {{- range . }}
-      <a class="bouton{{ if .secondaire }} bouton--secondaire{{ end }}" href="{{ .lien | relURL }}">{{ .libelle }}</a>
+<div class="conteneur">
+  {{- with $p.heros }}
+  <section class="ia-hero accueil-heros" aria-labelledby="titre-accueil">
+    {{- with .surtitre }}<p class="ia-eyebrow">{{ . }}</p>{{ end }}
+    <h1 class="ia-hero__title" id="titre-accueil">{{ .titre }}{{ with .suite }} <span>{{ . }}</span>{{ end }}</h1>
+    {{- with .texte }}<p class="ia-hero__lead">{{ . }}</p>{{ end }}
+    <div class="ia-hero__actions">
+      {{- range .actions }}
+      <a class="ia-btn{{ if .secondaire }} ia-btn--ghost{{ else }} ia-btn--brique{{ end }}" href="{{ .lien | strings.TrimPrefix "/" | relURL }}">{{ .libelle }} <span class="ia-btn__arrow">→</span></a>
       {{- end }}
-    </p>
-    {{- end }}
+    </div>
+    <div class="ia-hero__band ia-pixel" data-pixel="orbe" data-fg="paper" data-bg="brique" data-cell="pixel-moyen" data-pointer="true" aria-hidden="true"></div>
   </section>
   {{- end }}
 
-  {{- with $p.trajet }}
-  <section class="trajet" aria-labelledby="titre-trajet">
-    <h2 class="trajet__titre" id="titre-trajet">{{ .titre }}</h2>
-    {{- with .intro }}<p class="trajet__intro">{{ . }}</p>{{ end }}
-    <dl class="trajet__lignes">
-      {{- range .lignes }}
-      <div class="trajet__ligne">
-        <dt class="trajet__lieu">{{ .lieu }}</dt>
-        <dd class="trajet__contenu{{ if .nul }} trajet__contenu--nul{{ end }}">
-          {{- .contenu }}
-          {{- with .precision }}<span class="trajet__precision">{{ . }}</span>{{ end -}}
-        </dd>
-      </div>
-      {{- end }}
-    </dl>
-  </section>
-  {{- end }}
-
-  {{- with $p.principes }}
-  <section class="section-accueil" aria-labelledby="titre-principes">
-    <h2 class="section-accueil__titre" id="titre-principes">{{ .titre }}</h2>
-    <ul class="principes">
-      {{- range .liste }}
-      <li>
-        <h3 class="principes__titre">{{ .titre }}</h3>
-        <p>{{ .texte }}</p>
-      </li>
-      {{- end }}
-    </ul>
-  </section>
-  {{- end }}
-
-  {{- with site.GetPage "/outils" }}
-  {{- $outils := .RegularPages.ByLastmod.Reverse | first 6 }}
-  {{- if $outils }}
-  <section class="section-accueil" aria-labelledby="titre-outils">
-    <h2 class="section-accueil__titre" id="titre-outils">Les outils</h2>
-    <ul class="liste-contenus liste-contenus--cartes">
-      {{- range $outils }}{{ partial "resume-outil.html" . }}{{ end }}
-    </ul>
-    <p class="section-accueil__suite"><a href="{{ .RelPermalink }}">Tous les outils, classés par tâche</a></p>
-  </section>
-  {{- end }}
-  {{- end }}
-
-  {{- with $p.etapes }}
-  <section class="section-accueil" aria-labelledby="titre-etapes">
-    <h2 class="section-accueil__titre" id="titre-etapes">{{ .titre }}</h2>
-    {{- with .intro }}<p class="section-accueil__intro">{{ . }}</p>{{ end }}
-    <ol class="etapes">
-      {{- range .liste }}
-      <li>
-        <h3 class="etapes__titre">{{ .titre }}</h3>
-        <p>{{ .texte }}</p>
-      </li>
-      {{- end }}
-    </ol>
-    {{- with .lien }}<p class="section-accueil__suite"><a href="{{ . | relURL }}">{{ $p.etapes.libelle_lien }}</a></p>{{ end }}
-  </section>
-  {{- end }}
-
-  {{- $guides := slice }}{{ with site.GetPage "/guides" }}{{ $guides = .RegularPages.ByLastmod.Reverse | first 4 }}{{ end }}
-  {{- $articles := slice }}{{ with site.GetPage "/automatiser" }}{{ $articles = .RegularPages.ByWeight | first 4 }}{{ end }}
-  {{- if or $guides $articles }}
-  <section class="section-accueil" aria-labelledby="titre-a-lire">
-    <h2 class="section-accueil__titre" id="titre-a-lire">À lire</h2>
-    <div class="a-lire">
-      {{- with $guides }}
+  {{- with site.GetPage "/blog" }}
+  {{- $articles := .RegularPages.ByDate.Reverse | first 3 }}
+  {{- if $articles }}
+  <section class="accueil-section" aria-labelledby="titre-blog">
+    <div class="accueil-section__tete">
       <div>
-        <h3><a href="{{ (site.GetPage "/guides").RelPermalink }}">Guides</a></h3>
-        <ul class="liste-contenus">
-          {{- range . }}{{ partial "resume-article.html" (dict "page" . "niveau" 4) }}{{ end }}
-        </ul>
+        <p class="ia-eyebrow">Blog</p>
+        <h2 class="accueil-section__titre" id="titre-blog">Derniers articles</h2>
       </div>
-      {{- end }}
-      {{- with $articles }}
-      <div>
-        <h3><a href="{{ (site.GetPage "/automatiser").RelPermalink }}">Automatiser une prestation</a></h3>
-        <ul class="liste-contenus">
-          {{- range . }}{{ partial "resume-article.html" (dict "page" . "niveau" 4) }}{{ end }}
-        </ul>
-      </div>
+      <a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">Tous les articles <span class="ia-btn__arrow">→</span></a>
+    </div>
+    <div class="grille-cartes">
+      {{- range $i, $a := $articles }}
+      {{ partial "carte-article.html" (dict "page" $a "rang" $i) }}
       {{- end }}
     </div>
   </section>
   {{- end }}
+  {{- end }}
 
+  {{- with $p.pourquoi }}
+  <section class="accueil-section accueil-pourquoi" aria-labelledby="titre-pourquoi">
+    <div>
+      <p class="ia-eyebrow">{{ .surtitre }}</p>
+      <h2 class="accueil-section__titre" id="titre-pourquoi">{{ .titre }}</h2>
+      {{- with .texte }}<p class="accueil-section__chapeau">{{ . }}</p>{{ end }}
+    </div>
+    <ol class="liste-numerotee">
+      {{- range $i, $e := .liste }}
+      <li><span class="liste-numerotee__rang">{{ printf "%02d" (add $i 1) }}</span><div><h3>{{ $e.titre }}</h3><p>{{ $e.texte }}</p></div></li>
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
 </div>
 {{ end }}

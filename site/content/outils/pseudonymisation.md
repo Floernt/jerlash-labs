@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Pseudonymisation"
 description: "Remplacer les noms, adresses et identifiants belges d'un texte par des marqueurs avant de le soumettre à une IA, puis rétablir les noms dans la réponse. Sur votre ordinateur, sans réseau."
 resume: "L'outil remplace les noms, adresses et numéros d'un texte par des marqueurs comme [PERSONNE_1], vous fait relire le résultat, puis remet les vrais noms dans la réponse de l'IA. Il ne trouve pas tout : la relecture est obligatoire."

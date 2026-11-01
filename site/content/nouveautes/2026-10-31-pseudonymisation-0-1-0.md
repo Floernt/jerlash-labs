@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Pseudonymisation 0.1.0"
 description: "Deuxième outil : remplacer les noms, adresses et identifiants belges d'un texte avant de le soumettre à une IA, puis rétablir les noms dans la réponse."
 date: 2026-10-31

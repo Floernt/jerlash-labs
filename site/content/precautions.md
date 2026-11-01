@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Précautions d'usage"
 description: "Ce qu'il faut savoir avant d'utiliser un outil d'iavocat.be dans un dossier : confidentialité, vérification des résultats, responsabilité."
 ---
