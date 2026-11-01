@@ -37,6 +37,7 @@ def ecrire_docx(chemin: str, parties: dict[str, str | bytes]) -> None:
         for nom in sorted(parties, key=lambda n: (n != "[Content_Types].xml", n)):
             contenu = parties[nom]
             info = zipfile.ZipInfo(nom, DATE_ZIP)
+            info.create_system = 3  # Unix partout : zipfile met 0 sous Windows, ce qui change les octets
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = 0o600 << 16
             z.writestr(info, contenu.encode("utf-8") if isinstance(contenu, str) else contenu)

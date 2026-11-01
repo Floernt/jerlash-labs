@@ -94,6 +94,7 @@ def docx(lignes: list[str]) -> bytes:
     with zipfile.ZipFile(sortie, "w", zipfile.ZIP_DEFLATED) as z:
         for nom, contenu in parties.items():
             info = zipfile.ZipInfo(nom, DATE_ZIP)
+            info.create_system = 3  # Unix partout : zipfile met 0 sous Windows, ce qui change les octets
             info.compress_type = zipfile.ZIP_DEFLATED
             z.writestr(info, contenu.encode("utf-8"))
     return sortie.getvalue()

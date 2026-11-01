@@ -70,6 +70,8 @@ def ecrire_registre(inventaire, sortie: str) -> list[str]:
     refuser_si_dans_le_dossier(sortie, source)
     cible = os.path.abspath(sortie)
     base = f"Inventaire - {os.path.basename(source.rstrip(os.sep)) or 'dossier'}"
+    # Demi-caractère isolé : accepté par Windows dans un nom de fichier, refusé par Linux et macOS (UTF-8)
+    base = "".join("_" if "\ud800" <= c <= "\udfff" else c for c in base)
     chemins = []
     for extension, contenu in ((".docx", en_docx(inventaire)), (".md", en_markdown(inventaire)),
                                (".json", en_json(inventaire))):
