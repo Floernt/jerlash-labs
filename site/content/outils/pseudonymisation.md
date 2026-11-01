@@ -13,7 +13,7 @@ taches: ["préparer un document", "protéger des données"]
 mise_a_jour: 2026-10-31
 telechargement: "/telechargements/pseudonymisation-0.1.0.zip"
 taille: "33 Ko"
-sha256: "18f5c87a44c5bc94d78eebe2feab6edd9c9003c6b8e25ee25d59feb511300e90"
+sha256: "985d6610cdcead1f4253e4def184f980ee2b550604cd14bee7cabfcc5d7d327d"
 ---
 
 ## Ce que fait l'outil

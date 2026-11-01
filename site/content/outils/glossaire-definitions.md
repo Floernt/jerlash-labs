@@ -13,7 +13,7 @@ taches: ["relire un contrat", "vérifier"]
 mise_a_jour: 2026-11-01
 telechargement: "/telechargements/glossaire-definitions-0.1.0.zip"
 taille: "28 Ko"
-sha256: "a04402e797b8a8f902d764feb6a8f9e7308a31873a7bee23b38dc45ccdd92128"
+sha256: "37e347be04186b159a35d7bdc6b3f985852ee1487ba203241ec93900f13320bd"
 ---
 
 ## Ce que fait l'outil

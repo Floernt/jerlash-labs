@@ -5,7 +5,7 @@
     python scripts/empaqueter.py --verifier      échoue si la fiche du site ne correspond pas à l'archive
 
 L'archive est identique octet par octet d'une machine à l'autre (dates fixes, ordre trié,
-fins de ligne normalisées), ce qui permet de publier son empreinte SHA-256 dans la fiche.
+fins de ligne normalisées, système d'origine fixé à Unix), ce qui permet de publier son empreinte SHA-256 dans la fiche.
 """
 
 from __future__ import annotations
@@ -78,6 +78,7 @@ def construire(slug: str) -> tuple[str, bytes]:
                 donnees = donnees.replace(b"\r\n", b"\n")
             info = zipfile.ZipInfo(prefixe + relatif, DATE_ZIP)
             info.compress_type = zipfile.ZIP_DEFLATED
+            info.create_system = 3  # Unix partout : zipfile met 0 sous Windows, ce qui change l'empreinte
             info.external_attr = 0o644 << 16
             z.writestr(info, donnees)
     return f"{slug}-{v}.zip", sortie.getvalue()

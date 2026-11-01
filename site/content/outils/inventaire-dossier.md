@@ -13,7 +13,7 @@ taches: ["reprendre un dossier", "vérifier"]
 mise_a_jour: 2026-11-01
 telechargement: "/telechargements/inventaire-dossier-0.2.0.zip"
 taille: "67 Ko"
-sha256: "3eddb89b943bf1985c4f2030522439243f9b25423fc23da8a4d3ac68c5d7638f"
+sha256: "ff2ecc390093653b97e656f5f633564f383f0202b881c8ee50111d63542f1204"
 ---
 
 ## Ce que fait l'outil

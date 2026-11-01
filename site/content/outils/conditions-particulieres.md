@@ -13,7 +13,7 @@ taches: ["relire un contrat", "préparer un modèle"]
 mise_a_jour: 2026-11-01
 telechargement: "/telechargements/conditions-particulieres-0.1.0.zip"
 taille: "28 Ko"
-sha256: "7cf7e025a6f669936b72a678c5670175fb34001922ed222d4335221c2c96145f"
+sha256: "cf578b90625f3c9241c9702b0e1997c8174fe554d7da4c1aaca215f9365dc4ae"
 ---
 
 ## Ce que fait l'outil
