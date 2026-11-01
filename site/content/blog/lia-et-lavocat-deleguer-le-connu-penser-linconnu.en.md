@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "AI and the lawyer - delegating the known, thinking the unknown"
 date: 2025-12-30
 description: "The more time passes, the clearer it becomes that we are living through a turning point."

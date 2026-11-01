@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Hourly rates and artificial intelligence. What place in the law firm"
 date: 2025-06-27
 description: "Generative artificial intelligence is reshuffling the deck: some tasks are being automated, others are disappearing, and time spent is no longer a viable way of valuing one’s services."

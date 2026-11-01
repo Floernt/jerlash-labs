@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "L’IA dans les cabinets, pour nous aider, pas pour nous remplacer"
 date: 2025-06-11
 description: "Dans le tumulte des promesses technologiques, il est tentant de croire que l’IA pourrait bouleverser jusqu’au cœur de nos métiers."

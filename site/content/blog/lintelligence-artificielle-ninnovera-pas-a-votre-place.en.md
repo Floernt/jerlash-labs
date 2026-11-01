@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Artificial intelligence will not innovate for you"
 date: 2025-06-25
 description: "Time savings, reliability, compliance."

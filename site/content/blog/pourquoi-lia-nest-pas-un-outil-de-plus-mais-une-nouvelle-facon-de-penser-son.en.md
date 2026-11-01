@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Why AI is not just another tool – but a new way of thinking about your firm"
 date: 2025-06-11
 description: "Artificial intelligence is stirring up the legal world, and solutions are multiplying."

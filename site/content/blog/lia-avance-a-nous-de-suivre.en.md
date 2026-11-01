@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "AI is moving forward, it is up to us to keep up"
 date: 2025-06-13
 description: "While some tech leaders are going back to coding so as not to miss the revolution under way, many legal professionals are still debating the “relevance” of AI."

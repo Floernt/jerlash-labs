@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "L’intelligence artificielle n’innovera pas à votre place"
 date: 2025-06-25
 description: "Gain de temps, fiabilité, conformité."

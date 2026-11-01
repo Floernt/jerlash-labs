@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Less is more. L’illusion du volume"
 date: 2025-06-25
 description: "Devant les promesses de l’IA, beaucoup d’avocats cèdent à la tentation du “tout injecter”."

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "L’IA et l’avocat - déléguer le connu, penser l’inconnu"
 date: 2025-12-30
 description: "Plus le temps passe, plus on constate qu'on assiste à un moment charnière."

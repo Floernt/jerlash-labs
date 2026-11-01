@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "AI in law firms, to help us, not to replace us"
 date: 2025-06-11
 description: "Amid the clamour of technological promises, it is tempting to believe that AI could upend even the core of our professions."

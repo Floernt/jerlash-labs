@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Less is more. The illusion of volume"
 date: 2025-06-25
 description: "Faced with the promises of AI, many lawyers give in to the temptation to “feed it everything”."
