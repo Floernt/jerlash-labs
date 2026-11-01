@@ -1,4 +1,4 @@
-{{- /* Accueil : héros (front matter « heros » de content/_index.md), derniers articles du blog, « pourquoi ce site ». */ -}}
+{{- /* Accueil : héros (front matter « heros » de content/_index.md), derniers articles du blog, « pourquoi ce site », origine du nom (« nom »). */ -}}
 {{ define "main" }}
 {{- $p := .Params }}
 <div class="conteneur">
@@ -48,6 +48,19 @@
       <li><span class="liste-numerotee__rang">{{ printf "%02d" (add $i 1) }}</span><div><h3>{{ $e.titre }}</h3><p>{{ $e.texte }}</p></div></li>
       {{- end }}
     </ol>
+  </section>
+  {{- end }}
+
+  {{- with $p.nom }}
+  <section class="accueil-section accueil-nom" aria-labelledby="titre-nom">
+    <div class="accueil-nom__texte">
+      <p class="ia-eyebrow">{{ .surtitre }}</p>
+      <h2 class="accueil-section__titre" id="titre-nom">{{ .titre }}</h2>
+      {{ .texte | markdownify }}
+    </div>
+    {{- with .image }}
+    <img class="accueil-nom__portrait" src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ $p.nom.alt }}" width="449" height="556" loading="lazy">
+    {{- end }}
   </section>
   {{- end }}
 </div>

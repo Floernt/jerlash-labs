@@ -26,6 +26,16 @@ main:focus { outline: none; }
 .accueil-section__chapeau { margin: var(--space-4) 0 0; font-size: 19px; line-height: 30px; color: var(--ink-muted); }
 .accueil-pourquoi { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-12); }
 
+/* Origine du nom : le portrait a un fond blanc, fondu dans --paper (multiply) ;
+   en sombre, inversé puis fondu par « screen » pour garder un trait brique. */
+.accueil-nom { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-12); align-items: center; }
+.accueil-nom__texte { display: flex; flex-direction: column; gap: var(--space-4); max-width: 60ch; }
+.accueil-nom__texte p { margin: 0; font-size: 17px; line-height: 28px; color: var(--ink-muted); }
+.accueil-nom__texte p strong { color: var(--ink); font-weight: 600; }
+.accueil-nom__texte .accueil-section__titre { margin-bottom: var(--space-2); }
+.accueil-nom__portrait { justify-self: center; width: 100%; max-width: 400px; mix-blend-mode: multiply; }
+[data-theme="dark"] .accueil-nom__portrait { mix-blend-mode: screen; filter: invert(1) hue-rotate(180deg); }
+
 .liste-numerotee { list-style: none; margin: 0; padding: 0; }
 .liste-numerotee li { display: grid; grid-template-columns: 56px 1fr; gap: var(--space-4); padding: var(--space-6) 0; border-top: var(--stroke-hairline) solid var(--line); }
 .liste-numerotee li:last-child { border-bottom: var(--stroke-hairline) solid var(--line); }

@@ -1,12 +1,12 @@
 ---
 title: "jerlash.labs"
-description: "Intelligence artificielle et pratique d'un cabinet d'avocats : articles, et bientôt les outils que je construis, avec leur code, leurs coûts et leurs limites."
+description: "Intelligence artificielle et pratiques juridiques"
 
 heros:
-  surtitre: "IA et pratique d'un cabinet d'avocats"
-  titre: "Ce que l'IA change au travail d'un avocat."
-  suite: "Et ce qu'elle ne change pas."
-  texte: "Je suis avocat. J'écris ici sur l'usage de l'intelligence artificielle dans un cabinet. Les outils que je construis y seront publiés ensuite, avec leur code, leurs coûts et leurs limites."
+  surtitre: "IA et pratiques juridiques"
+  titre: "jerlash labs."
+  suite: "De la réflexion à l'expérimentation."
+  texte: "jerlash.labs est un laboratoire de recherche et d'expérimentation consacré aux transformations du droit à l'ère numérique."
   actions:
     - libelle: "Lire le blog"
       lien: "/blog/"
@@ -14,17 +14,16 @@ heros:
       lien: "/a-propos/"
       secondaire: true
 
-pourquoi:
-  surtitre: "Pourquoi ce site"
-  titre: "Publier oblige à finir."
-  texte: "Un seul endroit pour les articles et, demain, pour les outils, chacun avec sa documentation."
-  liste:
-    - titre: "Terminer et documenter"
-      texte: "Un lieu de publication oblige à mener chaque projet jusqu'au bout."
-    - titre: "Tester en conditions réelles"
-      texte: "Avec le retour d'avocats qui utilisent les outils."
-    - titre: "Partager ce qui a été appris"
-      texte: "Clés d'API, coûts, confidentialité, installation, prompts."
-    - titre: "Montrer plutôt qu'affirmer"
-      texte: "La qualité des outils et des explications tient lieu de présentation."
+
+nom:
+  surtitre: "Le nom"
+  titre: "Pourquoi jerlash.labs ?"
+  image: "/images/etienne-jerlash.png"
+  alt: "Portrait d'Étienne Constantin de Gerlache, gravure pointillée"
+  texte: |
+    jerlash.labs tire son nom d'un clin d'œil à Étienne Constantin de Gerlache (1785–1871), juriste et homme d'État liégeois, qui participa à la création de la Belgique indépendante et à l'élaboration de sa Constitution. jerlash est une réinterprétation phonétique et contemporaine de « Gerlache », faisant dialoguer cet héritage historique avec les transformations technologiques de notre époque.
+
+    Le choix de ce nom possède également une dimension personnelle : le cabinet d'avocats du fondateur de jerlash.labs est situé avenue Constantin-de-Gerlache, à Liège. Un double clin d'œil à l'histoire du droit belge et au lieu où le projet a pris naissance. À près de deux siècles de distance, l'intelligence artificielle et les nouvelles technologies nous invitent à repenser nos pratiques, nos savoirs et nos institutions.
+
+    jerlash.labs s'inscrit dans cette démarche : explorer les transformations du droit et de la société à la croisée de la philosophie, de la recherche et de la technologie, pour contribuer à penser les pratiques de demain.
 ---
