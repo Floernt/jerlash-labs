@@ -142,3 +142,11 @@ B) mode IA optionnel, application locale (ADR-010 mode B) : seuls les extraits n
 C) comme B, mais limité aux fournisseurs qui documentent un traitement dans l'UE.
 Recommandation : B, avec un écran d'envoi qui affiche le lieu de traitement déclaré, et C comme réglage par défaut. Le mode local reste le mode par défaut ; le mode IA complète les champs « à vérifier » et propose les rattachements, chaque proposition étant marquée comme venant du modèle.
 Points que Florian doit trancher : la compatibilité de principe de l'envoi d'extraits pseudonymisés avec le secret professionnel (docs/fournisseurs-ia.md §5.5) ; le choix entre B et C ; la liste des fournisseurs proposés.
+
+## ADR-016 - P02 Lite : rapport sur les définitions, par règles, sans modifier le contrat
+Date : 2026-11-01
+Statut : Proposée (décision déléguée par Florian le 2026-10-31 ("continue à build les outils"), à valider)
+Contexte : la fiche P02 prévoit de regrouper les définitions d'un contrat dans une annexe unique, avec un rapport. Le regroupement exige de réécrire le .docx en conservant sa mise en forme et ses renvois, c'est-à-dire le composant P10, qui n'existe pas. La fiche prévoyait aussi un contrôle par un modèle de langue, que la décision ADR-015 n'a pas encore ouvert.
+Options : A) attendre P10 ; B) une version « rapport » seule, par règles, en local, qui ne modifie pas le contrat ; C) B avec un contrôle par IA.
+Décision : B pour la version 0.1.0. Application locale (mode B d'ADR-010), bibliothèque standard seule. Mesure sur F-DEF-01 : jeu de développement et jeu de contrôle rédigé par un agent sans accès au code ; seul le second est publié.
+Conséquences : la question ouverte de la fiche (annexe en fin de contrat ou article « Définitions » en tête) ne se pose qu'avec la restructuration, reportée. C reste possible après la décision sur ADR-015. Les termes définis sans guillemets hors de l'article des définitions, et les définitions dans les notes de bas de page, ne sont pas reconnus.

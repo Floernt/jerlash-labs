@@ -1,0 +1,15 @@
+{
+ "_note": "Planchers de non-régression de glossaire-definitions (P02). Jeu de développement : tout doit rester exact. Jeu de contrôle : valeurs mesurées sur la version 0.1.0 le 2026-11-01 ; une modification qui les fait baisser est refusée. Ne jamais régler les règles sur le jeu de contrôle.",
+ "developpement": {
+  "definis": {"rappel": 1.0, "precision": 1.0}, "doublons": {"rappel": 1.0, "precision": 1.0},
+  "divergents": {"rappel": 1.0, "precision": 1.0}, "inutilises": {"rappel": 1.0, "precision": 1.0},
+  "non_definis": {"rappel": 1.0, "precision": 1.0}, "variantes": {"rappel": 1.0, "precision": 1.0},
+  "avant_definition": {"rappel": 1.0, "precision": 1.0}
+ },
+ "controle": {
+  "definis": {"rappel": 0.96, "precision": 1.0}, "doublons": {"rappel": 1.0, "precision": 1.0},
+  "divergents": {"rappel": 1.0, "precision": 0.6}, "inutilises": {"rappel": 1.0, "precision": 1.0},
+  "non_definis": {"rappel": 0.83, "precision": 0.62}, "variantes": {"rappel": 0.83, "precision": 1.0},
+  "avant_definition": {"rappel": 1.0, "precision": 1.0}
+ }
+}

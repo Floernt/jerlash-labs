@@ -1,0 +1,67 @@
+fichier: Convention de confidentialité - Projet Héron.docx
+---
+CONVENTION DE CONFIDENTIALITÉ
+
+ENTRE :
+Mosane Biotech SA, dont le siège est établi à 4000 Liège, avenue du Pré-Aily 8, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0634.981.207, représentée par Monsieur Laurent Thiry, administrateur délégué (ci-après « Mosane ») ;
+ET :
+Ardentis SRL, dont le siège est établi à 1348 Louvain-la-Neuve, rue du Bosquet 15, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0758.662.014, représentée par Madame Julie Barzin, administratrice (ci-après « Ardentis ») ;
+(ensemble, les « Parties » et individuellement une « Partie »).
+
+PRÉAMBULE
+Mosane développe des procédés de purification de protéines recombinantes. Ardentis conçoit des équipements de laboratoire automatisés.
+Les Parties envisagent une collaboration portant sur le développement conjoint d'un module de purification automatisé (le « Projet »).
+Dans le cadre de l'évaluation du Projet, chaque Partie sera amenée à communiquer à l'autre des informations de nature confidentielle. La présente convention a pour objet d'en organiser la protection.
+
+Article 1 – Définitions
+Aux fins de la présente convention :
+« Convention » désigne la présente convention de confidentialité ;
+« Informations Confidentielles » désigne toutes les informations, de quelque nature que ce soit, communiquées par une Partie à l'autre dans le cadre du Projet, oralement, par écrit ou par tout autre moyen, en ce compris les données techniques, les procédés, les savoir-faire, les plans d'affaires et les informations financières ;
+« Partie Divulgatrice » désigne la Partie qui communique des Informations Confidentielles ;
+« Partie Réceptrice » désigne la Partie qui reçoit des Informations Confidentielles ;
+« Société Affiliée » désigne toute société qui contrôle une Partie, est contrôlée par elle ou est placée sous un contrôle commun avec elle, au sens de l'article 1:14 du Code des sociétés et des associations ;
+« Date de Signature » : la date à laquelle la Convention est signée par la dernière des Parties.
+
+Article 2 – Obligations de confidentialité
+2.1. La Partie Réceptrice s'engage à garder strictement confidentielles toutes les informations, quel qu'en soit le support, qui lui sont communiquées par la Partie Divulgatrice dans le cadre du Projet (ci-après les « Informations Confidentielles »), et à ne pas les divulguer à un tiers sans l'accord écrit préalable de la Partie Divulgatrice.
+2.2. La Partie Réceptrice n'utilise les Informations Confidentielles qu'aux seules fins de l'évaluation du Projet.
+2.3. La Partie Réceptrice peut communiquer des Informations Confidentielles à ses Représentants, dans la stricte mesure où ceux-ci ont besoin d'en connaître pour l'évaluation du Projet.
+2.4. La Partie réceptrice protège les Informations Confidentielles avec le même degré de diligence que celui qu'elle applique à ses propres informations de même nature, et au minimum avec une diligence raisonnable.
+
+Article 3 – Représentants
+3.1. La Partie Réceptrice informe ses Représentants du caractère confidentiel des informations communiquées et leur impose des obligations de confidentialité au moins équivalentes à celles de la Convention.
+3.2. Sont visés par le présent article les administrateurs, membres du personnel, conseillers juridiques, réviseurs et conseillers financiers de la Partie Réceptrice (ci-après les « Représentants »).
+3.3. La Partie Réceptrice répond de tout manquement de ses Représentants aux obligations de la Convention comme de son propre fait.
+
+Article 4 – Exceptions
+4.1. Les obligations prévues à l'article 2 ne s'appliquent pas aux informations dont la Partie Réceptrice peut démontrer :
+(a) qu'elles étaient dans le domaine public au moment de leur communication ou y sont tombées par la suite sans faute de sa part ;
+(b) qu'elle les connaissait légitimement avant leur communication par la Partie Divulgatrice ;
+(c) qu'elle les a reçues de manière licite d'un tiers non tenu à une obligation de confidentialité ;
+(d) qu'elle les a développées de manière indépendante, sans recourir aux Informations Confidentielles.
+4.2. Lorsque la communication d'Informations Confidentielles est exigée par la loi, par une autorité telle que l'Autorité des services et marchés financiers, ou par une décision judiciaire, la Partie Réceptrice en informe préalablement la Partie Divulgatrice, dans la mesure où la loi le permet.
+
+Article 5 – Accès aux documents
+5.1. Les documents relatifs au Projet sont mis à disposition dans la Salle de Données ouverte par Mosane auprès d'un prestataire spécialisé. L'accès à la Salle de Données est réservé aux personnes nominativement désignées par chaque Partie.
+5.2. Ardentis s'interdit de télécharger ou d'imprimer les documents marqués « strictement confidentiel » sans l'accord préalable de Mosane.
+5.3. Les données à caractère personnel éventuellement contenues dans les Informations Confidentielles sont traitées conformément au Règlement (UE) 2016/679 (RGPD) et à la loi du 30 juillet 2018 relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel.
+
+Article 6 – Restitution
+6.1. À la première demande de la Partie Divulgatrice, et en tout état de cause à la fin des discussions relatives au Projet, la Partie Réceptrice restitue ou détruit les Informations Confidentielles et toutes leurs copies, et en atteste par écrit. Elle peut toutefois conserver une copie d'archive dans la mesure requise par la loi.
+
+Article 7 – Absence d'engagement
+7.1. La Convention n'oblige aucune Partie à conclure un accord relatif au Projet ni à communiquer une information déterminée. Aucune licence ni aucun droit de propriété intellectuelle n'est concédé par la Convention sur les Informations Confidentielles.
+
+Article 8 – Durée
+8.1. La Convention entre en vigueur à la Date de Signature et est conclue pour une durée de deux ans. Les obligations de confidentialité survivent pendant cinq ans à compter de la fin de la Convention.
+
+Article 9 – Sanctions
+9.1. En cas de manquement à la Convention, la Partie Réceptrice est redevable envers la Partie Divulgatrice d'une indemnité forfaitaire de 50.000 EUR, sans préjudice du droit de la Partie Divulgatrice de prouver un dommage supérieur.
+9.2. La Partie Divulgatrice peut en outre solliciter toute mesure provisoire devant le président du Tribunal de l'entreprise de Liège.
+
+Article 10 – Droit applicable
+10.1. La Convention est régie par le droit belge. Tout litige est soumis à la compétence exclusive des tribunaux de Liège.
+
+Fait à Liège, le 9 janvier 2025, en deux exemplaires originaux.
+Pour Mosane Biotech SA, Laurent Thiry
+Pour Ardentis SRL, Julie Barzin

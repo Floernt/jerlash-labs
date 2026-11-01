@@ -29,6 +29,11 @@ OUTILS = {
         "version": os.path.join(DEPOT, "outils", "controle-avant-envoi", "src", "controle_avant_envoi", "__init__.py"),
         "fiche": os.path.join(DEPOT, "site", "content", "outils", "controle-avant-envoi.md"),
     },
+    "glossaire-definitions": {
+        "dossier": os.path.join(DEPOT, "outils", "glossaire-definitions"),
+        "version": os.path.join(DEPOT, "outils", "glossaire-definitions", "src", "glossaire_definitions", "__init__.py"),
+        "fiche": os.path.join(DEPOT, "site", "content", "outils", "glossaire-definitions.md"),
+    },
     "inventaire-dossier": {
         "dossier": os.path.join(DEPOT, "outils", "inventaire-dossier"),
         "version": os.path.join(DEPOT, "outils", "inventaire-dossier", "src", "inventaire_dossier", "__init__.py"),

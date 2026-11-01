@@ -2,12 +2,12 @@
 id: P02
 titre: Glossaire des définitions d'un contrat
 type: outil public
-statut: idée
+statut: vérification
 priorité: à définir
 source: zenzen-sol/legal-prompts, skill defined-terms-glossary (v0.1.0)
 licence_source: MIT
 dépend_de: [P10]
-mise_a_jour: 2026-10-31
+mise_a_jour: 2026-11-01
 ---
 
 # Glossaire des définitions d'un contrat
@@ -56,4 +56,4 @@ Licence : MIT.
 
 ## 10. Prochaine étape
 
-Rassembler trois modèles de contrats fictifs avec définitions dispersées.
+P02 Lite 0.1.0 (rapport seul, par règles, ADR-016) est livré dans `outils/glossaire-definitions`, mesuré sur F-DEF-01. Prochaines étapes : test par Florian sur ses propres modèles ; la restructuration (annexe unique) attend P10.

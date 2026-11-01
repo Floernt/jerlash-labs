@@ -1,0 +1,64 @@
+fichier: Contrat de licence de logiciel - Quartzline.docx
+---
+CONTRAT DE LICENCE DE LOGICIEL
+
+Entre les soussignés :
+Quartzline SA, société anonyme dont le siège est établi à 5000 Namur, boulevard Cauchy 21, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0698.103.574, représentée par Monsieur Olivier Detienne, administrateur délégué (ci-après le "Concédant"),
+et
+Brasserie du Val d'Ourthe SRL, société à responsabilité limitée dont le siège est établi à 4190 Ferrières, route de Xhoris 3, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0866.270.931, représentée par Madame Sophie Lejeune, administratrice (ci-après le “Licencié”),
+ci-après conjointement désignés les « Parties ».
+Exposé préalable
+Le Concédant a développé et commercialise un logiciel de gestion de production et de stocks destiné aux brasseries artisanales.
+Le Licencié souhaite utiliser ce logiciel pour la gestion de son site de production de Ferrières et a sollicité à cet effet une licence d'utilisation. Les Parties ont arrêté comme suit les termes de cette licence.
+Article 1 – Définitions
+1.1. Les termes et expressions ci-dessous, lorsqu'ils sont employés avec une majuscule, ont la signification que leur donne le tableau suivant :
+| Terme | Définition |
+| Contrat | le présent contrat de licence et ses annexes, qui en font partie intégrante |
+| Logiciel | le logiciel de gestion de production et de stocks BrewTrack, dans sa version 4.2, sous forme de code objet, en ce compris toute mise à jour corrective fournie au Licencié |
+| Site | le site de production du Licencié situé à 4190 Ferrières, route de Xhoris 3 |
+| Date d'Effet | la date à laquelle le Logiciel est installé sur le Site et déclaré opérationnel par le Concédant |
+| Documentation | le manuel d'utilisation et la documentation technique du Logiciel, en langue française, sous format électronique |
+| Mise à Jour | toute version corrective ou évolutive du Logiciel mise à disposition par le Concédant, à l'exclusion des nouveaux modules commercialisés séparément |
+| Utilisateurs Autorisés | les membres du personnel salarié du Licencié, dans la limite de vingt-cinq personnes |
+| Redevance | le montant annuel dû par le Licencié en contrepartie de la licence, tel que fixé à l'annexe 1 |
+| Territoire | la Belgique et le Grand-Duché de Luxembourg |
+1.2. Les intitulés des articles sont donnés à titre indicatif et n'affectent pas l'interprétation du Contrat.
+Article 2 – Objet
+2.1. Le Concédant concède au Licencié, qui accepte, une licence non exclusive et non transférable d'utilisation du Logiciel, pour la durée du Contrat et aux conditions qui y sont fixées.
+2.2. La licence est limitée à l'utilisation du Logiciel sur le Site, pour les besoins propres de l'activité du Licencié.
+Article 3 – Étendue de la licence
+3.1. Le Licencié peut installer le Logiciel sur les serveurs et postes de travail situés sur le Site et en permettre l'accès aux Utilisateurs Autorisés.
+3.2. Pour l'application du présent article, sont visés les employés et consultants du Licencié, ainsi que ceux de ses filiales, dans la limite de trente personnes simultanément connectées (les « Utilisateurs Autorisés »).
+3.3. Le Licencié s'interdit de reproduire le Logiciel, sauf une copie de sauvegarde, de le modifier, de le décompiler ou d'en extraire le code source, sous réserve des exceptions prévues par le livre XI du Code de droit économique.
+3.4. Toute utilisation du Logiciel par un nombre de personnes supérieur à celui des Utilisateurs Autorisés donne lieu à une facturation complémentaire au tarif en vigueur.
+Article 4 – Installation et évolutions
+4.1. Le Concédant installe le Logiciel sur le Site dans les trente jours de la signature du Contrat et remet au Licencié la Documentation.
+4.2. Le Concédant met gratuitement à la disposition du Licencié les Mises à jour du Logiciel dès leur publication.
+4.3. L'installation des Mises à Jour est assurée dans le cadre des Services de Maintenance, sans frais supplémentaires.
+4.4. Pendant la Période d'Essai, d'une durée de soixante jours à compter de la Date de Prise d'Effet, le Licencié peut mettre fin au Contrat sans motif et sans indemnité, moyennant restitution de la Documentation.
+Article 5 – Propriété
+5.1. Le Concédant demeure seul titulaire de l'ensemble des droits de propriété intellectuelle relatifs au Logiciel et à la Documentation. Le Contrat n'emporte aucune cession de ces droits au profit du Licencié.
+5.2. Le Licencié s'abstient de supprimer ou d'altérer les mentions de propriété figurant sur le Logiciel.
+Article 6 – Redevance
+6.1. En contrepartie de la licence et des Services de Maintenance, le Licencié paie au Concédant la Redevance fixée à l'annexe 1.
+6.2. La première Redevance est facturée à la Date d'Effet. Les Redevances suivantes sont facturées le 1er janvier de chaque année.
+6.3. Les montants sont exprimés hors TVA. Ils sont indexés annuellement selon l'évolution de l'indice des prix à la consommation publié par le SPF Économie. Les factures sont payables dans les trente jours de leur réception.
+Article 7 – Maintenance
+7.1. Pendant toute la durée du Contrat, le Concédant assure la correction des anomalies du Logiciel, l'installation des Mises à Jour et une assistance téléphonique accessible du lundi au vendredi, de 8 h 30 à 17 h 30 (les « Services de Maintenance »).
+7.2. En cas d'Incident Bloquant, le Concédant intervient dans un délai de quatre heures ouvrées à compter de la notification faite par le Licencié. Les autres anomalies sont traitées dans un délai de trois jours ouvrables.
+7.3. Les Services de Maintenance ne couvrent pas les anomalies causées par une utilisation du Logiciel non conforme à la Documentation.
+Article 8 – Garantie et responsabilité
+8.1. Le Concédant garantit que le Logiciel est substantiellement conforme à la Documentation.
+8.2. La responsabilité du Concédant est limitée, toutes causes confondues, au montant de la Redevance payée au cours des douze mois précédant le fait générateur. Le Concédant n'est pas responsable de la perte de données du Licencié, à qui il incombe de procéder à des sauvegardes régulières.
+Article 9 – Durée
+9.1. Le Contrat est conclu pour une durée initiale de trois ans à compter de la Date d'Effet. Il est ensuite reconduit tacitement par périodes d'un an, sauf dénonciation par l'une des Parties notifiée au moins trois mois avant l'échéance.
+9.2. À la fin du Contrat, le Licencié désinstalle le Logiciel et détruit toutes les copies en sa possession.
+Article 10 – Droit applicable et litiges
+10.1. Le Contrat est soumis au droit belge. Tout différend est soumis aux juridictions de l'arrondissement judiciaire de Namur.
+Fait à Namur, le 18 novembre 2024, en deux exemplaires.
+Annexe 1 – Redevances
+| Module | Utilisateurs Autorisés | Redevance annuelle (EUR HTVA) |
+| Production et brassage | 25 | 9.600 |
+| Stocks et traçabilité | 25 | 4.800 |
+| Accises et déclarations douanières | 10 | 2.400 |
+Les montants ci-dessus incluent les Services de Maintenance.

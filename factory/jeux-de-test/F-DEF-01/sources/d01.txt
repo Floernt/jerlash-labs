@@ -1,0 +1,68 @@
+fichier: Contrat de fourniture - Brasserie du Condroz.docx
+---
+CONTRAT DE FOURNITURE DE BOUTEILLES
+
+Entre :
+Brasserie du Condroz SRL, dont le siège est établi rue du Moulin 12 à 4560 Clavier, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0712.345.630, représentée par Madame Claire Dumont, gérante (ci-après « le Client »),
+Et :
+Embouteillages de la Meuse SA, dont le siège est établi quai de la Batte 3 à 4000 Liège, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0845.612.346, représentée par Monsieur Marc Lejeune, administrateur délégué (ci-après « le Fournisseur »),
+(ensemble, les « Parties » et individuellement une « Partie »).
+
+Préambule
+Le Client produit des bières artisanales et souhaite s'approvisionner en bouteilles auprès du Fournisseur. Les Parties ont négocié les termes du présent Contrat au cours des mois de janvier et février 2023.
+
+Article 1 – Définitions
+Dans le présent contrat, les termes suivants ont le sens qui leur est donné ci-dessous :
+« Contrat » désigne la présente convention et ses annexes.
+« Produits » désigne les bouteilles en verre de 33 cl et de 75 cl décrites à l'Annexe 1.
+« Commande » désigne toute demande d'achat de Produits adressée par le Client au Fournisseur conformément à l'article 3.
+« Jour Ouvrable » désigne tout jour autre qu'un samedi, un dimanche ou un jour férié légal en Belgique.
+« Prix » : le prix unitaire des Produits fixé à l'Annexe 2, hors TVA.
+« Date d'Entrée en Vigueur » désigne le 1er mars 2023.
+Informations Confidentielles : toute information de nature technique, commerciale ou financière communiquée par une Partie à l'autre à l'occasion du Contrat.
+« Force Majeure » désigne tout événement visé à l'article 9.
+
+Article 2 – Objet
+2.1 Le Fournisseur s'engage à livrer au Client les Produits commandés, dans les quantités et aux conditions du Contrat.
+2.2 Le Client n'est tenu à aucune exclusivité ; il peut s'approvisionner auprès d'autres fournisseurs.
+
+Article 3 – Commandes et livraison
+3.1 Chaque Commande est passée par écrit, au moins dix Jours Ouvrables avant la date de livraison souhaitée.
+3.2 Le Fournisseur confirme la Commande dans les deux Jours Ouvrables de sa réception. À défaut de confirmation, la Commande est réputée acceptée.
+3.3 Les Produits sont livrés au siège du Client, aux frais du Fournisseur, selon le Calendrier de Livraison convenu entre les Parties.
+
+Article 4 – Prix et paiement
+4.1 Le Prix est ferme pour la première année du Contrat. Il est ensuite indexé chaque année à la date anniversaire de la Date d'entrée en vigueur, selon l'indice santé.
+4.2 Le Fournisseur adresse une facture pour chaque livraison, par courrier électronique, à l'Adresse de Facturation. Les factures sont payables dans les trente jours de leur réception.
+4.3 Le prix du transport est compris dans le Prix.
+4.4 En cas de retard de paiement, les sommes dues produisent de plein droit un intérêt au taux prévu par la loi du 2 août 2002 concernant la lutte contre le retard de paiement dans les transactions commerciales.
+
+Article 5 – Qualité
+5.1 Les Produits sont conformes aux Spécifications Techniques de l'Annexe 1.
+5.2 Le Client signale toute non-conformité apparente dans les cinq Jours Ouvrables de la livraison.
+
+Article 6 – Durée
+6.1 Le Contrat prend effet à la Date d'Entrée en Vigueur pour une durée de trois ans.
+6.2 Il est ensuite reconduit tacitement pour des périodes d'un an, sauf préavis notifié par une Partie au moins six mois avant l'échéance.
+
+Article 7 – Confidentialité
+7.1 Chaque Partie garde confidentielles les Informations Confidentielles de l'autre Partie pendant la durée du Contrat et cinq ans après sa fin.
+7.2 Au sens du présent article, on entend par « Informations Confidentielles » toute information communiquée par écrit et marquée comme confidentielle.
+
+Article 8 – Résiliation
+8.1 Chaque Partie peut résilier le Contrat avec effet immédiat en cas de manquement grave de l'autre Partie non réparé dans les trente jours d'une mise en demeure.
+8.2 La faillite d'une Partie entraîne la résiliation de plein droit du Contrat, sous réserve des dispositions impératives du Code de droit économique.
+
+Article 9 – Force majeure
+9.1 Aucune Partie n'est responsable d'un retard causé par un événement imprévisible et irrésistible indépendant de sa volonté.
+
+Article 10 – Notifications
+10.1 Les notifications sont faites par lettre recommandée aux sièges des Parties. Les factures sont adressées à comptabilite@brasserie-condroz.example (l'« Adresse de Facturation »).
+
+Article 11 – Droit applicable et juridiction
+11.1 Le Contrat est régi par le droit belge.
+11.2 Tout litige relève de la compétence exclusive du Tribunal de l'entreprise de Liège, division Liège.
+
+Fait à Liège, le 15 février 2023, en deux exemplaires, chaque Partie reconnaissant avoir reçu le sien.
+Pour le Client, Claire Dumont, gérante
+Pour le Fournisseur, Marc Lejeune, administrateur délégué

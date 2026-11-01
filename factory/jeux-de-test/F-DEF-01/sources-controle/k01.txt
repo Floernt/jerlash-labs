@@ -1,0 +1,71 @@
+fichier: Contrat de prestation de services informatiques - Nordvalis.docx
+---
+CONTRAT DE PRESTATION DE SERVICES INFORMATIQUES
+
+ENTRE :
+La société anonyme Héliophore, dont le siège est établi à 4020 Liège, quai des Ardennes 112, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0741.552.908, valablement représentée par Madame Claire Vandenhove, administratrice déléguée,
+ci-après « le Client » ;
+ET :
+La société à responsabilité limitée Nordvalis, dont le siège est établi à 4000 Liège, rue Saint-Gilles 58, inscrite à la Banque-Carrefour des Entreprises sous le numéro 0789.314.226, valablement représentée par Monsieur Thomas Delcour, administrateur,
+ci-après dénommée « le Prestataire » ;
+(ensemble, les « Parties » et individuellement une « Partie »).
+PRÉAMBULE
+A. Le Client exploite depuis 2019 un service de réservation de salles de réunion accessible en ligne. La Plateforme, développée en interne, ne répond plus aux besoins de sa clientèle.
+B. Le Prestataire est spécialisé dans le développement d'applications web et dispose des compétences nécessaires à la refonte de la Plateforme.
+C. Après une consultation menée en mars 2024, le Client a retenu l'offre du Prestataire du 14 avril 2024. Les Parties souhaitent fixer par écrit les conditions de leur collaboration.
+IL EST CONVENU CE QUI SUIT :
+Article 1 – Définitions
+1.1. Pour l'application du présent contrat, les termes ci-dessous, lorsqu'ils commencent par une majuscule, ont le sens suivant :
+« Contrat » désigne le présent contrat de prestation de services, en ce compris ses annexes ;
+« Plateforme » : la solution de réservation en ligne exploitée par le Client, en ce compris son application mobile, son interface d'administration et ses bases de données ;
+le terme « Services » vise l'ensemble des prestations de développement, de migration, de formation et d'assistance décrites à l'article 2 ;
+on entend par « Livrable » tout document, développement logiciel ou autre élément remis par le Prestataire au Client dans le cadre des Services ;
+« Jour Ouvrable » désigne tout jour du lundi au vendredi, à l'exception des jours fériés légaux en Belgique ;
+« Date d'Entrée en Vigueur » désigne la date de signature du Contrat par la dernière des Parties ;
+« Prix » : la rémunération forfaitaire de 48.500 EUR hors TVA due par le Client en contrepartie des Services ;
+Informations Confidentielles : toute information de nature technique, commerciale, financière ou stratégique communiquée par une Partie à l'autre à l'occasion du Contrat, quel qu'en soit le support ;
+« Droits de propriété intellectuelle » désigne les droits d'auteur, les droits sur les bases de données, les droits sur les dessins et modèles, les marques et tout autre droit de même nature, enregistré ou non ;
+« Bon de Commande » désigne le document par lequel le Client commande des prestations complémentaires non comprises dans les Services ;
+« Comité de Pilotage » : l'organe composé de deux représentants de chaque Partie, chargé de suivre l'avancement du projet et d'arbitrer les difficultés d'exécution.
+1.2. Les termes définis au singulier ont le même sens lorsqu'ils sont employés au pluriel, et inversement.
+Article 2 – Objet
+2.1. Par le Contrat, le Client confie au Prestataire, qui accepte, la réalisation des Services conformément au Cahier des Charges et à l'offre du 14 avril 2024.
+2.2. Les Services comprennent : (a) l'analyse de l'existant et la rédaction des spécifications fonctionnelles ; (b) le développement de la nouvelle version de la Plateforme ; (c) la migration des données de l'ancienne version vers la nouvelle ; (d) la formation de cinq utilisateurs désignés par le Client ; (e) l'assistance technique pendant trois mois à compter de la mise en production.
+2.3. En cas de contradiction entre le Contrat, le Cahier des Charges et l'offre du Prestataire, le Contrat prévaut, puis le Cahier des Charges.
+2.4. Toute prestation non décrite à l'article 2.2 fait l'objet d'un devis distinct, accepté par écrit par le Client avant tout commencement d'exécution.
+2.5. Les échanges opérationnels entre les Parties transitent exclusivement par le Responsable de Projet de chacune d'elles.
+Article 3 – Exécution des Services
+3.1. Le Prestataire exécute les Services avec la diligence d'un professionnel normalement prudent et raisonnable placé dans les mêmes circonstances. Il s'agit d'une obligation de moyens, sauf pour les délais de livraison visés à l'article 3.4.
+3.2. Chaque Partie désigne une personne de contact chargée du suivi opérationnel du projet (ci-après, le « Responsable de Projet »).
+3.3. Le Responsable de Projet du Client dispose seul du pouvoir de valider les Livrables au nom de celui-ci.
+3.4. Le Prestataire remet au Client, selon le calendrier figurant en annexe 2, chaque document, développement logiciel ou autre élément produit en exécution des Services (ci-après un « Livrable »).
+3.5. Le Client dispose d'un délai de dix Jours Ouvrables à compter de la remise d'un Livrable pour le valider ou formuler des réserves motivées par écrit. À défaut de réaction dans ce délai, le Livrable est réputé validé. Les réserves sont levées par le Prestataire dans un délai de cinq Jours Ouvrables, sans frais supplémentaires pour le Client.
+Article 4 – Obligations du Client
+4.1. Le Client met à la disposition du Prestataire, dans les meilleurs délais, les accès, informations et documents nécessaires à l'exécution des Services, en ce compris les accès aux serveurs hébergeant la Plateforme.
+4.2. Le Client répond à toute demande d'information du Prestataire dans un délai de cinq Jours Ouvrables. Tout retard imputable au Client prolonge de plein droit les délais d'exécution du Prestataire d'une durée équivalente.
+Article 5 – Prix et modalités de paiement
+5.1. En contrepartie des Services, le Client paie au Prestataire une rémunération forfaitaire de 52.000 EUR hors TVA, frais de déplacement inclus (le « Prix »).
+5.2. Le Prix est facturé en trois tranches : 30 % à la Date d'Entrée en Vigueur, 40 % à la validation du Livrable relatif au développement de la Plateforme et 30 % à la mise en production.
+5.3. Les factures sont payables dans les trente jours de leur date d'émission. Toute somme impayée à l'échéance porte de plein droit intérêt au taux prévu par la loi du 2 août 2002 concernant la lutte contre le retard de paiement dans les transactions commerciales.
+5.4. Le Prix ne peut être révisé en cours d'exécution, quelle que soit l'évolution du prix du marché des prestations informatiques.
+Article 6 – Propriété intellectuelle
+6.1. Les Droits de Propriété Intellectuelle relatifs aux Livrables sont cédés au Client au fur et à mesure de leur paiement, pour toute la durée de protection et pour le monde entier.
+6.2. Le Prestataire conserve les Droits de propriété intellectuelle sur les outils, bibliothèques et composants génériques qu'il a développés indépendamment des Services. Il concède au Client une licence non exclusive et gratuite d'utilisation de ces composants, limitée aux besoins de l'exploitation de la Plateforme.
+6.3. Le Prestataire garantit le Client contre toute action de tiers fondée sur une atteinte à leurs droits du fait de l'utilisation des Livrables.
+Article 7 – Garantie
+7.1. Pendant la Période de Garantie, le Prestataire corrige gratuitement toute anomalie reproductible affectant les Livrables et signalée par écrit par le Client.
+7.2. La Période de Garantie ne couvre pas les anomalies résultant d'une modification de la Plateforme effectuée par le Client ou par un tiers sans l'accord du Prestataire.
+Article 8 – Confidentialité et données à caractère personnel
+8.1. Chaque Partie s'engage à ne pas divulguer les Informations Confidentielles de l'autre Partie et à ne les utiliser qu'aux fins de l'exécution du Contrat. Cette obligation survit à la fin du Contrat pendant une durée de trois ans.
+8.2. Dans la mesure où l'exécution des Services implique un traitement de données à caractère personnel pour le compte du Client, le Prestataire agit en qualité de sous-traitant au sens du Règlement (UE) 2016/679 du 27 avril 2016. Les Parties concluent à cet effet la convention prévue à l'article 28 du RGPD, qui figure en annexe 3.
+Article 9 – Durée et résiliation
+9.1. Le Contrat entre en vigueur à la Date d'entrée en vigueur et prend fin à l'expiration de la période d'assistance visée à l'article 2.2 (e).
+9.2. Chaque Partie peut résilier le Contrat de plein droit, par lettre recommandée, si l'autre Partie commet un manquement grave et n'y remédie pas dans les quinze Jours Ouvrables d'une mise en demeure.
+9.3. En cas de résiliation anticipée, le Client paie les Services exécutés jusqu'à la date de résiliation, au prorata du Prix.
+Article 10 – Responsabilité
+10.1. Sauf dol ou faute lourde, la responsabilité du Prestataire est limitée au montant du Prix effectivement payé. Aucune Partie n'est responsable des dommages indirects, tels que la perte de clientèle ou de chiffre d'affaires.
+Article 11 – Droit applicable et juridiction
+11.1. Le Contrat est régi par le droit belge, en ce compris le Livre 5 du Code civil.
+11.2. Tout litige relatif à sa validité, son interprétation ou son exécution relève de la compétence exclusive du Tribunal de l'entreprise de Liège, division Liège.
+Fait à Liège, le 3 juin 2024, en deux exemplaires originaux, chaque Partie reconnaissant avoir reçu le sien.
+Pour le Client, Claire Vandenhove – Pour le Prestataire, Thomas Delcour

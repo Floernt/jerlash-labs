@@ -1,0 +1,87 @@
+{
+  "Contrat de prestation de services informatiques - Nordvalis.docx": {
+    "definis": ["Client", "Prestataire", "Parties", "Contrat", "Plateforme", "Services", "Livrable", "Jour Ouvrable", "Date d'Entrée en Vigueur", "Prix", "Informations Confidentielles", "Droits de propriété intellectuelle", "Bon de Commande", "Comité de Pilotage", "Responsable de Projet"],
+    "doublons": ["Prix", "Livrable"],
+    "divergents": ["Prix"],
+    "inutilises": ["Bon de Commande", "Comité de Pilotage"],
+    "non_definis": ["Cahier des Charges", "Période de Garantie"],
+    "variantes": [
+      {"terme": "Droits de propriété intellectuelle", "forme": "Droits de Propriété Intellectuelle"},
+      {"terme": "Date d'Entrée en Vigueur", "forme": "Date d'entrée en vigueur"}
+    ],
+    "avant_definition": ["Responsable de Projet"],
+    "notes": [
+      "Doublon divergent : « Prix » est défini à l'article 1.1 (48.500 EUR hors TVA) puis redéfini à l'article 5.1 (52.000 EUR hors TVA, frais de déplacement inclus).",
+      "Doublon non divergent : « Livrable » est défini à l'article 1.1 (on entend par) puis redéfini à l'article 3.4 (ci-après un « Livrable ») dans les mêmes termes en substance.",
+      "Inutilisé : « Bon de Commande » (article 1.1) n'est employé nulle part ailleurs ; l'article 2.4 parle d'un devis distinct.",
+      "Inutilisé : « Comité de Pilotage » (article 1.1) n'est employé nulle part ailleurs.",
+      "Non défini : « Cahier des Charges » employé aux articles 2.1 et 2.3 sans aucune définition.",
+      "Non défini : « Période de Garantie » employé aux articles 7.1 et 7.2 sans aucune définition.",
+      "Variante : article 6.1 « Droits de Propriété Intellectuelle » (majuscules) alors que le terme défini est « Droits de propriété intellectuelle » (employé correctement à l'article 6.2).",
+      "Variante : article 9.1 « Date d'entrée en vigueur » (minuscules) alors que le terme défini est « Date d'Entrée en Vigueur » (employé correctement à l'article 5.2).",
+      "Avant définition : « Responsable de Projet » est employé à l'article 2.5 alors qu'il n'est défini en cours de texte qu'à l'article 3.2.",
+      "Pas un défaut : « Plateforme » est employé au préambule (A et B) avant sa définition à l'article 1 Définitions, ce qui est l'usage ; « prix du marché » (5.4) est un emploi courant en minuscules."
+    ]
+  },
+  "Convention de cession d'actions - Atelier Morval SRL.docx": {
+    "definis": ["Cédant", "Cessionnaire", "Parties", "Société", "Convention", "Date de Closing", "Dommage", "Jour Ouvrable", "Actions Cédées", "Prix de Cession", "Garanties"],
+    "doublons": ["Date de Closing"],
+    "divergents": ["Date de Closing"],
+    "inutilises": ["Jour Ouvrable"],
+    "non_definis": ["Comptes de Référence"],
+    "variantes": [
+      {"terme": "Prix de Cession", "forme": "Prix de cession"}
+    ],
+    "avant_definition": ["Actions Cédées", "Garanties"],
+    "notes": [
+      "Doublon divergent : « Date de Closing » est définie à l'article 1 (au plus tard le 30 septembre 2024) puis redéfinie à l'article 4.1 (le 15 octobre 2024 ou toute autre date convenue par écrit).",
+      "Inutilisé : « Jour Ouvrable » (article 1) n'est employé nulle part ailleurs ; les délais de la convention sont exprimés en mois et années.",
+      "Non défini : « Comptes de Référence » employé aux articles 3.4 et 6.1 (b) sans aucune définition.",
+      "Variante : article 3.3 « Prix de cession » (c minuscule) au lieu de « Prix de Cession ».",
+      "Avant définition : « Actions Cédées », défini en cours de texte à l'article 2.1, est employé dès le préambule (C) et dans la définition de « Date de Closing » à l'article 1.",
+      "Avant définition : « Garanties », défini en cours de texte à l'article 6.1, est employé dès l'article 1 dans la définition de « Dommage ».",
+      "Pas un défaut : « Société » est défini au préambule (A) et employé ensuite ; « Office national de sécurité sociale », « Banque Delmotte » et « Code des sociétés et des associations » sont des noms propres."
+    ]
+  },
+  "Contrat de licence de logiciel - Quartzline.docx": {
+    "definis": ["Concédant", "Licencié", "Parties", "Contrat", "Logiciel", "Site", "Date d'Effet", "Documentation", "Mise à Jour", "Utilisateurs Autorisés", "Redevance", "Territoire", "Services de Maintenance"],
+    "doublons": ["Utilisateurs Autorisés"],
+    "divergents": ["Utilisateurs Autorisés"],
+    "inutilises": ["Territoire"],
+    "non_definis": ["Période d'Essai", "Incident Bloquant"],
+    "variantes": [
+      {"terme": "Mise à Jour", "forme": "Mises à jour"},
+      {"terme": "Date d'Effet", "forme": "Date de Prise d'Effet"}
+    ],
+    "avant_definition": ["Services de Maintenance"],
+    "notes": [
+      "Doublon divergent : « Utilisateurs Autorisés » est défini dans le tableau de l'article 1.1 (personnel salarié, vingt-cinq personnes) puis redéfini à l'article 3.2 (employés, consultants et personnel des filiales, trente personnes simultanément connectées).",
+      "Inutilisé : « Territoire » (tableau de l'article 1.1) n'est employé nulle part ailleurs.",
+      "Non défini : « Période d'Essai » employé à l'article 4.4 sans aucune définition.",
+      "Non défini : « Incident Bloquant » employé à l'article 7.2 sans aucune définition.",
+      "Variante : article 4.2 « Mises à jour » (j minuscule) au lieu de « Mise à Jour » ; le pluriel seul ne serait pas une variante (cf. « Mises à Jour » aux articles 4.3 et 7.1).",
+      "Variante : article 4.4 « Date de Prise d'Effet » au lieu de « Date d'Effet » (différence de mot).",
+      "Avant définition : « Services de Maintenance », défini en cours de texte à l'article 7.1, est employé dès les articles 4.3 et 6.1.",
+      "Pas un défaut : le tableau de l'annexe 1 emploie « Utilisateurs Autorisés » et « Redevance » (emplois valides) ; « mise à jour corrective » en minuscules dans la définition de « Logiciel » est un emploi courant ; les guillemets droits et courbes de la comparution introduisent bien « Concédant » et « Licencié »."
+    ]
+  },
+  "Convention de confidentialité - Projet Héron.docx": {
+    "definis": ["Mosane", "Ardentis", "Parties", "Projet", "Convention", "Informations Confidentielles", "Partie Divulgatrice", "Partie Réceptrice", "Société Affiliée", "Date de Signature", "Représentants"],
+    "doublons": ["Informations Confidentielles"],
+    "divergents": [],
+    "inutilises": ["Société Affiliée"],
+    "non_definis": ["Salle de Données"],
+    "variantes": [
+      {"terme": "Partie Réceptrice", "forme": "Partie réceptrice"}
+    ],
+    "avant_definition": ["Représentants"],
+    "notes": [
+      "Doublon non divergent : « Informations Confidentielles » est défini à l'article 1 puis redéfini à l'article 2.1 (ci-après les « Informations Confidentielles ») avec le même périmètre en substance (toute information communiquée dans le cadre du Projet, quel qu'en soit le support).",
+      "Inutilisé : « Société Affiliée » (article 1) n'est employé nulle part ailleurs.",
+      "Non défini : « Salle de Données » employé à l'article 5.1 (deux fois) sans aucune définition.",
+      "Variante : article 2.4 « Partie réceptrice » (r minuscule) au lieu de « Partie Réceptrice ».",
+      "Avant définition : « Représentants », défini en cours de texte à l'article 3.2, est employé dès les articles 2.3 et 3.1.",
+      "Pas un défaut : « Mosane » et « Ardentis » sont des dénominations abrégées définies par « ci-après » dans la comparution ; « strictement confidentiel » entre guillemets (5.2) n'est pas une définition ; « (RGPD) » et « Autorité des services et marchés financiers » ne sont pas des termes définis."
+    ]
+  }
+}

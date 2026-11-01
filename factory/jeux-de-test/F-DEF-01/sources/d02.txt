@@ -1,0 +1,60 @@
+fichier: Convention de cession de parts - Ardenne Boissons.docx
+---
+CONVENTION DE CESSION DE PARTS
+
+Entre :
+Monsieur Paul Gérard, domicilié rue des Prés 4 à 6900 Marche-en-Famenne (ci-après le « Cédant »),
+Et :
+Brasserie du Condroz SRL, dont le siège est établi rue du Moulin 12 à 4560 Clavier, numéro d'entreprise 0712.345.630, représentée par Madame Claire Dumont, gérante (ci-après dénommée le « Cessionnaire »),
+En présence de :
+Ardenne Boissons SRL, dont le siège est établi avenue de la Gare 7 à 6900 Marche-en-Famenne, numéro d'entreprise 0598.700.133 (ci-après la « Société »).
+
+Exposé préalable
+A. Le Cédant détient 180 parts de la Société, soit l'intégralité de ses parts émises.
+B. Le Cessionnaire souhaite acquérir les Parts Cédées aux conditions de la présente Convention.
+C. Le Cessionnaire a pu consulter les informations mises à sa disposition dans la Salle de Données du 2 au 20 mai 2025.
+
+Il est convenu ce qui suit.
+
+Article 1 – Objet
+1.1 Le Cédant cède au Cessionnaire, qui accepte, les Parts Cédées, libres de toute sûreté.
+1.2 Les définitions figurent à l'Annexe A ; elles s'appliquent à l'ensemble de la Convention.
+
+Article 2 – Prix
+2.1 Les Parts Cédées sont cédées moyennant un prix global de 540.000 euros (le « Prix de Cession »).
+2.2 Le Prix de Cession est payé à la Date de Closing par virement sur le compte du Cédant.
+2.3 Le Prix de Cession pourra être ajusté conformément à l'article 3, en fonction des Comptes de Référence.
+
+Article 3 – Ajustement
+3.1 Si la Trésorerie Nette à la Date de Closing est inférieure à 40.000 euros, le prix de cession est réduit à due concurrence.
+3.2 Le Cessionnaire notifie le montant de l'ajustement dans les soixante jours de la Date de Closing.
+
+Article 4 – Closing
+4.1 Le transfert des Parts Cédées a lieu le 30 juin 2025 ou à toute autre date convenue par écrit (la « Date de Closing »).
+4.2 À la Date de Closing, le Cédant remet au Cessionnaire le registre des parts de la Société mis à jour et la démission de l'Administrateur Sortant.
+
+Article 5 – Garanties
+5.1 Le Cédant déclare et garantit au Cessionnaire que les Déclarations sont exactes à la date de signature et à la Date de Closing.
+5.2 La responsabilité du Cédant au titre des Garanties est limitée à 30 % du Prix de Cession.
+5.3 Aucune réclamation ne peut être introduite au-delà de dix-huit mois après la Date de closing.
+
+Article 6 – Non-concurrence
+6.1 Pendant trois ans à compter de la Date de Closing, le Cédant s'interdit d'exercer une Activité Concurrente en Belgique et au Grand-Duché de Luxembourg.
+
+Article 7 – Dispositions diverses
+7.1 La présente convention est régie par le droit belge et notamment par le Code des sociétés et des associations.
+7.2 Tout différend est soumis au Tribunal de l'entreprise de Liège, division Marche-en-Famenne.
+
+Fait à Marche-en-Famenne, le 12 juin 2025, en trois exemplaires.
+
+Annexe A – Définitions
+| Terme | Définition |
+| Activité Concurrente | toute activité de production ou de distribution de boissons non alcoolisées. |
+| Comptes de Référence | les comptes annuels de la Société arrêtés au 31 décembre 2024. |
+| Convention | la présente convention de cession et ses annexes. |
+| Date de Closing | le 30 juin 2025. |
+| Déclarations | les déclarations du Cédant figurant à l'Annexe B. |
+| Garanties | les garanties données par le Cédant à l'article 5 et à l'Annexe B. |
+| Parts Cédées | les 180 parts de la Société détenues par le Cédant. |
+| Trésorerie Nette | les disponibilités de la Société diminuées de ses dettes financières. |
+| Fonds de Roulement | l'actif circulant de la Société diminué de ses dettes à un an au plus. |

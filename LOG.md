@@ -10,6 +10,27 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-01 - P02 Lite Glossaire des définitions, F-DEF-01
+Fait :
+- Jeu F-DEF-01 v1.0, en deux parties :
+  - jeu de développement : 3 contrats, 35 termes définis, défauts annotés ;
+  - jeu de contrôle : 4 contrats, 50 termes définis, 30 défauts, rédigé par un agent sans accès au code ;
+  - générateur .docx (insécables dans les guillemets, termes en gras dans un fragment séparé, tableaux), évaluation par catégorie, planchers.
+- Outil outils/glossaire-definitions 0.1.0, rapport seul, sans IA :
+  - glossaire et points à examiner (définition répétée ou divergente, terme jamais employé, majuscules sans définition, graphie différente, emploi avant définition en cours de texte) ;
+  - rapport .docx (ouvert dans Word : 92 paragraphes, 1 tableau), .md, .json ; fenêtre et ligne de commande ;
+  - 45 tests.
+- Relecture indépendante : aucun défaut bloquant, 9 à corriger et 9 mineurs, tous corrigés et couverts par un test (verifications/2026-11-01-revue.md). Temps du pire cas mesuré : 45,9 s → 5,6 s.
+- Fiche du site, nouveauté, archive et empreinte ; scripts/empaqueter.py. scripts/verifier.py : 19/19.
+Mesure, jeu de contrôle : termes définis 48/50 sans faux terme ; répétitions, jamais employés, emplois avant définition : tous trouvés sans fausse alerte ; sans définition 5/6 (3 fausses alertes) ; graphies 5/6 ; 2 répétitions signalées divergentes à tort.
+Neutralité du contrôle, consignée dans resultats/2026-11-01-P02-v0.1.0.md : la première exécution a affiché les totaux du contrôle de la version brute ; le réglage suivant a porté sur le seul jeu de développement, et les corrections de la relecture n'ont pas changé les totaux du contrôle.
+Décisions : ADR-016 (P02 Lite, rapport seul, sans modifier le contrat), Proposée.
+Points ouverts (Florian) :
+- valider ADR-016 ; tester la fenêtre (Glossaire.pyw) sur un de ses modèles ;
+- le dossier par défaut Documents peut être synchronisé par OneDrive : les rapports de tous les outils y seraient copiés ;
+- une instance cachée de Word (lancée par le test d'ouverture du rapport) est restée ouverte : la fermer depuis le Gestionnaire des tâches si elle l'est encore.
+Prochaine étape : selon ADR-015, mode IA de P01 ; sinon P03 (conditions particulières et générales) en version rapport, ou P07.
+
 ## 2026-10-31 - P01 Inventaire d'un dossier (mode local), F-DOSSIER-01, matrice des fournisseurs
 Fait :
 - Matrice des fournisseurs d'IA (ADR-010, point 4) dans docs/fournisseurs-ia.md :

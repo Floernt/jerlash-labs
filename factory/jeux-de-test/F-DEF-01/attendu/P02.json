@@ -1,0 +1,56 @@
+{
+ "Contrat de fourniture - Brasserie du Condroz.docx": {
+  "definis": ["Client", "Fournisseur", "Parties", "Contrat", "Produits", "Commande", "Jour Ouvrable", "Prix",
+              "Date d'Entrée en Vigueur", "Informations Confidentielles", "Force Majeure", "Adresse de Facturation"],
+  "doublons": ["Informations Confidentielles"],
+  "divergents": ["Informations Confidentielles"],
+  "inutilises": ["Force Majeure"],
+  "non_definis": ["Calendrier de Livraison", "Spécifications Techniques"],
+  "variantes": [{"terme": "Date d'Entrée en Vigueur", "forme": "Date d'entrée en vigueur"}],
+  "avant_definition": ["Adresse de Facturation"],
+  "notes": [
+   "Informations Confidentielles : définie à l'article 1 (toute information) puis à l'article 7.2 (information écrite et marquée).",
+   "Force Majeure : définie, jamais employée (le titre de l'article 9 ne compte pas).",
+   "Calendrier de Livraison (3.3) et Spécifications Techniques (5.1) : majuscules sans définition.",
+   "Date d'entrée en vigueur (4.1) : graphie différente du terme défini.",
+   "Adresse de Facturation : employée en 4.2, définie en passant en 10.1.",
+   "Pièges : Contrat employé dans le préambule (défini à l'article Définitions, pas un défaut) ; le prix du transport (sens courant) ; Code de droit économique, Tribunal de l'entreprise, Banque-Carrefour des Entreprises, Annexe 1."
+  ]
+ },
+ "Convention de cession de parts - Ardenne Boissons.docx": {
+  "definis": ["Cédant", "Cessionnaire", "Société", "Prix de Cession", "Date de Closing", "Activité Concurrente",
+              "Comptes de Référence", "Convention", "Déclarations", "Garanties", "Parts Cédées", "Trésorerie Nette",
+              "Fonds de Roulement"],
+  "doublons": ["Date de Closing"],
+  "divergents": ["Date de Closing"],
+  "inutilises": ["Fonds de Roulement"],
+  "non_definis": ["Salle de Données", "Administrateur Sortant"],
+  "variantes": [{"terme": "Date de Closing", "forme": "Date de closing"}],
+  "avant_definition": [],
+  "notes": [
+   "Date de Closing : définie en 4.1 (30 juin 2025 ou autre date convenue) et dans l'annexe A (30 juin 2025).",
+   "Fonds de Roulement : défini dans l'annexe A, jamais employé.",
+   "Salle de Données (C) et Administrateur Sortant (4.2) : majuscules sans définition.",
+   "Date de closing (5.3) : graphie différente.",
+   "Pièges : définitions dans un tableau en fin de contrat (les emplois antérieurs ne sont pas des défauts) ; prix de cession en minuscules (3.1, sens courant, non annoté) ; Grand-Duché de Luxembourg ; Code des sociétés et des associations."
+  ]
+ },
+ "Convention de confidentialite - projet Hesbaye.docx": {
+  "definis": ["Partie Divulgatrice", "Partie Réceptrice", "Projet", "Informations Confidentielles", "Données Personnelles",
+              "Représentants", "Durée", "Convention", "Affilié", "Période de Survie"],
+  "doublons": ["Durée"],
+  "divergents": ["Durée"],
+  "inutilises": ["Affilié"],
+  "non_definis": ["Accord de Sous-traitance", "Jours Ouvrables"],
+  "variantes": [{"terme": "Informations Confidentielles", "forme": "Informations confidentielles"}],
+  "avant_definition": ["Période de Survie"],
+  "notes": [
+   "Durée : cinq ans à compter de la signature (1.1 d) puis trois ans à compter de la première communication (4.2).",
+   "Affilié : défini, jamais employé.",
+   "Accord de Sous-traitance (2.4) et Jours Ouvrables (5.1) : majuscules sans définition.",
+   "Informations confidentielles (5.1) : graphie différente.",
+   "Période de Survie : employée en 2.1, définie en passant en 4.1.",
+   "Pièges : guillemets droits et courbes dans la comparution ; Information Confidentielle au singulier (même terme) ; ses représentants en minuscules ; Règlement (UE) 2016/679."
+  ]
+ }
+}

@@ -1,0 +1,43 @@
+fichier: Convention de confidentialite - projet Hesbaye.docx
+---
+CONVENTION DE CONFIDENTIALITÉ
+
+Entre :
+Hesbaye Logistique SA, dont le siège est établi rue de la Station 21 à 4280 Hannut, numéro d'entreprise 0476.218.552, représentée par Monsieur Luc Fraiture, administrateur (ci-après "la Partie Divulgatrice"),
+Et :
+Vervex Consulting SRL, dont le siège est établi place Verte 9 à 4800 Verviers, numéro d'entreprise 0634.902.117, représentée par Madame Inès Wauters, gérante (ci-après “la Partie Réceptrice”),
+
+Considérant que la Partie Divulgatrice envisage de confier à la Partie Réceptrice une mission d'audit de ses entrepôts (le "Projet") et que, dans ce cadre, elle lui communiquera des informations confidentielles ;
+
+Il est convenu ce qui suit :
+
+Article 1 – Définitions
+1.1 Pour l'application de la présente convention :
+a) le terme « Informations Confidentielles » vise toute information, quel qu'en soit le support, communiquée par la Partie Divulgatrice à la Partie Réceptrice dans le cadre du Projet, y compris les Données Personnelles ;
+b) on entend par « Données Personnelles » les données à caractère personnel au sens du Règlement (UE) 2016/679 ;
+c) « Représentants » : les dirigeants, employés et conseils de la Partie Réceptrice qui ont besoin de connaître les Informations Confidentielles pour le Projet ;
+d) « Durée » signifie la période de cinq ans à compter de la signature de la présente convention ;
+e) « Convention » désigne la présente convention ;
+f) « Affilié » désigne toute société qui contrôle une partie, est contrôlée par elle ou est placée sous le même contrôle, au sens de l'article 1:14 du Code des sociétés et des associations.
+
+Article 2 – Obligations de la Partie Réceptrice
+2.1 La Partie Réceptrice garde les Informations Confidentielles strictement secrètes et ne les utilise que pour le Projet, pendant la Durée et la Période de Survie.
+2.2 Elle ne les communique qu'à ses Représentants, après les avoir informés de leur caractère confidentiel. Elle répond du respect de la Convention par ses représentants.
+2.3 Elle protège chaque Information Confidentielle avec le même soin que ses propres informations de même nature, et au minimum avec un soin raisonnable.
+2.4 Les Données Personnelles sont traitées conformément à l'Accord de Sous-traitance conclu entre les parties.
+
+Article 3 – Exceptions
+3.1 Les obligations de l'article 2 ne s'appliquent pas aux informations qui étaient dans le domaine public au moment de leur communication.
+3.2 Elles ne s'appliquent pas davantage aux informations dont la communication est imposée par la loi ou par une décision de justice, à condition que la Partie Réceptrice en avertisse au préalable la Partie Divulgatrice.
+
+Article 4 – Durée
+4.1 La Convention est conclue pour la Durée. Les obligations de l'article 2 survivent pendant deux ans à son expiration (la « Période de Survie »).
+4.2 Pour l'application du présent article, la « Durée » s'entend de la période de trois ans à compter de la première communication d'Informations Confidentielles.
+
+Article 5 – Restitution
+5.1 À la fin de la Convention ou à première demande, la Partie Réceptrice restitue ou détruit les Informations confidentielles et en confirme la destruction par écrit dans les quinze Jours Ouvrables.
+
+Article 6 – Droit applicable
+6.1 La Convention est régie par le droit belge. Tout litige relève des juridictions de l'arrondissement judiciaire de Liège.
+
+Fait à Hannut, le 3 septembre 2025, en deux exemplaires.
