@@ -95,11 +95,4 @@ removePathAccents = true
     name = "À propos"
     pageRef = "/a-propos"
     weight = 10
-  [[menus.pied]]
-    name = "Mentions légales"
-    pageRef = "/mentions-legales"
-    weight = 20
-  [[menus.pied]]
-    name = "Confidentialité"
-    pageRef = "/confidentialite"
-    weight = 30
+  # Mentions légales et confidentialité : en brouillon jusqu'à ce que leurs marqueurs soient levés (BACKLOG)

@@ -1,6 +1,6 @@
 # jerlash.labs
 
-Dépôt du site jerlash.labs (anciennement iavocat.be) : articles sur l'intelligence artificielle dans la pratique d'un cabinet d'avocats et, ensuite, les outils construits avec l'IA, avec leur code, leurs coûts et leurs limites (ADR-022).
+Dépôt du site jerlash.labs : articles sur l'intelligence artificielle dans la pratique d'un cabinet d'avocats et, ensuite, les outils construits avec l'IA, avec leur code, leurs coûts et leurs limites (ADR-022).
 
 Publié : le site Hugo de `site/` (accueil, blog, à propos, mentions légales, confidentialité). Les outils (`outils/`) et les autres rubriques restent en brouillon ; voir `BACKLOG.md` et `CHANGELOG.md`.
 

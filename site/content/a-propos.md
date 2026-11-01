@@ -47,7 +47,3 @@ Les réflexions de fond sur le droit, la technique et l'intelligence artificiell
 - Les textes du site sont sous licence Creative Commons Attribution 4.0 ; le code des outils sera publié sous licence MIT.
 - Chaque outil publié décrira le trajet des données, les tests réalisés et les limites connues.
 - Rien n'est payant et rien n'est vendu.
-
-## Contact
-
-Pour une remarque sur un outil ou un guide, un problème rencontré ou une suggestion, vous pouvez m'écrire à [À COMPLÉTER : adresse électronique de contact].

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Mentions légales"
 description: "Éditeur, hébergeur, licences et conditions d'utilisation du site jerlash.labs."
 ---

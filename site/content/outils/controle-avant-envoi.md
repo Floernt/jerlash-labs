@@ -48,7 +48,7 @@ Vous renvoyez au confrère la version révisée d'un contrat de prestation. Le f
 
 - Reste sur votre ordinateur : le document, la liste de termes, le rapport.
 - Est envoyé à un fournisseur d'IA : rien. L'outil n'utilise pas d'IA.
-- Est envoyé à iavocat.be : rien.
+- Est envoyé à jerlash.labs : rien.
 
 Le code de l'outil n'importe aucun module capable de communiquer sur le réseau, et un test automatique le vérifie à chaque modification. Le rapport contient des extraits du document. Il est enregistré par défaut dans `Documents\Controle avant envoi`, et non à côté du document, pour éviter de le joindre par erreur.
 

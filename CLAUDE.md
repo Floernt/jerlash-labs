@@ -1,4 +1,4 @@
-# CLAUDE.md - jerlash.labs (anciennement iavocat.be)
+# CLAUDE.md - jerlash.labs
 
 Ce fichier est lu par Claude Code au début de chaque session. Il donne le contexte du projet et les règles de travail. Le détail du projet se trouve dans `docs/cahier-des-charges.md`.
 
@@ -6,7 +6,7 @@ Ce fichier est lu par Claude Code au début de chaque session. Il donne le conte
 
 Depuis le 2026-11-01 (ADR-022) : le projet s'appelle jerlash.labs. Priorité : livrer plutôt que construire. Un seul chantier à la fois, celui de la section « Maintenant » de `BACKLOG.md` ; tout le reste attend au backlog. Ce qui est livré entre dans `CHANGELOG.md`. Le site publié se limite à l'accueil, au blog, à la page À propos et aux pages légales ; les outils et les autres rubriques sont en brouillon (`draft: true`).
 
-Historique, ci-dessous : iavocat.be est le site de Florian Ernotte, avocat (Avroy Avocats). Il publie deux choses :
+À terme, jerlash.labs est le site de Florian Ernotte, avocat (Avroy Avocats). Il publie deux choses :
 
 1. Des outils pour avocats construits avec l'IA, utilisables en local, sur lesquels l'avocat branche sa propre clé API (principe BYOK, "bring your own key").
 2. Des guides techniques et pratiques : comment obtenir et sécuriser une clé API, comment fonctionne la facturation, ce que devient une donnée envoyée à un fournisseur, comment installer et utiliser un outil.
@@ -34,7 +34,7 @@ Le site est fonctionnel et opérationnel. Il ne contient pas de réflexion philo
 1. Ne rien inventer. Si une information manque ou peut avoir changé (nom de modèle, prix d'une API, paramètre d'API, règle déontologique, obligation légale), écrire `[À VÉRIFIER]` et le signaler dans la réponse plutôt que de deviner.
 2. Avant d'écrire du code qui appelle une API d'IA, consulter la documentation officielle à jour du fournisseur. Les noms de modèles et les en-têtes changent : ils vont dans un fichier de configuration, jamais en dur dans plusieurs fichiers.
 3. Aucune clé API, aucun secret, aucune donnée de client ou de dossier dans le dépôt. Les fichiers `.env` sont ignorés par git. En cas de doute sur un fichier, demander avant de le committer.
-4. Aucun outil n'envoie de donnée vers un serveur contrôlé par iavocat.be. Chaque outil intègre une connexion à une API d'IA en BYOK (ADR-019), par le composant commun `factory/composants/connecteur-ia` (ADR-020), jamais par un appel écrit dans l'outil. Les seuls flux sortants autorisés vont de la machine de l'utilisateur vers le fournisseur d'IA qu'il a choisi.
+4. Aucun outil n'envoie de donnée vers un serveur contrôlé par jerlash.labs. Chaque outil intègre une connexion à une API d'IA en BYOK (ADR-019), par le composant commun `factory/composants/connecteur-ia` (ADR-020), jamais par un appel écrit dans l'outil. Les seuls flux sortants autorisés vont de la machine de l'utilisateur vers le fournisseur d'IA qu'il a choisi.
 5. Pas de traceur tiers, pas de cookie non essentiel, pas de police ou de script chargé depuis un CDN sans décision consignée dans `docs/decisions.md`.
 6. Toute décision d'architecture ou de structure est consignée dans `docs/decisions.md` (nouvelle entrée ADR), avec le statut "Proposée" tant que Florian ne l'a pas validée.
 7. À la fin de chaque session, ajouter une entrée dans `LOG.md` (commande `/cloture-session`).
@@ -67,7 +67,7 @@ Règles :
   projets/                  fiches projet
   factory/                  pipeline, registre, standards, composants, jeux de test, mémoire
   contenus/                 textes sources à intégrer au site (rubriques éditoriales, ADR-012)
-  site/                     code source du site iavocat.be (Hugo)
+  site/                     code source du site jerlash.labs (Hugo)
   outils/<slug>/            un dossier autonome par outil
   scripts/                  vérification, empaquetage, détection de secrets
   .github/workflows/        CI (verifier.yml) et publication GitHub Pages (publier.yml)

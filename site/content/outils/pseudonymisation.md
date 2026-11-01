@@ -50,7 +50,7 @@ Si vous connaissez les noms des parties, donnez-les à l'outil avant de lancer l
 
 - Reste sur votre ordinateur : le texte d'origine, le texte pseudonymisé, la table de correspondance, la réponse rétablie.
 - Est envoyé à un fournisseur d'IA : rien par l'outil. C'est vous qui copiez le texte pseudonymisé vers l'IA de votre choix.
-- Est envoyé à iavocat.be : rien.
+- Est envoyé à jerlash.labs : rien.
 
 Le code de l'outil n'importe aucun module capable de communiquer sur le réseau. Un test automatique le vérifie à chaque modification, et un autre exécute le parcours complet avec les fonctions réseau neutralisées.
 

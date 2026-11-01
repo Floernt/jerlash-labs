@@ -61,7 +61,7 @@ En quelques secondes, le registre identifie le contrat principal, les versions q
 
 - Reste sur votre ordinateur : les pièces, qui ne sont jamais modifiées, le registre, et la table qui relie chaque marqueur au nom d'origine.
 - Est envoyé au fournisseur d'IA que vous avez choisi, avec votre clé : un seul texte pour tout le dossier. Il contient, pour chaque pièce lisible, l'intitulé, les quinze premières et les quinze dernières lignes, et les en-têtes des courriels. Les noms de fichiers sont remplacés par des numéros. Noms, sociétés, adresses et identifiants sont remplacés par des marqueurs sur votre ordinateur avant l'envoi.
-- Est envoyé à iavocat.be : rien.
+- Est envoyé à jerlash.labs : rien.
 
 Avant l'envoi, l'outil affiche le texte exact, le fournisseur, le lieu de traitement et la conservation qu'il déclare, et le coût estimé. Vous pouvez corriger le texte ; rien ne part sans votre accord. L'outil ne vérifie pas les déclarations du fournisseur.
 

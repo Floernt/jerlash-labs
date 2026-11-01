@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Confidentialité"
 description: "Les données traitées lors de la visite de jerlash.labs."
 ---

@@ -8,4 +8,4 @@ Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessi
 
 ## Historique antérieur (rien de publié)
 
-- 2026-10-31 au 2026-11-01 : cadrage d'iavocat.be, Factory, cinq outils en version d'essai (P01, P02, P03, P05, P09), connecteur IA, bibliothèque de références. Aucun n'a été publié ; voir `LOG.md` et `BACKLOG.md`.
+- 2026-10-31 au 2026-11-01 : cadrage du projet, Factory, cinq outils en version d'essai (P01, P02, P03, P05, P09), connecteur IA, bibliothèque de références. Aucun n'a été publié ; voir `LOG.md` et `BACKLOG.md`.

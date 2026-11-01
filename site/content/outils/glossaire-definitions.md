@@ -53,7 +53,7 @@ Vous reprenez un contrat de prestation négocié en cinq tours. Avant de l'envoy
 
 - Reste sur votre ordinateur : le contrat, qui n'est jamais modifié, et le rapport.
 - Est envoyé à un fournisseur d'IA : rien. Cette version n'utilise pas d'IA.
-- Est envoyé à iavocat.be : rien.
+- Est envoyé à jerlash.labs : rien.
 
 Le code de l'outil n'importe aucun module capable de communiquer sur le réseau. Un test automatique le vérifie, et un autre exécute l'analyse complète avec les fonctions réseau neutralisées. Le rapport est enregistré dans `Documents\Glossaire des definitions`.
 

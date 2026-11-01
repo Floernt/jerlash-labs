@@ -8,7 +8,8 @@ Règle depuis le 2026-11-01 : livrer plutôt que construire. Un seul chantier da
 - [x] Rubrique Blog alimentée par `scripts/importer_articles.py` depuis `../articles` (articles « à publier »)
 - [x] Sections outils, guides, automatiser, nouveautés et précautions retirées du site publié (brouillons)
 - [ ] Florian : créer le dépôt GitHub public `jerlash-labs`, donner son URL et le nom du compte
-- [ ] Florian : adresse de contact, mentions légales, paragraphe des journaux GitHub (confidentialité)
+- [ ] URGENT, Florian : mentions légales et confidentialité retirées du site le 2026-11-01 pour publier sans attendre ; à remettre dès que possible (adresse de contact, adresse du cabinet, BCE, TVA, référence déontologique, journaux GitHub), avec la phrase de contact de la page À propos et security.txt
+- [ ] Comprendre pourquoi la vérification complète échoue sur le serveur Linux de GitHub (elle passe sous Windows) : journal de l'étape « Vérification complète » à relever
 - [ ] Florian : relire la page d'accueil, les 9 articles importés (dont 4 aux en-têtes vides : titre tiré du nom de fichier) et leurs dates (date du fichier)
 - [ ] Pousser sur GitHub, activer Pages (source : GitHub Actions), publication verte
 

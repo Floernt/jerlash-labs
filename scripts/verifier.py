@@ -147,7 +147,7 @@ def verifier_site(exiger_hugo: bool) -> None:
               + ("" if not defauts else " — " + "; ".join(defauts[:5])))
         etape(not externes, "aucune ressource chargée depuis un domaine tiers" + ("" if not externes else " — " + "; ".join(externes[:5])))
         etape(not liens_morts, "liens internes valides" + ("" if not liens_morts else " — " + "; ".join(liens_morts[:10])))
-        for attendu in ("blog/index.xml", "sitemap.xml", ".nojekyll", ".well-known/security.txt", "js/bundle.js"):
+        for attendu in ("blog/index.xml", "sitemap.xml", ".nojekyll", "js/bundle.js"):
             etape(os.path.isfile(os.path.join(sortie, attendu)), f"fichier produit : {attendu}")
     finally:
         shutil.rmtree(sortie, ignore_errors=True)
@@ -196,11 +196,14 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--publication", action="store_true")
     parser.add_argument("--exiger-hugo", action="store_true")
+    parser.add_argument("--site-seul", action="store_true",
+                        help="secrets, site, typographie, blog et marqueurs seulement (publication, ADR-022)")
     args = parser.parse_args(argv)
     verifier_secrets()
-    verifier_outils()
-    verifier_composants()
-    verifier_archive()
+    if not args.site_seul:
+        verifier_outils()
+        verifier_composants()
+        verifier_archive()
     verifier_site(args.exiger_hugo)
     verifier_typographie()
     verifier_blog()

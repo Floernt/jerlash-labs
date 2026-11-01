@@ -1,18 +1,18 @@
 ---
 draft: true
 title: "Utiliser un outil en local"
-description: "Installer Python, télécharger un outil d'iavocat.be, vérifier son empreinte SHA-256 et le lancer sur Windows."
+description: "Installer Python, télécharger un outil de jerlash.labs, vérifier son empreinte SHA-256 et le lancer sur Windows."
 niveau: "debutant"
 derniere_verification: 2026-10-31
 ---
 
-À la fin de ce guide, vous aurez installé un outil d'iavocat.be sur votre ordinateur Windows, vérifié que le fichier téléchargé est bien celui qui a été publié, et lancé l'outil.
+À la fin de ce guide, vous aurez installé un outil de jerlash.labs sur votre ordinateur Windows, vérifié que le fichier téléchargé est bien celui qui a été publié, et lancé l'outil.
 
 ## Ce que veut dire « en local »
 
 Un outil local s'exécute sur votre ordinateur. Les documents que vous lui donnez sont lus sur votre machine et n'en sortent pas, sauf si la fiche de l'outil indique qu'il fait appel à un fournisseur d'IA. Dans ce cas, la fiche décrit précisément ce qui part et vers qui.
 
-Les outils d'iavocat.be sont écrits en Python, un langage gratuit et très répandu. Il faut l'installer une fois ; ensuite, chaque outil se lance par un double-clic.
+Les outils de jerlash.labs sont écrits en Python, un langage gratuit et très répandu. Il faut l'installer une fois ; ensuite, chaque outil se lance par un double-clic.
 
 ## Prérequis
 
@@ -52,7 +52,7 @@ L'empreinte est une sorte de signature numérique du fichier : la moindre modif
 
 ## Points d'attention
 
-- Ne téléchargez un outil que depuis sa fiche sur iavocat.be, et vérifiez toujours l'empreinte.
+- Ne téléchargez un outil que depuis sa fiche sur jerlash.labs, et vérifiez toujours l'empreinte.
 - Rangez l'outil hors de vos dossiers clients et hors des dossiers synchronisés avec des tiers.
 - Un outil local qui fait appel à une IA demande votre clé API : la fiche de l'outil et le guide dédié expliquent comment la protéger. L'outil Contrôle avant envoi n'en a pas besoin.
 - Sur Mac ou Linux, les outils fonctionnent aussi : installez Python 3.10 ou plus récent, puis lancez `python3 "Controle avant envoi.pyw"` depuis le dossier de l'outil.
