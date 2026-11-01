@@ -3,7 +3,6 @@ title: "Et si l’IA servait d’abord à mieux lire"
 date: 2025-06-13
 description: "On parle beaucoup de l’IA générative comme d’un assistant de rédaction."
 aliases: ["/blog/et-si-lia-servait-dabord-a-mieux-lire/"]
-# Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 
 On parle beaucoup de l’IA générative comme d’un assistant de rédaction. Moins comme d’un lecteur hors pair. Pourtant, c’est peut-être là que se joue l’essentiel. Ce n’est pas (seulement) une histoire de productivité marginale, de quelques minutes économisées par-ci par-là. C’est une bascule plus profonde : la capacité à digérer, croiser, hiérarchiser des masses d’information qu’aucun humain ne pourrait absorber seul. Des fonctions entières d’analyse, de veille, de préparation, sont en train d’être redéfinies — non pas automatisées à l’identique, mais transformées par des outils qui ne ressemblent en rien à leurs prédécesseurs.

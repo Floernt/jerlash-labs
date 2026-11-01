@@ -244,7 +244,7 @@ Statut : Acceptée (décision de Florian du 2026-11-01 : « livrer plutôt que c
 Contexte : après deux jours de travail, rien n'est publié. Le projet prend le nom jerlash.labs, avec une identité fournie (jerlash-identite.zip : design system et maquette).
 Décision :
 1. Le site est un site Hugo de base aux couleurs de jerlash : accueil, blog, à propos, mentions légales, confidentialité. Les sections outils, guides, automatiser, nouveautés et précautions sont conservées en brouillon, hors du site publié, jusqu'à ce qu'un contenu soit prêt.
-2. Le blog reprend les articles du dossier `articles` marqués « statuts: à publier », par `scripts/importer_articles.py`. Le dossier source reste hors du dépôt public : les brouillons restent privés.
+2. Le blog reprend les articles du dossier `articles` marqués « statuts: à publier », par `scripts/importer_articles.py`. Le dossier source reste hors du dépôt public : les brouillons restent privés. Révisé le 2026-11-01 (décision de Florian) : plus d'import ; les articles de `site/content/blog/` sont la seule version, relue et corrigée sur place ; `scripts/importer_articles.py` est supprimé.
 3. Remplace ADR-013 (identité visuelle) : polices Schibsted Grotesk et IBM Plex Mono (SIL OFL), auto-hébergées ; couleurs et composants du design system.
 4. Amende ADR-002 : les seuls scripts sont `js/bundle.js` du design system et son lanceur `js/init.js` (une ligne), servis par le site (fonds pixel). CSP `script-src 'self'` ; aucun script en ligne, aucun script externe. La vérification le contrôle.
 5. Dépôt GitHub public `jerlash-labs`, publication d'abord à l'adresse gratuite de GitHub Pages. Le domaine est choisi plus tard (« .labs » n'est pas une extension existante).
@@ -260,4 +260,4 @@ Décision :
 3. Le français est la seule version qu'on modifie. Chaque traduction porte dans son front matter l'empreinte git du texte français traduit (`traduction.source`). `scripts/traductions.py` compare : à traduire, obsolète, orphelin, brouillon divergent ; `--diff` montre ce qui a changé en français depuis la dernière traduction. La commande `/traduire` met l'anglais à jour et le marque.
 4. Libellés des gabarits dans `site/i18n/fr.yaml` (maître) et `en.yaml`. Guillemets français du typographer limités au français ; `scripts/typographie.py` ignore les `*.en.md`.
 5. La vérification signale les traductions en retard sans bloquer : le français peut être publié avant sa traduction.
-Conséquences : toutes les URL publiées changent (redirections en place). Le blog importé reçoit ses alias depuis `scripts/importer_articles.py`, qui ignore les traductions. Une page 404 est copiée à la racine à la publication.
+Conséquences : toutes les URL publiées changent (redirections en place). Les articles du blog portent leurs alias dans leur front matter. Une page 404 est copiée à la racine à la publication.

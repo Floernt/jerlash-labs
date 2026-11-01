@@ -3,7 +3,6 @@ title: "Pourquoi l’IA n’est pas un outil de plus – mais une nouvelle faço
 date: 2025-06-11
 description: "L’intelligence artificielle agite le monde du droit, et les solutions se multiplient."
 aliases: ["/blog/pourquoi-lia-nest-pas-un-outil-de-plus-mais-une-nouvelle-facon-de-penser-son/"]
-# Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 
 L’intelligence artificielle agite le monde du droit, et les solutions se multiplient. Mais avant de choisir un logiciel, encore faut-il savoir ce qu’on veut en faire. Et si la vraie transformation commençait… par une feuille blanche et quelques post-it ? Une méthode simple pour passer de l’effet de mode à une stratégie claire, concrète, et vraiment utile.

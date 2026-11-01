@@ -5,7 +5,7 @@ Règle depuis le 2026-11-01 : livrer plutôt que construire. Un seul chantier da
 ## Maintenant : site jerlash.labs 0.1.0 (ADR-022)
 
 - [x] Identité jerlash appliquée au site Hugo (polices, couleurs, logo, fonds pixel)
-- [x] Rubrique Blog alimentée par `scripts/importer_articles.py` depuis `../articles` (articles « à publier »)
+- [x] Rubrique Blog : 9 articles, relus et corrigés directement dans `site/content/blog/` (import supprimé le 2026-11-01)
 - [x] Sections outils, guides, automatiser, nouveautés et précautions retirées du site publié (brouillons)
 - [x] Florian : créer le dépôt GitHub public `jerlash-labs`, donner son URL et le nom du compte
 - [x] Mentions légales et confidentialité remises en ligne (2026-11-01) : le site ne fournit aucun service, donc ni BCE, ni TVA, ni adresse de contact ; adresse de GitHub et journaux de GitHub Pages vérifiés sur la documentation de GitHub ; pas de phrase de contact ni de security.txt (décision de Florian)

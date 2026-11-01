@@ -3,10 +3,9 @@ title: "L’intelligence artificielle n’innovera pas à votre place"
 date: 2025-06-25
 description: "Gain de temps, fiabilité, conformité."
 aliases: ["/blog/lintelligence-artificielle-ninnovera-pas-a-votre-place/"]
-# Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 
-_Gain de temps, fiabilité, conformité. L’intelligence artificielle promet beaucoup — et tient ses promesses, en partie. Mais à force de l’utiliser pour sécuriser les pratiques, on oublie qu’elle peut aussi les réinventer. À condition de changer de posture : moins de pilotage, plus d'exploration. C’est dans cette logique que des outils comme Tayori prennent tout leur sens.
+_Gain de temps, fiabilité, conformité. L’intelligence artificielle promet beaucoup — et tient ses promesses, en partie. Mais à force de l’utiliser pour sécuriser les pratiques, on oublie qu’elle peut aussi les réinventer. À condition de changer de posture : moins de pilotage, plus d'exploration.
 
 ---
 
@@ -26,6 +25,6 @@ Mais bien entendu, encore faut-il que cette exploration soit accessible. Si l’
 
 Réintroduire de l’expérimentation au cœur de la pratique, c’est se donner la liberté d’explorer ses propres angles morts, de formuler autrement, d’oser des méthodes plus agiles. 
 
-Ce n’est pas une régression, c’est une reconquête : celle d’un savoir-faire qui se redéfinit au contact de nouveaux outils. Tayori, en permettant la création d’agents personnalisables dans un environnement sécurisé, ouvre cet espace d’essai. 
+Ce n’est pas une régression, c’est une reconquête : celle d’un savoir-faire qui se redéfinit au contact de nouveaux outils. 
 
-L’avocat y retrouve le pouvoir de modeler sa manière de travailler, sans renoncer aux exigences de confidentialité ni à la rigueur de sa pratique. L’innovation ne naît pas des outils en eux-mêmes, mais de ce que l’on ose en faire.
+L’avocat retrouve ainsi le pouvoir de modeler sa manière de travailler, sans renoncer aux exigences de confidentialité ni à la rigueur de sa pratique. L’innovation ne naît pas des outils en eux-mêmes, mais de ce que l’on ose en faire.

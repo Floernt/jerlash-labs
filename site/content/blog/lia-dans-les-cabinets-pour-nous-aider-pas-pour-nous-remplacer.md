@@ -3,7 +3,6 @@ title: "L’IA dans les cabinets, pour nous aider, pas pour nous remplacer"
 date: 2025-06-11
 description: "Dans le tumulte des promesses technologiques, il est tentant de croire que l’IA pourrait bouleverser jusqu’au cœur de nos métiers."
 aliases: ["/blog/lia-dans-les-cabinets-pour-nous-aider-pas-pour-nous-remplacer/"]
-# Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 
 Dans le tumulte des promesses technologiques, il est tentant de croire que l’IA pourrait bouleverser jusqu’au cœur de nos métiers. Mais ce serait oublier une chose essentielle : ce qui fait la valeur d’un avocat ne se code pas. Ce billet s’adresse à celles et ceux qui veulent intégrer l’IA sans perdre le sens, déléguer sans se déposséder, avancer sans renoncer à ce qui les rend irremplaçables.
