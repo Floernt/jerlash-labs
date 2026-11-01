@@ -9,7 +9,7 @@
     {{- with .texte }}<p class="ia-hero__lead">{{ . }}</p>{{ end }}
     <div class="ia-hero__actions">
       {{- range .actions }}
-      <a class="ia-btn{{ if .secondaire }} ia-btn--ghost{{ else }} ia-btn--brique{{ end }}" href="{{ .lien | strings.TrimPrefix "/" | relURL }}">{{ .libelle }} <span class="ia-btn__arrow">→</span></a>
+      <a class="ia-btn{{ if .secondaire }} ia-btn--ghost{{ else }} ia-btn--brique{{ end }}" href="{{ partial "lien-interne.html" .lien }}">{{ .libelle }} <span class="ia-btn__arrow">→</span></a>
       {{- end }}
     </div>
     <div class="ia-hero__band ia-pixel" data-pixel="orbe" data-fg="paper" data-bg="brique" data-cell="pixel-moyen" data-pointer="true" aria-hidden="true"></div>
@@ -22,10 +22,10 @@
   <section class="accueil-section" aria-labelledby="titre-blog">
     <div class="accueil-section__tete">
       <div>
-        <p class="ia-eyebrow">Blog</p>
-        <h2 class="accueil-section__titre" id="titre-blog">Derniers articles</h2>
+        <p class="ia-eyebrow">{{ T "blog" }}</p>
+        <h2 class="accueil-section__titre" id="titre-blog">{{ T "derniers_articles" }}</h2>
       </div>
-      <a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">Tous les articles <span class="ia-btn__arrow">→</span></a>
+      <a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">{{ T "tous_les_articles" }} <span class="ia-btn__arrow">→</span></a>
     </div>
     <div class="grille-cartes">
       {{- range $i, $a := $articles }}

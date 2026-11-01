@@ -1,4 +1,4 @@
-{{- /* Flux RSS en français (produit uniquement pour la section Nouveautés, voir hugo.toml) */ -}}
+{{- /* Flux RSS dans la langue de la section (produit uniquement pour le blog, voir hugo.toml) */ -}}
 {{- $limite := site.Config.Services.RSS.Limit -}}
 {{- $pages := .Pages.ByDate.Reverse -}}
 {{- if ge $limite 1 }}{{ $pages = $pages | first $limite }}{{ end -}}
@@ -7,7 +7,7 @@
   <channel>
     <title>{{ .Title }} | {{ site.Title }}</title>
     <link>{{ .Permalink }}</link>
-    <description>{{ .Description | default (printf "%s de %s" .Title site.Title) }}</description>
+    <description>{{ .Description | default (T "flux_de" (dict "section" .Title "site" site.Title)) }}</description>
     <language>{{ site.Language.LanguageCode }}</language>
     {{- with $pages }}{{ with index . 0 }}
     <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>

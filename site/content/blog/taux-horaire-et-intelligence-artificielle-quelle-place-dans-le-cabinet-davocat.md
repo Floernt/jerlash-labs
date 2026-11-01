@@ -2,6 +2,7 @@
 title: "Taux horaire et intelligence artificielle. Quelle place dans le cabinet d’avocat"
 date: 2025-06-27
 description: "L’intelligence artificielle générative rebat les cartes : certaines tâches s’automatisent, d’autres disparaissent, et le temps passé n'est plus une manière viable de valoriser ses prestations."
+aliases: ["/blog/taux-horaire-et-intelligence-artificielle-quelle-place-dans-le-cabinet-davocat/"]
 # Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 

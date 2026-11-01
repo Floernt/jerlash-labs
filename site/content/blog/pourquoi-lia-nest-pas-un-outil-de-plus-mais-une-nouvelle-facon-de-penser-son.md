@@ -2,6 +2,7 @@
 title: "Pourquoi l’IA n’est pas un outil de plus – mais une nouvelle façon de penser son cabinet"
 date: 2025-06-11
 description: "L’intelligence artificielle agite le monde du droit, et les solutions se multiplient."
+aliases: ["/blog/pourquoi-lia-nest-pas-un-outil-de-plus-mais-une-nouvelle-facon-de-penser-son/"]
 # Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 

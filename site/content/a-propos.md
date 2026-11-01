@@ -1,4 +1,5 @@
 ---
+aliases: ["/a-propos/"]
 title: "À propos"
 description: "Florian Ernotte, avocat au barreau de Liège-Huy, écrit sur jerlash.labs sur l'intelligence artificielle dans la pratique d'un cabinet d'avocats."
 ---

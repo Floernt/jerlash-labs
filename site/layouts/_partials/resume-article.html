@@ -8,8 +8,8 @@
 <li class="liste-contenus__element">
   <h{{ $n }} class="liste-contenus__titre"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h{{ $n }}>
   {{- $elements := slice }}
-  {{- with .Params.niveau }}{{ $elements = $elements | append (printf "Niveau : %s" (partial "libelles.html" (dict "type" "niveau" "valeur" .))) }}{{ end }}
-  {{- with .Params.derniere_verification }}{{ $elements = $elements | append (printf "vérifié le %s" (partial "date.html" .)) }}{{ else }}{{ if and (eq .Section "automatiser") (not .Date.IsZero) }}{{ $elements = $elements | append (partial "date.html" .Date) }}{{ end }}{{ end }}
+  {{- with .Params.niveau }}{{ $elements = $elements | append (T "niveau" (partial "libelles.html" (dict "type" "niveau" "valeur" .))) }}{{ end }}
+  {{- with .Params.derniere_verification }}{{ $elements = $elements | append (T "verifie_le" (partial "date.html" .)) }}{{ else }}{{ if and (eq .Section "automatiser") (not .Date.IsZero) }}{{ $elements = $elements | append (partial "date.html" .Date) }}{{ end }}{{ end }}
   {{- with $elements }}
   <p class="meta">{{ delimit . " · " | safeHTML }}</p>
   {{- end }}

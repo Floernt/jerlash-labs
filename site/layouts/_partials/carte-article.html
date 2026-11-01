@@ -4,9 +4,9 @@
 {{- with .page }}
 <a class="ia-card" href="{{ .RelPermalink }}">
   <div class="ia-card__thumb ia-pixel" data-pixel="{{ $m.c }}" data-fg="{{ $m.fg }}" data-bg="paper" data-cell="pixel-fin" data-seed="{{ add $.rang 3 }}" aria-hidden="true"></div>
-  <p class="ia-eyebrow">Blog · {{ partial "date.html" .Date }}</p>
+  <p class="ia-eyebrow">{{ T "blog" }} · {{ partial "date.html" .Date }}</p>
   <h3 class="ia-card__title">{{ .Title }}</h3>
   {{- with .Description }}<p class="ia-card__body">{{ . }}</p>{{ end }}
-  <div class="ia-card__foot"><span class="ia-tag">{{ .ReadingTime }} min</span><span class="ia-card__more">Lire →</span></div>
+  <div class="ia-card__foot"><span class="ia-tag">{{ T "minutes" .ReadingTime }}</span><span class="ia-card__more">{{ T "lire" }} →</span></div>
 </a>
 {{- end }}

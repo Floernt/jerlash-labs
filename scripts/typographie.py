@@ -66,11 +66,21 @@ def corriger_html(texte: str) -> str:
     return "".join(m if i % 2 else corriger_segment(m) for i, m in enumerate(morceaux))
 
 
+def corriger_i18n(texte: str) -> str:
+    """Libellés i18n (YAML « clé: "valeur" ») : seules les valeurs entre guillemets sont corrigées."""
+    def ligne(l: str) -> str:
+        m = re.match(r'^(\s*[\w-]+:\s*")(.*)("\s*)$', l)
+        return m.group(1) + corriger_ligne(m.group(2), PROTEGE_MD) + m.group(3) if m else l
+    return "\n".join(ligne(l) for l in texte.split("\n"))
+
+
 def fichiers():
     for racine, _d, noms in os.walk(os.path.join(DEPOT, "site", "content")):
         for nom in noms:
-            if nom.endswith(".md"):
+            # Les traductions (x.en.md, ADR-023) suivent la typographie de leur langue.
+            if nom.endswith(".md") and not re.search(r"\.[a-z]{2}\.md$", nom):
                 yield os.path.join(racine, nom), corriger_markdown
+    yield os.path.join(DEPOT, "site", "i18n", "fr.yaml"), corriger_i18n
     for racine, _d, noms in os.walk(os.path.join(DEPOT, "site", "layouts")):
         for nom in noms:
             if nom.endswith(".html") and not nom.endswith(("rss.xml",)):

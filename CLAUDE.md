@@ -93,8 +93,9 @@ Commandes (depuis la racine du dépôt) :
 - archive d'un outil et mise à jour de sa fiche (version, taille, SHA-256) : `python scripts/empaqueter.py --fiche`
 - régénérer un jeu de test : `python -I factory/jeux-de-test/<jeu>/generer.py` (F-DOCX-01, F-IDENT-01, F-DOSSIER-01) ; mesurer l'inventaire : `python factory/jeux-de-test/F-DOSSIER-01/evaluer.py`
 - activer le contrôle des secrets avant commit (une fois par clone) : `git config core.hooksPath .githooks`
+- traductions anglaises (ADR-023) : état `python scripts/traductions.py`, changements du français depuis la dernière traduction `--diff <fichier>`, mise à jour par la commande `/traduire` ; on corrige le français, jamais l'anglais (`x.en.md`)
 - déployer : push sur `main` ; le workflow `.github/workflows/publier.yml` vérifie, construit et publie (bloqué tant qu'il reste des marqueurs `[À ...]` dans le contenu publié).
 
 ## Langue et style
 
-Français de Belgique. Tous les textes publiés suivent `docs/charte-editoriale.md`. En résumé : phrases simples et précises, pas de formules creuses, pas de dramatisation, pas de tics d'écriture d'IA (liste dans la charte), pas de titres en gras suivis de deux-points dans les listes, guillemets droits dans le code.
+Français de Belgique, version maître du site ; la version anglaise en est la traduction (ADR-023, `docs/glossaire-traduction.md`). Tous les textes publiés suivent `docs/charte-editoriale.md`. En résumé : phrases simples et précises, pas de formules creuses, pas de dramatisation, pas de tics d'écriture d'IA (liste dans la charte), pas de titres en gras suivis de deux-points dans les listes, guillemets droits dans le code.

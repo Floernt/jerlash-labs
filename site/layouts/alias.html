@@ -1,0 +1,16 @@
+{{- /* Page de redirection (alias) : racine du site vers /fr/ et anciennes adresses sans préfixe de langue (ADR-023).
+       Même politique de sécurité que les autres pages ; aucun script. */ -}}
+<!doctype html>
+<html lang="fr-BE">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'none'">
+  <title>{{ .Permalink }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+</head>
+<body>
+  <p><a href="{{ .Permalink }}">{{ .Permalink }}</a></p>
+</body>
+</html>

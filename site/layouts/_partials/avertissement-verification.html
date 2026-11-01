@@ -10,11 +10,11 @@
   {{- $d := time.AsTime . -}}
   {{- if $d.Before $limite }}
 <div class="avertissement" role="note">
-  <p><strong>Attention :</strong> ce guide n'a pas été vérifié depuis plus de {{ $mois }} mois (dernière vérification le {{ partial "date.html" $d }}). Certaines informations, notamment les écrans, les prix ou les conditions des fournisseurs, peuvent avoir changé.</p>
+  <p><strong>{{ T "attention" }}</strong> {{ T "guide_ancien" (dict "mois" $mois "date" (partial "date.html" $d)) | safeHTML }}</p>
 </div>
   {{- end -}}
 {{- else }}
 <div class="avertissement" role="note">
-  <p><strong>Attention :</strong> la date de dernière vérification de ce guide n'est pas indiquée. Certaines informations peuvent ne plus être à jour.</p>
+  <p><strong>{{ T "attention" }}</strong> {{ T "guide_sans_date" }}</p>
 </div>
 {{- end -}}

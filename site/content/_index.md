@@ -17,7 +17,7 @@ heros:
 
 nom:
   surtitre: "Le nom"
-  titre: "Pourquoi jerlash.labs ?"
+  titre: "Pourquoi jerlash.labs ?"
   image: "/images/etienne-jerlash.png"
   alt: "Portrait d'Étienne Constantin de Gerlache, gravure pointillée"
   texte: |

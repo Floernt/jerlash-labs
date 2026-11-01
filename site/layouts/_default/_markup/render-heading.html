@@ -5,5 +5,5 @@
 */ -}}
 <div class="titre-ancre">
 <h{{ .Level }} id="{{ .Anchor }}"{{ range $k, $v := .Attributes }}{{ if ne $k "id" }} {{ $k }}="{{ $v }}"{{ end }}{{ end }}>{{ .Text }}</h{{ .Level }}>
-<a class="ancre" href="#{{ .Anchor }}" aria-label="Lien vers la section « {{ .PlainText }} »"><span aria-hidden="true">#</span></a>
+<a class="ancre" href="#{{ .Anchor }}" aria-label="{{ T "lien_section" .PlainText }}"><span aria-hidden="true">#</span></a>
 </div>

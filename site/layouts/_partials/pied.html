@@ -3,19 +3,20 @@
   <div class="conteneur pied-site__interieur">
     <div class="pied-site__appel">
       <p class="pied-site__surtitre">// jerlash.labs</p>
-      <p class="pied-site__phrase">Publier oblige à finir.</p>
+      <p class="pied-site__phrase">{{ T "pied_phrase" }}</p>
     </div>
-    <nav class="pied-site__nav" aria-label="Pied de page">
+    <nav class="pied-site__nav" aria-label="{{ T "pied_de_page" }}">
       {{- range site.Menus.pied }}
       <a href="{{ .URL }}">{{ .Name }}</a>
       {{- end }}
       {{- with site.GetPage "/blog" }}{{ with .OutputFormats.Get "rss" }}
-      <a href="{{ .RelPermalink }}" type="application/rss+xml">Flux RSS</a>
+      <a href="{{ .RelPermalink }}" type="application/rss+xml">{{ T "flux_rss" }}</a>
       {{- end }}{{ end }}
       <span>© {{ now.Year }} jerlash.labs</span>
     </nav>
   </div>
   <div class="conteneur">
-    <p class="pied-site__licences">Textes sous licence <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="license">CC BY 4.0</a>. Ce site ne dépose aucun cookie et n'utilise aucun traceur.</p>
+    {{- $licence := printf `<a href="%s" rel="license">CC BY 4.0</a>` (T "licence_url") }}
+    <p class="pied-site__licences">{{ T "pied_licence" $licence | safeHTML }}</p>
   </div>
 </footer>

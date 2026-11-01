@@ -2,6 +2,7 @@
 title: "L’intelligence artificielle n’innovera pas à votre place"
 date: 2025-06-25
 description: "Gain de temps, fiabilité, conformité."
+aliases: ["/blog/lintelligence-artificielle-ninnovera-pas-a-votre-place/"]
 # Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 

@@ -4,8 +4,10 @@
 # Adresse définitive passée à la construction par la publication (--baseURL, GitHub Pages)
 baseURL = "/"
 title = "jerlash.labs"
-languageCode = "fr-BE"
+# Bilingue (ADR-023) : le français est la version maître (content/x.md), l'anglais
+# sa traduction (content/x.en.md), tenue à jour par scripts/traductions.py et /traduire.
 defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = true
 timeZone = "Europe/Brussels"
 # Titres générés (tâches) : majuscule initiale seulement
 titleCaseStyle = "firstupper"
@@ -59,11 +61,7 @@ removePathAccents = true
     [markup.goldmark.renderer]
       # Aucun HTML brut dans le Markdown
       unsafe = false
-    [markup.goldmark.extensions.typographer]
-      # Guillemets français avec espaces insécables
-      leftDoubleQuote = "&laquo;&nbsp;"
-      rightDoubleQuote = "&nbsp;&raquo;"
-  [markup.highlight]
+    [markup.highlight]
     # Classes CSS plutôt que styles en ligne (CSP style-src 'self')
     noClasses = false
     codeFences = true
@@ -73,26 +71,70 @@ removePathAccents = true
     endLevel = 3
 
 [params]
-  description = "Intelligence artificielle et pratique d'un cabinet d'avocats : articles de Florian Ernotte, et bientôt les outils qu'il construit."
   auteur = "Florian Ernotte"
-  # Ordre d'affichage des tâches dans le catalogue des outils (clés de la taxonomie).
-  # Les tâches absentes de cette liste s'affichent ensuite, par ordre alphabétique.
-  ordre_taches = ["préparer un document", "vérifier", "analyser un dossier", "comparer", "structurer"]
   # Seuil, en mois, au-delà duquel un guide affiche un avertissement
   guides_mois_avant_avertissement = 6
 
-[menus]
-  [[menus.principal]]
-    name = "Blog"
-    pageRef = "/blog"
-    weight = 10
-  [[menus.principal]]
-    name = "À propos"
-    pageRef = "/a-propos"
-    weight = 20
+# Mentions légales et confidentialité : hors menus, en brouillon jusqu'à ce que leurs marqueurs soient levés (BACKLOG)
+[languages]
+  [languages.fr]
+    weight = 1
+    languageCode = "fr-BE"
+    languageName = "Français"
+    [languages.fr.params]
+      description = "Intelligence artificielle et pratique d'un cabinet d'avocats : articles de Florian Ernotte, et bientôt les outils qu'il construit."
+      locale = "fr_BE"
+      # Ordre d'affichage des tâches dans le catalogue des outils (clés de la taxonomie).
+      # Les tâches absentes de cette liste s'affichent ensuite, par ordre alphabétique.
+      ordre_taches = ["préparer un document", "vérifier", "analyser un dossier", "comparer", "structurer"]
+    # Guillemets français avec espaces insécables
+    [languages.fr.markup.goldmark.extensions.typographer]
+      leftDoubleQuote = "&laquo;&nbsp;"
+      rightDoubleQuote = "&nbsp;&raquo;"
+    [[languages.fr.menus.principal]]
+      name = "Blog"
+      pageRef = "/blog"
+      weight = 10
+    [[languages.fr.menus.principal]]
+      name = "À propos"
+      pageRef = "/a-propos"
+      weight = 20
+    [[languages.fr.menus.pied]]
+      name = "À propos"
+      pageRef = "/a-propos"
+      weight = 10
 
-  [[menus.pied]]
-    name = "À propos"
-    pageRef = "/a-propos"
-    weight = 10
-  # Mentions légales et confidentialité : en brouillon jusqu'à ce que leurs marqueurs soient levés (BACKLOG)
+  [languages.en]
+    weight = 2
+    languageCode = "en-GB"
+    languageName = "English"
+    [languages.en.params]
+      description = "Artificial intelligence and the practice of a law firm: articles by Florian Ernotte, and soon the tools he builds."
+      locale = "en_GB"
+      ordre_taches = ["prepare a document", "check", "analyse a case file", "compare", "structure"]
+    # Rubriques aux noms anglais (les pages portent leur propre slug anglais)
+    [languages.en.permalinks.section]
+      outils = "/tools/"
+      nouveautes = "/updates/"
+      automatiser = "/automation/"
+      taches = "/tasks/"
+    [languages.en.permalinks.page]
+      outils = "/tools/:slug/"
+      nouveautes = "/updates/:slug/"
+      automatiser = "/automation/:slug/"
+    [languages.en.permalinks.term]
+      taches = "/tasks/:slug/"
+    [languages.en.permalinks.taxonomy]
+      taches = "/tasks/"
+    [[languages.en.menus.principal]]
+      name = "Blog"
+      pageRef = "/blog"
+      weight = 10
+    [[languages.en.menus.principal]]
+      name = "About"
+      pageRef = "/a-propos"
+      weight = 20
+    [[languages.en.menus.pied]]
+      name = "About"
+      pageRef = "/a-propos"
+      weight = 10

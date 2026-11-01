@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.Language.LanguageCode | default "fr-BE" }}" data-theme="light">
+<html lang="{{ site.Language.LanguageCode }}" data-theme="light">
 <head>
   <meta charset="utf-8">
   {{- /* GitHub Pages : pas d'en-têtes HTTP personnalisés, la politique de sécurité passe par une balise meta.
@@ -10,7 +10,7 @@
   {{- partial "entete-meta.html" . }}
 </head>
 <body>
-  <a class="lien-evitement" href="#contenu">Aller au contenu</a>
+  <a class="lien-evitement" href="#contenu">{{ T "aller_au_contenu" }}</a>
   {{ partial "entete.html" . }}
   <main id="contenu" tabindex="-1">
     {{ block "main" . }}{{ end }}

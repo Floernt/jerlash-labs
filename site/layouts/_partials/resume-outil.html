@@ -9,9 +9,9 @@
 <li class="liste-contenus__element">
   <h{{ $n }} class="liste-contenus__titre"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h{{ $n }}>
   <p class="meta">
-    {{- with .Params.version }}Version {{ . }}{{ end }}
+    {{- with .Params.version }}{{ T "version_n" . }}{{ end }}
     {{- with .Params.statut }} <span class="pastille pastille--{{ . | urlize }}">{{ partial "libelles.html" (dict "type" "statut" "valeur" .) }}</span>{{ end }}
-    {{- with .Params.mise_a_jour }} · mis à jour le {{ partial "date.html" . }}{{ end }}
+    {{- with .Params.mise_a_jour }} · {{ T "mis_a_jour_le" (partial "date.html" .) | safeHTML }}{{ end }}
   </p>
   {{- with .Params.resume | default .Description }}
   <p>{{ . }}</p>

@@ -2,6 +2,7 @@
 title: "Ce que l’IA ne remplacera jamais. Repenser le métier d’avocat à partir de ce qui dure"
 date: 2025-06-13
 description: "Tout le monde s’inquiète de savoir si l’IA va remplacer les avocats."
+aliases: ["/blog/ce-que-lia-ne-remplacera-jamais-repenser-le-metier-davocat-a-partir-de-ce-qui/"]
 # Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 

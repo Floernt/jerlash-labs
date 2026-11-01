@@ -1,4 +1,5 @@
 ---
+aliases: ["/blog/"]
 title: "Articles"
 description: "Articles de Florian Ernotte sur l'intelligence artificielle dans la pratique d'un cabinet d'avocats."
 ---

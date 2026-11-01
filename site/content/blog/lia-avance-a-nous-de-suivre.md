@@ -2,6 +2,7 @@
 title: "L’IA avance, à nous de suivre"
 date: 2025-06-13
 description: "Pendant que certains dirigeants techniques retournent coder pour ne pas manquer la révolution en cours, beaucoup de professionnels du droit en sont encore à débattre de la “pertinence” de l’IA."
+aliases: ["/blog/lia-avance-a-nous-de-suivre/"]
 # Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 

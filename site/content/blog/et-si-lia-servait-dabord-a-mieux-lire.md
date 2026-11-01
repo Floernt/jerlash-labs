@@ -2,6 +2,7 @@
 title: "Et si l’IA servait d’abord à mieux lire"
 date: 2025-06-13
 description: "On parle beaucoup de l’IA générative comme d’un assistant de rédaction."
+aliases: ["/blog/et-si-lia-servait-dabord-a-mieux-lire/"]
 # Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 
