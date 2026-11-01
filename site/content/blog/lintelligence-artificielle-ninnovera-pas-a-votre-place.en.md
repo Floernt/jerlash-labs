@@ -1,13 +1,14 @@
 ---
+draft: true
 title: "Artificial intelligence will not innovate for you"
 date: 2025-06-25
 description: "Time savings, reliability, compliance."
 slug: "ai-will-not-innovate-for-you"
 traduction:
-  source: "410f200b8a0fc9f35406c197200483a137bd5c23"
+  source: "640620e3b3fb21ef60ec78c1e9c3307f7c67d2da"
 ---
 
-_Time savings, reliability, compliance. Artificial intelligence promises a great deal — and keeps its promises, in part. But by using it to make practices safer, we forget that it can also reinvent them. Provided we change our stance: less steering, more exploration. It is in this light that tools such as Tayori take on their full meaning.
+_Time savings, reliability, compliance. Artificial intelligence promises a great deal — and keeps its promises, in part. But by using it to make practices safer, we forget that it can also reinvent them. Provided we change our stance: less steering, more exploration.
 
 ---
 
@@ -27,6 +28,6 @@ But of course, this exploration still has to be accessible. If taking ownership 
 
 Reintroducing experimentation at the heart of practice means giving oneself the freedom to explore one’s own blind spots, to put things differently, to dare more agile methods. 
 
-This is not a regression, it is a reconquest: that of a know-how being redefined through contact with new tools. Tayori, by enabling the creation of customisable agents in a secure environment, opens up this space for trial. 
+This is not a regression, it is a reconquest: that of a know-how being redefined through contact with new tools. 
 
-There, lawyers regain the power to shape the way they work, without giving up confidentiality requirements or the rigour of their practice. Innovation is not born of tools themselves, but of what we dare to do with them.
+Lawyers thus regain the power to shape the way they work, without giving up confidentiality requirements or the rigour of their practice. Innovation is not born of tools themselves, but of what we dare to do with them.

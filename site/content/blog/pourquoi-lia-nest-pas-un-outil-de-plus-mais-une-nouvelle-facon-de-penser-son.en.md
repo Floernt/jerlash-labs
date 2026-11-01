@@ -1,10 +1,11 @@
 ---
+draft: true
 title: "Why AI is not just another tool – but a new way of thinking about your firm"
 date: 2025-06-11
 description: "Artificial intelligence is stirring up the legal world, and solutions are multiplying."
 slug: "ai-not-just-another-tool-new-way-of-thinking-about-your-firm"
 traduction:
-  source: "0a742590a51672db2f09fb0c5c70f50da6c3d38a"
+  source: "4ca67d13c36b4752c3793d9baefa772d274c23b2"
 ---
 
 Artificial intelligence is stirring up the legal world, and solutions are multiplying. But before choosing a piece of software, you still need to know what you want to do with it. What if the real transformation began… with a blank sheet and a few Post-its? A simple method for moving from a passing fad to a clear, concrete and genuinely useful strategy.

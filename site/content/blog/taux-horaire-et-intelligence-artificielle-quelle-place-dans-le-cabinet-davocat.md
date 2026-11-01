@@ -1,9 +1,9 @@
 ---
+draft: true
 title: "Taux horaire et intelligence artificielle. Quelle place dans le cabinet d’avocat"
 date: 2025-06-27
 description: "L’intelligence artificielle générative rebat les cartes : certaines tâches s’automatisent, d’autres disparaissent, et le temps passé n'est plus une manière viable de valoriser ses prestations."
 aliases: ["/blog/taux-horaire-et-intelligence-artificielle-quelle-place-dans-le-cabinet-davocat/"]
-# Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 
 L’intelligence artificielle générative rebat les cartes : certaines tâches s’automatisent, d’autres disparaissent, et le temps passé n'est plus une manière viable de valoriser ses prestations. Faut-il pour autant enterrer la facturation horaire ? Pas si vite. Ce n’est pas le taux horaire qui pose problème, c’est son usage par défaut. À l’ère de l’IA, il devient un choix et non un réflexe. Encore faut-il savoir quand (et comment) il reste pertinent.

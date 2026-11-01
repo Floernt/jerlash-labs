@@ -1,10 +1,9 @@
 ---
-draft: true
 title: "Legal notice"
 slug: "legal-notice"
 description: "Publisher, host, licences and terms of use of the jerlash.labs site."
 traduction:
-  source: "fdd33c6b9343c08a51cc8e3f1b5fb5ce833bfd7f"
+  source: "08702209f995dda6e2a02d1f5f635cb9706e20ab"
 ---
 
 ## Publisher
@@ -12,17 +11,12 @@ traduction:
 The jerlash.labs site is published by Florian Ernotte, in a personal capacity.
 
 - Profession: lawyer, registered with the Liège-Huy Bar since 2014; accredited specialist in information and communication technology law
-- Professional title obtained in Belgium; professional rules: code de déontologie de l'avocat (code of professional ethics for lawyers) (avocats.be) [À VÉRIFIER : référence exacte et lien]
-- Practising firm: Avroy Avocats, Liège, [À COMPLÉTER : adresse]
-- Enterprise number (BCE): [À COMPLÉTER]
-- VAT registration: [À COMPLÉTER]
-- Contact: [À COMPLÉTER : adresse électronique]
 
-[À VÉRIFIER : liste des mentions exigées par le Code de droit économique et par les règles de communication de l'Ordre pour le site personnel d'un avocat]
+The site provides no service, paid or free, and is not a means of contacting the firm.
 
 ## Hosting
 
-The site is hosted by GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, United States [À VÉRIFIER : adresse actuelle sur le site de GitHub].
+The site is hosted by GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, United States.
 
 ## Purpose of the site
 

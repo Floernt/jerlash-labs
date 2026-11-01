@@ -1,9 +1,9 @@
 ---
+draft: true
 title: "L’IA et l’avocat - déléguer le connu, penser l’inconnu"
 date: 2025-12-30
 description: "Plus le temps passe, plus on constate qu'on assiste à un moment charnière."
 aliases: ["/blog/lia-et-lavocat-deleguer-le-connu-penser-linconnu/"]
-# Importé par scripts/importer_articles.py : ne pas modifier ici, corriger la source.
 ---
 
 > L’arrivée de l’IA générative n’est pas seulement un progrès technique de plus dans l’arsenal des outils utilisés par les cabinets d’avocats. Elle marque un véritable changement de paradigme : pour la première fois, nous pouvons confier le connu aux machines, et consacrer notre énergie à ce qui fait vraiment notre métier : penser l’inconnu, accompagner, et nous engager.

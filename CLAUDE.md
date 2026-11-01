@@ -86,7 +86,7 @@ Commandes (depuis la racine du dépôt) :
 
 - vérifier tout (secrets, tests, archive, site, liens) : `python scripts/verifier.py` ; avant publication : `--publication`
 - prévisualiser le site : `hugo server --source site`
-- importer dans le blog les articles « statuts: à publier » de `../articles` (hors dépôt) : `python scripts/importer_articles.py` ; on corrige la source, jamais la copie
+- blog : les articles sont dans `site/content/blog/` et se relisent et se corrigent là, nulle part ailleurs
 - tests d'un outil : `cd outils/<slug> && python -m unittest discover -s tests -v` (outils : controle-avant-envoi, pseudonymisation, inventaire-dossier)
 - mesurer la pseudonymisation sur F-IDENT-01 : `python factory/jeux-de-test/F-IDENT-01/evaluer.py` (ne jamais régler une règle d'après le jeu de contrôle)
 - copier les composants communs dans les outils qui les déclarent (`COMPOSANTS.md`) : `python scripts/synchroniser_composants.py`

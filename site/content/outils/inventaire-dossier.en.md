@@ -14,9 +14,9 @@ taches: ["take over a case file", "check"]
 mise_a_jour: 2026-11-01
 telechargement: "/telechargements/inventaire-dossier-0.2.0.zip"
 taille: "67 KB"
-sha256: "ff2ecc390093653b97e656f5f633564f383f0202b881c8ee50111d63542f1204"
+sha256: "797bd07eaaad589906a3e18432dd5306ee06194f680c3a1ef60e34374d2395ab"
 traduction:
-  source: "75949dde261be0b88f0af7431e1b98686e5bf793"
+  source: "a3414b212a17fbfb3598316edf6446f131f288dd"
 ---
 
 ## What the tool does

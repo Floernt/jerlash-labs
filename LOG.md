@@ -10,6 +10,19 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-01 - Blog : fin de l'import, retrait de Tayori
+Fait : décision de Florian, les articles de site/content/blog/ sont la seule version et se relisent sur place. scripts/importer_articles.py et son contrôle dans verifier.py supprimés ; en-tête d'import retiré des 9 articles ; CLAUDE.md, ADR-022 (révisée) et backlog à jour. Mentions de Tayori retirées de « L'intelligence artificielle n'innovera pas à votre place » (FR/EN) : deux phrases supprimées, « y retrouve » devient « retrouve ainsi ». verifier.py --publication : 23/23. dev poussée.
+Non fait : suppression des 9 fichiers sources de ../articles (projet: tayori), refusée par le contrôle des permissions ; à faire par Florian ou à autoriser.
+Prochaine étape : fusion dev → main pour publier.
+
+## 2026-11-01 - Pages légales remises en ligne, ADR-023 acceptée
+Fait :
+- Décisions de Florian : le site ne fournit aucun service, donc ni BCE, ni TVA, ni adresse de contact, ni référence aux règles de l'Ordre ; pas de phrase de contact ni de security.txt. ADR-023 acceptée. HTTPS activé.
+- Mentions légales et confidentialité (FR/EN) réécrites, publiées et liées depuis le pied de page. Vérifié sur docs.github.com : adresse de GitHub, Inc. ; GitHub Pages journalise l'adresse IP des visiteurs « for security purposes », sans durée de conservation indiquée (rien d'affirmé à ce sujet).
+- scripts/verifier.py --publication : 24/24. Branche dev poussée ; gh absent, PR dev → main à ouvrir sur GitHub.
+Points ouverts (Florian) : fusionner dev dans main pour publier ; relire l'anglais et l'accueil ; glossaire de traduction. La traduction de outils/inventaire-dossier (brouillon) est obsolète.
+Prochaine étape : le chantier « Maintenant » ne contient plus que des relectures ; choisir le prochain chantier dans « Ensuite ».
+
 ## 2026-11-01 - jerlash.labs : site de base, blog, cap sur la livraison
 Fait :
 - Décision de Florian : le projet devient jerlash.labs ; livrer plutôt que construire. ADR-022 (Acceptée). BACKLOG.md réécrit (Maintenant, Ensuite, Plus tard) ; CHANGELOG.md créé.

@@ -155,15 +155,6 @@ def verifier_site(exiger_hugo: bool) -> None:
         shutil.rmtree(sortie, ignore_errors=True)
 
 
-def verifier_blog() -> None:
-    print("\n[4 ter] Blog : articles conformes à leur source (ADR-022)")
-    r = lancer([sys.executable, "scripts/importer_articles.py", "--verifier"])
-    sortie = r.stdout.strip().splitlines()
-    if r.returncode:
-        print(r.stdout)
-    etape(r.returncode == 0, sortie[-1] if sortie else r.stderr.strip())
-
-
 def verifier_traductions() -> None:
     print("\n[4 quater] Traductions anglaises (ADR-023)")
     r = lancer([sys.executable, "scripts/traductions.py"])
@@ -218,7 +209,6 @@ def main(argv=None) -> int:
         verifier_archive()
     verifier_site(args.exiger_hugo)
     verifier_typographie()
-    verifier_blog()
     verifier_traductions()
     verifier_marqueurs(args.publication)
     echecs = [m for ok, m in resultats if not ok]

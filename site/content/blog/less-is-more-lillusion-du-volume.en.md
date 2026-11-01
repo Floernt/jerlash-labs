@@ -1,10 +1,11 @@
 ---
+draft: true
 title: "Less is more. The illusion of volume"
 date: 2025-06-25
 description: "Faced with the promises of AI, many lawyers give in to the temptation to “feed it everything”."
 slug: "less-is-more-illusion-of-volume"
 traduction:
-  source: "78db0ed567601010053c09028769c1389946fa07"
+  source: "233445f0a04252714cdb848ff1d3f13256f35774"
 ---
 
 --- 

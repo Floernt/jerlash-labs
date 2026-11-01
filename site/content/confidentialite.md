@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Confidentialité"
 description: "Les données traitées lors de la visite de jerlash.labs."
 ---
@@ -10,16 +9,10 @@ Le site ne dépose aucun cookie, ne mesure pas l'audience et ne charge aucune re
 
 ## Visite du site
 
-Le site est composé de pages statiques servies par GitHub Pages. Comme tout hébergeur web, GitHub reçoit lors de chaque visite des données techniques de connexion (adresse IP, page demandée, navigateur) et peut les conserver dans ses journaux, notamment à des fins de sécurité. [À VÉRIFIER : durée de conservation, finalités et lieu de traitement, d'après la déclaration de confidentialité de GitHub et la documentation de GitHub Pages ; date de consultation]
+Le site est composé de pages statiques servies par GitHub Pages. Selon la documentation de GitHub Pages, l'adresse IP de chaque visiteur est enregistrée et conservée à des fins de sécurité. GitHub traite ces journaux selon sa [déclaration de confidentialité](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement), qui ne précise pas de durée de conservation propre à GitHub Pages (consultée le 1er novembre 2026).
 
 L'éditeur du site n'a pas accès à ces journaux et n'exploite aucune statistique de visite.
 
-Responsable du traitement pour le site : Florian Ernotte (coordonnées dans les [mentions légales](/mentions-legales/)). [À VÉRIFIER : répartition des rôles entre l'éditeur et GitHub pour les journaux d'hébergement]
-
-## Contact par courriel
-
-Si vous écrivez à l'adresse de contact, votre message et votre adresse électronique sont conservés le temps nécessaire pour y répondre et suivre l'éventuel problème signalé. Ils ne sont utilisés à aucune autre fin.
-
 ## Vos droits
 
-Vous pouvez demander l'accès, la rectification ou l'effacement des données vous concernant (courriels échangés) en écrivant à l'adresse de contact. Vous pouvez introduire une réclamation auprès de l'Autorité de protection des données ([autoriteprotectiondonnees.be](https://www.autoriteprotectiondonnees.be/)).
+Pour les données de connexion conservées par GitHub, vous pouvez exercer vos droits auprès de GitHub, selon sa déclaration de confidentialité. Vous pouvez introduire une réclamation auprès de l'Autorité de protection des données ([autoriteprotectiondonnees.be](https://www.autoriteprotectiondonnees.be/)).

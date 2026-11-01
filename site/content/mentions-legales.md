@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Mentions légales"
 description: "Éditeur, hébergeur, licences et conditions d'utilisation du site jerlash.labs."
 ---
@@ -9,17 +8,12 @@ description: "Éditeur, hébergeur, licences et conditions d'utilisation du site
 Le site jerlash.labs est édité par Florian Ernotte, à titre personnel.
 
 - Profession : avocat, inscrit au barreau de Liège-Huy depuis 2014 ; spécialiste agréé en droit des technologies de l'information et de la communication
-- Titre professionnel obtenu en Belgique ; règles professionnelles : code de déontologie de l'avocat (avocats.be) [À VÉRIFIER : référence exacte et lien]
-- Cabinet d'exercice : Avroy Avocats, Liège, [À COMPLÉTER : adresse]
-- Numéro d'entreprise (BCE) : [À COMPLÉTER]
-- Assujettissement à la TVA : [À COMPLÉTER]
-- Contact : [À COMPLÉTER : adresse électronique]
 
-[À VÉRIFIER : liste des mentions exigées par le Code de droit économique et par les règles de communication de l'Ordre pour le site personnel d'un avocat]
+Le site ne fournit aucun service, payant ou gratuit, et ne sert pas à la prise de contact avec le cabinet.
 
 ## Hébergement
 
-Le site est hébergé par GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr Street, San Francisco, CA 94107, États-Unis [À VÉRIFIER : adresse actuelle sur le site de GitHub].
+Le site est hébergé par GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.
 
 ## Objet du site
 
