@@ -252,7 +252,7 @@ Conséquences : tout le reste passe au backlog. Le code des outils reste dans le
 
 ## ADR-023 - Site bilingue : le français maître, l'anglais traduit sur demande
 Date : 2026-11-01
-Statut : Proposée
+Statut : Acceptée (Florian, 2026-11-01)
 Contexte : Florian veut une version anglaise de tout le site sans écrire deux fois. Il rédige et corrige en français ; l'IA traduit quand il le demande et doit savoir, sans tout relire, ce qui manque ou a changé.
 Décision :
 1. Hugo multilingue, français par défaut, chaque langue sous son préfixe : `/fr/` et `/en/` (`defaultContentLanguageInSubdir`). La racine redirige vers `/fr/`. Les adresses publiées avant (`/blog/...`, `/a-propos/`) redirigent vers `/fr/...` par des alias ; le flux `/blog/index.xml` devient `/fr/blog/index.xml` (pas de redirection possible pour un fichier XML sur GitHub Pages).

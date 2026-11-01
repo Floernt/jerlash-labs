@@ -2,9 +2,14 @@
 
 Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessions est dans `LOG.md`, ce qui reste à faire dans `BACKLOG.md`.
 
+## 2026-11-01 - Pages légales en ligne
+
+- Mentions légales et confidentialité republiées en français et en anglais, liées depuis le pied de page. Le site ne fournissant aucun service, elles ne mentionnent ni BCE, ni TVA, ni adresse de contact.
+- ADR-023 (site bilingue) acceptée.
+
 ## 2026-11-01 - Version anglaise du site, archives reproductibles
 
-- Site bilingue `/fr/` et `/en/`, français maître, anglais traduit sur demande par `/traduire` (ADR-023, proposée) ; 35 pages traduites.
+- Site bilingue `/fr/` et `/en/`, français maître, anglais traduit sur demande par `/traduire` (ADR-023) ; 35 pages traduites.
 - Accueil : nouveau héros et section « Pourquoi jerlash.labs ? ».
 - Archives des outils et jeux de test reproductibles sous Linux comme sous Windows.
 
