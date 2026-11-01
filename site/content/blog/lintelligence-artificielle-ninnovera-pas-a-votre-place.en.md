@@ -4,7 +4,7 @@ date: 2025-06-25
 description: "Time savings, reliability, compliance."
 slug: "ai-will-not-innovate-for-you"
 traduction:
-  source: "410f200b8a0fc9f35406c197200483a137bd5c23"
+  source: "0fef48690cb25518921aca5c1ef96b2a16d51707"
 ---
 
 _Time savings, reliability, compliance. Artificial intelligence promises a great deal — and keeps its promises, in part. But by using it to make practices safer, we forget that it can also reinvent them. Provided we change our stance: less steering, more exploration.
