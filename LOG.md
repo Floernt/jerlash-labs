@@ -10,6 +10,11 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-01 - Blog : fin de l'import, retrait de Tayori
+Fait : décision de Florian, les articles de site/content/blog/ sont la seule version et se relisent sur place. scripts/importer_articles.py et son contrôle dans verifier.py supprimés ; en-tête d'import retiré des 9 articles ; CLAUDE.md, ADR-022 (révisée) et backlog à jour. Mentions de Tayori retirées de « L'intelligence artificielle n'innovera pas à votre place » (FR/EN) : deux phrases supprimées, « y retrouve » devient « retrouve ainsi ». verifier.py --publication : 23/23. dev poussée.
+Non fait : suppression des 9 fichiers sources de ../articles (projet: tayori), refusée par le contrôle des permissions ; à faire par Florian ou à autoriser.
+Prochaine étape : fusion dev → main pour publier.
+
 ## 2026-11-01 - Pages légales remises en ligne, ADR-023 acceptée
 Fait :
 - Décisions de Florian : le site ne fournit aucun service, donc ni BCE, ni TVA, ni adresse de contact, ni référence aux règles de l'Ordre ; pas de phrase de contact ni de security.txt. ADR-023 acceptée. HTTPS activé.
