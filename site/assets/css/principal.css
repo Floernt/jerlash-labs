@@ -8,6 +8,9 @@
 html { scroll-behavior: smooth; }
 img { max-width: 100%; height: auto; }
 
+/* Texte courant justifié ; la césure (langue de <html>) évite les blancs entre les mots */
+main p, main li, main blockquote, main dd { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+
 .lien-evitement { position: absolute; left: -9999px; top: 0; padding: var(--space-2) var(--space-4); background: var(--ink); color: var(--paper); z-index: 10; }
 .lien-evitement:focus { left: var(--space-4); }
 main:focus { outline: none; }
