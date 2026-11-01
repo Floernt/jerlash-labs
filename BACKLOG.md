@@ -7,12 +7,14 @@ Règle depuis le 2026-11-01 : livrer plutôt que construire. Un seul chantier da
 - [x] Identité jerlash appliquée au site Hugo (polices, couleurs, logo, fonds pixel)
 - [x] Rubrique Blog alimentée par `scripts/importer_articles.py` depuis `../articles` (articles « à publier »)
 - [x] Sections outils, guides, automatiser, nouveautés et précautions retirées du site publié (brouillons)
-- [ ] Florian : créer le dépôt GitHub public `jerlash-labs`, donner son URL et le nom du compte
+- [x] Florian : créer le dépôt GitHub public `jerlash-labs`, donner son URL et le nom du compte
 - [ ] URGENT, Florian : mentions légales et confidentialité retirées du site le 2026-11-01 pour publier sans attendre ; à remettre dès que possible (adresse de contact, adresse du cabinet, BCE, TVA, référence déontologique, journaux GitHub), avec la phrase de contact de la page À propos et security.txt
-- [ ] Vérification complète en échec sur Linux : les archives zip des outils n'ont pas la même empreinte que sous Windows (compression différente) ; rendre l'empaquetage reproductible d'un système à l'autre avant de publier un outil
+- [x] Vérification complète sur Linux : archives zip reproductibles d'un système à l'autre (système d'origine fixé à Unix) et jeux de test reproductibles sous Linux (PR #2 et #3)
 - [ ] Florian : relire la page d'accueil, les 9 articles importés (dont 4 aux en-têtes vides : titre tiré du nom de fichier) et leurs dates (date du fichier)
 - [x] Pousser sur GitHub, activer Pages (source : GitHub Actions), publication verte : en ligne sur jerlash.eu le 2026-11-01
-- [ ] Florian : cocher « Enforce HTTPS » dans Settings → Pages dès que le certificat est délivré, puis relancer la publication (liens canoniques en https)
+- [x] Accueil : nouveau héros et section « Pourquoi jerlash.labs ? »
+- [x] Page À propos réécrite (mission, approche, communs, origine du nom) et traduite en anglais
+- [ ] Florian : cocher « Enforce HTTPS » dans Settings → Pages dès que le certificat est délivré, puis relancer la publication (liens canoniques en https) ; au 2026-11-01, `https://jerlash.eu` ne répond pas encore
 
 ## Maintenant (ajouté le 2026-11-01 à la demande de Florian) : version anglaise du site (ADR-023, proposée)
 
@@ -20,13 +22,13 @@ Règle depuis le 2026-11-01 : livrer plutôt que construire. Un seul chantier da
 - [x] `scripts/traductions.py` (état, diff, marquage) et commande `/traduire`
 - [x] Traduction initiale des 35 pages
 - [ ] Florian : valider ADR-023, relire l'anglais (accueil, À propos, articles), compléter `docs/glossaire-traduction.md`
-- [ ] PR `dev` → `main`
+- [x] PR `dev` → `main` (PR #1, fusionnée)
 
 ## Ensuite
 
 - [ ] Réorganiser le répertoire du projet (nom jerlash.labs, dossiers, fichiers hors dépôt)
 - [ ] Choisir les outils à publier, un à la fois, et ce qui manque à chacun pour être prêt
-- [ ] Domaine : choisir un nom réel (« .labs » n'existe pas), DNS, HTTPS, 2FA GitHub et registraire
+- [ ] Domaine : jerlash.eu choisi et DNS en place ; reste HTTPS (voir plus haut), 2FA GitHub et registraire
 - [ ] Rubrique Guides : compléter les quatre guides (clé API, facturation, données envoyées, installation locale)
 - [ ] Page Outils et fiches, quand un outil est prêt
 

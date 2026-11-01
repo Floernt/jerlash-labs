@@ -1,47 +1,69 @@
 ---
 aliases: ["/a-propos/"]
 title: "À propos"
-description: "Florian Ernotte, avocat au barreau de Liège-Huy, écrit sur jerlash.labs sur l'intelligence artificielle dans la pratique d'un cabinet d'avocats."
+description: "jerlash.labs publie des articles et des outils sur l'intelligence artificielle dans la pratique d'un cabinet d'avocats."
 ---
+## Pourquoi jerlash.labs ?
 
-Je suis Florian Ernotte, avocat au barreau de Liège-Huy depuis 2014 et cofondateur d'Avroy Avocats, à Liège. Je suis spécialiste agréé en droit des technologies de l'information et de la communication par le barreau de Liège-Huy. Ma pratique couvre le droit des sociétés, les contrats, la fiscalité, les entreprises en difficulté et les crypto-actifs.
+L'innovation juridique est souvent abordée sous l'angle des outils, de leurs fonctionnalités et des gains de productivité qu'ils promettent.
 
-Depuis l'arrivée des grands modèles de langage, je conçois des outils d'intelligence artificielle pour la pratique d'un cabinet : structuration de playbooks contractuels, assistants spécialisés, intégration de l'IA dans les processus de travail. jerlash.labs est le site où je publie, à titre personnel, mes articles sur ces sujets et, ensuite, ces outils, avec la documentation nécessaire pour qu'un confrère puisse les utiliser.
+Cette approche laisse pourtant de nombreuses questions ouvertes.
 
-## Pourquoi ce site
+Comment les technologies transforment-elles notre manière de penser et de travailler ? Que deviennent les savoirs professionnels lorsqu'ils sont formalisés dans des systèmes techniques ? Comment préserver et développer l'autonomie humaine dans des environnements de plus en plus automatisés ?
 
-Publier oblige à terminer : un article publié ou un outil qui a une fiche, des tests et une page de limites est un travail fini. Publier permet aussi de recueillir les retours d'autres avocats, qui voient des cas que je ne vois pas.
+Ces questions ne peuvent être résolues par la technique seule.
 
-Les réflexions de fond sur le droit, la technique et l'intelligence artificielle ont leur place sur [Réflexions](https://reflexions.florianernotte.be/). Ici, chaque page répond à une question pratique.
+Elles appellent un dialogue entre le droit, la philosophie, les sciences humaines et l'ingénierie.
 
-## Parcours
+C'est dans cet espace de rencontre que s'inscrit jerlash.labs.
 
-### Profession et innovation
+## Notre mission
 
-- 2021-2024 : président de la Commission de l'innovation du barreau de Liège-Huy.
-- 2024-2025 : cofondateur de Crossview, conseil en transformation des professions juridiques.
-- Collaborateur scientifique à HEC Liège, responsable et enseignant du certificat d'université consacré aux usages et enjeux managériaux de la blockchain.
-- Intervenant en formation des avocats, et conférencier sur l'intelligence artificielle, la blockchain et la fiscalité des crypto-actifs.
+Explorer les transformations du droit à l'ère numérique et transformer les connaissances issues de cette recherche en méthodes, ressources et technologies ouvertes.
 
-### Publications
+Nous voulons contribuer à une innovation juridique qui ne soit pas seulement plus performante, mais également plus intelligible, maîtrisable et partageable.
 
-- *Droit des réseaux sociaux*, Larcier, 2021.
-- *Blockchain et crypto-actifs : opportunités et droit(s)*, Edi.Pro, 2023.
-- *Fiscalité des crypto-actifs en Belgique*, Larcier-Intersentia, 2026.
-- Directeur de la collection *Droit, entreprise et numérique*, Larcier-Intersentia, depuis 2025.
+## Notre approche
 
-### Formation
+**Penser avant de construire.**
 
-- Master en droit, spécialisation en droit des affaires, Université de Liège, 2014.
-- Master de spécialisation en droit fiscal, HEC Liège, 2016.
-- Certificate Law & AI, Brussels School of Competition, 2018.
+Nous considérons que l'innovation doit commencer par la formulation des bonnes questions. La philosophie et la recherche fondamentale constituent des ressources essentielles pour interroger les évidences, identifier les problèmes et ouvrir de nouvelles perspectives.
 
-### Autres projets
+**Expérimenter plutôt que présupposer.**
 
-- [Avroy Avocats](https://avroy.be), cabinet d'exercice.
-- [Cryptomonnaie.be](https://cryptomonnaie.be) et [KlearChain](https://klearchain.be), sur la fiscalité et la traçabilité des crypto-actifs.
-- [Infofaillite.be](https://infofaillite.be) et [InfoPRJ.be](https://infoprj.be), information sur la faillite et la réorganisation judiciaire.
-- [florianernotte.be](https://florianernotte.be), site personnel.
+Les hypothèses doivent pouvoir être confrontées aux usages et aux contraintes des pratiques professionnelles. Nous cherchons à articuler réflexion conceptuelle et expérimentation appliquée.
+
+**Partager plutôt que retenir.**
+
+Les connaissances et outils produits ont vocation, lorsque leurs conditions de production et les droits applicables le permettent, à rejoindre un patrimoine commun accessible et réutilisable.
+
+## Pourquoi les communs ?
+
+Parce que les technologies qui structurent l'activité juridique ne devraient pas être pensées uniquement par ceux qui les commercialisent.
+
+Les professionnels du droit doivent pouvoir comprendre leurs instruments de travail, participer à leur conception et conserver une capacité de choix sur leur évolution.
+
+Un commun technologique permet d'organiser cette participation autour de ressources documentées, ouvertes à la discussion et susceptibles d'améliorations successives.
+
+Ce modèle n'exclut ni les partenariats ni les activités économiques. Il impose en revanche de distinguer la valeur créée collectivement des prestations particulières qui peuvent contribuer à son financement.
+
+## Une démarche ouverte et interdisciplinaire
+
+jerlash.labs est une initiative indépendante fondée sur la conviction que les transformations contemporaines du droit ne peuvent être comprises à partir d'une seule discipline.
+
+Le projet s'adresse aux professionnels du droit, chercheurs, universitaires, philosophes, ingénieurs et institutions qui souhaitent participer à cette réflexion et à sa traduction concrète.
+
+Il se développe depuis la Belgique, avec une perspective européenne et une attention particulière aux traditions juridiques continentales.
+
+## Pourquoi jerlash.labs ?
+
+Le nom jerlash est un clin d'œil phonétique à Étienne-Constantin de Gerlache, figure historique belge.
+
+Il fait également référence à l'avenue de Gerlache, où se trouve le bureau d'avocats du fondateur du laboratoire.
+
+Ce double ancrage, historique et géographique, relie symboliquement le projet au monde du droit tout en lui donnant une identité propre, volontairement tournée vers l'expérimentation et l'avenir.
+
+
 
 ## Principes
 

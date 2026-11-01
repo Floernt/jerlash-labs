@@ -1,49 +1,69 @@
 ---
 title: "About"
 slug: "about"
-description: "Florian Ernotte, a lawyer at the Liège-Huy Bar, writes on jerlash.labs about artificial intelligence in the practice of a law firm."
+description: "jerlash.labs publishes articles and tools on artificial intelligence in the practice of a law firm."
 traduction:
-  source: "2f67d2f8cd6a0fcbf1fa67096f6f88082e1da9c2"
+  source: "5f40e21f10526632b02ac3244f8e1fbf87890a77"
 ---
+## Why jerlash.labs?
 
-I am Florian Ernotte, a lawyer at the Liège-Huy Bar since 2014 and co-founder of Avroy Avocats, in Liège. I am recognised by the Liège-Huy Bar as an accredited specialist in information and communication technology law. My practice covers company law, contracts, tax, businesses in financial difficulty and crypto-assets.
+Legal innovation is often approached from the angle of tools, their features and the productivity gains they promise.
 
-Since the arrival of large language models, I have been designing artificial intelligence tools for the practice of a law firm: structuring contract playbooks, specialised assistants, integrating AI into work processes. jerlash.labs is the site where I publish, in a personal capacity, my articles on these subjects and, later, these tools, with the documentation a fellow lawyer needs in order to use them.
+Yet this approach leaves many questions open.
 
-## Why this site
+How do technologies transform the way we think and work? What becomes of professional knowledge when it is formalised in technical systems? How can human autonomy be preserved and developed in increasingly automated environments?
 
-Publishing forces me to finish: a published article, or a tool that has a tool page, tests and a page on its limitations, is finished work. Publishing also makes it possible to gather feedback from other lawyers, who see cases that I do not.
+These questions cannot be resolved by technology alone.
 
-In-depth reflections on law, technology and artificial intelligence belong on [Réflexions](https://reflexions.florianernotte.be/). Here, each page answers a practical question.
+They call for a dialogue between law, philosophy, the humanities and engineering.
 
-## Background
+It is in this meeting space that jerlash.labs takes its place.
 
-### Profession and innovation
+## Our mission
 
-- 2021-2024: chair of the Innovation Commission of the Liège-Huy Bar.
-- 2024-2025: co-founder of Crossview, a consultancy in the transformation of the legal professions.
-- Research associate at HEC Liège, director of and lecturer on the university certificate devoted to the managerial uses and challenges of blockchain.
-- Speaker in training for lawyers, and lecturer on artificial intelligence, blockchain and the taxation of crypto-assets.
+To explore the transformations of law in the digital age and to turn the knowledge arising from this research into open methods, resources and technologies.
 
-### Publications
+We want to contribute to a legal innovation that is not only more effective, but also more intelligible, more controllable and more shareable.
 
-- *Droit des réseaux sociaux*, Larcier, 2021.
-- *Blockchain et crypto-actifs : opportunités et droit(s)*, Edi.Pro, 2023.
-- *Fiscalité des crypto-actifs en Belgique*, Larcier-Intersentia, 2026.
-- Editor of the series *Droit, entreprise et numérique*, Larcier-Intersentia, since 2025.
+## Our approach
 
-### Education
+**Think before building.**
 
-- Master's in law, specialising in business law, Université de Liège, 2014.
-- Advanced master's in tax law, HEC Liège, 2016.
-- Certificate Law & AI, Brussels School of Competition, 2018.
+We consider that innovation must begin with asking the right questions. Philosophy and fundamental research are essential resources for questioning what is taken for granted, identifying problems and opening up new perspectives.
 
-### Other projects
+**Experiment rather than presuppose.**
 
-- [Avroy Avocats](https://avroy.be), the firm where I practise.
-- [Cryptomonnaie.be](https://cryptomonnaie.be) and [KlearChain](https://klearchain.be), on the taxation and traceability of crypto-assets.
-- [Infofaillite.be](https://infofaillite.be) and [InfoPRJ.be](https://infoprj.be), information on bankruptcy and judicial reorganisation.
-- [florianernotte.be](https://florianernotte.be), personal website.
+Hypotheses must be capable of being tested against the uses and constraints of professional practice. We seek to combine conceptual reflection with applied experimentation.
+
+**Share rather than withhold.**
+
+The knowledge and tools produced are intended, where the conditions of their production and the applicable rights allow, to join a common heritage that is accessible and reusable.
+
+## Why the commons?
+
+Because the technologies that structure legal work should not be designed solely by those who sell them.
+
+Legal professionals must be able to understand their working instruments, take part in their design and retain the ability to choose how they evolve.
+
+A technological commons makes it possible to organise this participation around resources that are documented, open to discussion and capable of successive improvements.
+
+This model rules out neither partnerships nor economic activities. It does, however, require a distinction between the value created collectively and the particular services that may help to fund it.
+
+## An open and interdisciplinary approach
+
+jerlash.labs is an independent initiative founded on the conviction that the contemporary transformations of law cannot be understood from a single discipline.
+
+The project is aimed at legal professionals, researchers, academics, philosophers, engineers and institutions who wish to take part in this reflection and in putting it into practice.
+
+It is developed from Belgium, with a European perspective and particular attention to continental legal traditions.
+
+## Why jerlash.labs?
+
+The name jerlash is a phonetic nod to Étienne-Constantin de Gerlache, a Belgian historical figure.
+
+It also refers to the avenue de Gerlache, where the law office of the laboratory's founder is located.
+
+This twofold anchoring, historical and geographical, symbolically links the project to the world of law while giving it an identity of its own, deliberately turned towards experimentation and the future.
 
 ## Principles
 
