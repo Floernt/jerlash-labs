@@ -1,0 +1,50 @@
+{
+ "Contrat de fourniture - Brasserie du Condroz.docx": {
+  "articles": {
+   "comparution": "particulieres",
+   "Article 1 – Objet": "particulieres",
+   "Article 2 – Prix": "particulieres",
+   "Article 3 – Durée": "particulieres",
+   "Article 4 – Commandes": "generales",
+   "Article 5 – Livraison": "generales",
+   "Article 6 – Paiement": "mixte",
+   "Article 7 – Garantie": "generales",
+   "Article 8 – Responsabilité": "mixte",
+   "Article 9 – Confidentialité": "generales",
+   "Article 10 – Notifications": "particulieres",
+   "Article 11 – Résiliation": "generales",
+   "Article 12 – Droit applicable et juridiction": "generales",
+   "signatures": "particulieres"
+  },
+  "notes": [
+   "Article 6 : clause de paiement générale qui contient l'IBAN du Fournisseur.",
+   "Article 8 : plafond de responsabilité chiffré, propre à l'opération.",
+   "Article 10 : coordonnées des parties, conditions particulières.",
+   "Pièges : loi du 2 août 2002, délais génériques, remise de 3 %, juridiction de Liège."
+  ]
+ },
+ "Contrat de prestation - Hesbaye Logistique.docx": {
+  "articles": {
+   "comparution": "particulieres",
+   "Préambule": "particulieres",
+   "1. Mission": "particulieres",
+   "2. Honoraires": "particulieres",
+   "3. Facturation et paiement": "mixte",
+   "4. Obligations du Prestataire": "mixte",
+   "5. Obligations du Client": "generales",
+   "6. Propriété intellectuelle": "generales",
+   "7. Confidentialité": "generales",
+   "8. Responsabilité": "mixte",
+   "9. Sous-traitance": "generales",
+   "10. Durée et résiliation": "generales",
+   "11. Droit applicable": "generales",
+   "signatures": "particulieres"
+  },
+  "notes": [
+   "Article 3 : courriel de facturation et référence de commande.",
+   "Article 4 : nom et téléphone du responsable de mission.",
+   "Article 8 : plafond chiffré.",
+   "Pièges : montant en lettres suivi des chiffres, pourcentages de facturation, titres numérotés « 1. Mission »."
+  ]
+ }
+}

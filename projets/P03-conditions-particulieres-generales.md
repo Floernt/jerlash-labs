@@ -2,12 +2,12 @@
 id: P03
 titre: Séparer conditions particulières et conditions générales
 type: outil public
-statut: idée
+statut: vérification
 priorité: à définir
 source: zenzen-sol/legal-prompts, skill order-form-restructure (v0.1.0)
 licence_source: MIT
 dépend_de: [P10]
-mise_a_jour: 2026-10-31
+mise_a_jour: 2026-11-01
 ---
 
 # Séparer conditions particulières et conditions générales
@@ -58,4 +58,4 @@ Licence : MIT.
 
 ## 10. Prochaine étape
 
-Choisir un contrat de prestation de services fictif comme cas de test.
+P03 Lite 0.1.0 (rapport de préparation, par règles, ADR-017) est livré dans `outils/conditions-particulieres`, mesuré sur F-CPCG-01. Prochaines étapes : test par Florian sur un contrat négocié réel ; la production des deux documents attend P10.

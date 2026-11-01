@@ -1,0 +1,86 @@
+{
+  "Contrat de prestation de services marketing - Brasserie Moreau.docx": {
+    "articles": {
+      "comparution": "particulieres",
+      "Article 1 – Objet": "particulieres",
+      "Article 2 – Durée": "particulieres",
+      "Article 3 – Prix": "particulieres",
+      "Article 4 – Facturation et paiement": "mixte",
+      "Article 5 – Obligations du Prestataire": "generales",
+      "Article 6 – Obligations du Client": "generales",
+      "Article 7 – Propriété intellectuelle": "generales",
+      "Article 8 – Confidentialité": "generales",
+      "Article 9 – Responsabilité": "mixte",
+      "Article 10 – Résiliation": "generales",
+      "Article 11 – Notifications": "mixte",
+      "Article 12 – Droit applicable et juridiction": "generales",
+      "signatures": "particulieres"
+    },
+    "notes": [
+      "Le préambule (offre référencée et datée) est rattaché au bloc comparution, qui précède le premier article.",
+      "Article 4 – Facturation et paiement : clause de paiement générale (délai de trente jours, intérêts de la loi du 2 août 2002 non balisés) qui contient l'IBAN du Prestataire, d'où mixte.",
+      "Article 9 – Responsabilité : la limitation est générale mais le plafond de 15.000 EUR est propre à l'opération ; « douze mois » est un délai générique non balisé.",
+      "Article 11 – Notifications : clause type dont les destinataires, adresses et courriels sont propres aux parties ; la personne de contact du Client (Céline Warnier) n'apparaît que dans cet article.",
+      "Article 3 – Prix : la limite de dix jours-homme est balisée en QUANTITE, le montant en lettres suivi des chiffres forme un seul MONTANT."
+    ]
+  },
+  "Contrat de maintenance - Froid Industriel Mosan - Boulangeries Lejeune.docx": {
+    "articles": {
+      "comparution": "particulieres",
+      "1. Définitions": "generales",
+      "2. Objet": "particulieres",
+      "3. Prix": "particulieres",
+      "4. Révision des prix": "generales",
+      "5. Délais d'intervention": "mixte",
+      "6. Paiement": "generales",
+      "7. Obligations du Client": "generales",
+      "8. Garantie des interventions": "generales",
+      "9. Responsabilité et assurances": "mixte",
+      "10. Durée": "particulieres",
+      "11. Résiliation pour manquement": "generales",
+      "12. Force majeure": "generales",
+      "13. Cession": "generales",
+      "14. Droit applicable et litiges": "generales",
+      "signatures": "particulieres"
+    },
+    "notes": [
+      "3. Prix : tableau de prix ; le nombre de visites annuelles (4) est une QUANTITE, chaque prix unitaire un MONTANT.",
+      "4. Révision des prix : la formule et la date anniversaire « 1er janvier de chaque année » sont génériques, rien n'est balisé ; discutable si l'on considère la pondération 0,20/0,80 comme négociée.",
+      "5. Délais d'intervention : les délais de quatre heures et deux jours ouvrables ne sont pas balisés (délais), mais le téléphone et le courriel du service de dépannage le sont, d'où mixte ; discutable car un délai d'intervention est souvent négocié au cas par cas.",
+      "9. Responsabilité et assurances : plafonds de 25.000 EUR et 50.000 EUR et numéro de police propres à l'opération dans une clause générale, d'où mixte.",
+      "10. Durée : rédigée avec des dates de début et de fin plutôt qu'une durée en années ; la reconduction annuelle et le préavis de trois mois ne sont pas balisés.",
+      "12. Force majeure : la référence à l'article 5.226 du Code civil n'est pas une donnée de l'opération."
+    ]
+  },
+  "Convention de mise à disposition de locaux - Sambre Workspace.docx": {
+    "articles": {
+      "comparution": "particulieres",
+      "Article 1er – Objet": "particulieres",
+      "Article 2 – Nature de la convention": "generales",
+      "Article 3 – Durée": "particulieres",
+      "Article 4 – Redevance": "particulieres",
+      "Article 5 – Services inclus": "particulieres",
+      "Article 6 – Garantie": "mixte",
+      "Article 7 – Modalités de paiement": "generales",
+      "Article 8 – Usage des locaux": "generales",
+      "Article 9 – Assurances": "generales",
+      "Article 10 – Responsabilité": "mixte",
+      "Article 11 – Protection des données": "generales",
+      "Article 12 – Fin de la convention": "mixte",
+      "Article 13 – Notifications": "mixte",
+      "Article 14 – Droit applicable et juridiction": "generales",
+      "signatures": "particulieres"
+    },
+    "notes": [
+      "L'exposé préalable est rattaché au bloc comparution.",
+      "Article 2 – Nature de la convention : la loi du 30 avril 1951 est une référence légale, non balisée.",
+      "Article 5 – Services inclus : classé particulieres car le contenu du service est propre à l'offre ; discutable (mixte possible) puisque la structure de la clause est réutilisable une fois le volume d'heures et le tarif extraits.",
+      "Article 6 – Garantie : mécanisme général de garantie avec un montant et un IBAN propres à l'opération, d'où mixte ; discutable (particulieres possible) car le montant est l'objet principal de la clause.",
+      "Article 7 – Modalités de paiement : intérêt au taux légal majoré de deux points, non balisé.",
+      "Article 10 – Responsabilité : plafond de 5.000 EUR balisé dans une clause générale.",
+      "Article 11 – Protection des données : dates du RGPD et de la loi du 30 juillet 2018 non balisées ; la durée de conservation de six mois est un délai générique.",
+      "Article 12 – Fin de la convention : restitution générale, mais nombre de badges et indemnité d'occupation journalière propres à l'opération, d'où mixte.",
+      "Article 13 – Notifications : adresses, courriels et téléphone propres aux parties."
+    ]
+  }
+}

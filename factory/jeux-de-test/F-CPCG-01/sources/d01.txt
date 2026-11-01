@@ -1,0 +1,57 @@
+fichier: Contrat de fourniture - Brasserie du Condroz.docx
+---
+CONTRAT DE FOURNITURE DE BOUTEILLES
+
+Entre :
+[[PARTIE:Brasserie du Condroz SRL]], dont le siège est établi [[ADRESSE:rue du Moulin 12 à 4560 Clavier]], inscrite à la Banque-Carrefour des Entreprises sous le numéro [[IDENTIFIANT:0712.345.630]], représentée par [[PARTIE:Madame Claire Dumont]], gérante (ci-après « le Client »),
+Et :
+[[PARTIE:Embouteillages de la Meuse SA]], dont le siège est établi [[ADRESSE:quai de la Batte 3 à 4000 Liège]], inscrite à la Banque-Carrefour des Entreprises sous le numéro [[IDENTIFIANT:0845.612.346]], représentée par [[PARTIE:Monsieur Marc Lejeune]], administrateur délégué (ci-après « le Fournisseur »).
+
+Article 1 – Objet
+Le Fournisseur livre au Client des bouteilles en verre brun de 33 cl, à raison de [[QUANTITE:40.000 bouteilles]] par trimestre, destinées à la ligne d'embouteillage du site de Clavier.
+
+Article 2 – Prix
+2.1 Le prix unitaire est de [[MONTANT:0,21 euro]] hors TVA, transport compris.
+2.2 Une remise de 3 % est accordée sur toute commande supérieure à [[QUANTITE:60.000 bouteilles]].
+| Format | Prix unitaire |
+| 33 cl brun | [[MONTANT:0,21 euro]] |
+| 75 cl brun | [[MONTANT:0,34 euro]] |
+
+Article 3 – Durée
+Le contrat prend effet le [[DATE:1er mars 2023]] pour une durée de trois ans. Il est ensuite reconduit tacitement d'année en année, sauf préavis de six mois.
+
+Article 4 – Commandes
+4.1 Chaque commande est passée par écrit, au moins dix jours ouvrables avant la date de livraison souhaitée.
+4.2 Le Fournisseur confirme la commande dans les deux jours ouvrables. À défaut, la commande est réputée acceptée.
+
+Article 5 – Livraison
+5.1 Les livraisons ont lieu au siège du Client, du lundi au jeudi, entre 7 et 15 heures.
+5.2 Le transfert des risques a lieu à la livraison.
+
+Article 6 – Paiement
+6.1 Les factures sont payables dans les trente jours de leur réception, sur le compte [[IDENTIFIANT:BE71 0961 2345 6769]] du Fournisseur.
+6.2 Tout retard de paiement produit de plein droit un intérêt au taux prévu par la loi du 2 août 2002 concernant la lutte contre le retard de paiement dans les transactions commerciales.
+
+Article 7 – Garantie
+7.1 Le Fournisseur garantit que les bouteilles sont conformes aux spécifications de l'annexe 1.
+7.2 Le Client signale toute non-conformité apparente dans les cinq jours ouvrables de la livraison.
+
+Article 8 – Responsabilité
+8.1 La responsabilité du Fournisseur est limitée aux dommages directs.
+8.2 Elle est en tout cas plafonnée à [[MONTANT:25.000 euros]] par année contractuelle.
+
+Article 9 – Confidentialité
+Chaque partie garde confidentielles les informations reçues de l'autre partie à l'occasion du contrat, pendant sa durée et cinq ans après sa fin.
+
+Article 10 – Notifications
+Les notifications sont adressées par lettre recommandée : pour le Client, à l'attention de [[PARTIE:Madame Claire Dumont]], [[ADRESSE:rue du Moulin 12 à 4560 Clavier]] ; pour le Fournisseur, à [[IDENTIFIANT:contrats@meuse-embouteillages.example]].
+
+Article 11 – Résiliation
+Chaque partie peut résilier le contrat avec effet immédiat en cas de manquement grave de l'autre partie non réparé dans les trente jours d'une mise en demeure.
+
+Article 12 – Droit applicable et juridiction
+Le contrat est régi par le droit belge. Tout litige relève des tribunaux de l'arrondissement judiciaire de Liège.
+
+Fait à Liège, le [[DATE:15 février 2023]], en deux exemplaires.
+Pour le Client, [[PARTIE:Claire Dumont]], gérante
+Pour le Fournisseur, [[PARTIE:Marc Lejeune]], administrateur délégué

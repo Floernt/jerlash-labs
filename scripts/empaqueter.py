@@ -24,6 +24,11 @@ TEXTE = (".py", ".pyw", ".md", ".json", ".txt")
 EXCLUS = {"tests", "verifications", "__pycache__"}
 
 OUTILS = {
+    "conditions-particulieres": {
+        "dossier": os.path.join(DEPOT, "outils", "conditions-particulieres"),
+        "version": os.path.join(DEPOT, "outils", "conditions-particulieres", "src", "conditions_particulieres", "__init__.py"),
+        "fiche": os.path.join(DEPOT, "site", "content", "outils", "conditions-particulieres.md"),
+    },
     "controle-avant-envoi": {
         "dossier": os.path.join(DEPOT, "outils", "controle-avant-envoi"),
         "version": os.path.join(DEPOT, "outils", "controle-avant-envoi", "src", "controle_avant_envoi", "__init__.py"),

@@ -1,0 +1,77 @@
+fichier: Contrat de prestation de services marketing - Brasserie Moreau.docx
+---
+CONTRAT DE PRESTATION DE SERVICES MARKETING
+Entre :
+[[PARTIE:Ardenne Pixel SRL]], société à responsabilité limitée dont le siège est établi [[ADRESSE:rue des Vennes 142, 4020 Liège]], inscrite à la Banque-Carrefour des Entreprises sous le numéro [[IDENTIFIANT:0784.512.396]], valablement représentée par [[PARTIE:Madame Laure Dethier]], gérante,
+ci-après dénommée « le Prestataire »,
+Et :
+[[PARTIE:Brasserie Moreau & Fils SA]], société anonyme dont le siège est établi [[ADRESSE:chaussée de Marche 88, 5100 Jambes]], inscrite à la Banque-Carrefour des Entreprises sous le numéro [[IDENTIFIANT:0456.873.120]], valablement représentée par [[PARTIE:Monsieur Hugues Moreau]], administrateur délégué,
+ci-après dénommée « le Client »,
+ci-après ensemble dénommées « les Parties ».
+Préambule
+Le Client produit et commercialise une gamme de bières de dégustation et souhaite renforcer sa présence sur les réseaux sociaux à l'occasion du lancement d'une nouvelle cuvée.
+Le Prestataire a remis le [[DATE:12 janvier 2026]] une offre référencée [[IDENTIFIANT:OFF-2026-0217]], que le Client a acceptée sous réserve des modifications intégrées dans le présent contrat.
+Il est convenu ce qui suit :
+
+Article 1 – Objet
+Le présent contrat a pour objet la conception et la mise en œuvre par le Prestataire de la campagne de communication du Client intitulée « Cuvée des Vennes ».
+La mission comprend la refonte graphique de [[QUANTITE:trois]] étiquettes, la gestion éditoriale des comptes Instagram et Facebook du Client à raison de [[QUANTITE:quatre]] publications par semaine, ainsi que la production de [[QUANTITE:douze]] vidéos courtes destinées à la publicité en ligne.
+Toute prestation non décrite au présent article fait l'objet d'un devis distinct.
+
+Article 2 – Durée
+Le contrat prend effet le [[DATE:1er mars 2026]] et prend fin de plein droit le [[DATE:28 février 2027]], sans reconduction tacite.
+Les Parties se rencontrent au plus tard deux mois avant cette échéance pour examiner l'opportunité d'un nouveau contrat.
+
+Article 3 – Prix
+En contrepartie de la mission décrite à l'article 1, le Client verse au Prestataire un forfait mensuel de [[MONTANT:quatre mille deux cents euros (4.200 EUR)]], hors TVA.
+La refonte des étiquettes est facturée séparément pour un montant forfaitaire de [[MONTANT:6.800 EUR]] hors TVA, payable à la livraison des fichiers définitifs.
+Le budget d'achat d'espaces publicitaires est plafonné à [[MONTANT:1.500 EUR]] par mois ; il est refacturé au Client à prix coûtant, sur présentation des justificatifs.
+Les prestations complémentaires sont facturées à [[MONTANT:650 EUR]] hors TVA par jour-homme, dans la limite de [[QUANTITE:dix jours-homme]] sur la durée du contrat, sauf accord écrit préalable du Client.
+
+Article 4 – Facturation et paiement
+Les factures sont émises au début de chaque mois et sont payables dans les trente jours de leur date d'émission, par virement sur le compte [[IDENTIFIANT:BE71 0689 4412 3369]] du Prestataire.
+Toute somme non payée à l'échéance porte de plein droit et sans mise en demeure un intérêt de retard au taux prévu par l'article 5 de la loi du 2 août 2002 concernant la lutte contre le retard de paiement dans les transactions commerciales.
+Le Client est en outre redevable de l'indemnité forfaitaire pour frais de recouvrement prévue par l'article 6 de la même loi, sans préjudice de la réparation de tout dommage plus important.
+
+Article 5 – Obligations du Prestataire
+Le Prestataire exécute sa mission avec la diligence d'un professionnel normalement prudent et avisé. Il est tenu d'une obligation de moyens.
+Il respecte la charte graphique et les consignes éditoriales communiquées par le Client et soumet à l'approbation préalable de celui-ci toute publication engageant son image.
+Il veille à ce que les contenus diffusés respectent la législation applicable, notamment en matière de publicité pour les boissons alcoolisées.
+
+Article 6 – Obligations du Client
+Le Client fournit en temps utile les informations, visuels et accès nécessaires à l'exécution de la mission.
+Il valide ou commente les propositions du Prestataire dans les cinq jours ouvrables de leur réception. À défaut, la proposition est réputée acceptée.
+
+Article 7 – Propriété intellectuelle
+Moyennant le paiement intégral du prix, le Prestataire cède au Client, à titre exclusif, les droits patrimoniaux d'auteur sur les créations réalisées dans le cadre du contrat, pour le monde entier et pour toute la durée de protection légale.
+La cession couvre les droits de reproduction, de communication au public, d'adaptation et de distribution, sur tout support connu ou inconnu à ce jour.
+Le Prestataire conserve la faculté de mentionner la campagne à titre de référence commerciale, sauf opposition écrite du Client.
+
+Article 8 – Confidentialité
+Chaque Partie s'engage à garder strictement confidentielles les informations de toute nature communiquées par l'autre Partie à l'occasion de l'exécution du contrat.
+Cette obligation subsiste pendant cinq ans après la fin du contrat, quelle qu'en soit la cause.
+
+Article 9 – Responsabilité
+La responsabilité du Prestataire ne peut être engagée qu'en cas de faute prouvée et est limitée aux dommages directs.
+En tout état de cause, la responsabilité totale du Prestataire est limitée au montant des honoraires perçus au cours des douze mois précédant le fait générateur, avec un maximum de [[MONTANT:quinze mille euros (15.000 EUR)]].
+Cette limitation ne s'applique pas en cas de dol, de faute intentionnelle ou de faute lourde.
+
+Article 10 – Résiliation
+Chaque Partie peut résilier le contrat avec effet immédiat, par lettre recommandée, en cas de manquement grave de l'autre Partie auquel il n'a pas été remédié dans les quinze jours d'une mise en demeure.
+La résiliation n'affecte pas le droit au paiement des prestations exécutées jusqu'à sa date de prise d'effet.
+
+Article 11 – Notifications
+Toute notification au titre du présent contrat est faite par lettre recommandée ou par courriel avec accusé de réception, aux adresses suivantes :
+pour le Prestataire : [[PARTIE:Laure Dethier]], [[ADRESSE:rue des Vennes 142, 4020 Liège]], [[IDENTIFIANT:l.dethier@ardennepixel.be]] ;
+pour le Client : [[PARTIE:Céline Warnier]], responsable marketing, [[ADRESSE:chaussée de Marche 88, 5100 Jambes]], [[IDENTIFIANT:c.warnier@brasseriemoreau.be]].
+Tout changement d'adresse est notifié à l'autre Partie dans les huit jours.
+
+Article 12 – Droit applicable et juridiction
+Le présent contrat est régi par le droit belge.
+Tout litige relatif à sa formation, son interprétation ou son exécution relève de la compétence exclusive des tribunaux de l'arrondissement judiciaire de Liège, division Liège.
+
+Fait à Liège, le [[DATE:20 février 2026]], en deux exemplaires originaux, chaque Partie reconnaissant avoir reçu le sien.
+Pour le Prestataire,
+[[PARTIE:Laure Dethier]], gérante
+Pour le Client,
+[[PARTIE:Hugues Moreau]], administrateur délégué

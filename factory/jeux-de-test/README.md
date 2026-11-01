@@ -16,5 +16,6 @@ Jeux prévus :
 
 - F-DOSSIER-01 : dossier contractuel de fourniture, avec avenants et échanges (P01, P02, P03), livré : dossier de développement et dossier de contrôle.
 - F-DOCX-01 : contrat .docx chargé de pièges (commentaires, métadonnées, renvois cassés) (P04, P05).
+- F-CPCG-01 : contrats à séparer en conditions particulières et générales, données propres balisées (P03), livré : jeu de développement et jeu de contrôle.
 - F-DEF-01 : contrats chargés de défauts de définition (P02), livré : jeu de développement et jeu de contrôle.
 - F-IDENT-01 : textes contenant des identifiants belges fictifs (P09), livré : jeu de développement et jeu de contrôle.

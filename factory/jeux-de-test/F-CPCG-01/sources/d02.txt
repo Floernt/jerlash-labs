@@ -1,0 +1,56 @@
+fichier: Contrat de prestation - Hesbaye Logistique.docx
+---
+CONTRAT DE PRESTATION DE SERVICES
+
+Entre :
+[[PARTIE:Hesbaye Logistique SA]], [[ADRESSE:rue de la Station 21, 4280 Hannut]], BCE [[IDENTIFIANT:0476.218.552]], représentée par [[PARTIE:Monsieur Luc Fraiture]] (ci-après « le Client »),
+Et :
+[[PARTIE:Vervex Consulting SRL]], [[ADRESSE:place Verte 9, 4800 Verviers]], BCE [[IDENTIFIANT:0634.902.117]], représentée par [[PARTIE:Madame Inès Wauters]] (ci-après « le Prestataire »).
+
+Préambule
+Le Client exploite trois entrepôts en Hesbaye. Il souhaite faire auditer ses procédures de stockage. Les parties se sont rencontrées le [[DATE:4 septembre 2025]].
+
+1. Mission
+1.1 Le Prestataire réalise un audit des procédures de stockage des entrepôts du Client, à raison de [[QUANTITE:18 jours-homme]].
+1.2 Le rapport d'audit est remis au plus tard le [[DATE:15 décembre 2025]].
+
+2. Honoraires
+2.1 Les honoraires sont fixés forfaitairement à [[MONTANT:dix-sept mille cinq cents euros (17.500 EUR)]] hors TVA.
+2.2 Ils sont facturés en deux tranches : 40 % à la signature et le solde à la remise du rapport.
+2.3 Les frais de déplacement sont compris dans le forfait.
+
+3. Facturation et paiement
+3.1 Les factures sont payables dans les trente jours de leur date.
+3.2 Les factures sont adressées par courriel à [[IDENTIFIANT:comptabilite@hesbaye-logistique.example]], avec la référence de commande [[IDENTIFIANT:HL-2025-0412]].
+
+4. Obligations du Prestataire
+4.1 Le Prestataire exécute la mission avec diligence, selon les règles de l'art.
+4.2 Il désigne un responsable de mission, [[PARTIE:Monsieur Noël Dethier]], joignable au [[IDENTIFIANT:+32 87 12 34 56]].
+
+5. Obligations du Client
+5.1 Le Client donne au Prestataire accès aux entrepôts pendant les heures d'ouverture.
+5.2 Il communique les documents utiles dans les cinq jours ouvrables de la demande.
+
+6. Propriété intellectuelle
+Le rapport d'audit devient la propriété du Client dès son paiement complet. Le Prestataire conserve ses méthodes et outils.
+
+7. Confidentialité
+7.1 Le Prestataire garde confidentielles les informations reçues du Client.
+7.2 Cette obligation survit cinq ans à la fin du contrat.
+
+8. Responsabilité
+La responsabilité du Prestataire est limitée au montant des honoraires perçus, et en tout cas à [[MONTANT:17.500 euros]].
+
+9. Sous-traitance
+Le Prestataire ne peut sous-traiter tout ou partie de la mission sans l'accord écrit préalable du Client.
+
+10. Durée et résiliation
+10.1 Le contrat prend fin à la remise du rapport d'audit.
+10.2 Chaque partie peut le résilier en cas de manquement grave de l'autre, après une mise en demeure restée sans effet pendant quinze jours.
+
+11. Droit applicable
+Le contrat est régi par le droit belge. Les tribunaux de Liège sont seuls compétents.
+
+Fait à Hannut, le [[DATE:22 septembre 2025]].
+Pour le Client, [[PARTIE:Luc Fraiture]]
+Pour le Prestataire, [[PARTIE:Inès Wauters]]

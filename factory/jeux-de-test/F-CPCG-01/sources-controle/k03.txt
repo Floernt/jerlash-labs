@@ -1,0 +1,75 @@
+fichier: Convention de mise à disposition de locaux - Sambre Workspace.docx
+---
+CONVENTION DE MISE À DISPOSITION DE LOCAUX ÉQUIPÉS
+Entre les soussignés :
+D'une part, [[PARTIE:Sambre Workspace SRL]], dont le siège est établi [[ADRESSE:quai de Flandre 31, 6000 Charleroi]], inscrite à la Banque-Carrefour des Entreprises sous le numéro [[IDENTIFIANT:0798.204.557]], représentée par [[PARTIE:Monsieur Karim Bensaïd]], gérant,
+ci-après « l'Exploitant » ;
+D'autre part, [[PARTIE:Delvaux Comptabilité SRL]], dont le siège est établi [[ADRESSE:rue de Marcinelle 9, 6001 Marcinelle]], inscrite à la Banque-Carrefour des Entreprises sous le numéro [[IDENTIFIANT:0687.115.902]], représentée par [[PARTIE:Madame Sophie Delvaux]], gérante,
+ci-après « l'Occupant ».
+Exposé préalable
+L'Exploitant gère un centre d'affaires proposant des bureaux équipés et des services partagés. L'Occupant, dont les locaux font l'objet de travaux de rénovation, recherche un espace de travail temporaire pour son équipe.
+Les Parties ont dès lors convenu ce qui suit.
+
+Article 1er – Objet
+L'Exploitant met à la disposition de l'Occupant un bureau privatif équipé d'une superficie de [[QUANTITE:24 m²]], situé au deuxième étage de l'immeuble sis [[ADRESSE:quai de Flandre 31, 6000 Charleroi]], pouvant accueillir [[QUANTITE:quatre]] postes de travail.
+La mise à disposition comprend en outre l'usage de [[QUANTITE:deux]] emplacements de parking dans le parking souterrain de l'immeuble.
+
+Article 2 – Nature de la convention
+La présente convention porte sur la fourniture d'un ensemble de services, dont la mise à disposition d'un espace n'est qu'un élément. Elle ne constitue ni un bail commercial au sens de la loi du 30 avril 1951 sur les baux commerciaux, ni un bail de droit commun.
+L'Occupant ne peut se prévaloir d'aucun droit au renouvellement ni d'aucune indemnité d'éviction.
+
+Article 3 – Durée
+La convention est conclue pour une durée déterminée prenant cours le [[DATE:1er mai 2026]] et prenant fin le [[DATE:30 avril 2027]].
+Elle peut être prolongée par avenant écrit signé par les deux Parties.
+
+Article 4 – Redevance
+En contrepartie de la mise à disposition et des services visés à l'article 5, l'Occupant verse à l'Exploitant une redevance mensuelle de [[MONTANT:neuf cent cinquante euros (950 EUR)]], hors TVA.
+Chaque emplacement de parking donne lieu à une redevance complémentaire de [[MONTANT:75 EUR]] hors TVA par mois.
+
+Article 5 – Services inclus
+La redevance comprend l'accueil des visiteurs, la réception du courrier, la connexion internet à très haut débit, le nettoyage hebdomadaire du bureau et l'accès à la salle de réunion à concurrence de [[QUANTITE:dix heures]] par mois.
+Les heures de salle de réunion excédentaires sont facturées à [[MONTANT:30 EUR]] hors TVA de l'heure.
+
+Article 6 – Garantie
+Au plus tard à la signature de la présente convention, l'Occupant verse à titre de garantie une somme de [[MONTANT:2.850 EUR]] sur le compte [[IDENTIFIANT:BE29 0018 7766 5143]] de l'Exploitant.
+La garantie ne porte pas intérêt. Elle est restituée dans les deux mois de la fin de la convention, déduction faite des sommes dont l'Occupant resterait redevable.
+
+Article 7 – Modalités de paiement
+La redevance est payable anticipativement, au plus tard le cinquième jour ouvrable de chaque mois.
+Toute somme impayée à son échéance produit de plein droit un intérêt au taux de l'intérêt légal, majoré de deux points, à dater de l'échéance.
+Après deux rappels restés sans suite, l'Exploitant peut suspendre l'accès aux services, à l'exclusion de l'accès au bureau.
+
+Article 8 – Usage des locaux
+L'Occupant utilise le bureau exclusivement à des fins professionnelles, en bon père de famille, et respecte le règlement d'ordre intérieur du centre, dont il reconnaît avoir reçu un exemplaire.
+Il ne peut apporter aucune modification aux locaux ni céder ou sous-louer tout ou partie de ses droits sans l'accord écrit préalable de l'Exploitant.
+
+Article 9 – Assurances
+L'Exploitant assure l'immeuble et les équipements mis à disposition contre l'incendie et les périls connexes.
+L'Occupant assure ses propres biens et sa responsabilité civile professionnelle, et en justifie à première demande.
+
+Article 10 – Responsabilité
+L'Exploitant n'est pas responsable des interruptions de services dues à des causes extérieures, notamment les pannes du réseau de télécommunications ou de distribution d'énergie.
+Sa responsabilité éventuelle est en toute hypothèse limitée à [[MONTANT:5.000 EUR]] par année de convention.
+
+Article 11 – Protection des données
+Chaque Partie traite les données à caractère personnel communiquées par l'autre dans le respect du règlement (UE) 2016/679 du 27 avril 2016 et de la loi du 30 juillet 2018 relative à la protection des personnes physiques à l'égard des traitements de données à caractère personnel.
+Les données relatives aux badges d'accès sont conservées pendant six mois au maximum.
+
+Article 12 – Fin de la convention
+À la fin de la convention, l'Occupant libère le bureau et le restitue dans l'état où il l'a reçu, compte tenu de l'usure normale. Il remet les [[QUANTITE:quatre]] badges d'accès qui lui ont été confiés.
+Tout retard dans la libération des lieux donne lieu au paiement d'une indemnité d'occupation de [[MONTANT:60 EUR]] par jour de retard, sans préjudice du droit de l'Exploitant de réclamer réparation d'un dommage supérieur.
+
+Article 13 – Notifications
+Les notifications sont valablement adressées par courriel, et par lettre recommandée pour toute mise en demeure ou résiliation :
+à l'Exploitant : à l'attention de [[PARTIE:Monsieur Karim Bensaïd]], [[ADRESSE:quai de Flandre 31, 6000 Charleroi]], [[IDENTIFIANT:direction@sambreworkspace.be]] ;
+à l'Occupant : à l'attention de [[PARTIE:Madame Sophie Delvaux]], [[ADRESSE:rue de Marcinelle 9, 6001 Marcinelle]], [[IDENTIFIANT:sophie.delvaux@delvaux-compta.be]], [[IDENTIFIANT:+32 71 47 82 19]].
+
+Article 14 – Droit applicable et juridiction
+La présente convention est régie par le droit belge.
+Préalablement à toute action judiciaire, les Parties s'engagent à tenter une médiation. À défaut d'accord dans les soixante jours de la demande de médiation, seuls les tribunaux de l'arrondissement du Hainaut, division Charleroi, sont compétents.
+
+Fait à Charleroi, le [[DATE:14 avril 2026]], en deux exemplaires originaux.
+Pour l'Exploitant,
+[[PARTIE:Karim Bensaïd]]
+Pour l'Occupant,
+[[PARTIE:Sophie Delvaux]]

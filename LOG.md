@@ -10,6 +10,24 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-01 - P03 Lite Conditions particulières et générales, F-CPCG-01
+Fait :
+- Jeu F-CPCG-01 v1.0, en deux parties :
+  - jeu de développement : 2 contrats, 28 blocs, 42 données propres balisées `[[CAT:…]]` ;
+  - jeu de contrôle : 3 contrats, 46 blocs, 92 données, rédigé par un agent sans accès au code ;
+  - générateur, évaluation (données repérées, signalements exacts, blocs bien classés), planchers.
+- Outil outils/conditions-particulieres 0.1.0, rapport seul, sans IA :
+  - découpage en blocs ;
+  - repérage des données propres à l'opération (parties, adresses, identifiants, montants, dates, quantités) ;
+  - classement : particulières, générales, clause mixte à épurer ; renvois internes ;
+  - rapport .docx, .md, .json ; fenêtre et ligne de commande ;
+  - 35 tests.
+- Relecture indépendante : 5 défauts bloquants, 9 à corriger et 2 mineurs, tous corrigés et couverts par un test (verifications/2026-11-01-revue.md). Le relecteur a fermé par COM l'instance cachée de Word laissée par le test de P02 (démarrée à 11:09:08, sans fenêtre).
+Mesure, jeu de contrôle : données repérées 80/92 sans faux signalement (quantités 4/13) ; blocs bien classés 41/46, dont une clause mixte proposée en conditions générales. Totaux inchangés par les corrections de la relecture.
+Décisions : ADR-017 (P03 Lite, rapport seul), Proposée.
+Points ouverts (Florian) : valider ADR-017 ; tester Conditions.pyw sur un contrat négocié réel ; trancher la question de la fiche (modèle anonymisé, qui rejoint P09).
+Prochaine étape : selon ADR-015 (mode IA de P01) ; sinon P07 (mémoire de dossier), qui demande d'abord la réponse de Florian à la question de sa fiche.
+
 ## 2026-11-01 - P02 Lite Glossaire des définitions, F-DEF-01
 Fait :
 - Jeu F-DEF-01 v1.0, en deux parties :

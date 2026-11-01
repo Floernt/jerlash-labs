@@ -1,0 +1,82 @@
+fichier: Contrat de maintenance - Froid Industriel Mosan - Boulangeries Lejeune.docx
+---
+CONTRAT DE MAINTENANCE D'ÉQUIPEMENTS FRIGORIFIQUES
+ENTRE
+[[PARTIE:Froid Industriel Mosan SRL]], dont le siège est établi [[ADRESSE:rue de l'Expansion 17, 4460 Grâce-Hollogne]], assujettie à la TVA sous le numéro [[IDENTIFIANT:BE 0612.348.775]], représentée par [[PARTIE:Monsieur Thierry Lambotte]], administrateur,
+ci-après « le Mainteneur » ;
+ET
+[[PARTIE:Boulangeries Lejeune SRL]], dont le siège est établi [[ADRESSE:avenue de Spa 210, 4800 Verviers]], inscrite à la Banque-Carrefour des Entreprises sous le numéro [[IDENTIFIANT:0723.661.084]], représentée par [[PARTIE:Madame Nadia Lejeune]], gérante,
+ci-après « le Client ».
+IL A ÉTÉ CONVENU CE QUI SUIT :
+
+1. Définitions
+Dans le présent contrat, les termes suivants ont la signification qui leur est donnée ci-après :
+« Équipements » : les installations frigorifiques du Client décrites à l'article 2 et dans l'inventaire joint en annexe ;
+« Maintenance préventive » : les visites programmées de contrôle, de nettoyage et de réglage des Équipements ;
+« Maintenance curative » : toute intervention destinée à remédier à une panne ou à un dysfonctionnement ;
+« Jours ouvrables » : du lundi au vendredi, à l'exception des jours fériés légaux.
+
+2. Objet
+Le Client confie au Mainteneur, qui l'accepte, la maintenance préventive et curative des Équipements installés dans l'atelier de production situé [[ADRESSE:rue du Collège 5, 4800 Verviers]].
+Les Équipements comprennent [[QUANTITE:quatre]] chambres froides positives, [[QUANTITE:deux]] chambres de fermentation contrôlée et [[QUANTITE:six]] congélateurs armoires, dont l'inventaire détaillé figure en annexe.
+Le présent contrat fait suite au bon de commande n° [[IDENTIFIANT:BC-LEJ-2026-044]] émis par le Client.
+
+3. Prix
+Les prestations sont facturées selon le tableau suivant (montants hors TVA) :
+| Prestation | Fréquence | Prix |
+| Visite de maintenance préventive | [[QUANTITE:4]] visites par an | [[MONTANT:380 EUR]] par visite |
+| Intervention curative (main-d'œuvre) | sur appel | [[MONTANT:85 EUR]] par heure |
+| Frais de déplacement | par intervention | [[MONTANT:45 EUR]] |
+| Astreinte de week-end | mensuelle | [[MONTANT:210 EUR]] |
+Les pièces de rechange sont facturées au prix catalogue du fabricant en vigueur au jour de l'intervention.
+
+4. Révision des prix
+Les prix sont révisés le 1er janvier de chaque année selon la formule P = P0 × (0,20 + 0,80 × S/S0), où S représente l'indice des salaires de référence publié pour le mois de décembre précédant la révision et S0 le même indice au mois précédant la signature du contrat.
+La révision s'applique de plein droit, sans notification préalable.
+
+5. Délais d'intervention
+Les demandes d'intervention curative sont adressées au service de dépannage du Mainteneur, joignable au [[IDENTIFIANT:+32 4 239 41 60]] ou à l'adresse [[IDENTIFIANT:depannage@froidmosan.be]].
+Le Mainteneur intervient sur site dans les quatre heures ouvrables de l'appel en cas de panne entraînant l'arrêt d'une chambre froide, et dans les deux jours ouvrables dans les autres cas.
+Le non-respect de ces délais ne donne lieu à aucune pénalité, sauf faute lourde du Mainteneur.
+
+6. Paiement
+Les factures sont payables dans les trente jours fin de mois.
+En cas de retard de paiement, le Client est redevable de plein droit et sans mise en demeure d'un intérêt au taux prévu par l'article 5 de la loi du 2 août 2002 concernant la lutte contre le retard de paiement dans les transactions commerciales, ainsi que de l'indemnité forfaitaire prévue par l'article 6 de cette loi.
+Le Mainteneur peut suspendre ses interventions non urgentes tant qu'une facture échue demeure impayée.
+
+7. Obligations du Client
+Le Client utilise les Équipements conformément aux instructions du fabricant et en assure l'entretien courant.
+Il garantit au Mainteneur un libre accès aux Équipements pendant les heures convenues et l'informe sans délai de toute anomalie.
+Il s'interdit de faire intervenir un tiers sur les Équipements pendant la durée du contrat, sauf urgence dûment justifiée.
+
+8. Garantie des interventions
+Les pièces remplacées par le Mainteneur sont garanties six mois à compter de leur installation, pièces et main-d'œuvre.
+La garantie ne couvre pas les dommages résultant d'une mauvaise utilisation, d'une coupure d'alimentation électrique ou de l'intervention d'un tiers.
+
+9. Responsabilité et assurances
+Le Mainteneur est responsable des dommages directs causés par sa faute dans l'exécution du contrat. Sa responsabilité est limitée à [[MONTANT:25.000 EUR]] par sinistre et à [[MONTANT:50.000 EUR]] par année contractuelle.
+Le Mainteneur n'est en aucun cas tenu des dommages indirects, tels que la perte de marchandises, le manque à gagner ou la perte de clientèle.
+Le Mainteneur déclare être couvert par une police d'assurance responsabilité civile professionnelle portant le numéro [[IDENTIFIANT:RC-77.412.903]], dont il fournit l'attestation sur simple demande.
+
+10. Durée
+Le contrat prend cours le [[DATE:1er avril 2026]] et est conclu pour une période initiale se terminant le [[DATE:31 mars 2029]].
+Il est ensuite reconduit tacitement par périodes successives d'un an, sauf dénonciation par l'une des Parties notifiée par lettre recommandée au moins trois mois avant l'échéance.
+
+11. Résiliation pour manquement
+En cas de manquement grave de l'une des Parties à ses obligations, l'autre Partie peut résilier le contrat par lettre recommandée, après une mise en demeure restée sans effet pendant quinze jours.
+La résiliation ne fait pas obstacle à l'octroi de dommages et intérêts.
+
+12. Force majeure
+Aucune Partie n'est responsable de l'inexécution de ses obligations résultant d'un cas de force majeure au sens de l'article 5.226 du Code civil.
+Si la force majeure se prolonge au-delà de soixante jours, chaque Partie peut mettre fin au contrat sans indemnité.
+
+13. Cession
+Le Client ne peut céder le contrat à un tiers sans l'accord écrit préalable du Mainteneur. Le Mainteneur peut sous-traiter tout ou partie des prestations, sous sa responsabilité.
+
+14. Droit applicable et litiges
+Le contrat est soumis au droit belge.
+Les Parties s'efforcent de régler à l'amiable tout différend. À défaut d'accord dans les trente jours, le litige est porté devant le tribunal de l'entreprise de Liège, division Verviers.
+
+Fait à Verviers, le [[DATE:18/03/2026]], en deux exemplaires.
+Pour le Mainteneur : [[PARTIE:Thierry Lambotte]]
+Pour le Client : [[PARTIE:Nadia Lejeune]]

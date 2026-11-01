@@ -1,0 +1,5 @@
+{
+ "_note": "Planchers de non-régression de conditions-particulieres (P03). Jeu de développement : tout doit rester exact. Jeu de contrôle : valeurs mesurées sur la version 0.1.0 le 2026-11-01 (rappel des données, précision des signalements, articles bien classés) ; une modification qui les fait baisser est refusée. Ne jamais régler les règles sur le jeu de contrôle.",
+ "developpement": {"rappel": 1.0, "precision": 1.0, "articles": 1.0},
+ "controle": {"rappel": 0.86, "precision": 1.0, "articles": 0.89}
+}

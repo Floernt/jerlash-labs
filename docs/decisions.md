@@ -150,3 +150,11 @@ Contexte : la fiche P02 prévoit de regrouper les définitions d'un contrat dans
 Options : A) attendre P10 ; B) une version « rapport » seule, par règles, en local, qui ne modifie pas le contrat ; C) B avec un contrôle par IA.
 Décision : B pour la version 0.1.0. Application locale (mode B d'ADR-010), bibliothèque standard seule. Mesure sur F-DEF-01 : jeu de développement et jeu de contrôle rédigé par un agent sans accès au code ; seul le second est publié.
 Conséquences : la question ouverte de la fiche (annexe en fin de contrat ou article « Définitions » en tête) ne se pose qu'avec la restructuration, reportée. C reste possible après la décision sur ADR-015. Les termes définis sans guillemets hors de l'article des définitions, et les définitions dans les notes de bas de page, ne sont pas reconnus.
+
+## ADR-017 - P03 Lite : rapport de préparation, par règles, sans séparer le contrat
+Date : 2026-11-01
+Statut : Proposée (décision déléguée par Florian le 2026-10-31 ("continue à build les outils"), à valider)
+Contexte : la fiche P03 prévoit de produire, à partir d'un contrat négocié, des conditions particulières et des conditions générales distinctes. Comme pour P02 (ADR-016), produire les deux .docx en conservant mise en forme et renvois exige le composant P10, qui n'existe pas. La partie la plus utile au cabinet est pourtant réalisable sans lui : savoir quelles clauses contiennent encore des données de l'opération avant de réutiliser un contrat comme modèle.
+Options : A) attendre P10 ; B) un rapport par règles, en local, qui classe chaque bloc (particulières, générales, mixte) et liste les données propres à l'opération et les renvois internes ; C) B avec un classement par IA.
+Décision : B pour la version 0.1.0. Application locale (mode B d'ADR-010), bibliothèque standard seule. Mesure sur F-CPCG-01, avec un jeu de contrôle rédigé par un agent sans accès au code.
+Conséquences : la question ouverte de la fiche (produire en plus un modèle anonymisé) reste ouverte ; elle rejoint P09, qui pseudonymise déjà un texte. Le classement est une proposition : la question de savoir si une clause peut être déplacée sans changer l'effet du contrat (ordre de priorité entre documents, opposabilité des conditions générales) relève de l'avocat, pas de l'outil.
