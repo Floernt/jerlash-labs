@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "What if AI were first and foremost a way to read better"
 date: 2026-06-13
 description: "There is a lot of talk about generative AI as a drafting assistant."

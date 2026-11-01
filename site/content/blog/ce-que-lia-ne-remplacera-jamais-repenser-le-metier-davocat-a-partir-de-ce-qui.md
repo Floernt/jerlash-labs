@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Ce que l’IA ne remplacera jamais. Repenser le métier d’avocat à partir de ce qui dure"
 date: 2026-06-13
 description: "Tout le monde s’inquiète de savoir si l’IA va remplacer les avocats."

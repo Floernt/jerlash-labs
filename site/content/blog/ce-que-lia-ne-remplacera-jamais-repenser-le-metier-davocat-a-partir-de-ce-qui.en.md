@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "What AI will never replace. Rethinking the lawyer’s profession from what endures"
 date: 2026-06-13
 description: "Everyone is worried about whether AI will replace lawyers."
