@@ -1,6 +1,6 @@
-# Factory iavocat.be
+# Factory jerlash.labs
 
-La Factory organise la production des outils publiés sur iavocat.be. Elle fixe un circuit unique (de l'idée à la publication), des rôles confiés à des agents Claude Code, des standards communs, des composants réutilisables et un banc d'essai. Un agent de supervision, `ops-factory`, suit la production, contrôle les étapes et améliore la Factory elle-même.
+La Factory organise la production des outils publiés sur jerlash.labs. Elle fixe un circuit unique (de l'idée à la publication), des rôles confiés à des agents Claude Code, des standards communs, des composants réutilisables et un banc d'essai. Un agent de supervision, `ops-factory`, suit la production, contrôle les étapes et améliore la Factory elle-même.
 
 ## Principes
 

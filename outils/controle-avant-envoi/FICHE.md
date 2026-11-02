@@ -32,7 +32,7 @@ Fournisseurs compatibles : aucun, l'outil n'utilise pas d'IA.
 
 - Reste sur votre machine : le document, la liste de termes, le rapport.
 - Est envoyé à un fournisseur d'IA : rien.
-- Est envoyé à iavocat.be : rien.
+- Est envoyé à jerlash.labs : rien.
 
 Le rapport contient des extraits du document. Il est enregistré dans `Documents\Controle avant envoi`, et non à côté du document, pour éviter de le joindre par erreur.
 
@@ -50,7 +50,7 @@ Gratuit : aucun appel à un service payant.
 ## Installation
 
 1. Installez Python 3.10 ou plus récent depuis python.org, en cochant l'option qui ajoute Python au PATH.
-2. Téléchargez l'archive de l'outil sur la fiche iavocat.be et vérifiez son empreinte SHA-256 (procédure dans le guide « Utiliser un outil en local »).
+2. Téléchargez l'archive de l'outil sur la fiche jerlash.labs et vérifiez son empreinte SHA-256 (procédure dans le guide « Utiliser un outil en local »).
 3. Décompressez l'archive dans un dossier de votre choix.
 4. Double-cliquez sur `Controle avant envoi.pyw`.
 5. Cliquez sur « Choisir des documents… ».

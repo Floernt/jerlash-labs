@@ -26,7 +26,7 @@ Page navigateur hors ligne : coller ou charger un texte, voir les entités déte
 
 Hors périmètre : garantie d'anonymisation au sens du RGPD.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Couverture du français et des identifiants belges (numéro de registre national, numéro d'entreprise, IBAN BE) [À VÉRIFIER dans la bibliothèque ; à compléter par des règles propres si absent].
 

@@ -1,12 +1,12 @@
 ---
 titre: "Quatre cases pour savoir où joue votre cabinet"
 rubrique: automatiser-une-prestation
-source: ../iavocat-article-matrice-decision.docx (dossier parent, mars 2026)
+source: ../jerlash-labs-article-matrice-decision.docx (dossier parent, mars 2026)
 statut: importé, à relire avant publication
 import: 2026-10-31 (conversion pandoc, contenu inchangé)
 ---
 
-*iavocat.be — Article*
+*jerlash.labs — Article*
 
 **Quatre cases pour savoir où joue votre cabinet**
 

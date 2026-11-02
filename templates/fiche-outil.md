@@ -30,7 +30,7 @@ Fournisseurs compatibles : [liste].
 
 - Reste sur votre machine : [...]
 - Est envoyé au fournisseur choisi : [...]
-- Est envoyé à iavocat.be : rien.
+- Est envoyé à jerlash.labs : rien.
 
 ## Coût estimé
 

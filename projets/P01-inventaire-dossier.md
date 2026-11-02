@@ -26,7 +26,7 @@ L'avocat désigne un dossier local. L'outil classe les pièces, identifie pour c
 
 Hors périmètre : analyse juridique des clauses, avis sur la validité, traitement de dossiers contentieux (une variante pourrait suivre).
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Exécution locale ; seuls les extraits nécessaires partent vers le fournisseur choisi. Sortie en français. Vocabulaire belge (avenant, conditions particulières, mise en demeure). Option de pseudonymisation préalable via P09.
 

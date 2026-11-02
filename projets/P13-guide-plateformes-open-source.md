@@ -26,7 +26,7 @@ Un guide factuel : ce que chaque plateforme fait, ce qu'il faut pour l'installer
 
 Hors périmètre : recommandation d'achat, installation pour le compte de tiers.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Préciser la couverture des sources belges (stella mentionne plusieurs registres nationaux ; la Banque-Carrefour des Entreprises n'est pas citée dans l'extrait lu) [À VÉRIFIER].
 

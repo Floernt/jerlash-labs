@@ -28,7 +28,7 @@ Outil local : l'avocat définit ses colonnes (questions), désigne un dossier, o
 
 Hors périmètre : base de données de dossiers, interface collaborative.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Partir de la skill existante plutôt que de stella, beaucoup plus lourd. Ajouter le contrôle de coût et la pseudonymisation optionnelle.
 

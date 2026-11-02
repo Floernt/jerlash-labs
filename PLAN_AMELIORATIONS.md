@@ -1,8 +1,8 @@
-# iavocat.be — Plan d'amélioration du projet et de la Factory
+# jerlash.labs — Plan d'amélioration du projet et de la Factory
 
 **Date :** 31 octobre 2026  
 **Statut :** propositions à arbitrer, non encore mises en œuvre  
-**Périmètre examiné :** archive `iavocat.zip` fournie le 31 octobre 2026  
+**Périmètre examiné :** archive `jerlash-labs.zip` fournie le 31 octobre 2026  
 **Destination conseillée dans le dépôt :** `PLAN_AMELIORATIONS.md` (racine)
 
 > **Objectif.** Transformer le cadrage documentaire actuel en une chaîne de production capable de livrer des outils juridiques fiables, utiles, contrôlables et réellement utilisables par des avocats belges. Ce document est un plan d'exécution, **pas** une instruction d'appliquer automatiquement toutes les décisions proposées. Les décisions d'architecture, de publication, de licence et de conformité restent soumises à validation humaine.
@@ -102,7 +102,7 @@
 
 **Travaux :**
 
-- [ ] Remplacer cette assertion par une formule conditionnelle : l'architecture réduit ou supprime certains flux vers iavocat.be, **sans préjuger** des qualifications et responsabilités juridiques de chaque acteur.
+- [ ] Remplacer cette assertion par une formule conditionnelle : l'architecture réduit ou supprime certains flux vers jerlash.labs, **sans préjuger** des qualifications et responsabilités juridiques de chaque acteur.
 - [ ] Distinguer éditeur du site, concepteur/distributeur de l'outil, utilisateur avocat, fournisseur d'API, hébergeur et éventuels sous-traitants.
 - [ ] Vérifier, pour chaque type d'outil, la confidentialité, le secret professionnel, les rôles RGPD, les transferts internationaux et, le cas échéant, les obligations relatives à l'IA.
 - [ ] Vérifier les obligations de communication professionnelle et les mentions légales selon les règles applicables à l'éditeur du site.
@@ -288,7 +288,7 @@
 
 - [ ] Un avocat peut identifier les éléments nécessitant son jugement et contrôler ce qui sera exporté ou utilisé.
 
-### A12 — Clarifier le positionnement éditorial d'iavocat.be
+### A12 — Clarifier le positionnement éditorial de jerlash.labs
 
 **Fichiers :** `docs/cahier-des-charges.md`, `docs/charte-editoriale.md`, `templates/fiche-outil.md`, futur `site/`.
 

@@ -59,7 +59,7 @@ def a_epurer(analyse: Analyse) -> list[str]:
 
 def en_dict(analyse: Analyse) -> dict:
     return {
-        "outil": "conditions-particulieres (iavocat.be)", "version": __version__, "mode": "local, sans IA",
+        "outil": "conditions-particulieres (jerlash.labs)", "version": __version__, "mode": "local, sans IA",
         "etabli_le": datetime.datetime.now().isoformat(timespec="seconds"), "document": analyse.document,
         "avertissement": AVERTISSEMENT,
         "blocs": [{"titre": b.titre, "classement": b.classement, "raison": b.raison, "renvois": b.renvois,
@@ -79,7 +79,7 @@ def cellule_md(texte: str) -> str:
 
 def en_markdown(analyse: Analyse) -> str:
     sortie = [f"# Conditions particulières et générales : {cellule_md(analyse.document)}", "",
-              f"Établi le {datetime.date.today().isoformat()} par l'outil conditions-particulieres {__version__} (iavocat.be).",
+              f"Établi le {datetime.date.today().isoformat()} par l'outil conditions-particulieres {__version__} (jerlash.labs).",
               "", f"> {AVERTISSEMENT}", "", "## Synthèse", ""]
     sortie += [f"- {cellule_md(x)}" for x in synthese(analyse)]
     sortie += ["", "## Clauses mixtes : données à extraire avant réutilisation", ""]
@@ -116,7 +116,7 @@ def tableau(entetes: list[str], contenu: list[list[str]], largeurs: list[int]) -
 
 def en_docx(analyse: Analyse) -> bytes:
     corps = [p("Conditions particulières et générales", "Titre"), p(analyse.document),
-             p(f"Établi le {datetime.date.today().isoformat()} par l'outil conditions-particulieres {__version__} (iavocat.be)."),
+             p(f"Établi le {datetime.date.today().isoformat()} par l'outil conditions-particulieres {__version__} (jerlash.labs)."),
              p(AVERTISSEMENT, gras=True), p("Synthèse", "Titre1")]
     corps += [p(f"– {x}") for x in synthese(analyse)]
     corps.append(p("Clauses mixtes : données à extraire avant réutilisation", "Titre1"))

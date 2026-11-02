@@ -19,8 +19,8 @@ Conséquences :
 ## ADR-001 - Un domaine unique pour tous les projets
 Date : 2026-10-31
 Statut : Acceptée (choix exprimé par Florian dans le brief initial)
-Contexte : le modèle observé chez Sol Irvine utilise un domaine par projet. Florian dispose d'iavocat.be.
-Décision : tous les projets sont publiés sous iavocat.be.
+Contexte : le modèle observé chez Sol Irvine utilise un domaine par projet. Florian dispose de jerlash.labs.
+Décision : tous les projets sont publiés sous jerlash.labs.
 Conséquences : un seul nom à faire connaître ; l'isolation technique entre outils passe par l'organisation interne (voir ADR-005).
 
 ## ADR-002 - Générateur de site
@@ -37,7 +37,7 @@ Date : 2026-10-31
 Statut : Acceptée (choix de Florian, 2026-10-31)
 Contexte : site statique, pas de backend. Contraintes : HTTPS, en-têtes de sécurité, localisation des journaux.
 Options : Cloudflare Pages, Netlify, GitHub Pages, hébergeur européen.
-Décision : GitHub Pages, domaine iavocat.be enregistré chez OVH. Construction et déploiement par GitHub Actions (Hugo figé, ADR-002).
+Décision : GitHub Pages, domaine jerlash.labs enregistré chez OVH. Construction et déploiement par GitHub Actions (Hugo figé, ADR-002).
 Conséquences :
 - GitHub Pages ne permet pas de définir des en-têtes HTTP. La Content-Security-Policy et la Referrer-Policy sont posées en balises <meta> dans chaque page. Ne peuvent pas être appliqués : frame-ancestors, X-Frame-Options, Permissions-Policy, X-Content-Type-Options, HSTS configurable. Risque jugé acceptable parce que le site ne contient ni JavaScript, ni formulaire, ni clé API, et que les outils s'exécutent hors du site (ADR-010). À réexaminer si une page interactive est ajoutée.
 - HTTPS : option "Enforce HTTPS" à activer dans les réglages du dépôt après validation du certificat [À VÉRIFIER lors du déploiement].
@@ -49,16 +49,16 @@ Conséquences :
 ## ADR-004 - Outils locaux, clé de l'utilisateur, aucun backend
 Date : 2026-10-31
 Statut : Acceptée (brief initial), en révision (PLAN_AMELIORATIONS.md, A01 et A03 ; voir ADR-010)
-Décision : chaque outil s'exécute chez l'utilisateur avec sa propre clé API. iavocat.be n'opère aucun serveur qui reçoit des données ou des clés.
-Conséquences : pas de coût d'API pour le site. L'architecture supprime les flux de données de dossier vers iavocat.be, sans préjuger des qualifications et responsabilités juridiques de chaque acteur (éditeur du site, concepteur de l'outil, avocat utilisateur, fournisseur d'API, hébergeur), qui restent à vérifier par type d'outil [À VÉRIFIER, A03]. En contrepartie, l'installation et la configuration reposent sur l'utilisateur, d'où l'importance des guides.
+Décision : chaque outil s'exécute chez l'utilisateur avec sa propre clé API. jerlash.labs n'opère aucun serveur qui reçoit des données ou des clés.
+Conséquences : pas de coût d'API pour le site. L'architecture supprime les flux de données de dossier vers jerlash.labs, sans préjuger des qualifications et responsabilités juridiques de chaque acteur (éditeur du site, concepteur de l'outil, avocat utilisateur, fournisseur d'API, hébergeur), qui restent à vérifier par type d'outil [À VÉRIFIER, A03]. En contrepartie, l'installation et la configuration reposent sur l'utilisateur, d'où l'importance des guides.
 Note de correction (2026-10-31) : la version initiale affirmait "pas de responsabilité de traitement des données de dossier". Cette conclusion ne découlait pas de l'absence de backend ; elle a été retirée.
 
 ## ADR-005 - Chemins ou sous-domaines pour les outils
 Date : 2026-10-31
 Statut : Acceptée (Décision déléguée par Florian le 2026-10-31 ("décide pour réaliser un projet abouti"), révisable)
-Options : A) iavocat.be/outils/<slug> ; B) <slug>.iavocat.be ; C) fiches en chemins, outils exécutables en sous-domaines.
+Options : A) jerlash.labs/outils/<slug> ; B) <slug>.jerlash.labs ; C) fiches en chemins, outils exécutables en sous-domaines.
 Recommandation initiale : C, pour isoler chaque page qui manipule une clé API.
-Décision (2026-10-31) : A, chemins (iavocat.be/outils/<slug>). Aucun outil ne s'exécute dans le navigateur avec une clé (ADR-010), l'argument d'isolation de l'option C tombe. Si un outil navigateur manipulant une clé est un jour admis par décision spécifique, il sera publié sur son propre sous-domaine.
+Décision (2026-10-31) : A, chemins (jerlash.labs/outils/<slug>). Aucun outil ne s'exécute dans le navigateur avec une clé (ADR-010), l'argument d'isolation de l'option C tombe. Si un outil navigateur manipulant une clé est un jour admis par décision spécifique, il sera publié sur son propre sous-domaine.
 
 ## ADR-006 - Publication et licence du code
 Date : 2026-10-31
@@ -112,7 +112,7 @@ Conséquences : le premier outil ne dépend pas d'ADR-010. Le jeu de test F-DOCX
 ## ADR-012 - Rubrique "Automatiser une prestation"
 Date : 2026-10-31
 Statut : Acceptée (choix de Florian)
-Contexte : deux articles rédigés pour iavocat.be en mars 2026 (grille en quatre critères, matrice standardisation x enjeu) ne trouvaient pas de place dans l'arborescence, et le cahier des charges excluait le contenu réflexif.
+Contexte : deux articles rédigés pour jerlash.labs en mars 2026 (grille en quatre critères, matrice standardisation x enjeu) ne trouvaient pas de place dans l'arborescence, et le cahier des charges excluait le contenu réflexif.
 Décision : création d'une rubrique "Automatiser une prestation" pour les contenus pratiques sur le modèle économique du cabinet. Les textes sources sont conservés dans contenus/automatiser-une-prestation/ jusqu'à l'initialisation du site.
 Conséquences : la charte éditoriale s'applique à ces textes ; leur relecture avant publication porte notamment sur les invitations à prendre contact en fin d'article, au regard des règles de communication de l'avocat [À VÉRIFIER]. Autres candidats à examiner : tutoriel de veille Claude Cowork, fiches "avocat entrepreneur", livre blanc (dossier parent).
 

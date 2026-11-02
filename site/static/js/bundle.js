@@ -135,5 +135,5 @@
     return out;
   }
 
-  window.IAvocat = { pixelField: pixelField, mountPixelFields: mountPixelFields, fields: Object.keys(FIELDS) };
+  window.JerlashLabs = { pixelField: pixelField, mountPixelFields: mountPixelFields, fields: Object.keys(FIELDS) };
 })();

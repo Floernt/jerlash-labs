@@ -8,7 +8,7 @@ Non consulté : le contenu des sites augustus.esq et wargame.esq (cités dans la
 
 D'après son profil GitHub : "dev + lawyer", basé à Kyoto. D'après son profil LinkedIn (extrait de recherche) : associé chez Yuson & Irvine LLC, avocat depuis une trentaine d'années, cofondateur de LegalQuants avec Raymond Sun. Sa bio X mentionne "building AI for transactional lawyers" et deux domaines dédiés, augustus.esq et wargame.esq, ce qui correspond au modèle "un domaine par projet" évoqué dans le brief.
 
-## Dépôts retenus pour iavocat.be
+## Dépôts retenus pour jerlash.labs
 
 | Dépôt | Nature | Licence | Fiche |
 |---|---|---|---|
@@ -33,7 +33,7 @@ D'après son profil GitHub : "dev + lawyer", basé à Kyoto. D'après son profil
 
 | Dépôt | Raison |
 |---|---|
-| zephyr, commerce, cctp-sample-app, safe-contracts, bridge-v2, yearn-*, ren-js-demo, use-metamask, spl-token-wallet, mobile-pwa-with-passkey-wallet | projets web3 ou e-commerce sans lien avec les outils d'iavocat.be. SafeHarbor2.0, OP-SAFT et metalex peuvent intéresser CryptoReflexions, pas iavocat.be |
+| zephyr, commerce, cctp-sample-app, safe-contracts, bridge-v2, yearn-*, ren-js-demo, use-metamask, spl-token-wallet, mobile-pwa-with-passkey-wallet | projets web3 ou e-commerce sans lien avec les outils de jerlash.labs. SafeHarbor2.0, OP-SAFT et metalex peuvent intéresser CryptoReflexions, pas jerlash.labs |
 | zenzen-leo | agent connecté à WhatsApp : contraire au principe de confidentialité des outils |
 | maana-annex | site vitrine d'un projet immobilier |
 | para-releases | application desktop dont le code est privé et dont l'objet n'est pas décrit dans le dépôt |

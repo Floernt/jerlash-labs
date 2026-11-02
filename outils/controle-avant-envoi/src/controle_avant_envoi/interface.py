@@ -34,7 +34,7 @@ class Application(ttk.Frame):
         self.dossier = dossier_par_defaut()
         self.rapports: dict[str, tuple] = {}
         self.ecrits: set = set()
-        racine.title(f"Contrôle avant envoi {__version__} — iavocat.be")
+        racine.title(f"Contrôle avant envoi {__version__} — jerlash.labs")
         racine.minsize(720, 460)
         self.grid(sticky="nsew")
         racine.columnconfigure(0, weight=1)

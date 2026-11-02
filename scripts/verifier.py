@@ -114,7 +114,7 @@ def verifier_site(exiger_hugo: bool) -> None:
         return
     r = lancer(["hugo", "version"])
     etape(f"v{HUGO_VERSION}" in r.stdout and "extended" in r.stdout, f"Hugo extended {HUGO_VERSION} (ADR-002) : {r.stdout.strip()[:60]}")
-    sortie = tempfile.mkdtemp(prefix="iavocat-site-")
+    sortie = tempfile.mkdtemp(prefix="jerlash-labs-site-")
     try:
         r = lancer(["hugo", "--source", SITE, "--destination", sortie, "--cleanDestinationDir",
                     "--panicOnWarning", "--printPathWarnings", "--quiet",

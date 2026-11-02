@@ -27,7 +27,7 @@ class Application(ttk.Frame):
         self.sortie = dossier_par_defaut()
         self.rapport: str | None = None
         self.analyse = None
-        racine.title(f"Conditions particulières et générales {__version__} — iavocat.be")
+        racine.title(f"Conditions particulières et générales {__version__} — jerlash.labs")
         racine.minsize(1000, 640)
         self.grid(sticky="nsew")
         racine.columnconfigure(0, weight=1)

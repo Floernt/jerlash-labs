@@ -26,7 +26,7 @@ L'outil reçoit un contrat .docx, repère les définitions, les doublons, les te
 
 Hors périmètre : réécriture des définitions sur le fond.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Gestion des conventions françaises (guillemets, "ci-après dénommé", définitions entre parenthèses), contrats bilingues FR/NL en option ultérieure.
 

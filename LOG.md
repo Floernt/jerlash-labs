@@ -208,3 +208,13 @@ Fait : rédaction du cahier des charges v0.1, de CLAUDE.md, des principes outils
 Décisions : ADR-001 et ADR-004 acceptées (issues du brief). ADR-002, 003, 005 et 006 proposées.
 Points ouverts : voir section 16 du cahier des charges. Le site de Sol Irvine cité comme modèle n'a pas été consulté.
 Prochaine étape : valider le cahier des charges et trancher ADR-002, ADR-003 et ADR-005.
+
+## JALON — 2026-11-02
+
+**Renommage :** suppression des dernières références à « iavocat » dans l'état actuel du dépôt. Graphies retenues : `iavocat.be` → `jerlash.labs` ; `iavocat` en nom de fichier ou identifiant → `jerlash-labs` ; `window.IAvocat` → `window.JerlashLabs`. Élisions corrigées (« d'iavocat.be » → « de jerlash.labs »).
+
+**Choix :** historique git non réécrit (anciens messages de commit inchangés) ; entrées passées de ce LOG.md laissées intactes (append-only). Empreintes des archives d'outils recalculées (`scripts/empaqueter.py --fiche`) ; `scripts/verifier.py` : 23/23.
+
+**Hors dépôt :** dossiers `LEGALTECH/iavocat` et `iavocat/iavocat` à renommer en `jerlash-labs`, fichiers `iavocat-article-*.docx` et `iavocat.zip` du dossier parent renommés.
+
+---

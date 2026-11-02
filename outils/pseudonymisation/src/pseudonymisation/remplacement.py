@@ -83,7 +83,7 @@ def pseudonymiser(texte: str, entites: list[Entite], source: str = "") -> Result
         correspondances.append({"marqueur": marqueur, "categorie": categorie,
                                 "retablir_par": max(originaux, key=len), "formes": originaux})
     table = {
-        "outil": "pseudonymisation (iavocat.be)",
+        "outil": "pseudonymisation (jerlash.labs)",
         "version": __version__,
         "avertissement": "Cette table contient les données d'origine. Gardez-la sur votre ordinateur ; "
                          "ne l'envoyez jamais avec le texte pseudonymisé.",

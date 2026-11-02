@@ -26,7 +26,7 @@ Un guide et un paquet prêt à l'emploi pour utiliser une mémoire de dossier da
 
 Hors périmètre : synchronisation dans le cloud.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 La mémoire contient des informations couvertes par le secret professionnel. Le guide doit traiter : emplacement local, exclusion de tout dossier synchronisé non maîtrisé, pseudonymisation des noms dans la mémoire, durée de conservation, suppression en fin de dossier.
 

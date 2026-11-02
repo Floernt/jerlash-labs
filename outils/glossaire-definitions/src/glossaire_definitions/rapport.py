@@ -46,7 +46,7 @@ def lignes(analyse: Analyse) -> list[list[str]]:
 
 def en_dict(analyse: Analyse) -> dict:
     return {
-        "outil": "glossaire-definitions (iavocat.be)", "version": __version__, "mode": "local, sans IA",
+        "outil": "glossaire-definitions (jerlash.labs)", "version": __version__, "mode": "local, sans IA",
         "etabli_le": datetime.datetime.now().isoformat(timespec="seconds"), "document": analyse.document,
         "avertissement": AVERTISSEMENT,
         "constats": [{"categorie": c.categorie, "terme": c.terme, "forme": c.forme, "message": c.message}
@@ -79,7 +79,7 @@ def cellule_md(texte: str) -> str:
 
 def en_markdown(analyse: Analyse) -> str:
     sortie = [f"# Glossaire des définitions : {cellule_md(analyse.document)}", "",
-              f"Établi le {datetime.date.today().isoformat()} par l'outil glossaire-definitions {__version__} (iavocat.be).",
+              f"Établi le {datetime.date.today().isoformat()} par l'outil glossaire-definitions {__version__} (jerlash.labs).",
               "", f"> {AVERTISSEMENT}", "", "## Synthèse", ""]
     sortie += [f"- {x}" for x in synthese(analyse)]
     sortie += ["", "## Points à examiner", ""]
@@ -121,7 +121,7 @@ def tableau(entetes: list[str], contenu: list[list[str]], largeurs: list[int]) -
 
 def en_docx(analyse: Analyse) -> bytes:
     corps = [p("Glossaire des définitions", "Titre"), p(analyse.document),
-             p(f"Établi le {datetime.date.today().isoformat()} par l'outil glossaire-definitions {__version__} (iavocat.be)."),
+             p(f"Établi le {datetime.date.today().isoformat()} par l'outil glossaire-definitions {__version__} (jerlash.labs)."),
              p(AVERTISSEMENT, gras=True), p("Synthèse", "Titre1")]
     corps += [p(f"– {x}") for x in synthese(analyse)]
     corps.append(p("Points à examiner", "Titre1"))

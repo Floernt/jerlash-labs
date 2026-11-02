@@ -26,7 +26,7 @@ mise_a_jour: AAAA-MM-JJ
 
 Hors périmètre : [...]
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 [Exécution locale, BYOK, français, droit belge, écarts avec la source.]
 

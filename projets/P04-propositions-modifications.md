@@ -26,7 +26,7 @@ L'avocat fournit sa copie de travail et une consigne. L'outil produit un .docx a
 
 Hors périmètre : intégration automatique dans la copie de travail.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Commentaires en français, auteur des modifications identifiable (par exemple "Proposition IA"), compatibilité avec Word tel qu'utilisé au cabinet.
 

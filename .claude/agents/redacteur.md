@@ -1,6 +1,6 @@
 ---
 name: redacteur
-description: Rédige les fiches publiques des outils et les guides d'iavocat.be selon la charte éditoriale. À utiliser à l'étape publication et pour tout contenu du site.
+description: Rédige les fiches publiques des outils et les guides de jerlash.labs selon la charte éditoriale. À utiliser à l'étape publication et pour tout contenu du site.
 tools: Read, Write, Edit, Grep, Glob, WebFetch
 ---
 

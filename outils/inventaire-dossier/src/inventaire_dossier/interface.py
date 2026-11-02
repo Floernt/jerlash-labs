@@ -33,7 +33,7 @@ class Application(ttk.Frame):
         self.inventaire = None
         self.config_ia: str | None = None   # None : config-ia.json à la racine de l'outil
         self.synchrone = False               # True dans les tests : l'appel se fait sans fil d'exécution
-        racine.title(f"Inventaire d'un dossier {__version__} — iavocat.be")
+        racine.title(f"Inventaire d'un dossier {__version__} — jerlash.labs")
         racine.minsize(1000, 620)
         self.grid(sticky="nsew")
         racine.columnconfigure(0, weight=1)

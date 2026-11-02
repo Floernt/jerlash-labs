@@ -68,7 +68,7 @@ def lignes(inventaire: Inventaire) -> list[list[str]]:
 
 def en_dict(inventaire: Inventaire) -> dict:
     return {
-        "outil": "inventaire-dossier (iavocat.be)", "version": __version__, "mode": mode(inventaire),
+        "outil": "inventaire-dossier (jerlash.labs)", "version": __version__, "mode": mode(inventaire),
         "ia": inventaire.ia,
         "etabli_le": datetime.datetime.now().isoformat(timespec="seconds"), "dossier": inventaire.dossier,
         "avertissement": avertissement(inventaire), "contrat_principal": inventaire.contrat_principal,
@@ -94,7 +94,7 @@ def cellule_md(texte: str) -> str:
 
 def en_markdown(inventaire: Inventaire) -> str:
     sortie = [f"# Inventaire du dossier {inventaire.dossier}", "",
-              f"Établi le {datetime.date.today().isoformat()} par l'outil inventaire-dossier {__version__} (iavocat.be).",
+              f"Établi le {datetime.date.today().isoformat()} par l'outil inventaire-dossier {__version__} (jerlash.labs).",
               f"Mode : {mode(inventaire)}.", "", f"> {avertissement(inventaire)}", "", "## Synthèse", "",
               f"- Contrat principal : {inventaire.contrat_principal or 'non identifié'}",
               f"- État : {inventaire.etat}", f"- Pièces : {len(inventaire.fiches)}", "", "## Alertes", ""]
@@ -140,7 +140,7 @@ def tableau(entetes: list[str], contenu: list[list[str]], largeurs: list[int]) -
 
 def en_docx(inventaire: Inventaire) -> bytes:
     corps = [p("Inventaire du dossier", "Titre"), p(inventaire.dossier),
-             p(f"Établi le {datetime.date.today().isoformat()} par l'outil inventaire-dossier {__version__} (iavocat.be)."),
+             p(f"Établi le {datetime.date.today().isoformat()} par l'outil inventaire-dossier {__version__} (jerlash.labs)."),
              p(f"Mode : {mode(inventaire)}."), p(avertissement(inventaire), gras=True), p("Synthèse", "Titre1"),
              p(f"Contrat principal : {inventaire.contrat_principal or 'non identifié'}"),
              p(f"État : {inventaire.etat}"), p(f"Pièces : {len(inventaire.fiches)}"), p("Alertes", "Titre1")]
