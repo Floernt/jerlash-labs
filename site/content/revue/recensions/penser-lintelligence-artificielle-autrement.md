@@ -11,8 +11,6 @@ oeuvre:
   annee: 2025
   isbn: "9780198941927"
   doi: "10.1093/oso/9780198941927.001.0001"
-statut: "working paper"
-version: "0.1"
 programme: "H1"
 date_arret_recherches: 2026-11-05
 controles: "Texte relu par l'auteur le 5 novembre 2026. Rédigé à partir de notes de lecture sélectives. Référence bibliographique vérifiée sur la page de l'éditeur le 5 novembre 2026. Aucune relecture externe."

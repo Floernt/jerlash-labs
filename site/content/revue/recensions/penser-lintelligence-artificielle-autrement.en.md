@@ -12,8 +12,6 @@ oeuvre:
   annee: 2025
   isbn: "9780198941927"
   doi: "10.1093/oso/9780198941927.001.0001"
-statut: "working paper"
-version: "0.1"
 programme: "H1"
 date_arret_recherches: 2026-11-05
 controles: "Text reviewed by the author on 5 November 2026. Written from selective reading notes. Bibliographic reference checked on the publisher's page on 5 November 2026. No external review."
@@ -22,7 +20,7 @@ licence: "CC BY 4.0"
 financement: "none"
 conflits_interets: "none"
 traduction:
-  source: "235c6c3872791c90ae300a44bffc9d3a02c703e6"
+  source: "38681fef45db32848a5a69b9c5d6143661af81eb"
 ---
 
 **What if our main difficulty with artificial intelligence were not understanding how it works, but managing to think about what it makes possible?** That, in essence, is the invitation Richard Susskind extends in *How to Think About AI: A Guide for the Perplexed*.

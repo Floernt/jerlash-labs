@@ -10,8 +10,6 @@ oeuvre:
   editeur: "LGDJ, coll. Forum"
   annee: 2026
   isbn: "9782275164793"
-statut: "working paper"
-version: "0.1"
 programme: "H1"
 date_arret_recherches: 2026-11-05
 controles: "Texte relu par l'auteur. Rédigé à partir d'une sélection de passages annotés de l'ouvrage, pas d'une lecture intégrale. Référence bibliographique non vérifiée sur la page de l'éditeur. Aucune relecture externe."
