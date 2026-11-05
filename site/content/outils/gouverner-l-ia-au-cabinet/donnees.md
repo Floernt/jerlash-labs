@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Données"
 description: "Classer les informations avant de les confier à un outil d'IA, se poser les bonnes questions avant le traitement et documenter l'analyse."
 weight: 30
@@ -60,7 +60,7 @@ Organisation et responsable : [ ]   Outil et cas d'usage : [ ]   Date : [ ]
 1.  Nature des informations : [D0 / D1 / D2 / D3 / D4 ; cumul et justification]
 2.  Données personnelles : [oui / non / à clarifier] ; catégories,
     personnes concernées, éventuelles données visées aux articles 9 ou 10
-    du RGPD [À VÉRIFIER : texte et version consolidée] : [ ]
+    du RGPD : [ ]
 3.  But et nécessité du traitement : [ ]
 4.  Rôles au sens du RGPD : responsable du traitement, sous-traitant(s),
     destinataires, éventuelle responsabilité conjointe : [ ]
