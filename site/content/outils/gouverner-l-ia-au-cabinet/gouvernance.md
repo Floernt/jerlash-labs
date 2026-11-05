@@ -5,9 +5,13 @@ description: "Qui décide de l'usage d'un outil d'IA au cabinet, selon quelles r
 weight: 20
 ---
 
-La gouvernance est la première étape du parcours : elle se met en place avant les autres modules, et la [charte](../charte/) viendra, en fin de parcours, ancrer les choix faits ici. Cette page propose une organisation des décisions : les rôles, les règles qui encadrent une autorisation, le parcours d'un usage depuis sa déclaration jusqu'à son retrait, une matrice des responsabilités et un modèle de décision. C'est un modèle à adapter. Un petit cabinet confiera plusieurs rôles à la même personne, à condition que personne n'approuve seul sa propre demande.
+La gouvernance est la première étape du parcours : elle se met en place avant les autres modules, et la [charte](../charte/) viendra, en fin de parcours, ancrer les choix faits par la gouvernance. Cette page propose une organisation des décisions : les rôles, les règles qui encadrent une autorisation, le parcours d'un usage depuis sa déclaration jusqu'à son retrait, une matrice des responsabilités et un modèle de décision. C'est un modèle à adapter. Un petit cabinet confiera plusieurs rôles à la même personne, à condition que personne n'approuve seul sa propre demande.
 
 ## Les rôles
+
+Le schéma résume qui décide, qui donne son avis et qui applique. Un petit cabinet peut confier plusieurs de ces rôles à la même personne.
+
+![La direction ou le comité IA délègue au référent IA, qui lui soumet les usages U3 et U4. Le référent sollicite l'avis du juridique et de la déontologie, de la sécurité et de l'informatique, et du DPO. Il habilite les utilisateurs, qui déclarent les usages et signalent les incidents. Le responsable de dossier encadre l'utilisateur.](/images/toolkit/gouvernance-acteurs.svg)
 
 La direction, ou un comité IA, fixe les finalités admises, le niveau de risque toléré, les catégories d'outils et de données, la politique d'approbation et la fréquence des revues. Elle peut déléguer par écrit, mais elle garde la surveillance générale.
 
@@ -17,7 +21,7 @@ Le juridique ou la déontologie examine le secret professionnel, le droit de la 
 
 La sécurité ou l'informatique vérifie les accès, l'authentification, l'isolation, le chiffrement, les sous-traitants techniques, les connecteurs, les journaux et la continuité.
 
-Le DPO, s'il y en a un, analyse les risques pour les données personnelles et conseille sur les contrats, les transferts et l'analyse d'impact lorsqu'elle est requise. Il exerce la fonction que la loi lui attribue, sans devenir pour autant le décideur de tous les traitements [À VÉRIFIER : statut et missions du DPO dans le RGPD, articles à citer].
+Le DPO, s'il y en a un, analyse les risques pour les données personnelles et conseille sur les contrats, les transferts et l'analyse d'impact lorsqu'elle est requise. Il exerce la fonction que la loi lui attribue, sans devenir pour autant le décideur de tous les traitements.
 
 Le responsable de dossier définit les limites de l'usage dans son dossier, contrôle les éléments juridiques et apprécie les conséquences professionnelles.
 
