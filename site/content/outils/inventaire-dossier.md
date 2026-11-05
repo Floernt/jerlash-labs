@@ -104,7 +104,7 @@ L'outil est gratuit ; l'appel au modèle est facturé par votre fournisseur, s
 - Le registre contient les noms des pièces et des parties : il est aussi confidentiel que le dossier.
 - Utilisez une clé dédiée à l'outil, avec un plafond de dépense fixé chez le fournisseur.
 - Les alertes ne disent pas tout. Une pièce sans alerte reste une pièce à relire.
-- Les règles générales d'usage sont sur la page [Précautions](/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
 
 ## Installation
 

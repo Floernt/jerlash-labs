@@ -18,9 +18,10 @@
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 {{- $css := slice (resources.Get "css/tokens.css") (resources.Get "css/composants.css") (resources.Get "css/principal.css") (resources.Get "css/coloration.css") | resources.Concat "css/site.css" | minify | fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-{{- with site.GetPage "/blog" }}
+{{- with site.GetPage "/revue/perspectives" }}
+  {{- $section := .Title }}
   {{- with .OutputFormats.Get "rss" }}
-<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ T "blog_de" site.Title }}">
+<link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ T "flux_de" (dict "section" $section "site" site.Title) }}">
   {{- end }}
 {{- end }}
 <meta property="og:title" content="{{ .Title | default site.Title }}">

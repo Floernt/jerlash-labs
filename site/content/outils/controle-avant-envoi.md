@@ -74,7 +74,7 @@ Gratuit : l'outil n'appelle aucun service payant.
 - Relancez le contrôle après vos corrections : un « Accepter toutes les modifications » ne retire ni les commentaires ni les propriétés.
 - La liste de termes contient des noms de clients. Gardez-la hors des dossiers partagés.
 - Le rapport est aussi confidentiel que le document. Ne le joignez pas à l'envoi.
-- Les règles générales d'usage sont sur la page [Précautions](/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
 
 ## Installation
 

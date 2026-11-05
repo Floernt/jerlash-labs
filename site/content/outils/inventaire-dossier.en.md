@@ -107,7 +107,7 @@ The tool is free; the call to the model is billed by your provider, to your acco
 - The register contains the names of the documents and of the parties: it is as confidential as the case file.
 - Use a key dedicated to the tool, with a spending cap set with the provider.
 - The alerts do not tell you everything. A document without an alert is still a document to reread.
-- The general rules of use are on the [Precautions](/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
 
 ## Installation
 

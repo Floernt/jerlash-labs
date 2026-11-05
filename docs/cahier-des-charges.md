@@ -40,9 +40,11 @@ Conséquence pour l'écriture : chaque guide suppose que le lecteur n'a jamais o
 - Pages légales : mentions légales, politique de confidentialité.
 - Une rubrique "Automatiser une prestation" : contenus pratiques pour décider quoi automatiser dans un cabinet et comment le proposer (ADR-012).
 
+- Depuis ADR-024 (proposée, 2026-11-03) : rubriques Recherche (programmes, protocoles), Revue (Perspectives, Research papers, Notes techniques, Recensions, selon `docs/politique-publication.md`), Éthique (principes, précautions, recherche avec participants), et toolkits dans Outils.
+
 ### Exclus
 
-- Contenu philosophique ou réflexif sur le droit et la technologie. Lien vers reflexions.florianernotte.be si pertinent. Les grilles de décision pratiques de la rubrique "Automatiser une prestation" ne relèvent pas de cette exclusion (ADR-012).
+- ~~Contenu philosophique ou réflexif sur le droit et la technologie.~~ Levé par ADR-024 : ce contenu est publié dans Revue › Perspectives. reflexions.florianernotte.be garde la réflexion généraliste, indépendante de toute matière.
 - Consultation juridique et contenu qui pourrait passer pour un avis sur un dossier.
 - Service hébergé (SaaS) qui traiterait des documents d'utilisateurs sur un serveur de jerlash.labs.
 - Compte utilisateur, inscription, collecte de données personnelles. Une newsletter éventuelle fera l'objet d'une décision séparée.
@@ -59,6 +61,31 @@ Option B, sous-domaines : chronologie.jerlash.labs. Chaque outil est isolé, ce 
 Recommandation provisoire : fiches et guides en chemins sur le site principal, et chaque outil exécutable dans le navigateur sur son propre sous-domaine, pour isoler les clés API. À valider.
 
 ## 7. Arborescence
+
+Arborescence cible depuis ADR-024 (proposée, 2026-11-03), chemins français et doublon anglais sous `/en/` :
+
+```
+Accueil
+Recherche (/fr/recherche/)
+  Programme H1 Human Agency & AI
+Outils (/fr/outils/)
+  Toolkits : Legal AI Governance Toolkit (une page par module, téléchargements)
+  Logiciels BYOK : catalogue et fiches
+  Guides
+Revue (/fr/revue/)
+  Perspectives (anciens articles du blog)
+  Research papers
+  Notes techniques
+  Recensions
+Éthique (/fr/ethique/)
+  Principes et précautions d'usage
+  Recherche avec participants
+À propos
+Mentions légales
+Confidentialité
+```
+
+Arborescence précédente (v0.3, conservée pour mémoire) :
 
 ```
 Accueil

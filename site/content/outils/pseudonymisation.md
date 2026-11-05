@@ -92,7 +92,7 @@ Gratuit : l'outil n'appelle aucun service payant.
 - Relisez toujours le texte pseudonymisé en entier avant de l'envoyer.
 - Retirez aussi ce qui permet de reconnaître une personne sans la nommer : une fonction rare, une adresse décrite, une date et un lieu précis.
 - Gardez la table de correspondance hors des dossiers partagés, et supprimez-la quand vous n'en avez plus besoin.
-- Les règles générales d'usage sont sur la page [Précautions](/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
 
 ## Installation
 

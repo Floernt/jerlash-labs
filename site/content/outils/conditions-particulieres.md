@@ -94,7 +94,7 @@ Gratuit : l'outil n'appelle aucun service payant.
 - Le rapport reprend les données de l'opération : il est aussi confidentiel que le contrat.
 - Avant de réutiliser un contrat comme modèle, relisez-le en entier, en-têtes et pieds de page compris. Le rapport dit où regarder en premier, pas où il est inutile de regarder.
 - Pour remplacer les noms dans un texte avant de le confier à une IA, utilisez plutôt l'outil [Pseudonymisation](/outils/pseudonymisation/).
-- Les règles générales d'usage sont sur la page [Précautions](/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
 
 ## Installation
 

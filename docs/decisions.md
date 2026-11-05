@@ -261,3 +261,60 @@ Décision :
 4. Libellés des gabarits dans `site/i18n/fr.yaml` (maître) et `en.yaml`. Guillemets français du typographer limités au français ; `scripts/typographie.py` ignore les `*.en.md`.
 5. La vérification signale les traductions en retard sans bloquer : le français peut être publié avant sa traduction.
 Conséquences : toutes les URL publiées changent (redirections en place). Les articles du blog portent leurs alias dans leur front matter. Une page 404 est copiée à la racine à la publication.
+
+## ADR-024 - Architecture du site : Recherche, Outils, Revue, Éthique
+Date : 2026-11-03
+Statut : Acceptée (Florian, 2026-11-05)
+Contexte : l'archive Proton du 2026-11-03 apporte un Toolkit de gouvernance, trois research papers, un kit expérimental et une recension (fiches P14 à P19), ainsi qu'un projet d'architecture « Legal Technology Commons » en quatre fonctions : Research, Tools, Review, Ethics. Le site publié se limite à l'accueil, au blog et à la page À propos (ADR-022), et le cahier des charges exclut le contenu réflexif.
+Décision :
+1. Quatre rubriques au menu, créées seulement quand elles ont un contenu publié : Recherche (`/fr/recherche/`, `/en/research/`), Outils (`/fr/outils/`, `/en/tools/`), Revue (`/fr/revue/`, `/en/review/`), Éthique (`/fr/ethique/`, `/en/ethics/`). Communauté, Commons et Partenaires ne sont pas créés.
+2. Recherche : une page par programme (H1 d'abord), qui liste les travaux rattachés par le paramètre `programme`.
+3. Outils : deux familles, les toolkits (P14) et les logiciels BYOK (fiches existantes). Les guides deviennent une sous-rubrique d'Outils.
+4. Revue : quatre collections, Perspectives, Research papers, Notes techniques, Recensions. Les articles du blog passent dans Perspectives, avec des alias depuis `/fr/blog/...` et `/en/blog/...`. Le flux RSS change d'adresse, faute de redirection possible d'un fichier XML sur GitHub Pages (même limite qu'ADR-023).
+5. Éthique : principes, repris de la page Précautions (brouillon), de `docs/deontologie-ia.md` et de `docs/securite-confidentialite.md`, puis la recherche avec participants (P18).
+6. Amende le cahier des charges (§5) : le contenu réflexif n'est plus exclu. Il est publié dans Revue › Perspectives. reflexions.florianernotte.be garde la réflexion généraliste, indépendante de toute matière (décision de Florian, 2026-11-03) ; Perspectives accueille la réflexion qui porte sur le droit, la pratique juridique et la technique.
+7. Politique éditoriale des research papers et des working papers : `docs/politique-publication.md`, tirée du Research Papers Guide (validée par Florian le 2026-11-03). Chaque texte de Revue et chaque ressource d'Outils affiche un bloc de statut (statut, version, date de vérification, licence, usage de l'IA). Rien n'est affiché comme « évalué » sans évaluation réellement faite.
+8. Référencement bilingue : le français est la version maître, avec des chemins en français. L'anglais est dupliqué sous `/en/` avec des slugs traduits, comme le fait déjà ADR-023. Hreflang réciproques, x-default et canonical propre à chaque langue sont déjà produits par `site/layouts/_partials/entete-meta.html`. Aucune redirection selon la langue du navigateur. Une traduction balisée ainsi n'est pas traitée comme du contenu dupliqué.
+Conséquences : nouveaux gabarits `recherche/`, `revue/` et `ethique/`, plus un partiel « bloc de statut ». Menu et permaliens anglais dans `site/hugo.toml`, libellés dans `site/i18n/`. Les adresses du blog changent (alias en place). Le CLAUDE.md et le cahier des charges sont mis à jour.
+
+## ADR-025 - Rythme : un projet livré par mois, outils en parallèle
+Date : 2026-11-03
+Statut : Proposée (orientation de Florian du 2026-11-03)
+Contexte : ADR-022 limite le travail à un seul chantier dans « Maintenant ». Les livrables Proton (P14 à P19) demandent un calendrier. Les outils P01 à P13 ne doivent pas s'arrêter pour autant.
+Décision :
+1. Chaque mois, un projet est livré, c'est-à-dire publié en version de travail : v0.x ou working paper, avec le statut affiché et la liste des contrôles réellement faits. Une v1.0 attend des relecteurs externes.
+2. Ordre fixé par Florian : P14 (novembre 2026, avec la refonte du site), P19 (décembre), P18 (janvier 2027), P16 (février), P17 (mars), P15 (avril). Les mois suivants sont indicatifs et seront revus en mai 2027.
+3. Une piste parallèle « Outils » continue sans échéance mensuelle : P05, puis P09, puis P01. Elle passe toujours par la Factory.
+4. Chaque livraison : une entrée dans `CHANGELOG.md`, un post LinkedIn d'annonce le jour de la publication, un post de fond environ deux semaines plus tard.
+Conséquences : remplace, dans `BACKLOG.md` et le CLAUDE.md, la règle « un seul chantier ». « Maintenant » contient le projet du mois et la piste Outils. La newsletter reste exclue tant qu'aucune décision séparée n'est prise.
+
+## ADR-026 - Éditeur des ressources et licence du Toolkit
+Date : 2026-11-03
+Statut : Acceptée (Florian, 2026-11-03)
+Contexte : les décisions D01 (éditeur) et D02 (licence) du Toolkit (P14) étaient ouvertes. ADR-006 retient CC BY 4.0 pour les textes.
+Décision :
+1. L'éditeur de toute ressource publiée (texte, toolkit, outil) est jerlash.labs, sauf mention contraire sur la ressource. Le responsable de la publication reste celui des mentions légales.
+2. Le Legal AI Governance Toolkit (P14) est publié sous licence CC BY-NC 4.0. C'est une exception à ADR-006 ; les autres textes restent sous CC BY 4.0.
+Conséquences : `docs/politique-publication.md` et la fiche P14 le reprennent. Le bloc de statut affiche l'éditeur et la licence propres à chaque ressource.
+
+## ADR-027 - Recensions : une collection, distinguée par l'objet recensé
+Date : 2026-11-04
+Statut : Proposée (orientation de Florian du 2026-11-04 : distinguer la recension d'un livre, d'un article ou billet, d'un podcast ou d'une conférence ; une étiquette sur les vignettes)
+Contexte : ADR-024 crée la collection Recensions dans la Revue. Florian prépare des recensions d'objets différents, qui ne se décrivent ni ne se citent de la même manière (page, section, minutage).
+Décision :
+1. Une seule collection, `revue/recensions/`, sans sous-collection. Chaque recension porte un champ `objet` : `livre`, `article` (article, billet de blog, rapport en ligne), `podcast` ou `conference`. On ajoute une valeur au besoin (libellés dans `site/i18n/`).
+2. La page de la collection regroupe les recensions par objet (paramètre `grouper_par_objet`). Les adresses ne dépendent pas de l'objet, ce qui permet de changer le regroupement sans casser de lien.
+3. Chaque vignette d'une recension affiche une étiquette « Recension · <objet> », sur la page Revue comme dans la collection.
+4. L'œuvre recensée est décrite dans un bloc `oeuvre` du front matter, affiché en tête de la recension. Les champs varient selon l'objet : `docs/politique-publication.md`, section 9.
+Conséquences : partiel `oeuvre-recensee.html`, étiquette dans `carte-article.html`, regroupement dans `revue/section.html`. Avec un champ plutôt qu'une sous-collection, on peut réorganiser plus tard sans redirection.
+
+## ADR-028 - Dossier otf : dépôt au fil de l'eau, hors dépôt git
+Date : 2026-11-05
+Statut : Proposée (demande de Florian du 2026-11-05 ; BACKLOG.md comme seule liste de tâches, choix de Florian)
+Contexte : Florian produit des textes au fil de l'eau, souvent avec une IA. Le 2026-11-04, dix fichiers déposés dans `site/content/revue/recensions/` auraient été publiés au premier push, le dépôt étant public.
+Décision :
+1. Un dossier `../otf/`, à côté du dépôt et hors git, reçoit tout ce qui est produit, sans règle de nom ni de format. `../otf/INDEX.md` liste les fichiers en attente et leur rattachement ; `../otf/traite/<ID>/` garde les fichiers utilisés.
+2. `BACKLOG.md` reste la seule liste de tâches. `INDEX.md` n'en est pas une.
+3. Commande `/otf` : tri et rattachement, sans modifier les fichiers. Commande `/produire <sujet ou ID>` : construction du livrable en brouillon, mise à jour du backlog, rangement des fichiers utilisés.
+4. On ne dépose plus de matériau brut dans `site/content/`.
+Conséquences : `.claude/commands/otf.md` et `produire.md` ; CLAUDE.md et `projets/README.md` le mentionnent.

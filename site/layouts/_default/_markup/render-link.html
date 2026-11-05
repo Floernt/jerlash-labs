@@ -1,6 +1,19 @@
 {{- /* Liens du contenu : un lien interne écrit « /page/ » mène à cette page dans la langue courante
-       (ADR-023) et reçoit le chemin de base du site (publication sous un sous-chemin). */ -}}
+       (ADR-023) et reçoit le chemin de base du site (publication sous un sous-chemin).
+       Un lien relatif (« gouvernance/ », « ../charte/ ») est résolu vers la page visée, dans la langue courante ;
+       si elle n'est pas publiée (brouillon), seul le texte est affiché, sans lien mort. */ -}}
 {{- $url := .Destination -}}
-{{- if and (hasPrefix $url "/") (not (hasPrefix $url "//")) }}{{ $url = partial "lien-interne.html" $url }}{{ end -}}
+{{- $mort := false -}}
+{{- if and (hasPrefix $url "/") (not (hasPrefix $url "//")) }}{{ $url = partial "lien-interne.html" $url }}
+{{- else if not (or (hasPrefix $url "#") (strings.Contains $url ":")) }}
+  {{- $chemin := $url }}{{ $ancre := "" }}
+  {{- with findRESubmatch `^([^#]*)(#.*)?$` $url 1 }}{{ $chemin = index (index . 0) 1 }}{{ $ancre = index (index . 0) 2 }}{{ end }}
+  {{- $cible := .Page.GetPage (strings.TrimSuffix "/" $chemin) }}
+  {{- /* « ../x/ » s'écrit par rapport à l'adresse de la page, Hugo résout par rapport à son fichier : second essai sans le premier « ../ ». */ -}}
+  {{- if and (not $cible) (hasPrefix $chemin "../") }}{{ $cible = .Page.GetPage (strings.TrimSuffix "/" (strings.TrimPrefix "../" $chemin)) }}{{ end }}
+  {{- with $cible }}{{ $url = print .RelPermalink $ancre }}{{ else }}{{ $mort = true }}{{ end }}
+{{- end -}}
+{{- if $mort }}{{ .Text | safeHTML }}{{ else -}}
 <a href="{{ $url | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if strings.HasPrefix $url "http" }} rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+{{- end -}}
 {{- /* */ -}}

@@ -87,7 +87,7 @@ Gratuit : l'outil n'appelle aucun service payant.
 
 - Le rapport reprend les définitions du contrat : il est aussi confidentiel que le contrat.
 - Un contrat sans point signalé n'est pas pour autant exempt de défaut de définition.
-- Les règles générales d'usage sont sur la page [Précautions](/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
 
 ## Installation
 
