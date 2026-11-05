@@ -90,6 +90,11 @@ removePathAccents = true
     [languages.fr.markup.goldmark.extensions.typographer]
       leftDoubleQuote = "&laquo;&nbsp;"
       rightDoubleQuote = "&nbsp;&raquo;"
+    # Un bloc markup propre à la langue remet les réglages de coloration par défaut (styles en ligne) : on les répète.
+    [languages.fr.markup.highlight]
+      noClasses = false
+      codeFences = true
+      guessSyntax = false
     [[languages.fr.menus.principal]]
       name = "Revue"
       pageRef = "/revue"
