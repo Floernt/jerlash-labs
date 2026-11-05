@@ -37,7 +37,7 @@ Règle depuis le 2026-11-03 (ADR-025, proposée) : livrer plutôt que construire
 - [ ] Legora, entretien avec Jacob Lauritzen (podcast vidéo, 67 min ; citations à minuter)
 - [ ] Chaduteau (livre) : relue par Florian, publication prévue le 12 novembre 2026 ; front matter converti et traduit (2026-11-05). Reste : conflits d'intérêts, puis `draft: false` (FR et EN), et lancer le workflow Publication le 12 (la reconstruction automatique n'a lieu que le lundi)
 - [x] Susskind (livre) : relue, déclarations complétées, traduite (2026-11-05) ; à publier avec le prochain push
-- [ ] Recension podcast « L'IA juridique en pratique », ép. 01 (Colliot, Zevra), angle de Florian : le fonds utile est dans les cabinets. Brouillon `site/content/revue/recensions/le-fonds-utile-est-deja-dans-les-cabinets.md` (2026-11-05) ; à relire par Florian (citations à contrôler sur l'enregistrement, conflits d'intérêts, référence AVOCATS.BE/OVB). Fiche : `../otf/traite/recension-colliot/`
+- [x] Recension podcast « L'IA juridique en pratique », ép. 01 (Colliot, Zevra) : relue par Florian, publiée FR et EN (2026-11-05). Fiche : `../otf/traite/recension-colliot/`
 - [ ] Traduction anglaise (`/traduire`) ; slug anglais de la collection à décider (`/en/review/recensions/` par défaut)
 - [ ] Publication : `draft: false` sur la collection et les recensions prêtes, `python scripts/verifier.py --publication`, `CHANGELOG.md`, post LinkedIn
 
