@@ -28,7 +28,6 @@ flux_rss: "Flux RSS"
 flux_de: "{{ .section }} de {{ .site }}"
 publie_le: "Publié le"
 
-pied_phrase: "Publier oblige à finir."
 pied_licence: "Textes sous licence {{ . }}. Ce site ne dépose aucun cookie et n'utilise aucun traceur."
 licence_url: "https://creativecommons.org/licenses/by/4.0/deed.fr"
 

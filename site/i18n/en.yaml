@@ -27,7 +27,6 @@ flux_rss: "RSS feed"
 flux_de: "{{ .section }} from {{ .site }}"
 publie_le: "Published on"
 
-pied_phrase: "Publishing forces you to finish."
 pied_licence: "Texts licensed under {{ . }}. This site sets no cookies and uses no trackers."
 licence_url: "https://creativecommons.org/licenses/by/4.0/deed.en"
 
