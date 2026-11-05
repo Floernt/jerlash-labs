@@ -98,7 +98,7 @@ Commandes (depuis la racine du dépôt) :
 - régénérer un jeu de test : `python -I factory/jeux-de-test/<jeu>/generer.py` (F-DOCX-01, F-IDENT-01, F-DOSSIER-01) ; mesurer l'inventaire : `python factory/jeux-de-test/F-DOSSIER-01/evaluer.py`
 - activer le contrôle des secrets avant commit (une fois par clone) : `git config core.hooksPath .githooks`
 - traductions anglaises (ADR-023) : état `python scripts/traductions.py`, changements du français depuis la dernière traduction `--diff <fichier>`, mise à jour par la commande `/traduire` ; on corrige le français, jamais l'anglais (`x.en.md`)
-- déployer : push sur `main` ; le workflow `.github/workflows/publier.yml` vérifie, construit et publie (bloqué tant qu'il reste des marqueurs `[À ...]` dans le contenu publié).
+- déployer : Claude ne pousse que sur `dev` et ne fusionne jamais dans `main` ; Florian ouvre la PR `dev` → `main` à la main, et la fusion dans `main` déclenche le workflow `.github/workflows/publier.yml`, qui vérifie, construit et publie (bloqué tant qu'il reste des marqueurs `[À ...]` dans le contenu publié).
 
 ## Langue et style
 

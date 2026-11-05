@@ -11,8 +11,6 @@ oeuvre:
   date: 2026-10-09
   url: "https://www.edhec.edu/fr/recherche-et-faculte/edhec-vox/biais-compagnon-hallucinations-comprendre-poids-mots-de-autour-ia"
   consulte_le: 2026-11-02
-statut: "working paper"
-version: "0.2"
 programme: "H1"
 date_arret_recherches: 2026-11-02
 usage_ia: "L'IA a été utilisée pour l'analyse de l'article et la rédaction d'un premier jet."

@@ -89,7 +89,6 @@ main:focus { outline: none; }
 .pied-site__appel { display: flex; flex-direction: column; gap: var(--space-3); max-width: 520px; }
 .pied-site__appel p { margin: 0; }
 .pied-site__surtitre { font-family: var(--font-mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; }
-.pied-site__phrase { font-size: clamp(28px, 3vw, 40px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; }
 .pied-site__nav { display: flex; gap: var(--space-6); flex-wrap: wrap; font-family: var(--font-mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; }
 .pied-site__licences { margin: var(--space-8) 0 0; font-size: 14px; line-height: 22px; }
 

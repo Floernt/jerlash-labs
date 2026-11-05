@@ -12,15 +12,13 @@ oeuvre:
   date: 2026-10-09
   url: "https://www.edhec.edu/fr/recherche-et-faculte/edhec-vox/biais-compagnon-hallucinations-comprendre-poids-mots-de-autour-ia"
   consulte_le: 2026-11-02
-statut: "working paper"
-version: "0.2"
 programme: "H1"
 date_arret_recherches: 2026-11-02
 usage_ia: "AI was used to analyse the article and to write a first draft."
 licence: "CC BY 4.0"
 financement: "none"
 traduction:
-  source: "c86f10b3ae4d6159541703046d02327d9750c0bf"
+  source: "551476ca1ee34be29dace83f94c71df2b0aaf439"
 ---
 
 The language used to describe artificial intelligence shapes the way its users picture its capabilities and grant it their trust. In an exchange published by *EDHEC Vox*, Arnaud Billion and Björn Fasterling examine three expressions that have become familiar: “bias”, “companion” and “hallucinations”. Their conversation invites us to be wary of words that implicitly attribute human faculties or intentions to a technical system. It also opens a difficulty: how can these metaphors be criticised without giving up the technical and legal distinctions they can usefully designate?

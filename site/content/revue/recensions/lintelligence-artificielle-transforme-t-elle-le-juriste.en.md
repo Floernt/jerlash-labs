@@ -11,8 +11,6 @@ oeuvre:
   editeur: "LGDJ, coll. Forum"
   annee: 2026
   isbn: "9782275164793"
-statut: "working paper"
-version: "0.1"
 programme: "H1"
 date_arret_recherches: 2026-11-05
 controles: "Text reviewed by the author. Written from a selection of annotated passages from the book, not from a full reading. Bibliographic reference not checked on the publisher's page. No external review."
@@ -21,7 +19,7 @@ licence: "CC BY 4.0"
 financement: "none"
 conflits_interets: "none"
 traduction:
-  source: "7a4409e4e06da9026d6dc8fbac8338a5c8252e86"
+  source: "dbecbfb4be1e8f86752ea81dd10aaef46cf348d2"
 ---
 
 Artificial intelligence is not simply a new tool available to legal professionals. It changes the conditions in which legal services are produced, distributed and valued. This is the conviction running through Olivier Chaduteau’s book, *L’impact de l’IA sur les juristes et les avocats d’affaires*.
