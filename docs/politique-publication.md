@@ -38,9 +38,9 @@ Tant qu'il n'y a pas de relecteurs, tout research paper publié est un working p
 
 ## 4. Métadonnées obligatoires
 
-Chaque texte de Revue et chaque ressource d'Outils porte, dans son front matter, les champs suivants : `statut`, `version`, `date`, `auteurs`, `programme` (H1, C1, T1 ou transversal), `type`, `date_arret_recherches`, `controles` (contrôles réellement faits), `usage_ia`, `licence`, `financement`, `conflits_interets`.
+Chaque texte de Revue et chaque ressource d'Outils porte, dans son front matter, les champs suivants : `statut`, `version`, `date`, `programme` (H1, C1, T1 ou transversal), `type`, `date_arret_recherches`, `controles` (contrôles réellement faits), `usage_ia`, `licence`, `financement`, `conflits_interets`.
 
-Le partiel « bloc de statut » les affiche en tête de page.
+Le partiel « bloc de statut » les affiche en tête de page. L'auteur n'est pas indiqué dans le front matter : c'est Florian Ernotte, paramètre `auteur` du site (`site/hugo.toml`). Un champ `auteurs` ne s'ajoute que pour un texte écrit avec d'autres personnes.
 
 Le champ `type` ne s'écrit pas tel quel dans le front matter d'une page du site : Hugo le réserve au choix du gabarit, et la page perdrait celui de sa rubrique. La collection en tient lieu (pour une recension, le champ `objet` le précise, ADR-027).
 
