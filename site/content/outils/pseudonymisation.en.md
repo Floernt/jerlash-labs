@@ -95,7 +95,7 @@ Free: the tool calls no paid service.
 - Always reread the pseudonymised text in full before sending it.
 - Also remove what makes it possible to recognise a person without naming them: an unusual position, a described address, a precise date and place.
 - Keep the correspondence table out of shared folders, and delete it when you no longer need it.
-- The general rules of use are on the [Precautions](/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
 
 ## Installation
 

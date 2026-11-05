@@ -120,7 +120,7 @@ class EntreesHostiles(unittest.TestCase):
         self.assertEqual(self.analyser_octets(docx_avec({"word/document.xml": None})).niveau, "erreur")
 
     def test_fichier_absent(self):
-        rapport = analyser(os.path.join(tempfile.gettempdir(), "inexistant-iavocat.docx"))
+        rapport = analyser(os.path.join(tempfile.gettempdir(), "inexistant-jerlash-labs.docx"))
         self.assertEqual(rapport.niveau, "erreur")
 
 

@@ -1,6 +1,6 @@
 ---
 name: developpeur
-description: Réalise un outil d'iavocat.be à partir de sa SPEC.md, par petites étapes vérifiées. À utiliser à l'étape prototype.
+description: Réalise un outil de jerlash.labs à partir de sa SPEC.md, par petites étapes vérifiées. À utiliser à l'étape prototype.
 tools: Read, Write, Edit, Grep, Glob, Bash
 ---
 

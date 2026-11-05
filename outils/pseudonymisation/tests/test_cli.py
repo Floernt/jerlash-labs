@@ -44,7 +44,7 @@ class LigneDeCommande(unittest.TestCase):
         self.assertIn("Fabrice Lonneux", texte)
 
     def test_fichier_absent(self):
-        code, _, erreurs = executer("pseudonymiser", os.path.join(tempfile.gettempdir(), "absent-iavocat.txt"))
+        code, _, erreurs = executer("pseudonymiser", os.path.join(tempfile.gettempdir(), "absent-jerlash-labs.txt"))
         self.assertEqual(code, 2)
         self.assertIn("Erreur", erreurs)
 

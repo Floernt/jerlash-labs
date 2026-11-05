@@ -4,7 +4,9 @@
 
 Fonctionnel et opérationnel. Chaque page répond à une question pratique : qu'est-ce que c'est, à quoi ça sert dans un cabinet, comment on l'installe, combien ça coûte, à quoi faire attention.
 
-Les mises en garde font partie du contenu. Elles sont concrètes (que peut-il arriver, que faire) et proportionnées. Pas de développement philosophique : si un sujet appelle une réflexion de fond, une phrase et un lien vers reflexions.florianernotte.be suffisent.
+Les mises en garde font partie du contenu. Elles sont concrètes (que peut-il arriver, que faire) et proportionnées. Outils, guides et pages d'Éthique restent sans développement philosophique.
+
+Depuis ADR-024, la réflexion sur le droit, la pratique juridique et la technique a sa place dans Revue › Perspectives, et les research papers suivent `docs/politique-publication.md`. La réflexion généraliste, indépendante de toute matière, reste sur reflexions.florianernotte.be.
 
 ## Communication de l'avocat
 

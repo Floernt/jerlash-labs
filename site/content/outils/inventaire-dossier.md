@@ -13,7 +13,7 @@ taches: ["reprendre un dossier", "vérifier"]
 mise_a_jour: 2026-11-01
 telechargement: "/telechargements/inventaire-dossier-0.2.0.zip"
 taille: "67 Ko"
-sha256: "797bd07eaaad589906a3e18432dd5306ee06194f680c3a1ef60e34374d2395ab"
+sha256: "48f568e08fe71280806584ffee7dee62613685e8b96e5a1b8abf6e696e693617"
 ---
 
 ## Ce que fait l'outil
@@ -104,7 +104,7 @@ L'outil est gratuit ; l'appel au modèle est facturé par votre fournisseur, s
 - Le registre contient les noms des pièces et des parties : il est aussi confidentiel que le dossier.
 - Utilisez une clé dédiée à l'outil, avec un plafond de dépense fixé chez le fournisseur.
 - Les alertes ne disent pas tout. Une pièce sans alerte reste une pièce à relire.
-- Les règles générales d'usage sont sur la page [Précautions](/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
 
 ## Installation
 

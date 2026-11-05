@@ -1,0 +1,26 @@
+{{- /* Toolkit (P14, ADR-024) : présentation, bloc de statut, puis les pages du toolkit dans l'ordre de leur poids. */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <article class="article">
+    <header class="tete-page">
+      <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>
+      <h1 class="tete-page__titre">{{ .Title }}</h1>
+      {{- with .Description }}<p class="tete-page__chapeau">{{ . }}</p>{{ end }}
+    </header>
+    {{ partial "bloc-statut.html" . }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+    {{- with .Pages.ByWeight }}
+    <nav class="toolkit-sommaire" aria-label="{{ T "sommaire_toolkit" }}">
+      <h2>{{ T "sommaire_toolkit" }}</h2>
+      <ol>
+        {{- range . }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ with .Description }} : {{ . }}{{ end }}</li>
+        {{- end }}
+      </ol>
+    </nav>
+    {{- end }}
+  </article>
+</div>
+{{ end }}

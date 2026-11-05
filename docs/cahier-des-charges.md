@@ -1,4 +1,4 @@
-# Cahier des charges - iavocat.be
+# Cahier des charges - jerlash.labs
 
 Version 0.3 - 31 octobre 2026 - Statut : brouillon à valider
 
@@ -6,13 +6,13 @@ Les éléments marqués `[À VÉRIFIER]`, `[À VALIDER]`, `[À DÉCIDER]` ou `[�
 
 ## 1. Objet
 
-Ce document décrit le site iavocat.be : ce qu'il doit faire, pour qui, ce qu'il exclut, et les contraintes techniques, juridiques et éditoriales qui s'appliquent. Il sert de référence pour le développement mené avec Claude Code.
+Ce document décrit le site jerlash.labs : ce qu'il doit faire, pour qui, ce qu'il exclut, et les contraintes techniques, juridiques et éditoriales qui s'appliquent. Il sert de référence pour le développement mené avec Claude Code.
 
 ## 2. Contexte
 
 Florian Ernotte est avocat (Avroy Avocats) et membre de comités scientifiques et consultatifs ainsi que d'advisory boards actifs dans la legal tech `[À COMPLÉTER : liste exacte des comités et boards, avec les dates]`. Il conçoit des outils d'IA appliqués à la pratique d'un cabinet.
 
-Le point de départ est le modèle observé chez Sol Irvine, qui publie ses outils pour avocats sous des noms de domaine dédiés (sa bio X cite augustus.esq et wargame.esq ; ces sites n'ont pas été consultés). Ses dépôts GitHub ont été explorés le 2026-10-31 : voir `docs/veille/sol-irvine-zenzen-sol.md`. Le choix retenu ici est différent : un seul domaine, iavocat.be, qui regroupe tous les projets.
+Le point de départ est le modèle observé chez Sol Irvine, qui publie ses outils pour avocats sous des noms de domaine dédiés (sa bio X cite augustus.esq et wargame.esq ; ces sites n'ont pas été consultés). Ses dépôts GitHub ont été explorés le 2026-10-31 : voir `docs/veille/sol-irvine-zenzen-sol.md`. Le choix retenu ici est différent : un seul domaine, jerlash.labs, qui regroupe tous les projets.
 
 ## 3. Objectifs
 
@@ -40,11 +40,13 @@ Conséquence pour l'écriture : chaque guide suppose que le lecteur n'a jamais o
 - Pages légales : mentions légales, politique de confidentialité.
 - Une rubrique "Automatiser une prestation" : contenus pratiques pour décider quoi automatiser dans un cabinet et comment le proposer (ADR-012).
 
+- Depuis ADR-024 (proposée, 2026-11-03) : rubriques Recherche (programmes, protocoles), Revue (Perspectives, Research papers, Notes techniques, Recensions, selon `docs/politique-publication.md`), Éthique (principes, précautions, recherche avec participants), et toolkits dans Outils.
+
 ### Exclus
 
-- Contenu philosophique ou réflexif sur le droit et la technologie. Lien vers reflexions.florianernotte.be si pertinent. Les grilles de décision pratiques de la rubrique "Automatiser une prestation" ne relèvent pas de cette exclusion (ADR-012).
+- ~~Contenu philosophique ou réflexif sur le droit et la technologie.~~ Levé par ADR-024 : ce contenu est publié dans Revue › Perspectives. reflexions.florianernotte.be garde la réflexion généraliste, indépendante de toute matière.
 - Consultation juridique et contenu qui pourrait passer pour un avis sur un dossier.
-- Service hébergé (SaaS) qui traiterait des documents d'utilisateurs sur un serveur d'iavocat.be.
+- Service hébergé (SaaS) qui traiterait des documents d'utilisateurs sur un serveur de jerlash.labs.
 - Compte utilisateur, inscription, collecte de données personnelles. Une newsletter éventuelle fera l'objet d'une décision séparée.
 - Vente d'outils `[À VALIDER : gratuité de principe ?]`.
 
@@ -52,13 +54,38 @@ Conséquence pour l'écriture : chaque guide suppose que le lecteur n'a jamais o
 
 Deux options pour exposer chaque outil (décision ADR-005) :
 
-Option A, chemins : iavocat.be/outils/chronologie. Un seul site, un seul déploiement, référencement concentré sur un domaine.
+Option A, chemins : jerlash.labs/outils/chronologie. Un seul site, un seul déploiement, référencement concentré sur un domaine.
 
-Option B, sous-domaines : chronologie.iavocat.be. Chaque outil est isolé, ce qui limite l'impact d'une faille d'un outil sur les autres (point utile quand une clé API est saisie dans une page), au prix d'une configuration DNS et de déploiements multiples.
+Option B, sous-domaines : chronologie.jerlash.labs. Chaque outil est isolé, ce qui limite l'impact d'une faille d'un outil sur les autres (point utile quand une clé API est saisie dans une page), au prix d'une configuration DNS et de déploiements multiples.
 
 Recommandation provisoire : fiches et guides en chemins sur le site principal, et chaque outil exécutable dans le navigateur sur son propre sous-domaine, pour isoler les clés API. À valider.
 
 ## 7. Arborescence
+
+Arborescence cible depuis ADR-024 (proposée, 2026-11-03), chemins français et doublon anglais sous `/en/` :
+
+```
+Accueil
+Recherche (/fr/recherche/)
+  Programme H1 Human Agency & AI
+Outils (/fr/outils/)
+  Toolkits : Legal AI Governance Toolkit (une page par module, téléchargements)
+  Logiciels BYOK : catalogue et fiches
+  Guides
+Revue (/fr/revue/)
+  Perspectives (anciens articles du blog)
+  Research papers
+  Notes techniques
+  Recensions
+Éthique (/fr/ethique/)
+  Principes et précautions d'usage
+  Recherche avec participants
+À propos
+Mentions légales
+Confidentialité
+```
+
+Arborescence précédente (v0.3, conservée pour mémoire) :
 
 ```
 Accueil
@@ -105,7 +132,7 @@ Détaillés dans `docs/principes-outils.md`. Résumé :
 
 - local d'abord : l'outil tourne sur la machine de l'avocat ;
 - BYOK : l'avocat utilise sa propre clé et son propre contrat avec le fournisseur ;
-- aucun serveur intermédiaire contrôlé par iavocat.be ;
+- aucun serveur intermédiaire contrôlé par jerlash.labs ;
 - modèle et fournisseur configurables, jamais figés dans le code ;
 - option "modèle local" (par exemple via Ollama) envisagée pour les outils où la confidentialité prime `[À ÉVALUER au cas par cas]` ;
 - code source publié `[À VALIDER : licence, voir ADR-006]`.

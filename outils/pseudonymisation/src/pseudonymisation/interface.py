@@ -343,7 +343,7 @@ class Retablir(ttk.Frame):
 
 class Application:
     def __init__(self, racine: tk.Tk):
-        racine.title(f"Pseudonymisation {__version__} — iavocat.be")
+        racine.title(f"Pseudonymisation {__version__} — jerlash.labs")
         racine.minsize(980, 680)
         onglets = ttk.Notebook(racine)
         onglets.pack(fill="both", expand=True)

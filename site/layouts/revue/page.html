@@ -1,0 +1,18 @@
+{{- /* Texte de la Revue (ADR-024) : collection, titre, auteur et date, bloc de statut si le texte en porte un (docs/politique-publication.md). */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <article class="article">
+    <header class="tete-page">
+      <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>{{ with .Params.objet }} · {{ T (printf "objet_%s" .) | default . }}{{ end }}</p>
+      <h1 class="tete-page__titre">{{ .Title }}</h1>
+      <p class="tete-page__meta">{{ with site.Params.auteur }}{{ . }} · {{ end }}{{ partial "date.html" .Date }} · {{ T "lecture" .ReadingTime }}</p>
+    </header>
+    {{ partial "oeuvre-recensee.html" . }}
+    {{ partial "bloc-statut.html" . }}
+    <div class="prose">
+      {{ .Content }}
+    </div>
+    <p class="article__retour"><a class="ia-btn ia-btn--ghost" href="{{ .Parent.RelPermalink }}"><span class="ia-btn__arrow">←</span> {{ T "tous_les_textes" .Parent.Title }}</a></p>
+  </article>
+</div>
+{{ end }}

@@ -26,7 +26,7 @@ P02 à P06 lisent et produisent du .docx. Sans composant commun, chaque outil r�
 
 Hors périmètre : collaboration en temps réel (suppose un serveur).
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Utilisation hors ligne uniquement. Vérifier l'absence d'appel réseau.
 

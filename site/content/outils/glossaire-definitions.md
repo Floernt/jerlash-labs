@@ -13,7 +13,7 @@ taches: ["relire un contrat", "vérifier"]
 mise_a_jour: 2026-11-01
 telechargement: "/telechargements/glossaire-definitions-0.1.0.zip"
 taille: "28 Ko"
-sha256: "37e347be04186b159a35d7bdc6b3f985852ee1487ba203241ec93900f13320bd"
+sha256: "e53f971d3efecbbf57adacba7579440254bf33598586a5a3d75ccd356b57c075"
 ---
 
 ## Ce que fait l'outil
@@ -87,7 +87,7 @@ Gratuit : l'outil n'appelle aucun service payant.
 
 - Le rapport reprend les définitions du contrat : il est aussi confidentiel que le contrat.
 - Un contrat sans point signalé n'est pas pour autant exempt de défaut de définition.
-- Les règles générales d'usage sont sur la page [Précautions](/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
 
 ## Installation
 

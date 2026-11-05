@@ -26,7 +26,7 @@ Un ensemble de dossiers fictifs belges (contrats, pièces, courriels) avec, pour
 
 Hors périmètre : classement de modèles du marché.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Données entièrement inventées, droit belge, français.
 

@@ -114,7 +114,7 @@ def verifier_site(exiger_hugo: bool) -> None:
         return
     r = lancer(["hugo", "version"])
     etape(f"v{HUGO_VERSION}" in r.stdout and "extended" in r.stdout, f"Hugo extended {HUGO_VERSION} (ADR-002) : {r.stdout.strip()[:60]}")
-    sortie = tempfile.mkdtemp(prefix="iavocat-site-")
+    sortie = tempfile.mkdtemp(prefix="jerlash-labs-site-")
     try:
         r = lancer(["hugo", "--source", SITE, "--destination", sortie, "--cleanDestinationDir",
                     "--panicOnWarning", "--printPathWarnings", "--quiet",
@@ -149,7 +149,7 @@ def verifier_site(exiger_hugo: bool) -> None:
               + ("" if not defauts else " — " + "; ".join(defauts[:5])))
         etape(not externes, "aucune ressource chargée depuis un domaine tiers" + ("" if not externes else " — " + "; ".join(externes[:5])))
         etape(not liens_morts, "liens internes valides" + ("" if not liens_morts else " — " + "; ".join(liens_morts[:10])))
-        for attendu in ("index.html", "fr/blog/index.xml", "en/blog/index.xml", "sitemap.xml", ".nojekyll", "js/bundle.js"):
+        for attendu in ("index.html", "fr/revue/perspectives/index.xml", "en/review/perspectives/index.xml", "sitemap.xml", ".nojekyll", "js/bundle.js"):
             etape(os.path.isfile(os.path.join(sortie, attendu)), f"fichier produit : {attendu}")
     finally:
         shutil.rmtree(sortie, ignore_errors=True)

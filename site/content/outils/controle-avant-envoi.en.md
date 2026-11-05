@@ -77,7 +77,7 @@ Free: the tool calls no paid service.
 - Run the check again after your corrections: an “Accept All Changes” removes neither the comments nor the properties.
 - The list of terms contains client names. Keep it out of shared folders.
 - The report is as confidential as the document. Do not attach it when sending.
-- The general rules of use are on the [Precautions](/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
 
 ## Installation
 

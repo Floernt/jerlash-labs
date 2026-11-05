@@ -9,7 +9,7 @@
       {{- range site.Menus.pied }}
       <a href="{{ .URL }}">{{ .Name }}</a>
       {{- end }}
-      {{- with site.GetPage "/blog" }}{{ with .OutputFormats.Get "rss" }}
+      {{- with site.GetPage "/revue/perspectives" }}{{ with .OutputFormats.Get "rss" }}
       <a href="{{ .RelPermalink }}" type="application/rss+xml">{{ T "flux_rss" }}</a>
       {{- end }}{{ end }}
       <span>© {{ now.Year }} jerlash.labs</span>

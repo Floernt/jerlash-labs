@@ -108,7 +108,7 @@ def en_html(rapport: Rapport) -> str:
                  None: "non mesuré"}[rapport.integre]
     meta = [("Fichier", rapport.nom), ("Taille", f"{rapport.taille} octets" if rapport.taille else "—"),
             ("Empreinte SHA-256", rapport.sha256 or "—"), ("Fichier inchangé", integrite),
-            ("Analysé le", rapport.date), ("Outil", f"Contrôle avant envoi {rapport.version} (iavocat.be)")]
+            ("Analysé le", rapport.date), ("Outil", f"Contrôle avant envoi {rapport.version} (jerlash.labs)")]
     limites = "".join(f"<li>{e(l)}</li>" for l in LIMITES)
     return f"""<!doctype html>
 <html lang="fr-BE"><head><meta charset="utf-8">

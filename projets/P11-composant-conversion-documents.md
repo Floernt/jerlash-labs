@@ -26,7 +26,7 @@ Un composant Factory, appelable par les outils locaux, qui convertit un dossier 
 
 Hors périmètre : service hébergé.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Exécution sur le poste de l'avocat, sans GPU. Installation documentée pour Windows et macOS.
 

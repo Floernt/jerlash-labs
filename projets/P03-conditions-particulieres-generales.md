@@ -28,7 +28,7 @@ Les cabinets réutilisent des contrats négociés comme modèles, avec le risque
 
 Hors périmètre : contrat-cadre avec commandes multiples, renégociation.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Terminologie belge (conditions particulières, conditions générales, ordre de priorité entre documents). Rappel sur l'opposabilité des conditions générales [À VÉRIFIER : point de droit à rédiger par Florian, pas par l'outil].
 

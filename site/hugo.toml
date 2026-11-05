@@ -37,7 +37,7 @@ removePathAccents = true
 [[cascade]]
   outputs = ["html", "rss"]
   [cascade.target]
-    path = "/blog"
+    path = "/revue/perspectives"
     kind = "section"
 
 [services.rss]
@@ -91,8 +91,8 @@ removePathAccents = true
       leftDoubleQuote = "&laquo;&nbsp;"
       rightDoubleQuote = "&nbsp;&raquo;"
     [[languages.fr.menus.principal]]
-      name = "Blog"
-      pageRef = "/blog"
+      name = "Revue"
+      pageRef = "/revue"
       weight = 10
     [[languages.fr.menus.principal]]
       name = "À propos"
@@ -125,17 +125,22 @@ removePathAccents = true
       nouveautes = "/updates/"
       automatiser = "/automation/"
       taches = "/tasks/"
+      # Revue (ADR-024) : collections sous /en/review/
+      revue = "/review/:sections[1:]/"
+      ethique = "/ethics/"
     [languages.en.permalinks.page]
       outils = "/tools/:slug/"
       nouveautes = "/updates/:slug/"
       automatiser = "/automation/:slug/"
+      revue = "/review/:sections[1:]/:slug/"
+      ethique = "/ethics/:slug/"
     [languages.en.permalinks.term]
       taches = "/tasks/:slug/"
     [languages.en.permalinks.taxonomy]
       taches = "/tasks/"
     [[languages.en.menus.principal]]
-      name = "Blog"
-      pageRef = "/blog"
+      name = "Review"
+      pageRef = "/revue"
       weight = 10
     [[languages.en.menus.principal]]
       name = "About"

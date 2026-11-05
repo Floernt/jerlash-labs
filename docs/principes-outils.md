@@ -1,6 +1,6 @@
 # Principes applicables à chaque outil
 
-Tout outil publié sur iavocat.be respecte ces règles. Une exception est possible, à condition d'être consignée dans `docs/decisions.md` et expliquée sur la fiche de l'outil.
+Tout outil publié sur jerlash.labs respecte ces règles. Une exception est possible, à condition d'être consignée dans `docs/decisions.md` et expliquée sur la fiche de l'outil.
 
 ## Exécution locale
 
@@ -21,7 +21,7 @@ La fiche indique le mode utilisé et pourquoi.
 
 ## Données
 
-- Aucune télémétrie, aucun journal envoyé à iavocat.be.
+- Aucune télémétrie, aucun journal envoyé à jerlash.labs.
 - L'outil affiche, avant le premier envoi, ce qui va partir vers le fournisseur.
 - Les politiques de conservation des données des fournisseurs ne sont pas résumées de mémoire : la fiche renvoie vers la page officielle du fournisseur, avec la date de consultation.
 - Les exemples et jeux de test sont fictifs. Jamais de pièce réelle, même anonymisée, dans le dépôt.

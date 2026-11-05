@@ -1,0 +1,22 @@
+{{- /* Référence de l'œuvre recensée (ADR-027, docs/politique-publication.md §9). N'apparaît que si le front matter porte « oeuvre ».
+       Forme : Auteurs, « Titre », Publication, épisode, éditeur, lieu, date ou année, durée, ISBN, DOI ; lien ; date de consultation. */ -}}
+{{- with .Params.oeuvre }}
+{{- $o := . }}
+<aside class="oeuvre-recensee" aria-label="{{ T "oeuvre_recensee" }}">
+  <p class="ia-eyebrow">{{ T "oeuvre_recensee" }}</p>
+  <p>
+    {{- with $o.auteurs }}{{ delimit . ", " }}, {{ end -}}
+    {{- $titre := $o.titre }}{{ with $o.url }}{{ $titre = printf "<a href=\"%s\">%s</a>" . $o.titre }}{{ end }}
+    {{- if eq $.Params.objet "livre" }}<cite>{{ $titre | safeHTML }}</cite>{{ else }}« {{ $titre | safeHTML }} »{{ end }}
+    {{- with $o.publication }}, <cite>{{ . }}</cite>{{ end }}
+    {{- with $o.episode }}, {{ T "episode" . }}{{ end }}
+    {{- with $o.editeur }}, {{ . }}{{ end }}
+    {{- with $o.lieu }}, {{ . }}{{ end }}
+    {{- with $o.date }}, {{ partial "date.html" . }}{{ else }}{{ with $o.annee }}, {{ . }}{{ end }}{{ end }}
+    {{- with $o.duree }}, {{ . }}{{ end }}
+    {{- with $o.isbn }}, ISBN {{ . }}{{ end }}
+    {{- with $o.doi }}, DOI <a href="https://doi.org/{{ . }}">{{ . }}</a>{{ end }}
+    {{- with $o.consulte_le }} ({{ T "consulte_le" (partial "date.html" .) | safeHTML }}){{ end }}.
+  </p>
+</aside>
+{{- end }}

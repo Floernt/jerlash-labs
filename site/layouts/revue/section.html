@@ -1,0 +1,47 @@
+{{- /* Revue (ADR-024) : à la racine, les collections puis les derniers textes ; dans une collection, ses textes du plus récent au plus ancien, ou groupés par objet si la collection porte « grouper_par_objet » (Recensions, ADR-027). */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="tete-page">
+    <p class="ia-eyebrow">{{ if .Parent.IsHome }}{{ T "revue" }}{{ else }}<a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>{{ end }}</p>
+    <h1 class="tete-page__titre">{{ .Title }}</h1>
+    {{- with .Content }}<div class="tete-page__chapeau">{{ . }}</div>{{ end }}
+  </header>
+  {{- if .Parent.IsHome }}
+  {{- with .Sections }}
+  <nav class="collections" aria-label="{{ T "collections" }}">
+    {{- range . }}
+    <a class="ia-tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{- end }}
+  </nav>
+  {{- end }}
+  {{- end }}
+  {{- $textes := .RegularPagesRecursive.ByDate.Reverse }}
+  {{- if and $textes .Params.grouper_par_objet }}
+  {{- /* Recensions (ADR-027) : un groupe par objet, dans l'ordre ci-dessous, puis les objets non prévus. */ -}}
+  {{- $ordre := slice "livre" "article" "podcast" "conference" }}
+  {{- range $textes }}{{ with .Params.objet }}{{ if not (in $ordre .) }}{{ $ordre = $ordre | append . }}{{ end }}{{ end }}{{ end }}
+  {{- $rang := 0 }}
+  {{- range $objet := $ordre }}
+  {{- with where $textes "Params.objet" $objet }}
+  <section class="groupe-objet">
+    <h2>{{ T (printf "objets_%s" $objet) | default $objet }}</h2>
+    <div class="grille-cartes">
+      {{- range . }}
+      {{ partial "carte-article.html" (dict "page" . "rang" $rang) }}
+      {{- $rang = add $rang 1 }}
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+  {{- end }}
+  {{- else if $textes }}
+  <div class="grille-cartes">
+    {{- range $i, $a := $textes }}
+    {{ partial "carte-article.html" (dict "page" $a "rang" $i) }}
+    {{- end }}
+  </div>
+  {{- else }}
+  <p>{{ T "aucun_article" }}</p>
+  {{- end }}
+</div>
+{{ end }}

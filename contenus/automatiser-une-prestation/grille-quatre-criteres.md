@@ -1,12 +1,12 @@
 ---
 titre: "Automatiser ou ne pas automatiser ? Une grille en quatre critères"
 rubrique: automatiser-une-prestation
-source: ../iavocat-article-grille-analyse.docx (dossier parent, mars 2026)
+source: ../jerlash-labs-article-grille-analyse.docx (dossier parent, mars 2026)
 statut: importé, à relire avant publication
 import: 2026-10-31 (conversion pandoc, contenu inchangé)
 ---
 
-*iavocat.be — Article*
+*jerlash.labs — Article*
 
 **Automatiser ou ne pas automatiser ? Une grille en quatre critères pour décider.**
 

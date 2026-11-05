@@ -4,14 +4,16 @@ Ce fichier est lu par Claude Code au début de chaque session. Il donne le conte
 
 ## Le projet en bref
 
-Depuis le 2026-11-01 (ADR-022) : le projet s'appelle jerlash.labs. Priorité : livrer plutôt que construire. Un seul chantier à la fois, celui de la section « Maintenant » de `BACKLOG.md` ; tout le reste attend au backlog. Ce qui est livré entre dans `CHANGELOG.md`. Le site publié se limite à l'accueil, au blog, à la page À propos et aux pages légales ; les outils et les autres rubriques sont en brouillon (`draft: true`).
+Depuis le 2026-11-01 (ADR-022) : le projet s'appelle jerlash.labs. Priorité : livrer plutôt que construire. Depuis le 2026-11-03 (ADR-025, proposée) : un projet livré par mois, en version de travail publique, selon le calendrier de `BACKLOG.md`, plus une piste parallèle « Outils » sans échéance ; tout le reste attend au backlog. Ce qui est livré entre dans `CHANGELOG.md`. Architecture cible du site (ADR-024, proposée) : Recherche, Outils, Revue, Éthique, plus À propos et les pages légales. Une rubrique n'est publiée qu'avec un contenu prêt ; en attendant, les pages restent en brouillon (`draft: true`).
 
-À terme, jerlash.labs est le site de Florian Ernotte, avocat (Avroy Avocats). Il publie deux choses :
+À terme, jerlash.labs est le site de Florian Ernotte, avocat (Avroy Avocats). Il publie :
 
-1. Des outils pour avocats construits avec l'IA, utilisables en local, sur lesquels l'avocat branche sa propre clé API (principe BYOK, "bring your own key").
-2. Des guides techniques et pratiques : comment obtenir et sécuriser une clé API, comment fonctionne la facturation, ce que devient une donnée envoyée à un fournisseur, comment installer et utiliser un outil.
+1. Outils : des outils pour avocats construits avec l'IA, utilisables en local, sur lesquels l'avocat branche sa propre clé API (principe BYOK, "bring your own key") ; des toolkits (Legal AI Governance Toolkit, P14) ; des guides techniques et pratiques (clé API, facturation, données envoyées, installation).
+2. Recherche : les programmes (H1 Human Agency & AI d'abord) et leurs protocoles.
+3. Revue : Perspectives (essais, y compris la réflexion sur le droit et la technique, depuis ADR-024), Research papers, Notes techniques, Recensions, selon `docs/politique-publication.md`.
+4. Éthique : principes, précautions d'usage, recherche avec participants.
 
-Le site est fonctionnel et opérationnel. Il ne contient pas de réflexion philosophique sur le droit ou la technologie (ce contenu a sa place sur reflexions.florianernotte.be). Les mises en garde et précautions d'usage sont en revanche bienvenues et attendues.
+Rien ne s'affiche comme « évalué » sans évaluation réellement faite. Les sources des livrables P14 à P19 sont hors dépôt (`../sources-proton/2026-11-03/`) ; le référentiel restreint et les tests adverses du kit MCP (P18) n'entrent jamais dans le dépôt.
 
 ## Documents de référence
 
@@ -19,6 +21,7 @@ Le site est fonctionnel et opérationnel. Il ne contient pas de réflexion philo
 - `docs/principes-outils.md` : règles que chaque outil doit respecter.
 - `docs/securite-confidentialite.md` : modèle de menace, gestion des clés, secret professionnel, RGPD.
 - `docs/charte-editoriale.md` : ton, style, règles d'écriture.
+- `docs/politique-publication.md` : collections de la Revue, statuts (brouillon, working paper, évalué), métadonnées, déclaration d'usage de l'IA (ADR-024).
 - `docs/decisions.md` : registre des décisions d'architecture (ADR). Les décisions au statut "Proposée" ne sont pas encore validées.
 - `BACKLOG.md` : tâches à faire, par phase.
 - `LOG.md` : journal des sessions de travail.
@@ -27,6 +30,7 @@ Le site est fonctionnel et opérationnel. Il ne contient pas de réflexion philo
 - `factory/` : organisation de la production des outils (voir ci-dessous).
 - `docs/veille/` : notes de veille sur les sources d'idées.
 - `docs/deontologie-ia.md` : risques et critères déontologiques pour tout envoi vers une IA distante (support de l'ADR-015).
+- `../otf/` (hors dépôt) : dépôt au fil de l'eau de Florian ; `INDEX.md` y liste les fichiers en attente (ADR-028). Tri : `/otf` ; production : `/produire <sujet ou ID>`. Aucun matériau brut dans `site/content/`.
 - `bibliotheque/` : textes de référence (lignes directrices AVOCATS.BE et OVB, guide du CNB), à citer par leur fiche.
 
 ## Règles de travail pour Claude Code
@@ -64,7 +68,7 @@ Règles :
   docs/                     cahier des charges et documents de référence
   bibliotheque/             textes de référence : catalogue et fiches versionnés, originaux non versionnés (ADR-018)
   templates/                gabarits (fiche projet, fiche outil, guide)
-  projets/                  fiches projet
+  projets/                  fiches projet (P14 à P19 : livrables Proton, sources hors dépôt dans ../sources-proton/)
   factory/                  pipeline, registre, standards, composants, jeux de test, mémoire
   contenus/                 textes sources à intégrer au site (rubriques éditoriales, ADR-012)
   site/                     code source du site jerlash.labs (Hugo)

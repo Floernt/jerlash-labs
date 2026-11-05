@@ -10,6 +10,23 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-03 - Livrables Proton, calendrier mensuel, refonte du site, Toolkit P14
+Fait :
+- Archive Proton du 2026-11-03 examinée. Les sources sont rangées hors dépôt dans `../sources-proton/2026-11-03/` (voir son LISEZ-MOI ; référentiel restreint et tests adverses du kit MCP à ne jamais versionner). Fiches P14 à P19 créées. Calendrier d'un projet par mois dans BACKLOG.md : P14 → P19 → P18 → P16 → P17 → P15, puis la suite.
+- Site : le blog devient Revue › Perspectives (`/fr/revue/perspectives/`, `/en/review/perspectives/`). Alias de redirection `/blog/`, `/fr/blog/` et `/en/blog/` vérifiés ; seul le flux RSS change d'adresse. Gabarits `revue/` et `toolkit/` créés, ainsi que le partiel `bloc-statut.html`. Menu « Revue ». Rubrique Éthique en brouillon, avec la page Précautions (liens des fiches outils mis à jour). `scripts/verifier.py` attend désormais `fr/revue/perspectives/index.xml`.
+- Toolkit P14 « Gouverner l'IA au cabinet » (nom provisoire) converti en 9 pages dans `site/content/outils/gouverner-l-ia-au-cabinet/`. Parcours réordonné à la demande de Florian : la gouvernance d'abord, la charte en dernier, qui ancre les choix faits en chemin. Le rappel sur le règlement IA ne figure qu'à deux endroits (charte, sources). « Pourquoi les chartes échouent » : ajout d'une seconde limite, l'absence de mise en œuvre.
+- Florian a relu « Pourquoi les chartes échouent » et l'a passée en `draft: false`. Les 8 autres pages du Toolkit restent en brouillon.
+- `docs/politique-publication.md` créé et validé. Charte éditoriale, cahier des charges (§5, §7) et CLAUDE.md alignés.
+Décisions : ADR-024 (architecture Recherche, Outils, Revue, Éthique ; point 6 : reflexions.florianernotte.be garde la réflexion généraliste), proposée. ADR-025 (un projet par mois, piste Outils en parallèle), proposée. ADR-026 (éditeur jerlash.labs par défaut ; Toolkit sous CC BY-NC 4.0), acceptée. Règlement IA limité à un rappel (décision de Florian). Politique de publication validée.
+Problèmes / points ouverts :
+- ATTENTION, avant tout push sur `main` : « Pourquoi les chartes échouent » est la seule page du Toolkit en `draft: false`. Elle serait publiée seule, sans sa page parente (en brouillon) et hors menu, et sans traduction anglaise. Il faut soit remettre `draft: true`, soit attendre que tout le Toolkit soit relu.
+- Rien n'est commité. La branche est `dev`.
+- Toolkit : relire les 8 autres pages ; lever les 21 marqueurs `[À VÉRIFIER]` / `[À COMPLÉTER]` ; trois passages de la page relue semblent inachevés (ligne 8 « où elle on s'arrête », ligne 31 « Deux de ces faiblesses spécifiques… », ligne 33 phrase sans verbe principal).
+- Questions en attente de Florian : nom français définitif ; autorisation d'usage interne à côté de CC BY-NC ; une phrase sur le recrutement et les modes alternatifs de règlement des litiges (annexe III) ; points relevés à la conversion (voir BACKLOG) ; validation d'ADR-024 (libellés, slugs anglais) et d'ADR-025.
+- Kit MCP (P18) : le code C3 annoncé est absent de l'archive ; à récupérer en décembre.
+- Traductions : 16 pages à traiter, dont les 9 du Toolkit (à traduire après relecture du français) et 6 pages obsolètes, déjà signalées avant la session.
+Prochaine étape : Florian poursuit la relecture du Toolkit dans l'ordre du parcours (gouvernance, données, homologation, supervision, opérations, charte, sources). Ensuite : levée des marqueurs, téléchargements (zip, charte .docx), traduction, entrées Outils et Éthique au menu, publication et post LinkedIn.
+
 ## 2026-11-01 - Blog : fin de l'import, retrait de Tayori
 Fait : décision de Florian, les articles de site/content/blog/ sont la seule version et se relisent sur place. scripts/importer_articles.py et son contrôle dans verifier.py supprimés ; en-tête d'import retiré des 9 articles ; CLAUDE.md, ADR-022 (révisée) et backlog à jour. Mentions de Tayori retirées de « L'intelligence artificielle n'innovera pas à votre place » (FR/EN) : deux phrases supprimées, « y retrouve » devient « retrouve ainsi ». verifier.py --publication : 23/23. dev poussée.
 Non fait : suppression des 9 fichiers sources de ../articles (projet: tayori), refusée par le contrôle des permissions ; à faire par Florian ou à autoriser.
@@ -208,3 +225,25 @@ Fait : rédaction du cahier des charges v0.1, de CLAUDE.md, des principes outils
 Décisions : ADR-001 et ADR-004 acceptées (issues du brief). ADR-002, 003, 005 et 006 proposées.
 Points ouverts : voir section 16 du cahier des charges. Le site de Sol Irvine cité comme modèle n'a pas été consulté.
 Prochaine étape : valider le cahier des charges et trancher ADR-002, ADR-003 et ADR-005.
+
+## JALON — 2026-11-02
+
+**Renommage :** suppression des dernières références à « iavocat » dans l'état actuel du dépôt. Graphies retenues : `iavocat.be` → `jerlash.labs` ; `iavocat` en nom de fichier ou identifiant → `jerlash-labs` ; `window.IAvocat` → `window.JerlashLabs`. Élisions corrigées (« d'iavocat.be » → « de jerlash.labs »).
+
+**Choix :** historique git non réécrit (anciens messages de commit inchangés) ; entrées passées de ce LOG.md laissées intactes (append-only). Empreintes des archives d'outils recalculées (`scripts/empaqueter.py --fiche`) ; `scripts/verifier.py` : 23/23.
+
+**Hors dépôt :** dossiers `LEGALTECH/iavocat` et `iavocat/iavocat` à renommer en `jerlash-labs`, fichiers `iavocat-article-*.docx` et `iavocat.zip` du dossier parent renommés.
+
+---
+
+## JALON — 2026-11-03
+
+**Livrables Proton intégrés au backlog.** Examen de l'archive `Proton Drive Download - 2026-11-03.zip` : Legal AI Governance Toolkit v0.1.0, kit expérimental MCP v0.1 et pack participants, extension C3 v0.2 (code annoncé absent), trois research papers H1, une recension, architecture « Legal Technology Commons » et Research Papers Guide. Sources rangées hors dépôt dans `../sources-proton/2026-11-03/` (doublons de la racine non recopiés ; référentiel restreint et tests adverses à ne jamais versionner).
+
+**Arbitrages de Florian :** Revue avec Perspectives (la réflexion entre sur jerlash) ; « livré » = version de travail publique ; outils P01 à P13 en parallèle ; novembre = refonte du site + Toolkit ; ordre P14 → P19 → P18 → P16 → P17 → P15 ; chemins en français, anglais dupliqué sous `/en/` (pas de problème de référencement : hreflang, x-default et canonical par langue déjà en place).
+
+**Fait :** fiches P14 à P19 et index ; ADR-024 (architecture Recherche, Outils, Revue, Éthique) et ADR-025 (un projet par mois, piste Outils), proposées ; `docs/politique-publication.md` ; `BACKLOG.md` (Maintenant = P14, piste Outils, calendrier 2026-11 → 2027-10) ; CLAUDE.md et cahier des charges (§5, §7) mis à jour.
+
+**Prochaine étape :** Florian valide ADR-024, ADR-025 et la politique de publication, tranche D01 et D02 ; puis gabarits et migration du blog.
+
+---

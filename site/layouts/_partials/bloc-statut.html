@@ -1,0 +1,16 @@
+{{- /* Bloc de statut d'un texte ou d'une ressource (ADR-024, docs/politique-publication.md).
+       N'apparaît que si le front matter porte « statut ». Champs lus : statut, version, identifiant,
+       editeur (jerlash.labs par défaut, ADR-026), licence, date_arret_recherches, controles, usage_ia. */ -}}
+{{- with .Params.statut }}
+{{- $p := $.Params }}
+<aside class="bloc-statut" aria-label="{{ T "statut_publication" }}">
+  <dl>
+    <div><dt>{{ T "statut" }}</dt><dd>{{ . }}{{ with $p.version }} · {{ T "version_n" . }}{{ end }}{{ with $p.identifiant }} · {{ . }}{{ end }}</dd></div>
+    <div><dt>{{ T "editeur" }}</dt><dd>{{ $p.editeur | default "jerlash.labs" }}</dd></div>
+    {{- with $p.licence }}<div><dt>{{ T "licence" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{- with $p.date_arret_recherches }}<div><dt>{{ T "date_arret" }}</dt><dd>{{ partial "date.html" (time .) }}</dd></div>{{ end }}
+    {{- with $p.controles }}<div><dt>{{ T "controles" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+    {{- with $p.usage_ia }}<div><dt>{{ T "usage_ia" }}</dt><dd>{{ . }}</dd></div>{{ end }}
+  </dl>
+</aside>
+{{- end }}

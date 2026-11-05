@@ -1,4 +1,4 @@
-{{- /* Accueil : héros (front matter « heros » de content/_index.md), derniers articles du blog, « pourquoi ce site », origine du nom (« nom »). */ -}}
+{{- /* Accueil : héros (front matter « heros » de content/_index.md), derniers textes de Perspectives, « pourquoi ce site », origine du nom (« nom »). */ -}}
 {{ define "main" }}
 {{- $p := .Params }}
 <div class="conteneur">
@@ -16,13 +16,13 @@
   </section>
   {{- end }}
 
-  {{- with site.GetPage "/blog" }}
+  {{- with site.GetPage "/revue/perspectives" }}
   {{- $articles := .RegularPages.ByDate.Reverse | first 3 }}
   {{- if $articles }}
   <section class="accueil-section" aria-labelledby="titre-blog">
     <div class="accueil-section__tete">
       <div>
-        <p class="ia-eyebrow">{{ T "blog" }}</p>
+        <p class="ia-eyebrow">{{ .Title }}</p>
         <h2 class="accueil-section__titre" id="titre-blog">{{ T "derniers_articles" }}</h2>
       </div>
       <a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">{{ T "tous_les_articles" }} <span class="ia-btn__arrow">→</span></a>

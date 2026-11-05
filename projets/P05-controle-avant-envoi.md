@@ -33,7 +33,7 @@ P05 Lite (MVP) : lecture et contrôle non destructifs d'un .docx, sans IA ni cl�
 
 P05 avancé : production de copies, contrôle assisté par un modèle, fonctions dépendant de P04 et P10.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 Liste de contrôle propre aux usages du cabinet [À COMPLÉTER par Florian].
 

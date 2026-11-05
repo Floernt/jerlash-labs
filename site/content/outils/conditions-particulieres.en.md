@@ -97,7 +97,7 @@ Free: the tool calls no paid service.
 - The report contains the transaction data: it is as confidential as the contract.
 - Before reusing a contract as a template, reread it in full, including headers and footers. The report tells you where to look first, not where there is no need to look.
 - To replace names in a text before entrusting it to an AI, use the [Pseudonymisation](/outils/pseudonymisation/) tool instead.
-- The general rules of use are on the [Precautions](/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
 
 ## Installation
 

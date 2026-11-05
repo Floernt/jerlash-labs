@@ -26,7 +26,7 @@ Version locale : import d'un contrat, extraction des points, simulation avec aff
 
 Hors périmètre de la première version : production d'un .docx avec modifications suivies (dépend de P04), comptes utilisateurs, partage.
 
-## 4. Adaptation à iavocat.be
+## 4. Adaptation à jerlash.labs
 
 L'original repose sur un serveur (Next.js, Supabase, Vercel Workflows, authentification, clé stockée chiffrée). Cette architecture est contraire à ADR-004. Il faut une version qui tourne en local, sans base de données distante. Le code source est sous MIT et peut servir de référence pour les prompts, la boucle de supervision et le détecteur de résolution.
 

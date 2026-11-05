@@ -13,7 +13,7 @@ taches: ["vérifier", "préparer un document"]
 mise_a_jour: 2026-10-31
 telechargement: "/telechargements/controle-avant-envoi-0.1.0.zip"
 taille: "33 Ko"
-sha256: "3a399124fb5dc3ba06a71e18429de8f33163c052a3b060ad7466012071958b0a"
+sha256: "20a10e6861584c6759439c0cd9b05d54c684d0c1da40b37e9475427af68abeaa"
 ---
 
 ## Ce que fait l'outil
@@ -74,7 +74,7 @@ Gratuit : l'outil n'appelle aucun service payant.
 - Relancez le contrôle après vos corrections : un « Accepter toutes les modifications » ne retire ni les commentaires ni les propriétés.
 - La liste de termes contient des noms de clients. Gardez-la hors des dossiers partagés.
 - Le rapport est aussi confidentiel que le document. Ne le joignez pas à l'envoi.
-- Les règles générales d'usage sont sur la page [Précautions](/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
 
 ## Installation
 

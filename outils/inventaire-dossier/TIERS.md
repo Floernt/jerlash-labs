@@ -8,4 +8,4 @@ La lecture prudente des .docx reprend la démarche des outils Contrôle avant en
 
 Dépendances d'exécution : aucune hors de la bibliothèque standard de Python (zipfile, xml.etree, email, tkinter, json, hashlib, urllib pour l'appel au fournisseur).
 
-Composants du projet iavocat.be copiés dans `src/` (ADR-021, même licence) : connecteur-ia et pseudonymisation. Voir `COMPOSANTS.md`.
+Composants du projet jerlash.labs copiés dans `src/` (ADR-021, même licence) : connecteur-ia et pseudonymisation. Voir `COMPOSANTS.md`.

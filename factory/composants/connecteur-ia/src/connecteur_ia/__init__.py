@@ -1,4 +1,4 @@
-"""Connecteur IA commun aux outils iavocat.be : un seul format d'appel, la clé de l'utilisateur (ADR-019, ADR-020)."""
+"""Connecteur IA commun aux outils jerlash.labs : un seul format d'appel, la clé de l'utilisateur (ADR-019, ADR-020)."""
 
 __version__ = "0.1.0"
 

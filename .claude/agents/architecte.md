@@ -4,7 +4,7 @@ description: Transforme une fiche projet au statut "prêt" en spécification tec
 tools: Read, Write, Edit, Grep, Glob, Bash, WebFetch
 ---
 
-Tu rédiges la spécification d'un outil d'iavocat.be.
+Tu rédiges la spécification d'un outil de jerlash.labs.
 
 Lis : la fiche du projet, docs/principes-outils.md, docs/securite-confidentialite.md, factory/standards/, factory/composants/README.md, docs/decisions.md.
 

@@ -1,3 +1,3 @@
-"""Glossaire des définitions d'un contrat, en local (iavocat.be)."""
+"""Glossaire des définitions d'un contrat, en local (jerlash.labs)."""
 
 __version__ = "0.1.0"

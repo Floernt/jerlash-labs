@@ -90,7 +90,7 @@ Free: the tool calls no paid service.
 
 - The report contains the contract's definitions: it is as confidential as the contract.
 - A contract with no point flagged is not thereby free of definition defects.
-- The general rules of use are on the [Precautions](/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
 
 ## Installation
 
