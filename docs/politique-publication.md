@@ -84,7 +84,7 @@ Textes : CC BY 4.0 (ADR-006), sous réserve des droits de tiers. Exception : le 
 
 ## 9. Recensions (ADR-027)
 
-Une recension porte, en plus des métadonnées du §4, un champ `objet` et un bloc `oeuvre` qui décrit l'œuvre recensée. La manière de citer dépend de l'objet.
+Une recension porte, en plus des métadonnées du §4, un champ `objet` et un bloc `oeuvre` qui décrit l'œuvre recensée. Par choix de Florian (2026-11-05), les champs `statut`, `version`, `controles` et `conflits_interets` y sont facultatifs : sans `statut`, la page n'affiche pas de bloc de statut. La manière de citer dépend de l'objet ; pour un podcast ou une conférence, le minutage est facultatif.
 
 | `objet` | Champs du bloc `oeuvre` | Citation précise |
 |---|---|---|
