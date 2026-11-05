@@ -1,11 +1,11 @@
 # Backlog
 
-Règle depuis le 2026-11-03 (ADR-025, proposée) : livrer plutôt que construire. Un projet livré par mois, en version de travail publique, plus une piste parallèle « Outils » sans échéance. Tout le reste attend ici, et rien n'en sort sans décision de Florian. Ce qui est livré passe dans `CHANGELOG.md`.
+Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer plutôt que construire. Un projet livré par mois, en version de travail publique, plus une piste parallèle « Outils » sans échéance. Le calendrier est indicatif : Florian peut en sortir à tout moment. Ce qui est livré passe dans `CHANGELOG.md`.
 
 ## Maintenant : novembre 2026, P14 Legal AI Governance Toolkit v0.2 et refonte du site (ADR-024)
 
 - [x] Florian : valider ADR-024 (2026-11-05)
-- [ ] Florian : valider ADR-025
+- [x] Florian : valider ADR-025 (acceptée comme cadre facultatif, 2026-11-05)
 - [x] Florian : valider `docs/politique-publication.md` (2026-11-03)
 - [x] Florian : D01 éditeur jerlash.labs, D02 licence CC BY-NC 4.0 (ADR-026)
 - [ ] Florian : confirmer le nom français « Gouverner l'IA au cabinet » (provisoire)

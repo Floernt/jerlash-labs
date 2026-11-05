@@ -279,13 +279,14 @@ Conséquences : nouveaux gabarits `recherche/`, `revue/` et `ethique/`, plus un 
 
 ## ADR-025 - Rythme : un projet livré par mois, outils en parallèle
 Date : 2026-11-03
-Statut : Proposée (orientation de Florian du 2026-11-03)
+Statut : Acceptée comme cadre facultatif (Florian, 2026-11-05)
 Contexte : ADR-022 limite le travail à un seul chantier dans « Maintenant ». Les livrables Proton (P14 à P19) demandent un calendrier. Les outils P01 à P13 ne doivent pas s'arrêter pour autant.
 Décision :
 1. Chaque mois, un projet est livré, c'est-à-dire publié en version de travail : v0.x ou working paper, avec le statut affiché et la liste des contrôles réellement faits. Une v1.0 attend des relecteurs externes.
 2. Ordre fixé par Florian : P14 (novembre 2026, avec la refonte du site), P19 (décembre), P18 (janvier 2027), P16 (février), P17 (mars), P15 (avril). Les mois suivants sont indicatifs et seront revus en mai 2027.
 3. Une piste parallèle « Outils » continue sans échéance mensuelle : P05, puis P09, puis P01. Elle passe toujours par la Factory.
 4. Chaque livraison : une entrée dans `CHANGELOG.md`, un post LinkedIn d'annonce le jour de la publication, un post de fond environ deux semaines plus tard.
+5. Ce cadre est indicatif. Il ne bloque rien : Florian peut changer l'ordre, décaler ou sauter un mois, ou travailler sur un autre sujet à tout moment, sans nouvelle décision. Claude peut rappeler le calendrier, sans s'y opposer ni le présenter comme une obligation.
 Conséquences : remplace, dans `BACKLOG.md` et le CLAUDE.md, la règle « un seul chantier ». « Maintenant » contient le projet du mois et la piste Outils. La newsletter reste exclue tant qu'aucune décision séparée n'est prise.
 
 ## ADR-026 - Éditeur des ressources et licence du Toolkit
