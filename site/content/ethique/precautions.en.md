@@ -4,7 +4,7 @@ title: "Precautions for use"
 slug: "precautions"
 description: "What you need to know before using a jerlash.labs tool in a case file: confidentiality, checking results, liability."
 traduction:
-  source: "ac181d300886e51788d3f241e774a890e173e392"
+  source: "fa5c50cd81701f9c414037fcc3cb49072e497115"
 ---
 
 The tools published here help you do a piece of work; they do not do it for you. This page brings together the rules that apply to all of them. Each tool page adds the precautions specific to that tool.
@@ -13,7 +13,7 @@ The tools published here help you do a piece of work; they do not do it for you.
 
 A tool can be wrong by omission (it misses an item) or by excess (it flags an item of no importance). A result with no alert means that the items searched for were not found, within the limits described on the tool page. It does not guarantee that the document is ready.
 
-When a tool uses an AI model, its output may contain inaccurate statements, references that do not exist or omissions. Read it as you would a trainee's work: carefully, and going back to the sources.
+When a tool uses an AI model, its output may contain inaccurate statements, references that do not exist or omissions. Read it as you would any work delegated to a machine: carefully, and going back to the sources.
 
 ## Know where your documents go
 
@@ -31,7 +31,7 @@ The reports and lists the tools produce (extracts from documents, client names) 
 
 ## Keep the tools up to date
 
-A corrected version may be published when a defect is discovered. The [Updates](/nouveautes/) page and its RSS feed announce it. A version with a known serious defect is withdrawn and flagged as such.
+A corrected version may be published when a defect is discovered. The [Updates](/nouveautes/) page and its RSS feed announce it. A version with a known serious defect is withdrawn and flagged.
 
 ## Liability
 
