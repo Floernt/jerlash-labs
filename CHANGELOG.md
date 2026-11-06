@@ -7,6 +7,7 @@ Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessi
 - Le toolkit P14 devient « Gouvernance de l'IA » (`/fr/outils/gouvernance-ia/`, `/en/tools/ai-governance/`) ; les anciennes adresses redirigent (ADR-029).
 - Trois niveaux de gouvernance, déterminés outil par outil ; nouvelle page « Le niveau 1 » et fiche de conformité F01 à F11 ; chaque module dit ce qu'il demande à chaque niveau. Les neuf pages sont publiées et traduites en anglais.
 - Rubrique Outils ouverte et ajoutée au menu (FR et EN), avec la section « Boîtes à outils » (ADR-031).
+- Tableur des niveaux 2 et 3 (`gouvernance-ia-matrices-0.3.xlsx`), téléchargeable depuis l'accueil du toolkit et disponible dans le dépôt avec son référentiel JSON et son script de génération (ADR-030).
 
 ## 2026-11-01 - Pages légales en ligne
 

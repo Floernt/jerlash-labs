@@ -14,7 +14,7 @@ controles: "Working version, with no external review or evaluation."
 cascade:
   type: "toolkit"
 traduction:
-  source: "bf7becc5c7cac9c2fc711b7f0e9b1015382bf4bd"
+  source: "27324f4470d310c7cac2503d1e16225e0238f264"
 ---
 
 AI use charters often repeat the same instructions: “use secure tools”, “have it reviewed”, “do not copy and paste”. These instructions are sound, but they cannot always be checked. They say neither on what conditions a tool was authorised, nor what the person reviewing must be able to do, nor how to show that a check actually took place.
@@ -61,6 +61,10 @@ The level is not acquired once and for all. A new tool, a new contract, a new ca
 **Level 3.** Put in place full [governance](gouvernance/), [data](donnees/), [approval](homologation/), [oversight](supervision/) and [operations](operations/), then draft and adopt [the charter](charte/), which records the choices made along the way. Then record incidents, changes and reviews, and revise the charter when these choices change.
 
 At every level, the charter comes last: adopted from the outset, it would remain a declaration of principles that nothing allows to be checked, as described in the page [Why charters fail](pourquoi-les-chartes-echouent/).
+
+## The spreadsheet for levels 2 and 3
+
+At levels 2 and 3, the sheets and matrices quickly become hard to keep in a text document. The [AI governance spreadsheet](/telechargements/gouvernance-ia-matrices-0.3.xlsx) (Excel format, in French) brings them together: the inventory of tools with their compliance sheet, the calculation of the level of each tool and of the organisation, the tools × data and tools × uses matrices, the roles and, for level 3, the eliminatory conditions, the scoring grid and the registers. Yellow cells are to be filled in, grey cells are calculated, and the drop-down lists are set in the “Paramètres” tab. The file contains only one fictitious example row. It is also available, with the script that generates it, in the [project repository](https://github.com/Floernt/jerlash-labs/tree/main/outils/gouvernance-ia).
 
 ## What the toolkit contains
 
