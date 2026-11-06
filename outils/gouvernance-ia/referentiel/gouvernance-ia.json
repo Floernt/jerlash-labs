@@ -1,0 +1,149 @@
+{
+  "nom": "Gouvernance de l'IA",
+  "version": "0.3",
+  "licence": "CC BY-NC 4.0",
+  "editeur": "jerlash.labs",
+  "source": "https://jerlash.eu/fr/outils/gouvernance-ia/",
+  "avertissement": "Version de travail. Ni charte adoptée, ni label de conformité, ni avis juridique individualisé. Les niveaux, seuils, pondérations et rôles sont des propositions que chaque organisation fixe elle-même. Aucune donnée réelle de client, aucun élément couvert par le secret professionnel.",
+
+  "niveaux": [
+    {
+      "code": 1,
+      "titre": "Niveau 1",
+      "situation": "Chaque outil est conforme, ou ne reçoit que des données D0 et D1.",
+      "a_produire": [
+        "Un référent, et une autre personne qui valide ses fiches",
+        "L'inventaire des outils",
+        "Une fiche de conformité par outil, ou à défaut la règle D0/D1",
+        "Une règle de vérification des productions",
+        "Un canal d'incident",
+        "Une formation courte (F1 à F3)"
+      ]
+    },
+    {
+      "code": 2,
+      "titre": "Niveau 2",
+      "situation": "Plusieurs outils, avec des niveaux de conformité différents.",
+      "a_produire": [
+        "Les éléments du niveau 1",
+        "La classification des données D0 à D4",
+        "La matrice outils × classes de données",
+        "La matrice outils × niveaux d'usage",
+        "Les rôles : référent, décideur, responsable de dossier",
+        "Une supervision graduée (S1 à S4)"
+      ]
+    },
+    {
+      "code": 3,
+      "titre": "Niveau 3",
+      "situation": "Des données sensibles circulent dans des outils dont la conformité n'est pas établie, ou des outils agissent seuls.",
+      "a_produire": [
+        "Les éléments du niveau 2",
+        "La gouvernance complète et la matrice des responsabilités",
+        "L'homologation de chaque outil pour chaque usage (conditions éliminatoires, notation, tests, décision)",
+        "Le registre des homologations",
+        "Les registres des incidents, des usages significatifs et des formations",
+        "La charte en seize articles"
+      ]
+    }
+  ],
+
+  "regle_niveau": {
+    "explication": "Le niveau se détermine outil par outil ; l'organisation retient le niveau le plus élevé de ses outils. Un outil qui agit seul relève du niveau 3 pour cet usage.",
+    "table": {
+      "etablie": {"D0-D1": 1, "D2-D4": 1},
+      "partielle": {"D0-D1": 1, "D2-D4": 2},
+      "non_etablie": {"D0-D1": 1, "D2-D4": 3}
+    },
+    "agit_seul": 3
+  },
+
+  "conformite": {
+    "reponses": ["oui", "non", "à vérifier", "sans objet"],
+    "statuts": {
+      "etablie": "Tous les points sont à oui (ou sans objet).",
+      "partielle": "Tous les points ont été examinés, l'un d'eux au moins est à non.",
+      "non_etablie": "L'un des points au moins reste à vérifier."
+    },
+    "points": [
+      {"code": "F01", "court": "Contrat identifié et daté", "libelle": "Un contrat écrit (conditions générales ou contrat particulier) est identifié, daté et conservé, pour la formule effectivement souscrite."},
+      {"code": "F02", "court": "Usage conforme à la destination", "libelle": "L'outil est utilisé conformément à la destination prévue par son fournisseur."},
+      {"code": "F03", "court": "Pas de réutilisation des contenus", "libelle": "Le fournisseur ne réutilise pas les contenus pour entraîner ou améliorer ses modèles, ou cette réutilisation est désactivée de manière vérifiable."},
+      {"code": "F04", "court": "Accès compatibles avec le secret", "libelle": "Les accès du fournisseur et de ses sous-traitants aux contenus (assistance, surveillance des abus, journaux) sont limités et encadrés d'une manière compatible avec le secret professionnel."},
+      {"code": "F05", "court": "Accord de traitement des données", "libelle": "Si des données à caractère personnel sont traitées, un accord de traitement des données conforme à l'article 28 du RGPD est en place.", "sans_objet_possible": true},
+      {"code": "F06", "court": "Localisation et transferts", "libelle": "La localisation du traitement, les transferts hors de l'Union européenne et leurs garanties sont connus."},
+      {"code": "F07", "court": "Sous-traitants ultérieurs", "libelle": "La liste des sous-traitants ultérieurs est disponible, et le fournisseur informe de ses changements."},
+      {"code": "F08", "court": "Conservation et effacement", "libelle": "Les durées de conservation des contenus et des journaux sont connues, et l'effacement est possible."},
+      {"code": "F09", "court": "Sécurité des comptes et chiffrement", "libelle": "Les comptes sont protégés (authentification à plusieurs facteurs, gestion des accès, révocation), et les échanges et le stockage sont chiffrés."},
+      {"code": "F10", "court": "Notification des incidents", "libelle": "Le fournisseur s'engage à notifier les incidents de sécurité, et un contact est identifié."},
+      {"code": "F11", "court": "Pas d'action autonome", "libelle": "L'outil propose sans agir seul : il n'envoie, ne dépose, ne signe ni ne modifie rien sans une intervention humaine."}
+    ]
+  },
+
+  "classes_donnees": [
+    {"code": "D0", "nom": "Publique", "exemples": "Législation, documents librement diffusables", "regle": "Utilisable dans un système homologué pour D0, selon sa finalité"},
+    {"code": "D1", "nom": "Interne", "exemples": "Procédure du cabinet, brouillon non sensible, budget interne non publié", "regle": "Système homologué pour D1, contrôle des accès et du stockage"},
+    {"code": "D2", "nom": "Confidentielle", "exemples": "Documents commerciaux, informations de négociation non publiques, éléments non publics sur des tiers", "regle": "Homologation explicite pour D2, finalité justifiée, transmission limitée"},
+    {"code": "D3", "nom": "Secret professionnel", "exemples": "Instructions des clients, correspondances et pièces couvertes par le secret, stratégie de défense", "regle": "Analyse juridique et déontologique spécifique ; fournisseur, accès et traitement expressément autorisés"},
+    {"code": "D4", "nom": "Protection renforcée", "exemples": "Données sensibles ou pénales, dossiers particulièrement exposés, mineurs ou personnes vulnérables", "regle": "Mesures renforcées, analyse juridique spécifique"}
+  ],
+
+  "niveaux_usage": [
+    {"code": "U1", "nom": "Assistance courante", "exemples": "Mise en forme ou reformulation de matériau public, faible conséquence"},
+    {"code": "U2", "nom": "Assistance professionnelle", "exemples": "Synthèse, recherche, brouillons ou analyses qui demandent une vérification ciblée"},
+    {"code": "U3", "nom": "Enjeu juridique", "exemples": "Actes, conseils, choix stratégiques ou droits de personnes susceptibles d'être affectés"},
+    {"code": "U4", "nom": "Action autonome ou risque critique", "exemples": "Actions externes, irréversibles, massives ou difficiles à contrôler"}
+  ],
+
+  "niveaux_controle": [
+    {"code": "S1", "nom": "Examen simple", "declenchement": "Mise en forme, contenu public sans impact significatif", "exigences": "Conformité à la demande, absence d'éléments inattendus"},
+    {"code": "S2", "nom": "Vérification ciblée", "declenchement": "Recherche, synthèse de textes, calcul non engageant", "exigences": "Sources et faits déterminants, date, omissions, pertinence"},
+    {"code": "S3", "nom": "Validation professionnelle approfondie", "declenchement": "Consultation, conclusions, stratégie, avis, communication engageante", "exigences": "Contrôle des sources primaires, du raisonnement, des faits, des alternatives, compétence du validateur et motivation"},
+    {"code": "S4", "nom": "Contrôle des actions", "declenchement": "Agent capable de modifier, envoyer, signer, déposer", "exigences": "Permissions, point de validation, destinataire, journal, interruption et reprise"}
+  ],
+
+  "conditions_eliminatoires": {
+    "mentions": ["satisfaite", "non satisfaite", "preuve insuffisante", "non applicable"],
+    "liste": [
+      {"code": "E01", "libelle": "Finalité licite et admissible pour la profession, usage conforme à la réglementation"},
+      {"code": "E02", "libelle": "Confidentialité et secret professionnel protégés, compte tenu des données, des accès, des sous-traitants et des usages secondaires"},
+      {"code": "E03", "libelle": "Protection des données adéquate en cas de traitement de données personnelles (rôles, contrats, sécurité, transferts selon le cas)"},
+      {"code": "E04", "libelle": "Contrôle des accès, isolation, révocation et prévention des divulgations adaptés à la sensibilité"},
+      {"code": "E05", "libelle": "Possibilité réelle de vérifier et, pour les actions, d'arrêter ou de limiter, à la mesure du risque"},
+      {"code": "E06", "libelle": "Aucune clause contractuelle imposant une réutilisation incompatible avec le périmètre demandé"},
+      {"code": "E07", "libelle": "Gestion des incidents et contact chez le fournisseur suffisants pour le risque accepté"},
+      {"code": "E08", "libelle": "Pour U3 et U4, aucune erreur critique non maîtrisée dans les tests essentiels"}
+    ]
+  },
+
+  "criteres": [
+    {"code": "C1", "nom": "Confidentialité et données", "poids": 25, "observe": "Conditions, rôle des tiers, stockage, rétention, entraînement, transferts"},
+    {"code": "C2", "nom": "Sécurité technique", "poids": 20, "observe": "Authentification unique et à plusieurs facteurs, droits, chiffrement, séparation, journaux, incidents"},
+    {"code": "C3", "nom": "Fiabilité pour l'usage", "poids": 20, "observe": "Résultats sur des cas représentatifs, erreurs critiques, sources"},
+    {"code": "C4", "nom": "Contrôle humain", "poids": 15, "observe": "Contestation, interruption, autorisation des actions, explications"},
+    {"code": "C5", "nom": "Auditabilité", "poids": 10, "observe": "Identifiants, versions, journaux proportionnés, provenance"},
+    {"code": "C6", "nom": "Portabilité et réversibilité", "poids": 5, "observe": "Export, suppression, migration, clauses de sortie"},
+    {"code": "C7", "nom": "Maintenance et support", "poids": 5, "observe": "Engagement de niveau de service le cas échéant, correctifs, notification des changements"}
+  ],
+  "notation": {
+    "echelle": "0 rien de démontré, 1 très insuffisant, 2 faible, 3 acceptable avec réserves, 4 satisfaisant, 5 très bon",
+    "seuils_exemple": {"instruire": 80, "sous_conditions": 65},
+    "regle": "Une bonne moyenne ne compense jamais un échec sur une condition éliminatoire. Aucun score ne vaut autorisation automatique."
+  },
+
+  "autorisations_donnees": ["autorisé", "sous conditions", "interdit"],
+  "decisions": ["approuvé", "approuvé sous conditions", "pilote", "refusé", "suspendu", "retiré"],
+
+  "roles_reduits": [
+    {"role": "Référent", "mission": "Tient l'inventaire des outils et les fiches de conformité, au niveau 2 la matrice outils × données × usages ; refait le diagnostic du niveau ; reçoit les signalements d'incident."},
+    {"role": "Décideur", "mission": "Valide les fiches et la matrice établies par le référent, décide d'un changement de niveau, d'un nouvel outil ou d'une suspension."},
+    {"role": "Responsable de dossier", "mission": "Vérifie les productions utilisées dans ses dossiers et apprécie leurs conséquences professionnelles."}
+  ],
+
+  "registres": {
+    "homologations": ["id_homologation", "date_demande", "organisation", "demandeur", "fournisseur", "produit", "modele_version", "configuration", "cas_usage_id", "classes_donnees", "niveau_usage", "actions_autorisees", "restrictions", "conditions_eliminatoires", "score_indicatif", "rapport_tests_ref", "statut", "decideur", "date_decision", "date_reexamen", "declencheurs_changement"],
+    "incidents": ["incident_id", "date_decouverte", "date_signalement", "outil_version", "cas_usage_id", "categorie", "impact_potentiel", "classe_donnees", "mesures_immediates", "responsable", "escalade", "notification_evaluee", "mesures_correctives", "echeance", "statut_homologation", "date_cloture"],
+    "usages_significatifs": ["usage_id", "date", "outil_version", "cas_usage_id", "dossier_reference_interne", "niveau_usage", "controle_s1_s2_s3_s4", "points_determinants_verifies", "sources_ref", "decision", "validateur", "reserve", "lieu_preuve_securise"],
+    "formations": ["personne_id_interne", "role", "module", "date_formation", "date_evaluation", "modalite_evaluation", "habilitation", "date_reexamen", "validateur"]
+  }
+}

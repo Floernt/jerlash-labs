@@ -1,10 +1,20 @@
-{{- /* Catalogue des outils, groupé par tâche (taxonomie « taches ») */ -}}
+{{- /* Rubrique Outils : boîtes à outils, puis catalogue des outils groupé par tâche (taxonomie « taches ») */ -}}
 {{ define "main" }}
 <div class="conteneur">
   <header class="contenu">
     <h1>{{ .Title }}</h1>
     {{ .Content }}
   </header>
+
+  {{- /* Boîtes à outils (ADR-031) : sous-sections publiées de la rubrique, avant le catalogue des outils */}}
+  {{- with .Sections }}
+  <section class="groupe-taches" aria-labelledby="boites-a-outils">
+    <h2 id="boites-a-outils">{{ T "boites_a_outils" }}</h2>
+    <ul class="liste-contenus liste-contenus--cartes">
+      {{- range .ByWeight }}{{ partial "resume-outil.html" . }}{{ end }}
+    </ul>
+  </section>
+  {{- end }}
 
   {{- $outils := .RegularPages }}
 
@@ -56,7 +66,9 @@
   </section>
   {{- end }}
   {{- else }}
+  {{- if not $.Sections }}
   <p>{{ T "aucun_outil" }}</p>
+  {{- end }}
   {{- end }}
 </div>
 {{ end }}

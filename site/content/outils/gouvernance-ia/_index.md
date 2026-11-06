@@ -58,6 +58,10 @@ Le niveau n'est pas acquis une fois pour toutes. Un nouvel outil, un nouveau con
 
 À tous les niveaux, la charte vient en dernier : adoptée d'emblée, elle resterait une déclaration de principes que rien ne permet de vérifier, ce que décrit la page [Pourquoi les chartes échouent](pourquoi-les-chartes-echouent/).
 
+## Le tableur des niveaux 2 et 3
+
+Aux niveaux 2 et 3, les fiches et les matrices deviennent vite difficiles à tenir dans un document texte. Le [tableur Gouvernance de l'IA](/telechargements/gouvernance-ia-matrices-0.3.xlsx) (format Excel) les rassemble : l'inventaire des outils avec leur fiche de conformité, le calcul du niveau de chaque outil et de l'organisation, les matrices outils × données et outils × usages, les rôles, puis, pour le niveau 3, les conditions éliminatoires, la grille de notation et les registres. Les cellules jaunes se remplissent, les grises se calculent, et les listes de choix se règlent dans l'onglet « Paramètres ». Le fichier ne contient qu'une ligne d'exemple fictive. Il est aussi disponible, avec le script qui le génère, dans le [dépôt du projet](https://github.com/Floernt/jerlash-labs/tree/main/outils/gouvernance-ia).
+
 ## Ce que contient la boîte à outils
 
 | Module | Contenu | À partir du niveau |
