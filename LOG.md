@@ -267,3 +267,9 @@ Prochaine étape : valider le cahier des charges et trancher ADR-002, ADR-003 et
 **Prochaine étape :** Florian teste le tableur dans Excel ; puis étape 3 (fiche P20, serveur MCP local, commande Claude Code).
 
 ---
+
+## JALON — 2026-11-06 (publication)
+
+**Gouvernance de l'IA 0.3 publiée** (PR #7 fusionnée par Florian). Page en ligne mais orpheline : rubrique Outils en brouillon (ADR-022) et absente du menu. Choix de Florian : ouvrir la rubrique Outils. Fait : entrée « Outils » / « Tools » au menu (avant la Revue, ADR-024), section « Boîtes à outils » dans `site/layouts/outils/section.html`, texte de la rubrique ajusté, ADR-031 proposée. Tableur et MCP toujours hors dépôt (`outils/gouvernance-ia/`, `publier.yml` modifié non commité).
+
+---

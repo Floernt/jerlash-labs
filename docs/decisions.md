@@ -340,3 +340,12 @@ Décision :
 3. Le serveur MCP (P20) tourne en local, en stdio, sur la machine de l'organisation, et n'envoie rien à jerlash.labs (règle 4 de CLAUDE.md). Il est doublé d'une commande Claude Code à copier, sans installation. Le choix de sa dépendance (SDK MCP officiel) sera consigné à son cadrage.
 Conséquences : les liens du contenu vers `/telechargements/` gardent leur adresse (hook `render-link.html`). Les formules du tableur ont été contrôlées sur six profils fictifs (bibliothèque `formulas`, hors dépôt), faute de LibreOffice sur le poste.
 
+## ADR-031 - Ouverture de la rubrique Outils avec les boîtes à outils
+Date : 2026-11-06
+Statut : Proposée (choix de Florian du 2026-11-06 : publier la rubrique Outils pour rendre la boîte à outils accessible)
+Contexte : la boîte à outils Gouvernance de l'IA est publiée, mais la rubrique Outils restait en brouillon (ADR-022, point 1) et le menu ne menait pas à elle : la page n'était accessible que par son adresse.
+Décision :
+1. La rubrique Outils est publiée (FR et EN) et entre au menu principal, avant la Revue (ordre d'ADR-024).
+2. La page de rubrique présente d'abord les boîtes à outils (sous-sections publiées de `outils/`), puis le catalogue des outils par tâche. Les outils logiciels restent en brouillon tant qu'ils ne sont pas prêts ; le message « aucun outil publié » ne s'affiche pas lorsqu'une boîte à outils est présente.
+Conséquences : amende ADR-022, point 1, pour la seule rubrique Outils. Gabarit `site/layouts/outils/section.html`, libellé `boites_a_outils`, menus dans `site/hugo.toml`.
+

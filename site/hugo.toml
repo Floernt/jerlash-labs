@@ -96,6 +96,10 @@ removePathAccents = true
       codeFences = true
       guessSyntax = false
     [[languages.fr.menus.principal]]
+      name = "Outils"
+      pageRef = "/outils"
+      weight = 5
+    [[languages.fr.menus.principal]]
       name = "Revue"
       pageRef = "/revue"
       weight = 10
@@ -143,6 +147,10 @@ removePathAccents = true
       taches = "/tasks/:slug/"
     [languages.en.permalinks.taxonomy]
       taches = "/tasks/"
+    [[languages.en.menus.principal]]
+      name = "Tools"
+      pageRef = "/outils"
+      weight = 5
     [[languages.en.menus.principal]]
       name = "Review"
       pageRef = "/revue"
