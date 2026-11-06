@@ -1,5 +1,5 @@
 # Vérification de chaque modification : secrets, tests des outils, archive, site.
-# Les versions des actions sont à revérifier lors de l'activation du dépôt GitHub (ADR-003).
+# Versions des actions et du système figées, revues le 2026-11-06 (Node.js 24) ; à revoir à chaque avertissement de GitHub (ADR-003).
 name: Vérification
 
 on:
@@ -11,12 +11,12 @@ permissions:
 
 jobs:
   verifier:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       HUGO_VERSION: 0.148.2
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Installer Hugo extended (version figée, ADR-002)

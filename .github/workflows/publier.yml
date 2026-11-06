@@ -21,12 +21,12 @@ concurrency:
 
 jobs:
   construire:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       HUGO_VERSION: 0.148.2
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - name: Installer Hugo extended (version figée, ADR-002)
@@ -40,21 +40,21 @@ jobs:
       - name: Vérification de publication
         run: python scripts/verifier.py --exiger-hugo --publication --site-seul
       - id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Construction (adresse fournie par GitHub Pages ; aucune archive d'outil publiée, ADR-022)
         run: hugo --source site --destination "$GITHUB_WORKSPACE/public" --minify --panicOnWarning --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Page 404 à la racine (GitHub Pages ; site bilingue sous /fr/ et /en/, ADR-023)
         run: cp public/fr/404.html public/404.html
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: public
 
   deployer:
     needs: construire
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment:
       name: github-pages
       url: ${{ steps.deploiement.outputs.page_url }}
     steps:
       - id: deploiement
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
