@@ -4,7 +4,7 @@ Ce fichier est lu par Claude Code au début de chaque session. Il donne le conte
 
 ## Le projet en bref
 
-Depuis le 2026-11-01 (ADR-022) : le projet s'appelle jerlash.labs. Priorité : livrer plutôt que construire. Depuis le 2026-11-03 (ADR-025, proposée) : un projet livré par mois, en version de travail publique, selon le calendrier de `BACKLOG.md`, plus une piste parallèle « Outils » sans échéance ; tout le reste attend au backlog. Ce qui est livré entre dans `CHANGELOG.md`. Architecture cible du site (ADR-024, proposée) : Recherche, Outils, Revue, Éthique, plus À propos et les pages légales. Une rubrique n'est publiée qu'avec un contenu prêt ; en attendant, les pages restent en brouillon (`draft: true`).
+Depuis le 2026-11-01 (ADR-022) : le projet s'appelle jerlash.labs. Priorité : livrer plutôt que construire. Depuis le 2026-11-03 (ADR-025, acceptée comme cadre facultatif) : un projet livré par mois, en version de travail publique, selon le calendrier de `BACKLOG.md`, plus une piste parallèle « Outils » sans échéance. Ce calendrier est indicatif : il ne bloque rien, et Florian peut travailler sur autre chose quand il le veut. Ce qui est livré entre dans `CHANGELOG.md`. Architecture cible du site (ADR-024, proposée) : Recherche, Outils, Revue, Éthique, plus À propos et les pages légales. Une rubrique n'est publiée qu'avec un contenu prêt ; en attendant, les pages restent en brouillon (`draft: true`).
 
 À terme, jerlash.labs est le site de Florian Ernotte, avocat (Avroy Avocats). Il publie :
 

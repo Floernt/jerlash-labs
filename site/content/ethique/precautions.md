@@ -10,7 +10,7 @@ Les outils publiés ici aident à faire un travail ; ils ne le font pas à vot
 
 Un outil peut se tromper par omission (il ne voit pas un élément) ou par excès (il signale un élément sans importance). Un résultat sans alerte veut dire que les éléments recherchés n'ont pas été trouvés, dans les limites décrites sur la fiche. Il ne garantit pas que le document est prêt.
 
-Quand un outil utilise un modèle d'IA, sa sortie peut contenir des affirmations inexactes, des références qui n'existent pas ou des omissions. Elle se relit comme le travail d'un stagiaire : avec attention, et en remontant aux sources.
+Quand un outil utilise un modèle d'IA, sa sortie peut contenir des affirmations inexactes, des références qui n'existent pas ou des omissions. Elle se relit comme toute production déléguée à la machine : avec attention, et en remontant aux sources.
 
 ## Sachez où vont vos documents
 
@@ -28,7 +28,7 @@ Les rapports et listes que produisent les outils (extraits de documents, noms de
 
 ## Gardez les outils à jour
 
-Une version corrigée peut être publiée lorsqu'un défaut est découvert. La page [Nouveautés](/nouveautes/) et son flux RSS l'annoncent. Une version dont un défaut sérieux est connu est retirée et signalée comme telle.
+Une version corrigée peut être publiée lorsqu'un défaut est découvert. La page [Nouveautés](/nouveautes/) et son flux RSS l'annoncent. Une version dont un défaut sérieux est connu est retirée et signalée.
 
 ## Responsabilité
 

@@ -27,6 +27,6 @@ Index des fiches projet. Le statut fait foi dans `factory/registre.md`, tenu par
 | F02 | Revue d'interface | factory | laws-of-ux |
 | F03 | Mémoire de la Factory | factory | skillboxing |
 
-Les productions au fil de l'eau de Florian arrivent dans `../otf/` (hors dépôt, ADR-028) ; `/otf` les rattache à une fiche ou propose un nouveau projet. Les sources de P14 à P19 sont hors dépôt, dans `../sources-proton/2026-11-03/` (voir son `LISEZ-MOI.md`). Ordre de livraison, un projet par mois : `BACKLOG.md`, section Calendrier (ADR-025).
+Les productions au fil de l'eau de Florian arrivent dans `../otf/` (hors dépôt, ADR-028) ; `/otf` les rattache à une fiche ou propose un nouveau projet. Les sources de P14 à P19 sont hors dépôt, dans `../sources-proton/2026-11-03/` (voir son `LISEZ-MOI.md`). Ordre de livraison indicatif, un projet par mois : `BACKLOG.md`, section Calendrier (ADR-025, cadre facultatif).
 
 Nouvelle fiche : partir de `templates/fiche-projet.md`, ID suivant libre.

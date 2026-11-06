@@ -1,28 +1,36 @@
 ---
-draft: true
+draft: false
 title: "Traçabilité, incidents et formation"
 description: "Ce qu'un cabinet garde comme trace de ses usages de l'IA, comment il traite un incident et comment il forme et habilite les personnes qui utilisent ou supervisent ces outils."
 weight: 60
+aliases: ["/fr/outils/gouverner-l-ia-au-cabinet/operations/"]
+niveaux:
+  - niveau: "Niveau 1"
+    texte: "[La procédure d'incident](#la-procédure) et les modules de formation F1 à F3."
+  - niveau: "Niveau 2"
+    texte: "Le niveau 1, plus [la preuve proportionnée](#une-preuve-proportionnée-au-niveau-dusage) et le registre des incidents."
+  - niveau: "Niveau 3"
+    texte: "Tout le module, y compris les registres et l'habilitation."
 ---
 
-Ce module couvre le fonctionnement courant : quelles traces garder, comment réagir à un incident, comment former et habiliter. Il s'appuie sur les niveaux d'usage U1 à U4 de [l'homologation](../homologation/), les niveaux de contrôle S1 à S4 de [la supervision](../supervision/) et les classes de données D0 à D4 décrites dans [les données](../donnees/). Les durées, fréquences et contenus proposés ici sont à fixer par chaque organisation.
+Ce module couvre le fonctionnement courant : quels éléments de traçabilité (preuve) garder, comment réagir à un incident, comment former et habiliter. Il s'appuie sur les niveaux d'usage U1 à U4 de [l'homologation](../homologation/), les niveaux de contrôle S1 à S4 de [la supervision](../supervision/) et les classes de données D0 à D4 décrites dans [les données](../donnees/). Les durées, fréquences et contenus proposés ici sont à fixer par chaque organisation.
 
 ## Traçabilité
 
-### Ce que la trace doit permettre
+### Ce que la preuve doit permettre
 
-La trace doit suffire à comprendre un usage significatif de l'IA, les décisions prises et les incidents, sans accumuler des copies de documents couverts par le secret professionnel. Une mention « assisté par IA » ne prouve pas qu'un contrôle a eu lieu, et rien n'impose de l'apposer uniformément à chaque petite tâche.
+La preuve doit suffire à comprendre un usage significatif de l'IA, les décisions prises et les incidents, sans accumuler des copies de documents couverts par le secret professionnel. Une mention « assisté par IA » ne prouve pas qu'un contrôle a eu lieu, et rien n'impose de l'apposer uniformément à chaque petite tâche.
 
-### Une trace proportionnée au niveau d'usage
+### Une preuve proportionnée au niveau d'usage
 
-| Usage | Trace proposée |
+| Usage | Preuve proposée |
 |---|---|
 | U1, mise en forme | Pas de fiche individuelle, sauf incident ou exigence propre à l'activité |
 | U2, analyse de travail | Outil, finalité et, lorsque c'est pertinent, contrôle des points décisifs |
 | U3, conseil ou contenu engageant | Outil, source des points déterminants, décision et validation par une personne compétente |
 | U4, action automatisée | Identifiant de l'action, autorisation, autorité, cible, résultat, point d'arrêt et incident éventuel |
 
-### Quatre lieux distincts
+### Quatre lieux 
 
 Les informations ne vont pas toutes au même endroit.
 
@@ -35,9 +43,9 @@ Les informations ne vont pas toutes au même endroit.
 
 ### Conservation, accès et surveillance
 
-L'organisation désigne une personne responsable de la conservation. Elle fixe les durées de conservation en fonction de la finalité, de la base légale et des obligations professionnelles, et prévoit le traitement des demandes d'exercice des droits des personnes concernées ainsi que les mesures de sécurité. [À VÉRIFIER : dispositions du RGPD applicables aux durées de conservation et aux droits des personnes, texte et date]
+L'organisation désigne une personne responsable de la conservation. Elle fixe les durées de conservation en fonction de la finalité, de la base légale et des obligations professionnelles, et prévoit le traitement des demandes d'exercice des droits des personnes concernées ainsi que les mesures de sécurité. 
 
-Une surveillance continue des collaborateurs au moyen de ces journaux ne peut pas être présumée licite. Elle s'apprécie au regard du droit du travail, de la transparence et de la proportionnalité. [À VÉRIFIER : règles de droit du travail belge et de protection des données applicables aux journaux d'activité, texte et date]
+Une surveillance continue des collaborateurs au moyen de ces journaux ne peut pas être présumée licite. Elle s'apprécie au regard du droit du travail, de la transparence et de la proportionnalité. Un examen approfondi doit être réalisé sur cet aspect.
 
 ### Documenter une décision
 
@@ -61,7 +69,7 @@ On signale dès qu'il existe un soupçon sérieux de fuite de données, d'erreur
 
 ### Notifications
 
-Les délais et les destinataires d'une notification dépendent du type d'incident, de la qualité des parties, de la législation applicable et des obligations déontologiques. Il ne faut pas appliquer un délai unique à toute erreur liée à l'IA. Une violation de données à caractère personnel appelle une analyse spécifique au regard du RGPD, qui peut conduire à notifier l'autorité de contrôle et les personnes concernées lorsque les conditions légales sont réunies. [À VÉRIFIER : articles du RGPD sur la notification des violations de données, texte et date]
+Les délais et les destinataires d'une notification dépendent du type d'incident, de la qualité des parties, de la législation applicable et des obligations déontologiques. Il ne faut pas appliquer un délai unique à toute erreur liée à l'IA. Une violation de données à caractère personnel appelle une analyse spécifique au regard du RGPD, qui peut conduire à notifier l'autorité de contrôle et les personnes concernées lorsque les conditions légales sont réunies (articles 33 et 34 du RGPD).
 
 ### Fiche rapide d'incident
 
@@ -85,7 +93,7 @@ Les délais et les destinataires d'une notification dépendent du type d'inciden
 
 ## Formation et habilitation
 
-Le programme ci-dessous est une proposition. Les éventuelles exigences légales en matière de formation sont à vérifier à la date d'adoption. [À VÉRIFIER]
+Le programme ci-dessous est une proposition. Les éventuelles exigences légales en matière de formation sont à vérifier.
 
 ### Les modules
 

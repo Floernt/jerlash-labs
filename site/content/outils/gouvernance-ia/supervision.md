@@ -1,8 +1,16 @@
 ---
-draft: true
+draft: false
 title: "Supervision et validation"
 description: "Comment contrôler un résultat produit par une IA avant de l'utiliser, à quel niveau, et comment garder la trace de ce contrôle."
 weight: 50
+aliases: ["/fr/outils/gouverner-l-ia-au-cabinet/supervision/"]
+niveaux:
+  - niveau: "Niveau 1"
+    texte: "[Vérifier un livrable juridique](#vérifier-un-livrable-juridique) et [quand refuser ou escalader](#quand-refuser-ou-escalader)."
+  - niveau: "Niveau 2"
+    texte: "Le niveau 1, plus [les quatre niveaux de contrôle](#les-quatre-niveaux-de-contrôle) attribués par usage et [la preuve minimale](#la-preuve-minimale) pour les usages à enjeu."
+  - niveau: "Niveau 3"
+    texte: "Tout le module, y compris la fiche de validation et le contrôle des agents."
 ---
 
 À la fin de cette page, vous saurez choisir un niveau de contrôle (S1 à S4) pour un usage donné, vérifier un livrable juridique produit avec une IA et documenter la décision prise. Le module traite la supervision humaine comme une exigence de la pratique professionnelle et de la déontologie. Les niveaux S1 à S4 sont des catégories internes au toolkit.
@@ -53,9 +61,9 @@ Un résultat est refusé, ou la question remontée à la personne compétente, d
 
 La personne qui supervise a besoin de temps, de sources accessibles, d'une compétence adaptée, d'un droit effectif de refuser et d'une absence de pression à approuver. Un protocole peut être bien écrit et rester sans effet dans un service surchargé. Les organisations vérifient donc ces conditions pendant les phases pilotes et lors des retours sur incident.
 
-## La trace minimale
+## La preuve minimale
 
-Pour un usage significatif, la trace comprend :
+Pour un usage à enjeu, la preuve comprend :
 
 - un identifiant interne du dossier ou du travail, qui n'expose aucune donnée ;
 - l'outil, sa version connue et l'usage qui en a été fait ;
@@ -63,7 +71,7 @@ Pour un usage significatif, la trace comprend :
 - la décision (utilisé, modifié, écarté, escaladé) ;
 - le validateur, la date et l'éventuelle réserve.
 
-La trace n'est pas une copie de tous les échanges avec l'outil. Les informations confidentielles restent dans l'environnement sécurisé de l'organisation. La page sur [les opérations](../operations/) décrit le registre correspondant.
+La preuve n'est pas une copie de tous les échanges avec l'outil. Les informations confidentielles restent dans l'environnement sécurisé de l'organisation. La page sur [les opérations](../operations/) décrit le registre correspondant.
 
 ## Fiche de validation d'un livrable
 

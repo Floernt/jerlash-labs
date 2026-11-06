@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 500" width="760" height="500" role="img" aria-labelledby="t d">
+  <title id="t">Les acteurs de la gouvernance de l'IA au cabinet</title>
+  <desc id="d">La direction ou le comité IA délègue au référent IA, qui lui soumet les usages U3 et U4. Le référent sollicite l'avis du juridique et de la déontologie, de la sécurité et de l'informatique, et du DPO. Il habilite les utilisateurs, qui déclarent les usages et signalent les incidents. Le responsable de dossier encadre l'utilisateur.</desc>
+  <defs>
+    <marker id="f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5C574D"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif; fill: #1C1A16; }
+    .titre { font-size: 16px; font-weight: 600; }
+    .sous { font-size: 13px; fill: #5C574D; }
+    .lien { font-size: 12px; fill: #5C574D; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11px; letter-spacing: 0.08em; fill: #5C574D; }
+    .boite { fill: #FFFFFF; stroke: #1C1A16; stroke-width: 1.5; }
+    .avis { fill: #FFFFFF; stroke: #8F8A7E; stroke-width: 1; }
+    .cadre { fill: #F1EFEA; stroke: #8F8A7E; stroke-width: 1; stroke-dasharray: 4 4; }
+    .fleche { stroke: #5C574D; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <!-- Direction -->
+  <rect x="40" y="20" width="400" height="70" rx="2" fill="#BD4A2A"/>
+  <text class="titre" x="240" y="50" text-anchor="middle" style="fill:#FCFAF5">Direction ou comité IA</text>
+  <text class="sous" x="240" y="72" text-anchor="middle" style="fill:#FCFAF5">fixe les règles · décide des usages U3 et U4</text>
+
+  <!-- Direction ⇄ référent -->
+  <line class="fleche" x1="200" y1="92" x2="200" y2="156" marker-end="url(#f)"/>
+  <text class="lien" x="190" y="130" text-anchor="end">délègue par écrit</text>
+  <line class="fleche" x1="280" y1="158" x2="280" y2="94" marker-end="url(#f)"/>
+  <text class="lien" x="290" y="130">soumet U3 et U4</text>
+
+  <!-- Référent -->
+  <rect class="boite" x="40" y="160" width="400" height="84" rx="2"/>
+  <text class="titre" x="240" y="188" text-anchor="middle">Référent IA</text>
+  <text class="sous" x="240" y="210" text-anchor="middle">reçoit les demandes · tient le registre</text>
+  <text class="sous" x="240" y="230" text-anchor="middle">décide des usages U1 et U2 par délégation</text>
+
+  <!-- Avis -->
+  <rect class="cadre" x="480" y="110" width="260" height="220" rx="2"/>
+  <text class="mono" x="495" y="130">AVIS CONSULTÉS</text>
+  <rect class="avis" x="495" y="142" width="230" height="54" rx="2"/>
+  <text class="titre" x="510" y="164" style="font-size:14px">Juridique et déontologie</text>
+  <text class="sous" x="510" y="184" style="font-size:12px">secret, information du client</text>
+  <rect class="avis" x="495" y="204" width="230" height="54" rx="2"/>
+  <text class="titre" x="510" y="226" style="font-size:14px">Sécurité et informatique</text>
+  <text class="sous" x="510" y="246" style="font-size:12px">accès, chiffrement, prestataires</text>
+  <rect class="avis" x="495" y="266" width="230" height="54" rx="2"/>
+  <text class="titre" x="510" y="288" style="font-size:14px">DPO (s'il y en a un)</text>
+  <text class="sous" x="510" y="308" style="font-size:12px">données personnelles</text>
+  <line class="fleche" x1="444" y1="202" x2="476" y2="202" marker-start="url(#f)" marker-end="url(#f)"/>
+  <text class="lien" x="460" y="194" text-anchor="middle">avis</text>
+
+  <!-- Référent ⇄ utilisateur -->
+  <line class="fleche" x1="140" y1="246" x2="140" y2="396" marker-end="url(#f)"/>
+  <text class="lien" x="130" y="318" text-anchor="end">habilite,</text>
+  <text class="lien" x="130" y="334" text-anchor="end">informe</text>
+  <line class="fleche" x1="280" y1="398" x2="280" y2="248" marker-end="url(#f)"/>
+  <text class="lien" x="290" y="318">déclare un usage,</text>
+  <text class="lien" x="290" y="334">signale un incident</text>
+
+  <!-- Utilisateur et responsable de dossier -->
+  <rect class="boite" x="40" y="400" width="300" height="84" rx="2"/>
+  <text class="titre" x="190" y="428" text-anchor="middle">Utilisateur</text>
+  <text class="sous" x="190" y="450" text-anchor="middle">reste dans le périmètre homologué</text>
+  <text class="sous" x="190" y="470" text-anchor="middle">applique les mesures prévues</text>
+
+  <line class="fleche" x1="436" y1="442" x2="344" y2="442" marker-end="url(#f)"/>
+  <text class="lien" x="390" y="434" text-anchor="middle">encadre</text>
+
+  <rect class="boite" x="440" y="400" width="300" height="84" rx="2"/>
+  <text class="titre" x="590" y="428" text-anchor="middle">Responsable de dossier</text>
+  <text class="sous" x="590" y="450" text-anchor="middle">fixe les limites dans le dossier</text>
+  <text class="sous" x="590" y="470" text-anchor="middle">valide le livrable</text>
+</svg>

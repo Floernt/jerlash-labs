@@ -3,6 +3,7 @@ draft: false
 title: "Pourquoi les chartes IA échouent"
 description: "Ce qu'une charte IA de cabinet fait bien, ses dix faiblesses de structure et la correction proposée pour chacune."
 weight: 10
+aliases: ["/fr/outils/gouverner-l-ia-au-cabinet/pourquoi-les-chartes-echouent/"]
 ---
 
 La boîte à outils est née de l'analyse d'une charte IA de cabinet, soumise au projet comme point de départ. Son texte n'est pas reproduit ici. Elle ressemble à beaucoup d'autres : ses principes sont justes, mais on ne peut pas vérifier qu'ils sont respectés. Ce texte identifie ce qu'il faudrait garder, où elle s'arrête trop tôt, et comment les modules de la boîte à outils proposent d'y remédier.

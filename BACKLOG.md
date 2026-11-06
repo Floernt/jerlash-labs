@@ -1,14 +1,18 @@
 # Backlog
 
-Règle depuis le 2026-11-03 (ADR-025, proposée) : livrer plutôt que construire. Un projet livré par mois, en version de travail publique, plus une piste parallèle « Outils » sans échéance. Tout le reste attend ici, et rien n'en sort sans décision de Florian. Ce qui est livré passe dans `CHANGELOG.md`.
+Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer plutôt que construire. Un projet livré par mois, en version de travail publique, plus une piste parallèle « Outils » sans échéance. Le calendrier est indicatif : Florian peut en sortir à tout moment. Ce qui est livré passe dans `CHANGELOG.md`.
 
 ## Maintenant : novembre 2026, P14 Legal AI Governance Toolkit v0.2 et refonte du site (ADR-024)
 
 - [x] Florian : valider ADR-024 (2026-11-05)
-- [ ] Florian : valider ADR-025
+- [x] Florian : valider ADR-025 (acceptée comme cadre facultatif, 2026-11-05)
 - [x] Florian : valider `docs/politique-publication.md` (2026-11-03)
 - [x] Florian : D01 éditeur jerlash.labs, D02 licence CC BY-NC 4.0 (ADR-026)
-- [ ] Florian : confirmer le nom français « Gouverner l'IA au cabinet » (provisoire)
+- [x] Nom français : « Gouvernance de l'IA », adresse `outils/gouvernance-ia/` (Florian, 2026-11-06, ADR-029)
+- [x] Étape 1 de la refonte en trois niveaux (ADR-029) : français relu par Florian, publié et traduit (2026-11-06)
+- [x] Étape 2 : tableur des niveaux 2 et 3, généré depuis le référentiel (2026-11-06) ; reste : Florian ouvre et teste le fichier dans Excel
+- [ ] Étape 3 : serveur MCP local et commande Claude Code (fiche P20 à créer, ADR-030)
+- [ ] Lever les 3 marqueurs [À VÉRIFIER] de `sources-et-versions.md` (acte modificatif du règlement IA, articles du RGPD, droits sur les documents de 99_SOURCES)
 - [x] Gabarit `revue/`, gabarits `toolkit/` et partiel « bloc de statut » ; menu Revue et permaliens anglais ; libellés dans `site/i18n/` (2026-11-03)
 - [x] Migrer les 9 articles du blog vers `revue/perspectives/` avec leurs alias `/blog/`, `/fr/blog/`, `/en/blog/` (2026-11-03)
 - [ ] Rubrique Éthique (`ethique/`, page Précautions) et entrées Outils et Éthique du menu, à la publication du Toolkit

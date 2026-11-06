@@ -1,0 +1,12 @@
+{{- /* Toolkit Gouvernance de l'IA (ADR-029) : ce que chaque niveau de gouvernance demande de la page. Paramètre « niveaux » du front matter : liste de { niveau, texte }, texte en Markdown. */ -}}
+{{- $p := . -}}
+{{- with .Params.niveaux }}
+<aside class="bloc-statut encadre-niveaux" aria-label="{{ T "selon_niveau" }}">
+  <p class="encadre-niveaux__titre">{{ T "selon_niveau" }}</p>
+  <dl>
+    {{- range . }}
+    <div><dt>{{ .niveau }}</dt><dd>{{ $p.RenderString .texte }}</dd></div>
+    {{- end }}
+  </dl>
+</aside>
+{{- end }}

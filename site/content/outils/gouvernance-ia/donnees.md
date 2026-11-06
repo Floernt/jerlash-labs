@@ -1,8 +1,16 @@
 ---
-draft: true
+draft: false
 title: "Données"
 description: "Classer les informations avant de les confier à un outil d'IA, se poser les bonnes questions avant le traitement et documenter l'analyse."
 weight: 30
+aliases: ["/fr/outils/gouverner-l-ia-au-cabinet/donnees/"]
+niveaux:
+  - niveau: "Niveau 1"
+    texte: "Pas de classement des données. Il suffit de savoir reconnaître les classes D0 et D1, seules admises dans un outil dont la conformité n'est pas établie."
+  - niveau: "Niveau 2"
+    texte: "[Les cinq classes](#les-cinq-classes), [les questions avant le traitement](#avant-le-traitement) et la matrice outils × données."
+  - niveau: "Niveau 3"
+    texte: "Tout le module, y compris le questionnaire joint au dossier d'homologation."
 ---
 
 Avant de transmettre une information à un système d'IA, ou de lui y donner accès, on la classe. La classe détermine dans quel outil homologué elle peut entrer et à quelles conditions. Cette page propose une classification, une liste de questions à se poser avant le traitement et un questionnaire à joindre au dossier d'[homologation](../homologation/).
@@ -60,7 +68,7 @@ Organisation et responsable : [ ]   Outil et cas d'usage : [ ]   Date : [ ]
 1.  Nature des informations : [D0 / D1 / D2 / D3 / D4 ; cumul et justification]
 2.  Données personnelles : [oui / non / à clarifier] ; catégories,
     personnes concernées, éventuelles données visées aux articles 9 ou 10
-    du RGPD [À VÉRIFIER : texte et version consolidée] : [ ]
+    du RGPD : [ ]
 3.  But et nécessité du traitement : [ ]
 4.  Rôles au sens du RGPD : responsable du traitement, sous-traitant(s),
     destinataires, éventuelle responsabilité conjointe : [ ]
