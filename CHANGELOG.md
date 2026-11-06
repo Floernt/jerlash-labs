@@ -2,6 +2,11 @@
 
 Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessions est dans `LOG.md`, ce qui reste à faire dans `BACKLOG.md`.
 
+## 2026-11-06 - Gouvernance de l'IA 0.3 : trois niveaux de gouvernance (version de travail publiée)
+
+- Le toolkit P14 devient « Gouvernance de l'IA » (`/fr/outils/gouvernance-ia/`, `/en/tools/ai-governance/`) ; les anciennes adresses redirigent (ADR-029).
+- Trois niveaux de gouvernance, déterminés outil par outil ; nouvelle page « Le niveau 1 » et fiche de conformité F01 à F11 ; chaque module dit ce qu'il demande à chaque niveau. Les neuf pages sont publiées et traduites en anglais.
+
 ## 2026-11-01 - Pages légales en ligne
 
 - Mentions légales et confidentialité republiées en français et en anglais, liées depuis le pied de page. Le site ne fournissant aucun service, elles ne mentionnent ni BCE, ni TVA, ni adresse de contact.

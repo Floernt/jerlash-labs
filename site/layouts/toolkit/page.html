@@ -8,6 +8,7 @@
       {{- with .Description }}<p class="tete-page__chapeau">{{ . }}</p>{{ end }}
     </header>
     {{ partial "bloc-statut.html" .Parent }}
+    {{ partial "encadre-niveaux.html" . }}
     <div class="prose">
       {{ .Content }}
     </div>

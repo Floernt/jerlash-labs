@@ -300,7 +300,7 @@ Conséquences : `docs/politique-publication.md` et la fiche P14 le reprennent. L
 
 ## ADR-027 - Recensions : une collection, distinguée par l'objet recensé
 Date : 2026-11-04
-Statut : Proposée (orientation de Florian du 2026-11-04 : distinguer la recension d'un livre, d'un article ou billet, d'un podcast ou d'une conférence ; une étiquette sur les vignettes)
+Statut : Acceptée (Florian, 2026-11-06) (orientation de Florian du 2026-11-04 : distinguer la recension d'un livre, d'un article ou billet, d'un podcast ou d'une conférence ; une étiquette sur les vignettes)
 Contexte : ADR-024 crée la collection Recensions dans la Revue. Florian prépare des recensions d'objets différents, qui ne se décrivent ni ne se citent de la même manière (page, section, minutage).
 Décision :
 1. Une seule collection, `revue/recensions/`, sans sous-collection. Chaque recension porte un champ `objet` : `livre`, `article` (article, billet de blog, rapport en ligne), `podcast` ou `conference`. On ajoute une valeur au besoin (libellés dans `site/i18n/`).
@@ -311,7 +311,7 @@ Conséquences : partiel `oeuvre-recensee.html`, étiquette dans `carte-article.h
 
 ## ADR-028 - Dossier otf : dépôt au fil de l'eau, hors dépôt git
 Date : 2026-11-05
-Statut : Proposée (demande de Florian du 2026-11-05 ; BACKLOG.md comme seule liste de tâches, choix de Florian)
+Statut : Acceptée (Florian, 2026-11-06) (demande de Florian du 2026-11-05 ; BACKLOG.md comme seule liste de tâches, choix de Florian)
 Contexte : Florian produit des textes au fil de l'eau, souvent avec une IA. Le 2026-11-04, dix fichiers déposés dans `site/content/revue/recensions/` auraient été publiés au premier push, le dépôt étant public.
 Décision :
 1. Un dossier `../otf/`, à côté du dépôt et hors git, reçoit tout ce qui est produit, sans règle de nom ni de format. `../otf/INDEX.md` liste les fichiers en attente et leur rattachement ; `../otf/traite/<ID>/` garde les fichiers utilisés.
@@ -319,3 +319,24 @@ Décision :
 3. Commande `/otf` : tri et rattachement, sans modifier les fichiers. Commande `/produire <sujet ou ID>` : construction du livrable en brouillon, mise à jour du backlog, rangement des fichiers utilisés.
 4. On ne dépose plus de matériau brut dans `site/content/`.
 Conséquences : `.claude/commands/otf.md` et `produire.md` ; CLAUDE.md et `projets/README.md` le mentionnent.
+
+## ADR-029 - Gouvernance de l'IA : trois niveaux de gouvernance, nouveau nom
+Date : 2026-11-06
+Statut : Acceptée (Florian, 2026-11-06) (orientation de Florian du 2026-11-06 ; règle de détermination du niveau et rattachement des agents au niveau 3 à valider)
+Contexte : le toolkit P14 imposait à toute organisation le même appareil (homologation située, notation C1-C7, conditions E01-E08, matrice RACI, charte en seize articles). Pour un cabinet qui n'utilise qu'un outil conforme, c'est disproportionné : l'outil offre lui-même les garanties que ces procédures chercheraient à établir.
+Décision :
+1. Le toolkit s'appelle « Gouvernance de l'IA », à l'adresse `/fr/outils/gouvernance-ia/`. Les anciennes adresses `/fr/outils/gouverner-l-ia-au-cabinet/...` redirigent (alias Hugo).
+2. Trois niveaux de gouvernance, déterminés outil par outil ; l'organisation retient le niveau le plus élevé. Niveau 1 : conformité établie (fiche F01 à F11 entièrement satisfaite), ou données limitées à D0 et D1 (voie alternative). Niveau 2 : conformité partielle et données D2 à D4. Niveau 3 : conformité non établie et données D2 à D4, ou outil qui agit seul.
+3. Chaque module indique en tête, par le paramètre `niveaux` du front matter (partiel `encadre-niveaux.html`), ce qu'il demande à chaque niveau. L'homologation complète est réservée au niveau 3.
+Conséquences : nouvelle page `niveau-1.md` ; version réduite de la gouvernance ; article 4 de la charte modèle adapté ; version 0.3. Le tableur des niveaux 2 et 3 et le serveur MCP (P20) reprennent la même règle depuis un référentiel unique.
+
+## ADR-030 - Gouvernance de l'IA : référentiel unique, tableur généré, serveur MCP local
+Date : 2026-11-06
+Statut : Proposée (choix de Florian du 2026-11-06 : MCP local doublé d'une commande Claude Code ; tableur téléchargeable depuis le dépôt)
+Contexte : la boîte à outils Gouvernance de l'IA (P14, ADR-029) gagne un tableur pour les niveaux 2 et 3 et, à terme, un serveur MCP qui guide une organisation dans la démarche. Le site, le tableur et le MCP ne doivent pas diverger.
+Décision :
+1. Un référentiel unique, `outils/gouvernance-ia/referentiel/gouvernance-ia.json`, décrit les niveaux, la règle de détermination du niveau et les codes (F, D, U, S, E, C) ; le tableur et le MCP le lisent.
+2. Le tableur est généré par `outils/gouvernance-ia/tableur/generer_tableur.py` avec openpyxl. Exception à ADR-010 : openpyxl est une dépendance de génération seulement, jamais d'exécution chez l'utilisateur. Le fichier produit est versionné dans `outils/gouvernance-ia/tableur/` ; `site/static/telechargements/` étant ignoré par git, le workflow de publication l'y copie avant la vérification et la construction.
+3. Le serveur MCP (P20) tourne en local, en stdio, sur la machine de l'organisation, et n'envoie rien à jerlash.labs (règle 4 de CLAUDE.md). Il est doublé d'une commande Claude Code à copier, sans installation. Le choix de sa dépendance (SDK MCP officiel) sera consigné à son cadrage.
+Conséquences : les liens du contenu vers `/telechargements/` gardent leur adresse (hook `render-link.html`). Les formules du tableur ont été contrôlées sur six profils fictifs (bibliothèque `formulas`, hors dépôt), faute de LibreOffice sur le poste.
+

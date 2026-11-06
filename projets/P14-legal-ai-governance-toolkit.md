@@ -7,7 +7,7 @@ priorité: haute
 source: archive Proton du 2026-11-03, JERLASH_Labs_Legal_AI_Governance_Toolkit v0.1.0 (hors dépôt : ../sources-proton/2026-11-03/)
 licence_source: aucune licence concédée par la v0.1 ; publication sous CC BY-NC 4.0, éditeur jerlash.labs (ADR-026)
 dépend_de: [ADR-024]
-mise_a_jour: 2026-11-03
+mise_a_jour: 2026-11-06
 ---
 
 # Legal AI Governance Toolkit
@@ -33,6 +33,10 @@ Publier sur jerlash.labs une version de travail v0.2 du Toolkit. Elle comprend :
 C'est le projet de novembre 2026, avec la refonte du site (ADR-024).
 
 Hors périmètre : certification, label de conformité, homologation d'un fournisseur pour tout le marché, avis juridique individualisé, offres payantes (décision D10, à instruire séparément).
+
+## 3 bis. Gouvernance à trois niveaux (2026-11-06, ADR-029)
+
+Décision de Florian : la profondeur de la gouvernance dépend des outils en place. Niveau 1 : chaque outil est conforme (fiche de conformité F01 à F11), ou ne reçoit que des données D0 et D1. Niveau 2 : plusieurs outils de conformité différente, matrice outils × données × usages. Niveau 3 : données sensibles dans des outils de conformité non établie, ou outils qui agissent seuls ; homologation complète. Le tableur des niveaux 2 et 3 et le serveur MCP sont suivis dans P20.
 
 ## 4. Adaptation à jerlash.labs
 
@@ -74,7 +78,7 @@ Délai souhaité : publication fin novembre 2026.
 
 ## 9. Questions ouvertes
 
-1. Nom français : « Gouverner l'IA au cabinet » (`/fr/outils/gouverner-l-ia-au-cabinet/`), retenu provisoirement le 2026-11-03, à confirmer avant publication.
+1. Nom français : « Gouvernance de l'IA » (`/fr/outils/gouvernance-ia/`), décidé par Florian le 2026-11-06 ; les anciennes adresses redirigent (ADR-029).
 3. Licence : faut-il ajouter à CC BY-NC 4.0 une autorisation expresse d'adoption et d'adaptation internes par les cabinets ? (question soulevée le 2026-11-03)
 2. Faut-il des seuils et pondérations par défaut, ou seulement les paramètres locaux à fixer (D05) ?
 

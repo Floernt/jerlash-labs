@@ -1,11 +1,21 @@
 ---
-draft: true
+draft: false
 title: "Homologation"
 description: "Comment autoriser un outil d'IA pour un usage déterminé : conditions éliminatoires, grille de notation, tests sur cas fictifs, décision et registres."
 weight: 40
+aliases: ["/fr/outils/gouverner-l-ia-au-cabinet/homologation/"]
+niveaux:
+  - niveau: "Niveau 1"
+    texte: "Non requis. La [fiche de conformité](../niveau-1/#la-fiche-de-conformité-dun-outil) en tient lieu."
+  - niveau: "Niveau 2"
+    texte: "[Les niveaux d'usage](#les-niveaux-dusage) U1 à U4, pour dire quels usages chaque outil admet. [Les conditions éliminatoires](#les-conditions-éliminatoires) servent de liste de contrôle pour les outils partiellement conformes. Ni notation ni tests."
+  - niveau: "Niveau 3"
+    texte: "Tout le module : conditions éliminatoires, notation, tests, décision, réexamen et registres."
 ---
 
-On n'homologue ni une marque ni « l'IA » en général. On autorise un système pour un usage déterminé, dans un périmètre défini et pour une durée limitée. Ce périmètre combine l'outil, le cas d'usage, les données, la configuration et les personnes qui l'utilisent. Si l'un de ces éléments change, l'homologation doit être réexaminée.
+L'homologation est l'outil du niveau 3 : elle arbitre la conformité lorsque des données sensibles circulent dans des outils dont la conformité n'est pas établie, ou lorsqu'un outil agit seul. Aux niveaux 1 et 2, la [fiche de conformité](../niveau-1/#la-fiche-de-conformité-dun-outil) et la matrice outils × données × usages en tiennent lieu.
+
+On n'homologue ni une marque ni « l'IA » en général. On autorise un système pour un usage déterminé, dans un périmètre défini. Ce périmètre combine l'outil, le cas d'usage, les données, la configuration et les personnes qui l'utilisent. Si l'un de ces éléments change, l'homologation doit être réexaminée.
 
 Cette page décrit la démarche, de la déclaration du cas d'usage à la décision, et fournit les fiches correspondantes. Qui décide est réglé dans [la gouvernance](../gouvernance/).
 
@@ -17,7 +27,7 @@ Le toolkit classe chaque usage selon ses effets possibles. Ces quatre niveaux so
 | --- | --- | --- |
 | U1 | Assistance courante | Mise en forme ou reformulation de matériau public, faible conséquence |
 | U2 | Assistance professionnelle | Synthèse, recherche, brouillons ou analyses qui demandent une vérification ciblée |
-| U3 | Enjeu juridique significatif | Actes, conseils, choix stratégiques ou droits de personnes susceptibles d'être affectés |
+| U3 | Enjeu juridique | Actes, conseils, choix stratégiques ou droits de personnes susceptibles d'être affectés |
 | U4 | Action autonome ou risque critique | Actions externes, irréversibles, massives ou difficiles à contrôler |
 
 Des facteurs aggravants peuvent justifier des contrôles plus stricts que ceux du niveau. Les niveaux de contrôle S1 à S4 sont décrits dans [la supervision](../supervision/), les classes de données D0 à D4 dans [les données](../donnees/).
@@ -80,7 +90,7 @@ Les tests portent sur des situations proches de la pratique du cabinet.
 ### Le protocole minimal
 
 1. Avant de tester, on consigne la tâche, les hypothèses, le corpus, les risques, les critères, les seuils critiques, l'annotateur et la méthode d'annotation.
-2. On prépare des scénarios fictifs. Je propose de commencer par 10 à 30 scénarios exploratoires, et d'en ajouter si le risque ou la variabilité l'exige. Ce nombre ne prouve pas que l'échantillon est représentatif.
+2. On prépare des scénarios fictifs. Nous proposons de commencer par 10 à 30 scénarios exploratoires, et d'en ajouter si le risque ou la variabilité l'exige. Ce nombre ne prouve pas que l'échantillon est représentatif.
 3. On établit une référence humaine, préparée sans s'appuyer sur le seul système évalué, avec des sources datées.
 4. On exécute en notant la date, les paramètres accessibles, le modèle et sa version (ou le fait qu'elle est inconnue) et la suite des opérations.
 5. On note l'exactitude des faits, l'authenticité des références, le raisonnement, les omissions, la gravité des erreurs, la sécurité et les permissions, et la manière dont le système exprime son incertitude.

@@ -1,10 +1,12 @@
 {{- /* Liens du contenu : un lien interne écrit « /page/ » mène à cette page dans la langue courante
        (ADR-023) et reçoit le chemin de base du site (publication sous un sous-chemin).
        Un lien relatif (« gouvernance/ », « ../charte/ ») est résolu vers la page visée, dans la langue courante ;
-       si elle n'est pas publiée (brouillon), seul le texte est affiché, sans lien mort. */ -}}
+       si elle n'est pas publiée (brouillon), seul le texte est affiché, sans lien mort.
+       Un fichier à télécharger (« /telechargements/x ») garde son adresse, sans préfixe de langue. */ -}}
 {{- $url := .Destination -}}
 {{- $mort := false -}}
-{{- if and (hasPrefix $url "/") (not (hasPrefix $url "//")) }}{{ $url = partial "lien-interne.html" $url }}
+{{- if hasPrefix $url "/telechargements/" }}{{ $url = relURL (strings.TrimPrefix "/" $url) }}
+{{- else if and (hasPrefix $url "/") (not (hasPrefix $url "//")) }}{{ $url = partial "lien-interne.html" $url }}
 {{- else if not (or (hasPrefix $url "#") (strings.Contains $url ":")) }}
   {{- $chemin := $url }}{{ $ancre := "" }}
   {{- with findRESubmatch `^([^#]*)(#.*)?$` $url 1 }}{{ $chemin = index (index . 0) 1 }}{{ $ancre = index (index . 0) 2 }}{{ end }}

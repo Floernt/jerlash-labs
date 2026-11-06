@@ -247,3 +247,23 @@ Prochaine étape : valider le cahier des charges et trancher ADR-002, ADR-003 et
 **Prochaine étape :** Florian valide ADR-024, ADR-025 et la politique de publication, tranche D01 et D02 ; puis gabarits et migration du blog.
 
 ---
+
+## JALON — 2026-11-06
+
+**Gouvernance de l'IA : trois niveaux (étape 1 sur 3).** Florian renomme le toolkit P14 « Gouvernance de l'IA » et fixe trois niveaux de gouvernance proportionnés aux outils en place. Plan en trois étapes : 1) réorganiser et simplifier le site, 2) tableur Excel des niveaux 2 et 3, 3) serveur MCP local et commande Claude Code (inspiration : before-ai, qui n'est pas un MCP mais une commande). Arbitrages : niveau 1 = outil conforme OU données limitées à D0/D1 (voie alternative) ; MCP local en stdio + commande ; slug `gouvernance-ia`.
+
+**Fait (étape 1) :** `git mv` vers `site/content/outils/gouvernance-ia/` avec alias des anciennes adresses ; accueil réécrit autour du diagnostic (tableau conformité × données) ; nouvelle page `niveau-1.md` (six éléments, fiche de conformité F01 à F11) ; encadré « Selon votre niveau » par module (paramètre `niveaux`, partiel `encadre-niveaux.html`) ; version réduite de la gouvernance ; article 4 de la charte adapté ; version 0.3 ; ADR-029 proposée ; P14 et BACKLOG à jour. `scripts/verifier.py` : 23/23.
+
+**Prochaine étape :** Florian relit le français et valide la règle de détermination du niveau (dont le rattachement des agents au niveau 3) ; puis `/traduire`, et étape 2 (tableur, fiche P20).
+
+---
+
+## JALON — 2026-11-06 (suite)
+
+**Gouvernance de l'IA : étapes 1 et 2 livrées.** Florian a relu le français et publié les neuf pages (`draft: false`). Relecture : alignement « trace » → « preuve » (dont l'ancre « La preuve minimale »), « quels éléments », « Nous proposons », journal des versions 0.2/0.3, références RGPD certaines substituées aux marqueurs (art. 28, 33-34, 37-39). Traduction anglaise des dix pages, toolkit renommé `/en/tools/ai-governance/` avec alias des anciennes adresses.
+
+**Étape 2 :** référentiel unique `outils/gouvernance-ia/referentiel/gouvernance-ia.json` ; tableur `gouvernance-ia-matrices-0.3.xlsx` (Inventaire avec fiche F01-F11 et niveau calculé, Diagnostic, matrices données et usages, Rôles, Conditions E, Grille scores, quatre registres, Paramètres) généré par openpyxl, copié dans `site/static/telechargements/` ; formules contrôlées sur six profils fictifs avec la bibliothèque `formulas` (LibreOffice absent du poste). Hook `render-link.html` : les liens `/telechargements/` gardent leur adresse. ADR-030 proposée. `verifier.py` : 23/23 ; 234 liens à ancre FR/EN valides.
+
+**Prochaine étape :** Florian teste le tableur dans Excel ; puis étape 3 (fiche P20, serveur MCP local, commande Claude Code).
+
+---

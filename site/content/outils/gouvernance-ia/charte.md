@@ -1,11 +1,19 @@
 ---
-draft: true
+draft: false
 title: "Charte modèle"
 description: "Un modèle de charte en seize articles, à rédiger en fin de parcours pour ancrer les choix de gouvernance de l'organisation."
 weight: 70
+aliases: ["/fr/outils/gouverner-l-ia-au-cabinet/charte/"]
+niveaux:
+  - niveau: "Niveau 1"
+    texte: "Une charte courte : articles 1, 2, 3, 5, 7, 8, 14 et 16."
+  - niveau: "Niveau 2"
+    texte: "Ajouter les articles 4 (sous forme de matrice outils × données × usages), 6 et 10."
+  - niveau: "Niveau 3"
+    texte: "Les seize articles et leurs annexes."
 ---
 
-Ce texte est le modèle d'une « Charte de gouvernance et d'utilisation responsable de l'intelligence artificielle ». Il n'est qu'un modèle : il n'a été adopté par aucune organisation. Chaque cabinet l'adapte à sa taille, à ses usages et aux règles qui lui sont applicables, puis le fait adopter par son organe compétent. Les passages entre crochets sont à compléter. Les seuils, pondérations et fréquences auxquels la charte renvoie sont fixés par chaque organisation, dans ses annexes.
+Ce texte est le modèle d'une « Charte de gouvernance et d'utilisation responsable de l'intelligence artificielle ». Il n'est qu'un modèle. Chaque cabinet l'adapte à sa taille, à ses usages et aux règles qui lui sont applicables, puis le fait adopter par son organe compétent. Les passages entre crochets sont à compléter. Les seuils, pondérations et fréquences auxquels la charte renvoie sont fixés par chaque organisation, dans ses annexes.
 
 La charte vient à la fin du parcours, pas au début. Elle ne décide rien par elle-même : elle consigne et ancre les choix que l'organisation a faits en mettant en place [la gouvernance](../gouvernance/), en classant [les données](../donnees/), en fixant les règles d'[homologation](../homologation/) et de [supervision](../supervision/), et en organisant [les opérations](../operations/). Une charte rédigée avant ces choix reste une déclaration de principes, sans prise sur la pratique.
 
@@ -69,7 +77,7 @@ La gouvernance définit le référentiel d'homologation, les pondérations, les 
 
 L'autorisation peut être complète dans un périmètre, limitée, conditionnelle, expérimentale, suspendue ou refusée. Un changement de finalité, de données, de connecteur, de configuration ou de modèle peut imposer une nouvelle évaluation.
 
-Un outil non homologué ne reçoit aucune donnée professionnelle non publique, sauf expérimentation expressément autorisée et assortie de garanties adaptées.
+Selon le niveau de gouvernance retenu par l'organisation, l'homologation peut se réduire à une fiche de conformité de l'outil. Un outil dont la conformité n'est pas établie, et qui n'a pas été homologué, ne reçoit que des données publiques ou internes non sensibles (classes D0 et D1), sauf expérimentation expressément autorisée et assortie de garanties adaptées.
 
 La procédure figure dans le module [homologation](../homologation/).
 
@@ -91,12 +99,12 @@ L'organisation classe les usages selon leurs effets possibles. La charte reprend
 | --- | --- | --- |
 | U1 | Assistance courante | Mise en forme ou reformulation de matériau public, à faible conséquence. |
 | U2 | Assistance professionnelle | Synthèses, recherches, brouillons ou analyses qui demandent une vérification ciblée. |
-| U3 | Enjeu juridique significatif | Actes, conseils, choix stratégiques, ou situations où des droits de personnes peuvent être affectés. |
+| U3 | Enjeu juridique | Actes, conseils, choix stratégiques, ou situations où des droits de personnes peuvent être affectés. |
 | U4 | Action autonome ou risque critique | Exécution d'actions externes, irréversibles, massives ou difficiles à contrôler. |
 
 Ce classement donne une première appréciation. Des facteurs aggravants peuvent conduire à renforcer les contrôles.
 
-Ces classes sont internes à l'organisation et ne se confondent pas avec les catégories du règlement (UE) 2024/1689. Dans le domaine de la justice, les systèmes d'IA à haut risque visés par ce règlement concernent l'administration de la justice, c'est-à-dire le travail des magistrats. La pratique d'un cabinet d'avocats ou de juristes n'en relève pas. Une règle en découle : aucune déviation de la destination du système d'IA utilisé ne doit être envisagée. [À VÉRIFIER : texte consolidé du règlement]
+Ces classes sont internes à l'organisation et ne se confondent pas avec les catégories du règlement (UE) 2024/1689. Dans le domaine de la justice, les systèmes d'IA à haut risque visés par ce règlement concernent l'administration de la justice, c'est-à-dire le travail des magistrats. La pratique d'un cabinet d'avocats ou de juristes n'en relève pas. Une règle en découle : aucune déviation de la destination du système d'IA utilisé ne doit être envisagée. 
 
 ## Article 7. Supervision humaine effective
 
@@ -117,9 +125,9 @@ Les mesures de contrôle sont définies dans l'annexe opérationnelle, voir [la 
 
 Toute information ou production est soumise au niveau de validation qui correspond à son usage. La validation peut porter sur l'exactitude des faits, l'actualité du droit, l'authenticité et la pertinence des sources, le raisonnement, les faits du dossier, les incertitudes, les droits de tiers et la qualité de la restitution. Pour les affirmations juridiques déterminantes, les références sont consultées dans leur source, et non acceptées parce qu'elles paraissent plausibles.
 
-Principe d'appropriation professionnelle. Toute production utilisée dans une prestation est comprise et validée au degré qu'exigent sa nature, sa destination et ses risques. Copier littéralement un résultat, le réécrire, le traduire ou le réorganiser ne constitue en soi ni une garantie de fiabilité ni un indice suffisant de celle-ci. Il n'existe donc pas d'interdiction générale du « copier-coller ». Ce qui compte est le contrôle réellement effectué, documenté lorsque c'est nécessaire.
+Toute production utilisée dans une prestation est comprise et validée au degré qu'exigent sa nature, sa destination et ses risques. Copier littéralement un résultat, le réécrire, le traduire ou le réorganiser ne constitue en soi ni une garantie de fiabilité ni un indice suffisant de celle-ci. 
 
-Les documents externes à enjeu juridique significatif sont validés par un avocat compétent, sous réserve des règles propres à l'organisation et aux professions concernées. Un travail purement administratif et sans enjeu ne requiert pas nécessairement la même procédure.
+Les documents externes à enjeu juridique sont validés par un avocat compétent, sous réserve des règles propres à l'organisation et aux professions concernées. 
 
 ## Article 9. Agents et actions externes
 
@@ -129,11 +137,11 @@ Sont spécifiés les interfaces, les connecteurs, les destinataires, les volumes
 
 Selon le risque, les actions qui engagent l'organisation ou qui sont difficiles à annuler sont soumises à une validation préalable, à des contrôles techniques renforcés, ou aux deux.
 
-L'automatisation d'un flux entier ne vaut pas autorisation de chacun des actes qui le composent.
+L'automatisation d'un flux ne vaut pas autorisation de chacun des actes qui le composent.
 
 ## Article 10. Transparence, traçabilité et conservation
 
-Pour chaque usage significatif, il est possible de retrouver au minimum l'outil et sa configuration, la tâche, l'intervention humaine déterminante, les sources ou vérifications pertinentes, et la décision de publier ou d'exécuter.
+Pour chaque usage critique, il doit être possible de retrouver au minimum l'outil et sa configuration, la tâche, l'intervention humaine déterminante, les sources ou vérifications pertinentes, et la décision de publier ou d'exécuter.
 
 La précision des enregistrements, l'accès aux journaux et la durée de conservation dépendent du risque et des obligations applicables. L'organisation évite d'enregistrer de manière généralisée les instructions (prompts) et les documents qui contiennent des secrets lorsque cette conservation n'est pas nécessaire.
 

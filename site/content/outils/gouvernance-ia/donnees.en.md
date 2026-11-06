@@ -3,10 +3,18 @@ draft: false
 title: "Data"
 description: "Classify information before entrusting it to an AI tool, ask the right questions before processing and document the analysis."
 slug: "data"
-url: "/en/tools/governing-ai-in-the-law-firm/data/"
+url: "/en/tools/ai-governance/data/"
+aliases: ["/en/tools/governing-ai-in-the-law-firm/data/"]
+niveaux:
+  - niveau: "Level 1"
+    texte: "No data classification. It is enough to be able to recognise classes D0 and D1, the only ones allowed in a tool whose compliance is not established."
+  - niveau: "Level 2"
+    texte: "[The five classes](#the-five-classes), [the questions before processing](#before-processing) and the tools × data matrix."
+  - niveau: "Level 3"
+    texte: "The whole module, including the questionnaire attached to the approval file."
 weight: 30
 traduction:
-  source: "37e8184b2afa50c8ae99cc1cd218979111895c15"
+  source: "302b774cf12b8d39607138be1b8dc259f4088ade"
 ---
 
 Before passing information to an AI system, or giving the system access to it, you classify it. The class determines which approved tool it may enter and on what conditions. This page proposes a classification, a list of questions to ask before processing and a questionnaire to attach to the [approval](../homologation/) file.

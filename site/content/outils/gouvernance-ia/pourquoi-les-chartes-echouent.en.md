@@ -3,10 +3,11 @@ draft: false
 title: "Why AI charters fail"
 description: "What a law firm's AI charter does well, its ten structural weaknesses and the correction proposed for each."
 slug: "why-ai-charters-fail"
-url: "/en/tools/governing-ai-in-the-law-firm/why-ai-charters-fail/"
+url: "/en/tools/ai-governance/why-ai-charters-fail/"
+aliases: ["/en/tools/governing-ai-in-the-law-firm/why-ai-charters-fail/"]
 weight: 10
 traduction:
-  source: "6619beaf16b0ecbeb9b3f63d3d60089bf947eb66"
+  source: "72309d13e3a1745ffbcd85964f4974820567474f"
 ---
 
 The toolkit grew out of the analysis of a law firm's AI charter, submitted to the project as a starting point. Its text is not reproduced here. It resembles many others: its principles are sound, but there is no way to check that they are complied with. This text identifies what should be kept, where it stops too early, and how the modules of the toolkit propose to remedy this.
