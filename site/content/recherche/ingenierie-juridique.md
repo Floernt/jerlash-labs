@@ -1,6 +1,6 @@
 ---
 draft: false
-title: "Ingénierie des connaissances juridiques"
+title: "Ingénierie juridique"
 description: "Comment formaliser et transmettre le savoir juridique, y compris celui qui reste tacite, sans en effacer le contexte ?"
 layout: "programme"
 programme: "C1"

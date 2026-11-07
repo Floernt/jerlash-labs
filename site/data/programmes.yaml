@@ -4,7 +4,7 @@
 # « slug » est la fin de l'adresse de la page du programme (/recherche/<slug>/) et la valeur du filtre (?programme=<slug>).
 # « couleur » donne la teinte dominante des visuels de projet (scripts/visuels.py) : brique, bleu ou encre.
 # « motif » est le motif du visuel du programme (orbe, anneau, colonnes, diagonale, constellation, spirale).
-# Noms : H1 « Autonomie & IA » et T1 « IA & confiance » arrêtés par Florian le 2026-11-07 (anglais proposé par Claude) ; C1 encore proposé.
+# Noms : H1 « Autonomie & IA » et T1 « IA & confiance » arrêtés par Florian le 2026-11-07 (anglais proposé par Claude) ; C1 « Ingénierie juridique » arrêté le 2026-11-07.
 
 - code: H1
   motif: orbe
@@ -24,12 +24,12 @@
   couleur: bleu
   ordre: 2
   fr:
-    nom: "Ingénierie des connaissances juridiques"
-    slug: "ingenierie-des-connaissances-juridiques"
+    nom: "Ingénierie juridique"
+    slug: "ingenierie-juridique"
     accroche: "Formaliser et transmettre les connaissances juridiques."
   en:
-    nom: "Legal knowledge engineering"
-    slug: "legal-knowledge-engineering"
+    nom: "Legal engineering"
+    slug: "legal-engineering"
     accroche: "Formalising and passing on legal knowledge."
 
 - code: T1
