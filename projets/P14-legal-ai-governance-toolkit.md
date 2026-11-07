@@ -63,13 +63,13 @@ Licence : CC BY-NC 4.0 (ADR-026). Vérifier les droits sur les deux documents de
 
 ## 7. Critères d'acceptation
 
-- [ ] ADR-024 acceptée et rubriques Outils, Éthique et Revue en ligne
-- [ ] Toolkit lu en entier par Florian, qui y adhère
-- [ ] Points juridiques vérifiés et datés, ou marqués
+- [x] ADR-024 acceptée et rubriques Outils, Éthique et Revue en ligne
+- [x] Toolkit lu en entier par Florian, qui y adhère
+- [x] Points juridiques vérifiés et datés, ou marqués
 - [x] D01 (éditeur : jerlash.labs) et D02 (licence : CC BY-NC 4.0) tranchés (ADR-026)
 - [ ] Téléchargements reproductibles, sans données
-- [ ] `python scripts/verifier.py --publication` vert
-- [ ] Version anglaise à jour
+- [x] `python scripts/verifier.py --publication` vert
+- [x] Version anglaise à jour
 
 ## 8. Appétit
 
