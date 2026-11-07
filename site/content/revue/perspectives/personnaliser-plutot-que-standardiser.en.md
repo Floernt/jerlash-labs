@@ -13,7 +13,7 @@ usage_ia: "Claude Opus 5.5 (November 2026) was used to write a first draft from 
 licence: "CC BY 4.0"
 financement: "none"
 traduction:
-  source: "622d67432708dee8494d556eb8f404d9284165bc"
+  source: "e616e9f09ca67b65fc318b9380750d30b75f02b8"
 ---
 
 We regularly talk with young legaltech companies that are trying to understand the legal market before building their product. One question often comes up at the end of these conversations: which problem is really worth solving for law firms? The difficulty these teams describe is almost always the same: every lawyer they meet wants something different, and the list of requested features keeps growing. This text brings together the answer we give them, because it touches on a tension we also run into every time we build a tool.
@@ -52,4 +52,4 @@ We are not claiming here that customisation solves everything. It shifts the dif
 
 To teams designing tools for law firms, we suggest three concrete avenues. Start from a lawyer's explicit practice rather than from a list of features, even if it means devoting the first part of a user's onboarding to helping them describe their own steps. Let lawyers change the tool themselves, in natural language, rather than delivering a fixed solution. Finally, accept that this extraction work is part of the product, and that it requires supporting the user.
 
-This question connects with our work on human oversight of AI. Overseeing an AI other than by clicking “approve” at the end of a process also requires lawyers to be able to describe what they expect at each step. We will come back to this in the work of the H1 programme.
+This question connects with our work on human oversight of AI. Overseeing an AI other than by clicking “approve” at the end of a process also requires lawyers to be able to describe what they expect at each step. We will come back to this in the work of the [Agency & AI](/recherche/autonomie-ia/) programme.
