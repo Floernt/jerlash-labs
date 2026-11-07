@@ -14,9 +14,9 @@ taches: ["review a contract", "prepare a template"]
 mise_a_jour: 2026-11-01
 telechargement: "/telechargements/conditions-particulieres-0.1.0.zip"
 taille: "28 KB"
-sha256: "cf578b90625f3c9241c9702b0e1997c8174fe554d7da4c1aaca215f9365dc4ae"
+sha256: "9d796164a3c76befa8bbcd8e123c6228959b91af990563abee7ddb11f6aeae6a"
 traduction:
-  source: "928e0299ab5ec7f0692ef9953004399de60f0df0"
+  source: "6496bc8770f5b046b7f2fb12ebe9cfd9c49cabaf"
 ---
 
 ## What the tool does

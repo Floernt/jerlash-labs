@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Autonomie & IA"
 description: "À quelles conditions les environnements d'IA renforcent-ils, plutôt qu'ils n'affaiblissent, la capacité du juriste à comprendre, juger et agir ?"
 layout: "programme"
@@ -7,8 +7,6 @@ layout: "programme"
 programme: "H1"
 weight: 1
 ---
-
-[À VÉRIFIER : texte rédigé par Claude à partir des sources internes (Research Papers Guide, §2.1 ; architecture du projet, §2.1), à relire par Florian]
 
 ## La question
 

@@ -15,7 +15,7 @@ controles: "Working version, with no external review or evaluation."
 cascade:
   type: "toolkit"
 traduction:
-  source: "27324f4470d310c7cac2503d1e16225e0238f264"
+  source: "ac08d66378f7bed3a133ec0cb7947a048383519c"
 ---
 
 AI use charters often repeat the same instructions: “use secure tools”, “have it reviewed”, “do not copy and paste”. These instructions are sound, but they cannot always be checked. They say neither on what conditions a tool was authorised, nor what the person reviewing must be able to do, nor how to show that a check actually took place.

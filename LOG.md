@@ -10,6 +10,20 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-07 - Rangement, vérificateur, Revue unifiée, rubrique Recherche
+Fait :
+- Rangement du dossier parent (`_archives/`, `atelier-visuel/`, `documents/`, `LISEZ-MOI.md`) ; quatre recensions brutes sorties de `site/content/` vers `../otf/` ; BACKLOG débarrassé des tâches faites, `/cloture-session` retire désormais les tâches terminées.
+- Vérificateur réparé : guillemet manquant dans le front matter d'un article, `--quiet` de Hugo qui masquait l'erreur ; `typographie.py --verifier` montre les lignes ; nouveau contrôle des visuels. 24/24.
+- Site : accueil vers la Revue ; Revue sur une page filtrable par type (`filtres.js`) ; sommaire latéral, chapeau, statut replié, textes précédent et suivant ; visuel de chaque contenu repris en tête de page (partial `visuel.html`).
+- Rubrique Recherche : cartes des projets publiés (P14, P19) inspirées du LIFT Lab de Stanford, visuels SVG générés (`scripts/visuels.py`), filtre par programme ; pages des programmes, rédigées par Claude d'après les sources internes puis relues et publiées par Florian ; vignettes des programmes à l'accueil et sur la page Recherche ; entrée de menu masquée tant que la rubrique est en brouillon.
+- `/traduire` : 60/60 pages à jour (nouvelle perspective traduite, empreintes des outils, pages de la Recherche).
+Décisions : ADR-032 (proposée) : Revue unifiée, troisième script admis, rubrique Recherche, programmes désignés par leur nom (« Autonomie & IA », « IA & confiance » arrêtés par Florian), visuels générés.
+Problèmes / points ouverts :
+- Nom du programme C1 et noms anglais à valider.
+- La perspective du 8 novembre cite « le programme H1 » : code visible, contraire à ADR-032.
+- Rendu visuel non contrôlé dans un navigateur par Claude.
+Prochaine étape : Florian ouvre la PR `dev` → `main` ; vérification dans le navigateur ; nom de C1.
+
 ## 2026-11-03 - Livrables Proton, calendrier mensuel, refonte du site, Toolkit P14
 Fait :
 - Archive Proton du 2026-11-03 examinée. Les sources sont rangées hors dépôt dans `../sources-proton/2026-11-03/` (voir son LISEZ-MOI ; référentiel restreint et tests adverses du kit MCP à ne jamais versionner). Fiches P14 à P19 créées. Calendrier d'un projet par mois dans BACKLOG.md : P14 → P19 → P18 → P16 → P17 → P15, puis la suite.

@@ -1,9 +1,11 @@
 ---
-draft: true
+draft: false
 title: "Research"
 description: "jerlash.labs research programmes and the projects that come out of them: toolkits, reviews, research papers."
+traduction:
+  source: "02f47d1a60dfd165b1299002b7b0c8815908599b"
 ---
 
-[À VÉRIFIER : text drafted by Claude from internal sources, to be reviewed by Florian]
+jerlash.labs studies what artificial intelligence does to legal work, through published work and its own research: toolkits, reviews, research papers.
 
-jerlash.labs studies what artificial intelligence does to legal work, through published work: toolkits, reviews, research papers. Each project belongs to a research programme. This page presents the projects that have already led to a publication; the programme pages explain what connects them.
+Each project belongs to a research programme.
