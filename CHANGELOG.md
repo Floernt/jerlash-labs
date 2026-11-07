@@ -4,7 +4,7 @@ Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessi
 
 ## 2026-11-07 - Rubrique Recherche, Revue unifiée, pages de lecture (prêt à publier)
 
-- Rubrique Recherche (FR et EN) au menu : vignettes des trois programmes, Autonomie & IA, Ingénierie juridique, IA & confiance, puis cartes des projets publiés (Gouvernance de l'IA, recension Billion et Fasterling) avec visuels pixelisés et filtre par programme ; une page par programme, qui relie ses projets et ses publications (ADR-032).
+- Rubrique Recherche (FR et EN) au menu : vignettes des trois programmes, Autonomie & IA, Ingénierie des connaissances juridiques, IA & confiance, puis cartes des projets publiés (Gouvernance de l'IA, recension Billion et Fasterling) avec visuels pixelisés et filtre par programme ; une page par programme, qui relie ses projets et ses publications (ADR-032).
 - Accueil : « Lire la revue » remplace « Lire le blog » ; section « Programmes de recherche ».
 - Revue : tous les textes sur une page, filtrable par type de texte.
 - Textes de la Revue et de la boîte à outils : visuel en tête de page, sommaire latéral, chapeau, statut replié, textes précédent et suivant.

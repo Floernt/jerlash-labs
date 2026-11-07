@@ -5,6 +5,7 @@
 # « couleur » donne la teinte dominante des visuels de projet (scripts/visuels.py) : brique, bleu ou encre.
 # « motif » est le motif du visuel du programme (orbe, anneau, colonnes, diagonale, constellation, spirale).
 # Noms arrêtés par Florian le 2026-11-07, en français et en anglais.
+# Noms : H1 « Autonomie & IA » et T1 « IA & confiance » arrêtés par Florian le 2026-11-07 (anglais proposé par Claude) ; C1 encore proposé.
 
 - code: H1
   motif: orbe
@@ -30,6 +31,12 @@
   en:
     nom: "Legal engineering"
     slug: "legal-engineering"
+    nom: "Ingénierie des connaissances juridiques"
+    slug: "ingenierie-des-connaissances-juridiques"
+    accroche: "Formaliser et transmettre les connaissances juridiques."
+  en:
+    nom: "Legal knowledge engineering"
+    slug: "legal-knowledge-engineering"
     accroche: "Formalising and passing on legal knowledge."
 
 - code: T1
