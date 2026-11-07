@@ -1,13 +1,13 @@
 ---
 draft: false
-title: "Legal knowledge engineering"
-slug: "legal-knowledge-engineering"
+title: "Legal engineering"
+slug: "legal-engineering"
 description: "How can legal knowledge, including tacit knowledge, be formalised and passed on without erasing its context?"
 layout: "programme"
 programme: "C1"
 weight: 2
 traduction:
-  source: "0fb84b474b3ac99960d0f9e07c0f35410d31b1b4"
+  source: "2b69286d0f58b3ceda180932d0f323c83f895cf5"
 ---
 
 ## The question
