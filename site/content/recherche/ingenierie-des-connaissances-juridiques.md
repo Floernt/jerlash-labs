@@ -7,11 +7,11 @@ programme: "C1"
 weight: 2
 ---
 
-[À VÉRIFIER : texte rédigé par Claude à partir des sources internes (Research Papers Guide, §2.2 ; architecture du projet, §2.1 et « Extensions »), à relire par Florian]
-
 ## La question
 
-Une grande part du savoir d'un cabinet n'est écrite nulle part : la manière de négocier telle clause, les seuils en dessous desquels on accepte, les exceptions que l'on connaît par expérience. Les outils d'IA ne peuvent s'appuyer sur ce savoir que s'il est rendu explicite. Ce programme se demande comment formaliser et transmettre les connaissances juridiques sans effacer le contexte qui leur donne leur sens.
+Une grande part du savoir d'un cabinet n'est écrite nulle part : la manière de négocier telle clause, les seuils en dessous desquels on accepte, les exceptions que l'on connaît par expérience. 
+
+Les outils d'IA ne peuvent s'appuyer sur ce savoir que s'il est rendu explicite. Ce programme se demande comment formaliser et transmettre les connaissances juridiques sans effacer le contexte qui leur donne leur sens.
 
 ## Ce que le programme étudie
 

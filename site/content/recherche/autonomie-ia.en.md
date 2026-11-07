@@ -1,7 +1,7 @@
 ---
 draft: true
-title: "Human agency and AI"
-slug: "human-agency-and-ai"
+title: "Agency & AI"
+slug: "agency-ai"
 description: "Under what conditions do AI environments strengthen, rather than weaken, a lawyer's ability to understand, judge and act?"
 layout: "programme"
 programme: "H1"

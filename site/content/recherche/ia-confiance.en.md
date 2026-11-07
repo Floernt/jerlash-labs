@@ -1,7 +1,7 @@
 ---
 draft: true
-title: "Trustworthy legal AI"
-slug: "trustworthy-legal-ai"
+title: "AI & trust"
+slug: "ai-trust"
 description: "How can the reliability of a legal AI system be measured, its answers checked and what it did be reconstructed?"
 layout: "programme"
 programme: "T1"

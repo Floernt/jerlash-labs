@@ -3,21 +3,24 @@
 # Le code (H1, C1, T1) sert uniquement au rattachement, par le champ « programme » des pages.
 # « slug » est la fin de l'adresse de la page du programme (/recherche/<slug>/) et la valeur du filtre (?programme=<slug>).
 # « couleur » donne la teinte dominante des visuels de projet (scripts/visuels.py) : brique, bleu ou encre.
-# Noms proposés à partir de JERLASH_Labs_Research_Papers_Guide.md (sources hors dépôt) : à arrêter par Florian.
+# « motif » est le motif du visuel du programme (orbe, anneau, colonnes, diagonale, constellation, spirale).
+# Noms : H1 « Autonomie & IA » et T1 « IA & confiance » arrêtés par Florian le 2026-11-07 (anglais proposé par Claude) ; C1 encore proposé.
 
 - code: H1
+  motif: orbe
   couleur: brique
   ordre: 1
   fr:
-    nom: "Autonomie humaine et IA"
-    slug: "autonomie-humaine-et-ia"
+    nom: "Autonomie & IA"
+    slug: "autonomie-ia"
     accroche: "Autonomie, supervision et jugement de l'avocat qui travaille avec l'IA."
   en:
-    nom: "Human agency and AI"
-    slug: "human-agency-and-ai"
+    nom: "Agency & AI"
+    slug: "agency-ai"
     accroche: "Autonomy, oversight and judgment of lawyers working with AI."
 
 - code: C1
+  motif: constellation
   couleur: bleu
   ordre: 2
   fr:
@@ -30,13 +33,14 @@
     accroche: "Formalising and passing on legal knowledge."
 
 - code: T1
+  motif: colonnes
   couleur: encre
   ordre: 3
   fr:
-    nom: "IA juridique digne de confiance"
-    slug: "ia-juridique-digne-de-confiance"
+    nom: "IA & confiance"
+    slug: "ia-confiance"
     accroche: "Fiabilité, vérification et évaluation des systèmes d'IA juridique."
   en:
-    nom: "Trustworthy legal AI"
-    slug: "trustworthy-legal-ai"
+    nom: "AI & trust"
+    slug: "ai-trust"
     accroche: "Reliability, verification and evaluation of legal AI systems."

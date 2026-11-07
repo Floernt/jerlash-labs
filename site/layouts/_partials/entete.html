@@ -3,9 +3,12 @@
   <nav class="ia-header__nav" aria-label="{{ T "navigation_principale" }}">
     {{- $page := . }}
     {{- range site.Menus.principal }}
+    {{- /* Une entrée qui vise une page non construite (rubrique en brouillon) a une adresse vide : elle n'est pas affichée. */}}
+    {{- if .URL }}
     {{- $actuel := false }}
     {{- with .Page }}{{ $actuel = or (eq $page .) ($page.IsDescendant .) }}{{ end }}
     <a href="{{ .URL }}"{{ if $actuel }} aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{- end }}
     {{- end }}
     {{- /* Autre langue (ADR-023) : la traduction de la page si elle existe, sinon l'accueil de cette langue. */}}
     {{- range site.Sites }}

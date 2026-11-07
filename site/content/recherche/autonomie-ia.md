@@ -1,6 +1,6 @@
 ---
 draft: true
-title: "Autonomie humaine et IA"
+title: "Autonomie & IA"
 description: "À quelles conditions les environnements d'IA renforcent-ils, plutôt qu'ils n'affaiblissent, la capacité du juriste à comprendre, juger et agir ?"
 layout: "programme"
 # Code interne du programme (data/programmes.yaml) : jamais affiché.

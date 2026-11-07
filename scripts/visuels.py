@@ -2,11 +2,14 @@
 dans la direction artistique du site (fonds pixel de site/static/js/bundle.js, ADR-022).
 
     python scripts/visuels.py              (re)génère site/static/images/projets/<code>.svg
+                                           et site/static/images/programmes/<slug>.svg
     python scripts/visuels.py --verifier   n'écrit rien ; code 1 si un visuel manque ou n'est plus à jour
 
 Chaque fiche de site/content/recherche/projets/ (champ « code ») reçoit un visuel déterministe : même code,
 même image. La teinte dominante vient du premier programme du projet (champ « programmes », couleur définie
-dans site/data/programmes.yaml) ; le motif et sa position sont tirés du code. Aucune dépendance externe.
+dans site/data/programmes.yaml) ; le motif et sa position sont tirés du code. Chaque programme reçoit aussi
+un visuel, à sa couleur, nommé d'après son slug français (le code n'apparaît pas dans les adresses, ADR-032).
+Aucune dépendance externe.
 """
 
 from __future__ import annotations
@@ -22,6 +25,7 @@ DEPOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FICHES = os.path.join(DEPOT, "site", "content", "recherche", "projets")
 PROGRAMMES = os.path.join(DEPOT, "site", "data", "programmes.yaml")
 SORTIE = os.path.join(DEPOT, "site", "static", "images", "projets")
+SORTIE_PROGRAMMES = os.path.join(DEPOT, "site", "static", "images", "programmes")
 
 LARGEUR, HAUTEUR, CELLULE = 600, 400, 10  # format 3:2, cellules de 10 px
 PAPIER = "#FAF9F6"
@@ -148,8 +152,10 @@ def _trace(cellules: list[tuple[int, int]]) -> str:
     return "".join(morceaux)
 
 
-def dessiner(code: str, couleur: str) -> str:
+def dessiner(code: str, couleur: str, motif_impose: str | None = None) -> str:
     p = parametres(code)
+    if motif_impose in MOTIFS:
+        p["motif"] = motif_impose
     w, h = LARGEUR // CELLULE, HAUTEUR // CELLULE
     principale, accent = [], []
     for y in range(h):
@@ -171,17 +177,27 @@ def dessiner(code: str, couleur: str) -> str:
 
 
 # --- Lecture des fiches et des programmes (front matter simple, sans dépendance YAML) ------------------
-def couleurs_programmes() -> dict[str, str]:
-    couleurs, code = {}, None
+def lire_programmes() -> dict[str, dict]:
+    """Code -> {"couleur", "slug", "motif"} (slug de la version française, premier « slug: » après le code)."""
+    programmes, code = {}, None
     with open(PROGRAMMES, encoding="utf-8") as f:
         for ligne in f:
             m = re.match(r"-\s*code:\s*(\S+)", ligne)
             if m:
                 code = m.group(1)
+                programmes[code] = {"couleur": "brique", "slug": code.lower()}
+                slug_lu = False
+            m = re.match(r"\s+motif:\s*(\S+)", ligne)
+            if m and code:
+                programmes[code]["motif"] = m.group(1)
             m = re.match(r"\s+couleur:\s*(\S+)", ligne)
             if m and code:
-                couleurs[code] = m.group(1)
-    return couleurs
+                programmes[code]["couleur"] = m.group(1)
+            m = re.match(r'\s+slug:\s*"?([^"\n]+)"?', ligne)
+            if m and code and not slug_lu:
+                programmes[code]["slug"] = m.group(1).strip()
+                slug_lu = True
+    return programmes
 
 
 def projets() -> list[tuple[str, str | None]]:
@@ -208,13 +224,17 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--verifier", action="store_true")
     args = parser.parse_args(argv)
-    couleurs = couleurs_programmes()
+    programmes = lire_programmes()
     os.makedirs(SORTIE, exist_ok=True)
+    os.makedirs(SORTIE_PROGRAMMES, exist_ok=True)
     problemes = 0
-    liste = projets()
-    for code, programme in liste:
-        chemin = os.path.join(SORTIE, f"{code.lower()}.svg")
-        attendu = dessiner(code, couleurs.get(programme or "", "brique"))
+    a_produire = [(os.path.join(SORTIE, f"{code.lower()}.svg"), code, programmes.get(programme or "", {}).get("couleur", "brique"), None)
+                  for code, programme in projets()]
+    a_produire += [(os.path.join(SORTIE_PROGRAMMES, f"{p['slug']}.svg"), f"programme-{code}", p["couleur"], p.get("motif"))
+                   for code, p in programmes.items()]
+    liste = a_produire
+    for chemin, graine, couleur, motif_impose in a_produire:
+        attendu = dessiner(graine, couleur, motif_impose)
         actuel = open(chemin, encoding="utf-8").read() if os.path.exists(chemin) else None
         if actuel == attendu:
             continue
@@ -229,7 +249,7 @@ def main(argv=None) -> int:
         if problemes:
             print("Lancer : python scripts/visuels.py")
             return 1
-        print(f"{len(liste)} visuel(s) de projet à jour")
+        print(f"{len(liste)} visuel(s) de projet et de programme à jour")
     return 0
 
 

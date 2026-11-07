@@ -199,13 +199,20 @@ main:focus { outline: none; }
 .carte-projet__liens a:hover { text-decoration: underline; }
 
 .programmes, .programme__bloc { padding-top: var(--space-16); display: flex; flex-direction: column; gap: var(--space-8); }
-.programmes__liste { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: var(--space-6); }
-.programmes__item { margin: 0; padding: var(--space-6); border: var(--stroke-hairline) solid var(--line); border-top: 4px solid var(--brique); }
-.programmes__item--bleu { border-top-color: var(--bleu); }
-.programmes__item--encre { border-top-color: var(--ink); }
-.programmes__item h3 { margin: 0 0 var(--space-2); font-size: 20px; line-height: 26px; }
-.programmes__item h3 a { color: inherit; }
-.programmes__item p { margin: 0; color: var(--ink-muted); text-align: left; }
+/* Vignettes des programmes (accueil, Recherche, pages de programme) : visuel, nom, accroche, filet de couleur */
+.grille-programmes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: var(--space-8); }
+.carte-programme { display: flex; flex-direction: column; background: var(--paper-raised); border: var(--stroke-hairline) solid var(--line); border-top: 4px solid var(--brique); }
+.carte-programme--bleu { border-top-color: var(--bleu); }
+.carte-programme--encre { border-top-color: var(--ink); }
+.carte-programme__visuel { display: block; width: 100%; aspect-ratio: 3 / 2; height: auto; border-bottom: var(--stroke-hairline) solid var(--line); image-rendering: pixelated; }
+.carte-programme__corps { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-6); flex: 1; }
+.carte-programme__titre { margin: 0; font-size: 22px; line-height: 28px; font-weight: 600; letter-spacing: -0.01em; }
+.carte-programme__titre a { color: inherit; text-decoration: none; }
+.carte-programme__titre a:hover { color: var(--brique-text); }
+.carte-programme__accroche { margin: 0; color: var(--ink-muted); text-align: left; }
+.carte-programme__lien { margin: auto 0 0; padding-top: var(--space-3); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.carte-programme__lien a { color: var(--brique-text); text-decoration: none; }
+.carte-programme__lien a:hover { text-decoration: underline; }
 .programme__texte { max-width: 72ch; }
 .programme__groupe { display: flex; flex-direction: column; gap: var(--space-3); }
 .programme__groupe h3 { margin: 0; }
@@ -213,3 +220,14 @@ main:focus { outline: none; }
 .programme__publications li { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4) 0; border-top: var(--stroke-hairline) solid var(--line); text-align: left; }
 .programme__publications a { font-weight: 600; font-size: 18px; color: var(--ink); }
 .programme__publications span { color: var(--ink-muted); font-size: 15px; line-height: 22px; }
+
+/* --- Visuel du contenu repris en tête de page (partials visuel.html, visuel-tete.html) --- */
+.visuel-tete { display: block; width: 100%; height: clamp(160px, 22vw, 280px); margin-top: var(--space-8); object-fit: cover; border: var(--stroke-hairline) solid var(--line); image-rendering: pixelated; }
+.visuel-tete + .tete-page, .visuel-tete + .article .tete-page, .visuel-tete + .mise-en-page .tete-page { padding-top: var(--space-8); }
+@media (min-width: 1024px) { .visuel-tete + .mise-en-page .mise-en-page__cote { padding-top: var(--space-8); } }
+.ia-card__thumb--image { display: block; width: 100%; object-fit: cover; image-rendering: pixelated; }
+
+
+/* Rubrique Recherche : sections rapprochées du chapeau (programmes, puis projets) */
+.recherche-section { padding-top: var(--space-12); gap: var(--space-8); }
+.recherche-section .filtres { margin-bottom: 0; }

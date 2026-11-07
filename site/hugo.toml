@@ -95,6 +95,11 @@ removePathAccents = true
       noClasses = false
       codeFences = true
       guessSyntax = false
+    # Recherche (ADR-024, ADR-032) : l'entrée ne s'affiche que si la rubrique est construite (pas en brouillon), voir entete.html
+    [[languages.fr.menus.principal]]
+      name = "Recherche"
+      pageRef = "/recherche"
+      weight = 3
     [[languages.fr.menus.principal]]
       name = "Outils"
       pageRef = "/outils"
@@ -149,6 +154,11 @@ removePathAccents = true
       taches = "/tasks/:slug/"
     [languages.en.permalinks.taxonomy]
       taches = "/tasks/"
+    # Recherche (ADR-024, ADR-032) : l'entrée ne s'affiche que si la rubrique est construite (pas en brouillon), voir entete.html
+    [[languages.en.menus.principal]]
+      name = "Research"
+      pageRef = "/recherche"
+      weight = 3
     [[languages.en.menus.principal]]
       name = "Tools"
       pageRef = "/outils"

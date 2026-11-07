@@ -1,0 +1,8 @@
+{{- /* Bandeau en tête de page : reprend le visuel du contenu (partial "visuel.html"), celui de sa vignette. Décoratif. */ -}}
+{{- with partial "visuel.html" . }}
+{{- if .src }}
+<img class="visuel-tete" src="{{ .src | relURL }}" alt="" width="600" height="400">
+{{- else }}
+<div class="visuel-tete ia-pixel" data-pixel="{{ .motif }}" data-fg="{{ .fg }}" data-bg="paper" data-cell="pixel-moyen" data-seed="{{ .graine }}" aria-hidden="true"></div>
+{{- end }}
+{{- end }}

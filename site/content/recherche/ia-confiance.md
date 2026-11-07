@@ -1,6 +1,6 @@
 ---
 draft: true
-title: "IA juridique digne de confiance"
+title: "IA & confiance"
 description: "Comment mesurer la fiabilité d'un système d'IA juridique, vérifier ses réponses et reconstituer ce qu'il a fait ?"
 layout: "programme"
 programme: "T1"

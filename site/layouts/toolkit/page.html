@@ -2,6 +2,7 @@
 {{ define "main" }}
 {{- $lateral := partial "sommaire.html" (dict "page" . "mode" "lateral") }}
 <div class="conteneur">
+  {{ partial "visuel-tete.html" . }}
   <div class="mise-en-page{{ if $lateral }} mise-en-page--sommaire{{ end }}">
     {{- with $lateral }}<aside class="mise-en-page__cote">{{ . }}</aside>{{ end }}
     <article class="article">
