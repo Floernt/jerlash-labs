@@ -1,14 +1,14 @@
 ---
-draft: true
+draft: false
 title: "AI & trust"
 slug: "ai-trust"
 description: "How can the reliability of a legal AI system be measured, its answers checked and what it did be reconstructed?"
 layout: "programme"
 programme: "T1"
 weight: 3
+traduction:
+  source: "b7e1d25fffa6771c14d0b679d6118511c9dc485b"
 ---
-
-[À VÉRIFIER : text drafted by Claude from internal sources (Research Papers Guide, §2.3; project architecture, §2.1 and “Extensions”), to be reviewed by Florian]
 
 ## The question
 
@@ -17,7 +17,6 @@ Saying that a legal AI tool is “reliable” is not enough: one still needs to 
 ## What the programme studies
 
 - **Legal reliability**: measuring the accuracy, relevance and completeness of answers and the quality of the references cited.
-- **Situated validity**: what the jurisdiction, the language and the date of the law change.
 - **Traceability**: retrieving the sources and steps needed for a check.
 - **Robustness and security**: the effect of adversarial documents, injected instructions and model version changes.
 - **Lifecycle governance**: who decides to deploy a system, monitor it, correct it and shut it down.

@@ -1,18 +1,20 @@
 ---
-draft: true
+draft: false
 title: "Legal knowledge engineering"
 slug: "legal-knowledge-engineering"
 description: "How can legal knowledge, including tacit knowledge, be formalised and passed on without erasing its context?"
 layout: "programme"
 programme: "C1"
 weight: 2
+traduction:
+  source: "0fb84b474b3ac99960d0f9e07c0f35410d31b1b4"
 ---
-
-[À VÉRIFIER : text drafted by Claude from internal sources (Research Papers Guide, §2.2; project architecture, §2.1 and “Extensions”), to be reviewed by Florian]
 
 ## The question
 
-Much of a law firm's knowledge is written down nowhere: how to negotiate a given clause, the thresholds below which a point is accepted, the exceptions known from experience. AI tools can only rely on that knowledge once it has been made explicit. This programme asks how legal knowledge can be formalised and passed on without erasing the context that gives it meaning.
+Much of a law firm's knowledge is written down nowhere: how to negotiate a given clause, the thresholds below which a point is accepted, the exceptions known from experience.
+
+AI tools can only rely on that knowledge once it has been made explicit. This programme asks how legal knowledge can be formalised and passed on without erasing the context that gives it meaning.
 
 ## What the programme studies
 

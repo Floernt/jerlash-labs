@@ -1,14 +1,14 @@
 ---
-draft: true
+draft: false
 title: "Agency & AI"
 slug: "agency-ai"
 description: "Under what conditions do AI environments strengthen, rather than weaken, a lawyer's ability to understand, judge and act?"
 layout: "programme"
 programme: "H1"
 weight: 1
+traduction:
+  source: "2e3019f8e3ad79f47447580d30e91d885486d751"
 ---
-
-[À VÉRIFIER : text drafted by Claude from internal sources (Research Papers Guide, §2.1; project architecture, §2.1), to be reviewed by Florian]
 
 ## The question
 

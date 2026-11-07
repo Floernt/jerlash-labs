@@ -25,5 +25,5 @@ nom:
 
     The choice of this name also has a geographical dimension: the law firm of the founder of jerlash.labs is located on avenue Constantin-de-Gerlache. A double nod to the history of Belgian law and to the place where the project was born. Artificial intelligence and new technologies invite us to rethink our practices, our knowledge and our institutions. jerlash.labs is part of this approach: exploring the transformations of law where philosophy, research and technology meet, in order to help think through the practices of tomorrow.
 traduction:
-  source: "2b105919c5a171ab319f30f6cfd07c54f932e478"
+  source: "df91f500a5cde0fd790265592e8f29b8ff483151"
 ---

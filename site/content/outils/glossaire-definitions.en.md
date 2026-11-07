@@ -14,9 +14,9 @@ taches: ["review a contract", "check"]
 mise_a_jour: 2026-11-01
 telechargement: "/telechargements/glossaire-definitions-0.1.0.zip"
 taille: "28 KB"
-sha256: "37e347be04186b159a35d7bdc6b3f985852ee1487ba203241ec93900f13320bd"
+sha256: "e53f971d3efecbbf57adacba7579440254bf33598586a5a3d75ccd356b57c075"
 traduction:
-  source: "f40abfd2e4df14abea958d4e13b2a4c0c2166bbd"
+  source: "3e0afa1e8d506978de6edb79ed17465d1a7c6d0f"
 ---
 
 ## What the tool does

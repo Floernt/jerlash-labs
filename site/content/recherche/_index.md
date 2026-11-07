@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Recherche"
 description: "Les programmes de recherche de jerlash.labs et les projets qui en sont issus : boîtes à outils, recensions, research papers."
 ---

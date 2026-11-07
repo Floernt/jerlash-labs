@@ -19,7 +19,7 @@ usage_ia: "AI was used to analyse the article and to write a first draft."
 licence: "CC BY 4.0"
 financement: "none"
 traduction:
-  source: "551476ca1ee34be29dace83f94c71df2b0aaf439"
+  source: "49c98a9a0793b7b0e09640ecd7491654ed9fb768"
 ---
 
 The language used to describe artificial intelligence shapes the way its users picture its capabilities and grant it their trust. In an exchange published by *EDHEC Vox*, Arnaud Billion and Björn Fasterling examine three expressions that have become familiar: “bias”, “companion” and “hallucinations”. Their conversation invites us to be wary of words that implicitly attribute human faculties or intentions to a technical system. It also opens a difficulty: how can these metaphors be criticised without giving up the technical and legal distinctions they can usefully designate?
