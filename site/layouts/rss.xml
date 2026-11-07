@@ -1,4 +1,4 @@
-{{- /* Flux RSS dans la langue de la section (produit uniquement pour le blog, voir hugo.toml) */ -}}
+{{- /* Flux RSS dans la langue de la section (produit uniquement pour les Perspectives de la Revue, voir hugo.toml) */ -}}
 {{- $limite := site.Config.Services.RSS.Limit -}}
 {{- $pages := .Pages.ByDate.Reverse -}}
 {{- if ge $limite 1 }}{{ $pages = $pages | first $limite }}{{ end -}}

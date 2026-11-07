@@ -19,11 +19,11 @@
   {{- with site.GetPage "/revue" }}
   {{- $articles := .RegularPagesRecursive.ByDate.Reverse | first 3 }}
   {{- if $articles }}
-  <section class="accueil-section" aria-labelledby="titre-blog">
+  <section class="accueil-section" aria-labelledby="titre-revue">
     <div class="accueil-section__tete">
       <div>
         <p class="ia-eyebrow">{{ .Title }}</p>
-        <h2 class="accueil-section__titre" id="titre-blog">{{ T "dernieres_publications" }}</h2>
+        <h2 class="accueil-section__titre" id="titre-revue">{{ T "dernieres_publications" }}</h2>
       </div>
       <a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">{{ T "toute_la_revue" }} <span class="ia-btn__arrow">→</span></a>
     </div>

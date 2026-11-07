@@ -1,9 +1,10 @@
-{{- /* Carte d'un texte de la Revue. Contexte : dict "page" <page> "rang" <entier, pour varier le fond pixel>.
+{{- /* Carte d'un texte de la Revue. Contexte : dict "page" <page> "rang" <entier, pour varier le fond pixel>
+       "type" <facultatif : collection, pour le filtrage de la racine de la Revue (ADR-032)>.
        Une recension (champ « objet », ADR-027) porte l'étiquette « Recension · <objet> ». */ -}}
 {{- $motifs := slice (dict "c" "nuage" "fg" "brique") (dict "c" "onde" "fg" "bleu") (dict "c" "horizon" "fg" "brique") -}}
 {{- $m := index $motifs (mod .rang 3) -}}
 {{- with .page }}
-<a class="ia-card" href="{{ .RelPermalink }}">
+<a class="ia-card" href="{{ .RelPermalink }}"{{ with $.type }} data-type="{{ . }}"{{ end }}>
   <div class="ia-card__thumb ia-pixel" data-pixel="{{ $m.c }}" data-fg="{{ $m.fg }}" data-bg="paper" data-cell="pixel-fin" data-seed="{{ add $.rang 3 }}" aria-hidden="true"></div>
   <p class="ia-eyebrow">{{ .Parent.Title }} · {{ partial "date.html" .Date }}</p>
   {{- with .Params.objet }}<p class="ia-card__etiquette"><span class="ia-tag ia-tag--recension">{{ T "recension" }} · {{ T (printf "objet_%s" .) | default . }}</span></p>{{ end }}

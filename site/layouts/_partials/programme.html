@@ -1,0 +1,14 @@
+{{- /* Programme de recherche, à partir de son code (H1, C1, T1) : renvoie un dict
+       « code », « nom », « slug », « accroche », « couleur », « lien » (adresse de sa page, vide si elle n'est pas construite),
+       ou rien si le code est inconnu (par exemple « transversal »). Le code n'est jamais affiché (data/programmes.yaml). */ -}}
+{{- $code := . }}
+{{- $resultat := false }}
+{{- range site.Data.programmes }}
+{{- if eq .code $code }}
+{{- $l := index . site.Language.Lang | default (index . "fr") }}
+{{- $lien := "" }}
+{{- with site.GetPage (printf "/recherche/%s" (index . "fr").slug) }}{{ $lien = .RelPermalink }}{{ end }}
+{{- $resultat = dict "code" .code "nom" $l.nom "slug" $l.slug "accroche" $l.accroche "couleur" .couleur "lien" $lien }}
+{{- end }}
+{{- end }}
+{{- return $resultat }}

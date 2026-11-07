@@ -8,8 +8,8 @@ heros:
   suite: "From reflection to experimentation."
   texte: "jerlash.labs is a research and experimentation laboratory devoted to the transformations of law in the digital age."
   actions:
-    - libelle: "Read the blog"
-      lien: "/blog/"
+    - libelle: "Read the review"
+      lien: "/revue/"
     - libelle: "About"
       lien: "/a-propos/"
       secondaire: true

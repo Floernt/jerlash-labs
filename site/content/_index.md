@@ -8,8 +8,8 @@ heros:
   suite: "De la réflexion à l'expérimentation."
   texte: "jerlash.labs est un laboratoire de recherche et d'expérimentation consacré aux transformations du droit à l'ère numérique."
   actions:
-    - libelle: "Lire le blog"
-      lien: "/blog/"
+    - libelle: "Lire la revue"
+      lien: "/revue/"
     - libelle: "À propos"
       lien: "/a-propos/"
       secondaire: true

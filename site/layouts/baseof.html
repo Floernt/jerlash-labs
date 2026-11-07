@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   {{- /* GitHub Pages : pas d'en-têtes HTTP personnalisés, la politique de sécurité passe par une balise meta.
-         Un seul script autorisé, servi par le site : les fonds pixel du design system (ADR-022). */}}
+         Scripts autorisés, servis par le site : les fonds pixel du design system (ADR-022) et le filtrage des listes (ADR-032). */}}
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,5 +18,6 @@
   {{ partial "pied.html" . }}
   <script src="{{ "js/bundle.js" | relURL }}" defer></script>
   <script src="{{ "js/init.js" | relURL }}" defer></script>
+  <script src="{{ "js/filtres.js" | relURL }}" defer></script>
 </body>
 </html>

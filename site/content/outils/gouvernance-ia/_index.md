@@ -7,6 +7,7 @@ statut: "version de travail"
 version: "0.3"
 licence: "CC BY-NC 4.0"
 programme: "H1"
+projet: "P14"
 usage_ia: "L'IA a été utilisée pour la rédaction et la structuration de cette version de travail."
 controles: "Version de travail, sans relecture externe ni évaluation."
 cascade:

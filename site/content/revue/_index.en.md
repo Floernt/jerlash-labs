@@ -5,4 +5,4 @@ traduction:
   source: "e4b0108b12f558a90a3bce09ef4c475c596b2dd4"
 ---
 
-The texts of jerlash.labs, arranged by collection. Each states its status: a working paper is published to be discussed; it has not undergone external review.
+All the texts of jerlash.labs, from the most recent, which can be filtered by type of text. Each states its status: a working paper is published to be discussed; it has not undergone external review.

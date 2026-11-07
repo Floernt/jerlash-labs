@@ -9,6 +9,7 @@ statut: "version de travail"
 version: "0.3"
 licence: "CC BY-NC 4.0"
 programme: "H1"
+projet: "P14"
 usage_ia: "AI was used for drafting and structuring this working version."
 controles: "Working version, with no external review or evaluation."
 cascade:

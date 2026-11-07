@@ -1,0 +1,19 @@
+{{- /* Sommaire d'un texte long, tiré des intertitres H2 et H3 (hugo.toml, markup.tableOfContents).
+       Contexte : dict "page" <page> "mode" <"lateral" : colonne collante sur grand écran | "replie" : bloc repliable sur petit écran>.
+       N'affiche rien si le texte compte moins de trois intertitres. L'enveloppe <nav id="TableOfContents"> de Hugo
+       est retirée, pour que les deux versions du sommaire présentes dans la page ne partagent pas d'identifiant. */ -}}
+{{- $toc := .page.TableOfContents }}
+{{- if ge (len (findRE "<li>" $toc)) 3 }}
+{{- $liste := $toc | replaceRE `</?nav[^>]*>` "" | safeHTML }}
+{{- if eq .mode "lateral" }}
+<nav class="sommaire sommaire--lateral" aria-label="{{ T "sommaire" }}">
+  <p class="sommaire__titre">{{ T "sommaire" }}</p>
+  {{ $liste }}
+</nav>
+{{- else }}
+<details class="sommaire sommaire--replie">
+  <summary class="sommaire__titre">{{ T "sommaire" }}</summary>
+  <nav aria-label="{{ T "sommaire" }}">{{ $liste }}</nav>
+</details>
+{{- end }}
+{{- end }}

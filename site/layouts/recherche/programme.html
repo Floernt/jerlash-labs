@@ -1,0 +1,79 @@
+{{- /* Page d'un programme de recherche (layout: programme ; champ « programme » = code interne, jamais affiché).
+       Texte du programme, puis ses projets (cartes), puis toutes les publications du site rattachées au programme,
+       directement (champ « programme ») ou par leur projet (champ « projet »), groupées par rubrique ; enfin les autres programmes. */ -}}
+{{ define "main" }}
+{{- $code := .Params.programme }}
+{{- $prog := partial "programme.html" $code }}
+<div class="conteneur">
+  <header class="tete-page">
+    <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ T "recherche" }}</a> · {{ T "programme" }}</p>
+    <h1 class="tete-page__titre">{{ with $prog }}{{ .nom }}{{ else }}{{ $.Title }}{{ end }}</h1>
+    {{- with .Description }}<p class="tete-page__chapeau">{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="prose programme__texte">
+    {{ .Content }}
+  </div>
+
+  {{- /* Projets du programme */ -}}
+  {{- $projets := slice }}
+  {{- with site.GetPage "/recherche/projets" }}{{ range .Pages.ByWeight }}{{ if in .Params.programmes $code }}{{ $projets = $projets | append . }}{{ end }}{{ end }}{{ end }}
+  {{- $codesProjets := slice }}{{ range $projets }}{{ $codesProjets = $codesProjets | append .Params.code }}{{ end }}
+  <section class="programme__bloc" aria-labelledby="titre-projets">
+    <h2 id="titre-projets" class="accueil-section__titre">{{ T "projets" }}</h2>
+    {{- with $projets }}
+    <div class="grille-projets">
+      {{- range . }}{{ partial "carte-projet.html" . }}{{ end }}
+    </div>
+    {{- else }}
+    <p>{{ T "aucun_travail_publie" }}</p>
+    {{- end }}
+  </section>
+
+  {{- /* Publications rattachées : champ « programme » égal au code, ou champ « projet » d'un projet du programme */ -}}
+  {{- $pubs := slice }}
+  {{- range site.Pages }}
+  {{- if and (ne .Kind "home") (ne .Section "recherche") }}
+  {{- if or (eq .Params.programme $code) (and .Params.projet (in $codesProjets .Params.projet)) }}{{ $pubs = $pubs | append . }}{{ end }}
+  {{- end }}
+  {{- end }}
+  <section class="programme__bloc" aria-labelledby="titre-publications">
+    <h2 id="titre-publications" class="accueil-section__titre">{{ T "publications" }}</h2>
+    {{- with $pubs }}
+    {{- range (. | uniq).GroupBy "Section" }}
+    {{- $cle := .Key }}
+    {{- $rubrique := site.GetPage (printf "/%s" $cle) }}
+    <div class="programme__groupe">
+      <h3 class="ia-eyebrow">{{ with $rubrique }}{{ .Title }}{{ else }}{{ $cle }}{{ end }}</h3>
+      <ul class="programme__publications">
+        {{- range .Pages.ByDate.Reverse }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{- with .Description }}<span>{{ . }}</span>{{ end }}
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- end }}
+    {{- else }}
+    <p>{{ T "aucun_travail_publie" }}</p>
+    {{- end }}
+  </section>
+
+  <section class="programme__bloc" aria-labelledby="titre-autres">
+    <h2 id="titre-autres" class="accueil-section__titre">{{ T "autres_programmes" }}</h2>
+    <ul class="programmes__liste">
+      {{- range sort site.Data.programmes "ordre" }}
+      {{- if ne .code $code }}
+      {{- with partial "programme.html" .code }}
+      <li class="programmes__item programmes__item--{{ .couleur }}">
+        <h3>{{ if .lien }}<a href="{{ .lien }}">{{ .nom }}</a>{{ else }}{{ .nom }}{{ end }}</h3>
+        <p>{{ .accroche }}</p>
+      </li>
+      {{- end }}
+      {{- end }}
+      {{- end }}
+    </ul>
+  </section>
+</div>
+{{ end }}

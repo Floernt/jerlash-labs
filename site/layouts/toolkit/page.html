@@ -1,21 +1,26 @@
-{{- /* Page d'un toolkit (P14) : un module, avec le statut du toolkit et la navigation entre pages (dans Hugo, NextInSection est la page de poids inférieur). */ -}}
+{{- /* Page d'un toolkit (P14) : sommaire latéral (au moins trois intertitres), un module, avec le statut du toolkit et la navigation entre pages (dans Hugo, NextInSection est la page de poids inférieur). */ -}}
 {{ define "main" }}
+{{- $lateral := partial "sommaire.html" (dict "page" . "mode" "lateral") }}
 <div class="conteneur">
-  <article class="article">
-    <header class="tete-page">
-      <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>
-      <h1 class="tete-page__titre">{{ .Title }}</h1>
-      {{- with .Description }}<p class="tete-page__chapeau">{{ . }}</p>{{ end }}
-    </header>
-    {{ partial "bloc-statut.html" .Parent }}
-    {{ partial "encadre-niveaux.html" . }}
-    <div class="prose">
-      {{ .Content }}
-    </div>
-    <nav class="toolkit-suite" aria-label="{{ T "sommaire_toolkit" }}">
-      {{- with .NextInSection }}<a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}"><span class="ia-btn__arrow">←</span> {{ .Title }}</a>{{ end }}
-      {{- with .PrevInSection }}<a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">{{ .Title }} <span class="ia-btn__arrow">→</span></a>{{ end }}
-    </nav>
-  </article>
+  <div class="mise-en-page{{ if $lateral }} mise-en-page--sommaire{{ end }}">
+    {{- with $lateral }}<aside class="mise-en-page__cote">{{ . }}</aside>{{ end }}
+    <article class="article">
+      <header class="tete-page tete-page--article">
+        <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>
+        <h1 class="tete-page__titre">{{ .Title }}</h1>
+        {{- with .Description }}<p class="tete-page__chapeau">{{ . }}</p>{{ end }}
+      </header>
+      {{ partial "bloc-statut.html" .Parent }}
+      {{ partial "encadre-niveaux.html" . }}
+      {{ partial "sommaire.html" (dict "page" . "mode" "replie") }}
+      <div class="prose">
+        {{ .Content }}
+      </div>
+      <nav class="toolkit-suite" aria-label="{{ T "sommaire_toolkit" }}">
+        {{- with .NextInSection }}<a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}"><span class="ia-btn__arrow">←</span> {{ .Title }}</a>{{ end }}
+        {{- with .PrevInSection }}<a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">{{ .Title }} <span class="ia-btn__arrow">→</span></a>{{ end }}
+      </nav>
+    </article>
+  </div>
 </div>
 {{ end }}

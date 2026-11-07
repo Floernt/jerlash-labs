@@ -1,0 +1,45 @@
+{{- /* Rubrique Recherche (ADR-024) : chapeau, grille des projets publiés filtrable par programme (ADR-032),
+       puis les programmes. Les programmes sont désignés par leur nom, jamais par leur code (data/programmes.yaml). */ -}}
+{{ define "main" }}
+<div class="conteneur">
+  <header class="tete-page">
+    <p class="ia-eyebrow">{{ T "recherche" }}</p>
+    <h1 class="tete-page__titre">{{ T "projets" }}</h1>
+    {{- with .Content }}<div class="tete-page__chapeau">{{ . }}</div>{{ end }}
+  </header>
+
+  {{- $projets := slice }}
+  {{- with site.GetPage "/recherche/projets" }}{{ $projets = .Pages.ByWeight }}{{ end }}
+  {{- $options := slice }}
+  {{- range sort site.Data.programmes "ordre" }}
+  {{- $code := .code }}
+  {{- $utilise := false }}
+  {{- range $projets }}{{ if in .Params.programmes $code }}{{ $utilise = true }}{{ end }}{{ end }}
+  {{- if $utilise }}{{ with partial "programme.html" $code }}{{ $options = $options | append (dict "valeur" .slug "libelle" .nom) }}{{ end }}{{ end }}
+  {{- end }}
+  {{- if gt (len $options) 1 }}
+  {{ partial "filtres.html" (dict "cle" "programme" "cible" "recherche-projets" "libelle" (T "filtrer_programme") "options" $options) }}
+  {{- end }}
+  {{- with $projets }}
+  <div class="grille-projets" id="recherche-projets">
+    {{- range . }}{{ partial "carte-projet.html" . }}{{ end }}
+  </div>
+  {{- else }}
+  <p>{{ T "aucun_article" }}</p>
+  {{- end }}
+
+  <section class="programmes" aria-labelledby="titre-programmes">
+    <h2 id="titre-programmes" class="accueil-section__titre">{{ T "programmes" }}</h2>
+    <ul class="programmes__liste">
+      {{- range sort site.Data.programmes "ordre" }}
+      {{- with partial "programme.html" .code }}
+      <li class="programmes__item programmes__item--{{ .couleur }}">
+        <h3>{{ if .lien }}<a href="{{ .lien }}">{{ .nom }}</a>{{ else }}{{ .nom }}{{ end }}</h3>
+        <p>{{ .accroche }}</p>
+      </li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </section>
+</div>
+{{ end }}
