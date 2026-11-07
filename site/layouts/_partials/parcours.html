@@ -1,0 +1,23 @@
+{{- /* Parcours d'une boîte à outils (ADR-033) : l'arborescence des étapes, avec l'étape en cours marquée.
+       Contexte : dict "page" <page> "mode" <"lateral" : colonne de droite sur grand écran | "replie" : bloc repliable ailleurs>.
+       Données : site/data/parcours/<nom du dossier de la section>.yaml. N'affiche rien si la section n'a pas de parcours.
+       Une page présente dans plusieurs branches est marquée dans chacune. */ -}}
+{{- $p := .page }}
+{{- $section := $p }}
+{{- if not $p.IsSection }}{{ $section = $p.CurrentSection }}{{ end }}
+{{- with $section.File }}
+{{- with index site.Data.parcours .ContentBaseName }}
+{{- $liste := partial "parcours-liste.html" (dict "d" . "section" $section "page" $p) }}
+{{- if eq $.mode "lateral" }}
+<nav class="parcours parcours--lateral" aria-label="{{ T "parcours" }}">
+  <p class="parcours__titre">{{ T "parcours" }}</p>
+  {{ $liste }}
+</nav>
+{{- else }}
+<details class="parcours parcours--replie">
+  <summary class="parcours__titre">{{ T "parcours" }}</summary>
+  <nav aria-label="{{ T "parcours" }}">{{ $liste }}</nav>
+</details>
+{{- end }}
+{{- end }}
+{{- end }}

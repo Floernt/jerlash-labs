@@ -160,9 +160,55 @@ main:focus { outline: none; }
 .sommaire ul ul { padding-left: var(--space-4); }
 .sommaire a { display: block; padding: var(--space-1) 0 var(--space-1) var(--space-3); border-left: 2px solid var(--line); color: var(--ink-muted); text-decoration: none; }
 .sommaire a:hover { color: var(--brique-text); border-left-color: var(--brique); }
+/* Intertitre en cours de lecture, marqué par static/js/sommaire.js (ADR-033) */
+.sommaire a[aria-current] { color: var(--brique-text); border-left-color: var(--brique); font-weight: 600; }
 .sommaire--replie { margin: 0 0 var(--space-8); padding: var(--space-3) var(--space-4); border: var(--stroke-hairline) solid var(--line); background: var(--paper-raised); }
 .sommaire--replie .sommaire__titre { margin: 0; cursor: pointer; }
 .sommaire--replie[open] .sommaire__titre { margin-bottom: var(--space-3); }
+
+/* --- Parcours d'une boîte à outils, colonne de droite (ADR-033) ---------- */
+.mise-en-page__cote--parcours { display: none; }
+@media (min-width: 1024px) {
+  /* Sans sommaire (page d'accueil de la boîte à outils) : texte et parcours */
+  .mise-en-page--parcours:not(.mise-en-page--sommaire) { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: var(--space-12); align-items: start; }
+  .mise-en-page--parcours:not(.mise-en-page--sommaire) .article { margin-inline: 0; }
+  .mise-en-page--parcours:not(.mise-en-page--sommaire) .mise-en-page__cote--parcours { display: block; }
+  .mise-en-page--parcours:not(.mise-en-page--sommaire) .parcours--replie { display: none; }
+}
+@media (min-width: 1200px) {
+  /* Avec sommaire : trois colonnes ; en dessous de 1200px, le parcours passe dans le texte, replié */
+  .mise-en-page--sommaire.mise-en-page--parcours { grid-template-columns: 14rem minmax(0, 1fr) 14rem; gap: var(--space-8); }
+  .mise-en-page--sommaire.mise-en-page--parcours .mise-en-page__cote--parcours { display: block; }
+  .mise-en-page--sommaire.mise-en-page--parcours .parcours--replie { display: none; }
+}
+.parcours { font-size: 14px; line-height: 20px; }
+.parcours__titre { margin: 0 0 var(--space-3); font-family: var(--font-mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.parcours ol, .parcours ul { list-style: none; margin: 0; padding: 0; }
+.parcours li { margin: 0; text-align: left; }
+/* Le tronc et chaque branche sont une ligne verticale ; chaque étape y est un point */
+.parcours .parcours__liste { margin-left: 5px; border-left: 2px solid var(--line); }
+.parcours .parcours__branche > ol { margin-left: 5px; border-left: 2px solid var(--line); }
+.parcours__etape { position: relative; padding: var(--space-1) 0 var(--space-1) var(--space-4); }
+.parcours__etape::before { content: ""; position: absolute; left: -6px; top: 9px; box-sizing: border-box; width: 10px; height: 10px; border: 2px solid var(--line-strong); border-radius: 50%; background: var(--paper); }
+.parcours__etape a { color: var(--ink-muted); text-decoration: none; }
+.parcours__etape a:hover { color: var(--brique-text); }
+.parcours__etape.est-ici::before { border-color: var(--brique); background: var(--brique); }
+.parcours__etape.est-ici a { color: var(--brique-text); font-weight: 600; }
+.parcours__ici, .parcours__note { display: block; font-family: var(--font-mono); font-size: 11px; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-faint); }
+.parcours__ici { color: var(--brique-text); }
+.parcours__branches { padding: var(--space-2) 0 var(--space-2) var(--space-4); }
+.parcours__branche { position: relative; margin: 0 0 var(--space-3); }
+.parcours__branche:last-child { margin-bottom: 0; }
+.parcours__branche::before { content: ""; position: absolute; left: calc(-1 * var(--space-4)); top: 7px; width: 12px; border-top: 2px solid var(--line); }
+.parcours__niveau { display: block; margin-bottom: var(--space-1); font-family: var(--font-mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+.parcours__branche:has(.est-ici) .parcours__niveau { color: var(--brique-text); }
+.parcours__reference { margin: var(--space-6) 0 var(--space-2); font-family: var(--font-mono); font-size: 12px; line-height: 16px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
+.parcours__liste--reference { border-left-style: dashed; }
+.parcours--replie { margin: 0 0 var(--space-8); padding: var(--space-3) var(--space-4); border: var(--stroke-hairline) solid var(--line); background: var(--paper-raised); }
+.parcours--replie .parcours__titre { margin: 0; cursor: pointer; }
+.parcours--replie[open] .parcours__titre { margin-bottom: var(--space-3); }
+.parcours--replie .parcours__etape::before { background: var(--paper-raised); }
+.parcours--replie .parcours__etape.est-ici::before { background: var(--brique); }
 /* Ancres : le titre visé ne passe pas sous le haut de l'écran, et se signale en brique */
 .prose h2, .prose h3 { scroll-margin-top: var(--space-8); }
 .prose h2 { padding-top: var(--space-4); border-top: 2px solid var(--brique); }

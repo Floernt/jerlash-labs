@@ -1,9 +1,11 @@
-{{- /* Page d'un toolkit (P14) : sommaire latéral (au moins trois intertitres), un module, avec le statut du toolkit et la navigation entre pages (dans Hugo, NextInSection est la page de poids inférieur). */ -}}
+{{- /* Page d'un toolkit (P14) : sommaire latéral (au moins trois intertitres), un module, avec le statut du toolkit et la navigation entre pages (dans Hugo, NextInSection est la page de poids inférieur).
+       Colonne de droite : le parcours de la boîte à outils, s'il existe (ADR-033). */ -}}
 {{ define "main" }}
 {{- $lateral := partial "sommaire.html" (dict "page" . "mode" "lateral") }}
+{{- $parcours := partial "parcours.html" (dict "page" . "mode" "lateral") }}
 <div class="conteneur">
   {{ partial "visuel-tete.html" . }}
-  <div class="mise-en-page{{ if $lateral }} mise-en-page--sommaire{{ end }}">
+  <div class="mise-en-page{{ if $lateral }} mise-en-page--sommaire{{ end }}{{ if $parcours }} mise-en-page--parcours{{ end }}">
     {{- with $lateral }}<aside class="mise-en-page__cote">{{ . }}</aside>{{ end }}
     <article class="article">
       <header class="tete-page tete-page--article">
@@ -13,6 +15,7 @@
       </header>
       {{ partial "bloc-statut.html" .Parent }}
       {{ partial "encadre-niveaux.html" . }}
+      {{ partial "parcours.html" (dict "page" . "mode" "replie") }}
       {{ partial "sommaire.html" (dict "page" . "mode" "replie") }}
       <div class="prose">
         {{ .Content }}
@@ -22,6 +25,7 @@
         {{- with .PrevInSection }}<a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">{{ .Title }} <span class="ia-btn__arrow">→</span></a>{{ end }}
       </nav>
     </article>
+    {{- with $parcours }}<aside class="mise-en-page__cote mise-en-page__cote--parcours">{{ . }}</aside>{{ end }}
   </div>
 </div>
 {{ end }}

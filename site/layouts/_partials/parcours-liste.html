@@ -1,0 +1,26 @@
+{{- /* Liste du parcours (ADR-033), appelée par parcours.html. Contexte : dict "d" <données> "section" <section> "page" <page en cours>. */ -}}
+{{- $section := .section }}{{ $p := .page }}
+<ol class="parcours__liste">
+  {{- range .d.tronc }}{{ partial "parcours-etape.html" (dict "e" . "section" $section "page" $p) }}{{ end }}
+  {{- with .d.branches }}
+  <li class="parcours__branches">
+    <ol>
+      {{- range . }}
+      <li class="parcours__branche">
+        <span class="parcours__niveau">{{ T "niveau_n" .niveau }}</span>
+        <ol>
+          {{- range .etapes }}{{ partial "parcours-etape.html" (dict "e" . "section" $section "page" $p) }}{{ end }}
+        </ol>
+      </li>
+      {{- end }}
+    </ol>
+  </li>
+  {{- end }}
+  {{- range .d.fin }}{{ partial "parcours-etape.html" (dict "e" . "section" $section "page" $p) }}{{ end }}
+</ol>
+{{- with .d.reference }}
+<p class="parcours__reference">{{ T "hors_parcours" }}</p>
+<ul class="parcours__liste parcours__liste--reference">
+  {{- range . }}{{ partial "parcours-etape.html" (dict "e" . "section" $section "page" $p) }}{{ end }}
+</ul>
+{{- end }}

@@ -24,8 +24,8 @@ SITE = os.path.join(DEPOT, "site")
 HUGO_VERSION = "0.148.2"
 MARQUEURS = re.compile(r"\[À (?:COMPLÉTER|VÉRIFIER|DÉCIDER|VALIDER)[^\]]*\]")
 CSP = "default-src 'none'; script-src 'self';"
-# Seuls scripts admis : ceux du design system (ADR-022) et le filtrage des listes (ADR-032), servis par le site.
-SCRIPTS_ADMIS = ("js/bundle.js", "js/init.js", "js/filtres.js")
+# Seuls scripts admis : ceux du design system (ADR-022), le filtrage des listes (ADR-032) et le sommaire actif (ADR-033), servis par le site.
+SCRIPTS_ADMIS = ("js/bundle.js", "js/init.js", "js/filtres.js", "js/sommaire.js")
 
 resultats: list[tuple[bool, str]] = []
 
