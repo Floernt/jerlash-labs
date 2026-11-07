@@ -273,3 +273,26 @@ Prochaine étape : valider le cahier des charges et trancher ADR-002, ADR-003 et
 **Gouvernance de l'IA 0.3 publiée** (PR #7 fusionnée par Florian). Page en ligne mais orpheline : rubrique Outils en brouillon (ADR-022) et absente du menu. Choix de Florian : ouvrir la rubrique Outils. Fait : entrée « Outils » / « Tools » au menu (avant la Revue, ADR-024), section « Boîtes à outils » dans `site/layouts/outils/section.html`, texte de la rubrique ajusté, ADR-031 proposée. Tableur et MCP toujours hors dépôt (`outils/gouvernance-ia/`, `publier.yml` modifié non commité).
 
 ---
+
+## JALON — 2026-11-07 (rangement)
+
+**Dossier parent rangé.** Racine du parent réduite à : `_archives/` (zips déjà extraits ou dépassés, doublon de l'image d'Étienne), `articles/`, `atelier-visuel/` (fichiers de travail de l'avatar), `documents/` (livre blanc, fiches, tutoriel), `jerlash-labs/`, `otf/`, `sources-proton/`, et un `LISEZ-MOI.md`. `otf/` et `sources-proton/` non déplacés (chemins relatifs du dépôt).
+
+**Recensions brutes sorties du site.** Les quatre fichiers `JERLASH_*Critical_Review*` non suivis de `site/content/revue/recensions/` sont dans `../otf/`, inscrits dans `INDEX.md` (à cadrer par `/otf`).
+
+**BACKLOG nettoyé.** Tâches cochées retirées (le livré est dans `CHANGELOG.md`, le détail dans ce journal et dans git) ; sections « Livré » supprimées, leurs deux relectures ouvertes passées dans « Ensuite » ; chemins des brouillons otf et de `../documents/` ajoutés. Règle : `/cloture-session` retire désormais les tâches terminées au lieu de les cocher.
+
+**Signalé, non traité :** `verifier.py` 12/14, les deux échecs (Hugo, typographie) viennent de l'article non suivi `revue/perspectives/personnaliser-plutot-que-standardiser.md`.
+
+---
+
+## JALON — 2026-11-07 (site : Revue, sommaire, Recherche)
+
+**Vérificateur réparé.** Cause des échecs : guillemet fermant manquant (`usage_ia`) dans `revue/perspectives/personnaliser-plutot-que-standardiser.md`, qui cassait la construction Hugo ; `verifier.py` lançait Hugo avec `--quiet`, qui masquait le message. Retiré ; `typographie.py --verifier` montre désormais les lignes fautives. `verifier.py` : 24/24 (nouveau contrôle des visuels).
+
+**Site (ADR-032, proposée).** Accueil → « Lire la revue ». Racine de la Revue : grille unique filtrable par type de texte (`static/js/filtres.js`, troisième script admis, contenu complet sans JavaScript). Textes de la Revue et du toolkit : sommaire latéral collant (repliable sur mobile), chapeau, bloc de statut replié, textes précédent et suivant. Rubrique Recherche en brouillon : cartes des projets publiés (P14, P19) façon LIFT Lab, filtre par programme, visuels SVG pixelisés générés par `scripts/visuels.py` ; pages des programmes H1, C1, T1, désignés par leur nom (`site/data/programmes.yaml`), qui listent projets et publications rattachés. Textes des programmes rédigés par Claude à partir des sources internes (Research Papers Guide, architecture), marqués `[À VÉRIFIER]` pour relecture par Florian.
+
+**Prochaine étape :** Florian vérifie dans le navigateur, arrête les noms des programmes et reprend les textes ; puis publication de la rubrique et `/traduire`.
+
+---
+

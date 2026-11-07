@@ -4,19 +4,8 @@ Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer p
 
 ## Maintenant : novembre 2026, P14 Legal AI Governance Toolkit v0.2 et refonte du site (ADR-024)
 
-- [x] Florian : valider ADR-024 (2026-11-05)
-- [x] Florian : valider ADR-025 (acceptée comme cadre facultatif, 2026-11-05)
-- [x] Florian : valider `docs/politique-publication.md` (2026-11-03)
-- [x] Florian : D01 éditeur jerlash.labs, D02 licence CC BY-NC 4.0 (ADR-026)
-- [x] Nom français : « Gouvernance de l'IA », adresse `outils/gouvernance-ia/` (Florian, 2026-11-06, ADR-029)
-- [x] Étape 1 de la refonte en trois niveaux (ADR-029) : français relu par Florian, publié et traduit (2026-11-06)
-- [x] Étape 2 : tableur des niveaux 2 et 3, généré depuis le référentiel (2026-11-06), proposé au téléchargement sur le site
 - [ ] Étape 3 : serveur MCP local et commande Claude Code (fiche P20 à créer, ADR-030)
-- [x] Lever les 3 marqueurs [À VÉRIFIER] de `sources-et-versions.md` (acte modificatif du règlement IA, articles du RGPD, droits sur les documents de 99_SOURCES) (Florian, 2026-11-06)
-- [x] Gabarit `revue/`, gabarits `toolkit/` et partiel « bloc de statut » ; menu Revue et permaliens anglais ; libellés dans `site/i18n/` (2026-11-03)
-- [x] Migrer les 9 articles du blog vers `revue/perspectives/` avec leurs alias `/blog/`, `/fr/blog/`, `/en/blog/` (2026-11-03)
 - [ ] Rubrique Éthique (`ethique/`, page Précautions) et entrées Outils et Éthique du menu, à la publication du Toolkit
-- [x] Convertir le Toolkit en 9 pages, en brouillon, dans `outils/gouverner-l-ia-au-cabinet/` (2026-11-03) : présentation, « Pourquoi les chartes échouent », charte, gouvernance, homologation, supervision, données, opérations, sources et versions
 - [ ] Florian : trancher les points relevés à la conversion : charte qui vise « l'avocat » alors qu'elle s'adresse aussi aux directions juridiques (art. 2 et 8) ; « surveillance abusive » ambigu (données) ; champ « destination du système » ajouté à la fiche de cas d'usage ; phrase ajoutée sur les petits cabinets qui cumulent les rôles (gouvernance) ; noms d'axes alignés sur le référentiel ; contrôles « obligatoires » des agents présentés comme à préciser
 - [ ] Lever les 21 marqueurs `[À VÉRIFIER]` / `[À COMPLÉTER]` des pages du Toolkit (date d'arrêt du droit, articles RGPD, acte modificatif du règlement IA, déclaration d'usage de l'IA, contrôles faits)
 - [ ] Réduire le règlement IA à un rappel (haut risque = administration de la justice ; aucune déviation de la destination du système) ; vérifier le RGPD et le secret professionnel cités ; marquer ce qui ne peut pas l'être
@@ -30,20 +19,24 @@ Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer p
 ## Maintenant : recensions (avancé de décembre à novembre par Florian, 2026-11-04)
 
 - [ ] Florian : valider ADR-027 (une collection Recensions, champ `objet` : livre, article, podcast, conférence ; étiquette « Recension · <objet> » sur les vignettes)
-- [x] Collection `revue/recensions/` en brouillon, regroupement par objet, bloc « Œuvre recensée », étiquette des vignettes ; `docs/politique-publication.md` §9 (2026-11-04)
-- [x] P19 déposée en brouillon : `site/content/revue/recensions/ce-que-les-mots-font-a-lintelligence-artificielle.md` ; attributions comparées à la page EDHEC Vox (2026-11-04)
 - [ ] Florian : lire P19 et prendre position sur les trois réserves de la Discussion (« biais » utile si le référentiel est explicité ; « un bout de code », simplification symétrique ; utilité opérationnelle d'« hallucination ») ; puis reprise dans sa voix
 - [ ] Florian : remplir conflits d'intérêts, usage de l'IA et contrôles (marqueurs `[À COMPLÉTER]`)
-- [x] Florian : autres recensions transmises (2026-11-04), en brouillon dans `site/content/revue/recensions/` ; front matter à convertir au format ADR-027 lors de la reprise
-- [ ] Tromans, « Will AI Change the Identity of Law Firm Partners? » (article)
-- [ ] Waldron, « AI Governance Must Keep Pace with Legal Practice » (article sponsorisé par LexisNexis ; chiffres d'enquête à vérifier)
-- [ ] Bull, « The 4 Es Inhouse AI Framework » (article, entretien écrit)
-- [ ] Legora, entretien avec Jacob Lauritzen (podcast vidéo, 67 min ; citations à minuter)
+- [ ] Tromans, « Will AI Change the Identity of Law Firm Partners? » (article) : brouillon `../otf/JERLASH_Critical_Review_AI_Identite_Professionnelle_2026-11-04.md`
+- [ ] Waldron, « AI Governance Must Keep Pace with Legal Practice » (article sponsorisé par LexisNexis ; chiffres d'enquête à vérifier) : brouillon `../otf/JERLASH_Labs_Critical_Review_AI_Governance.md`
+- [ ] Bull, « The 4 Es Inhouse AI Framework » (article, entretien écrit) : brouillon `../otf/JERLASH_Labs_Critical_Review_Emily_Bull_4Es.md`
+- [ ] Legora, entretien avec Jacob Lauritzen (podcast vidéo, 67 min ; citations à minuter) : brouillon `../otf/JERLASH_Critical_Review_Legora_Jacob_Lauritzen.md`
 - [ ] Chaduteau (livre) : relue par Florian, publication prévue le 12 novembre 2026 ; front matter converti et traduit (2026-11-05). Reste : conflits d'intérêts, puis `draft: false` (FR et EN), et lancer le workflow Publication le 12 (la reconstruction automatique n'a lieu que le lundi)
-- [x] Susskind (livre) : relue, déclarations complétées, traduite (2026-11-05) ; à publier avec le prochain push
-- [x] Recension podcast « L'IA juridique en pratique », ép. 01 (Colliot, Zevra) : relue par Florian, publiée FR et EN (2026-11-05). Fiche : `../otf/traite/recension-colliot/`
 - [ ] Traduction anglaise (`/traduire`) ; slug anglais de la collection à décider (`/en/review/recensions/` par défaut)
 - [ ] Publication : `draft: false` sur la collection et les recensions prêtes, `python scripts/verifier.py --publication`, `CHANGELOG.md`, post LinkedIn
+
+## Maintenant : Revue unifiée, sommaire et rubrique Recherche (ADR-032, 2026-11-07)
+
+- [ ] Florian : valider ADR-032 (troisième script `filtres.js`, programmes désignés par leur nom)
+- [ ] Florian : vérifier dans le navigateur (`hugo server --source site --buildDrafts`) : filtres de la Revue, sommaire latéral et repliable, cartes et visuels de `/fr/recherche/`, en clair et en sombre, à 375, 768 et 1280 px
+- [ ] Florian : arrêter les noms des trois programmes (FR et EN) dans `site/data/programmes.yaml` ; les slugs des pages suivent
+- [ ] Florian : relire et reprendre les textes rédigés par Claude : `site/content/recherche/_index.md` et les trois pages de programme (marqueurs `[À VÉRIFIER]`), puis les résumés des cartes P14 et P19 (`site/content/recherche/projets/`)
+- [ ] Publication de la rubrique : `draft: false`, entrée « Recherche / Research » au menu (avant Outils), `/traduire` pour l'accueil, la Revue, P14 et P19 (front matter `projet` ajouté), `CHANGELOG.md`
+- [ ] Ajouter une fiche dans `site/content/recherche/projets/` à chaque nouveau projet publié, puis `python scripts/visuels.py`
 
 ## Maintenant : piste parallèle Outils (sans échéance, par la Factory)
 
@@ -69,33 +62,14 @@ Ordre fixé par Florian le 2026-11-03. Les mois de novembre à avril sont fermes
 | Sept. 2027 | Working paper Human Agency Framework (H1.1) | Revue, Recherche | |
 | Oct. 2027 | Toolkit v1.0 (ou v0.4 sans relecteurs) ; pilote MCP seulement si G3 | Outils, Recherche | D08, G3 |
 
-## Livré : site jerlash.labs 0.1.0 (ADR-022), restes à relire
-
-- [x] Identité jerlash appliquée au site Hugo (polices, couleurs, logo, fonds pixel)
-- [x] Rubrique Blog : 9 articles, relus et corrigés directement dans `site/content/blog/` (import supprimé le 2026-11-01)
-- [x] Sections outils, guides, automatiser, nouveautés et précautions retirées du site publié (brouillons)
-- [x] Florian : créer le dépôt GitHub public `jerlash-labs`, donner son URL et le nom du compte
-- [x] Mentions légales et confidentialité remises en ligne (2026-11-01) : le site ne fournit aucun service, donc ni BCE, ni TVA, ni adresse de contact ; adresse de GitHub et journaux de GitHub Pages vérifiés sur la documentation de GitHub ; pas de phrase de contact ni de security.txt (décision de Florian)
-- [x] Vérification complète sur Linux : archives zip reproductibles d'un système à l'autre (système d'origine fixé à Unix) et jeux de test reproductibles sous Linux (PR #2 et #3)
-- [ ] Florian : relire la page d'accueil, les 9 articles importés (dont 4 aux en-têtes vides : titre tiré du nom de fichier) et leurs dates (date du fichier)
-- [x] Pousser sur GitHub, activer Pages (source : GitHub Actions), publication verte : en ligne sur jerlash.eu le 2026-11-01
-- [x] Accueil : nouveau héros et section « Pourquoi jerlash.labs ? »
-- [x] Page À propos réécrite (mission, approche, communs, origine du nom) et traduite en anglais
-- [x] Florian : cocher « Enforce HTTPS » dans Settings → Pages dès que le certificat est délivré, puis relancer la publication (liens canoniques en https) ; au 2026-11-01, `https://jerlash.eu` ne répond pas encore
-
-## Livré : version anglaise du site (ADR-023), restes à relire
-
-- [x] Hugo multilingue `/fr/` et `/en/`, libellés i18n, lien FR/EN, hreflang, redirections des anciennes adresses
-- [x] `scripts/traductions.py` (état, diff, marquage) et commande `/traduire`
-- [x] Traduction initiale des 35 pages
-- [x] Florian : valider ADR-023 (acceptée le 2026-11-01)
-- [ ] Florian : relire l'anglais (accueil, À propos, articles), compléter `docs/glossaire-traduction.md`
-- [x] PR `dev` → `main` (PR #1, fusionnée)
-
 ## Ensuite
 
-- [ ] Réorganiser le répertoire du projet (nom jerlash.labs, dossiers, fichiers hors dépôt)
-- [ ] Domaine : jerlash.eu choisi et DNS en place ; reste HTTPS (voir plus haut), 2FA GitHub et registraire
+Relectures du site :
+- [ ] Florian : relire la page d'accueil, les 9 articles importés (dont 4 aux en-têtes vides : titre tiré du nom de fichier) et leurs dates (date du fichier)
+- [ ] Florian : relire l'anglais (accueil, À propos, articles), compléter `docs/glossaire-traduction.md`
+
+Autres :
+- [ ] Domaine : jerlash.eu choisi et DNS en place, HTTPS actif ; reste 2FA GitHub et registraire
 - [ ] Rubrique Guides : compléter les quatre guides (clé API, facturation, données envoyées, installation locale)
 - [ ] Page Outils et fiches, quand un outil est prêt (piste parallèle)
 - [ ] Décisions du Toolkit restées ouvertes : D03 à D10 (registre dans les sources P14), dont D10 version publique et services payants
@@ -105,6 +79,8 @@ Ordre fixé par Florian le 2026-11-03. Les mois de novembre à avril sont fermes
 Dépôts otf (ADR-028, `../otf/INDEX.md`) :
 - [ ] Proposition de recherche « Identité professionnelle, savoirs et pouvoir d'agir » (H1, méthodes mixtes, terrain belge envisagé) : `../otf/JERLASH_Research_Proposal_Identite_Professionnelle_AI_2026-11-04.md` ; Florian : créer la fiche P20 ou non
 - [ ] Proposition de research paper « La capitalisation technique des savoirs juridiques » (H1 et C1) : `../otf/JERLASH_Fiche_Recherche_Capitalisation_Expertise_Juridique.md` ; Florian : créer la fiche P21 ou non
+- [ ] Article « Legal AI's Legibility Problem » (Stanford HAI, 2026-07-20) sur l'article PNAS « There's No Free Benchmark » (Guha, Ho, Nyarko, Manning) : `../otf/SLS_2026-07-21_Legal_AI_Legibility_Problem.md` ; Florian : recension de l'article PNAS, ou simple appui pour P12 et l'homologation de P14
+- [ ] Annonce « The Rise of Legal Engineering » (Stanford Law School, 2026-09-04) : `../otf/SLS_2026-09-04_Rise_of_Legal_Engineering.md` ; matériau de veille, rattachement à P14 (référent IA) à confirmer
 
 Outils (état au 2026-11-01, tous au statut vérification, aucun publié) :
 - [ ] P01 Inventaire 0.2.0 : config-ia.json et .env, mesure réelle `evaluer.py --ia --executions 3` (seuils 14/16 et 13/16), essai sur un dossier réel
@@ -118,7 +94,7 @@ Décisions et vérifications :
 - [ ] Mistral : point d'accès UE à confirmer ; matrice des fournisseurs, 22 points [À VÉRIFIER]
 - [ ] Règles de communication de l'Ordre applicables au site, mentions obligatoires
 - [ ] Rubrique « Automatiser une prestation » (ADR-012) : relire les deux articles
-- [ ] Décider si le tutoriel de veille Cowork, les fiches « avocat entrepreneur » et le livre blanc rejoignent le site
+- [ ] Décider si le tutoriel de veille Cowork, les fiches « avocat entrepreneur » et le livre blanc rejoignent le site (fichiers dans `../documents/`)
 
 Factory et plan d'amélioration :
 - [ ] Factory : valider ADR-007 et le circuit ; AM-001, AM-002 ; essai d'un mois de la mémoire (F03) ; F01

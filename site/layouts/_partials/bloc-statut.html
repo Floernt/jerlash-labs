@@ -1,16 +1,20 @@
-{{- /* Bloc de statut d'un texte ou d'une ressource (ADR-024, docs/politique-publication.md).
-       N'apparaît que si le front matter porte « statut ». Champs lus : statut, version, identifiant,
-       editeur (jerlash.labs par défaut, ADR-026), licence, date_arret_recherches, controles, usage_ia. */ -}}
+{{- /* Bloc de statut d'un texte ou d'une ressource (ADR-024, docs/politique-publication.md), replié sous le chapeau.
+       N'apparaît que si le front matter porte « statut ». Champs lus : statut, version, identifiant, programme
+       (affiché par son nom, data/programmes.yaml), editeur (jerlash.labs par défaut, ADR-026), licence,
+       date_arret_recherches, controles, usage_ia. */ -}}
 {{- with .Params.statut }}
 {{- $p := $.Params }}
-<aside class="bloc-statut" aria-label="{{ T "statut_publication" }}">
-  <dl>
+<details class="bloc-statut">
+  <summary class="bloc-statut__resume"><span class="bloc-statut__titre">{{ T "a_propos_texte" }}</span> <span class="bloc-statut__etat">{{ . }}{{ with $p.version }} · {{ T "version_n" . }}{{ end }}</span></summary>
+  <dl aria-label="{{ T "statut_publication" }}">
     <div><dt>{{ T "statut" }}</dt><dd>{{ . }}{{ with $p.version }} · {{ T "version_n" . }}{{ end }}{{ with $p.identifiant }} · {{ . }}{{ end }}</dd></div>
+    {{- /* Programme : affiché seulement si sa page est publiée, pour ne pas montrer un nom encore provisoire. */ -}}
+    {{- with $p.programme }}{{ with partial "programme.html" . }}{{ if .lien }}<div><dt>{{ T "programme" }}</dt><dd><a href="{{ .lien }}">{{ .nom }}</a></dd></div>{{ end }}{{ end }}{{ end }}
     <div><dt>{{ T "editeur" }}</dt><dd>{{ $p.editeur | default "jerlash.labs" }}</dd></div>
     {{- with $p.licence }}<div><dt>{{ T "licence" }}</dt><dd>{{ . }}</dd></div>{{ end }}
     {{- with $p.date_arret_recherches }}<div><dt>{{ T "date_arret" }}</dt><dd>{{ partial "date.html" (time .) }}</dd></div>{{ end }}
     {{- with $p.controles }}<div><dt>{{ T "controles" }}</dt><dd>{{ . }}</dd></div>{{ end }}
     {{- with $p.usage_ia }}<div><dt>{{ T "usage_ia" }}</dt><dd>{{ . }}</dd></div>{{ end }}
   </dl>
-</aside>
+</details>
 {{- end }}

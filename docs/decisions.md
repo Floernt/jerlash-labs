@@ -349,3 +349,15 @@ Décision :
 2. La page de rubrique présente d'abord les boîtes à outils (sous-sections publiées de `outils/`), puis le catalogue des outils par tâche. Les outils logiciels restent en brouillon tant qu'ils ne sont pas prêts ; le message « aucun outil publié » ne s'affiche pas lorsqu'une boîte à outils est présente.
 Conséquences : amende ADR-022, point 1, pour la seule rubrique Outils. Gabarit `site/layouts/outils/section.html`, libellé `boites_a_outils`, menus dans `site/hugo.toml`.
 
+## ADR-032 - Revue unifiée, filtres par étiquette, rubrique Recherche et programmes désignés par leur nom
+Date : 2026-11-07
+Statut : Proposée (choix de Florian du 2026-11-07)
+Contexte : l'accueil renvoyait au blog, alors que celui-ci est devenu la collection Perspectives de la Revue (ADR-024). La Revue se lisait collection par collection. Les projets et les programmes de recherche n'avaient pas de page, alors qu'ADR-024 prévoit une rubrique Recherche avec une page par programme. Florian souhaite une présentation des projets inspirée de la page Projets du LIFT Lab de Stanford : cartes avec un visuel et un filtre par programme.
+Décision :
+1. L'accueil renvoie à la Revue. La racine de la Revue présente tous les textes dans une seule grille, filtrable par type de texte (une collection = un type). Les pages de collection restent accessibles.
+2. Un troisième script est admis, `site/static/js/filtres.js`, en plus de ceux d'ADR-022 : servi par le site (CSP `script-src 'self'` inchangée), sans dépendance ni requête réseau. Sans JavaScript, la barre de filtres reste cachée et tout le contenu s'affiche. Le filtre choisi est reporté dans l'adresse (`?type=…`, `?programme=…`).
+3. Rubrique Recherche (`/recherche/`, `/en/research/`) : grille des projets ayant au moins une publication en ligne, filtrable par programme, puis une page par programme qui liste ses projets et toutes les pages rattachées (champ `programme`, ou champ `projet` d'un de ses projets). Les fiches de projet (`content/recherche/projets/`) ne produisent pas de page : la carte renvoie à la publication.
+4. Les programmes sont désignés par leur nom, jamais par leur code (H1, C1, T1), ni dans les adresses, ni dans les titres, les filtres ou les pastilles. Le code reste un champ interne. Noms, slugs et accroches sont tenus dans `site/data/programmes.yaml`, seul endroit où ils figurent.
+5. Chaque projet reçoit un visuel SVG généré par `scripts/visuels.py` (composition pixelisée et tramée, déterministe à partir du code du projet, teinte du programme), contrôlé par `scripts/verifier.py`.
+6. Les textes de la Revue et du toolkit ont un sommaire latéral (au moins trois intertitres) ; le bloc de statut est replié sous le chapeau, son statut et sa version restant visibles.
+Conséquences : amende ADR-022 (liste des scripts admis, `SCRIPTS_ADMIS` dans `scripts/verifier.py`). La rubrique Recherche et les pages de programme restent en brouillon jusqu'à la relecture de leurs textes par Florian ; l'entrée « Recherche » du menu s'ajoute à leur publication. Le nom d'un programme n'apparaît dans le bloc de statut qu'une fois la page du programme publiée.

@@ -137,12 +137,14 @@ removePathAccents = true
       # Revue (ADR-024) : collections sous /en/review/
       revue = "/review/:sections[1:]/"
       ethique = "/ethics/"
+      recherche = "/research/"
     [languages.en.permalinks.page]
       outils = "/tools/:slug/"
       nouveautes = "/updates/:slug/"
       automatiser = "/automation/:slug/"
       revue = "/review/:sections[1:]/:slug/"
       ethique = "/ethics/:slug/"
+      recherche = "/research/:slug/"
     [languages.en.permalinks.term]
       taches = "/tasks/:slug/"
     [languages.en.permalinks.taxonomy]

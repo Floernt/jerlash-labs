@@ -1,0 +1,33 @@
+{{- /* Carte d'un projet publié (rubrique Recherche), dans l'esprit de la page Projets du LIFT Lab de Stanford :
+       visuel 3:2 généré par scripts/visuels.py, programmes (par leur nom, jamais leur code), titre, résumé, liens.
+       Contexte : la fiche du projet (content/recherche/projets/<code>.md). L'attribut data-programme porte les slugs
+       des programmes, pour le filtrage (ADR-032). */ -}}
+{{- $programmes := slice }}
+{{- range .Params.programmes }}{{ with partial "programme.html" . }}{{ $programmes = $programmes | append . }}{{ end }}{{ end }}
+{{- $slugs := slice }}{{ range $programmes }}{{ $slugs = $slugs | append .slug }}{{ end }}
+{{- $lien := "" }}{{ with .Params.lien }}{{ $lien = partial "lien-interne.html" . }}{{ end }}
+<article class="carte-projet" data-programme="{{ delimit $slugs " " }}">
+  {{- with .Params.code }}
+  <img class="carte-projet__visuel" src="{{ printf "images/projets/%s.svg" (lower .) | relURL }}" alt="" width="600" height="400" loading="lazy">
+  {{- end }}
+  <div class="carte-projet__corps">
+    {{- with $programmes }}
+    <p class="carte-projet__programmes">
+      {{- range . }}{{ if .lien }}<a class="ia-tag" href="{{ .lien }}">{{ .nom }}</a>{{ else }}<span class="ia-tag">{{ .nom }}</span>{{ end }}{{ end }}
+    </p>
+    {{- end }}
+    <h3 class="carte-projet__titre">{{ if $lien }}<a href="{{ $lien }}">{{ .Title }}</a>{{ else }}{{ .Title }}{{ end }}</h3>
+    {{- with .Params.statut }}<p class="ia-eyebrow">{{ . }}</p>{{ end }}
+    {{- with .Params.resume }}<p class="carte-projet__resume">{{ . }}</p>{{ end }}
+    <p class="carte-projet__liens">
+      {{- with $lien }}<a href="{{ . }}">{{ T "lire" }} <span aria-hidden="true">→</span></a>{{ end }}
+      {{- range .Params.liens }}
+      {{- /* Téléchargements : hors langue, comme le fait render-link.html ; liens externes inchangés. */ -}}
+      {{- $cible := .lien }}
+      {{- if hasPrefix .lien "/telechargements/" }}{{ $cible = .lien | strings.TrimPrefix "/" | relURL }}
+      {{- else if not (hasPrefix .lien "http") }}{{ $cible = partial "lien-interne.html" .lien }}{{ end }}
+      <a href="{{ $cible }}">{{ .libelle }} <span aria-hidden="true">→</span></a>
+      {{- end }}
+    </p>
+  </div>
+</article>

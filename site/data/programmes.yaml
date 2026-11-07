@@ -1,0 +1,42 @@
+# Programmes de recherche de jerlash.labs.
+# Seul endroit où figurent les noms affichés : le site ne montre jamais les codes (décision de Florian, 2026-11-07).
+# Le code (H1, C1, T1) sert uniquement au rattachement, par le champ « programme » des pages.
+# « slug » est la fin de l'adresse de la page du programme (/recherche/<slug>/) et la valeur du filtre (?programme=<slug>).
+# « couleur » donne la teinte dominante des visuels de projet (scripts/visuels.py) : brique, bleu ou encre.
+# Noms proposés à partir de JERLASH_Labs_Research_Papers_Guide.md (sources hors dépôt) : à arrêter par Florian.
+
+- code: H1
+  couleur: brique
+  ordre: 1
+  fr:
+    nom: "Autonomie humaine et IA"
+    slug: "autonomie-humaine-et-ia"
+    accroche: "Autonomie, supervision et jugement de l'avocat qui travaille avec l'IA."
+  en:
+    nom: "Human agency and AI"
+    slug: "human-agency-and-ai"
+    accroche: "Autonomy, oversight and judgment of lawyers working with AI."
+
+- code: C1
+  couleur: bleu
+  ordre: 2
+  fr:
+    nom: "Ingénierie des connaissances juridiques"
+    slug: "ingenierie-des-connaissances-juridiques"
+    accroche: "Formaliser et transmettre les connaissances juridiques."
+  en:
+    nom: "Legal knowledge engineering"
+    slug: "legal-knowledge-engineering"
+    accroche: "Formalising and passing on legal knowledge."
+
+- code: T1
+  couleur: encre
+  ordre: 3
+  fr:
+    nom: "IA juridique digne de confiance"
+    slug: "ia-juridique-digne-de-confiance"
+    accroche: "Fiabilité, vérification et évaluation des systèmes d'IA juridique."
+  en:
+    nom: "Trustworthy legal AI"
+    slug: "trustworthy-legal-ai"
+    accroche: "Reliability, verification and evaluation of legal AI systems."

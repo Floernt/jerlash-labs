@@ -24,8 +24,8 @@ SITE = os.path.join(DEPOT, "site")
 HUGO_VERSION = "0.148.2"
 MARQUEURS = re.compile(r"\[À (?:COMPLÉTER|VÉRIFIER|DÉCIDER|VALIDER)[^\]]*\]")
 CSP = "default-src 'none'; script-src 'self';"
-# Seuls scripts admis : ceux du design system, servis par le site (ADR-022).
-SCRIPTS_ADMIS = ("js/bundle.js", "js/init.js")
+# Seuls scripts admis : ceux du design system (ADR-022) et le filtrage des listes (ADR-032), servis par le site.
+SCRIPTS_ADMIS = ("js/bundle.js", "js/init.js", "js/filtres.js")
 
 resultats: list[tuple[bool, str]] = []
 
@@ -117,11 +117,13 @@ def verifier_site(exiger_hugo: bool) -> None:
     sortie = tempfile.mkdtemp(prefix="jerlash-labs-site-")
     try:
         r = lancer(["hugo", "--source", SITE, "--destination", sortie, "--cleanDestinationDir",
-                    "--panicOnWarning", "--printPathWarnings", "--quiet",
+                    # Pas de --quiet : il efface aussi le message d'erreur de Hugo.
+                    "--panicOnWarning", "--printPathWarnings",
                     # Sans verrou : la vérification construit ailleurs et peut tourner pendant un « hugo server ».
                     "--noBuildLock"])
         if not etape(r.returncode == 0, "construction Hugo sans erreur ni avertissement"):
-            print(r.stdout[-3000:], r.stderr[-3000:])
+            for ligne in (r.stdout.strip() + "\n" + r.stderr.strip()).strip()[-3000:].splitlines():
+                print("    " + ligne)
             return
         pages = []
         for racine, _d, noms in os.walk(sortie):
@@ -171,6 +173,12 @@ def verifier_typographie() -> None:
     etape(r.returncode == 0, "espaces insécables en place" if r.returncode == 0 else r.stdout.strip())
 
 
+def verifier_visuels() -> None:
+    print("\n[4 ter] Visuels des projets (rubrique Recherche)")
+    r = lancer([sys.executable, "scripts/visuels.py", "--verifier"])
+    etape(r.returncode == 0, r.stdout.strip().splitlines()[-1] if r.stdout.strip() else r.stderr.strip())
+
+
 def verifier_marqueurs(publication: bool) -> None:
     print("\n[5] Marqueurs de travail dans ce qui sera publié")
     trouves = []
@@ -209,6 +217,7 @@ def main(argv=None) -> int:
         verifier_archive()
     verifier_site(args.exiger_hugo)
     verifier_typographie()
+    verifier_visuels()
     verifier_traductions()
     verifier_marqueurs(args.publication)
     echecs = [m for ok, m in resultats if not ok]

@@ -100,6 +100,14 @@ def main(argv=None) -> int:
         nouveau = corriger(texte)
         if nouveau != texte:
             a_corriger.append(os.path.relpath(chemin, DEPOT))
+            if args.verifier:
+                # Montrer où se trouvent les corrections, pour qu'on sache quoi reprendre.
+                avant, apres = texte.splitlines(), nouveau.splitlines()
+                lignes = [n for n, (a, b) in enumerate(zip(avant, apres), 1) if a != b]
+                for n in lignes[:3]:
+                    print(f"  {os.path.relpath(chemin, DEPOT)}:{n} : {avant[n - 1].strip()[:90]}")
+                if len(lignes) > 3:
+                    print(f"  … et {len(lignes) - 3} autre(s) ligne(s)")
             if not args.verifier:
                 with open(chemin, "w", encoding="utf-8", newline="\n") as f:
                     f.write(nouveau)

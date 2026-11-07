@@ -1,18 +1,32 @@
-{{- /* Texte de la Revue (ADR-024) : collection, titre, auteur et date, bloc de statut si le texte en porte un (docs/politique-publication.md). */ -}}
+{{- /* Texte de la Revue (ADR-024) : sommaire latéral (texte d'au moins trois intertitres), collection, titre, chapeau,
+       auteur et date, œuvre recensée, statut repliable, texte, puis textes précédent et suivant de la même collection.
+       Dans Hugo, PrevInSection est le texte plus ancien et NextInSection le plus récent (tri par date décroissante). */ -}}
 {{ define "main" }}
+{{- $lateral := partial "sommaire.html" (dict "page" . "mode" "lateral") }}
 <div class="conteneur">
-  <article class="article">
-    <header class="tete-page">
-      <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>{{ with .Params.objet }} · {{ T (printf "objet_%s" .) | default . }}{{ end }}</p>
-      <h1 class="tete-page__titre">{{ .Title }}</h1>
-      <p class="tete-page__meta">{{ with site.Params.auteur }}{{ . }} · {{ end }}{{ partial "date.html" .Date }} · {{ T "lecture" .ReadingTime }}</p>
-    </header>
-    {{ partial "oeuvre-recensee.html" . }}
-    {{ partial "bloc-statut.html" . }}
-    <div class="prose">
-      {{ .Content }}
-    </div>
-    <p class="article__retour"><a class="ia-btn ia-btn--ghost" href="{{ .Parent.RelPermalink }}"><span class="ia-btn__arrow">←</span> {{ T "tous_les_textes" .Parent.Title }}</a></p>
-  </article>
+  <div class="mise-en-page{{ if $lateral }} mise-en-page--sommaire{{ end }}">
+    {{- with $lateral }}<aside class="mise-en-page__cote">{{ . }}</aside>{{ end }}
+    <article class="article">
+      <header class="tete-page tete-page--article">
+        <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>{{ with .Params.objet }} · {{ T (printf "objet_%s" .) | default . }}{{ end }}</p>
+        <h1 class="tete-page__titre">{{ .Title }}</h1>
+        {{- with .Description }}<p class="tete-page__chapeau">{{ . }}</p>{{ end }}
+        <p class="tete-page__meta">{{ with site.Params.auteur }}{{ . }} · {{ end }}{{ partial "date.html" .Date }} · {{ T "lecture" .ReadingTime }}</p>
+      </header>
+      {{ partial "oeuvre-recensee.html" . }}
+      {{ partial "bloc-statut.html" . }}
+      {{ partial "sommaire.html" (dict "page" . "mode" "replie") }}
+      <div class="prose">
+        {{ .Content }}
+      </div>
+      {{- if or .PrevInSection .NextInSection }}
+      <nav class="suite-textes" aria-label="{{ .Parent.Title }}">
+        {{- with .PrevInSection }}<a class="suite-textes__lien" href="{{ .RelPermalink }}"><span class="ia-eyebrow">← {{ T "texte_precedent" }}</span><span class="suite-textes__titre">{{ .Title }}</span></a>{{ else }}<span></span>{{ end }}
+        {{- with .NextInSection }}<a class="suite-textes__lien suite-textes__lien--suivant" href="{{ .RelPermalink }}"><span class="ia-eyebrow">{{ T "texte_suivant" }} →</span><span class="suite-textes__titre">{{ .Title }}</span></a>{{ end }}
+      </nav>
+      {{- end }}
+      <p class="article__retour"><a class="ia-btn ia-btn--ghost" href="{{ .Parent.RelPermalink }}"><span class="ia-btn__arrow">←</span> {{ T "tous_les_textes" .Parent.Title }}</a></p>
+    </article>
+  </div>
 </div>
 {{ end }}

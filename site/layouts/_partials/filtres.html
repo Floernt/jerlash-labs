@@ -1,0 +1,12 @@
+{{- /* Barre de filtres (ADR-032), animée par static/js/filtres.js.
+       Contexte : dict "cle" <nom du paramètre, ex. "type"> "cible" <id de la grille> "libelle" <texte de la barre>
+                       "options" <slice de dict "valeur" "libelle">.
+       Cachée tant que le script ne l'a pas activée : sans JavaScript, tout le contenu reste affiché. */ -}}
+<div class="filtres" data-filtres="{{ .cle }}" data-cible="{{ .cible }}" role="group" aria-label="{{ .libelle }}" hidden>
+  <span class="filtres__libelle">{{ .libelle }}</span>
+  <button type="button" class="filtres__bouton" data-valeur="" aria-pressed="true">{{ T "tous" }}</button>
+  {{- range .options }}
+  <button type="button" class="filtres__bouton" data-valeur="{{ .valeur }}" aria-pressed="false">{{ .libelle }}</button>
+  {{- end }}
+  <span class="filtres__compte"><span data-filtres-compte aria-live="polite"></span> {{ T "resultats" }}</span>
+</div>
