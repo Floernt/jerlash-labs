@@ -34,8 +34,7 @@ Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer p
 - [ ] Florian : valider ADR-032 (troisième script `filtres.js`, programmes désignés par leur nom, visuel repris en tête de page)
 - [ ] Florian : vérifier dans le navigateur (`hugo server --source site --buildDrafts --buildFuture`) : filtres de la Revue, sommaire latéral et repliable, visuels en tête de page, Recherche et pages de programme, en clair et en sombre, à 375, 768 et 1280 px
 - [ ] Florian : arrêter le nom du programme C1 (« Ingénierie des connaissances juridiques » ; un nom au format des deux autres, du type « Savoirs & IA », reste possible) et valider les noms anglais « Agency & AI » et « AI & trust » (`site/data/programmes.yaml`)
-- [ ] Florian : relire les résumés des cartes P14 et P19 (`site/content/recherche/projets/`) et la traduction anglaise de « Personnaliser plutôt que standardiser »
-- [ ] « Personnaliser plutôt que standardiser », dernière phrase : « les travaux du programme H1 » affiche le code ; écrire « du programme Autonomie & IA » (avec lien `/recherche/autonomie-ia/`) pour respecter ADR-032
+- [ ] Florian : relire les résumés des cartes P14 et P19 (`site/content/recherche/projets/`)
 - [ ] Ajouter une fiche dans `site/content/recherche/projets/` à chaque nouveau projet publié, puis `python scripts/visuels.py`
 
 ## Maintenant : piste parallèle Outils (sans échéance, par la Factory)
