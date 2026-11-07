@@ -5,6 +5,7 @@
 {{- $code := .Params.programme }}
 {{- $prog := partial "programme.html" $code }}
 <div class="conteneur">
+  {{ partial "visuel-tete.html" . }}
   <header class="tete-page">
     <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ T "recherche" }}</a> · {{ T "programme" }}</p>
     <h1 class="tete-page__titre">{{ with $prog }}{{ .nom }}{{ else }}{{ $.Title }}{{ end }}</h1>
@@ -62,18 +63,13 @@
 
   <section class="programme__bloc" aria-labelledby="titre-autres">
     <h2 id="titre-autres" class="accueil-section__titre">{{ T "autres_programmes" }}</h2>
-    <ul class="programmes__liste">
+    <div class="grille-programmes">
       {{- range sort site.Data.programmes "ordre" }}
       {{- if ne .code $code }}
-      {{- with partial "programme.html" .code }}
-      <li class="programmes__item programmes__item--{{ .couleur }}">
-        <h3>{{ if .lien }}<a href="{{ .lien }}">{{ .nom }}</a>{{ else }}{{ .nom }}{{ end }}</h3>
-        <p>{{ .accroche }}</p>
-      </li>
+      {{- with partial "programme.html" .code }}{{ partial "carte-programme.html" . }}{{ end }}
       {{- end }}
       {{- end }}
-      {{- end }}
-    </ul>
+    </div>
   </section>
 </div>
 {{ end }}

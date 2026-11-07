@@ -1,11 +1,15 @@
-{{- /* Carte d'un texte de la Revue. Contexte : dict "page" <page> "rang" <entier, pour varier le fond pixel>
+{{- /* Carte d'un texte de la Revue. Contexte : dict "page" <page> "rang" <entier, conservé pour compatibilité>
        "type" <facultatif : collection, pour le filtrage de la racine de la Revue (ADR-032)>.
+       La vignette est le visuel du texte (partial "visuel.html"), repris en tête de sa page.
        Une recension (champ « objet », ADR-027) porte l'étiquette « Recension · <objet> ». */ -}}
-{{- $motifs := slice (dict "c" "nuage" "fg" "brique") (dict "c" "onde" "fg" "bleu") (dict "c" "horizon" "fg" "brique") -}}
-{{- $m := index $motifs (mod .rang 3) -}}
 {{- with .page }}
+{{- $v := partial "visuel.html" . }}
 <a class="ia-card" href="{{ .RelPermalink }}"{{ with $.type }} data-type="{{ . }}"{{ end }}>
-  <div class="ia-card__thumb ia-pixel" data-pixel="{{ $m.c }}" data-fg="{{ $m.fg }}" data-bg="paper" data-cell="pixel-fin" data-seed="{{ add $.rang 3 }}" aria-hidden="true"></div>
+  {{- if $v.src }}
+  <img class="ia-card__thumb ia-card__thumb--image" src="{{ $v.src | relURL }}" alt="" width="600" height="400" loading="lazy">
+  {{- else }}
+  <div class="ia-card__thumb ia-pixel" data-pixel="{{ $v.motif }}" data-fg="{{ $v.fg }}" data-bg="paper" data-cell="pixel-fin" data-seed="{{ $v.graine }}" aria-hidden="true"></div>
+  {{- end }}
   <p class="ia-eyebrow">{{ .Parent.Title }} · {{ partial "date.html" .Date }}</p>
   {{- with .Params.objet }}<p class="ia-card__etiquette"><span class="ia-tag ia-tag--recension">{{ T "recension" }} · {{ T (printf "objet_%s" .) | default . }}</span></p>{{ end }}
   <h3 class="ia-card__title">{{ .Title }}</h3>

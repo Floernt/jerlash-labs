@@ -1,0 +1,12 @@
+{{- /* Vignette d'un programme de recherche : visuel (scripts/visuels.py, images/programmes/<slug français>.svg),
+       nom, accroche, lien vers sa page. Contexte : le dict renvoyé par partial "programme.html" (code jamais affiché). */ -}}
+{{- $visuel := "" }}
+{{- range site.Data.programmes }}{{ if eq .code $.code }}{{ $visuel = printf "images/programmes/%s.svg" (index . "fr").slug }}{{ end }}{{ end }}
+<article class="carte-programme carte-programme--{{ .couleur }}">
+  {{- with $visuel }}<img class="carte-programme__visuel" src="{{ . | relURL }}" alt="" width="600" height="400" loading="lazy">{{ end }}
+  <div class="carte-programme__corps">
+    <h3 class="carte-programme__titre">{{ if .lien }}<a href="{{ .lien }}">{{ .nom }}</a>{{ else }}{{ .nom }}{{ end }}</h3>
+    <p class="carte-programme__accroche">{{ .accroche }}</p>
+    {{- with .lien }}<p class="carte-programme__lien"><a href="{{ . }}">{{ T "voir_programme" }} <span aria-hidden="true">→</span></a></p>{{ end }}
+  </div>
+</article>

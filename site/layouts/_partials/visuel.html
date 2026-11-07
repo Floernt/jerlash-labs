@@ -1,0 +1,31 @@
+{{- /* Visuel d'un contenu, le même partout où le contenu apparaît (vignette, tête de page). Contexte : la page.
+       Renvoie un dict :
+         « src » (image du site), si la page porte un champ « image », si c'est une page de programme
+           (images/programmes/<slug français>.svg) ou si elle relève d'un projet (champ « projet », sur elle ou sur
+           sa section : images/projets/<code>.svg, scripts/visuels.py) ;
+         sinon « motif », « fg », « graine » : fond pixel du design system (static/js/bundle.js), tiré du chemin de la
+           page, donc stable d'une liste à l'autre. */ -}}
+{{- $p := . }}
+{{- $src := "" }}
+{{- with $p.Params.image }}{{ $src = . | strings.TrimPrefix "/" }}{{ end }}
+{{- if and (not $src) (eq $p.Layout "programme") }}
+{{- range site.Data.programmes }}{{ if eq .code $p.Params.programme }}{{ $src = printf "images/programmes/%s.svg" (index . "fr").slug }}{{ end }}{{ end }}
+{{- end }}
+{{- if not $src }}
+{{- $projet := $p.Params.projet }}
+{{- if and (not $projet) $p.Parent }}{{ $projet = $p.Parent.Params.projet }}{{ end }}
+{{- with $projet }}
+{{- $chemin := printf "images/projets/%s.svg" (lower .) }}
+{{- if fileExists (printf "static/%s" $chemin) }}{{ $src = $chemin }}{{ end }}
+{{- end }}
+{{- end }}
+{{- $resultat := dict }}
+{{- if $src }}
+{{- $resultat = dict "src" $src }}
+{{- else }}
+{{- $motifs := slice (dict "c" "nuage" "fg" "brique") (dict "c" "onde" "fg" "bleu") (dict "c" "horizon" "fg" "brique") (dict "c" "orbe" "fg" "bleu") }}
+{{- $h := hash.FNV32a $p.Path }}
+{{- $m := index $motifs (mod $h (len $motifs)) }}
+{{- $resultat = dict "motif" $m.c "fg" $m.fg "graine" (add (mod $h 97) 3) }}
+{{- end }}
+{{- return $resultat }}

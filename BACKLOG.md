@@ -33,9 +33,9 @@ Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer p
 
 - [ ] Florian : valider ADR-032 (troisième script `filtres.js`, programmes désignés par leur nom)
 - [ ] Florian : vérifier dans le navigateur (`hugo server --source site --buildDrafts`) : filtres de la Revue, sommaire latéral et repliable, cartes et visuels de `/fr/recherche/`, en clair et en sombre, à 375, 768 et 1280 px
-- [ ] Florian : arrêter les noms des trois programmes (FR et EN) dans `site/data/programmes.yaml` ; les slugs des pages suivent
+- [ ] Florian : arrêter le nom du programme C1 (« Ingénierie des connaissances juridiques » proposé) et valider les noms anglais « Agency & AI » et « AI & trust » (`site/data/programmes.yaml`) ; H1 « Autonomie & IA » et T1 « IA & confiance » arrêtés le 2026-11-07
 - [ ] Florian : relire et reprendre les textes rédigés par Claude : `site/content/recherche/_index.md` et les trois pages de programme (marqueurs `[À VÉRIFIER]`), puis les résumés des cartes P14 et P19 (`site/content/recherche/projets/`)
-- [ ] Publication de la rubrique : `draft: false`, entrée « Recherche / Research » au menu (avant Outils), `/traduire` pour l'accueil, la Revue, P14 et P19 (front matter `projet` ajouté), `CHANGELOG.md`
+- [ ] Publication de la rubrique : `draft: false` sur la Recherche et les pages de programme (l'entrée « Recherche » du menu et la section « Programmes de recherche » de l'accueil apparaissent alors d'elles-mêmes), `/traduire` pour l'accueil, la Revue, P14 et P19 (front matter `projet` ajouté), `CHANGELOG.md`
 - [ ] Ajouter une fiche dans `site/content/recherche/projets/` à chaque nouveau projet publié, puis `python scripts/visuels.py`
 
 ## Maintenant : piste parallèle Outils (sans échéance, par la Factory)

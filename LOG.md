@@ -296,3 +296,21 @@ Prochaine étape : valider le cahier des charges et trancher ADR-002, ADR-003 et
 
 ---
 
+## JALON — 2026-11-07 (menu et accueil)
+
+Entrée « Recherche / Research » ajoutée au menu (avant Outils) ; `entete.html` masque toute entrée dont la page n'est pas construite, donc l'entrée n'apparaît qu'une fois la rubrique publiée. Accueil : section « Programmes de recherche » (trois vignettes : visuel, nom, accroche, lien), au-dessus de « Pourquoi jerlash.labs ? », affichée seulement quand les pages de programme sont publiées. Même vignette sur la page Recherche et sur les pages de programme. `scripts/visuels.py` produit aussi un visuel par programme (`images/programmes/<slug>.svg`, motif fixé dans `data/programmes.yaml` : orbe, constellation, colonnes). `verifier.py` : 24/24.
+
+---
+
+## JALON — 2026-11-07 (visuel en tête de page)
+
+Règle (Florian) : le visuel d'un contenu est repris en tête de sa page. Partial `visuel.html` (source unique) : champ `image` s'il existe ; sinon visuel du programme (pages de programme) ; sinon visuel du projet (champ `projet` de la page ou de sa section : boîte à outils P14 et ses pages, recension P19) ; sinon fond pixel tiré du chemin de la page, donc identique sur la vignette (accueil, Revue, collection) et en tête. Bandeau `visuel-tete.html` dans les gabarits Revue, toolkit et programme. `verifier.py` : 24/24.
+
+---
+
+## JALON — 2026-11-07 (noms des programmes)
+
+Florian arrête H1 « Autonomie & IA » (`/recherche/autonomie-ia/`, EN « Agency & AI », `/en/research/agency-ai/`) et T1 « IA & confiance » (`/recherche/ia-confiance/`, EN « AI & trust », `/en/research/ai-trust/`) ; anglais proposé par Claude, à valider. Fichiers de contenu et visuels renommés d'après les nouveaux slugs. Page Recherche : vignettes des programmes en tête, comme sur l'accueil, puis les projets.
+
+---
+

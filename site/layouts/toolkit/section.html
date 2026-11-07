@@ -1,6 +1,7 @@
 {{- /* Toolkit (P14, ADR-024) : présentation, bloc de statut, puis les pages du toolkit dans l'ordre de leur poids. */ -}}
 {{ define "main" }}
 <div class="conteneur">
+  {{ partial "visuel-tete.html" . }}
   <article class="article">
     <header class="tete-page">
       <p class="ia-eyebrow"><a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a></p>

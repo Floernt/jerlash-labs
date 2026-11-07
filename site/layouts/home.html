@@ -1,4 +1,4 @@
-{{- /* Accueil : héros (front matter « heros » de content/_index.md), trois dernières publications de la Revue, toutes collections confondues, « pourquoi ce site », origine du nom (« nom »). */ -}}
+{{- /* Accueil : héros (front matter « heros » de content/_index.md), trois dernières publications de la Revue, toutes collections confondues, « pourquoi ce site », programmes de recherche (ADR-032), origine du nom (« nom »). */ -}}
 {{ define "main" }}
 {{- $p := .Params }}
 <div class="conteneur">
@@ -48,6 +48,25 @@
       <li><span class="liste-numerotee__rang">{{ printf "%02d" (add $i 1) }}</span><div><h3>{{ $e.titre }}</h3><p>{{ $e.texte }}</p></div></li>
       {{- end }}
     </ol>
+  </section>
+  {{- end }}
+
+  {{- /* Programmes de recherche (ADR-032) : affichés seulement si leurs pages sont publiées,
+         pour ne pas montrer des noms encore provisoires. */ -}}
+  {{- $programmes := slice }}
+  {{- range sort site.Data.programmes "ordre" }}{{ with partial "programme.html" .code }}{{ if .lien }}{{ $programmes = $programmes | append . }}{{ end }}{{ end }}{{ end }}
+  {{- with $programmes }}
+  <section class="accueil-section" aria-labelledby="titre-programmes">
+    <div class="accueil-section__tete">
+      <div>
+        <p class="ia-eyebrow">{{ T "recherche" }}</p>
+        <h2 class="accueil-section__titre" id="titre-programmes">{{ T "programmes_de_recherche" }}</h2>
+      </div>
+      {{- with site.GetPage "/recherche" }}<a class="ia-btn ia-btn--ghost" href="{{ .RelPermalink }}">{{ T "toute_la_recherche" }} <span class="ia-btn__arrow">→</span></a>{{ end }}
+    </div>
+    <div class="grille-programmes">
+      {{- range . }}{{ partial "carte-programme.html" . }}{{ end }}
+    </div>
   </section>
   {{- end }}
 
