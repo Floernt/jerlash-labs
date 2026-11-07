@@ -10,6 +10,17 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-07 - Sommaire actif et parcours de la boîte à outils
+Fait :
+- `site/static/js/sommaire.js` : surbrillance (`aria-current="location"`) de l'intertitre en cours dans le sommaire latéral, pour la Revue et les toolkits ; la colonne défile pour garder le lien visible. Ajouté à `baseof.html` et à `SCRIPTS_ADMIS`.
+- Parcours de la Gouvernance de l'IA en colonne de droite : `site/data/parcours/gouvernance-ia.yaml`, partials `parcours*.html`, gabarits `toolkit/page.html` et `toolkit/section.html`, CSS. Trois colonnes à partir de 1200px (1024px sur l'accueil du toolkit), bloc repliable en dessous.
+- Contrôlé avec Playwright (Edge) : surbrillance qui suit le défilement (Homologation, une recension), étape en cours correcte en FR et EN, pas de débordement à 1100 et 1200px. Vérificateur 24/24.
+Décisions : ADR-033 (proposée). Forme en trois branches choisie par Florian parmi quatre maquettes (trois branches, phases, chemin selon le niveau, chemin unique).
+Problèmes / points ouverts :
+- Débordement horizontal à 390px sur les pages de toolkit (669px de large sur Homologation), déjà présent avant cette session : à corriger à part.
+- Le fichier de parcours et la section « Le parcours selon le niveau » de `_index.md` doivent évoluer ensemble.
+Prochaine étape : Florian valide ADR-033 et ouvre la PR `dev` → `main`.
+
 ## 2026-11-07 - Rangement, vérificateur, Revue unifiée, rubrique Recherche
 Fait :
 - Rangement du dossier parent (`_archives/`, `atelier-visuel/`, `documents/`, `LISEZ-MOI.md`) ; quatre recensions brutes sorties de `site/content/` vers `../otf/` ; BACKLOG débarrassé des tâches faites, `/cloture-session` retire désormais les tâches terminées.

@@ -1,0 +1,19 @@
+{{- /* Une étape du parcours (ADR-033). Contexte : dict "e" <étape du fichier de données> "section" <section> "page" <page en cours>.
+       L'étape est en cours si elle désigne la page affichée, sauf une ancre de la page d'accueil qui n'est pas marquée « accueil ». */ -}}
+{{- $e := .e }}{{ $p := .page }}
+{{- $cible := .section }}
+{{- with $e.page }}{{ $cible = $.section.GetPage . }}{{ end }}
+{{- with $cible }}
+{{- $ici := and (eq .RelPermalink $p.RelPermalink) (or (not $e.ancre) $e.accueil) }}
+{{- $href := .RelPermalink }}
+{{- with $e.ancre }}{{ with index . $p.Language.Lang }}{{ $href = printf "%s#%s" $href . }}{{ end }}{{ end }}
+{{- $titre := .LinkTitle }}
+{{- with $e.libelle }}{{ $titre = T . }}{{ end }}
+<li class="parcours__etape{{ if $ici }} est-ici{{ end }}">
+  <a href="{{ $href }}"{{ if $ici }} aria-current="page"{{ end }}>{{ $titre }}</a>
+  {{- if $ici }}<span class="parcours__ici">{{ T "vous_etes_ici" }}</span>{{ end }}
+  {{- with $e.note }}<span class="parcours__note">{{ T . }}</span>{{ end }}
+</li>
+{{- else }}
+{{- warnf "parcours : page introuvable « %s » dans %s" $e.page $.section.RelPermalink }}
+{{- end }}

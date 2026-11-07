@@ -2,6 +2,11 @@
 
 Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessions est dans `LOG.md`, ce qui reste à faire dans `BACKLOG.md`.
 
+## 2026-11-07 - Sommaire actif et parcours de gouvernance (prêt à publier)
+
+- Le sommaire latéral des textes de la Revue et de la boîte à outils met en évidence l'intertitre en cours de lecture (`sommaire.js`, ADR-033).
+- Gouvernance de l'IA : chaque page affiche à droite le parcours de gouvernance en trois branches (une par niveau), avec l'étape en cours, la charte toujours en dernier ; bloc repliable sur écran étroit.
+
 ## 2026-11-07 - Rubrique Recherche, Revue unifiée, pages de lecture (prêt à publier)
 
 - Rubrique Recherche (FR et EN) au menu : vignettes des trois programmes, Autonomie & IA, Ingénierie juridique, IA & confiance, puis cartes des projets publiés (Gouvernance de l'IA, recension Billion et Fasterling) avec visuels pixelisés et filtre par programme ; une page par programme, qui relie ses projets et ses publications (ADR-032).

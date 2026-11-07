@@ -1,0 +1,37 @@
+# Parcours de la boîte à outils Gouvernance de l'IA (ADR-033), affiché dans la colonne de droite (partial parcours.html).
+# Il reprend « Le parcours selon le niveau » de content/outils/gouvernance-ia/_index.md : à modifier ensemble.
+# page : chemin de la page dans la section ("" = page d'accueil de la boîte à outils) ; son titre est repris tel quel.
+# libelle : clé i18n, pour une étape qui n'est pas une page. ancre : par langue. note : clé i18n affichée sous l'étape.
+# accueil : true si l'étape est l'étape en cours sur la page d'accueil de la boîte à outils.
+tronc:
+  - page: pourquoi-les-chartes-echouent
+    note: lecture_conseillee
+  - page: ""
+    libelle: determiner_niveau
+    accueil: true
+    ancre: { fr: quel-niveau-pour-votre-organisation, en: which-level-for-your-organisation }
+branches:
+  - niveau: 1
+    etapes:
+      - page: niveau-1
+  - niveau: 2
+    etapes:
+      - page: niveau-1
+      - page: donnees
+      - page: gouvernance
+      - page: ""
+        libelle: matrice_outils
+        ancre: { fr: le-tableur-des-niveaux-2-et-3, en: the-spreadsheet-for-levels-2-and-3 }
+      - page: supervision
+  - niveau: 3
+    etapes:
+      - page: gouvernance
+      - page: donnees
+      - page: homologation
+      - page: supervision
+      - page: operations
+fin:
+  - page: charte
+    note: en_dernier
+reference:
+  - page: sources-et-versions

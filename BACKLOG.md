@@ -33,6 +33,7 @@ Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer p
 
 - [ ] Florian : valider ADR-032 (troisième script `filtres.js`, programmes désignés par leur nom, visuel repris en tête de page)
 - [ ] Florian : vérifier dans le navigateur (`hugo server --source site --buildDrafts --buildFuture`) : filtres de la Revue, sommaire latéral et repliable, visuels en tête de page, Recherche et pages de programme, en clair et en sombre, à 375, 768 et 1280 px
+- [ ] Florian : valider ADR-033 (quatrième script `sommaire.js` ; parcours de la boîte à outils en trois branches) et vérifier dans le navigateur la surbrillance du sommaire et le parcours à 1440, 1200, 1100 et 390 px
 - [ ] Ajouter une fiche dans `site/content/recherche/projets/` à chaque nouveau projet publié, puis `python scripts/visuels.py`
 
 ## Maintenant : piste parallèle Outils (sans échéance, par la Factory)
