@@ -2,6 +2,12 @@
 
 Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessions est dans `LOG.md`, ce qui reste à faire dans `BACKLOG.md`.
 
+## 2026-11-12 - Recension Chaduteau, « L'impact de l'IA sur les juristes et les avocats d'affaires » (prêt à publier)
+
+- Collection Recensions : recension du livre d'Olivier Chaduteau (LGDJ, coll. Forum, 2026), en français et en anglais. L'ouvrage lit l'IA comme une technologie à usage général et décrit ce qu'elle change aux modèles économiques des cabinets ; la recension prolonge la question vers les conditions dans lesquelles le juriste acquiert et conserve sa capacité de jugement.
+- Front matter complet : objet, œuvre, programme H1, date d'arrêt des recherches, contrôles, déclaration d'usage de l'IA, licence, financement, conflits d'intérêts (ADR-024, ADR-027).
+- Adresses : `/fr/revue/recensions/lintelligence-artificielle-transforme-t-elle-le-juriste/` et `/en/review/recensions/is-ai-transforming-the-lawyer/`.
+
 ## 2026-11-07 - Sommaire actif et parcours de gouvernance (prêt à publier)
 
 - Le sommaire latéral des textes de la Revue et de la boîte à outils met en évidence l'intertitre en cours de lecture (`sommaire.js`, ADR-033).

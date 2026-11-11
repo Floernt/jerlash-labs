@@ -10,6 +10,18 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-11 - Recension Chaduteau : contrôle avant la publication du 12
+Fait :
+- État réel contrôlé dans le dépôt : `site/content/revue/recensions/lintelligence-artificielle-transforme-t-elle-le-juriste.md` et son `.en.md` sont en `draft: false`, datés du 2026-11-12, et déjà dans `main` depuis la PR #12 (2026-11-07). Conflits d'intérêts (« aucun » / « none »), usage de l'IA et contrôles remplis par Florian le 2026-11-05 : aucun marqueur `[À COMPLÉTER]` dans la recension.
+- Traduction à jour : l'empreinte `traduction.source` de la version anglaise correspond au fichier français courant. Collection `_index.md` et `_index.en.md` en `draft: false`.
+- Aucun marqueur bloquant dans ce qui sera publié : les seuls `[À COMPLÉTER]` restants sont dans `site/content/guides/`, tous en `draft: true`, donc ignorés par `verifier_marqueurs`. La dernière Publication (exécution planifiée du 2026-11-09) est verte.
+- `CHANGELOG.md` : entrée du 2026-11-12. `BACKLOG.md` : ligne Chaduteau remise à l'état réel.
+Décisions : aucune.
+Problèmes / points ouverts :
+- `python scripts/verifier.py --publication` et `hugo` n'ont pas pu être lancés depuis l'environnement de l'agent (ni Python ni Hugo n'y sont installés) : contrôle du rendu et du hreflang non exécuté localement. La vérification de publication est de toute façon rejouée par `publier.yml` avant la construction. `[À VÉRIFIER]`
+- Les adresses FR et EN sont déduites de `hugo.toml` (permaliens anglais, `slug` de la traduction), non d'une construction. `[À VÉRIFIER]`
+Prochaine étape : le 12 novembre, Florian lance le workflow Publication (`workflow_dispatch`) ; la page est datée du 12 et Hugo ne construit pas les contenus futurs. Post LinkedIn à déposer en idée par l'agent Réseaux, après validation du texte par Florian.
+
 ## 2026-11-07 - Sommaire actif et parcours de la boîte à outils
 Fait :
 - `site/static/js/sommaire.js` : surbrillance (`aria-current="location"`) de l'intertitre en cours dans le sommaire latéral, pour la Revue et les toolkits ; la colonne défile pour garder le lien visible. Ajouté à `baseof.html` et à `SCRIPTS_ADMIS`.
