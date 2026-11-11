@@ -2,30 +2,40 @@
 
 Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer plutôt que construire. Un projet livré par mois, en version de travail publique, plus une piste parallèle « Outils » sans échéance. Le calendrier est indicatif : Florian peut en sortir à tout moment. Ce qui est livré passe dans `CHANGELOG.md`.
 
-## Maintenant : novembre 2026, P14 Legal AI Governance Toolkit v0.2 et refonte du site (ADR-024)
+## Maintenant : novembre 2026, P14 Gouvernance de l'IA v0.2 et refonte du site (ADR-024)
 
-- [ ] Étape 3 : serveur MCP local et commande Claude Code (fiche P20 à créer, ADR-030)
-- [ ] Rubrique Éthique (`ethique/`, page Précautions) et entrées Outils et Éthique du menu, à la publication du Toolkit
+État relevé sur le dépôt le 2026-11-11 (ticket FLO-20), à partir de `main` au commit `69c7c29`. Les dix pages de la boîte à outils sont publiées et traduites, et plus aucun marqueur ne subsiste dans ce qui sera publié. Reste, pour la publication de fin novembre : les téléchargements, la rubrique Éthique, l'étape 3, et des arbitrages de Florian.
+
+Reste à faire, sans Florian :
+
+- [x] Téléchargements : zip reproductible, charte en .docx, kit « petit cabinet » — construits par `outils/gouvernance-ia/telechargements/generer_telechargements.py` depuis les pages, en français et en anglais, proposés sur l'accueil de la boîte à outils (ADR-034, PR du 2026-11-11, à relire par Florian)
+- [ ] Rubrique Éthique : les quatre pages de `site/content/ethique/` (`_index` et `precautions`, FR et EN) sont en `draft: true`, et aucune entrée « Éthique » n'existe dans les menus de `site/hugo.toml`. L'entrée « Outils » / « Tools », elle, est en place depuis le 2026-11-06.
+- [ ] Étape 3 : serveur MCP local et commande Claude Code (fiche P20 à créer, ADR-030). Rien de commencé : pas de fiche `projets/P20-*.md`, pas de code.
+- [ ] `sources-et-versions.md` ligne 23 et sa traduction : « Le règlement a été modifié en 2026 » est affirmé sans référence ni date, sur une page déjà publiée. Le marqueur qui l'accompagnait, `[À VÉRIFIER : référence de l'acte modificatif, texte consolidé et date]`, a été retiré le 2026-11-06 sans que la vérification ait été faite ; la phrase, elle, est restée. Identifier l'acte modificatif et le citer, ou retirer la phrase. Remettre un marqueur n'est pas une option : il bloquerait la prochaine publication.
+- [ ] Vérification juridique belge : les cinq points listés par « Sources et versions » (déontologie du barreau, protection des données, information des clients, contrôle du personnel, propriété intellectuelle) n'ont pas été examinés. La page le dit, ce qui est honnête, mais le critère « vérification juridique » du calendrier reste ouvert.
+- [ ] Contrôle hreflang et plan du site, FR et EN (demande une construction Hugo).
+- [ ] `python scripts/verifier.py --publication` vert, publication, entrée dans `CHANGELOG.md`, post LinkedIn.
+
+Attend Florian :
+
 - [ ] Florian : trancher les points relevés à la conversion : charte qui vise « l'avocat » alors qu'elle s'adresse aussi aux directions juridiques (art. 2 et 8) ; « surveillance abusive » ambigu (données) ; champ « destination du système » ajouté à la fiche de cas d'usage ; phrase ajoutée sur les petits cabinets qui cumulent les rôles (gouvernance) ; noms d'axes alignés sur le référentiel ; contrôles « obligatoires » des agents présentés comme à préciser
-- [ ] Lever les 21 marqueurs `[À VÉRIFIER]` / `[À COMPLÉTER]` des pages du Toolkit (date d'arrêt du droit, articles RGPD, acte modificatif du règlement IA, déclaration d'usage de l'IA, contrôles faits)
-- [ ] Réduire le règlement IA à un rappel (haut risque = administration de la justice ; aucune déviation de la destination du système) ; vérifier le RGPD et le secret professionnel cités ; marquer ce qui ne peut pas l'être
-- [ ] Téléchargements : zip reproductible, charte en .docx, kit « petit cabinet »
-- [ ] Florian : lire tout le Toolkit (texte rédigé avec une IA, à faire sien avant publication). Relue : « Pourquoi les chartes échouent » (`draft: false`, 2026-11-03). Restent : gouvernance, données, homologation, supervision, opérations, charte, sources, présentation
-- [ ] Avant tout push sur `main` : ne pas publier « Pourquoi les chartes échouent » seule (page parente en brouillon, pas de traduction) ; remettre `draft: true` ou attendre la fin de la relecture
-- [ ] « Pourquoi les chartes échouent » : trois passages à reprendre (lignes 8, 31 et 33)
-- [ ] Traduction anglaise (`/traduire`) ; contrôle hreflang et plan du site FR et EN
-- [ ] `python scripts/verifier.py --publication` vert, publication, entrée dans `CHANGELOG.md`, post LinkedIn
+- [ ] Florian : valider ADR-030 (référentiel unique, tableur généré, serveur MCP local) et ADR-031 (ouverture de la rubrique Outils), toutes deux au statut « Proposée » alors que ce qu'elles décrivent est en ligne depuis le 2026-11-06
+- [ ] Florian : « Pourquoi les chartes échouent », trois passages à reprendre. Les numéros de lignes notés (8, 31 et 33) ne désignent plus de texte : la page a changé depuis. Passages à redésigner. `[À VÉRIFIER]`
+- [ ] Florian : lecture de la boîte à outils. Le journal du 2026-11-06 et le critère §7 de la fiche P14 indiquent que les neuf pages ont été relues et publiées ; cette tâche était restée ouverte au backlog. Confirmer qu'elle est close, ou dire quelles pages restent à faire siennes. `[À VÉRIFIER]`
+- [ ] Florian : trancher ADR-034 (téléchargements reconstruits à la publication plutôt que versionnés) et vérifier que la charte en .docx s'ouvre correctement dans Word
+- [ ] Florian : vérifier les droits sur les deux documents de contexte de `99_SOURCES` avant de les reprendre dans le pack (§ 6 de la fiche P14) ; ils en sont exclus pour l'instant
 
 ## Maintenant : recensions (avancé de décembre à novembre par Florian, 2026-11-04)
 
 - [ ] Florian : valider ADR-027 (une collection Recensions, champ `objet` : livre, article, podcast, conférence ; étiquette « Recension · <objet> » sur les vignettes)
-- [ ] Florian : lire P19 et prendre position sur les trois réserves de la Discussion (« biais » utile si le référentiel est explicité ; « un bout de code », simplification symétrique ; utilité opérationnelle d'« hallucination ») ; puis reprise dans sa voix
-- [ ] Florian : remplir conflits d'intérêts, usage de l'IA et contrôles (marqueurs `[À COMPLÉTER]`)
-- [ ] Tromans, « Will AI Change the Identity of Law Firm Partners? » (article) : brouillon `../otf/JERLASH_Critical_Review_AI_Identite_Professionnelle_2026-11-04.md`
-- [ ] Waldron, « AI Governance Must Keep Pace with Legal Practice » (article sponsorisé par LexisNexis ; chiffres d'enquête à vérifier) : brouillon `../otf/JERLASH_Labs_Critical_Review_AI_Governance.md`
+- [x] P19 lue et arbitrée par Florian le 2026-11-11 (ticket FLO-18) : les trois réserves de la Discussion sont gardées telles quelles ; la page reste en ligne, Florian l'ayant relue avant sa mise en ligne du 2026-11-07 (§8 de `docs/politique-publication.md`) ; les déclarations ne sont pas obligatoires (`controles` et `conflits_interets` sont déjà facultatifs au §9). Aucun fichier de `site/` n'a été modifié : le texte publié et sa traduction restent dans l'état du 2026-11-07
+- [ ] Florian : l'hypothèse H1 de P19. Le résumé de la carte `site/content/recherche/projets/p19.md` et celui de `p19.en.md` annoncent que « la recension en tire une hypothèse à éprouver dans le programme » ; le texte publié n'en formule aucune. Corriger les deux résumés (correction du français, puis `/traduire`), ou écrire l'hypothèse
+- [ ] Florian : l'année de la Summer School de P19, seule question du dossier de lecture restée sans réponse. Le texte écrit « début septembre 2026 », la page EDHEC écrit « début septembre », sans année. Piste non confirmée : une « Executive Summer School 2026 » annoncée les 8, 9 et 10 septembre 2026 à Paris par l'Augmented Lawyer Academy (`https://alll.legal/programme/executive-summer-school-2026/`, page inaccessible depuis l'environnement de l'agent). Confirmer l'année, ou la retirer du texte
+- [x] Tromans, « Will AI Change the Identity of Law Firm Partners? » (article) : `site/content/revue/recensions/quand-lia-transforme-lidentite-professionnelle-des-avocats.md`, `draft: false`, datée du 2026-11-12 (relue par Florian, 2026-11-11) ; source `../otf/traite/recension-tromans/`. Reste : traduction anglaise, mise en ligne (workflow Publication le 12 ou reconstruction du lundi)
+- [x] Waldron, « AI Governance Must Keep Pace with Legal Practice » (article sponsorisé par LexisNexis ; chiffres d'enquête non vérifiés, signalé dans `controles`) : `site/content/revue/recensions/gouverner-lia-juridique-preserver-le-jugement.md`, `draft: false`, datée du 2026-11-14 (relue par Florian, 2026-11-11) ; source `../otf/traite/recension-waldron/`. Reste : traduction anglaise, mise en ligne (workflow Publication le 14 ou reconstruction du lundi 16)
 - [ ] Bull, « The 4 Es Inhouse AI Framework » (article, entretien écrit) : brouillon `../otf/JERLASH_Labs_Critical_Review_Emily_Bull_4Es.md`
 - [ ] Legora, entretien avec Jacob Lauritzen (podcast vidéo, 67 min ; citations à minuter) : brouillon `../otf/JERLASH_Critical_Review_Legora_Jacob_Lauritzen.md`
-- [ ] Chaduteau (livre) : relue par Florian, publication prévue le 12 novembre 2026 ; front matter converti et traduit (2026-11-05). Reste : conflits d'intérêts, puis `draft: false` (FR et EN), et lancer le workflow Publication le 12 (la reconstruction automatique n'a lieu que le lundi)
+- [ ] Chaduteau (livre) : prête dans `main` depuis le 2026-11-07 (conflits d'intérêts, usage de l'IA et contrôles remplis le 2026-11-05 ; `draft: false` en FR et EN ; traduction à jour). Reste à Florian, le 12 novembre : lancer le workflow Publication (`workflow_dispatch`), la page étant datée du 12 et Hugo ne construisant pas les contenus futurs ; la reconstruction automatique n'a lieu que le lundi. Entrée `CHANGELOG.md` et projet de post LinkedIn préparés (FLO-17)
 - [ ] Traduction anglaise (`/traduire`) ; slug anglais de la collection à décider (`/en/review/recensions/` par défaut)
 - [ ] Publication : `draft: false` sur la collection et les recensions prêtes, `python scripts/verifier.py --publication`, `CHANGELOG.md`, post LinkedIn
 

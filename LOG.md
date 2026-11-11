@@ -10,6 +10,65 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-11 - Gouvernance de l'IA : les trois téléchargements (étape 3, FLO-74)
+Fait :
+- `outils/gouvernance-ia/telechargements/generer_telechargements.py` : construit le pack complet en zip, la charte modèle en .docx et le kit « petit cabinet » (les six éléments du niveau 1), en français et en anglais, à partir des pages de `site/content/outils/gouvernance-ia/` et du référentiel. Bibliothèque standard seule : le .docx est écrit en WordprocessingML, sans dépendance. Reproductible, sur le modèle de `scripts/empaqueter.py`.
+- Les quatre registres vides (CSV, point-virgule) sont produits à partir des colonnes du référentiel : la page « Traçabilité, incidents et formation » les annonçait sans qu'ils soient téléchargeables.
+- Accueil de la boîte à outils, FR et EN : section « Téléchargements » avec les trois fichiers. La construction est une étape de `scripts/verifier.py` ([3 bis]), gardée avec `--site-seul` : les deux workflows la reprennent sans être modifiés. Le jeton de l'agent n'a pas la portée `workflow` ; l'étape « Tableur » de `verifier.yml` et de `publier.yml`, devenue redondante, reste à retirer par Florian.
+- `outils/gouvernance-ia/CHANGELOG.md` (journal des versions de l'outil, demandé par l'étape 3) et `outils/gouvernance-ia/tests/` : 13 contrôles (reproductibilité octet par octet, dix pages, six éléments, formulaires vides, parties et XML du .docx, liens utilisables hors du site), repris par `scripts/verifier.py`.
+- Vérification complète lancée dans l'environnement de l'agent : `python scripts/verifier.py --exiger-hugo --publication` vert, 25/25, Hugo 0.148.2 extended compris.
+Décisions : ADR-034 (téléchargements reconstruits depuis les pages, non versionnés), au statut Proposée.
+Problèmes / points ouverts :
+- Ni Python ni Hugo ne sont installés dans l'environnement de l'agent. Les deux ont été téléchargés dans le dossier temporaire de l'exécution (CPython 3.12 autonome, Hugo extended 0.148.2) pour pouvoir construire et vérifier ; rien n'a été installé durablement. À trancher par Florian : installer Python et Hugo dans l'environnement de l'agent, ou garder ce contournement.
+- La charte .docx a été contrôlée par `python-docx` (parties, styles, trois tableaux, seize articles) et par l'analyse XML, mais n'a été ouverte ni dans Word ni dans LibreOffice, absents de l'environnement. `[À VÉRIFIER]`
+- Les deux documents de contexte de `99_SOURCES` restent hors du pack : les droits de redistribution n'ont pas pu être vérifiés, l'archive Proton étant hors dépôt et absente de la machine. `[À VÉRIFIER]`
+Prochaine étape : relecture de Florian sur la PR, puis étape 4 du circuit (rapports de vérification dans `outils/gouvernance-ia/verifications/`) et étape 5 (entrée dans `site/content/nouveautes/`).
+
+## 2026-11-11 - P19 : arbitrages de Florian après lecture
+Fait :
+- Report des réponses de Florian au dossier de lecture du ticket FLO-18 dans `projets/P19-recension-billion-fasterling.md` (§1, §2, §4, §6, §7, §9, §10) et dans `BACKLOG.md`, section « recensions ».
+- Aucun fichier de `site/` modifié : la recension, sa traduction anglaise et les cartes P19 de Recherche restent dans l'état du 2026-11-07. La traduction anglaise reste donc à jour, le français n'ayant pas bougé.
+- Année de la Summer School : nouvelle recherche sur le web. La page EDHEC, relue le 2026-11-11, écrit toujours « début septembre » sans année. Une « Executive Summer School 2026 » de l'EDHEC Augmented Law Institute est annoncée les 8, 9 et 10 septembre 2026 à Paris par l'Augmented Lawyer Academy, mais la page (`https://alll.legal/programme/executive-summer-school-2026/`) répond 404 depuis l'environnement de l'agent : l'indication vient des résultats de recherche, pas de la source. `[À VÉRIFIER]`
+Décisions : trois arbitrages de Florian, le 2026-11-11.
+- Les trois réserves de la Discussion (« biais », « un bout de code », « hallucination ») sont gardées telles quelles. Le texte publié n'est pas modifié.
+- La page reste en ligne : Florian l'a relue avant sa mise en ligne du 2026-11-07, ce qui satisfait la première case du §8 de `docs/politique-publication.md`. Rien à dépublier.
+- Les déclarations ne sont pas obligatoires. `controles` et `conflits_interets` sont de toute façon facultatifs pour une recension (§9 de la politique, choix du 2026-11-05) ; `usage_ia` reste sans les vérifications humaines qu'énumère le §5.
+Problèmes / points ouverts :
+- La réponse « oui » portait sur une question à trois branches (garder, atténuer, retirer) posée pour chacune des trois réserves : elle est comprise comme « gardées telles quelles ». Si elle visait une atténuation ou un retrait, la passe reste à faire.
+- Les résumés des cartes `site/content/recherche/projets/p19.md` et `p19.en.md` annoncent une « hypothèse à éprouver dans le programme » que le texte publié ne formule pas. À trancher par Florian : corriger les deux résumés, ou écrire l'hypothèse. Les cartes n'ont pas été touchées.
+- L'année de la Summer School, seule question du dossier restée sans réponse.
+- ADR-027 (collection Recensions) est toujours au statut « proposée ».
+- `python scripts/verifier.py` et `hugo` ne sont pas lançables depuis l'environnement de l'agent (ni Python ni Hugo installés) : aucun contrôle de construction. Aucun fichier du site n'est touché par cette session. `[À VÉRIFIER]`
+- Point de forme, pour la prochaine passe sur le français : le titre « ## Intérêt pour les juristes » de la recension se termine par une espace. Non corrigé ici, pour ne pas rendre la traduction anglaise obsolète pour une espace.
+Prochaine étape : réponse de Florian sur l'hypothèse H1 et sur l'année. Le ticket FLO-18 attend sa validation ; l'agent ne le ferme pas.
+
+## 2026-11-11 - Recension Chaduteau : contrôle avant la publication du 12
+Fait :
+- État réel contrôlé dans le dépôt : `site/content/revue/recensions/lintelligence-artificielle-transforme-t-elle-le-juriste.md` et son `.en.md` sont en `draft: false`, datés du 2026-11-12, et déjà dans `main` depuis la PR #12 (2026-11-07). Conflits d'intérêts (« aucun » / « none »), usage de l'IA et contrôles remplis par Florian le 2026-11-05 : aucun marqueur `[À COMPLÉTER]` dans la recension.
+- Traduction à jour : l'empreinte `traduction.source` de la version anglaise correspond au fichier français courant. Collection `_index.md` et `_index.en.md` en `draft: false`.
+- Aucun marqueur bloquant dans ce qui sera publié : les seuls `[À COMPLÉTER]` restants sont dans `site/content/guides/`, tous en `draft: true`, donc ignorés par `verifier_marqueurs`. La dernière Publication (exécution planifiée du 2026-11-09) est verte.
+- `CHANGELOG.md` : entrée du 2026-11-12. `BACKLOG.md` : ligne Chaduteau remise à l'état réel.
+Décisions : aucune.
+Problèmes / points ouverts :
+- `python scripts/verifier.py --publication` et `hugo` n'ont pas pu être lancés depuis l'environnement de l'agent (ni Python ni Hugo n'y sont installés) : contrôle du rendu et du hreflang non exécuté localement. La vérification de publication est de toute façon rejouée par `publier.yml` avant la construction. `[À VÉRIFIER]`
+- Les adresses FR et EN sont déduites de `hugo.toml` (permaliens anglais, `slug` de la traduction), non d'une construction. `[À VÉRIFIER]`
+Prochaine étape : le 12 novembre, Florian lance le workflow Publication (`workflow_dispatch`) ; la page est datée du 12 et Hugo ne construit pas les contenus futurs. Post LinkedIn à déposer en idée par l'agent Réseaux, après validation du texte par Florian.
+
+## 2026-11-11 - Recension P19 (Billion et Fasterling) : préparation de la lecture de Florian
+Fait :
+- Dossier de lecture déposé sur le ticket Paperclip FLO-18 : `[À VÉRIFIER]` en tête, les trois réserves de la Discussion reformulées en questions courtes, les passages qui engagent Florian et qu'il doit faire siens, les déclarations à remplir. Les réserves ne sont ni reprises ni réécrites : elles sont à trancher par lui.
+- Citations recontrôlées sur la page EDHEC Vox (consultée le 2026-11-11) : URL valide, `datePublished` 2026-10-09 conforme au front matter, les trois titres de section cités fidèlement sous forme abrégée, « un bout de code » bien attribué à Arnaud Billion (section « compagnon »), distinction entre biais technique et discrimination injustifiée bien attribuée à Björn Fasterling. La page porte une date de modification du 2026-10-13, postérieure au `consulte_le: 2026-11-02` ; aucune divergence relevée.
+- État réel contrôlé : la recension est en `draft: false` en FR et en EN et se trouve dans `main` depuis le 2026-11-07 ; elle est donc en ligne, alors que le §8 de `docs/politique-publication.md` demande la lecture de Florian avant publication. La traduction anglaise est à jour (empreinte `traduction.source` égale au fichier français courant) : rien à retraduire tant que le français ne bouge pas.
+- `projets/P19-recension-billion-fasterling.md` et `BACKLOG.md` remis à l'état réel.
+Décisions : aucune. Le statut de publication de P19 pendant la lecture est laissé à Florian, comme l'écart relevé par le COO sur les actualités déjà dans `main`.
+Problèmes / points ouverts :
+- Le texte date la Summer School de « début septembre 2026 » ; la page ne donne pas l'année. `[À VÉRIFIER]`
+- `conflits_interets` et `controles` absents du front matter (facultatifs pour une recension, §9 de la politique) ; `usage_ia` ne déclare pas les vérifications humaines, que le §5 exige. La page étant publiée, un marqueur `[À COMPLÉTER]` y bloquerait la prochaine publication : ces champs sont à remplir directement.
+- Repasser P19 en brouillon suppose de retirer aussi le champ `lien` des cartes `site/content/recherche/projets/p19.md` et `p19.en.md`, sans quoi le contrôle « liens internes valides » échoue.
+- ADR-027 (collection Recensions) reste au statut « proposée ».
+- `python scripts/verifier.py` et `hugo` n'ont pas pu être lancés depuis l'environnement de l'agent (ni Python ni Hugo n'y sont installés) : aucun contrôle de construction ni de rendu. `[À VÉRIFIER]`
+Prochaine étape : Florian lit P19, tranche les trois réserves, décide du statut de publication pendant sa lecture et remplit les déclarations. La reprise dans sa voix et la mise à jour de la traduction anglaise suivront ses arbitrages.
+
 ## 2026-11-07 - Sommaire actif et parcours de la boîte à outils
 Fait :
 - `site/static/js/sommaire.js` : surbrillance (`aria-current="location"`) de l'intertitre en cours dans le sommaire latéral, pour la Revue et les toolkits ; la colonne défile pour garder le lien visible. Ajouté à `baseof.html` et à `SCRIPTS_ADMIS`.
@@ -339,3 +398,19 @@ Florian arrête H1 « Autonomie & IA » (`/recherche/autonomie-ia/`, EN « Agenc
 
 ---
 
+
+## JALON — 2026-11-11 (P14 : état réel)
+
+**État des lieux du projet de novembre** (ticket FLO-20), relevé sur `main` au commit `69c7c29`. Rien de publié, rien de fusionné.
+
+**Contrôlé.** Marqueurs : aucun `[À VÉRIFIER]` / `[À COMPLÉTER]` / `[À DÉCIDER]` / `[À VALIDER]` dans les pages non brouillon de `site/content/` et `site/static/` (contrôle [5] de `verifier.py` rejoué à la main) ; les marqueurs des pages du Toolkit ont été retirés le 2026-11-06 (`e69c68b`) : il y en avait 16 dans les pages françaises, et non 21 comme l'indiquait le backlog. Traductions : les 60 pages françaises ont une traduction anglaise à jour, aucune obsolète, aucune non marquée, aucun écart de `draft` (contrôle de `traductions.py` rejoué à la main par comparaison des empreintes `git hash-object`). Règlement IA : réduit à un rappel sur les quatre pages concernées, articles 14 et 26 sortis des modules. RGPD : articles 9, 10, 28, 33, 34 et 37 à 39 cités, chacun sur son objet.
+
+**Relevé.** `sources-et-versions.md` ligne 23 affirme « Le règlement a été modifié en 2026 » sans référence ni date, sur une page publiée. Les trois passages à reprendre de « Pourquoi les chartes échouent » sont désignés par des numéros de lignes qui ne pointent plus sur du texte. ADR-030 et ADR-031 sont au statut « Proposée » alors que ce qu'elles décrivent est en ligne.
+
+**Non fait, faute d'outil.** Ni Python ni Hugo sur la machine de l'agent : `scripts/verifier.py --publication` n'a pas pu être lancé, et les téléchargements (zip, charte en .docx, kit « petit cabinet ») n'ont pas pu être construits ni vérifiés. Dernier critère d'acceptation de P14 encore ouvert.
+
+**Fait.** Section « Maintenant : novembre 2026 » du backlog réécrite sur l'état réel : tâches terminées retirées, reste séparé en « sans Florian » et « attend Florian ».
+
+**Prochaine étape :** Florian tranche les points listés ; les téléchargements demandent une machine avec Python 3.12.
+
+---
