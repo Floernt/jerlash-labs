@@ -82,6 +82,21 @@ def verifier_archive() -> None:
     etape(r.returncode == 0, "archive reproductible conforme à la fiche du site (version, taille, SHA-256)")
 
 
+def verifier_telechargements() -> None:
+    """Téléchargements de Gouvernance de l'IA : reconstruits avant la construction du site (ADR-034).
+
+    L'étape tourne aussi avec --site-seul : la publication en a besoin, les fichiers n'étant pas
+    versionnés (site/static/telechargements/ est ignoré par git).
+    """
+    print("\n[3 bis] Téléchargements de Gouvernance de l'IA (ADR-034)")
+    r = lancer([sys.executable, os.path.join("outils", "gouvernance-ia", "telechargements",
+                                             "generer_telechargements.py"), "--copier-site"])
+    if r.returncode:
+        print(r.stdout.strip() + "\n" + r.stderr.strip())
+    etape(r.returncode == 0, f"{len(r.stdout.strip().splitlines()) - 1} fichier(s) construits depuis les pages"
+          if r.returncode == 0 else "construction des téléchargements")
+
+
 class Collecteur(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -215,6 +230,7 @@ def main(argv=None) -> int:
         verifier_outils()
         verifier_composants()
         verifier_archive()
+    verifier_telechargements()
     verifier_site(args.exiger_hugo)
     verifier_typographie()
     verifier_visuels()

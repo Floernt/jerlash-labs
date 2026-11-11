@@ -15,7 +15,7 @@ controles: "Working version, with no external review or evaluation."
 cascade:
   type: "toolkit"
 traduction:
-  source: "ac08d66378f7bed3a133ec0cb7947a048383519c"
+  source: "85dcacb96a3733b426816f5efa328ed65b57df15"
 ---
 
 AI use charters often repeat the same instructions: “use secure tools”, “have it reviewed”, “do not copy and paste”. These instructions are sound, but they cannot always be checked. They say neither on what conditions a tool was authorised, nor what the person reviewing must be able to do, nor how to show that a check actually took place.
@@ -66,6 +66,16 @@ At every level, the charter comes last: adopted from the outset, it would remain
 ## The spreadsheet for levels 2 and 3
 
 At levels 2 and 3, the sheets and matrices quickly become hard to keep in a text document. The [AI governance spreadsheet](/telechargements/gouvernance-ia-matrices-0.3.xlsx) (Excel format, in French) brings them together: the inventory of tools with their compliance sheet, the calculation of the level of each tool and of the organisation, the tools × data and tools × uses matrices, the roles and, for level 3, the eliminatory conditions, the scoring grid and the registers. Yellow cells are to be filled in, grey cells are calculated, and the drop-down lists are set in the “Paramètres” tab. The file contains only one fictitious example row. It is also available, with the script that generates it, in the [project repository](https://github.com/Floernt/jerlash-labs/tree/main/outils/gouvernance-ia).
+
+## Downloads
+
+Three files take the toolkit off the site. They are rebuilt from these pages at each publication, so their content cannot drift from what you read here. They contain no data: the forms and registers are empty and the examples are fictitious.
+
+| File | What it contains |
+| --- | --- |
+| [The full pack, in zip](/telechargements/ai-governance-0.3.zip) | The ten pages in Markdown, the small firm kit, the charter in .docx, the spreadsheet, the reference file and the empty registers |
+| [The model charter, in .docx](/telechargements/ai-governance-model-charter-0.3.docx) | The sixteen articles, to be adapted, completed, then adopted by the competent body |
+| [The small firm kit, in zip](/telechargements/ai-governance-small-firm-kit-0.3.zip) | The six elements of level 1: the appointment of the AI lead, the inventory of tools, the compliance sheet, the rule for checking outputs, the incident channel and the short training |
 
 ## What the toolkit contains
 
