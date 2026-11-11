@@ -398,3 +398,19 @@ Florian arrête H1 « Autonomie & IA » (`/recherche/autonomie-ia/`, EN « Agenc
 
 ---
 
+
+## JALON — 2026-11-11 (P14 : état réel)
+
+**État des lieux du projet de novembre** (ticket FLO-20), relevé sur `main` au commit `69c7c29`. Rien de publié, rien de fusionné.
+
+**Contrôlé.** Marqueurs : aucun `[À VÉRIFIER]` / `[À COMPLÉTER]` / `[À DÉCIDER]` / `[À VALIDER]` dans les pages non brouillon de `site/content/` et `site/static/` (contrôle [5] de `verifier.py` rejoué à la main) ; les marqueurs des pages du Toolkit ont été retirés le 2026-11-06 (`e69c68b`) : il y en avait 16 dans les pages françaises, et non 21 comme l'indiquait le backlog. Traductions : les 60 pages françaises ont une traduction anglaise à jour, aucune obsolète, aucune non marquée, aucun écart de `draft` (contrôle de `traductions.py` rejoué à la main par comparaison des empreintes `git hash-object`). Règlement IA : réduit à un rappel sur les quatre pages concernées, articles 14 et 26 sortis des modules. RGPD : articles 9, 10, 28, 33, 34 et 37 à 39 cités, chacun sur son objet.
+
+**Relevé.** `sources-et-versions.md` ligne 23 affirme « Le règlement a été modifié en 2026 » sans référence ni date, sur une page publiée. Les trois passages à reprendre de « Pourquoi les chartes échouent » sont désignés par des numéros de lignes qui ne pointent plus sur du texte. ADR-030 et ADR-031 sont au statut « Proposée » alors que ce qu'elles décrivent est en ligne.
+
+**Non fait, faute d'outil.** Ni Python ni Hugo sur la machine de l'agent : `scripts/verifier.py --publication` n'a pas pu être lancé, et les téléchargements (zip, charte en .docx, kit « petit cabinet ») n'ont pas pu être construits ni vérifiés. Dernier critère d'acceptation de P14 encore ouvert.
+
+**Fait.** Section « Maintenant : novembre 2026 » du backlog réécrite sur l'état réel : tâches terminées retirées, reste séparé en « sans Florian » et « attend Florian ».
+
+**Prochaine étape :** Florian tranche les points listés ; les téléchargements demandent une machine avec Python 3.12.
+
+---
