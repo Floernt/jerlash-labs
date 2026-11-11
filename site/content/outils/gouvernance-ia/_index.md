@@ -63,6 +63,16 @@ Le niveau n'est pas acquis une fois pour toutes. Un nouvel outil, un nouveau con
 
 Aux niveaux 2 et 3, les fiches et les matrices deviennent vite difficiles à tenir dans un document texte. Le [tableur Gouvernance de l'IA](/telechargements/gouvernance-ia-matrices-0.3.xlsx) (format Excel) les rassemble : l'inventaire des outils avec leur fiche de conformité, le calcul du niveau de chaque outil et de l'organisation, les matrices outils × données et outils × usages, les rôles, puis, pour le niveau 3, les conditions éliminatoires, la grille de notation et les registres. Les cellules jaunes se remplissent, les grises se calculent, et les listes de choix se règlent dans l'onglet « Paramètres ». Le fichier ne contient qu'une ligne d'exemple fictive. Il est aussi disponible, avec le script qui le génère, dans le [dépôt du projet](https://github.com/Floernt/jerlash-labs/tree/main/outils/gouvernance-ia).
 
+## Téléchargements
+
+Trois fichiers reprennent la boîte à outils hors du site. Ils sont reconstruits à partir de ces pages à chaque publication : leur contenu ne peut donc pas s'écarter de ce que vous lisez ici. Ils ne contiennent aucune donnée, les formulaires et les registres sont vides, et les exemples sont fictifs.
+
+| Fichier | Ce qu'il contient |
+| --- | --- |
+| [Le pack complet, en zip](/telechargements/gouvernance-ia-0.3.zip) | Les dix pages en Markdown, le kit « petit cabinet », la charte en .docx, le tableur, le référentiel et les registres vides |
+| [La charte modèle, en .docx](/telechargements/gouvernance-ia-charte-modele-0.3.docx) | Les seize articles, à adapter, à compléter, puis à faire adopter par l'organe compétent |
+| [Le kit « petit cabinet », en zip](/telechargements/gouvernance-ia-kit-petit-cabinet-0.3.zip) | Les six éléments du niveau 1 : la désignation du référent, l'inventaire des outils, la fiche de conformité, la règle de vérification des productions, le canal d'incident et la formation courte |
+
 ## Ce que contient la boîte à outils
 
 | Module | Contenu | À partir du niveau |

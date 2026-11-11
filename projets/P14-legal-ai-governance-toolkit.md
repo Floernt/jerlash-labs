@@ -7,7 +7,7 @@ priorité: haute
 source: archive Proton du 2026-11-03, JERLASH_Labs_Legal_AI_Governance_Toolkit v0.1.0 (hors dépôt : ../sources-proton/2026-11-03/)
 licence_source: aucune licence concédée par la v0.1 ; publication sous CC BY-NC 4.0, éditeur jerlash.labs (ADR-026)
 dépend_de: [ADR-024]
-mise_a_jour: 2026-11-06
+mise_a_jour: 2026-11-11
 ---
 
 # Legal AI Governance Toolkit
@@ -47,7 +47,9 @@ Décision de Florian : la profondeur de la gouvernance dépend des outils en pla
 
 ## 5. Approche technique pressentie
 
-Pages Hugo dans `site/content/outils/legal-ai-governance-toolkit/`, avec une sous-page par module. Les fichiers à télécharger sont produits de façon reproductible, sur le modèle de `scripts/empaqueter.py`, et la charte .docx par la skill docx. Les CSV sont livrés tels quels, sans aucune donnée.
+Pages Hugo dans `site/content/outils/legal-ai-governance-toolkit/`, avec une sous-page par module. Les fichiers à télécharger sont produits de façon reproductible, sur le modèle de `scripts/empaqueter.py`. Les CSV sont livrés tels quels, sans aucune donnée.
+
+Fait le 2026-11-11 (ADR-034) : `outils/gouvernance-ia/telechargements/generer_telechargements.py` construit le pack, la charte .docx et le kit à partir des pages du site, en français et en anglais, avec la bibliothèque standard seule — le .docx est écrit directement en WordprocessingML, sans la skill docx. Les fichiers ne sont pas versionnés : `scripts/verifier.py` les reconstruit avant la vérification du site, en local comme dans les deux workflows.
 
 ## 6. Contraintes et risques
 
@@ -67,7 +69,7 @@ Licence : CC BY-NC 4.0 (ADR-026). Vérifier les droits sur les deux documents de
 - [x] Toolkit lu en entier par Florian, qui y adhère
 - [x] Points juridiques vérifiés et datés, ou marqués
 - [x] D01 (éditeur : jerlash.labs) et D02 (licence : CC BY-NC 4.0) tranchés (ADR-026)
-- [ ] Téléchargements reproductibles, sans données
+- [x] Téléchargements reproductibles, sans données (2026-11-11, ADR-034 ; contrôles dans `outils/gouvernance-ia/tests/` : mêmes octets d'une construction à l'autre, formulaires et registres vides. Restent à la main de Florian : l'ouverture de la charte .docx dans Word et les droits sur les deux documents de `99_SOURCES`, exclus du pack)
 - [x] `python scripts/verifier.py --publication` vert
 - [x] Version anglaise à jour
 

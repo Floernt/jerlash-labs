@@ -10,6 +10,20 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-11 - Gouvernance de l'IA : les trois téléchargements (étape 3, FLO-74)
+Fait :
+- `outils/gouvernance-ia/telechargements/generer_telechargements.py` : construit le pack complet en zip, la charte modèle en .docx et le kit « petit cabinet » (les six éléments du niveau 1), en français et en anglais, à partir des pages de `site/content/outils/gouvernance-ia/` et du référentiel. Bibliothèque standard seule : le .docx est écrit en WordprocessingML, sans dépendance. Reproductible, sur le modèle de `scripts/empaqueter.py`.
+- Les quatre registres vides (CSV, point-virgule) sont produits à partir des colonnes du référentiel : la page « Traçabilité, incidents et formation » les annonçait sans qu'ils soient téléchargeables.
+- Accueil de la boîte à outils, FR et EN : section « Téléchargements » avec les trois fichiers. La construction est une étape de `scripts/verifier.py` ([3 bis]), gardée avec `--site-seul` : les deux workflows la reprennent sans être modifiés. Le jeton de l'agent n'a pas la portée `workflow` ; l'étape « Tableur » de `verifier.yml` et de `publier.yml`, devenue redondante, reste à retirer par Florian.
+- `outils/gouvernance-ia/CHANGELOG.md` (journal des versions de l'outil, demandé par l'étape 3) et `outils/gouvernance-ia/tests/` : 13 contrôles (reproductibilité octet par octet, dix pages, six éléments, formulaires vides, parties et XML du .docx, liens utilisables hors du site), repris par `scripts/verifier.py`.
+- Vérification complète lancée dans l'environnement de l'agent : `python scripts/verifier.py --exiger-hugo --publication` vert, 25/25, Hugo 0.148.2 extended compris.
+Décisions : ADR-034 (téléchargements reconstruits depuis les pages, non versionnés), au statut Proposée.
+Problèmes / points ouverts :
+- Ni Python ni Hugo ne sont installés dans l'environnement de l'agent. Les deux ont été téléchargés dans le dossier temporaire de l'exécution (CPython 3.12 autonome, Hugo extended 0.148.2) pour pouvoir construire et vérifier ; rien n'a été installé durablement. À trancher par Florian : installer Python et Hugo dans l'environnement de l'agent, ou garder ce contournement.
+- La charte .docx a été contrôlée par `python-docx` (parties, styles, trois tableaux, seize articles) et par l'analyse XML, mais n'a été ouverte ni dans Word ni dans LibreOffice, absents de l'environnement. `[À VÉRIFIER]`
+- Les deux documents de contexte de `99_SOURCES` restent hors du pack : les droits de redistribution n'ont pas pu être vérifiés, l'archive Proton étant hors dépôt et absente de la machine. `[À VÉRIFIER]`
+Prochaine étape : relecture de Florian sur la PR, puis étape 4 du circuit (rapports de vérification dans `outils/gouvernance-ia/verifications/`) et étape 5 (entrée dans `site/content/nouveautes/`).
+
 ## 2026-11-11 - Recension Chaduteau : contrôle avant la publication du 12
 Fait :
 - État réel contrôlé dans le dépôt : `site/content/revue/recensions/lintelligence-artificielle-transforme-t-elle-le-juriste.md` et son `.en.md` sont en `draft: false`, datés du 2026-11-12, et déjà dans `main` depuis la PR #12 (2026-11-07). Conflits d'intérêts (« aucun » / « none »), usage de l'IA et contrôles remplis par Florian le 2026-11-05 : aucun marqueur `[À COMPLÉTER]` dans la recension.
