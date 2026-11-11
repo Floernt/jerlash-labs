@@ -24,6 +24,24 @@ Problèmes / points ouverts :
 - Les deux documents de contexte de `99_SOURCES` restent hors du pack : les droits de redistribution n'ont pas pu être vérifiés, l'archive Proton étant hors dépôt et absente de la machine. `[À VÉRIFIER]`
 Prochaine étape : relecture de Florian sur la PR, puis étape 4 du circuit (rapports de vérification dans `outils/gouvernance-ia/verifications/`) et étape 5 (entrée dans `site/content/nouveautes/`).
 
+## 2026-11-11 - P19 : arbitrages de Florian après lecture
+Fait :
+- Report des réponses de Florian au dossier de lecture du ticket FLO-18 dans `projets/P19-recension-billion-fasterling.md` (§1, §2, §4, §6, §7, §9, §10) et dans `BACKLOG.md`, section « recensions ».
+- Aucun fichier de `site/` modifié : la recension, sa traduction anglaise et les cartes P19 de Recherche restent dans l'état du 2026-11-07. La traduction anglaise reste donc à jour, le français n'ayant pas bougé.
+- Année de la Summer School : nouvelle recherche sur le web. La page EDHEC, relue le 2026-11-11, écrit toujours « début septembre » sans année. Une « Executive Summer School 2026 » de l'EDHEC Augmented Law Institute est annoncée les 8, 9 et 10 septembre 2026 à Paris par l'Augmented Lawyer Academy, mais la page (`https://alll.legal/programme/executive-summer-school-2026/`) répond 404 depuis l'environnement de l'agent : l'indication vient des résultats de recherche, pas de la source. `[À VÉRIFIER]`
+Décisions : trois arbitrages de Florian, le 2026-11-11.
+- Les trois réserves de la Discussion (« biais », « un bout de code », « hallucination ») sont gardées telles quelles. Le texte publié n'est pas modifié.
+- La page reste en ligne : Florian l'a relue avant sa mise en ligne du 2026-11-07, ce qui satisfait la première case du §8 de `docs/politique-publication.md`. Rien à dépublier.
+- Les déclarations ne sont pas obligatoires. `controles` et `conflits_interets` sont de toute façon facultatifs pour une recension (§9 de la politique, choix du 2026-11-05) ; `usage_ia` reste sans les vérifications humaines qu'énumère le §5.
+Problèmes / points ouverts :
+- La réponse « oui » portait sur une question à trois branches (garder, atténuer, retirer) posée pour chacune des trois réserves : elle est comprise comme « gardées telles quelles ». Si elle visait une atténuation ou un retrait, la passe reste à faire.
+- Les résumés des cartes `site/content/recherche/projets/p19.md` et `p19.en.md` annoncent une « hypothèse à éprouver dans le programme » que le texte publié ne formule pas. À trancher par Florian : corriger les deux résumés, ou écrire l'hypothèse. Les cartes n'ont pas été touchées.
+- L'année de la Summer School, seule question du dossier restée sans réponse.
+- ADR-027 (collection Recensions) est toujours au statut « proposée ».
+- `python scripts/verifier.py` et `hugo` ne sont pas lançables depuis l'environnement de l'agent (ni Python ni Hugo installés) : aucun contrôle de construction. Aucun fichier du site n'est touché par cette session. `[À VÉRIFIER]`
+- Point de forme, pour la prochaine passe sur le français : le titre « ## Intérêt pour les juristes » de la recension se termine par une espace. Non corrigé ici, pour ne pas rendre la traduction anglaise obsolète pour une espace.
+Prochaine étape : réponse de Florian sur l'hypothèse H1 et sur l'année. Le ticket FLO-18 attend sa validation ; l'agent ne le ferme pas.
+
 ## 2026-11-11 - Recension Chaduteau : contrôle avant la publication du 12
 Fait :
 - État réel contrôlé dans le dépôt : `site/content/revue/recensions/lintelligence-artificielle-transforme-t-elle-le-juriste.md` et son `.en.md` sont en `draft: false`, datés du 2026-11-12, et déjà dans `main` depuis la PR #12 (2026-11-07). Conflits d'intérêts (« aucun » / « none »), usage de l'IA et contrôles remplis par Florian le 2026-11-05 : aucun marqueur `[À COMPLÉTER]` dans la recension.
