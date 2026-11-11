@@ -2,12 +2,12 @@
 id: P14
 titre: Legal AI Governance Toolkit
 type: contenu (toolkit)
-statut: cadrage
+statut: prototype
 priorité: haute
 source: archive Proton du 2026-11-03, JERLASH_Labs_Legal_AI_Governance_Toolkit v0.1.0 (hors dépôt : ../sources-proton/2026-11-03/)
 licence_source: aucune licence concédée par la v0.1 ; publication sous CC BY-NC 4.0, éditeur jerlash.labs (ADR-026)
 dépend_de: [ADR-024]
-mise_a_jour: 2026-11-06
+mise_a_jour: 2026-11-11
 ---
 
 # Legal AI Governance Toolkit
