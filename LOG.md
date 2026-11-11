@@ -10,6 +10,21 @@ Problèmes / points ouverts :
 Prochaine étape :
 ```
 
+## 2026-11-11 - Recension P19 (Billion et Fasterling) : préparation de la lecture de Florian
+Fait :
+- Dossier de lecture déposé sur le ticket Paperclip FLO-18 : `[À VÉRIFIER]` en tête, les trois réserves de la Discussion reformulées en questions courtes, les passages qui engagent Florian et qu'il doit faire siens, les déclarations à remplir. Les réserves ne sont ni reprises ni réécrites : elles sont à trancher par lui.
+- Citations recontrôlées sur la page EDHEC Vox (consultée le 2026-11-11) : URL valide, `datePublished` 2026-10-09 conforme au front matter, les trois titres de section cités fidèlement sous forme abrégée, « un bout de code » bien attribué à Arnaud Billion (section « compagnon »), distinction entre biais technique et discrimination injustifiée bien attribuée à Björn Fasterling. La page porte une date de modification du 2026-10-13, postérieure au `consulte_le: 2026-11-02` ; aucune divergence relevée.
+- État réel contrôlé : la recension est en `draft: false` en FR et en EN et se trouve dans `main` depuis le 2026-11-07 ; elle est donc en ligne, alors que le §8 de `docs/politique-publication.md` demande la lecture de Florian avant publication. La traduction anglaise est à jour (empreinte `traduction.source` égale au fichier français courant) : rien à retraduire tant que le français ne bouge pas.
+- `projets/P19-recension-billion-fasterling.md` et `BACKLOG.md` remis à l'état réel.
+Décisions : aucune. Le statut de publication de P19 pendant la lecture est laissé à Florian, comme l'écart relevé par le COO sur les actualités déjà dans `main`.
+Problèmes / points ouverts :
+- Le texte date la Summer School de « début septembre 2026 » ; la page ne donne pas l'année. `[À VÉRIFIER]`
+- `conflits_interets` et `controles` absents du front matter (facultatifs pour une recension, §9 de la politique) ; `usage_ia` ne déclare pas les vérifications humaines, que le §5 exige. La page étant publiée, un marqueur `[À COMPLÉTER]` y bloquerait la prochaine publication : ces champs sont à remplir directement.
+- Repasser P19 en brouillon suppose de retirer aussi le champ `lien` des cartes `site/content/recherche/projets/p19.md` et `p19.en.md`, sans quoi le contrôle « liens internes valides » échoue.
+- ADR-027 (collection Recensions) reste au statut « proposée ».
+- `python scripts/verifier.py` et `hugo` n'ont pas pu être lancés depuis l'environnement de l'agent (ni Python ni Hugo n'y sont installés) : aucun contrôle de construction ni de rendu. `[À VÉRIFIER]`
+Prochaine étape : Florian lit P19, tranche les trois réserves, décide du statut de publication pendant sa lecture et remplit les déclarations. La reprise dans sa voix et la mise à jour de la traduction anglaise suivront ses arbitrages.
+
 ## 2026-11-07 - Sommaire actif et parcours de la boîte à outils
 Fait :
 - `site/static/js/sommaire.js` : surbrillance (`aria-current="location"`) de l'intertitre en cours dans le sommaire latéral, pour la Revue et les toolkits ; la colonne défile pour garder le lien visible. Ajouté à `baseof.html` et à `SCRIPTS_ADMIS`.
