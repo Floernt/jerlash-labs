@@ -93,4 +93,3 @@ A legal organisation cannot be content with keeping a human as the final validat
 
 AI does not only raise the question of what lawyers will do tomorrow. It questions how they will be able to keep building their skills and exercising their judgement in a profoundly transformed technical environment.
 
-**The real question is not only whether lawyers will agree to become someone else, but whether they will keep the ability to take part in defining what they become.**

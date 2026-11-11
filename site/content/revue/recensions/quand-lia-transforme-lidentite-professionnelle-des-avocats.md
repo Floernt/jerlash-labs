@@ -90,4 +90,3 @@ Une organisation juridique ne peut se contenter de conserver un humain comme val
 
 L'IA ne pose pas uniquement la question de ce que feront les avocats demain. Elle interroge la manière dont ils pourront continuer à construire leurs compétences et exercer leur jugement dans un environnement technique profondément transformé.
 
-**La véritable question n'est pas seulement de savoir si l'avocat acceptera de devenir quelqu'un d'autre, mais s'il conservera la capacité de participer à la définition de ce qu'il devient.**
