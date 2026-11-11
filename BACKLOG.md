@@ -25,7 +25,7 @@ Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer p
 - [ ] Waldron, « AI Governance Must Keep Pace with Legal Practice » (article sponsorisé par LexisNexis ; chiffres d'enquête à vérifier) : brouillon `../otf/JERLASH_Labs_Critical_Review_AI_Governance.md`
 - [ ] Bull, « The 4 Es Inhouse AI Framework » (article, entretien écrit) : brouillon `../otf/JERLASH_Labs_Critical_Review_Emily_Bull_4Es.md`
 - [ ] Legora, entretien avec Jacob Lauritzen (podcast vidéo, 67 min ; citations à minuter) : brouillon `../otf/JERLASH_Critical_Review_Legora_Jacob_Lauritzen.md`
-- [ ] Chaduteau (livre) : relue par Florian, publication prévue le 12 novembre 2026 ; front matter converti et traduit (2026-11-05). Reste : conflits d'intérêts, puis `draft: false` (FR et EN), et lancer le workflow Publication le 12 (la reconstruction automatique n'a lieu que le lundi)
+- [ ] Chaduteau (livre) : prête dans `main` depuis le 2026-11-07 (conflits d'intérêts, usage de l'IA et contrôles remplis le 2026-11-05 ; `draft: false` en FR et EN ; traduction à jour). Reste à Florian, le 12 novembre : lancer le workflow Publication (`workflow_dispatch`), la page étant datée du 12 et Hugo ne construisant pas les contenus futurs ; la reconstruction automatique n'a lieu que le lundi. Entrée `CHANGELOG.md` et projet de post LinkedIn préparés (FLO-17)
 - [ ] Traduction anglaise (`/traduire`) ; slug anglais de la collection à décider (`/en/review/recensions/` par défaut)
 - [ ] Publication : `draft: false` sur la collection et les recensions prêtes, `python scripts/verifier.py --publication`, `CHANGELOG.md`, post LinkedIn
 
