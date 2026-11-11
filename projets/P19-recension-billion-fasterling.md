@@ -66,6 +66,7 @@ Ouvertes, pour Florian :
 
 1. L'hypothèse H1 annoncée par les deux résumés et absente du texte (§2) : corriger les résumés, ou écrire l'hypothèse.
 2. L'année de la Summer School (§6), seule question du dossier restée sans réponse.
+3. Cosmétique, non bloquant : le plan du §9 de la politique se termine par « la référence », et la recension du podcast Colliot porte une section « Référence » finale que P19 n'a pas. La référence de l'œuvre s'affiche de toute façon sur la page, le partiel `site/layouts/_partials/oeuvre-recensee.html` la composant à partir du bloc `oeuvre` du front matter, qui est complet et vérifié. Rien à corriger tant que Florian ne veut pas la section en double.
 
 ## 10. Prochaine étape
 
