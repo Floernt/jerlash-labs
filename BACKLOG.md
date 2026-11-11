@@ -2,19 +2,26 @@
 
 Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer plutôt que construire. Un projet livré par mois, en version de travail publique, plus une piste parallèle « Outils » sans échéance. Le calendrier est indicatif : Florian peut en sortir à tout moment. Ce qui est livré passe dans `CHANGELOG.md`.
 
-## Maintenant : novembre 2026, P14 Legal AI Governance Toolkit v0.2 et refonte du site (ADR-024)
+## Maintenant : novembre 2026, P14 Gouvernance de l'IA v0.2 et refonte du site (ADR-024)
 
-- [ ] Étape 3 : serveur MCP local et commande Claude Code (fiche P20 à créer, ADR-030)
-- [ ] Rubrique Éthique (`ethique/`, page Précautions) et entrées Outils et Éthique du menu, à la publication du Toolkit
+État relevé sur le dépôt le 2026-11-11 (ticket FLO-20), à partir de `main` au commit `69c7c29`. Les dix pages de la boîte à outils sont publiées et traduites, et plus aucun marqueur ne subsiste dans ce qui sera publié. Reste, pour la publication de fin novembre : les téléchargements, la rubrique Éthique, l'étape 3, et des arbitrages de Florian.
+
+Reste à faire, sans Florian :
+
+- [ ] Téléchargements : zip reproductible, charte en .docx, kit « petit cabinet ». Rien n'est construit à ce jour ; seul le tableur existe. Dernier critère d'acceptation de P14 encore ouvert (§7 de la fiche). Modèle à suivre, celui du tableur : fichier produit par un script versionné sous `outils/gouvernance-ia/`, copié dans `site/static/telechargements/` par l'étape dédiée de `.github/workflows/publier.yml` (le dossier est ignoré par git), et lien depuis `_index.md` en français et en anglais. Le kit « petit cabinet » regroupe les six éléments du minimum opérationnel décrits dans `niveau-1.md`.
+- [ ] Rubrique Éthique : les quatre pages de `site/content/ethique/` (`_index` et `precautions`, FR et EN) sont en `draft: true`, et aucune entrée « Éthique » n'existe dans les menus de `site/hugo.toml`. L'entrée « Outils » / « Tools », elle, est en place depuis le 2026-11-06.
+- [ ] Étape 3 : serveur MCP local et commande Claude Code (fiche P20 à créer, ADR-030). Rien de commencé : pas de fiche `projets/P20-*.md`, pas de code.
+- [ ] `sources-et-versions.md` ligne 23 et sa traduction : « Le règlement a été modifié en 2026 » est affirmé sans référence ni date, sur une page déjà publiée. Le marqueur qui l'accompagnait, `[À VÉRIFIER : référence de l'acte modificatif, texte consolidé et date]`, a été retiré le 2026-11-06 sans que la vérification ait été faite ; la phrase, elle, est restée. Identifier l'acte modificatif et le citer, ou retirer la phrase. Remettre un marqueur n'est pas une option : il bloquerait la prochaine publication.
+- [ ] Vérification juridique belge : les cinq points listés par « Sources et versions » (déontologie du barreau, protection des données, information des clients, contrôle du personnel, propriété intellectuelle) n'ont pas été examinés. La page le dit, ce qui est honnête, mais le critère « vérification juridique » du calendrier reste ouvert.
+- [ ] Contrôle hreflang et plan du site, FR et EN (demande une construction Hugo).
+- [ ] `python scripts/verifier.py --publication` vert, publication, entrée dans `CHANGELOG.md`, post LinkedIn.
+
+Attend Florian :
+
 - [ ] Florian : trancher les points relevés à la conversion : charte qui vise « l'avocat » alors qu'elle s'adresse aussi aux directions juridiques (art. 2 et 8) ; « surveillance abusive » ambigu (données) ; champ « destination du système » ajouté à la fiche de cas d'usage ; phrase ajoutée sur les petits cabinets qui cumulent les rôles (gouvernance) ; noms d'axes alignés sur le référentiel ; contrôles « obligatoires » des agents présentés comme à préciser
-- [ ] Lever les 21 marqueurs `[À VÉRIFIER]` / `[À COMPLÉTER]` des pages du Toolkit (date d'arrêt du droit, articles RGPD, acte modificatif du règlement IA, déclaration d'usage de l'IA, contrôles faits)
-- [ ] Réduire le règlement IA à un rappel (haut risque = administration de la justice ; aucune déviation de la destination du système) ; vérifier le RGPD et le secret professionnel cités ; marquer ce qui ne peut pas l'être
-- [ ] Téléchargements : zip reproductible, charte en .docx, kit « petit cabinet »
-- [ ] Florian : lire tout le Toolkit (texte rédigé avec une IA, à faire sien avant publication). Relue : « Pourquoi les chartes échouent » (`draft: false`, 2026-11-03). Restent : gouvernance, données, homologation, supervision, opérations, charte, sources, présentation
-- [ ] Avant tout push sur `main` : ne pas publier « Pourquoi les chartes échouent » seule (page parente en brouillon, pas de traduction) ; remettre `draft: true` ou attendre la fin de la relecture
-- [ ] « Pourquoi les chartes échouent » : trois passages à reprendre (lignes 8, 31 et 33)
-- [ ] Traduction anglaise (`/traduire`) ; contrôle hreflang et plan du site FR et EN
-- [ ] `python scripts/verifier.py --publication` vert, publication, entrée dans `CHANGELOG.md`, post LinkedIn
+- [ ] Florian : valider ADR-030 (référentiel unique, tableur généré, serveur MCP local) et ADR-031 (ouverture de la rubrique Outils), toutes deux au statut « Proposée » alors que ce qu'elles décrivent est en ligne depuis le 2026-11-06
+- [ ] Florian : « Pourquoi les chartes échouent », trois passages à reprendre. Les numéros de lignes notés (8, 31 et 33) ne désignent plus de texte : la page a changé depuis. Passages à redésigner. `[À VÉRIFIER]`
+- [ ] Florian : lecture de la boîte à outils. Le journal du 2026-11-06 et le critère §7 de la fiche P14 indiquent que les neuf pages ont été relues et publiées ; cette tâche était restée ouverte au backlog. Confirmer qu'elle est close, ou dire quelles pages restent à faire siennes. `[À VÉRIFIER]`
 
 ## Maintenant : recensions (avancé de décembre à novembre par Florian, 2026-11-04)
 
