@@ -19,12 +19,12 @@ Depuis le 2026-11-11, le rôle `ops-factory` est tenu par l'agent jerlash (optio
 | P11 | Composant conversion | idée | | mesure installation et temps | architecte | 2026-10-31 |
 | P12 | Banc d'essai | cadrage | | F-DOCX-01, F-IDENT-01, F-DOSSIER-01, F-DEF-01 et F-CPCG-01 v1.0 livrés et branchés sur la CI, chacun avec un jeu de contrôle rédigé à part (sauf F-DOCX-01) | testeur | 2026-10-31 |
 | P13 | Guide plateformes open source | idée | après lancement | aucune | redacteur | 2026-10-31 |
-| P14 | Gouvernance de l'IA, Toolkit v0.2 (ADR-024, ADR-026, ADR-029) | prototype | | construire les téléchargements : zip reproductible, charte en .docx, kit « petit cabinet » (dernier critère ouvert du §7 de la fiche) | jerlash (ops-factory) | 2026-11-11 |
+| P14 | Gouvernance de l'IA, Toolkit v0.2 (ADR-024, ADR-026, ADR-029) | prototype | ADR-034 et ouverture de la charte .docx dans Word, à confirmer par Florian | étape 4 du circuit : rapports de vérification dans `outils/gouvernance-ia/verifications/` (téléchargements construits le 2026-11-11, FLO-74) | jerlash (ops-factory) | 2026-11-11 |
 | P15 | RP « L'humain dans la boucle » | idée | dépend de P14 | aucune avant avril 2027 | Florian | 2026-11-11 |
 | P16 | RP « Modèles discriminatifs et pratique juridique » | idée | | aucune avant février 2027 | Florian | 2026-11-11 |
 | P17 | RP « Tarification alternative des avocats » | idée | | aucune avant mars 2027 | Florian | 2026-11-11 |
 | P18 | Kit expérimental MCP (C0 à C3) | idée | code C3 à récupérer | décembre 2026 : demander le kit v0.2 complet, avec le code C3 | Florian | 2026-11-11 |
-| P19 | Recension Billion et Fasterling (ADR-027) | prototype | lecture et prise de position de Florian | Florian : trancher les trois réserves de la Discussion, puis reprise dans sa voix | Florian | 2026-11-11 |
+| P19 | Recension Billion et Fasterling (ADR-027) | prototype | hypothèse H1 annoncée par les cartes P19 et absente du texte ; année de la Summer School | Florian : corriger les résumés des cartes ou écrire l'hypothèse ; confirmer l'année (réserves gardées le 2026-11-11, FLO-18) | Florian | 2026-11-11 |
 | F01 | Méthode d'ingénierie | idée | ADR-009 | test open-pstack sur dépôt jetable | ops-factory | 2026-10-31 |
 | F02 | Revue UX | intégré | | aucune | ops-factory | 2026-10-31 |
 | F03 | Mémoire Factory | en essai | | utiliser la skill un mois | ops-factory | 2026-10-31 |
@@ -44,4 +44,4 @@ Le circuit demande que le parcours soit choisi et noté avant le développement 
 
 | ID | Parcours | Motif |
 |---|---|---|
-| P14 | standard `[À VÉRIFIER]` | contenu sans IA distante ni donnée de dossier, mais le projet livre un fichier produit par un script versionné (`outils/gouvernance-ia/tableur/generer_tableur.py`) et deux autres téléchargements restent à construire. Le parcours standard impose un rapport de test et un rapport de sécurité sur ces téléchargements. Le parcours léger suffirait si l'on ne retenait que les pages. Choix d'`ops-factory`, à confirmer par Florian. |
+| P14 | standard `[À VÉRIFIER]` | contenu sans IA distante ni donnée de dossier, mais le projet livre un fichier produit par un script versionné (`outils/gouvernance-ia/tableur/generer_tableur.py`) ainsi que le pack zip, la charte .docx et le kit « petit cabinet » (`outils/gouvernance-ia/telechargements/generer_telechargements.py`, FLO-74). Le parcours standard impose un rapport de test et un rapport de sécurité sur ces téléchargements. Le parcours léger suffirait si l'on ne retenait que les pages. Choix d'`ops-factory`, à confirmer par Florian. |

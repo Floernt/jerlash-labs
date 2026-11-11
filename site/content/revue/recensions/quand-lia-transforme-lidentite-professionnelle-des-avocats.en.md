@@ -20,7 +20,7 @@ licence: "CC BY 4.0"
 financement: "none"
 conflits_interets: "none"
 traduction:
-  source: "c74507da2fc11857cf68294c3baeae9e30b96739"
+  source: "485744cdfad5483c53fcd9c8a2de5cd00ab81326"
 ---
 
 ## Resistance to innovation that goes beyond technology
