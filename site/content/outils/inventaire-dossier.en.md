@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Case file inventory"
-description: "Draw up the register of the documents in a contractual case file: type, status, date, parties, authoritative version, and what should not be there. Rules on your computer, parties and links proposed by an AI model, with your key."
+description: "Inventory of the documents in a contractual case file: type, status, date, parties, authoritative version, and what should not be there."
 resume: "The tool goes through the case file of a contractual matter and produces a register of the documents in Word, with alerts: unsigned deed, document belonging to another client, illegible scan, registered letter without proof of posting."
 slug: "case-file-inventory"
 version: "0.2.0"
@@ -16,7 +16,7 @@ telechargement: "/telechargements/inventaire-dossier-0.2.0.zip"
 taille: "67 KB"
 sha256: "48f568e08fe71280806584ffee7dee62613685e8b96e5a1b8abf6e696e693617"
 traduction:
-  source: "9ec2d38050beae157547924ab2a7de9bb16ed4d1"
+  source: "d9e577d42e87d00867740d50391e286da84cbd74"
 ---
 
 ## What the tool does
@@ -107,11 +107,11 @@ The tool is free; the call to the model is billed by your provider, to your acco
 - The register contains the names of the documents and of the parties: it is as confidential as the case file.
 - Use a key dedicated to the tool, with a spending cap set with the provider.
 - The alerts do not tell you everything. A document without an alert is still a document to reread.
-- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/ai-tools-precautions-lawyers/) page.
 
 ## Installation
 
-The guide [Using a tool locally](/guides/utiliser-un-outil-en-local/) details each step. In short:
+The guide [Using a tool locally](/guides/installer-outil-python-windows/) details each step. In short:
 
 1. Install Python 3.10 or later.
 2. Download the archive above and check its SHA-256 fingerprint.

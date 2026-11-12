@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Précautions d'usage"
-description: "Ce qu'il faut savoir avant d'utiliser un outil de jerlash.labs dans un dossier : confidentialité, vérification des résultats, responsabilité."
+description: "Précautions d'usage des outils d'IA en cabinet : vérifier chaque résultat, savoir où vont les documents, travailler sur copie, responsabilité de l'avocat."
 ---
 
 Les outils publiés ici aident à faire un travail ; ils ne le font pas à votre place. Cette page rassemble les règles qui valent pour tous. Chaque fiche ajoute les précautions propres à l'outil.

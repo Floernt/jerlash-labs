@@ -1,6 +1,6 @@
 ---
 title: "Comprendre la facturation à l'usage"
-description: "Ce que coûte un appel à un modèle d'IA, comment l'estimer et comment éviter les mauvaises surprises."
+description: "Combien coûte une API d'IA : facturation au token en entrée et en sortie, estimer le coût d'un usage, suivre sa consommation, fixer plafonds et alertes."
 niveau: "debutant"
 derniere_verification: 2026-10-31
 draft: true

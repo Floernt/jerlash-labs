@@ -1,10 +1,10 @@
 ---
 draft: true
 title: "Precautions for use"
-slug: "precautions"
-description: "What you need to know before using a jerlash.labs tool in a case file: confidentiality, checking results, liability."
+slug: "ai-tools-precautions-lawyers"
+description: "Precautions for using AI tools in a law firm: check every result, know where documents go, work on a copy, the lawyer's responsibility."
 traduction:
-  source: "fa5c50cd81701f9c414037fcc3cb49072e497115"
+  source: "6f0fd013b7b1f1f7ea0ef4a45b7b31badf05514c"
 ---
 
 The tools published here help you do a piece of work; they do not do it for you. This page brings together the rules that apply to all of them. Each tool page adds the precautions specific to that tool.

@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Conditions particulières et générales"
-description: "Repérer, article par article, ce qui est propre à l'opération dans un contrat négocié : noms, adresses, montants, dates, identifiants. Pour séparer conditions particulières et générales, ou réutiliser le contrat comme modèle. Sur votre ordinateur, sans IA."
+description: "Séparer conditions particulières et conditions générales d'un contrat : noms, montants, dates et identifiants propres à l'opération, article par article."
 resume: "L'outil lit un contrat Word, repère dans chaque article les données propres à l'opération et propose un classement : conditions particulières, conditions générales, ou clause générale à épurer avant réutilisation."
 version: "0.1.0"
 statut: "test"
@@ -94,11 +94,11 @@ Gratuit : l'outil n'appelle aucun service payant.
 - Le rapport reprend les données de l'opération : il est aussi confidentiel que le contrat.
 - Avant de réutiliser un contrat comme modèle, relisez-le en entier, en-têtes et pieds de page compris. Le rapport dit où regarder en premier, pas où il est inutile de regarder.
 - Pour remplacer les noms dans un texte avant de le confier à une IA, utilisez plutôt l'outil [Pseudonymisation](/outils/pseudonymisation/).
-- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions-outils-ia-avocat/).
 
 ## Installation
 
-Le guide [Utiliser un outil en local](/guides/utiliser-un-outil-en-local/) détaille chaque étape. En bref :
+Le guide [Utiliser un outil en local](/guides/installer-outil-python-windows/) détaille chaque étape. En bref :
 
 1. Installez Python 3.10 ou plus récent.
 2. Téléchargez l'archive ci-dessus et vérifiez son empreinte SHA-256.

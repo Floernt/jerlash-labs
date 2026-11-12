@@ -1,13 +1,13 @@
 ---
 draft: true
 title: "Four quadrants to find where your firm plays"
-description: "Cross standardisation and stakes to position an automated service and choose its pricing logic."
+description: "Position and price an automated legal service: a standardisation and stakes matrix, four quadrants, from premium product to loss leader."
 resume: "Cross standardisation and stakes to position an automated service and choose its pricing logic."
 date: 2026-10-31
 weight: 20
-slug: "four-quadrants-to-position-service"
+slug: "pricing-automated-legal-services"
 traduction:
-  source: "72f68d6c3ca77eaeb94aa9bbf93c3d4d4e351b18"
+  source: "fa3c6b1daf48f6b13893dbc9e13248fe8efc55d6"
 ---
 
 The four-criteria grid (described in a previous article) gives each service a score. But a score does not tell you how to position the product, or at what price to offer it. For that, you need a second tool.

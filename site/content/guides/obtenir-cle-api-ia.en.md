@@ -1,12 +1,12 @@
 ---
 title: "Getting an API key and protecting it"
-description: "Create an API key with an AI provider, set a spending cap and store it without exposing it."
+description: "Get an API key from an AI provider, set a spending limit, keep it out of documents and emails, revoke it if it leaks."
 niveau: "debutant"
 derniere_verification: 2026-10-31
 draft: true
-slug: "getting-and-protecting-api-key"
+slug: "get-ai-api-key"
 traduction:
-  source: "19646947e6b285be5d6c92d75c63b92cc7e0ed3b"
+  source: "da769e3ef3ada2c805050354c5c8ff1592942532"
 ---
 
 Draft: outline of the guide. It will only be published once each fact has been checked against the providers' official documentation (ADR-010, point 4).

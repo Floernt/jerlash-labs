@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Quatre cases pour savoir où joue votre cabinet"
-description: "Croiser standardisation et enjeu pour positionner une prestation automatisée et choisir sa logique de tarification."
+description: "Positionner et tarifer une prestation juridique automatisée : une matrice standardisation et enjeu, quatre cases, du produit premium au produit d'appel."
 resume: "Croiser standardisation et enjeu pour positionner une prestation automatisée et choisir sa logique de tarification."
 date: 2026-10-31
 weight: 20

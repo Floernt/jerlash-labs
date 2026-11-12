@@ -1,13 +1,13 @@
 ---
 draft: true
 title: "To automate or not to automate? A four-criteria grid"
-description: "Four criteria scored from 1 to 3 to decide whether a legal service can be automated: perceived complexity, stakes, standardisation, urgency."
+description: "Automate a legal service? Four criteria scored from 1 to 3: complexity as perceived by the client, financial stakes, standardisation, real urgency."
 resume: "Four criteria scored from 1 to 3 to decide whether a legal service can be automated: perceived complexity, stakes, standardisation, urgency."
 date: 2026-10-31
 weight: 10
-slug: "four-criteria-grid"
+slug: "automating-legal-services-criteria"
 traduction:
-  source: "25f61c866cfc8bd2842e32c027bd1feafd5439b3"
+  source: "96eec9d864a6ff6af591fc2fff48e302b92450ba"
 ---
 
 Every week, an entrepreneurial lawyer asks me a variant of the same question: “Can I automate this?” The short answer is: sometimes yes, sometimes no, and the distinction is not always where you think it is.

@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Pseudonymisation"
-description: "Replace the names, addresses and Belgian identifiers in a text with markers before submitting it to an AI, then restore the names in the response. On your computer, without network."
+description: "Pseudonymise a document before sending it to an AI: names, addresses and Belgian identifiers replaced by markers, then restored in the response."
 resume: "The tool replaces the names, addresses and numbers in a text with markers such as [PERSONNE_1], has you reread the result, then puts the real names back into the AI's response. It does not find everything: rereading is mandatory."
 slug: "pseudonymisation"
 version: "0.1.0"
@@ -16,7 +16,7 @@ telechargement: "/telechargements/pseudonymisation-0.1.0.zip"
 taille: "33 KB"
 sha256: "c45a4a7ac7719a46e3dc81120959b546dab8538050c0e9c460e4a6cacc071af3"
 traduction:
-  source: "e5d56f7f8ba171e3163f987b52fe7248979ef629"
+  source: "35bd00e9d5d5664b01ae4ec62eb7d249f90ce0b9"
 ---
 
 ## What the tool does
@@ -95,11 +95,11 @@ Free: the tool calls no paid service.
 - Always reread the pseudonymised text in full before sending it.
 - Also remove what makes it possible to recognise a person without naming them: an unusual position, a described address, a precise date and place.
 - Keep the correspondence table out of shared folders, and delete it when you no longer need it.
-- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/ai-tools-precautions-lawyers/) page.
 
 ## Installation
 
-The guide [Using a tool locally](/guides/utiliser-un-outil-en-local/) details each step. In short:
+The guide [Using a tool locally](/guides/installer-outil-python-windows/) details each step. In short:
 
 1. Install Python 3.10 or later.
 2. Download the archive above and check its SHA-256 fingerprint.

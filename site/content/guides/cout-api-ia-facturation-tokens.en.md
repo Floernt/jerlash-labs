@@ -1,12 +1,12 @@
 ---
 title: "Understanding usage-based billing"
-description: "What a call to an AI model costs, how to estimate it and how to avoid unpleasant surprises."
+description: "What an AI API costs: per-token billing for input and output, estimating the cost of a use, tracking consumption, setting caps and alerts."
 niveau: "debutant"
 derniere_verification: 2026-10-31
 draft: true
-slug: "understanding-usage-based-billing"
+slug: "ai-api-costs-token-billing"
 traduction:
-  source: "04ea00b55a86fff09c74a77ce92b388c967d11fc"
+  source: "4c53f755757edd4040d6c3a15d854ac255520946"
 ---
 
 Draft: outline of the guide. It will only be published once each fact has been checked against the providers' official documentation (ADR-010, point 4).

@@ -1,6 +1,6 @@
 ---
 title: "Obtenir une clé API et la protéger"
-description: "Créer une clé API chez un fournisseur d'IA, fixer un plafond de dépenses et la conserver sans l'exposer."
+description: "Obtenir une clé API chez un fournisseur d'IA, fixer une limite de dépense, la conserver hors des documents et courriels, la révoquer si elle fuit."
 niveau: "debutant"
 derniere_verification: 2026-10-31
 draft: true

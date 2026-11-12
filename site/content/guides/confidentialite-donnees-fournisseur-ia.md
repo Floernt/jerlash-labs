@@ -1,6 +1,6 @@
 ---
 title: "Ce que devient une donnée envoyée à un fournisseur d'IA"
-description: "Les points à vérifier dans le contrat d'un fournisseur d'IA avant d'y faire passer des pièces de dossier."
+description: "Données envoyées à un fournisseur d'IA : conservation, entraînement des modèles, transferts hors UE, sous-traitants, secret professionnel et RGPD."
 niveau: "debutant"
 derniere_verification: 2026-10-31
 draft: true

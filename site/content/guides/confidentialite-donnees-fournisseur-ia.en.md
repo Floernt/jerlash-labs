@@ -1,12 +1,12 @@
 ---
 title: "What happens to data sent to an AI provider"
-description: "The points to check in an AI provider's contract before passing case file documents through it."
+description: "Data sent to an AI provider: retention, model training, transfers outside the EU, sub-processors, professional secrecy and GDPR."
 niveau: "debutant"
 derniere_verification: 2026-10-31
 draft: true
-slug: "what-happens-to-data-sent-to-ai-provider"
+slug: "ai-provider-data-confidentiality"
 traduction:
-  source: "a96540e8443cb5185c5ef6027a8eef4e5299f268"
+  source: "188b53397bdcea6dd536d8b64f380a41e4d49ac9"
 ---
 
 Draft: outline of the guide. It will only be published once each fact has been checked against the providers' official documentation (ADR-010, point 4).

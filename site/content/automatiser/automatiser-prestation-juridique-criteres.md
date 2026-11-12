@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Automatiser ou ne pas automatiser ? Une grille en quatre critères"
-description: "Quatre critères notés de 1 à 3 pour décider si une prestation juridique peut être automatisée : complexité perçue, enjeu, standardisation, urgence."
+description: "Automatiser une prestation juridique ? Quatre critères notés de 1 à 3 : complexité perçue par le client, enjeu financier, standardisation, urgence réelle."
 resume: "Quatre critères notés de 1 à 3 pour décider si une prestation juridique peut être automatisée : complexité perçue, enjeu, standardisation, urgence."
 date: 2026-10-31
 weight: 10

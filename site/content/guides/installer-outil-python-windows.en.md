@@ -1,12 +1,12 @@
 ---
 draft: true
 title: "Using a tool locally"
-description: "Install Python, download a jerlash.labs tool, check its SHA-256 hash and run it on Windows."
+description: "Install Python on Windows, download a jerlash.labs tool, check its SHA-256 hash, run it and update it on your own computer."
 niveau: "debutant"
 derniere_verification: 2026-10-31
-slug: "using-a-tool-locally"
+slug: "install-python-tool-windows"
 traduction:
-  source: "d3a39f9456e01060407f0aaac1a056f5d283da21"
+  source: "151702bffc25afc4cd83d0e2e02fc0b3a71e0331"
 ---
 
 By the end of this guide, you will have installed a jerlash.labs tool on your Windows computer, checked that the downloaded file is indeed the one that was published, and run the tool.

@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Special and general conditions"
-description: "Identify, clause by clause, what is specific to the transaction in a negotiated contract: names, addresses, amounts, dates, identifiers. To separate special and general conditions, or to reuse the contract as a template. On your computer, without AI."
+description: "Separate special and general conditions in a contract: names, amounts, dates and identifiers specific to the transaction, clause by clause."
 resume: "The tool reads a Word contract, identifies in each clause the data specific to the transaction and proposes a classification: special conditions, general conditions, or general clause to be cleaned up before reuse."
 slug: "special-and-general-conditions"
 version: "0.1.0"
@@ -16,7 +16,7 @@ telechargement: "/telechargements/conditions-particulieres-0.1.0.zip"
 taille: "28 KB"
 sha256: "9d796164a3c76befa8bbcd8e123c6228959b91af990563abee7ddb11f6aeae6a"
 traduction:
-  source: "6496bc8770f5b046b7f2fb12ebe9cfd9c49cabaf"
+  source: "11fa8339fee2e0cc3d064aae17036154bb731081"
 ---
 
 ## What the tool does
@@ -97,11 +97,11 @@ Free: the tool calls no paid service.
 - The report contains the transaction data: it is as confidential as the contract.
 - Before reusing a contract as a template, reread it in full, including headers and footers. The report tells you where to look first, not where there is no need to look.
 - To replace names in a text before entrusting it to an AI, use the [Pseudonymisation](/outils/pseudonymisation/) tool instead.
-- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/ai-tools-precautions-lawyers/) page.
 
 ## Installation
 
-The guide [Using a tool locally](/guides/utiliser-un-outil-en-local/) details each step. In short:
+The guide [Using a tool locally](/guides/installer-outil-python-windows/) details each step. In short:
 
 1. Install Python 3.10 or later.
 2. Download the archive above and check its SHA-256 fingerprint.

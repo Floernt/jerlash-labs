@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Utiliser un outil en local"
-description: "Installer Python, télécharger un outil de jerlash.labs, vérifier son empreinte SHA-256 et le lancer sur Windows."
+description: "Installer Python sur Windows, télécharger un outil jerlash.labs, vérifier son empreinte SHA-256, le lancer et le mettre à jour sur son ordinateur."
 niveau: "debutant"
 derniere_verification: 2026-10-31
 ---

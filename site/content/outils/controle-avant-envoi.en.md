@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Pre-send check"
-description: "Check a Word document before sending it: comments, tracked changes, hidden text, properties, names from other case files. Without AI, without network."
+description: "Clean a Word document before sending it: comments, tracked changes, hidden text, metadata, names from other case files. Without AI, without network."
 resume: "Before you send a Word document, the tool looks for what should not go out with it and locates each item. It never modifies the document."
 slug: "pre-send-check"
 version: "0.1.0"
@@ -16,7 +16,7 @@ telechargement: "/telechargements/controle-avant-envoi-0.1.0.zip"
 taille: "33 KB"
 sha256: "20a10e6861584c6759439c0cd9b05d54c684d0c1da40b37e9475427af68abeaa"
 traduction:
-  source: "549b50d4293fe94cc16985b3afc81783ff6afdf9"
+  source: "6c7dfc857414ad26eafa770d1a263b60ed3e5ab6"
 ---
 
 ## What the tool does
@@ -77,11 +77,11 @@ Free: the tool calls no paid service.
 - Run the check again after your corrections: an “Accept All Changes” removes neither the comments nor the properties.
 - The list of terms contains client names. Keep it out of shared folders.
 - The report is as confidential as the document. Do not attach it when sending.
-- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/ai-tools-precautions-lawyers/) page.
 
 ## Installation
 
-The guide [Using a tool locally](/guides/utiliser-un-outil-en-local/) details each step. In short:
+The guide [Using a tool locally](/guides/installer-outil-python-windows/) details each step. In short:
 
 1. Install Python 3.10 or later.
 2. Download the archive above and check its SHA-256 fingerprint.

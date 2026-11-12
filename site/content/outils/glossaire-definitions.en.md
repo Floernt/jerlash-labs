@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Glossary of definitions"
-description: "List the defined terms of a contract and what is wrong with them: repeated or inconsistent definition, term never used, capitalised words without a definition, drifting spelling. On your computer, without AI."
+description: "Check the definitions in a contract: terms defined twice or inconsistently, never used, capitalised words without a definition."
 resume: "The tool reads a Word contract and produces its glossary, with the points to examine: repeated or inconsistent definition, defined term never used, term written with capitals but not defined, different spelling."
 slug: "definitions-glossary"
 version: "0.1.0"
@@ -16,7 +16,7 @@ telechargement: "/telechargements/glossaire-definitions-0.1.0.zip"
 taille: "28 KB"
 sha256: "e53f971d3efecbbf57adacba7579440254bf33598586a5a3d75ccd356b57c075"
 traduction:
-  source: "3e0afa1e8d506978de6edb79ed17465d1a7c6d0f"
+  source: "0cfbc6d8266fd94ef4e83966ceb9cf5a22c141b1"
 ---
 
 ## What the tool does
@@ -90,11 +90,11 @@ Free: the tool calls no paid service.
 
 - The report contains the contract's definitions: it is as confidential as the contract.
 - A contract with no point flagged is not thereby free of definition defects.
-- The general rules of use are on the [Precautions](/en/ethics/precautions/) page.
+- The general rules of use are on the [Precautions](/en/ethics/ai-tools-precautions-lawyers/) page.
 
 ## Installation
 
-The guide [Using a tool locally](/guides/utiliser-un-outil-en-local/) details each step. In short:
+The guide [Using a tool locally](/guides/installer-outil-python-windows/) details each step. In short:
 
 1. Install Python 3.10 or later.
 2. Download the archive above and check its SHA-256 fingerprint.
