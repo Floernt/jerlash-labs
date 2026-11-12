@@ -2,7 +2,7 @@
 draft: false
 title: "Gouverner l'IA juridique : protéger les données ne suffit pas, il faut aussi préserver le jugement"
 date: 2026-11-14
-description: "Karen Waldron appelle à une gouvernance de l'IA qui suive le rythme de la pratique juridique. L'appel est fondé, mais il reste centré sur les systèmes et les responsabilités : il faut aussi gouverner les capacités de jugement des professionnels."
+description: "Gouvernance de l'IA en cabinet d'avocats : sécuriser les données ne suffit pas. Recension de Karen Waldron (Artificial Lawyer) sur le jugement professionnel."
 objet: "article"
 oeuvre:
   auteurs: ["Karen Waldron"]

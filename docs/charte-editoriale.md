@@ -56,6 +56,26 @@ Ces formules donnent un texte générique. Une occurrence isolée peut passer, l
 - Tirets cadratins à répétition, flèches Unicode, puces commençant toutes par un mot en gras.
 - "Malgré ces défis, ..." en fin de paragraphe.
 
+## Référencement : slug et description
+
+Règle de Florian du 2026-11-12, pour tout texte de la Revue et toute page nouvelle. L'adresse ne change plus une fois la page en ligne : le slug se fixe avant la première publication.
+
+Slug :
+
+- il reprend la requête qu'un lecteur taperait, mot-clé principal en tête (« taux-horaire-avocat-ia », pas « taux-horaire-et-intelligence-artificielle-quelle-place ») ;
+- trois à six mots, sans article, sans élision (`lia`, `lavocat`) ni mot vide ;
+- chaque page vise une requête qu'aucune autre page du site ne vise déjà. Avant de choisir, vérifier les adresses existantes, rubrique Outils comprise (la boîte à outils occupe « gouvernance-ia ») ;
+- recension : le nom de l'auteur recensé, et pour un livre les mots de son titre (`impact-ia-juristes-avocats-affaires-chaduteau`) ;
+- en français, le slug est le nom du fichier ; en anglais, le champ `slug:`, construit sur la requête anglaise (« billable hour », « law firm »), pas traduit mot à mot.
+
+Description (`description:` du front matter) :
+
+- 155 caractères au plus, la requête visée dans la première moitié ;
+- elle dit ce que le texte apporte, au lieu de reprendre sa première phrase ;
+- mêmes règles d'écriture que le texte : pas de superlatif, pas de tic de la liste ci-dessus. Elle est publiée sous le nom de Florian, qui la valide.
+
+Un slug changé avant publication ne demande pas de redirection. Après publication, l'ancienne adresse va dans `aliases`.
+
 ## Typographie
 
 Français de Belgique. Espaces insécables avant ; : ! ? dans les textes publiés. Dans le code et les blocs techniques, guillemets droits.

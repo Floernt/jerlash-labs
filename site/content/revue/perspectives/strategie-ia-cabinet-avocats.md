@@ -2,7 +2,7 @@
 draft: true
 title: "Pourquoi l’IA n’est pas un outil de plus – mais une nouvelle façon de penser son cabinet"
 date: 2025-06-11
-description: "L’intelligence artificielle agite le monde du droit, et les solutions se multiplient."
+description: "Avant de choisir un outil d'IA juridique, un cabinet d'avocats doit savoir ce qu'il veut transformer. Une méthode simple pour bâtir sa stratégie IA."
 aliases: ["/blog/pourquoi-lia-nest-pas-un-outil-de-plus-mais-une-nouvelle-facon-de-penser-son/", "/fr/blog/pourquoi-lia-nest-pas-un-outil-de-plus-mais-une-nouvelle-facon-de-penser-son/"]
 ---
 

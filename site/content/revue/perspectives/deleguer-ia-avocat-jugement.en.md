@@ -2,11 +2,11 @@
 draft: true
 title: "AI and the lawyer - delegating the known, thinking the unknown"
 date: 2025-12-30
-description: "The more time passes, the clearer it becomes that we are living through a turning point."
-slug: "ai-and-the-lawyer-delegating-the-known-thinking-the-unknown"
+description: "Generative AI lets lawyers delegate known, repetitive tasks and devote their judgement to the unknown: advice, strategy, commitment."
+slug: "delegating-to-ai-lawyers"
 aliases: ["/en/blog/ai-and-the-lawyer-delegating-the-known-thinking-the-unknown/"]
 traduction:
-  source: "d1169f87ba5dc1e6fd8ace9b8e73d986494a32b6"
+  source: "56cc2d5d36c5aef457461b01ec8b2e12cea97b79"
 ---
 
 > The arrival of generative AI is not just one more technical advance in the arsenal of tools used by law firms. It marks a genuine paradigm shift: for the first time, we can entrust the known to machines, and devote our energy to what our profession is really about: thinking the unknown, guiding, and committing ourselves.

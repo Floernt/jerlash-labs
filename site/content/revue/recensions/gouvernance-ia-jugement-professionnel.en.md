@@ -2,8 +2,8 @@
 draft: false
 title: "Governing legal AI: protecting data is not enough, judgement must also be preserved"
 date: 2026-11-14
-description: "Karen Waldron calls for AI governance that keeps pace with legal practice. The call is well founded, but it remains centred on systems and responsibilities: professionals' capacity for judgement must also be governed."
-slug: "governing-legal-ai-preserving-judgement"
+description: "AI governance in law firms: securing data is not enough. Review of Karen Waldron (Artificial Lawyer) on professional judgement."
+slug: "ai-governance-professional-judgement"
 objet: "article"
 oeuvre:
   auteurs: ["Karen Waldron"]
@@ -20,7 +20,7 @@ licence: "CC BY 4.0"
 financement: "none"
 conflits_interets: "none"
 traduction:
-  source: "d40bbeca634e76e32546539072d11f7b7bb09eda"
+  source: "03922c77a67a48c39166083230da5cbcc88b8ecc"
 ---
 
 The article reviewed is an opinion piece sponsored by LexisNexis.

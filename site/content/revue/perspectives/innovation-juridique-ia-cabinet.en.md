@@ -2,11 +2,11 @@
 draft: true
 title: "Artificial intelligence will not innovate for you"
 date: 2025-06-25
-description: "Time savings, reliability, compliance."
-slug: "ai-will-not-innovate-for-you"
+description: "Used to secure and standardise, AI freezes law firm practices. To innovate, it must be used to explore other ways of working."
+slug: "legal-innovation-ai-law-firms"
 aliases: ["/en/blog/ai-will-not-innovate-for-you/"]
 traduction:
-  source: "21f0843492af1384735c69e2056291f9ffee14fe"
+  source: "be0d960474f255f82cfbd1b045f0c8b2f2287318"
 ---
 
 _Time savings, reliability, compliance. Artificial intelligence promises a great deal — and keeps its promises, in part. But by using it to make practices safer, we forget that it can also reinvent them. Provided we change our stance: less steering, more exploration.

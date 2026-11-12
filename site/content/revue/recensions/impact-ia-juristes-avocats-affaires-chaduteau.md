@@ -2,7 +2,7 @@
 draft: false
 title: "L'intelligence artificielle transforme le marché du droit. Mais transforme-t-elle aussi le juriste ?"
 date: 2026-11-12
-description: "Olivier Chaduteau analyse ce que l'IA change aux modèles économiques des cabinets et à la valeur du conseil. Reste une question : comment le juriste acquiert-il et conserve-t-il sa capacité de jugement ?"
+description: "Recension d'Olivier Chaduteau, « L'impact de l'IA sur les juristes et les avocats d'affaires » : valeur du conseil, modèles économiques, jugement du juriste."
 objet: "livre"
 oeuvre:
   auteurs: ["Olivier Chaduteau"]

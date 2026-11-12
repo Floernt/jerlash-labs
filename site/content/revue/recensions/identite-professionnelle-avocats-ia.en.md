@@ -2,8 +2,8 @@
 draft: false
 title: "When artificial intelligence transforms lawyers' professional identity"
 date: 2026-11-12
-description: "Richard Tromans sees the professional identity of partners as the main obstacle to AI adoption. The explanation is relevant but incomplete: the question also concerns the redistribution of knowledge and of decision-making power."
-slug: "when-ai-transforms-lawyers-professional-identity"
+description: "Is AI changing the professional identity of law firm partners? Review of Richard Tromans (Artificial Lawyer): tasks, knowledge and decision-making power."
+slug: "ai-lawyers-professional-identity"
 objet: "article"
 oeuvre:
   auteurs: ["Richard Tromans"]
@@ -20,7 +20,7 @@ licence: "CC BY 4.0"
 financement: "none"
 conflits_interets: "none"
 traduction:
-  source: "485744cdfad5483c53fcd9c8a2de5cd00ab81326"
+  source: "a9e804e485e1302cd4a532dab088ef25a9bfc562"
 ---
 
 ## Resistance to innovation that goes beyond technology

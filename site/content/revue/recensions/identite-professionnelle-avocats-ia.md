@@ -2,7 +2,7 @@
 draft: false
 title: "Quand l'intelligence artificielle transforme l'identité professionnelle des avocats"
 date: 2026-11-12
-description: "Richard Tromans voit dans l'identité professionnelle des associés le principal frein à l'adoption de l'IA. L'explication est pertinente mais incomplète : la question porte aussi sur la redistribution des savoirs et du pouvoir de décision."
+description: "L'IA change-t-elle l'identité professionnelle des avocats associés ? Recension de Richard Tromans (Artificial Lawyer) : tâches, savoirs et pouvoir de décision."
 objet: "article"
 oeuvre:
   auteurs: ["Richard Tromans"]

@@ -2,7 +2,7 @@
 draft: true
 title: "L’IA et l’avocat - déléguer le connu, penser l’inconnu"
 date: 2025-12-30
-description: "Plus le temps passe, plus on constate qu'on assiste à un moment charnière."
+description: "L'IA générative permet à l'avocat de déléguer les tâches connues et répétitives pour consacrer son jugement à l'inconnu : conseil, stratégie, engagement."
 aliases: ["/blog/lia-et-lavocat-deleguer-le-connu-penser-linconnu/", "/fr/blog/lia-et-lavocat-deleguer-le-connu-penser-linconnu/"]
 ---
 

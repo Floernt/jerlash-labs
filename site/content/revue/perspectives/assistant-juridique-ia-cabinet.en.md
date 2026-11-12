@@ -2,11 +2,11 @@
 draft: true
 title: "AI in law firms, to help us, not to replace us"
 date: 2025-06-11
-description: "Amid the clamour of technological promises, it is tempting to believe that AI could upend even the core of our professions."
-slug: "ai-in-law-firms-help-not-replace"
+description: "What AI does well in a law firm (reading, summarising, structuring) and what it does not do: judging, bearing the risk, maintaining the client relationship."
+slug: "ai-legal-assistant-law-firms"
 aliases: ["/en/blog/ai-in-law-firms-help-not-replace/"]
 traduction:
-  source: "7d76b01df872f450ccbbe01cf813ce895ea78274"
+  source: "b516811692cf0d0a3383d76763a56094da91d7d0"
 ---
 
 Amid the clamour of technological promises, it is tempting to believe that AI could upend even the core of our professions. But that would be to forget one essential thing: what makes a lawyer valuable cannot be coded. This post is for those who want to integrate AI without losing the meaning, delegate without dispossessing themselves, move forward without giving up what makes them irreplaceable.

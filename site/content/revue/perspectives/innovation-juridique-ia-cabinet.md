@@ -2,7 +2,7 @@
 draft: true
 title: "L’intelligence artificielle n’innovera pas à votre place"
 date: 2025-06-25
-description: "Gain de temps, fiabilité, conformité."
+description: "Utilisée pour sécuriser et standardiser, l'IA fige les pratiques des cabinets d'avocats. Pour innover, elle doit servir à explorer d'autres façons de faire."
 aliases: ["/blog/lintelligence-artificielle-ninnovera-pas-a-votre-place/", "/fr/blog/lintelligence-artificielle-ninnovera-pas-a-votre-place/"]
 ---
 

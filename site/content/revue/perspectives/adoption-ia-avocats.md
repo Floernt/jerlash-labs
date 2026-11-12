@@ -2,7 +2,7 @@
 draft: true
 title: "L’IA avance, à nous de suivre"
 date: 2025-06-13
-description: "Pendant que certains dirigeants techniques retournent coder pour ne pas manquer la révolution en cours, beaucoup de professionnels du droit en sont encore à débattre de la “pertinence” de l’IA."
+description: "Confidentialité, fiabilité, encadrement : les objections des avocats à l'IA méritent d'être testées. Commencer par un cas d'usage modeste, à son échelle."
 aliases: ["/blog/lia-avance-a-nous-de-suivre/", "/fr/blog/lia-avance-a-nous-de-suivre/"]
 ---
 

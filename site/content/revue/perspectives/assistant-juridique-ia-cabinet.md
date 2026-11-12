@@ -2,7 +2,7 @@
 draft: true
 title: "L’IA dans les cabinets, pour nous aider, pas pour nous remplacer"
 date: 2025-06-11
-description: "Dans le tumulte des promesses technologiques, il est tentant de croire que l’IA pourrait bouleverser jusqu’au cœur de nos métiers."
+description: "Ce que l'IA fait bien en cabinet d'avocats (lire, synthétiser, structurer) et ce qu'elle ne fait pas : juger, porter le risque, tenir la relation client."
 aliases: ["/blog/lia-dans-les-cabinets-pour-nous-aider-pas-pour-nous-remplacer/", "/fr/blog/lia-dans-les-cabinets-pour-nous-aider-pas-pour-nous-remplacer/"]
 ---
 

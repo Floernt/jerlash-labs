@@ -2,11 +2,11 @@
 draft: true
 title: "Hourly rates and artificial intelligence. What place in the law firm"
 date: 2025-06-27
-description: "Generative artificial intelligence is reshuffling the deck: some tasks are being automated, others are disappearing, and time spent is no longer a viable way of valuing one’s services."
-slug: "hourly-rates-and-artificial-intelligence"
+description: "With generative AI, the billable hour becomes a choice rather than a reflex. When time-based billing remains relevant for lawyers, and when to change it."
+slug: "billable-hour-ai-law-firms"
 aliases: ["/en/blog/hourly-rates-and-artificial-intelligence/"]
 traduction:
-  source: "4cf51dd511a875ea55686eb4905860afea68e0c0"
+  source: "060beb60ce9e17a82256aa26e15d9147b5ec9f78"
 ---
 
 Generative artificial intelligence is reshuffling the deck: some tasks are being automated, others are disappearing, and time spent is no longer a viable way of valuing one’s services. Does that mean we should bury hourly billing? Not so fast. It is not the hourly rate that is the problem, it is its use by default. In the age of AI, it becomes a choice and not a reflex. Still, you need to know when (and how) it remains relevant.

@@ -2,7 +2,7 @@
 draft: true
 title: "Less is more. L’illusion du volume"
 date: 2025-06-25
-description: "Devant les promesses de l’IA, beaucoup d’avocats cèdent à la tentation du “tout injecter”."
+description: "Verser toute sa documentation dans un RAG rend l'IA moins précise. Trier et contextualiser les données du cabinet d'avocats donne de meilleurs résultats."
 aliases: ["/blog/less-is-more-lillusion-du-volume/", "/fr/blog/less-is-more-lillusion-du-volume/"]
 ---
 

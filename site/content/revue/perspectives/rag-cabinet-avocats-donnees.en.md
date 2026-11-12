@@ -2,11 +2,11 @@
 draft: true
 title: "Less is more. The illusion of volume"
 date: 2025-06-25
-description: "Faced with the promises of AI, many lawyers give in to the temptation to “feed it everything”."
-slug: "less-is-more-illusion-of-volume"
+description: "Pouring all your documentation into a RAG makes AI less accurate. Sorting and contextualising a law firm's data gives better results."
+slug: "rag-law-firm-data"
 aliases: ["/en/blog/less-is-more-illusion-of-volume/"]
 traduction:
-  source: "73c9cca79c1cfd95ec5bf4da1fd05408becb4353"
+  source: "6f70e408b701aafca7850fe5aab352fdecbf431f"
 ---
 
 --- 

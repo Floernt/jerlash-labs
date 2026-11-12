@@ -2,8 +2,8 @@
 draft: false
 title: "Artificial intelligence is transforming the legal market. But is it also transforming the lawyer?"
 date: 2026-11-12
-description: "Olivier Chaduteau analyses what AI changes in law firms' business models and in the value of advice. One question remains: how do lawyers acquire and retain their capacity for judgement?"
-slug: "is-ai-transforming-the-lawyer"
+description: "Review of Olivier Chaduteau, “L'impact de l'IA sur les juristes et les avocats d'affaires”: value of advice, business models, the lawyer's judgement."
+slug: "chaduteau-impact-ai-lawyers-review"
 objet: "livre"
 oeuvre:
   auteurs: ["Olivier Chaduteau"]
@@ -19,7 +19,7 @@ licence: "CC BY 4.0"
 financement: "none"
 conflits_interets: "none"
 traduction:
-  source: "dbecbfb4be1e8f86752ea81dd10aaef46cf348d2"
+  source: "fc805d6a34dc803c3d498896b91fd95a44bf613d"
 ---
 
 Artificial intelligence is not simply a new tool available to legal professionals. It changes the conditions in which legal services are produced, distributed and valued. This is the conviction running through Olivier Chaduteau’s book, *L’impact de l’IA sur les juristes et les avocats d’affaires*.

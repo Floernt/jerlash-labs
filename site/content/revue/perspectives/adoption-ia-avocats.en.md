@@ -2,11 +2,11 @@
 draft: true
 title: "AI is moving forward, it is up to us to keep up"
 date: 2025-06-13
-description: "While some tech leaders are going back to coding so as not to miss the revolution under way, many legal professionals are still debating the “relevance” of AI."
-slug: "ai-is-moving-forward"
+description: "Confidentiality, reliability, regulation: lawyers' objections to AI deserve to be tested. Start with a modest use case, at your own scale."
+slug: "ai-adoption-lawyers"
 aliases: ["/en/blog/ai-is-moving-forward/"]
 traduction:
-  source: "140e4e215055f14e3cc47af1a3ae355342263878"
+  source: "6e9256d6b88c10f79b2c9802ab053c29a22bc486"
 ---
 
 While some tech leaders are going back to coding so as not to miss the revolution under way, many legal professionals are still debating the “relevance” of AI. By waiting for everything to be regulated, we mainly risk missing the moment. For the question is no longer whether AI will transform the way we work — but how each of us can start engaging with it, right now, at our own scale.

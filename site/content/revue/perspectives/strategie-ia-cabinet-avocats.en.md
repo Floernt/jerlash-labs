@@ -2,11 +2,11 @@
 draft: true
 title: "Why AI is not just another tool – but a new way of thinking about your firm"
 date: 2025-06-11
-description: "Artificial intelligence is stirring up the legal world, and solutions are multiplying."
-slug: "ai-not-just-another-tool-new-way-of-thinking-about-your-firm"
+description: "Before choosing a legal AI tool, a law firm must know what it wants to transform. A simple method for building its AI strategy."
+slug: "ai-strategy-law-firms"
 aliases: ["/en/blog/ai-not-just-another-tool-new-way-of-thinking-about-your-firm/"]
 traduction:
-  source: "8d5a4bcf9df48a583e3fac32d3bfcab3c53427a5"
+  source: "7b7bc258a23aafaf614abff1ab4ebbd18138ace3"
 ---
 
 Artificial intelligence is stirring up the legal world, and solutions are multiplying. But before choosing a piece of software, you still need to know what you want to do with it. What if the real transformation began… with a blank sheet and a few Post-its? A simple method for moving from a passing fad to a clear, concrete and genuinely useful strategy.
