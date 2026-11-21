@@ -55,6 +55,7 @@ def verifier_outils() -> None:
     dossiers = [os.path.join(DEPOT, base, nom)
                 for base in ("outils", os.path.join("factory", "composants"))
                 for nom in sorted(os.listdir(os.path.join(DEPOT, base)))]
+    dossiers.append(os.path.join(DEPOT, "legal-agent-factory"))  # ADR-035
     for dossier in dossiers:
         if not os.path.isdir(os.path.join(dossier, "tests")):
             continue
