@@ -72,6 +72,40 @@ class PasserelleSimulee(Passerelle):
         return "Résultat simulé : aucune analyse réelle n'a été effectuée (Lot 1)."
 
 
+class PasserelleEnregistree(PasserelleSimulee):
+    """Modèle simulé à réponses enregistrées (Lot 2), pour les tests et la démonstration.
+
+    Une réponse est choisie par une clé exacte, sans lire ni interpréter le texte :
+    - routage : empreinte du message utilisateur encadré (voir `cle_routage`) ;
+    - skill : nom du skill, repris du marqueur SKILL= des instructions.
+    Hors de ces clés, comportement de PasserelleSimulee. Les réponses enregistrées
+    sont des données de test du routage, pas des réponses de référence juridiques.
+    """
+
+    nom = "enregistree"
+
+    def __init__(self, routages: dict | None = None, sorties_skills: dict | None = None):
+        super().__init__(self._choisir)
+        self.routages = routages or {}
+        self.sorties_skills = sorties_skills or {}
+
+    def _choisir(self, model, messages):
+        systeme = messages[0]["content"] if messages else ""
+        if systeme.startswith("TACHE=ROUTAGE"):
+            cle = cle_routage(messages[1]["content"])
+            if cle in self.routages:
+                return json.dumps(self.routages[cle])
+        if systeme.startswith("SKILL="):
+            nom = systeme.split("\n", 1)[0][len("SKILL="):]
+            if nom in self.sorties_skills:
+                return json.dumps(self.sorties_skills[nom])
+        return PasserelleSimulee._par_defaut(model, messages)
+
+
+def cle_routage(message_utilisateur: str) -> str:
+    return hashlib.sha256(message_utilisateur.encode("utf-8")).hexdigest()[:32]
+
+
 class _Squelette(Passerelle):
     """Adaptateur non branché. Aucun appel n'est possible dans le Lot 1."""
 

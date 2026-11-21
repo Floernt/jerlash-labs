@@ -1,0 +1,28 @@
+{
+  "$comment": "Registre des sources PROVISOIRE. Le registre de FLO-60 (lot 0b) n'etait pas disponible dans le depot ni sur la carte au moment du Lot 2 : chaque source est donc marquee source_unverified, sans lien, sans version et sans date de consultation. A remplacer par le registre de FLO-60 une fois valide par Florian [À VÉRIFIER]. Aucune reference d'article n'est donnee ici : elle doit venir d'une lecture de la source.",
+  "registre_version": "laf-registre/0.1-provisoire",
+  "origine": "FLO-60 non disponible [À VÉRIFIER]",
+  "sources": [
+    {"id": "cde-livre-xx", "titre": "Code de droit économique, Livre XX (insolvabilité des entreprises)", "type": "loi",
+     "url": null, "version": null, "date_consultation": null, "statut": "source_unverified",
+     "note": "Version consolidée Justel, lien et date de consultation à fournir par FLO-60 [À VÉRIFIER]"},
+    {"id": "transitoire-2018", "titre": "Dispositions transitoires de la réforme de 2018", "type": "loi",
+     "url": null, "version": null, "date_consultation": null, "statut": "source_unverified",
+     "note": "Référence exacte à fournir par FLO-60 [À VÉRIFIER]"},
+    {"id": "transitoire-2023", "titre": "Dispositions transitoires de la réforme de 2023", "type": "loi",
+     "url": null, "version": null, "date_consultation": null, "statut": "source_unverified",
+     "note": "Référence exacte à fournir par FLO-60 [À VÉRIFIER]"},
+    {"id": "transitoire-2026", "titre": "Dispositions transitoires de 2026", "type": "loi",
+     "url": null, "version": null, "date_consultation": null, "statut": "source_unverified",
+     "note": "Référence exacte à fournir par FLO-60 [À VÉRIFIER]"},
+    {"id": "cour-constitutionnelle", "titre": "Jurisprudence de la Cour constitutionnelle relative au Livre XX", "type": "jurisprudence",
+     "url": null, "version": null, "date_consultation": null, "statut": "source_unverified",
+     "note": "Arrêts à identifier par FLO-60 [À VÉRIFIER]"},
+    {"id": "regsol", "titre": "Registre central de la solvabilité (RegSol)", "type": "registre",
+     "url": null, "version": null, "date_consultation": null, "statut": "source_unverified",
+     "note": "Consultation seulement ; aucun dépôt par la chaîne (A3 bloqué)"},
+    {"id": "infofaillite", "titre": "infofaillite.be (taxonomie, source secondaire)", "type": "secondaire",
+     "url": null, "version": null, "date_consultation": null, "statut": "source_unverified",
+     "note": "Source secondaire : sa lecture ne vaut pas validation juridique"}
+  ]
+}

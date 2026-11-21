@@ -1,0 +1,13 @@
+{
+  "format": "laf-courriel/0.1",
+  "message_id": "<c03.synthetique@zeta-synthetique.example>",
+  "in_reply_to": "",
+  "references": [],
+  "de": "zeta@zeta-synthetique.example",
+  "a": ["faillites@cabinet-synthetique.example"],
+  "cc": [],
+  "date": "2026-12-16T14:00:00+01:00",
+  "objet": "Question sur mon bail commercial",
+  "corps_texte": "DOCUMENT SYNTHÉTIQUE DE TEST.\n\nBonjour, mon bailleur souhaite augmenter le loyer de mon commerce. Est-ce possible en cours de bail ?",
+  "pieces": []
+}

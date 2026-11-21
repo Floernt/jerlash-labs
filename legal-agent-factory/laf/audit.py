@@ -13,7 +13,10 @@ from .outils_fichiers import empreinte_texte, horodatage
 
 CHAMPS = {"evenement_id", "type", "sha256", "version", "taille", "issue", "categorie",
           "triage_humain", "injection_suspectee", "sortie_modele_valide", "statut_runtime",
-          "tours", "erreur"}
+          "tours", "erreur",
+          # Lot 2 : aucun de ces champs ne porte d'adresse, d'objet ni de texte
+          "statut_routage", "skill", "rattache", "lien_rattachement", "motifs", "demandes_ignorees",
+          "revue_conforme", "decision", "statut_decision"}
 
 
 class Journal:

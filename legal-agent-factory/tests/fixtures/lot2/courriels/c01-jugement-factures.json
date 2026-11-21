@@ -1,0 +1,20 @@
+{
+  "format": "laf-courriel/0.1",
+  "message_id": "<c01.synthetique@alpha-fournitures.example>",
+  "in_reply_to": "",
+  "references": [],
+  "de": "comptabilite@alpha-fournitures.example",
+  "a": ["faillites@cabinet-synthetique.example"],
+  "cc": [],
+  "date": "2026-12-14T09:12:00+01:00",
+  "objet": "SYN-2026-001 - jugement de faillite et nos factures",
+  "corps_texte": "Bonjour,\n\nDOCUMENT SYNTHÉTIQUE DE TEST. Nous avons appris la faillite de notre client Débiteur Beta (synthétique). Vous trouverez ci-joint le jugement et nos deux factures impayées.\n\nCordialement,\nService comptable, Fournitures Alpha (synthétique)",
+  "pieces": [
+    {"nom": "jugement-synthetique.txt", "type_mime": "text/plain",
+     "texte": "DOCUMENT SYNTHÉTIQUE DE TEST. Tribunal de l'entreprise (juridiction fictive). Jugement du 2026-12-01 déclarant la faillite de Débiteur Beta (synthétique). Curateur : Maître Fictif (synthétique)."},
+    {"nom": "facture-F-001.txt", "type_mime": "text/plain",
+     "texte": "DOCUMENT SYNTHÉTIQUE DE TEST. Facture F-001 du 2026-09-15, Débiteur Beta (synthétique), montant 1 250,00 EUR."},
+    {"nom": "facture-F-002.txt", "type_mime": "text/plain",
+     "texte": "DOCUMENT SYNTHÉTIQUE DE TEST. Facture F-002 du 2026-10-15, Débiteur Beta (synthétique), montant 830,00 EUR."}
+  ]
+}
