@@ -81,7 +81,7 @@ Free: the tool calls no paid service.
 
 ## Installation
 
-The guide [Using a tool locally](/guides/installer-outil-python-windows/) details each step. In short:
+The guide [Using a tool locally](/en/guides/install-python-tool-windows/) details each step. In short:
 
 1. Install Python 3.10 or later.
 2. Download the archive above and check its SHA-256 fingerprint.

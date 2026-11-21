@@ -10,4 +10,4 @@ traduction:
 
 First version of [Pre-send check](/outils/controle-avant-envoi/). The tool checks a Word document before it is sent (comments, tracked changes, hidden text, properties, names from other case files) and produces a report, without modifying the document, without AI and without a network connection.
 
-Published at the same time: the guide [Using a tool locally](/guides/installer-outil-python-windows/).
+Published at the same time: the guide [Using a tool locally](/en/guides/install-python-tool-windows/).
