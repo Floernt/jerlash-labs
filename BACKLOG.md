@@ -19,7 +19,7 @@ Ordre fixé par Florian le 2026-11-03. Les mois de novembre à avril sont fermes
 | Mois | Projet | Rubriques | Prérequis |
 |---|---|---|---|
 | Nov. 2026 | P14 Toolkit v0.2 + refonte du site | Outils, Éthique, Revue | ADR-024, D01, D02, vérification juridique |
-| Déc. 2026 | P19 Recension Billion et Fasterling (avancée en novembre, 2026-11-04) | Revue | Collection Recensions (ADR-027) ; récupérer le code C3 pour P18 |
+| Déc. 2026 | Legal Agent Factory (décision de Florian du 2026-11-10, ticket FLO-24 ; P19 avancée en novembre le 2026-11-04) | [À VÉRIFIER] | Fiche projet v0.2 du 2026-11-09 (hors dépôt) ; récupérer le code C3 pour P18 |
 | Janv. 2027 | P18 Kit MCP, partie publique (protocole, gouvernance, scripts, addendum C3) ; lancement de G0 | Recherche, Éthique, Outils | Code C3 ; préenregistrement OSF oui ou non ; référentiel restreint exclu |
 | Févr. 2027 | P16 RP Modèles discriminatifs (`JLL-RP-2027-001`) | Revue, Recherche | Revérifier arXiv et URL |
 | Mars 2027 | P17 RP Tarification alternative (`JLL-RP-2027-002`) | Revue | Relecture déontologique belge |
@@ -30,6 +30,17 @@ Ordre fixé par Florian le 2026-11-03. Les mois de novembre à avril sont fermes
 | Août 2027 | Pas de livraison | | |
 | Sept. 2027 | Working paper Human Agency Framework (H1.1) | Revue, Recherche | |
 | Oct. 2027 | Toolkit v1.0 (ou v0.4 sans relecteurs) ; pilote MCP seulement si G3 | Outils, Recherche | D08, G3 |
+
+Legal Agent Factory, découpage (ticket parent FLO-57, état relevé dans Vikunja le 2026-11-21). Les lots s'enchaînent : chacun attend le précédent.
+
+| Lot | Tickets | Semaine proposée [À VÉRIFIER] | État au 2026-11-21 |
+|---|---|---|---|
+| 0 : périmètre et 40 cas, sources primaires, garanties publiées de Scaleway et Umans | FLO-59, FLO-60, FLO-63 | 16 nov. au 6 déc. | À relire par Florian |
+| 1 : chaîne technique sans secrets | FLO-64 | 30 nov. au 13 déc. | Bloqué : attend FLO-59 |
+| 2 : courriel AgentMail, rôles d'agents, routeur, deux skills de faillite | FLO-65 | 14 au 27 déc. | Bloqué : attend FLO-64 et FLO-60 |
+| 3 : évaluation du benchmark faillite (40 cas) | FLO-66 | janvier 2027, à fixer | Bloqué : attend FLO-65, FLO-63, et trois apports de Florian (réponses de référence signées, accès Scaleway et Umans, plafond de dépense) |
+
+Le premier verrou est la relecture de FLO-59 par Florian. Le calendrier d'origine sera probablement dépassé pour les lots 2 et 3 (FLO-24) : la charge de janvier 2027 (P18) est à revoir en conséquence [À VÉRIFIER].
 
 ## Ensuite
 
