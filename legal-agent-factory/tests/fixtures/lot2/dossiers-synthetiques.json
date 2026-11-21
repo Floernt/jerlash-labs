@@ -1,0 +1,11 @@
+{
+  "$comment": "Dossiers SYNTHETIQUES. Aucune personne, societe ou affaire reelle. Domaines en .example (reserve, RFC 2606).",
+  "dossiers": [
+    {"reference": "SYN-2026-001", "intitule": "Créancier Fournitures Alpha (synthétique) c/ faillite Débiteur Beta (synthétique)",
+     "contacts": ["comptabilite@alpha-fournitures.example"], "personne_debiteur": "morale"},
+    {"reference": "SYN-2026-002", "intitule": "Aveu de faillite Gamma (synthétique)",
+     "contacts": ["gerance@gamma-synthetique.example"], "personne_debiteur": "morale"},
+    {"reference": "SYN-2026-003", "intitule": "Créance sur une personne physique Delta (synthétique)",
+     "contacts": ["contact@epsilon-synthetique.example"], "personne_debiteur": "physique"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "$comment": "Niveaux d'action PROVISOIRES, a aligner sur la fiche projet v0.2 section 12 (non consultee) [À VÉRIFIER]. Le niveau d'une action est fixe ici, jamais par le modele ni par un courriel. A3 est bloque dans tout le Lot 2, meme apres approbation.",
+  "niveaux": {
+    "A0": "lecture et analyse interne, sans écriture dans le dossier",
+    "A1": "brouillon interne (note, projet de courrier) qui n'est envoyé à personne",
+    "A2": "écriture interne au cabinet (classement d'une pièce, tâche interne), après approbation humaine ; simulée dans le Lot 2",
+    "A3": "effet hors du cabinet (envoi externe, dépôt RegSol, contact avec le curateur ou le tribunal) : bloqué"
+  },
+  "actions": {
+    "lire_dossier": "A0",
+    "rediger_note_interne": "A1",
+    "rediger_projet_declaration_creance": "A1",
+    "rediger_demande_complements": "A1",
+    "classer_piece": "A2",
+    "creer_tache_interne": "A2",
+    "envoyer_courriel": "A3",
+    "deposer_regsol": "A3",
+    "contacter_curateur": "A3"
+  },
+  "niveaux_bloques": ["A3"],
+  "niveaux_sur_approbation": ["A2"],
+  "referents_humains": ["Florian Ernotte"]
+}

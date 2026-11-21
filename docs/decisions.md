@@ -395,3 +395,17 @@ Décision :
 3. Surveillance par scrutation périodique plutôt que par une bibliothèque d'événements du système (`watchdog`).
 4. `scripts/verifier.py` exécute aussi les tests de `legal-agent-factory/`.
 Conséquences : aucune installation pour lancer la chaîne ou ses tests. Délai d'au moins deux passages avant le traitement d'un fichier. Le format de qualification et la taxonomie restent provisoires jusqu'à la clôture de FLO-59 et la lecture de la fiche §7.
+
+## ADR-036 - Legal Agent Factory, Lot 2 : courriel intermédiaire, rôles et skills en fichiers, niveaux d'action en configuration
+Date : 2026-11-21
+Statut : Proposée
+Contexte : le ticket FLO-65 (Lot 2) demande l'entrée par courriel AgentMail, le rapprochement aux dossiers, quatre rôles d'agents, un routeur hybride, deux skills de faillite, une revue qualité et la décision humaine, sur dossiers synthétiques et modèle simulé. Ni le format des messages AgentMail, ni la fiche projet v0.2 (§6 à §9, §12, §15), ni le registre des sources de FLO-60 n'ont pu être consultés.
+Options : attendre ces trois documents ; ou construire la chaîne sur des formats intermédiaires explicites, marqués provisoires, que ces documents viendront aligner.
+Décision :
+1. Format intermédiaire `laf-courriel/0.1` (`config/schema-courriel.json`) ; un futur adaptateur AgentMail le produira. Le courriel devient un événement de même forme que le dépôt de fichier.
+2. Rattachement à un dossier seulement par un lien vérifiable (fil, référence et expéditeur inscrit, sous-dossier) ; sinon dossier d'attente.
+3. Routeur en trois couches : règles sur les autorisations, classification validée par schéma strict, décision déterministe (`needs_clarification`, `confirmation_humaine`, etc.).
+4. Rôles d'agents (`legal-agent-factory/agents/*/AGENTS.md`) et skills (`legal-agent-factory/skills/*/SKILL.md`) sont des fichiers du dépôt ; aucun agent Paperclip n'est créé. Les skills restent `status: draft`, `last_legal_review: null`.
+5. Niveaux A0 à A3 et catalogue d'actions dans `config/niveaux-action.json` ; le niveau ne vient jamais du modèle ni d'un message ; A3 bloqué même après approbation ; A2 seulement consigné.
+6. Décision humaine (approuver, refuser, corriger) par appel local, avec un relecteur inscrit ; l'approbation exige une revue conforme.
+Conséquences : la chaîne est testable de bout en bout sans secret (77 tests). Les formats, taxonomies, seuils et niveaux sont à réaligner quand la fiche v0.2, le registre de FLO-60 et le format AgentMail seront disponibles.
