@@ -7,7 +7,7 @@ statut: "brouillon"
 version: "0.1"
 programme: "H1"
 date_arret_recherches: 2026-11-21
-controles: "Source principale lue intégralement (PDF de 31 pages, copie fournie par l'auteur) ; citations et renvois de page contrôlés sur le texte extrait. Aucune source juridique n'a encore été collationnée : les articles du RGPD et les règles belges sont désignés, pas cités, et restent en [À VÉRIFIER]. Aucune donnée empirique propre. Aucune relecture externe."
+controles: "Source principale lue intégralement (PDF de 31 pages, copie fournie par l'auteur) ; citations et renvois de page contrôlés sur le texte extrait, puis contrôlés une seconde fois le 2026-11-22. Aucune source juridique n'a encore été collationnée : les articles du RGPD et les règles belges sont désignés, pas cités, et restent en [À VÉRIFIER]. Aucune donnée empirique propre. Aucune relecture externe."
 usage_ia: "Claude Opus 5.5 (novembre 2026) a été utilisé pour extraire le texte du rapport, classer ses affirmations, proposer la problématique, les hypothèses et une rédaction. L'IA est aussi l'objet du texte. L'auteur doit relire l'ensemble, valider ou écarter chaque hypothèse et vérifier les sources avant toute publication."
 licence: "CC BY 4.0"
 financement: "aucun"
@@ -23,7 +23,7 @@ Emplacement provisoire. La collection Revue › Research papers prévue par ADR-
 Points à vérifier (chacun bloque la publication) :
 
 - [À VÉRIFIER] Date exacte de publication du rapport. Le colophon porte « © 2026 » et une référence de production datée du 22/10/2026 (p. 31) ; l'adresse du PDF sur dentons.com le range dans les actualités d'octobre 2026.
-- [À VÉRIFIER] Méthode des entretiens : nombre, dates, grille de questions, critères de choix des organisations, lieu d'exercice des personnes interrogées chez Gilead Sciences et Mastercard. Le rapport ne les donne pas ; seule une demande à Dentons permettrait de les connaître.
+- [À VÉRIFIER] Méthode des entretiens : nombre, dates, grille de questions, critères de choix et liste complète des organisations, lieu d'exercice des personnes interrogées chez Gilead Sciences et Mastercard. Le rapport ne les donne pas ; seule une demande à Dentons permettrait de les connaître.
 - [À VÉRIFIER] Texte exact, en français, des articles 12, paragraphes 3 et 5, et 15, paragraphe 3, du règlement (UE) 2016/679 (RGPD), à collationner sur EUR-Lex et à citer in extenso aux endroits signalés. L'accès automatisé à EUR-Lex a échoué le 2026-11-21.
 - [À VÉRIFIER] Lignes directrices du Comité européen de la protection des données sur le droit d'accès (référence, version adoptée, paragraphes pertinents sur les demandes « manifestement infondées ou excessives »).
 - [À VÉRIFIER] Règles belges sur les honoraires et les frais de l'avocat : article 446ter du Code judiciaire et dispositions du code de déontologie d'AVOCATS.BE (articles 5.18 à 5.22 selon la fiche P17), à citer in extenso.
@@ -38,7 +38,7 @@ Positions proposées à Florian, à faire siennes ou à écarter (elles sont sig
 
 ## 1. La question
 
-Le cabinet Dentons a publié en octobre 2026 un rapport fondé sur des entretiens avec des juristes d'entreprise de sept organisations, pour la plupart irlandaises (Dentons, 2026). Une recension en présente le contenu et les limites dans la même collection de la Revue. Ce texte part d'une autre question, que le rapport pose dans sa conclusion sans la traiter : qu'est-ce que l'usage de l'IA, par les entreprises et par les cabinets, change dans ce que le client attend de son avocat et dans ce qu'il est prêt à payer ?
+Le cabinet Dentons a publié en octobre 2026 un rapport fondé sur des entretiens avec des juristes d'entreprise d'organisations pour la plupart irlandaises, dont il cite sept (Dentons, 2026). Une recension en présente le contenu et les limites dans la même collection de la Revue. Ce texte part d'une autre question, que le rapport pose dans sa conclusion sans la traiter : qu'est-ce que l'usage de l'IA, par les entreprises et par les cabinets, change dans ce que le client attend de son avocat et dans ce qu'il est prêt à payer ?
 
 Le rapport y répond par une formule. Les clients attendraient des cabinets qu'ils utilisent les mêmes outils qu'eux, qu'ils les utilisent bien, et qu'ils soient « able to show, credibly, how a human being reviewed the output » ; ce serait, conclut-il, « a trust issue » (p. 29). La formule est juste, à mon sens, mais elle laisse ouvert l'essentiel : ce que signifie montrer, à quel coût, et qui le supporte.
 
@@ -50,7 +50,7 @@ Je ne cherche pas ici à établir ce que pensent les juristes d'entreprise. Le r
 
 *From AI Adoption to AI Advantage* compte 31 pages (Dentons, 2026). Il comprend un avant-propos de Carlo Salizzo et David Kirton, associés du bureau de Dublin (pp. 2 à 4), un résumé signé par Ann O'Dea, de Silicon Republic (pp. 6 et 7), cinq chapitres (pp. 8 à 27), une conclusion (pp. 28 et 29) et une présentation des deux organisations (p. 30).
 
-Les entretiens ont été menés avec des responsables juridiques et de la conformité d'eir, Flipdish, Gilead Sciences, IMRO, Mastercard, Uniphar et Wayflyer, et avec trois personnes de Dentons (p. 6). Neuf personnes extérieures au cabinet sont citées nommément. Le rapport ne donne ni le nombre d'entretiens, ni leurs dates, ni la grille de questions, ni les critères de choix, sinon la volonté de parler à « some of the most innovative legal teams in the market » (p. 2).
+Les entretiens ont été menés avec des responsables juridiques et de la conformité d'entreprises « including eir, Flipdish, Gilead Sciences, IMRO, Mastercard, Uniphar and Wayflyer », et avec trois personnes de Dentons (p. 6) ; la liste n'est donc pas présentée comme complète. Neuf personnes extérieures au cabinet sont citées nommément. Le rapport ne donne ni le nombre d'entretiens, ni leurs dates, ni la grille de questions, ni les critères de choix, sinon la volonté de parler à « some of the most innovative legal teams in the market » (p. 2).
 
 ### 2.2 Trois types d'énoncés
 
