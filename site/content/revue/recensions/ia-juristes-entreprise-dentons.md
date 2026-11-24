@@ -13,7 +13,7 @@ oeuvre:
   consulte_le: 2026-11-21
 programme: "H1"
 date_arret_recherches: 2026-11-21
-controles: "Lecture intégrale du PDF (31 pages, copie fournie par l'auteur). Chaque citation et chaque renvoi de page ont été contrôlés sur le texte extrait du PDF ; la pagination est celle imprimée en pied de page, qui coïncide avec celle du fichier. Les chiffres cités sont ceux du rapport ; aucun n'a pu être vérifié dans une autre source. La page de présentation du rapport sur dentons.com n'a pas pu être consultée. Aucune relecture externe."
+controles: "Lecture intégrale du PDF (31 pages, copie fournie par l'auteur). Chaque citation et chaque renvoi de page ont été contrôlés sur le texte extrait du PDF ; la pagination est celle imprimée en pied de page, qui coïncide avec celle du fichier. Second contrôle de tous les renvois le 2026-11-22. Les chiffres cités sont ceux du rapport ; aucun n'a pu être vérifié dans une autre source. La page de présentation du rapport sur dentons.com n'a pas pu être consultée. Aucune relecture externe."
 usage_ia: "Claude Opus 5.5 (novembre 2026) a été utilisé pour extraire le texte du rapport, relever les écarts entre le résumé et le corps du texte et proposer une rédaction. L'auteur a relu le texte et vérifié les passages cités."
 licence: "CC BY 4.0"
 financement: "aucun"
@@ -25,7 +25,15 @@ conflits_interets: "aucun"
 - [À VÉRIFIER] Date exacte de publication. Le colophon porte « © 2026 » et une référence de production datée du 22/10/2026 (p. 31) ; l'adresse du PDF sur dentons.com range le document dans les actualités d'octobre 2026. L'URL du champ `url` provient d'un moteur de recherche et n'a pas été ouverte (dentons.com refuse les accès automatisés).
 - [À VÉRIFIER] Lieu d'exercice des personnes interrogées chez Gilead Sciences et Mastercard. Le rapport ne le précise pas ; les cinq autres organisations sont irlandaises ou présentées comme telles.
 - [À VÉRIFIER] Si les organisations interrogées sont des clientes de Dentons. L'avant-propos parle de « conversations with clients » (p. 2) sans dire que les entretiens ont été menés avec des clients.
-- Les passages où je prends position sont signalés par « à mon sens » ou « je » : à relire et à valider.
+- [À VÉRIFIER] Méthode et représentativité des entretiens : nombre, dates, grille de questions, critères de choix, liste complète des organisations (le rapport les cite avec « including », p. 6). Seule une demande à Dentons permettrait de les connaître.
+
+Positions proposées à Florian, à faire siennes ou à écarter (signalées dans le texte par « à mon sens » ou « je ») :
+
+1. Le chapitre sur le volume est le plus intéressant du rapport.
+2. La sélection des citations et l'ordre des chapitres servent aussi la présentation de l'offre de Dentons.
+3. L'absence de la confidentialité des données et du règlement sur l'IA surprend dans un rapport irlandais.
+4. Trois observations valent au-delà de l'Irlande : la mesure, le volume, la formation.
+5. La phrase finale sur la démonstration de la relecture humaine est reprise à mon compte.
 
 Le cabinet Dentons a publié en octobre 2026, dans sa série *Leading Edge*, un rapport de 31 pages intitulé *From AI Adoption to AI Advantage*. Il est signé par deux associés du bureau de Dublin, Carlo Salizzo et David Kirton, qui en écrivent l'avant-propos (pp. 2 à 4). Le résumé est signé par Ann O'Dea, directrice et rédactrice en chef de Silicon Republic, un média irlandais consacré à la technologie (pp. 6 et 7, et p. 30).
 
@@ -33,7 +41,7 @@ Je l'ai lu pour deux raisons. Il décrit l'usage de l'IA du côté des clients, 
 
 ## Ce que dit le rapport
 
-Le rapport repose sur des « in-depth interviews » avec des responsables juridiques et de la conformité de sept organisations (eir, Flipdish, Gilead Sciences, IMRO, Mastercard, Uniphar et Wayflyer), complétés par les propos de trois personnes de Dentons, les deux associés déjà cités et Cornelius Grossmann, responsable mondial du développement de solutions (p. 6). Neuf personnes extérieures au cabinet sont citées nommément. Le résumé dégage cinq thèmes (pp. 6 et 7), que les cinq chapitres développent.
+Le rapport repose sur des « in-depth interviews » avec des responsables juridiques et de la conformité d'entreprises parmi lesquelles il cite sept organisations (eir, Flipdish, Gilead Sciences, IMRO, Mastercard, Uniphar et Wayflyer ; la liste est introduite par « including », p. 6), complétés par les propos de trois personnes de Dentons, les deux associés déjà cités et Cornelius Grossmann, responsable mondial du développement de solutions (p. 6). Neuf personnes extérieures au cabinet sont citées nommément. Le résumé dégage cinq thèmes (pp. 6 et 7), que les cinq chapitres développent.
 
 Le premier chapitre (pp. 8 à 11) décrit l'IA comme une couche d'assistance plutôt que comme un remplacement. Le rapport en fait sa conclusion la plus nette : le remplacement d'un poste ou d'une fonction est « very much the exception, not the rule » (p. 9). Les usages dont les personnes interrogées sont fières sont des tâches étroites, bien délimitées et retravaillées plusieurs fois (p. 11). Les exemples sont concrets. Chez Uniphar, Sergey Kinchin a écrit un agent de « final checker » qui relit un contrat avant signature sans chercher les questions juridiques, seulement les renvois, l'orthographe et la cohérence (p. 10). Il a aussi demandé à un outil agentique de Microsoft de reprendre neuf mois de ses courriels pour retracer, clause par clause, ce qui a été négocié dans chaque contrat-cadre de services (p. 11). Chez eir, l'équipe juridique n'a commencé à parler d'IA qu'après des années de regroupement de ses documents dans un référentiel unique (pp. 9 et 10).
 
@@ -47,7 +55,7 @@ Le quatrième chapitre (pp. 20 à 23) traite des coûts. Il annonce le passage d
 
 Le rapport ne prétend pas être une enquête. L'avant-propos explique qu'il a été écrit en réaction aux « countless surveys with convincing statistics » et qu'il cherche à savoir ce qui se passe réellement, au-delà des supports marketing des cabinets et des éditeurs (p. 2). C'est une démarche qualitative, et elle doit être lue comme telle. Trois limites en découlent.
 
-La méthode n'est pas décrite. On ne connaît ni le nombre d'entretiens, ni leurs dates, ni les questions posées, ni la manière dont les organisations ont été choisies, sinon qu'il s'agit de « some of the most innovative legal teams in the market » (p. 2). La seule indication de date est la mention « All roles and organisations correct at the time of interview » (p. 7). L'échantillon est donc choisi pour son avance, il est principalement irlandais, et il ne permet aucune généralisation. Le rapport s'en garde d'ailleurs dans le corps du texte, beaucoup moins dans son résumé et sa conclusion.
+La méthode n'est pas décrite. On ne connaît ni la liste complète des organisations, ni le nombre d'entretiens, ni leurs dates, ni les questions posées, ni la manière dont les organisations ont été choisies, sinon qu'il s'agit de « some of the most innovative legal teams in the market » (p. 2). La seule indication de date est la mention « All roles and organisations correct at the time of interview » (p. 7). L'échantillon est donc choisi pour son avance, il est principalement irlandais, et il ne permet aucune généralisation. Le rapport s'en garde d'ailleurs dans le corps du texte, beaucoup moins dans son résumé et sa conclusion.
 
 C'est là que se trouve le second problème. Plusieurs affirmations du résumé et de la conclusion n'ont pas d'appui dans les chapitres.
 
