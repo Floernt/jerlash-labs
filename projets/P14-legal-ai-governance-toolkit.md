@@ -69,7 +69,7 @@ Licence : CC BY-NC 4.0 (ADR-026). Vérifier les droits sur les deux documents de
 - [x] Toolkit lu en entier par Florian, qui y adhère
 - [x] Points juridiques vérifiés et datés, ou marqués
 - [x] D01 (éditeur : jerlash.labs) et D02 (licence : CC BY-NC 4.0) tranchés (ADR-026)
-- [x] Téléchargements reproductibles, sans données (2026-11-11, ADR-034 ; contrôles dans `outils/gouvernance-ia/tests/` : mêmes octets d'une construction à l'autre, formulaires et registres vides. Restent à la main de Florian : l'ouverture de la charte .docx dans Word et les droits sur les deux documents de `99_SOURCES`, exclus du pack)
+- [x] Téléchargements reproductibles, sans données (2026-11-11, ADR-034 ; contrôles dans `outils/gouvernance-ia/tests/` : mêmes octets d'une construction à l'autre, formulaires et registres vides. Le 2026-11-22, les deux chartes .docx, française et anglaise, s'ouvrent dans Microsoft Word sans réparation : six pages chacune. Reste à la main de Florian : les droits sur les deux documents de `99_SOURCES`, exclus du pack)
 - [x] `python scripts/verifier.py --publication` vert
 - [x] Version anglaise à jour
 
