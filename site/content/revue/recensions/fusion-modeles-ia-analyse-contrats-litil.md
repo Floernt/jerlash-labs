@@ -20,7 +20,7 @@ financement: "aucun"
 conflits_interets: "aucun"
 ---
 
-Litil se présente comme un « laboratoire d'IA juridique » qui développe des modèles ouverts pour l'analyse de documents juridiques. Son équipe compte plusieurs avocats-développeurs. La note recensée, publiée le 5 novembre 2026 sans nom d'auteur, raconte une expérience technique précise : comment le laboratoire a amélioré son modèle de repérage de clauses contractuelles en faisant la moyenne de trois entraînements. Le texte est rédigé pour des ingénieurs. Je le recense parce qu'il fait une chose rare chez un acteur commercial : il publie ses tableaux, y compris ceux qui ne l'arrangent pas, ce qui permet de le discuter sur pièces.
+Litil se présente comme un « laboratoire d'IA juridique » qui développe des modèles ouverts pour l'analyse de documents juridiques. Son équipe compte plusieurs avocats-développeurs. La note recensée, publiée le 5 novembre 2026 sans nom d'auteur, raconte une expérience technique précise : comment le laboratoire a amélioré son modèle de repérage de clauses contractuelles en faisant la moyenne de trois entraînements. Le texte est rédigé pour des ingénieurs. Nous le recensons parce qu'il fait une chose rare chez un acteur commercial : il publie ses tableaux, y compris ceux qui ne l'arrangent pas, ce qui permet de le discuter sur pièces.
 
 ## Le propos de la note
 
@@ -40,7 +40,7 @@ La note contient aussi un développement mathématique sur la bonne manière de 
 
 Le chiffre de 77,8 % à 92,2 % compare le modèle fusionné au modèle précédent. Les tableaux de la note montrent que chacun des trois entraînements, pris isolément, fait déjà presque aussi bien : 93,4 %, 90,9 % et 91,3 %. Le premier entraînement, celui qui avait été écarté, fait même mieux que la fusion sur cette mesure.
 
-Le saut de quinze points vient donc de la nouvelle recette d'entraînement, pas de la fusion. La fusion apporte autre chose, que la note démontre mieux : elle lisse les résultats et permet de passer tous les contrôles sans avoir à choisir le « bon » entraînement. Le sous-titre, qui attribue le gain à la soupe, me paraît surévaluer la technique au détriment du travail qui l'a précédée.
+Le saut de quinze points vient donc de la nouvelle recette d'entraînement, pas de la fusion. La fusion apporte autre chose, que la note démontre mieux : elle lisse les résultats et permet de passer tous les contrôles sans avoir à choisir le « bon » entraînement. Le sous-titre, qui attribue le gain à la soupe, nous paraît surévaluer la technique au détriment du travail qui l'a précédée.
 
 ### Ce que les tableaux nuancent
 
@@ -52,7 +52,7 @@ Enfin, la comparaison de calibrage oppose une valeur « reconstruite hors ligne
 
 ### La règle des contrôles fixés à l'avance
 
-Je retiens une pratique de méthode qui mérite d'être reprise : le laboratoire écrit ses contrôles avant chaque entraînement et s'interdit de les modifier après coup. C'est l'équivalent, pour un modèle, de la préinscription d'un protocole de recherche. La note ne les énumère pas tous et réintègre dans la fusion l'entraînement qui en avait raté un. Je n'écris pas ici que c'est une erreur : la technique repose justement sur la moyenne de plusieurs entraînements. Mais la règle n'empêche pas de relancer des entraînements jusqu'à obtenir un résultat qui passe, et la note n'explique pas comment le nombre de trois a été fixé.
+Nous retenons une pratique de méthode qui mérite d'être reprise : le laboratoire écrit ses contrôles avant chaque entraînement et s'interdit de les modifier après coup. C'est l'équivalent, pour un modèle, de la préinscription d'un protocole de recherche. La note ne les énumère pas tous et réintègre dans la fusion l'entraînement qui en avait raté un. Nous n'écrivons pas ici que c'est une erreur : la technique repose justement sur la moyenne de plusieurs entraînements. Mais la règle n'empêche pas de relancer des entraînements jusqu'à obtenir un résultat qui passe, et la note n'explique pas comment le nombre de trois a été fixé.
 
 ### Le statut du texte
 
@@ -60,11 +60,11 @@ La note est publiée par une société qui propose ses services (« Work with u
 
 ## L'intérêt pour les juristes
 
-Pour un avocat, la note n'a pas d'utilité directe : la fusion de modèles se pratique en amont, chez celui qui entraîne le modèle. Elle en a une indirecte, à mon sens importante. Elle montre de l'intérieur qu'avec les mêmes données et la même recette, un simple changement de hasard fait passer un modèle de « refusé » à « accepté » sur un critère de qualité. La performance d'un outil d'analyse de contrats n'est donc pas une propriété stable que l'on mesure une fois. Elle dépend de choix d'entraînement que l'utilisateur ne voit pas.
+Pour un avocat, la note n'a pas d'utilité directe : la fusion de modèles se pratique en amont, chez celui qui entraîne le modèle. Elle en a une indirecte, à notre sens importante. Elle montre de l'intérieur qu'avec les mêmes données et la même recette, un simple changement de hasard fait passer un modèle de « refusé » à « accepté » sur un critère de qualité. La performance d'un outil d'analyse de contrats n'est donc pas une propriété stable que l'on mesure une fois. Elle dépend de choix d'entraînement que l'utilisateur ne voit pas.
 
 La conséquence pratique, pour un cabinet qui évalue un outil, est de demander au fournisseur sur quel jeu de test ses chiffres ont été mesurés, combien de cas positifs il contient et si les résultats ont été reproduits sur plusieurs entraînements. La plupart des fournisseurs ne publient pas ces informations ; Litil, ici, le fait.
 
-Pour le programme IA & confiance de jerlash.labs, la note fournit un cas concret : un chiffre de titre exact mais attribué à la mauvaise cause, et des tableaux qui permettent au lecteur attentif de le rectifier. Je m'en servirai dans la grille de lecture des annonces de performance que prépare le programme. [À VÉRIFIER : engagement à confirmer par l'auteur.]
+Pour le programme IA & confiance de jerlash.labs, la note fournit un cas concret : un chiffre de titre exact mais attribué à la mauvaise cause, et des tableaux qui permettent au lecteur attentif de le rectifier. Nous nous en servirons dans la grille de lecture des annonces de performance que prépare le programme. [À VÉRIFIER : engagement à confirmer par l'auteur.]
 
 ## La référence
 

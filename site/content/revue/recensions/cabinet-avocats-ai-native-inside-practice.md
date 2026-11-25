@@ -32,9 +32,9 @@ Le rapport y ajoute un test fonctionnel, qu'il présente comme le plus net  da
 
 La définition retenue est plus prudente que le titre ne le laisse croire. Le cabinet AI-native y est « lawyer-led, governance-first, data-enabled », et la formule qui l'accompagne mérite d'être retenue  « lawyer-led does not mean lawyer-only, and AI-enabled does not mean AI-unaccountable ». Le rapport s'y tient d'ailleurs assez bien. Il réserve les scénarios d'autonomie forte au chapitre de prospective et répète que l'IA produit, que l'avocat juge et signe, et que la gouvernance est un actif commercial.
 
-Trois outils du rapport me paraissent directement utilisables, y compris par un cabinet de petite taille.
+Trois outils du rapport nous paraissent directement utilisables, y compris par un cabinet de petite taille.
 
-Le premier est la segmentation de la tarification par type de travail (chapitre 7). Le rapport refuse l'idée d'une disparition de l'heure facturable et propose de garder l'horaire pour le travail sur mesure à fort enjeu, de passer au forfait ou au prix unitaire pour le travail répétable, aux services gérés pour le volume et à l'abonnement pour la veille et le conseil récurrent. C'est la position la plus mesurée du rapport, et à mon sens la plus juste.
+Le premier est la segmentation de la tarification par type de travail (chapitre 7). Le rapport refuse l'idée d'une disparition de l'heure facturable et propose de garder l'horaire pour le travail sur mesure à fort enjeu, de passer au forfait ou au prix unitaire pour le travail répétable, aux services gérés pour le volume et à l'abonnement pour la veille et le conseil récurrent. C'est la position la plus mesurée du rapport, et à notre sens la plus juste.
 
 Le deuxième est la répartition des tâches en quatre niveaux de risque (chapitres 4 et 6), du travail interne non confidentiel, qui demande une relecture légère, jusqu'aux actes de procédure et aux enquêtes couvertes par le secret, qui demandent une vérification des sources, des outils restreints, une traçabilité et une signature nominative. Une liste d'usages interdits complète la grille  conseil sans supervision, dépôt automatique d'un acte, données confidentielles dans un outil public, citation non vérifiée.
 
@@ -56,7 +56,7 @@ Restent les petites contradictions d'assemblage. Le chapitre 11 énumère six im
 
 Le problème le plus important est ailleurs. Les études de cas qui portent la démonstration reposent presque toutes sur des sources que les entreprises contrôlent  communiqués de presse (Harvey, Legora, Freshfields, Garfield), blogs d'investisseurs (Sequoia), agrégateurs de levées de fonds. Les chiffres de Crosby (13 000 contrats, 58 minutes de délai médian, une croissance de 400 %) reviennent dans cinq chapitres, toujours à partir d'une fiche de levée de fonds. Le chapitre 13 le reconnaît honnêtement  ce sont des chiffres « disclosed or reported » et non vérifiés. Il faut donc lire le rapport comme une synthèse de ce que le marché dit de lui-même, et non comme une mesure de ce qu'il fait.
 
-J'ajoute un élément de contexte que le rapport ne mentionne pas  son éditeur vend des événements et une visibilité dans un annuaire à des éditeurs de logiciels et à des investisseurs, ce qu'il présente lui-même comme un public cible (« Vendors & Investors »). Je n'en déduis pas que les conclusions sont biaisées. Je note qu'aucune déclaration d'intérêts n'accompagne un texte dont les recommandations (investir dans l'infrastructure, refondre la tarification, surveiller les nouveaux entrants) rejoignent les intérêts de ce public.
+J'ajoute un élément de contexte que le rapport ne mentionne pas  son éditeur vend des événements et une visibilité dans un annuaire à des éditeurs de logiciels et à des investisseurs, ce qu'il présente lui-même comme un public cible (« Vendors & Investors »). Nous n'en déduisons pas que les conclusions sont biaisées. Nous notons qu'aucune déclaration d'intérêts n'accompagne un texte dont les recommandations (investir dans l'infrastructure, refondre la tarification, surveiller les nouveaux entrants) rejoignent les intérêts de ce public.
 
 ## Ce que le rapport ne voit pas  l'Europe continentale
 
@@ -64,7 +64,7 @@ Le rapport est entièrement construit sur deux marchés, les États-Unis et l'An
 
 Cette absence n'est pas un détail, parce que le modèle que décrit le rapport en dépend. Le rapport l'écrit lui-même au chapitre 12  « The decisive constraint is structural rather than ethical ». Dans la plupart des États américains, la règle 5.4 du modèle de l'American Bar Association interdit la détention d'un cabinet par des non-avocats, et le rapport explique que les cabinets AI-native qu'il cite ont pu se financer grâce aux exceptions de l'Arizona et du Legal Services Act anglais de 2007. Norm Law est soutenu par Blackstone, Bain Capital et Vanguard  Crosby par Sequoia. Le chapitre 7 reprend à son compte la thèse de Bloomberg Law selon laquelle la voie la plus directe vers le cabinet AI-native passe par le capital extérieur.
 
-Le lecteur belge doit donc se poser une question que le rapport ne pose pas  que reste-t-il du modèle lorsque ce capital n'est pas disponible  Je n'y réponds pas ici. Elle demande d'examiner les règles déontologiques belges sur l'exercice en société et la détention du capital, texte à l'appui, et fera l'objet d'une note distincte dans les Perspectives.
+Le lecteur belge doit donc se poser une question que le rapport ne pose pas  que reste-t-il du modèle lorsque ce capital n'est pas disponible  Nous n'y répondons pas ici. Elle demande d'examiner les règles déontologiques belges sur l'exercice en société et la détention du capital, texte à l'appui, et fera l'objet d'une note distincte dans les Perspectives.
 
 ## Ce qu'un cabinet belge peut en retenir
 
@@ -74,4 +74,4 @@ Un cabinet de cinq à vingt avocats n'a pas de pyramide de collaborateurs à pro
 
 Le premier rejoint la matrice standardisation et enjeu proposée dans la rubrique « Automatiser une prestation », qui ajoute à la segmentation du rapport une variable qu'il ignore  l'enjeu du dossier pour le client. Le deuxième correspond à ce que la boîte à outils [Gouvernance de l'IA](/outils/gouvernance-ia/) appelle l'homologation des usages et la supervision. Le troisième ne demande qu'une page écrite avant le premier essai.
 
-Je prépare une grille d'autodiagnostic qui reprend ces trois éléments à l'échelle d'un petit cabinet, et une note sur le cabinet AI-native en droit belge. La [recension du livre d'Olivier Chaduteau](/revue/recensions/impact-ia-juristes-avocats-affaires-chaduteau/), qui traite des mêmes transformations du modèle économique depuis le marché français, en est un bon complément.
+Nous préparons une grille d'autodiagnostic qui reprend ces trois éléments à l'échelle d'un petit cabinet, et une note sur le cabinet AI-native en droit belge. La [recension du livre d'Olivier Chaduteau](/revue/recensions/impact-ia-juristes-avocats-affaires-chaduteau/), qui traite des mêmes transformations du modèle économique depuis le marché français, en est un bon complément.

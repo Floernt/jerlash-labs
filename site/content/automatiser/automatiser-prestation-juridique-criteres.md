@@ -7,7 +7,7 @@ date: 2026-10-31
 weight: 10
 ---
 
-Chaque semaine, un avocat entrepreneur me pose une variante de la même question : « Est-ce que je peux automatiser ça ? » La réponse courte est : parfois oui, parfois non, et la distinction n’est pas toujours là où on la croit.
+Chaque semaine, un avocat entrepreneur nous pose une variante de la même question : « Est-ce que je peux automatiser ça ? » La réponse courte est : parfois oui, parfois non, et la distinction n’est pas toujours là où on la croit.
 
 Avant de se lancer dans l’automatisation d’une prestation, il y a quatre variables à examiner. Elles ne donnent pas une réponse définitive, mais elles permettent d’éviter deux erreurs symétriques : automatiser ce qui ne devrait pas l’être, et ne pas automatiser ce qui pourrait l’être sans risque.
 
@@ -47,6 +47,6 @@ Entre 10 et 12, le potentiel est fort. L’automatisation a du sens, et le tarif
 
 Ce scoring n’est pas une formule magique. C’est un outil pour structurer une décision qui, sans ça, se prend souvent à l’instinct, avec les biais que ça implique.
 
-## Mon conseil
+## Notre conseil
 
 Avant de décider d’automatiser une prestation, prenez cinq minutes pour scorer ces quatre critères. Si vous ne savez pas quoi scorer sur la complexité perçue, c’est probablement parce que vous n’avez pas encore demandé à vos clients comment ils vivent cette question. C’est souvent là que commence le vrai travail de positionnement.

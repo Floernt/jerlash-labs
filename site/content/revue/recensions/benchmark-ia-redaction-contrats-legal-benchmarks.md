@@ -38,7 +38,7 @@ L'écart le plus net porte sur le temps : un peu moins de treize minutes en moy
 
 ### Une égalité qui dit surtout que la tâche est difficile
 
-Le chiffre qui circulera est l'égalité entre l'IA et l'avocat : 57 % contre 56,7 %. À mon sens, le chiffre le plus instructif est ailleurs. Il est dans le niveau absolu. Une fiabilité moyenne de 57 % signifie que, selon le critère retenu, plus de quatre productions sur dix ne sont pas fiables, qu'elles viennent d'une machine ou d'un confrère. Le meilleur avocat de l'échantillon plafonne à 70 %.
+Le chiffre qui circulera est l'égalité entre l'IA et l'avocat : 57 % contre 56,7 %. À notre sens, le chiffre le plus instructif est ailleurs. Il est dans le niveau absolu. Une fiabilité moyenne de 57 % signifie que, selon le critère retenu, plus de quatre productions sur dix ne sont pas fiables, qu'elles viennent d'une machine ou d'un confrère. Le meilleur avocat de l'échantillon plafonne à 70 %.
 
 Deux lectures sont possibles. Soit les tâches étaient très exigeantes, soit le critère de fiabilité est sévère. Sans la définition de ce critère, impossible de trancher, et c'est le premier problème de l'étude.
 
@@ -52,15 +52,15 @@ Prenons l'écart entre 57 % et 56,7 %. Sur trente tâches, et sans connaître le
 
 ### Le modèle économique de l'évaluateur
 
-Legal Benchmarks déclare n'avoir aucun sponsor parmi les éditeurs et précise que les éditeurs ne peuvent ni prévisualiser ni modifier les résultats. Le site indique aussi que les éditeurs paient des frais d'évaluation, peuvent commander des rapports privés, obtenir des certifications et recourir à des prestations de conseil. Je n'écris pas ici que les résultats sont biaisés : rien dans la page ne le laisse penser. J'estime en revanche qu'un évaluateur rémunéré par les acteurs qu'il évalue doit publier sa méthode de façon complète pour que sa déclaration d'indépendance puisse être vérifiée. Pour l'étude de 2025, ce n'est pas le cas.
+Legal Benchmarks déclare n'avoir aucun sponsor parmi les éditeurs et précise que les éditeurs ne peuvent ni prévisualiser ni modifier les résultats. Le site indique aussi que les éditeurs paient des frais d'évaluation, peuvent commander des rapports privés, obtenir des certifications et recourir à des prestations de conseil. Nous n'écrivons pas ici que les résultats sont biaisés : rien dans la page ne le laisse penser. J'estime en revanche qu'un évaluateur rémunéré par les acteurs qu'il évalue doit publier sa méthode de façon complète pour que sa déclaration d'indépendance puisse être vérifiée. Pour l'étude de 2025, ce n'est pas le cas.
 
 ## L'intérêt pour les juristes
 
 Pour un avocat qui se demande s'il doit confier ses premières versions de contrats à un outil, l'étude donne une information utile, à condition de la lire correctement. Elle ne montre pas que l'IA rédige aussi bien qu'un avocat. Elle montre que, sur ce jeu de tâches, ni l'un ni l'autre ne produit seul un texte fiable dans une proportion rassurante, et que la combinaison des deux fait un peu mieux. Le gain de temps est massif ; le gain de qualité est modeste et mal établi.
 
-La conséquence pratique est, à mon sens, la suivante : le temps gagné sur la rédaction doit être réinvesti dans la relecture, faute de quoi le cabinet échange douze minutes contre un taux d'erreur inchangé.
+La conséquence pratique est, à notre sens, la suivante : le temps gagné sur la rédaction doit être réinvesti dans la relecture, faute de quoi le cabinet échange douze minutes contre un taux d'erreur inchangé.
 
-Pour le programme de recherche IA & confiance de jerlash.labs, l'étude pose la bonne question, celle de l'avocat assisté plutôt que du duel homme-machine, sans fournir les moyens d'y répondre. Une réplication devrait au minimum publier la définition du critère de fiabilité, la grille d'utilité, le nombre et le profil des participants, le protocole d'assistance et la dispersion des résultats. Je reviendrai sur ces conditions dans le protocole d'évaluation du programme. [À VÉRIFIER : engagement à confirmer par l'auteur.]
+Pour le programme de recherche IA & confiance de jerlash.labs, l'étude pose la bonne question, celle de l'avocat assisté plutôt que du duel homme-machine, sans fournir les moyens d'y répondre. Une réplication devrait au minimum publier la définition du critère de fiabilité, la grille d'utilité, le nombre et le profil des participants, le protocole d'assistance et la dispersion des résultats. Nous reviendrons sur ces conditions dans le protocole d'évaluation du programme. [À VÉRIFIER : engagement à confirmer par l'auteur.]
 
 ## La référence
 

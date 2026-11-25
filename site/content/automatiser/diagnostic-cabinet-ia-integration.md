@@ -38,7 +38,7 @@ Pour chaque dimension, choisir la colonne qui décrit ce qui se passe réellemen
 
 Le résultat utile n'est pas un score. C'est le profil. Prenons un exemple  un cabinet qui se place en « conçu autour de » pour le flux de travail, mais en « utilise » pour la supervision et la gouvernance, a construit une production rapide sans contrôle. C'est la situation la plus risquée de la grille, plus risquée que de rester partout dans la première colonne. À l'inverse, un cabinet avancé en gouvernance et en retard sur la tarification paie le coût du contrôle sans en tirer de bénéfice économique, et c'est le signal qu'il faut regarder ses prix.
 
-Trois règles de lecture me paraissent suffire.
+Trois règles de lecture nous paraissent suffire.
 
 La supervision et la gouvernance ne devraient jamais être en retard sur le flux de travail. Avant d'avancer d'une colonne dans la manière de produire, il faut avoir avancé d'une colonne dans la manière de contrôler.
 

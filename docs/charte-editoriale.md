@@ -14,7 +14,9 @@ Décision de Florian du 2026-10-31. Le site ne mentionne pas la notion d'offre e
 
 ## Ton
 
-Un avocat qui explique à un confrère ce qu'il a testé. Première personne admise quand elle apporte une information ("j'ai testé avec 40 pièces, le traitement a pris..."). Pas de promesse, pas de superlatif, pas de dramatisation des enjeux.
+Un avocat qui explique à un confrère ce qu'il a testé. Première personne admise quand elle apporte une information ("nous avons testé avec 40 pièces, le traitement a pris..."). Pas de promesse, pas de superlatif, pas de dramatisation des enjeux.
+
+Décision de Florian du 2026-11-25 : les textes publiés sur jerlash.labs s'écrivent au « nous » (nous d'auteur), jamais au « je ». Les marqueurs d'opinion suivent : « à notre sens », « nous pensons », « nous paraît ». Quand une citation contient elle-même un « nous » qui désigne quelqu'un d'autre, la reformuler ou l'attribuer clairement pour éviter la confusion avec la voix du texte.
 
 ## Exactitude
 
