@@ -1,0 +1,8 @@
+{
+  "$comment": "Correspondance PROPOSÉE entre les scénarios sentinelles de la fiche §14 (repris du ticket FLO-66) et les cas du fichier JERLASH_Labs_Benchmark_Faillite_40_Cas.csv. [À VÉRIFIER] par Florian.",
+  "30 jours et forclusion": ["BK-11", "BK-12"],
+  "régimes successifs d'effacement": ["BK-21", "BK-22"],
+  "cautions 2026": ["BK-26"],
+  "informations contradictoires": ["BK-30", "BK-40"],
+  "décision du curateur": ["BK-19", "BK-20"]
+}

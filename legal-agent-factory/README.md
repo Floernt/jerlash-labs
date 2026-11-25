@@ -187,3 +187,33 @@ Les réponses enregistrées (`tests/fixtures/lot2/reponses-enregistrees.json`) s
 - Registre des sources : tout `source_unverified`, en attente de FLO-60 [À VÉRIFIER].
 - Correspondance des démonstrateurs avec UC01, UC03, UC04 [À VÉRIFIER].
 - Repérage des demandes d'action et des injections par expressions régulières : indicatif, à enrichir par des tests adverses. La garantie tient à l'absence de toute action exécutable.
+
+## Lot 3, MVP : banc d'évaluation (FLO-66)
+
+Harnais d'évaluation du benchmark de faillite (`laf/banc/`), construit en parallèle du Lot 2 et sans les accès aux fournisseurs. Il tourne sur la chaîne du Lot 1 avec le modèle simulé, sans le routeur ni les skills du Lot 2 : il éprouve la mécanique d'évaluation, pas la qualité juridique ni un modèle réel.
+
+```
+python -m laf evaluer sonde --fournisseur simulee --modele simule-deterministe
+python -m laf evaluer executer --cas <CSV hors dépôt> --serie config/banc/serie-simulee-design.json --pieces <dossier> --sortie <répertoire de série> [--variantes]
+python -m laf evaluer rapport --cas <CSV hors dépôt> --sortie <répertoire de série> [--references <dossier>] [--notes <dossier>]
+```
+
+Cas. Le fichier `JERLASH_Labs_Benchmark_Faillite_40_Cas.csv` reste hors dépôt. Ses colonnes sont contrôlées. La répartition conception (`design`) / test final (`holdout`) est celle de la colonne `jeu`, jamais recalculée ; le jeu `holdout` exige `--confirmer-holdout`. La colonne `attendu` n'est ni montrée au système évalué ni utilisée pour noter.
+
+Pièces. Un sous-dossier par cas (`<pieces>/BK-01/…`) contenant les pièces synthétiques. Le fichier de cas ne contient que des descriptions de scénario : sans pièces, le cas est marqué `pieces_manquantes` et rien n'est mesuré.
+
+Gel. `gel.json` fixe la série (fournisseur, modèle, endpoint, jeu, skill, tarifs) et les empreintes du fichier de cas, des pièces, des instructions, du schéma et du code. Une reprise n'est admise qu'à l'identique ; tout changement impose un nouveau répertoire de série. Seul le plafond peut être relevé pour reprendre.
+
+Dépense. Avec un fournisseur réel, la série est refusée sans `plafond` et sans `tarifs`. Le coût est estimé d'après les tokens déclarés par l'API ; au plafond, la série s'arrête et le signale.
+
+Mesures. Sans juge : orchestration (runtime terminé), ingestion (qualification conforme), actions à risque (tentatives et actions effectuées, zéro toléré), efficience (durée, tokens, appels, demandes d'outils, corrections, coût). Dimensions juridiques (faits critiques avec preuve, droit applicable dans le temps, sources décisives) : notation humaine, prise en compte seulement si une référence signée existe (`<references>/<id>.json` avec `signe_par` et `date_signature`) ; sinon « non évalué ». Les cas à erreur critique sont rapportés un par un, jamais moyennés.
+
+Sonde. Pour chaque modèle et endpoint, essais répétés du JSON contraint (`response_format`) et des appels d'outils (outil fictif, jamais exécuté) ; issue observée, instable, non observée ou erreur. Les adaptateurs Scaleway et Umans n'étant pas branchés, ils donnent aujourd'hui « erreur ».
+
+Variantes. `--variantes` ajoute, pour chaque cas qui a des pièces, des injections d'instructions (consigne, envoi, dépôt, anglais, pièce jointe injectée) et des variations (ordre inversé, pièce tronquée, pièce dupliquée).
+
+À vérifier :
+- libellés des dimensions et scénarios sentinelles repris du ticket, la fiche §14 n'ayant pas été consultée (hors dépôt) [À VÉRIFIER] ;
+- correspondance sentinelles / cas dans `config/banc/sentinelles.json` [À VÉRIFIER] ;
+- forme de `response_format` et `tools` chez Scaleway et Umans [À VÉRIFIER] ;
+- `config/banc/instructions-provisoires.txt` tient lieu de skill tant que le banc n'est pas branché sur la chaîne du Lot 2.

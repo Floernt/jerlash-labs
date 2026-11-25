@@ -4,21 +4,31 @@
   python -m laf surveiller --entree D --sortie D --etat D [--intervalle 2] [--une-fois] [--runtime-url URL]
   python -m laf rejouer --evenement FICHIER --entree D --sortie D --etat D [--runtime-url URL]
   python -m laf demo
+  python -m laf evaluer sonde [--fournisseur simulee] [--modele M]
+  python -m laf evaluer executer --cas CSV --serie JSON --sortie D [--pieces D] [--variantes] [--confirmer-holdout]
+  python -m laf evaluer rapport --cas CSV --sortie D [--references D] [--notes D]
 """
 
 import argparse
+import json
 import os
 import shutil
 import sys
 import tempfile
 import time
 
+from .banc.cas import charger_cas
+from .banc.execution import SerieRefusee, executer_serie
+from .banc.rapport import produire
+from .banc.sonde import sonder
 from .chaine import Chaine, compter, lire_evenement, verifier_repertoires
+from .passerelle import PasserelleScaleway, PasserelleSimulee, PasserelleUmans
 from .runtime import ClientRuntime, creer_serveur, demarrer_en_fond
 from .surveillance import Surveillant
 
-FIXTURE_DEMO = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                            "tests", "fixtures", "courrier-synthetique.txt")
+RACINE_LAF = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FIXTURE_DEMO = os.path.join(RACINE_LAF, "tests", "fixtures", "courrier-synthetique.txt")
+DOSSIER_CONFIG_BANC = os.path.join(RACINE_LAF, "config", "banc")
 
 
 def _chaine(args) -> Chaine:
@@ -84,6 +94,52 @@ def cmd_demo(args) -> int:
     return 0
 
 
+PASSERELLES = {"simulee": PasserelleSimulee, "scaleway": PasserelleScaleway, "umans": PasserelleUmans}
+
+
+def charger_serie(chemin: str) -> dict:
+    """Lit une série ; les chemins `instructions` et `schema` sont relatifs à son fichier."""
+    with open(chemin, encoding="utf-8") as f:
+        serie = {k: v for k, v in json.load(f).items() if not k.startswith("$")}
+    base = os.path.dirname(os.path.abspath(chemin))
+    for cle in ("instructions", "schema"):
+        serie[cle] = os.path.normpath(os.path.join(base, serie[cle]))
+    return serie
+
+
+def cmd_evaluer_sonde(args) -> int:
+    print(json.dumps(sonder(PASSERELLES[args.fournisseur](), args.modele, args.repetitions),
+                     ensure_ascii=False, indent=2))
+    return 0
+
+
+def cmd_evaluer_executer(args) -> int:
+    serie = charger_serie(args.serie)
+    try:
+        resume = executer_serie(serie, charger_cas(args.cas), args.cas, args.pieces, args.sortie,
+                                PASSERELLES[serie["fournisseur"]](), args.confirmer_holdout, args.variantes)
+    except SerieRefusee as e:
+        print(f"Série refusée : {e}", file=sys.stderr)
+        return 2
+    print(json.dumps(resume, ensure_ascii=False))
+    if resume["plafond"]:
+        print("Plafond de dépense atteint : série arrêtée, à signaler.", file=sys.stderr)
+    return 0
+
+
+def cmd_evaluer_rapport(args) -> int:
+    sentinelles = None
+    if args.sentinelles and os.path.isfile(args.sentinelles):
+        with open(args.sentinelles, encoding="utf-8") as f:
+            sentinelles = json.load(f)
+    texte = produire(charger_cas(args.cas), args.sortie, args.references, args.notes, sentinelles)
+    chemin = os.path.join(args.sortie, "rapport.md")
+    with open(chemin, "w", encoding="utf-8") as f:
+        f.write(texte)
+    print(chemin)
+    return 0
+
+
 def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="laf", description="Legal Agent Factory, Lot 1 (local, sans secrets)")
     sous = p.add_subparsers(dest="commande", required=True)
@@ -107,6 +163,29 @@ def main(argv=None) -> int:
 
     d = sous.add_parser("demo", help="démonstration de bout en bout dans un dossier temporaire")
     d.set_defaults(fonction=cmd_demo)
+
+    e = sous.add_parser("evaluer", help="banc d'évaluation du Lot 3 (benchmark faillite)")
+    ev = e.add_subparsers(dest="etape", required=True)
+    s = ev.add_parser("sonde", help="JSON contraint et appels d'outils, par modèle et endpoint")
+    s.add_argument("--fournisseur", default="simulee", choices=sorted(PASSERELLES))
+    s.add_argument("--modele", default="simule-deterministe")
+    s.add_argument("--repetitions", type=int, default=3)
+    s.set_defaults(fonction=cmd_evaluer_sonde)
+    x = ev.add_parser("executer", help="exécute une série gelée")
+    x.add_argument("--cas", required=True, help="fichier CSV du benchmark (hors dépôt)")
+    x.add_argument("--serie", required=True, help="configuration de la série (JSON)")
+    x.add_argument("--pieces", help="dossier des pièces synthétiques, un sous-dossier par cas")
+    x.add_argument("--sortie", required=True, help="répertoire de la série (un par configuration)")
+    x.add_argument("--variantes", action="store_true", help="ajoute injections et variations de pièces")
+    x.add_argument("--confirmer-holdout", action="store_true", help="autorise le jeu de test final")
+    x.set_defaults(fonction=cmd_evaluer_executer)
+    r = ev.add_parser("rapport", help="produit le rapport Markdown d'une série")
+    r.add_argument("--cas", required=True)
+    r.add_argument("--sortie", required=True)
+    r.add_argument("--references", help="réponses de référence signées, <id>.json")
+    r.add_argument("--notes", help="notes humaines, <id>.json")
+    r.add_argument("--sentinelles", default=os.path.join(DOSSIER_CONFIG_BANC, "sentinelles.json"))
+    r.set_defaults(fonction=cmd_evaluer_rapport)
 
     args = p.parse_args(argv)
     return args.fonction(args)
