@@ -7,10 +7,10 @@ date: 2026-10-31
 weight: 10
 slug: "automating-legal-services-criteria"
 traduction:
-  source: "96eec9d864a6ff6af591fc2fff48e302b92450ba"
+  source: "22e017a27e9abee48b66952d931dae2a4d2501cb"
 ---
 
-Every week, an entrepreneurial lawyer asks me a variant of the same question: “Can I automate this?” The short answer is: sometimes yes, sometimes no, and the distinction is not always where you think it is.
+Every week, an entrepreneurial lawyer asks us a variant of the same question: “Can I automate this?” The short answer is: sometimes yes, sometimes no, and the distinction is not always where you think it is.
 
 Before setting out to automate a service, there are four variables to examine. They do not give a definitive answer, but they help avoid two symmetrical mistakes: automating what should not be automated, and not automating what could be automated without risk.
 
@@ -50,6 +50,6 @@ Between 10 and 12, the potential is high. Automation makes sense, and the fee ca
 
 This scoring is not a magic formula. It is a tool for structuring a decision that, without it, is often made on instinct, with the biases that entails.
 
-## My advice
+## Our advice
 
 Before deciding to automate a service, take five minutes to score these four criteria. If you do not know what score to give for perceived complexity, it is probably because you have not yet asked your clients how they experience this question. That is often where the real positioning work begins.

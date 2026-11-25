@@ -56,7 +56,7 @@ Nous retenons une pratique de méthode qui mérite d'être reprise : le laborat
 
 ### Le statut du texte
 
-La note est publiée par une société qui propose ses services (« Work with us », « Book a call ») et présente son propre modèle, sans le nommer. Les essais antérieurs évoqués en fin de note ne sont pas chiffrés et les données d'octobre ne sont pas publiées. Il s'agit d'un compte rendu d'expérience interne, pas d'une étude évaluée. Ce statut n'enlève rien à la transparence des tableaux, qui est réelle et que j'aimerais voir plus souvent.
+La note est publiée par une société qui propose ses services (« Work with us », « Book a call ») et présente son propre modèle, sans le nommer. Les essais antérieurs évoqués en fin de note ne sont pas chiffrés et les données d'octobre ne sont pas publiées. Il s'agit d'un compte rendu d'expérience interne, pas d'une étude évaluée. Ce statut n'enlève rien à la transparence des tableaux, qui est réelle et que nous aimerions voir plus souvent.
 
 ## L'intérêt pour les juristes
 

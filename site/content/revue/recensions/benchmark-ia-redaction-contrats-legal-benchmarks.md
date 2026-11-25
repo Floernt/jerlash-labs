@@ -20,7 +20,7 @@ financement: "aucun"
 conflits_interets: "aucun"
 ---
 
-Legal Benchmarks se présente comme un organisme indépendant d'évaluation des outils d'IA juridique. Il a été fondé par Anna Guo, ancienne collaboratrice de grand cabinet et juriste d'entreprise. Son étude « Phase 2 », publiée en septembre 2025, est l'une des rares à placer côte à côte des avocats et des outils d'IA sur les mêmes tâches de rédaction contractuelle, et à mesurer en plus une troisième configuration : l'avocat assisté par l'IA. C'est cette troisième mesure qui m'a fait revenir à un texte vieux de plus d'un an.
+Legal Benchmarks se présente comme un organisme indépendant d'évaluation des outils d'IA juridique. Il a été fondé par Anna Guo, ancienne collaboratrice de grand cabinet et juriste d'entreprise. Son étude « Phase 2 », publiée en septembre 2025, est l'une des rares à placer côte à côte des avocats et des outils d'IA sur les mêmes tâches de rédaction contractuelle, et à mesurer en plus une troisième configuration : l'avocat assisté par l'IA. C'est cette troisième mesure qui nous a fait revenir à un texte vieux de plus d'un an.
 
 ## Le propos de l'étude
 
@@ -46,13 +46,13 @@ Deux lectures sont possibles. Soit les tâches étaient très exigeantes, soit l
 
 La page publiée ne contient ni la liste des treize outils, ni leur version, ni le nombre d'avocats, leur ancienneté ou leur juridiction. Elle ne définit pas le « taux de fiabilité », ne décrit pas la grille d'utilité de 3 à 9, ne dit pas qui a noté, ni si la notation était faite à l'aveugle. Aucun intervalle de confiance n'accompagne les écarts. Le lien « rapport complet » renvoie à la même page.
 
-J'ai cherché ces informations dans les pages de méthode du site. Elles décrivent la méthode actuelle des classements (cycle de novembre 2026), qui repose sur un « taux de réussite par tâche » et des juges automatisés, et non la méthode de 2025. Le site avertit lui-même que les deux mesures ne sont pas comparables et que les rapports de 2025 suivaient « une méthodologie antérieure », qui n'est décrite nulle part.
+Nous avons cherché ces informations dans les pages de méthode du site. Elles décrivent la méthode actuelle des classements (cycle de novembre 2026), qui repose sur un « taux de réussite par tâche » et des juges automatisés, et non la méthode de 2025. Le site avertit lui-même que les deux mesures ne sont pas comparables et que les rapports de 2025 suivaient « une méthodologie antérieure », qui n'est décrite nulle part.
 
 Prenons l'écart entre 57 % et 56,7 %. Sur trente tâches, et sans connaître le nombre d'avocats ni la dispersion des résultats, rien ne permet de dire que cette différence de 0,3 point existe. Le constat honnête est que les deux moyennes ne se distinguent pas. L'écart de 4,8 points en faveur de l'avocat assisté est plus intéressant, mais il souffre de la même limite, aggravée par l'absence de toute description du protocole d'assistance : quel outil, à quel moment, avec quelle consigne.
 
 ### Le modèle économique de l'évaluateur
 
-Legal Benchmarks déclare n'avoir aucun sponsor parmi les éditeurs et précise que les éditeurs ne peuvent ni prévisualiser ni modifier les résultats. Le site indique aussi que les éditeurs paient des frais d'évaluation, peuvent commander des rapports privés, obtenir des certifications et recourir à des prestations de conseil. Nous n'écrivons pas ici que les résultats sont biaisés : rien dans la page ne le laisse penser. J'estime en revanche qu'un évaluateur rémunéré par les acteurs qu'il évalue doit publier sa méthode de façon complète pour que sa déclaration d'indépendance puisse être vérifiée. Pour l'étude de 2025, ce n'est pas le cas.
+Legal Benchmarks déclare n'avoir aucun sponsor parmi les éditeurs et précise que les éditeurs ne peuvent ni prévisualiser ni modifier les résultats. Le site indique aussi que les éditeurs paient des frais d'évaluation, peuvent commander des rapports privés, obtenir des certifications et recourir à des prestations de conseil. Nous n'écrivons pas ici que les résultats sont biaisés : rien dans la page ne le laisse penser. Nous estimons en revanche qu'un évaluateur rémunéré par les acteurs qu'il évalue doit publier sa méthode de façon complète pour que sa déclaration d'indépendance puisse être vérifiée. Pour l'étude de 2025, ce n'est pas le cas.
 
 ## L'intérêt pour les juristes
 
