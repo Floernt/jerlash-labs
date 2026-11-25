@@ -10,8 +10,8 @@ date_arret_recherches: 2026-11-21
 controles: "Citations et renvois de page contrôlés sur le PDF du rapport (31 pages) le 2026-11-22 ; texte relu en entier par l'auteur le 2026-11-25 ; sources juridiques (RGPD, Code judiciaire, règles d'AVOCATS.BE) non collationnées ; aucune relecture externe."
 usage_ia: "Claude (Anthropic, novembre 2026) a été utilisé pour rédiger une première version à partir du rapport et pour contrôler les citations et les renvois de page. L'auteur a relu le texte en entier et en a validé les hypothèses. [À VÉRIFIER : formulation à valider par Florian]"
 licence: "CC BY 4.0"
-financement: "aucun [À VÉRIFIER]"
-conflits_interets: "aucun [À VÉRIFIER]"
+financement: "aucun"
+conflits_interets: "aucun"
 ---
 
 <!--
