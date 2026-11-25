@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Research papers"
 description: "Research papers sur l'IA et la pratique du droit : une question, une méthode, des limites discutées. Publiés en working papers, sans évaluation externe."
 ---

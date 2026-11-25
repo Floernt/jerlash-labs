@@ -1,14 +1,15 @@
 ---
-draft: true
+draft: false
 title: "Ce que l'IA déplace entre juristes d'entreprise et cabinets d'avocats : quatre hypothèses à partir du rapport Dentons (2026)"
 date: 2026-11-21
 description: "IA, juristes d'entreprise et cabinets d'avocats : quatre hypothèses tirées des entretiens du rapport Dentons, avec leurs limites et pistes de vérification."
-statut: "brouillon"
+statut: "working paper"
+identifiant: "JLL-RP-2026-001"
 version: "0.1"
 programme: "H1"
 date_arret_recherches: 2026-11-21
 controles: "Citations et renvois de page contrôlés sur le PDF du rapport (31 pages) le 2026-11-22 ; texte relu en entier par l'auteur le 2026-11-25 ; sources juridiques (RGPD, Code judiciaire, règles d'AVOCATS.BE) non collationnées ; aucune relecture externe."
-usage_ia: "Claude (Anthropic, novembre 2026) a été utilisé pour rédiger une première version à partir du rapport et pour contrôler les citations et les renvois de page. L'auteur a relu le texte en entier et en a validé les hypothèses. [À VÉRIFIER : formulation à valider par Florian]"
+usage_ia: "Claude (Anthropic, novembre 2026) a été utilisé pour rédiger une première version à partir du rapport et pour contrôler les citations et les renvois de page. L'auteur a relu le texte en entier et en a validé les hypothèses."
 licence: "CC BY 4.0"
 financement: "aucun"
 conflits_interets: "aucun"
@@ -17,7 +18,6 @@ conflits_interets: "aucun"
 <!--
 Collection Revue › Research papers (ADR-024, point 4), créée le 2026-11-25. Le champ « type » (conceptuel) est noté ici et non dans le front matter, conformément à docs/politique-publication.md §4.
 
-À la publication : draft : false, statut « working paper », identifiant JLL-RP-2026-001 (premier research paper publié), et passer la page d'index de la collection (_index.md et _index.en.md) en draft : false. Lever d'abord les marqueurs de vérification du texte (sections 5.2 et 6.2) et du champ usage_ia.
 
 Maillage en attente : les perspectives « Taux horaire et intelligence artificielle » (/revue/perspectives/taux-horaire-avocat-ia/, pour la section 6) et « L'IA et l'avocat - déléguer le connu, penser l'inconnu » (/revue/perspectives/deleguer-ia-avocat-jugement/, pour la section 7) sont en brouillon (draft : true). Les lier quand elles seront publiées.
 -->
@@ -102,7 +102,7 @@ Le chapitre 3 est consacré à ce que le rapport appelle « le problème du vol
 
 L'hypothèse est la suivante : l'IA réduit fortement le coût de production d'une demande, mais pas celui de son traitement, et les règles qui imposent une réponse sont calibrées sur la demande, pas sur l'effort qu'elle a coûté à son auteur. Le coût marginal se déplace donc vers le destinataire.
 
-Le droit d'accès du RGPD en est le meilleur terrain d'examen, parce qu'il s'applique en Irlande comme en Belgique et parce que le rapport le cite expressément. Le règlement fixe un délai de réponse et prévoit le cas des demandes « manifestement infondées ou excessives » ([À VÉRIFIER] art. 12, § 3 et § 5, du règlement (UE) 2016/679, à citer in extenso). La question que pose le rapport, sans la formuler, est de savoir si une demande longue, rédigée avec l'IA et chargée de points sans substance, peut être qualifiée d'excessive. Nous n'avons pas vérifié les lignes directrices du Comité européen de la protection des données sur ce point, ni la pratique de l'Autorité de protection des données belge [À VÉRIFIER]. Notre intuition, à confirmer, est que la longueur ou le mode de rédaction ne rendent pas en eux-mêmes une demande excessive, parce que le critère s'attache à la demande et non à son style, et que la réponse au problème du volume ne viendra donc pas de cette exception.
+Le droit d'accès du RGPD en est le meilleur terrain d'examen, parce qu'il s'applique en Irlande comme en Belgique et parce que le rapport le cite expressément. Le règlement fixe un délai de réponse et prévoit le cas des demandes « manifestement infondées ou excessives » (art. 12, § 3 et § 5, du règlement (UE) 2016/679, que nous n'avons pas collationné). La question que pose le rapport, sans la formuler, est de savoir si une demande longue, rédigée avec l'IA et chargée de points sans substance, peut être qualifiée d'excessive. Nous n'avons pas vérifié les lignes directrices du Comité européen de la protection des données sur ce point, ni la pratique de l'Autorité de protection des données belge. Notre intuition, à confirmer, est que la longueur ou le mode de rédaction ne rendent pas en eux-mêmes une demande excessive, parce que le critère s'attache à la demande et non à son style, et que la réponse au problème du volume ne viendra donc pas de cette exception.
 
 Si c'est le cas, la réponse est d'organisation, et le rapport en décrit deux. La première consiste à répondre avec les mêmes outils : IMRO a construit un agent conversationnel sur son site pour les questions courantes. La seconde consiste à externaliser : Dentons propose désormais un service géré pour les plaintes en grand nombre. Les deux réponses ont une conséquence qu'il faut nommer : on traite par l'IA des demandes produites par l'IA, ce qui pose à nouveau la question de la relecture (hypothèse 1), cette fois pour des réponses qui engagent l'entreprise vis-à-vis d'une personne qui exerce un droit.
 
@@ -124,7 +124,7 @@ Sur le taux horaire, deux positions s'opposent. Cornelius Grossmann (Dentons) so
 
 Le raisonnement de Grossmann suppose que le coût de la prestation est du temps d'avocat. Le passage à une tarification à la consommation introduit un second coût, variable, qui ne dépend pas du temps passé mais du nombre de requêtes adressées à un modèle et du modèle choisi. L'hypothèse que nous formulons est que ce coût échappe aux deux positions du rapport. Avec l'heure facturée, les gains de temps passent au client, mais le coût des tokens reste à classer : frais généraux du cabinet, ou frais exposés pour le dossier et refacturés. Avec le forfait, le cabinet porte le risque d'une consommation imprévue, ce que Grossmann appelle la « falaise des coûts » (cost cliff).
 
-En droit belge, la distinction entre honoraires et frais a des conséquences sur l'information due au client et sur la manière de facturer. Nous ne les exposons pas ici : elles demandent de citer l'article 446ter du Code judiciaire et les règles d'AVOCATS.BE sur les honoraires et les frais, que nous n'avons pas collationnées [À VÉRIFIER]. Le research paper sur la tarification alternative en préparation (fiche P17) est le lieu naturel de cet examen ; le présent texte se limite à signaler que la question des frais d'usage de l'IA devrait y figurer.
+En droit belge, la distinction entre honoraires et frais a des conséquences sur l'information due au client et sur la manière de facturer. Nous ne les exposons pas ici : elles demandent de citer l'article 446ter du Code judiciaire et les règles d'AVOCATS.BE sur les honoraires et les frais, que nous n'avons pas collationnées. Le research paper sur la tarification alternative en préparation (fiche P17) est le lieu naturel de cet examen ; le présent texte se limite à signaler que la question des frais d'usage de l'IA devrait y figurer.
 
 Un témoignage du rapport donne une indication pratique. Sergey Kinchin (Uniphar) observe qu'un outil agentique consomme beaucoup plus quand on lui donne un lien vers un dossier partagé que quand on lui joint les fichiers, parce qu'il cherche, vérifie et contrôle les autorisations, et il en conclut que la capacité à délimiter une tâche devient une compétence de gestion. Si cela se vérifie, le coût à l'usage dépend en partie de la compétence de celui qui utilise l'outil, ce qui complique encore sa répercussion au client.
 
@@ -157,11 +157,11 @@ Ce texte tire quatre hypothèses d'un seul rapport, fondé sur des entretiens do
 
 Dentons (2026). *From AI Adoption to AI Advantage. How leading in-house legal teams are leveraging AI*. Leading Edge. Dublin, Dentons, en collaboration avec Silicon Republic, 31 p., https://insights.dentons.com/447/39125/uploads/from-ai-adoption-to-ai-advantage.pdf. PDF consulté le 2026-11-21. 
 
-Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (RGPD), art. 12 et 15. [version EUR-Lex collationnée.]
+Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (RGPD), art. 12 et 15.
 
 Code judiciaire, art. 446ter ; code de déontologie d'AVOCATS.BE, dispositions relatives aux honoraires et aux frais. 
 
 
 ## Historique
 
-- 0.1 (2026-11-21) : premiere version, à partir de la seule lecture du rapport. Aucune source juridique collationnée.
+- 0.1 (2026-11-21) : première version, à partir de la seule lecture du rapport. Aucune source juridique collationnée.
