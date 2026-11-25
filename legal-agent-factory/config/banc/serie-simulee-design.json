@@ -1,0 +1,13 @@
+{
+  "$comment": "Série de démonstration : modèle simulé, aucun appel réseau, aucun coût. Les chemins sont relatifs à ce fichier.",
+  "nom": "simulee-design",
+  "fournisseur": "simulee",
+  "modele": "simule-deterministe",
+  "endpoint": "local",
+  "jeu": "design",
+  "skill": "instructions-provisoires",
+  "instructions": "instructions-provisoires.txt",
+  "schema": "../schema-qualification.json",
+  "tarifs": null,
+  "plafond": null
+}

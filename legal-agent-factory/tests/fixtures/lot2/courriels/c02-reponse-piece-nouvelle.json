@@ -1,0 +1,16 @@
+{
+  "format": "laf-courriel/0.1",
+  "message_id": "<c02.synthetique@alpha-fournitures.example>",
+  "in_reply_to": "<c01.synthetique@alpha-fournitures.example>",
+  "references": ["<c01.synthetique@alpha-fournitures.example>"],
+  "de": "comptabilite@alpha-fournitures.example",
+  "a": ["faillites@cabinet-synthetique.example"],
+  "cc": [],
+  "date": "2026-12-15T10:30:00+01:00",
+  "objet": "Re: complément",
+  "corps_texte": "DOCUMENT SYNTHÉTIQUE DE TEST.\n\nCi-joint un bon de commande retrouvé.",
+  "pieces": [
+    {"nom": "bon-de-commande.txt", "type_mime": "text/plain",
+     "texte": "DOCUMENT SYNTHÉTIQUE DE TEST. Bon de commande BC-17 du 2026-08-30, Débiteur Beta (synthétique)."}
+  ]
+}

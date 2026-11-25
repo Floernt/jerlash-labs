@@ -1,0 +1,34 @@
+{
+  "$comment": "Sortie du skill be-bankruptcy-intake, format PROVISOIRE laf-sortie-skill/0.1 (fiche v0.2 section 8 non consultee) [À VÉRIFIER]. Le niveau declare pour chaque action est controle par le reviseur contre config/niveaux-action.json.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "skill", "dossier", "statut", "constats", "elements_manquants", "actions_proposees", "avertissement"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["laf-sortie-skill/0.1"]},
+    "skill": {"type": "string", "enum": ["be-bankruptcy-intake"]},
+    "dossier": {"type": "string", "pattern": "SYN-[0-9]{4}-[0-9]{3}|ATTENTE"},
+    "statut": {"type": "string", "enum": ["brouillon"]},
+    "constats": {
+      "type": "array", "maxItems": 30,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["texte", "sources"],
+        "properties": {
+          "texte": {"type": "string", "minLength": 1, "maxLength": 2000},
+          "sources": {"type": "array", "maxItems": 10, "items": {"type": "string", "pattern": "[a-z0-9-]{1,60}"}}
+        }
+      }
+    },
+    "elements_manquants": {"type": "array", "maxItems": 20, "items": {"type": "string", "pattern": "[a-z0-9_]{1,40}"}},
+    "actions_proposees": {
+      "type": "array", "maxItems": 10,
+      "items": {
+        "type": "object", "additionalProperties": false, "required": ["action", "niveau"],
+        "properties": {
+          "action": {"type": "string", "pattern": "[a-z0-9_]{1,60}"},
+          "niveau": {"type": "string", "enum": ["A0", "A1", "A2", "A3"]}
+        }
+      }
+    },
+    "avertissement": {"type": "string", "minLength": 1, "maxLength": 1000}
+  }
+}

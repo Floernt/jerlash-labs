@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Pseudonymisation"
-description: "Remplacer les noms, adresses et identifiants belges d'un texte par des marqueurs avant de le soumettre à une IA, puis rétablir les noms dans la réponse. Sur votre ordinateur, sans réseau."
+description: "Pseudonymiser un document avant de l'envoyer à une IA : noms, adresses et identifiants belges remplacés par des marqueurs, puis rétablis dans la réponse."
 resume: "L'outil remplace les noms, adresses et numéros d'un texte par des marqueurs comme [PERSONNE_1], vous fait relire le résultat, puis remet les vrais noms dans la réponse de l'IA. Il ne trouve pas tout : la relecture est obligatoire."
 version: "0.1.0"
 statut: "test"
@@ -92,11 +92,11 @@ Gratuit : l'outil n'appelle aucun service payant.
 - Relisez toujours le texte pseudonymisé en entier avant de l'envoyer.
 - Retirez aussi ce qui permet de reconnaître une personne sans la nommer : une fonction rare, une adresse décrite, une date et un lieu précis.
 - Gardez la table de correspondance hors des dossiers partagés, et supprimez-la quand vous n'en avez plus besoin.
-- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions-outils-ia-avocat/).
 
 ## Installation
 
-Le guide [Utiliser un outil en local](/guides/utiliser-un-outil-en-local/) détaille chaque étape. En bref :
+Le guide [Utiliser un outil en local](/guides/installer-outil-python-windows/) détaille chaque étape. En bref :
 
 1. Installez Python 3.10 ou plus récent.
 2. Téléchargez l'archive ci-dessus et vérifiez son empreinte SHA-256.

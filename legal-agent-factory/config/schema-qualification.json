@@ -1,0 +1,17 @@
+{
+  "$comment": "Format PROVISOIRE du Lot 1. A aligner sur le format de la fiche projet v0.2 section 7 et sur la taxonomie figee par FLO-59 [À VÉRIFIER]. La liste de categories ci-dessous est un bouche-trou technique, pas une taxonomie juridique.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "categorie", "requires_human_triage", "confiance", "motifs"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["laf-qualification/0.1"]},
+    "categorie": {"type": "string", "enum": ["a_trier", "hors_perimetre"]},
+    "requires_human_triage": {"type": "boolean"},
+    "confiance": {"type": "number", "minimum": 0, "maximum": 1},
+    "motifs": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {"type": "string", "pattern": "[a-z0-9_]{1,40}"}
+    }
+  }
+}

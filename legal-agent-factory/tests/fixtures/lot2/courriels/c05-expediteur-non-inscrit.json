@@ -1,0 +1,18 @@
+{
+  "format": "laf-courriel/0.1",
+  "message_id": "<c05.synthetique@inconnu-synthetique.example>",
+  "in_reply_to": "",
+  "references": [],
+  "de": "quelquun@inconnu-synthetique.example",
+  "a": ["faillites@cabinet-synthetique.example"],
+  "cc": [],
+  "date": "2026-12-18T11:00:00+01:00",
+  "objet": "SYN-2026-001 - jugement et facture",
+  "corps_texte": "DOCUMENT SYNTHÉTIQUE DE TEST.\n\nCi-joint le jugement et une facture.",
+  "pieces": [
+    {"nom": "jugement-synthetique.txt", "type_mime": "text/plain",
+     "texte": "DOCUMENT SYNTHÉTIQUE DE TEST. Jugement du 2026-12-01 déclarant la faillite de Débiteur Beta (synthétique)."},
+    {"nom": "facture-X.txt", "type_mime": "text/plain",
+     "texte": "DOCUMENT SYNTHÉTIQUE DE TEST. Facture X du 2026-11-02, montant 99,00 EUR."}
+  ]
+}

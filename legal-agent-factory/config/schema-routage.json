@@ -1,0 +1,26 @@
+{
+  "$comment": "Classification de routage PROVISOIRE du Lot 2, a aligner sur la fiche projet v0.2 section 7 (non consultee) et sur la taxonomie de FLO-59 [À VÉRIFIER]. Les listes ci-dessous sont des etiquettes techniques, pas une taxonomie juridique. La sortie du modele ne decide rien seule : routeur.decider applique ensuite des regles deterministes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "intention", "skill_propose", "pieces", "personne", "date_jugement",
+               "elements_manquants", "risque", "ambiguite", "confiance", "motifs"],
+  "properties": {
+    "schema_version": {"type": "string", "enum": ["laf-routage/0.1"]},
+    "intention": {"type": "string", "enum": ["nouvelle_affaire_faillite", "declaration_creance",
+                                              "piece_complementaire", "hors_perimetre", "indetermine"]},
+    "skill_propose": {"type": "string", "enum": ["be-bankruptcy-intake", "be-bankruptcy-claim-analysis", "aucun"]},
+    "pieces": {"type": "array", "maxItems": 20,
+               "items": {"type": "string", "enum": ["jugement_faillite", "facture", "aveu_faillite",
+                                                    "comptes_annuels", "piece_identite", "courrier", "autre"]}},
+    "personne": {"type": "string", "enum": ["morale", "physique", "inconnue"]},
+    "date_jugement": {"type": "string", "pattern": "\\d{4}-\\d{2}-\\d{2}|inconnue"},
+    "elements_manquants": {"type": "array", "maxItems": 10,
+                           "items": {"type": "string", "enum": ["date_jugement", "jugement_faillite", "factures",
+                                                                "identite_debiteur", "liste_creanciers",
+                                                                "comptes_annuels", "signature", "autre"]}},
+    "risque": {"type": "string", "enum": ["faible", "eleve"]},
+    "ambiguite": {"type": "boolean"},
+    "confiance": {"type": "number", "minimum": 0, "maximum": 1},
+    "motifs": {"type": "array", "maxItems": 5, "items": {"type": "string", "pattern": "[a-z0-9_]{1,40}"}}
+  }
+}

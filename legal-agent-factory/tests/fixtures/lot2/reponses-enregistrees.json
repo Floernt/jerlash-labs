@@ -1,0 +1,36 @@
+{
+  "$comment": "Reponses ENREGISTREES du modele simule (laf.passerelle.PasserelleEnregistree). Ce sont des donnees de test du routage, ecrites pour exercer chaque branche du routeur. Ce ne sont PAS des reponses de reference juridiques (gold answers) : celles-ci seront signees par Florian au Lot 3. Les champs absents prennent les valeurs de 'defaut'.",
+  "defaut": {"schema_version": "laf-routage/0.1", "pieces": [], "personne": "morale", "date_jugement": "inconnue",
+             "elements_manquants": [], "risque": "faible", "ambiguite": false, "confiance": 0.9, "motifs": ["simulation"]},
+  "routages": {
+    "courriel:c01-jugement-factures.json": {"intention": "declaration_creance", "skill_propose": "be-bankruptcy-claim-analysis",
+                                            "pieces": ["jugement_faillite", "facture", "facture"], "date_jugement": "2026-12-01"},
+    "courriel:c02-reponse-piece-nouvelle.json": {"intention": "piece_complementaire", "skill_propose": "aucun", "pieces": ["autre"]},
+    "courriel:c03-hors-perimetre.json": {"intention": "hors_perimetre", "skill_propose": "aucun"},
+    "courriel:c04-injection.json": {"intention": "declaration_creance", "skill_propose": "be-bankruptcy-claim-analysis",
+                                    "pieces": ["jugement_faillite"], "date_jugement": "2026-12-01"},
+    "courriel:c05-expediteur-non-inscrit.json": {"intention": "declaration_creance", "skill_propose": "be-bankruptcy-claim-analysis",
+                                                 "pieces": ["jugement_faillite", "facture"], "date_jugement": "2026-12-01"},
+    "depot:aveu-incomplet.txt": {"intention": "nouvelle_affaire_faillite", "skill_propose": "be-bankruptcy-intake",
+                                 "pieces": ["aveu_faillite"], "elements_manquants": ["liste_creanciers", "comptes_annuels"]},
+    "depot:personne-physique-sans-date.txt": {"intention": "declaration_creance", "skill_propose": "be-bankruptcy-claim-analysis",
+                                              "pieces": ["facture"], "personne": "physique"},
+    "depot:personne-physique-avec-date.txt": {"intention": "declaration_creance", "skill_propose": "be-bankruptcy-claim-analysis",
+                                              "pieces": ["jugement_faillite", "facture"], "personne": "physique",
+                                              "date_jugement": "2026-11-20"},
+    "depot:piece-nouvelle.txt": {"intention": "piece_complementaire", "skill_propose": "aucun", "pieces": ["autre"]},
+    "depot:jugement-et-facture.txt": {"intention": "declaration_creance", "skill_propose": "be-bankruptcy-claim-analysis",
+                                      "pieces": ["jugement_faillite", "facture"], "date_jugement": "2026-12-01"}
+  },
+  "sortie_skill_simulee": {
+    "schema_version": "laf-sortie-skill/0.1",
+    "statut": "brouillon",
+    "constats": [
+      {"texte": "Sortie simulée : aucune analyse réelle. Les pièces annoncées sont listées dans le contexte de la tâche.", "sources": []},
+      {"texte": "Sortie simulée : question de délai et de forme à examiner sur source lue.", "sources": ["cde-livre-xx"]}
+    ],
+    "elements_manquants": [],
+    "actions_proposees": [{"action": "rediger_note_interne", "niveau": "A1"}],
+    "avertissement": "Sortie simulée du Lot 2, sans analyse juridique."
+  }
+}

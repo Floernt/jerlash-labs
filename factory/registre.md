@@ -19,7 +19,7 @@ Depuis le 2026-11-11, le rôle `ops-factory` est tenu par l'agent jerlash (optio
 | P11 | Composant conversion | idée | | mesure installation et temps | architecte | 2026-10-31 |
 | P12 | Banc d'essai | cadrage | | F-DOCX-01, F-IDENT-01, F-DOSSIER-01, F-DEF-01 et F-CPCG-01 v1.0 livrés et branchés sur la CI, chacun avec un jeu de contrôle rédigé à part (sauf F-DOCX-01) | testeur | 2026-10-31 |
 | P13 | Guide plateformes open source | idée | après lancement | aucune | redacteur | 2026-10-31 |
-| P14 | Gouvernance de l'IA, Toolkit v0.2 (ADR-024, ADR-026, ADR-029) | prototype | ADR-034 et ouverture de la charte .docx dans Word, à confirmer par Florian | étape 4 du circuit : rapports de vérification dans `outils/gouvernance-ia/verifications/` (téléchargements construits le 2026-11-11, FLO-74) | jerlash (ops-factory) | 2026-11-11 |
+| P14 | Gouvernance de l'IA, Toolkit v0.2 (ADR-024, ADR-026, ADR-029) | prototype | ADR-034 et droits sur les deux documents de `99_SOURCES`, à trancher par Florian ; charte .docx ouverte dans Word le 2026-11-22 | étape 4 du circuit : rapports de vérification dans `outils/gouvernance-ia/verifications/` (téléchargements construits le 2026-11-11, FLO-74) | jerlash (ops-factory) | 2026-11-22 |
 | P15 | RP « L'humain dans la boucle » | idée | dépend de P14 | aucune avant avril 2027 | Florian | 2026-11-11 |
 | P16 | RP « Modèles discriminatifs et pratique juridique » | idée | | aucune avant février 2027 | Florian | 2026-11-11 |
 | P17 | RP « Tarification alternative des avocats » | idée | | aucune avant mars 2027 | Florian | 2026-11-11 |

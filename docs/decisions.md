@@ -383,3 +383,29 @@ Décision :
 4. Le script s'arrête si un intertitre repris dans le kit a disparu d'une page. Une réécriture du site ne peut donc pas produire un téléchargement incomplet sans que la vérification échoue.
 5. Un téléchargement ne contient que des textes dont jerlash.labs est l'éditeur. Les deux documents de contexte de `99_SOURCES` (archive Proton v0.1.0) restent hors du pack tant que les droits de redistribution n'ont pas été vérifiés (§ 6 de la fiche P14).
 Conséquences : les pages d'accueil française et anglaise proposent le pack, la charte et le kit. `python scripts/verifier.py` construit les téléchargements avant de vérifier les liens : plus rien à lancer à la main avant une vérification locale. Les contrôles du script sont dans `outils/gouvernance-ia/tests/`, exécutés par la même commande.
+
+## ADR-035 - Legal Agent Factory, Lot 1 : emplacement, langage et transport du runtime
+Date : 2026-11-21
+Statut : Proposée
+Contexte : le ticket FLO-64 (Lot 1 de la Legal Agent Factory, parent FLO-57) demande une chaîne locale sans secrets : dossier surveillé, qualification validée par schéma, charge utile de tâche Paperclip en simulation, runtime HTTP sur mesure, passerelle de modèle simulée. La fiche projet v0.2 (hors dépôt, non consultée pour ce lot) propose un dossier `legal-agent-factory/` (§18) et Python/FastAPI (§4), en précisant qu'il s'agit de propositions. La Legal Agent Factory n'est pas un outil BYOK distribué aux avocats (ADR-019, ADR-020) : c'est une chaîne d'agents du cabinet, d'où un emplacement hors de `outils/`.
+Options : (a) `outils/legal-agent-factory/`, soumis au circuit de la Factory et aux composants communs ; (b) `legal-agent-factory/` à la racine ; pour le runtime, FastAPI ou `http.server` de la bibliothèque standard.
+Décision :
+1. Code dans `legal-agent-factory/` à la racine, autonome (ADR-021 par analogie) : il ne dépend que de son dossier.
+2. Python, bibliothèque standard seule (ADR-010). Le runtime est exposé par `http.server`, sur l'interface locale uniquement. L'interface `execute(task, case_context, skill_bundle, policy)` est séparée du transport : un passage à FastAPI ne toucherait que `laf/runtime.py`.
+3. Surveillance par scrutation périodique plutôt que par une bibliothèque d'événements du système (`watchdog`).
+4. `scripts/verifier.py` exécute aussi les tests de `legal-agent-factory/`.
+Conséquences : aucune installation pour lancer la chaîne ou ses tests. Délai d'au moins deux passages avant le traitement d'un fichier. Le format de qualification et la taxonomie restent provisoires jusqu'à la clôture de FLO-59 et la lecture de la fiche §7.
+
+## ADR-036 - Legal Agent Factory, Lot 2 : courriel intermédiaire, rôles et skills en fichiers, niveaux d'action en configuration
+Date : 2026-11-21
+Statut : Proposée
+Contexte : le ticket FLO-65 (Lot 2) demande l'entrée par courriel AgentMail, le rapprochement aux dossiers, quatre rôles d'agents, un routeur hybride, deux skills de faillite, une revue qualité et la décision humaine, sur dossiers synthétiques et modèle simulé. Ni le format des messages AgentMail, ni la fiche projet v0.2 (§6 à §9, §12, §15), ni le registre des sources de FLO-60 n'ont pu être consultés.
+Options : attendre ces trois documents ; ou construire la chaîne sur des formats intermédiaires explicites, marqués provisoires, que ces documents viendront aligner.
+Décision :
+1. Format intermédiaire `laf-courriel/0.1` (`config/schema-courriel.json`) ; un futur adaptateur AgentMail le produira. Le courriel devient un événement de même forme que le dépôt de fichier.
+2. Rattachement à un dossier seulement par un lien vérifiable (fil, référence et expéditeur inscrit, sous-dossier) ; sinon dossier d'attente.
+3. Routeur en trois couches : règles sur les autorisations, classification validée par schéma strict, décision déterministe (`needs_clarification`, `confirmation_humaine`, etc.).
+4. Rôles d'agents (`legal-agent-factory/agents/*/AGENTS.md`) et skills (`legal-agent-factory/skills/*/SKILL.md`) sont des fichiers du dépôt ; aucun agent Paperclip n'est créé. Les skills restent `status: draft`, `last_legal_review: null`.
+5. Niveaux A0 à A3 et catalogue d'actions dans `config/niveaux-action.json` ; le niveau ne vient jamais du modèle ni d'un message ; A3 bloqué même après approbation ; A2 seulement consigné.
+6. Décision humaine (approuver, refuser, corriger) par appel local, avec un relecteur inscrit ; l'approbation exige une revue conforme.
+Conséquences : la chaîne est testable de bout en bout sans secret (77 tests). Les formats, taxonomies, seuils et niveaux sont à réaligner quand la fiche v0.2, le registre de FLO-60 et le format AgentMail seront disponibles.

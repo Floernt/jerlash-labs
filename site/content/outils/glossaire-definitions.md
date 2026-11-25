@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Glossaire des définitions"
-description: "Relever les termes définis d'un contrat et ce qui cloche : définition répétée ou divergente, terme jamais employé, majuscules sans définition, graphie qui dérive. Sur votre ordinateur, sans IA."
+description: "Vérifier les définitions d'un contrat : termes définis deux fois ou de façon divergente, jamais employés, majuscules sans définition."
 resume: "L'outil lit un contrat Word et produit son glossaire, avec les points à examiner : définition répétée ou divergente, terme défini jamais employé, terme écrit avec des majuscules sans définition, graphie différente."
 version: "0.1.0"
 statut: "test"
@@ -87,11 +87,11 @@ Gratuit : l'outil n'appelle aucun service payant.
 
 - Le rapport reprend les définitions du contrat : il est aussi confidentiel que le contrat.
 - Un contrat sans point signalé n'est pas pour autant exempt de défaut de définition.
-- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions-outils-ia-avocat/).
 
 ## Installation
 
-Le guide [Utiliser un outil en local](/guides/utiliser-un-outil-en-local/) détaille chaque étape. En bref :
+Le guide [Utiliser un outil en local](/guides/installer-outil-python-windows/) détaille chaque étape. En bref :
 
 1. Installez Python 3.10 ou plus récent.
 2. Téléchargez l'archive ci-dessus et vérifiez son empreinte SHA-256.

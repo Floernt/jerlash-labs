@@ -23,7 +23,7 @@ Rien ne s'affiche comme « évalué » sans évaluation réellement faite. Les s
 - `docs/charte-editoriale.md` : ton, style, règles d'écriture.
 - `docs/politique-publication.md` : collections de la Revue, statuts (brouillon, working paper, évalué), métadonnées, déclaration d'usage de l'IA (ADR-024).
 - `docs/decisions.md` : registre des décisions d'architecture (ADR). Les décisions au statut "Proposée" ne sont pas encore validées.
-- `BACKLOG.md` : tâches à faire, par phase.
+- `BACKLOG.md` : calendrier écrit à la main et copie de secours des tâches, générée depuis Vikunja (voir « Tâches (Vikunja) »).
 - `LOG.md` : journal des sessions de travail.
 - `PLAN_AMELIORATIONS.md` : plan d'amélioration du 2026-10-31 (actions A01 à A18). Ses propositions ne s'appliquent pas automatiquement : voir sa section 12.
 - `projets/` : fiches projet (index dans `projets/README.md`).
@@ -32,6 +32,15 @@ Rien ne s'affiche comme « évalué » sans évaluation réellement faite. Les s
 - `docs/deontologie-ia.md` : risques et critères déontologiques pour tout envoi vers une IA distante (support de l'ADR-015).
 - `../otf/` (hors dépôt) : dépôt au fil de l'eau de Florian ; `INDEX.md` y liste les fichiers en attente (ADR-028). Tri : `/otf` ; production : `/produire <sujet ou ID>`. Aucun matériau brut dans `site/content/`.
 - `bibliotheque/` : textes de référence (lignes directrices AVOCATS.BE et OVB, guide du CNB), à citer par leur fiche.
+
+## Tâches (Vikunja)
+
+Les tâches de ce projet vivent dans le projet Vikunja `jerlash.labs`, seule source à jour.
+
+- Lire le plan avec `lister_taches` et `lire_tache` avant de choisir quoi faire.
+- Consigner l'avancement dans la carte : `commenter_tache` pour un compte rendu ou une question, `modifier_description` pour corriger le plan ; `deplacer_tache` et `marquer_faite` pour son état.
+- Une nouvelle tâche se crée dans Vikunja (`creer_tache`), jamais dans `BACKLOG.md`.
+- Ne jamais modifier le bloc compris entre `<!-- debut-bloc-vikunja -->` et `<!-- fin-bloc-vikunja -->` dans `BACKLOG.md` : c'est une copie de secours régénérée depuis Vikunja (au début de chaque session, ou par `python scripts/regenerer_backlog.py <dossier>` depuis Pilotage). Le reste du fichier (cadre, jalons, calendrier) s'écrit à la main.
 
 ## Règles de travail pour Claude Code
 
@@ -63,7 +72,7 @@ Règles :
   CLAUDE.md                 ce fichier
   README.md                 présentation du dépôt
   LOG.md                    journal des sessions
-  BACKLOG.md                tâches par phase
+  BACKLOG.md                calendrier + copie des tâches Vikunja
   CHANGELOG.md              ce qui est livré, par date
   docs/                     cahier des charges et documents de référence
   bibliotheque/             textes de référence : catalogue et fiches versionnés, originaux non versionnés (ADR-018)

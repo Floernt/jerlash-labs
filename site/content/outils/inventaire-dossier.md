@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Inventaire d'un dossier"
-description: "Dresser le registre des pièces d'un dossier contractuel : type, statut, date, parties, version qui fait foi, et ce qui ne devrait pas s'y trouver. Règles sur votre ordinateur, parties et rattachements proposés par un modèle d'IA, avec votre clé."
+description: "Inventaire des pièces d'un dossier contractuel : type, statut, date, parties, version qui fait foi, et ce qui ne devrait pas s'y trouver."
 resume: "L'outil parcourt le dossier d'une affaire contractuelle et produit un registre des pièces en Word, avec des alertes : acte non signé, pièce d'un autre client, scan illisible, envoi recommandé sans preuve."
 version: "0.2.0"
 statut: "test"
@@ -104,11 +104,11 @@ L'outil est gratuit ; l'appel au modèle est facturé par votre fournisseur, s
 - Le registre contient les noms des pièces et des parties : il est aussi confidentiel que le dossier.
 - Utilisez une clé dédiée à l'outil, avec un plafond de dépense fixé chez le fournisseur.
 - Les alertes ne disent pas tout. Une pièce sans alerte reste une pièce à relire.
-- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions-outils-ia-avocat/).
 
 ## Installation
 
-Le guide [Utiliser un outil en local](/guides/utiliser-un-outil-en-local/) détaille chaque étape. En bref :
+Le guide [Utiliser un outil en local](/guides/installer-outil-python-windows/) détaille chaque étape. En bref :
 
 1. Installez Python 3.10 ou plus récent.
 2. Téléchargez l'archive ci-dessus et vérifiez son empreinte SHA-256.

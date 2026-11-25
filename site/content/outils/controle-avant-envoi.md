@@ -1,7 +1,7 @@
 ---
 draft: true
 title: "Contrôle avant envoi"
-description: "Vérifier un document Word avant de l'envoyer : commentaires, modifications suivies, texte masqué, propriétés, noms d'autres dossiers. Sans IA, sans réseau."
+description: "Nettoyer un document Word avant envoi : commentaires, modifications suivies, texte masqué, métadonnées, noms d'autres dossiers. Sans IA, sans réseau."
 resume: "Avant d'envoyer un document Word, l'outil recherche ce qui ne devrait pas partir avec lui et localise chaque élément. Il ne modifie jamais le document."
 version: "0.1.0"
 statut: "test"
@@ -74,11 +74,11 @@ Gratuit : l'outil n'appelle aucun service payant.
 - Relancez le contrôle après vos corrections : un « Accepter toutes les modifications » ne retire ni les commentaires ni les propriétés.
 - La liste de termes contient des noms de clients. Gardez-la hors des dossiers partagés.
 - Le rapport est aussi confidentiel que le document. Ne le joignez pas à l'envoi.
-- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions/).
+- Les règles générales d'usage sont sur la page [Précautions](/fr/ethique/precautions-outils-ia-avocat/).
 
 ## Installation
 
-Le guide [Utiliser un outil en local](/guides/utiliser-un-outil-en-local/) détaille chaque étape. En bref :
+Le guide [Utiliser un outil en local](/guides/installer-outil-python-windows/) détaille chaque étape. En bref :
 
 1. Installez Python 3.10 ou plus récent.
 2. Téléchargez l'archive ci-dessus et vérifiez son empreinte SHA-256.

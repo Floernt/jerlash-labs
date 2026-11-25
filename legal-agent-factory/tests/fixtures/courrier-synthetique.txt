@@ -1,0 +1,12 @@
+DOCUMENT SYNTHÉTIQUE DE TEST - aucune donnée réelle.
+
+Objet : courrier fictif destiné à tester la chaîne du Lot 1.
+
+Madame, Monsieur,
+
+Le présent courrier est entièrement inventé. Il ne concerne aucune personne,
+aucune société ni aucun dossier existant. Il sert uniquement à vérifier qu'un
+fichier déposé produit un événement, une qualification, une charge utile de
+tâche et un fichier de résultat.
+
+Signature fictive

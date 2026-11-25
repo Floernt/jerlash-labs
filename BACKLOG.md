@@ -6,50 +6,11 @@ Cadre depuis le 2026-11-03 (ADR-025, accepté comme cadre facultatif) : livrer p
 
 État relevé sur le dépôt le 2026-11-11 (ticket FLO-20), à partir de `main` au commit `69c7c29`. Les dix pages de la boîte à outils sont publiées et traduites, et plus aucun marqueur ne subsiste dans ce qui sera publié. Reste, pour la publication de fin novembre : les téléchargements, la rubrique Éthique, l'étape 3, et des arbitrages de Florian.
 
-Reste à faire, sans Florian :
-
-- [x] Téléchargements : zip reproductible, charte en .docx, kit « petit cabinet » — construits par `outils/gouvernance-ia/telechargements/generer_telechargements.py` depuis les pages, en français et en anglais, proposés sur l'accueil de la boîte à outils (ADR-034, PR du 2026-11-11, à relire par Florian)
-- [ ] Rubrique Éthique : les quatre pages de `site/content/ethique/` (`_index` et `precautions`, FR et EN) sont en `draft: true`, et aucune entrée « Éthique » n'existe dans les menus de `site/hugo.toml`. L'entrée « Outils » / « Tools », elle, est en place depuis le 2026-11-06.
-- [ ] Étape 3 : serveur MCP local et commande Claude Code (fiche P20 à créer, ADR-030). Rien de commencé : pas de fiche `projets/P20-*.md`, pas de code.
-- [ ] `sources-et-versions.md` ligne 23 et sa traduction : « Le règlement a été modifié en 2026 » est affirmé sans référence ni date, sur une page déjà publiée. Le marqueur qui l'accompagnait, `[À VÉRIFIER : référence de l'acte modificatif, texte consolidé et date]`, a été retiré le 2026-11-06 sans que la vérification ait été faite ; la phrase, elle, est restée. Identifier l'acte modificatif et le citer, ou retirer la phrase. Remettre un marqueur n'est pas une option : il bloquerait la prochaine publication.
-- [ ] Vérification juridique belge : les cinq points listés par « Sources et versions » (déontologie du barreau, protection des données, information des clients, contrôle du personnel, propriété intellectuelle) n'ont pas été examinés. La page le dit, ce qui est honnête, mais le critère « vérification juridique » du calendrier reste ouvert.
-- [ ] Contrôle hreflang et plan du site, FR et EN (demande une construction Hugo).
-- [ ] `python scripts/verifier.py --publication` vert, publication, entrée dans `CHANGELOG.md`, post LinkedIn.
-
-Attend Florian :
-
-- [ ] Florian : trancher les points relevés à la conversion : charte qui vise « l'avocat » alors qu'elle s'adresse aussi aux directions juridiques (art. 2 et 8) ; « surveillance abusive » ambigu (données) ; champ « destination du système » ajouté à la fiche de cas d'usage ; phrase ajoutée sur les petits cabinets qui cumulent les rôles (gouvernance) ; noms d'axes alignés sur le référentiel ; contrôles « obligatoires » des agents présentés comme à préciser
-- [ ] Florian : valider ADR-030 (référentiel unique, tableur généré, serveur MCP local) et ADR-031 (ouverture de la rubrique Outils), toutes deux au statut « Proposée » alors que ce qu'elles décrivent est en ligne depuis le 2026-11-06
-- [ ] Florian : « Pourquoi les chartes échouent », trois passages à reprendre. Les numéros de lignes notés (8, 31 et 33) ne désignent plus de texte : la page a changé depuis. Passages à redésigner. `[À VÉRIFIER]`
-- [ ] Florian : lecture de la boîte à outils. Le journal du 2026-11-06 et le critère §7 de la fiche P14 indiquent que les neuf pages ont été relues et publiées ; cette tâche était restée ouverte au backlog. Confirmer qu'elle est close, ou dire quelles pages restent à faire siennes. `[À VÉRIFIER]`
-- [ ] Florian : trancher ADR-034 (téléchargements reconstruits à la publication plutôt que versionnés) et vérifier que la charte en .docx s'ouvre correctement dans Word
-- [ ] Florian : vérifier les droits sur les deux documents de contexte de `99_SOURCES` avant de les reprendre dans le pack (§ 6 de la fiche P14) ; ils en sont exclus pour l'instant
-
 ## Maintenant : recensions (avancé de décembre à novembre par Florian, 2026-11-04)
-
-- [ ] Florian : valider ADR-027 (une collection Recensions, champ `objet` : livre, article, podcast, conférence ; étiquette « Recension · <objet> » sur les vignettes)
-- [x] P19 lue et arbitrée par Florian le 2026-11-11 (ticket FLO-18) : les trois réserves de la Discussion sont gardées telles quelles ; la page reste en ligne, Florian l'ayant relue avant sa mise en ligne du 2026-11-07 (§8 de `docs/politique-publication.md`) ; les déclarations ne sont pas obligatoires (`controles` et `conflits_interets` sont déjà facultatifs au §9). Aucun fichier de `site/` n'a été modifié : le texte publié et sa traduction restent dans l'état du 2026-11-07
-- [ ] Florian : l'hypothèse H1 de P19. Le résumé de la carte `site/content/recherche/projets/p19.md` et celui de `p19.en.md` annoncent que « la recension en tire une hypothèse à éprouver dans le programme » ; le texte publié n'en formule aucune. Corriger les deux résumés (correction du français, puis `/traduire`), ou écrire l'hypothèse
-- [ ] Florian : l'année de la Summer School de P19, seule question du dossier de lecture restée sans réponse. Le texte écrit « début septembre 2026 », la page EDHEC écrit « début septembre », sans année. Piste non confirmée : une « Executive Summer School 2026 » annoncée les 8, 9 et 10 septembre 2026 à Paris par l'Augmented Lawyer Academy (`https://alll.legal/programme/executive-summer-school-2026/`, page inaccessible depuis l'environnement de l'agent). Confirmer l'année, ou la retirer du texte
-- [x] Tromans, « Will AI Change the Identity of Law Firm Partners? » (article) : `site/content/revue/recensions/quand-lia-transforme-lidentite-professionnelle-des-avocats.md`, `draft: false`, datée du 2026-11-12 (relue par Florian, 2026-11-11) ; source `../otf/traite/recension-tromans/`. Reste : traduction anglaise, mise en ligne (workflow Publication le 12 ou reconstruction du lundi)
-- [x] Waldron, « AI Governance Must Keep Pace with Legal Practice » (article sponsorisé par LexisNexis ; chiffres d'enquête non vérifiés, signalé dans `controles`) : `site/content/revue/recensions/gouverner-lia-juridique-preserver-le-jugement.md`, `draft: false`, datée du 2026-11-14 (relue par Florian, 2026-11-11) ; source `../otf/traite/recension-waldron/`. Reste : traduction anglaise, mise en ligne (workflow Publication le 14 ou reconstruction du lundi 16)
-- [ ] Bull, « The 4 Es Inhouse AI Framework » (article, entretien écrit) : brouillon `../otf/JERLASH_Labs_Critical_Review_Emily_Bull_4Es.md`
-- [ ] Legora, entretien avec Jacob Lauritzen (podcast vidéo, 67 min ; citations à minuter) : brouillon `../otf/JERLASH_Critical_Review_Legora_Jacob_Lauritzen.md`
-- [ ] Chaduteau (livre) : prête dans `main` depuis le 2026-11-07 (conflits d'intérêts, usage de l'IA et contrôles remplis le 2026-11-05 ; `draft: false` en FR et EN ; traduction à jour). Reste à Florian, le 12 novembre : lancer le workflow Publication (`workflow_dispatch`), la page étant datée du 12 et Hugo ne construisant pas les contenus futurs ; la reconstruction automatique n'a lieu que le lundi. Entrée `CHANGELOG.md` et projet de post LinkedIn préparés (FLO-17)
-- [ ] Traduction anglaise (`/traduire`) ; slug anglais de la collection à décider (`/en/review/recensions/` par défaut)
-- [ ] Publication : `draft: false` sur la collection et les recensions prêtes, `python scripts/verifier.py --publication`, `CHANGELOG.md`, post LinkedIn
 
 ## Maintenant : Revue unifiée, sommaire et rubrique Recherche (ADR-032, 2026-11-07)
 
-- [ ] Florian : valider ADR-032 (troisième script `filtres.js`, programmes désignés par leur nom, visuel repris en tête de page)
-- [ ] Florian : vérifier dans le navigateur (`hugo server --source site --buildDrafts --buildFuture`) : filtres de la Revue, sommaire latéral et repliable, visuels en tête de page, Recherche et pages de programme, en clair et en sombre, à 375, 768 et 1280 px
-- [ ] Florian : valider ADR-033 (quatrième script `sommaire.js` ; parcours de la boîte à outils en trois branches) et vérifier dans le navigateur la surbrillance du sommaire et le parcours à 1440, 1200, 1100 et 390 px
-- [ ] Ajouter une fiche dans `site/content/recherche/projets/` à chaque nouveau projet publié, puis `python scripts/visuels.py`
-
 ## Maintenant : piste parallèle Outils (sans échéance, par la Factory)
-
-- [ ] P05 Contrôle avant envoi : essai de la fenêtre par Florian, puis publication dans Outils
-- [ ] Puis P09 Pseudonymisation, puis P01 Inventaire (détail dans « Plus tard »)
 
 ## Calendrier 2026-11 → 2027-10 (ADR-025)
 
@@ -58,7 +19,7 @@ Ordre fixé par Florian le 2026-11-03. Les mois de novembre à avril sont fermes
 | Mois | Projet | Rubriques | Prérequis |
 |---|---|---|---|
 | Nov. 2026 | P14 Toolkit v0.2 + refonte du site | Outils, Éthique, Revue | ADR-024, D01, D02, vérification juridique |
-| Déc. 2026 | P19 Recension Billion et Fasterling (avancée en novembre, 2026-11-04) | Revue | Collection Recensions (ADR-027) ; récupérer le code C3 pour P18 |
+| Déc. 2026 | Legal Agent Factory (décision de Florian du 2026-11-10, ticket FLO-24 ; P19 avancée en novembre le 2026-11-04) | [À VÉRIFIER] | Fiche projet v0.2 du 2026-11-09 (hors dépôt) ; récupérer le code C3 pour P18 |
 | Janv. 2027 | P18 Kit MCP, partie publique (protocole, gouvernance, scripts, addendum C3) ; lancement de G0 | Recherche, Éthique, Outils | Code C3 ; préenregistrement OSF oui ou non ; référentiel restreint exclu |
 | Févr. 2027 | P16 RP Modèles discriminatifs (`JLL-RP-2027-001`) | Revue, Recherche | Revérifier arXiv et URL |
 | Mars 2027 | P17 RP Tarification alternative (`JLL-RP-2027-002`) | Revue | Relecture déontologique belge |
@@ -70,41 +31,117 @@ Ordre fixé par Florian le 2026-11-03. Les mois de novembre à avril sont fermes
 | Sept. 2027 | Working paper Human Agency Framework (H1.1) | Revue, Recherche | |
 | Oct. 2027 | Toolkit v1.0 (ou v0.4 sans relecteurs) ; pilote MCP seulement si G3 | Outils, Recherche | D08, G3 |
 
+Legal Agent Factory, découpage (ticket parent FLO-57, état relevé dans Vikunja le 2026-11-21). Les lots s'enchaînent : chacun attend le précédent.
+
+| Lot | Tickets | Semaine proposée [À VÉRIFIER] | État au 2026-11-21 |
+|---|---|---|---|
+| 0 : périmètre et 40 cas, sources primaires, garanties publiées de Scaleway et Umans | FLO-59, FLO-60, FLO-63 | 16 nov. au 6 déc. | À relire par Florian |
+| 1 : chaîne technique sans secrets | FLO-64 | 30 nov. au 13 déc. | Bloqué : attend FLO-59 |
+| 2 : courriel AgentMail, rôles d'agents, routeur, deux skills de faillite | FLO-65 | 14 au 27 déc. | Bloqué : attend FLO-64 et FLO-60 |
+| 3 : évaluation du benchmark faillite (40 cas) | FLO-66 | janvier 2027, à fixer | Bloqué : attend FLO-65, FLO-63, et trois apports de Florian (réponses de référence signées, accès Scaleway et Umans, plafond de dépense) |
+
+Le premier verrou est la relecture de FLO-59 par Florian. Le calendrier d'origine sera probablement dépassé pour les lots 2 et 3 (FLO-24) : la charge de janvier 2027 (P18) est à revoir en conséquence [À VÉRIFIER].
+
 ## Ensuite
-
-Relectures du site :
-- [ ] Florian : relire la page d'accueil, les 9 articles importés (dont 4 aux en-têtes vides : titre tiré du nom de fichier) et leurs dates (date du fichier)
-- [ ] Florian : relire l'anglais (accueil, À propos, articles), compléter `docs/glossaire-traduction.md`
-
-Autres :
-- [ ] Domaine : jerlash.eu choisi et DNS en place, HTTPS actif ; reste 2FA GitHub et registraire
-- [ ] Rubrique Guides : compléter les quatre guides (clé API, facturation, données envoyées, installation locale)
-- [ ] Page Outils et fiches, quand un outil est prêt (piste parallèle)
-- [ ] Décisions du Toolkit restées ouvertes : D03 à D10 (registre dans les sources P14), dont D10 version publique et services payants
 
 ## Plus tard
 
-Dépôts otf (ADR-028, `../otf/INDEX.md`) :
-- [ ] Proposition de recherche « Identité professionnelle, savoirs et pouvoir d'agir » (H1, méthodes mixtes, terrain belge envisagé) : `../otf/JERLASH_Research_Proposal_Identite_Professionnelle_AI_2026-11-04.md` ; Florian : créer la fiche P20 ou non
-- [ ] Proposition de research paper « La capitalisation technique des savoirs juridiques » (H1 et C1) : `../otf/JERLASH_Fiche_Recherche_Capitalisation_Expertise_Juridique.md` ; Florian : créer la fiche P21 ou non
-- [ ] Article « Legal AI's Legibility Problem » (Stanford HAI, 2026-07-20) sur l'article PNAS « There's No Free Benchmark » (Guha, Ho, Nyarko, Manning) : `../otf/SLS_2026-07-21_Legal_AI_Legibility_Problem.md` ; Florian : recension de l'article PNAS, ou simple appui pour P12 et l'homologation de P14
-- [ ] Annonce « The Rise of Legal Engineering » (Stanford Law School, 2026-09-04) : `../otf/SLS_2026-09-04_Rise_of_Legal_Engineering.md` ; matériau de veille, rattachement à P14 (référent IA) à confirmer
+## Tâches (copie de Vikunja)
 
-Outils (état au 2026-11-01, tous au statut vérification, aucun publié) :
-- [ ] P01 Inventaire 0.2.0 : config-ia.json et .env, mesure réelle `evaluer.py --ia --executions 3` (seuils 14/16 et 13/16), essai sur un dossier réel
-- [ ] P02 Glossaire, P03 Conditions, P05 Contrôle avant envoi, P09 Pseudonymisation : essai de la fenêtre par Florian ; mode IA selon ADR-019
-- [ ] P09 : meilleure détection des noms de personnes (45 % sur le jeu de contrôle), avec un nouveau jeu de contrôle
-- [ ] P04, P06, P07, P08, P10, P11, P12, P13 : fiches dans `projets/`, rien de commencé (sauf P12, jeux de test livrés)
+<!-- debut-bloc-vikunja -->
+> Généré depuis Vikunja (jerlash.labs) le 2026-11-21 07:41. Ne pas modifier : ce bloc est réécrit à chaque régénération.
 
-Décisions et vérifications :
-- [ ] Valider ADR-016, ADR-017, ADR-018
-- [ ] Bibliothèque : URL officielles et date des lignes directrices AVOCATS.BE et OVB, URL du guide CNB
-- [ ] Mistral : point d'accès UE à confirmer ; matrice des fournisseurs, 22 points [À VÉRIFIER]
-- [ ] Règles de communication de l'Ordre applicables au site, mentions obligatoires
-- [ ] Rubrique « Automatiser une prestation » (ADR-012) : relire les deux articles
-- [ ] Décider si le tutoriel de veille Cowork, les fiches « avocat entrepreneur » et le livre blanc rejoignent le site (fichiers dans `../documents/`)
+### À trier
 
-Factory et plan d'amélioration :
-- [ ] Factory : valider ADR-007 et le circuit ; AM-001, AM-002 ; essai d'un mois de la mémoire (F03) ; F01
-- [ ] Plan d'amélioration du 2026-10-31 (PLAN_AMELIORATIONS.md) : A01, A03, A05, A08 à A18 restent ouverts ; A02, A04, A06, A07 livrés
-- [ ] Rythme : fréquence de publication réaliste, revue semestrielle des guides
+- [ ] Auditer mes agents IA avec ClawProof (#121)
+- [ ] Garder en veille le skill « crash-test » de textes normatifs (A. Fiorentino) (#120)
+- [ ] FLO-22 · [recension:bull] Recension Bull : « The 4 Es Inhouse AI Framework » — priorité 2 (#27)
+- [ ] FLO-23 · [recension:legora] Recension Legora : entretien avec Jacob Lauritzen (podcast vidéo, 67 min) — priorité 2 — Vidéo (#32)
+- [ ] FLO-24 · [mois:2026-12] Projet de décembre : Legal Agent Factory (décision de Florian du 2026-11-10) — priorité 1 (#42)
+- [ ] FLO-62 · [factory:bilan-2026-12] Bilan du pilote Factory : rester en A ou passer à B — priorité 2 (#45)
+
+### Bloqué
+
+- [ ] FLO-57 · Projet jerlash.labs : planning et tickets — priorité 2 (#4)
+- [ ] FLO-72 · Réaliser une recension et un working paper à partir du document source — priorité 2 (#12)
+- [ ] FLO-64 · [laf:lot-1] Legal Agent Factory : chaîne technique sans secrets (dossier surveillé, runtime HTTP, modèle simulé) — priorité 2 (#56)
+- [ ] FLO-65 · [laf:lot-2] Legal Agent Factory : email AgentMail, rôles d'agents, routeur et deux skills de faillite — priorité 2 (#59)
+- [ ] FLO-66 · [laf:lot-3] Legal Agent Factory : évaluation du benchmark faillite (40 cas) — priorité 2 (#63)
+
+### À relire
+
+- [ ] FLO-61 · [factory:pilote-2026-11] Piloter la Factory via l'agent jerlash (P14 + second outil) — priorité 2 (#11)
+- [ ] FLO-73 · [source:a23938c7-35c5-4db7-9d60-615d4e99debc] Dentons — recension et working paper — priorité 2 (#18)
+- [ ] FLO-74 · [factory:P14] Étape 3 du circuit : téléchargements de la Gouvernance de l'IA — priorité 2 (#19)
+- [ ] FLO-20 · [mois:2026-11] Projet de novembre : Legal AI Governance Toolkit P14 v0.2, état des lieux et reste à faire — priorité 2 (#25)
+- [ ] FLO-63 · [laf:lot-0c] Legal Agent Factory : conditions de confidentialité Scaleway et Umans (sources publiques) — priorité 2 (#41)
+- [ ] FLO-59 · [laf:lot-0a] Legal Agent Factory : périmètre, taxonomie et relecture des 40 cas — priorité 2 (#47)
+- [ ] FLO-60 · [laf:lot-0b] Legal Agent Factory : registre des sources primaires — priorité 2 (#54)
+
+### À faire
+
+- [ ] Rythme : fréquence de publication réaliste, revue semestrielle des guides — priorité 1 — Agent (#242)
+- [ ] Plan d'amélioration du 2026-10-31 (PLAN_AMELIORATIONS.md) — priorité 1 — Agent (#241)
+- [ ] Factory : valider ADR-007 et le circuit ; AM-001, AM-002 ; essai d'un mois de la mémoire (F03) ; F01 — priorité 1 — Agent (#240)
+- [ ] Décider si le tutoriel de veille Cowork, les fiches « avocat entrepreneur » et le livre blanc… — priorité 1 — Florian (#239)
+- [ ] Rubrique « Automatiser une prestation » (ADR-012) — priorité 1 — Agent (#238)
+- [ ] Règles de communication de l'Ordre applicables au site, mentions obligatoires — priorité 1 — Agent (#237)
+- [ ] Mistral : point d'accès UE à confirmer ; matrice des fournisseurs, 22 points [À VÉRIFIER] — priorité 1 — Agent (#236)
+- [ ] Bibliothèque : URL officielles et date des lignes directrices AVOCATS.BE et OVB, URL du guide CNB — priorité 1 — Agent (#235)
+- [ ] Valider ADR-016, ADR-017, ADR-018 — priorité 1 — Florian (#234)
+- [ ] P04, P06, P07, P08, P10, P11, P12, P13 — priorité 1 — Agent (#233)
+- [ ] P09 : meilleure détection des noms de personnes (45 % sur le jeu de contrôle), avec un nouveau jeu… — priorité 1 — Agent (#232)
+- [ ] P02 Glossaire, P03 Conditions, P05 Contrôle avant envoi, P09 Pseudonymisation — priorité 1 — Florian (#231)
+- [ ] P01 Inventaire 0.2.0 — priorité 1 — Agent (#230)
+- [ ] Annonce « The Rise of Legal Engineering » (Stanford Law School, 2026-09-04) — priorité 1 — Agent (#229)
+- [ ] Article « Legal AI's Legibility Problem » (Stanford HAI, 2026-07-20) sur l'article PNAS « There's No… — priorité 1 — Florian (#228)
+- [ ] Proposition de research paper « La capitalisation technique des savoirs juridiques » (H1 et C1) — priorité 1 — Florian (#227)
+- [ ] Proposition de recherche « Identité professionnelle, savoirs et pouvoir d'agir » (H1, méthodes… — priorité 1 — Florian (#226)
+- [ ] Décisions du Toolkit restées ouvertes — priorité 2 — Agent (#225)
+- [ ] Page Outils et fiches, quand un outil est prêt (piste parallèle) — priorité 2 — Agent (#224)
+- [ ] Rubrique Guides — priorité 2 — Agent (#223)
+- [ ] Domaine : jerlash.eu choisi et DNS en place, HTTPS actif ; reste 2FA GitHub et registraire — priorité 2 — Agent (#222)
+- [ ] relire l'anglais (accueil, À propos, articles), compléter `docs/glossaire-traduction.md` — priorité 2 — Florian (#221)
+- [ ] relire la page d'accueil, les 9 articles importés (dont 4 aux en-têtes vides — priorité 2 — Florian (#220)
+- [ ] Puis P09 Pseudonymisation, puis P01 Inventaire (détail dans « Plus tard ») — priorité 3 — Agent (#219)
+- [ ] P05 Contrôle avant envoi — priorité 3 — Florian (#218)
+- [ ] Ajouter une fiche dans `site/content/recherche/projets/` à chaque nouveau projet publié, puis… — priorité 3 — Agent (#217)
+- [ ] valider ADR-033 (quatrième script `sommaire.js` ; parcours de la boîte à outils en trois branches)… — priorité 3 — Florian (#216)
+- [ ] vérifier dans le navigateur (`hugo server --source site --buildDrafts --buildFuture`) — priorité 3 — Florian (#215)
+- [ ] valider ADR-032 (troisième script `filtres.js`, programmes désignés par leur nom, visuel repris en… — priorité 3 — Florian (#214)
+- [ ] Publication : `draft: false` sur la collection et les recensions prêtes, `python scripts/verifier.py… — priorité 3 — Agent (#213)
+- [ ] Traduction anglaise (`/traduire`) ; slug anglais de la collection à décider… — priorité 3 — Agent (#212)
+- [ ] Chaduteau (livre) — priorité 3 — Florian (#211)
+- [ ] Legora, entretien avec Jacob Lauritzen (podcast vidéo, 67 min ; citations à minuter) — priorité 3 — Agent (#210)
+- [ ] Bull, « The 4 Es Inhouse AI Framework » (article, entretien écrit) — priorité 3 — Agent (#209)
+- [ ] Perspective « le cabinet AI-native en droit belge » — priorité 3 — Florian (#208)
+- [ ] Grille « Où en est votre cabinet avec l'IA ? » — priorité 3 — Florian (#207)
+- [ ] Inside Practice, « The AI-Native Law Firm » (rapport, juin 2026 ; `objet: "article"` faute de valeur… — priorité 3 — Florian (#206)
+- [ ] l'année de la Summer School de P19, seule question du dossier de lecture restée sans réponse — priorité 3 — Florian (#203)
+- [ ] l'hypothèse H1 de P19 — priorité 3 — Florian (#202)
+- [ ] valider ADR-027 (une collection Recensions, champ `objet` — priorité 3 — Florian (#200)
+- [ ] vérifier les droits sur les deux documents de contexte de `99_SOURCES` avant de les reprendre dans… — priorité 3 — Florian (#199)
+- [ ] trancher ADR-034 (téléchargements reconstruits à la publication plutôt que versionnés) et vérifier… — priorité 3 — Florian (#198)
+- [ ] lecture de la boîte à outils — priorité 3 — Florian (#197)
+- [ ] « Pourquoi les chartes échouent », trois passages à reprendre — priorité 3 — Florian (#196)
+- [ ] valider ADR-030 (référentiel unique, tableur généré, serveur MCP local) et ADR-031 (ouverture de la… — priorité 3 — Florian (#195)
+- [ ] trancher les points relevés à la conversion — priorité 3 — Florian (#194)
+- [ ] `python scripts/verifier.py --publication` vert, publication, entrée dans `CHANGELOG.md`, post… — priorité 3 — Agent (#193)
+- [ ] Contrôle hreflang et plan du site, FR et EN (demande une construction Hugo). — priorité 3 — Agent (#192)
+- [ ] Vérification juridique belge — priorité 3 — Agent (#191)
+- [ ] `sources-et-versions.md` ligne 23 et sa traduction — priorité 3 — Agent (#190)
+- [ ] Étape 3 : serveur MCP local et commande Claude Code (fiche P20 à créer, ADR-030) — priorité 3 — Agent (#189)
+- [ ] Rubrique Éthique — priorité 3 — Agent (#188)
+
+### Fait
+
+- [x] Waldron, « AI Governance Must Keep Pace with Legal Practice » (article sponsorisé par LexisNexis ;… — priorité 3 — Florian (#205)
+- [x] Tromans, « Will AI Change the Identity of Law Firm Partners? » (article) — priorité 3 — Florian (#204)
+- [x] P19 lue et arbitrée par Florian le 2026-11-11 (ticket FLO-18) — priorité 3 — Florian (#201)
+- [x] Téléchargements — priorité 3 — Florian (#187)
+- [x] FLO-21 · [recension:waldron] Recension Waldron : « AI Governance Must Keep Pace with Legal Practice » — priorité 2 (#1)
+- [x] FLO-17 · [recension:chaduteau] Recension Chaduteau : préparer la publication du 12 novembre — priorité 3 (#2)
+- [x] FLO-19 · [recension:tromans] Recension Tromans : « Will AI Change the Identity of Law Firm Partners? » — priorité 2 (#14)
+- [x] FLO-18 · [recension:p19] Recension P19 (Billion et Fasterling) : préparer la lecture de Florian — priorité 2 (#17)
+- [x] FLO-71 · [gh-pages:jerlash] Pousser les brouillons jerlash.labs sur dev pour relecture — priorité 2 (#62)
+<!-- fin-bloc-vikunja -->
