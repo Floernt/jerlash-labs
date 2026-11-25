@@ -9,7 +9,7 @@ oeuvre:
   titre: "From AI Adoption to AI Advantage. How leading in-house legal teams are leveraging AI"
   publication: "Dentons, Leading Edge, rapport PDF de 31 pages"
   annee: "octobre 2026"
-  url: "https://www.dentons.com/en/about-dentons/news-events-and-awards/news/2026/october/-/media/01bbf9f600ae443e87ea39c5526d21e0.ashx"
+  url: "https://insights.dentons.com/447/39125/uploads/from-ai-adoption-to-ai-advantage.pdf"
   consulte_le: 2026-11-21
 programme: "H1"
 date_arret_recherches: 2026-11-21

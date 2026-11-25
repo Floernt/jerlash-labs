@@ -149,7 +149,7 @@ Ce texte tire quatre hypothèses d'un seul rapport, fondé sur des entretiens do
 
 ## 9. Bibliographie
 
-Dentons (2026). *From AI Adoption to AI Advantage. How leading in-house legal teams are leveraging AI*. Leading Edge. Dublin, Dentons, en collaboration avec Silicon Republic, 31 p. PDF consulté le 2026-11-21. 
+Dentons (2026). *From AI Adoption to AI Advantage. How leading in-house legal teams are leveraging AI*. Leading Edge. Dublin, Dentons, en collaboration avec Silicon Republic, 31 p., https://insights.dentons.com/447/39125/uploads/from-ai-adoption-to-ai-advantage.pdf. PDF consulté le 2026-11-21. 
 
 Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données (RGPD), art. 12 et 15. [version EUR-Lex collationnée.]
 
