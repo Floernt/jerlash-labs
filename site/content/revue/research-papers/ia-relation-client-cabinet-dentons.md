@@ -17,7 +17,7 @@ conflits_interets: "aucun"
 <!--
 Collection Revue › Research papers (ADR-024, point 4), créée le 2026-11-25. Le champ « type » (conceptuel) est noté ici et non dans le front matter, conformément à docs/politique-publication.md §4.
 
-À la publication : draft : false, statut « working paper », identifiant JLL-RP-2026-001 (premier research paper publié), et passer la page d'index de la collection (_index.md et _index.en.md) en draft : false. Lever d'abord les [À VÉRIFIER] du texte (sections 5.2 et 6.2) et du front matter.
+À la publication : draft : false, statut « working paper », identifiant JLL-RP-2026-001 (premier research paper publié), et passer la page d'index de la collection (_index.md et _index.en.md) en draft : false. Lever d'abord les marqueurs de vérification du texte (sections 5.2 et 6.2) et du champ usage_ia.
 
 Maillage en attente : les perspectives « Taux horaire et intelligence artificielle » (/revue/perspectives/taux-horaire-avocat-ia/, pour la section 6) et « L'IA et l'avocat - déléguer le connu, penser l'inconnu » (/revue/perspectives/deleguer-ia-avocat-jugement/, pour la section 7) sont en brouillon (draft : true). Les lier quand elles seront publiées.
 -->
