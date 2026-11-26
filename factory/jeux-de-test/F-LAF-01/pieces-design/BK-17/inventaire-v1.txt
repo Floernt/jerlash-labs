@@ -1,0 +1,5 @@
+Inventaire (fictif) V1 - 10 novembre 2026 - Menuiserie Dufour SRL
+Camionnette 1-ABC-123 : 9 000 EUR
+Scie à format : 6 500 EUR
+Stock de bois : 22 000 EUR
+Total : 37 500 EUR
