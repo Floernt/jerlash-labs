@@ -1,0 +1,4 @@
+{
+  "$comment": "Registre des dossiers du banc : vide. Aucun cas n'est donc rattaché à un dossier connu, et le routeur le traite comme tel (dossier ATTENTE). Un registre par cas relève de la conception des cas (FLO-59) [À VÉRIFIER].",
+  "dossiers": []
+}

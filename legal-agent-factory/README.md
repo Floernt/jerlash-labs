@@ -217,3 +217,21 @@ Variantes. `--variantes` ajoute, pour chaque cas qui a des pièces, des injectio
 - correspondance sentinelles / cas dans `config/banc/sentinelles.json` [À VÉRIFIER] ;
 - forme de `response_format` et `tools` chez Scaleway et Umans [À VÉRIFIER] ;
 - `config/banc/instructions-provisoires.txt` tient lieu de skill tant que le banc n'est pas branché sur la chaîne du Lot 2.
+
+### Banc branché sur la chaîne du Lot 2
+
+Une série qui porte `"chaine": "lot2"` fait passer chaque cas par la chaîne du Lot 2 (rapprochement, routeur, skill, revue qualité) au lieu de la seule qualification du Lot 1 (`laf/banc/lot2.py`). Série de démonstration, modèle simulé :
+
+```
+python -m laf evaluer executer --cas <CSV hors dépôt> --serie config/banc/serie-simulee-lot2-design.json --pieces <dossier> --sortie <répertoire de série> [--variantes]
+```
+
+Entrée. Canal `email` : la pièce `*courriel.txt` est convertie au format `laf-courriel/0.1` (en-têtes De, À, Cc, Date, Objet ; le reste fait le corps), les autres pièces deviennent ses pièces jointes. La date des pièces n'a pas de fuseau : UTC par convention [À VÉRIFIER si un cas en dépend]. Canal `folder` : chaque pièce est déposée dans `<entrée>/<id du cas>/` et produit un événement de création ; un dépôt de plusieurs fichiers ouvre donc plusieurs tâches, comme dans la chaîne réelle. Les pièces de contexte (`00-contexte*`) ne sont pas transmises : au Lot 2, c'est le registre des dossiers de la série (clé `dossiers`) qui joue ce rôle. Le registre fourni, `config/banc/dossiers-vide.json`, est vide : aucun cas n'est rattaché [À VÉRIFIER : registre par cas à concevoir avec FLO-59].
+
+Aucune intervention humaine n'est simulée. Une tâche en `confirmation_humaine`, `needs_clarification`, `classement` ou `hors_perimetre` s'arrête là, et c'est son statut qui est mesuré ; le skill ne s'exécute que pour une tâche `route`. Les traces de chaque unité restent sous `<série>/chaine/<unité>/`.
+
+Gel. En plus du fichier de cas, des pièces et du code, `gel.json` fixe les empreintes du registre des dossiers, des skills, des schémas de routage et de courriel, des niveaux d'action et du registre des sources.
+
+Mesures propres au Lot 2 : orchestration (chaque événement ouvre une tâche et tout skill lancé se termine), ingestion (classification du routeur conforme au schéma), routage (statut des tâches, skills exécutés, revues conformes). Les autres dimensions sont celles du Lot 3.
+
+Avec le modèle simulé, la classification n'est pas du JSON : toutes les tâches tombent en `confirmation_humaine` (repli). La série éprouve donc la mécanique, pas le routage ; les branches `route`, skill et revue sont couvertes par les tests (`tests/test_banc.py`).

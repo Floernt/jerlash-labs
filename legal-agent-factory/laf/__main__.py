@@ -98,12 +98,13 @@ PASSERELLES = {"simulee": PasserelleSimulee, "scaleway": PasserelleScaleway, "um
 
 
 def charger_serie(chemin: str) -> dict:
-    """Lit une série ; les chemins `instructions` et `schema` sont relatifs à son fichier."""
+    """Lit une série ; les chemins `instructions`, `schema` et `dossiers` sont relatifs à son fichier."""
     with open(chemin, encoding="utf-8") as f:
         serie = {k: v for k, v in json.load(f).items() if not k.startswith("$")}
     base = os.path.dirname(os.path.abspath(chemin))
-    for cle in ("instructions", "schema"):
-        serie[cle] = os.path.normpath(os.path.join(base, serie[cle]))
+    for cle in ("instructions", "schema", "dossiers"):
+        if serie.get(cle):
+            serie[cle] = os.path.normpath(os.path.join(base, serie[cle]))
     return serie
 
 

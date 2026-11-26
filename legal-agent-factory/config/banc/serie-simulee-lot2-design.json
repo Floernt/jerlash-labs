@@ -1,0 +1,13 @@
+{
+  "$comment": "Série de démonstration sur la chaîne du Lot 2 (rapprochement, routeur, skills, revue) : modèle simulé, aucun appel réseau, aucun coût. Les chemins sont relatifs à ce fichier.",
+  "nom": "simulee-lot2-design",
+  "chaine": "lot2",
+  "fournisseur": "simulee",
+  "modele": "simule-deterministe",
+  "endpoint": "local",
+  "jeu": "design",
+  "skill": "routeur du Lot 2 (be-bankruptcy-intake, be-bankruptcy-claim-analysis)",
+  "dossiers": "dossiers-vide.json",
+  "tarifs": null,
+  "plafond": null
+}

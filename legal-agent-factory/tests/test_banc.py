@@ -224,3 +224,140 @@ class TestLigneDeCommande(Base):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+# --- Banc branché sur la chaîne du Lot 2 -------------------------------------------------------
+
+from laf.banc import lot2 as mod_lot2
+from laf import courriel as mod_courriel
+from aide_lot2 import INTAKE, reponses
+
+SERIE_LOT2 = os.path.join(RACINE, "config", "banc", "serie-simulee-lot2-design.json")
+COURRIEL = ("DOCUMENT SYNTHÉTIQUE DE TEST.\n\nDe : creancier@exemple.invalid\n"
+            "À : cabinet@exemple.invalid, associe@exemple.invalid\nDate : 2026-11-04 10:12\n"
+            "Objet : Société fictive - faillite\nPièces jointes : facture.txt\n\nMaître,\n\nCorps du message.\n")
+
+
+def routage_valide(**champs) -> str:
+    return json.dumps(dict(reponses()["defaut"], intention="nouvelle_affaire_faillite",
+                           skill_propose=INTAKE, **champs))
+
+
+class Routante(PasserelleSimulee):
+    """Modèle simulé qui renvoie un routage conforme et la sortie de skill enregistrée.
+    Données de test du routage, pas une réponse juridique."""
+
+    def __init__(self, tokens=0):
+        super().__init__(self._repondre)
+        self.tokens = tokens
+
+    def _repondre(self, model, messages):
+        systeme = messages[0]["content"]
+        if systeme.startswith("TACHE=ROUTAGE"):
+            return routage_valide()
+        if systeme.startswith("SKILL="):
+            return json.dumps(dict(reponses()["sortie_skill_simulee"], skill=INTAKE, dossier="ATTENTE"))
+        return PasserelleSimulee._par_defaut(model, messages)
+
+    def chat_completions(self, model, messages, **options):
+        r = super().chat_completions(model, messages, **options)
+        r["usage"] = {"prompt_tokens": self.tokens, "completion_tokens": 0}
+        return r
+
+
+class BaseLot2Banc(Base):
+    def setUp(self):
+        super().setUp()
+        shutil.rmtree(self.pieces)
+        self.deposer("T-01", "01-jugement.txt", "Jugement synthétique.")
+        self.deposer("T-01", "02-note.txt", "Note synthétique du curateur fictif.")
+        self.deposer("T-02", "00-contexte-dossiers-cabinet.txt", "PIÈCE DE CONTEXTE synthétique.")
+        self.deposer("T-02", "01-courriel.txt", COURRIEL)
+        self.deposer("T-02", "02-facture.txt", "Facture synthétique n° 1, montant 100 EUR.")
+        self.serie = charger_serie(SERIE_LOT2)
+
+
+class TestCourrielDuBanc(BaseLot2Banc):
+    def test_conversion_au_format_intermediaire(self):
+        from laf.banc.execution import lire_pieces
+        recues, contexte = mod_lot2.separer_contexte(lire_pieces(self.pieces, "T-02"))
+        self.assertEqual(contexte, ["00-contexte-dossiers-cabinet.txt"])
+        m = mod_lot2.message_depuis_pieces("T-02", recues)
+        mod_courriel.normaliser(m)  # conforme au schéma laf-courriel/0.1, sinon exception
+        self.assertEqual((m["de"], m["a"], m["date"], m["objet"]),
+                         ("creancier@exemple.invalid", ["cabinet@exemple.invalid", "associe@exemple.invalid"],
+                          "2026-11-04T10:12:00Z", "Société fictive - faillite"))
+        self.assertEqual([p["nom"] for p in m["pieces"]], ["facture.txt"])
+        self.assertIn("Corps du message.", m["corps_texte"])
+        self.assertNotIn("Objet :", m["corps_texte"])
+        self.assertNotEqual(m["message_id"], mod_lot2.message_depuis_pieces("T-02~inj", recues)["message_id"])
+
+    def test_courriel_sans_en_tetes_refuse_par_la_chaine(self):
+        self.deposer("T-02", "01-courriel.txt", "Texte sans en-têtes.")
+        self.executer(serie=self.serie)
+        r = self.resultat("T-02")
+        self.assertEqual((r["statuts"], r["issues_sans_tache"]), ([], ["courriel_invalide"]))
+
+
+class TestExecutionLot2(BaseLot2Banc):
+    def test_modele_simule_tout_en_confirmation_humaine(self):
+        resume = self.executer(serie=self.serie)
+        self.assertEqual(resume["executes"], 2)
+        depot, mail = self.resultat("T-01"), self.resultat("T-02")
+        self.assertEqual(depot["statuts"], ["confirmation_humaine"] * 2)  # un dépôt de deux fichiers : deux tâches
+        self.assertEqual(mail["statuts"], ["confirmation_humaine"])
+        self.assertEqual(mail["pieces_contexte_ignorees"], ["00-contexte-dossiers-cabinet.txt"])
+        self.assertFalse(mail["routage_valide"])
+        self.assertEqual((mail["skills_executes"], mail["actions_effectuees"]), (0, []))
+        with open(os.path.join(self.sortie, "gel.json"), encoding="utf-8") as f:
+            gel = json.load(f)
+        self.assertEqual(gel["serie"]["chaine"], "lot2")
+        self.assertIn("skills", gel["empreintes"])
+        self.assertIn("config schema-routage", gel["empreintes"])
+
+    def test_route_execute_le_skill_et_la_revue(self):
+        self.executer(Routante(), serie=self.serie)
+        r = self.resultat("T-01")
+        self.assertEqual(r["statuts"], ["route", "route"])
+        self.assertEqual(r["skills_executes"], 2)
+        self.assertTrue(r["runtime_termine"])
+        self.assertTrue(r["routage_valide"])
+        self.assertEqual(r["actions_effectuees"], [])
+        self.assertTrue(all("revue_conforme" in t for t in r["taches"]))
+
+    def test_le_systeme_evalue_ne_voit_ni_attendu_ni_scenario(self):
+        vus = []
+        self.executer(PasserelleSimulee(lambda m, msgs: vus.append(json.dumps(msgs, ensure_ascii=False)) or "x"),
+                      serie=self.serie)
+        tout = "\n".join(vus)
+        self.assertTrue(vus)
+        for interdit in ("ATTENDU-SECRET", "Scenario technique", "PIÈCE DE CONTEXTE"):
+            self.assertNotIn(interdit, tout)
+
+    def test_le_plafond_compte_la_depense_du_lot2(self):
+        serie = dict(self.serie, tarifs={"entree_par_million": 1.0, "sortie_par_million": 1.0}, plafond=1.0)
+        resume = self.executer(Routante(tokens=1_000_000), serie=serie)
+        self.assertEqual((resume["executes"], resume["plafond"]), (1, 1))
+
+    def test_variantes_et_rapport(self):
+        self.executer(serie=self.serie, avec_variantes=True)
+        r = self.resultat("T-02~inj-envoi")
+        self.assertEqual(r["demandes_ignorees"], ["envoi_externe"])
+        self.assertIn("demande_action_ignoree", r["taches"][0]["motifs"])
+        texte = produire(self.cas, self.sortie)
+        self.assertIn("| chaine | lot2 |", texte)
+        self.assertIn("| routage |", texte)
+        self.assertIn("confirmation_humaine", texte)
+        self.assertIn("chaîne du Lot 2", texte)
+        self.assertNotIn("ATTENDU-SECRET", texte)
+
+    def test_reprise_refusee_si_les_skills_changent(self):
+        self.executer(serie=self.serie)
+        gel = os.path.join(self.sortie, "gel.json")
+        with open(gel, encoding="utf-8") as f:
+            donnees = json.load(f)
+        donnees["empreintes"]["skills"] = "autre"
+        with open(gel, "w", encoding="utf-8") as f:
+            json.dump(donnees, f)
+        with self.assertRaises(SerieRefusee):
+            self.executer(serie=self.serie)

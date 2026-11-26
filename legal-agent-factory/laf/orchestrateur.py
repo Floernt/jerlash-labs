@@ -33,12 +33,13 @@ MODELE_SIMULE = "simule-deterministe"
 
 class ChaineLot2:
     def __init__(self, entree: str, sortie: str, etat: str, registre_dossiers: str,
-                 passerelle=None, runtime=None):
+                 passerelle=None, runtime=None, modele: str = MODELE_SIMULE):
         verifier_repertoires(entree, sortie, etat)
         self.entree, self.sortie, self.etat = (os.path.abspath(p) for p in (entree, sortie, etat))
         self.dossiers = dossiers.charger_registre(registre_dossiers)
         self.passerelle = passerelle or PasserelleSimulee()
-        self.runtime = runtime or RuntimeLocal(self.passerelle)
+        self.modele = modele
+        self.runtime = runtime or RuntimeLocal(self.passerelle, modele)
         self.schema_routage = routeur.charger_schema()
         self.schema_courriel = courriel.charger_schema()
         self.sources = skills.charger_registre()
@@ -124,7 +125,7 @@ class ChaineLot2:
     def _ouvrir(self, evenement: dict, texte: str, rattachement: dict) -> dict:
         ev_id = evenement["id"]
         regles = routeur.regles_autorisations(texte)
-        classe = routeur.classifier(texte, self.passerelle, MODELE_SIMULE, self.schema_routage, TAILLE_MAX_EXTRAIT)
+        classe = routeur.classifier(texte, self.passerelle, self.modele, self.schema_routage, TAILLE_MAX_EXTRAIT)
         decision = routeur.decider(regles, classe, rattachement)
         self._ecrire("routages", ev_id, {"evenement_id": ev_id, "rattachement": rattachement, "regles": regles,
                                          "classification": classe, "routage": decision})

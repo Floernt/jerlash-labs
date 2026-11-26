@@ -2,6 +2,13 @@
 
 Ce qui est livré, par date : publié, ou prêt à l'être. Le détail des sessions est dans `LOG.md`, ce qui reste à faire dans `BACKLOG.md`.
 
+## 2026-11-25 - Collection Research papers et premier working paper, rapport Dentons (prêt à publier)
+
+- Revue : création de la collection Research papers (ADR-024, point 4), en français et en anglais, ajoutée au filtre « type de texte » de la Revue.
+- Working paper `JLL-RP-2026-001`, version 0.1 : « Ce que l'IA déplace entre juristes d'entreprise et cabinets d'avocats : quatre hypothèses à partir du rapport Dentons (2026) ». Quatre hypothèses, chacune avec ses limites et ses pistes de vérification ; les sources juridiques belges et européennes ne sont pas collationnées, ce que le texte indique.
+- Recension associée du rapport Dentons, publiée dans la collection Recensions, en français et en anglais.
+- Adresses : `/fr/revue/research-papers/ia-relation-client-cabinet-dentons/` et `/en/review/research-papers/ai-client-relationship-law-firms-dentons/`.
+
 ## 2026-11-11 - Gouvernance de l'IA : les trois téléchargements (prêt à relire)
 
 - Pack complet en zip, charte modèle en .docx et kit « petit cabinet » (les six éléments du niveau 1), en français et en anglais, proposés sur l'accueil de la boîte à outils. Le pack réunit les dix pages en Markdown, le kit, la charte, le tableur, le référentiel et les quatre registres vides que la page « Traçabilité, incidents et formation » annonçait sans les donner.

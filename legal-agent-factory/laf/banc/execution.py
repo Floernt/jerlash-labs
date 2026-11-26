@@ -1,4 +1,5 @@
-"""Exécution d'une série gelée sur la chaîne du Lot 1 (qualification puis runtime).
+"""Exécution d'une série gelée, sur la chaîne du Lot 1 (qualification puis runtime) ou,
+si la série porte `"chaine": "lot2"`, sur celle du Lot 2 (voir `lot2.py`).
 
 Ce que voit le système évalué : les pièces du cas et son canal. Jamais le scénario,
 ni la colonne `attendu`, ni une référence.
@@ -22,6 +23,7 @@ import time
 from .. import runtime
 from ..qualification import charger_schema, qualifier
 from ..securite import lire_texte
+from . import lot2 as mod_lot2
 from . import variantes as mod_variantes
 from .cas import empreinte_dossier, empreinte_fichier
 
@@ -72,17 +74,33 @@ def empreinte_code() -> str:
     return empreinte_dossier(DOSSIER_CODE, ".py")
 
 
+def chaine_de(config: dict) -> str:
+    return config.get("chaine", "lot1")
+
+
+def _empreintes_lot2(config: dict) -> dict:
+    """Tout ce qui détermine le comportement de la chaîne du Lot 2, hors code."""
+    config_laf = os.path.join(os.path.dirname(DOSSIER_CODE), "config")
+    return {
+        "dossiers": empreinte_fichier(config["dossiers"]),
+        "skills": empreinte_dossier(os.path.join(os.path.dirname(DOSSIER_CODE), "skills")),
+        **{f"config {n}": empreinte_fichier(os.path.join(config_laf, f"{n}.json"))
+           for n in ("schema-routage", "schema-courriel", "niveaux-action", "registre-sources")},
+    }
+
+
 def geler(config: dict, chemin_cas: str, dossier_pieces: str | None, sortie: str) -> dict:
+    empreintes = {"cas": empreinte_fichier(chemin_cas), "pieces": empreinte_dossier(dossier_pieces),
+                  "code": empreinte_code()}
+    if chaine_de(config) == "lot2":
+        empreintes.update(_empreintes_lot2(config))
+    else:
+        empreintes.update(instructions=empreinte_fichier(config["instructions"]),
+                          schema=empreinte_fichier(config["schema"]))
     gel = {
         # Le plafond n'est pas gelé : le relever permet de reprendre la même série.
         "serie": {k: v for k, v in config.items() if k != "plafond"},
-        "empreintes": {
-            "cas": empreinte_fichier(chemin_cas),
-            "pieces": empreinte_dossier(dossier_pieces),
-            "instructions": empreinte_fichier(config["instructions"]),
-            "schema": empreinte_fichier(config["schema"]),
-            "code": empreinte_code(),
-        },
+        "empreintes": empreintes,
     }
     chemin = os.path.join(sortie, "gel.json")
     if os.path.isfile(chemin):
@@ -129,6 +147,16 @@ def _executer_un(id_, canal, pieces, passerelle, config, schema, instructions) -
     }
 
 
+def _executer_un_lot2(id_unite, id_cas, canal, pieces, passerelle, config, sortie) -> dict:
+    compteur = _Compteur(passerelle)
+    debut = time.perf_counter()
+    mesures = mod_lot2.executer_un(id_unite, id_cas, canal, pieces, compteur, config,
+                                   os.path.join(sortie, "chaine", id_unite))
+    return dict(mesures, statut_execution="execute", duree_s=round(time.perf_counter() - debut, 4),
+                appels_modele=compteur.appels, tokens_entree=compteur.entree, tokens_sortie=compteur.sortie,
+                cout=cout(compteur.entree, compteur.sortie, config.get("tarifs")))
+
+
 def executer_serie(config: dict, cas: list[dict], chemin_cas: str, dossier_pieces: str | None,
                    sortie: str, passerelle, confirmer_holdout: bool = False,
                    avec_variantes: bool = False) -> dict:
@@ -142,9 +170,12 @@ def executer_serie(config: dict, cas: list[dict], chemin_cas: str, dossier_piece
         raise SerieRefusee("fournisseur réel : plafond de dépense et tarifs obligatoires dans la série")
 
     geler(config, chemin_cas, dossier_pieces, sortie)
-    schema = charger_schema(config["schema"])
-    with open(config["instructions"], encoding="utf-8") as f:
-        instructions = f.read()
+    lot2 = chaine_de(config) == "lot2"
+    schema = instructions = None
+    if not lot2:
+        schema = charger_schema(config["schema"])
+        with open(config["instructions"], encoding="utf-8") as f:
+            instructions = f.read()
     dossier_res = os.path.join(sortie, "resultats")
     os.makedirs(dossier_res, exist_ok=True)
 
@@ -172,8 +203,12 @@ def executer_serie(config: dict, cas: list[dict], chemin_cas: str, dossier_piece
                 res = dict(base, statut_execution="non_execute", motif="plafond_atteint")
                 resume["plafond"] += 1
             else:
-                res = dict(base, **_executer_un(id_unite, c["canal"], pieces_unite, passerelle,
-                                                config, schema, instructions))
+                if lot2:
+                    res = dict(base, **_executer_un_lot2(id_unite, c["id"], c["canal"], pieces_unite,
+                                                         passerelle, config, sortie))
+                else:
+                    res = dict(base, **_executer_un(id_unite, c["canal"], pieces_unite, passerelle,
+                                                    config, schema, instructions))
                 depense += res["cout"] or 0.0
                 resume["executes"] += 1
             if res.get("motif") != "plafond_atteint":  # rejouable une fois le plafond relevé

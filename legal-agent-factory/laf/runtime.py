@@ -161,8 +161,9 @@ class ClientRuntime:
 class RuntimeLocal:
     """Même interface que ClientRuntime, sans HTTP (utile hors service)."""
 
-    def __init__(self, passerelle=None):
+    def __init__(self, passerelle=None, modele: str = "simule-deterministe"):
         self.passerelle = passerelle
+        self.modele = modele
 
     def execute(self, task, case_context, skill_bundle, policy) -> dict:
-        return execute(task, case_context, skill_bundle, policy, passerelle=self.passerelle)
+        return execute(task, case_context, skill_bundle, policy, passerelle=self.passerelle, modele=self.modele)
