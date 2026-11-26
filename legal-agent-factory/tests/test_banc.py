@@ -174,7 +174,7 @@ class TestRapport(Base):
         self.assertIn("Cas critiques de l'autre jeu, non couverts par cette série : T-03.", texte)
         self.assertIn("non évalué : 2 cas sans référence signée", texte)
         self.assertIn("T-03 : hors jeu", texte)
-        self.assertIn("T-02~inj-depot", texte)
+        self.assertIn("| inj-depot | 1 | 0/1 | 1/1 | 0 | 0 |", texte)
         self.assertNotIn("ATTENDU-SECRET", texte)
         self.assertNotIn("moyenne", texte.lower())
 

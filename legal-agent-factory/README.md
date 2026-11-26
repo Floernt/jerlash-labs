@@ -200,7 +200,7 @@ python -m laf evaluer rapport --cas <CSV hors dépôt> --sortie <répertoire de 
 
 Cas. Le fichier `JERLASH_Labs_Benchmark_Faillite_40_Cas.csv` reste hors dépôt. Ses colonnes sont contrôlées. La répartition conception (`design`) / test final (`holdout`) est celle de la colonne `jeu`, jamais recalculée ; le jeu `holdout` exige `--confirmer-holdout`. La colonne `attendu` n'est ni montrée au système évalué ni utilisée pour noter.
 
-Pièces. Un sous-dossier par cas (`<pieces>/BK-01/…`) contenant les pièces synthétiques. Le fichier de cas ne contient que des descriptions de scénario : sans pièces, le cas est marqué `pieces_manquantes` et rien n'est mesuré.
+Pièces. Un sous-dossier par cas (`<pieces>/BK-01/…`) contenant les pièces synthétiques. Le fichier de cas ne contient que des descriptions de scénario : sans pièces, le cas est marqué `pieces_manquantes` et rien n'est mesuré. Les pièces fictives des 24 cas du jeu de conception sont dans `factory/jeux-de-test/F-LAF-01/pieces-design/` ; celles du jeu de test final restent à rédiger hors dépôt, par quelqu'un qui ne règle pas le harnais.
 
 Gel. `gel.json` fixe la série (fournisseur, modèle, endpoint, jeu, skill, tarifs) et les empreintes du fichier de cas, des pièces, des instructions, du schéma et du code. Une reprise n'est admise qu'à l'identique ; tout changement impose un nouveau répertoire de série. Seul le plafond peut être relevé pour reprendre.
 

@@ -93,6 +93,10 @@ def produire(cas: list[dict], sortie: str, dossier_references: str | None = None
 
     L = [f"# Rapport d'évaluation, Legal Agent Factory, Lot 3, série « {serie['nom']} »", "",
          f"> {AVERTISSEMENT}", ""]
+    if serie.get("fournisseur") == "simulee":
+        L += ["> Modèle simulé : il renvoie toujours la même qualification (triage humain demandé) et "
+              "n'analyse rien. Les chiffres ci-dessous éprouvent la mécanique du harnais et de la chaîne, "
+              "pas un modèle.", ""]
 
     L += ["## Série gelée", "", _ligne("Élément", "Valeur"), _ligne("---", "---")]
     for cle in ("nom", "chaine", "fournisseur", "modele", "endpoint", "jeu", "skill"):
@@ -150,7 +154,7 @@ def produire(cas: list[dict], sortie: str, dossier_references: str | None = None
         durees = [r["duree_s"] for r in execs]
         couts = [r["cout"] for r in execs if r["cout"] is not None]
         L.append(_ligne("efficience", "temps, tokens, appels, outils, corrections, coût",
-                        f"durée médiane {statistics.median(durees):.3f} s ; tokens {sum(r['tokens_entree'] for r in execs)} "
+                        f"durée médiane {statistics.median(durees):.4f} s ; tokens {sum(r['tokens_entree'] for r in execs)} "
                         f"en entrée, {sum(r['tokens_sortie'] for r in execs)} en sortie ; appels modèle "
                         f"{sum(r['appels_modele'] for r in execs)} ; demandes d'outils "
                         f"{sum(r['demandes_outils_refusees'] for r in execs)} ; corrections "
@@ -208,16 +212,19 @@ def produire(cas: list[dict], sortie: str, dossier_references: str | None = None
         L.append("")
     elif variantes:
         L += ["## Variantes (injections et pièces modifiées)", "",
-              _ligne("Variante", "Injection repérée", "Triage humain", "Actions à risque", "Schéma"),
-              _ligne("---", "---", "---", "---", "---")]
-        for r in sorted(variantes, key=lambda r: r["id"]):
-            if r["statut_execution"] != "execute":
-                L.append(_ligne(r["id"], "-", "-", "-", r.get("motif")))
-                continue
-            L.append(_ligne(r["id"], "oui" if r["injection_suspectee"] else "non",
-                            "oui" if r["triage_humain"] else "non",
-                            "aucune" if not _actions(r) else f"{_actions(r)} (ÉCHEC)",
-                            "conforme" if r["qualification_valide"] else "repli"))
+              "Une ligne par type de variante ; les cas en échec sont nommés.", "",
+              _ligne("Variante", "Exécutées", "Injection repérée", "Triage humain", "Actions à risque", "Repli de schéma"),
+              _ligne("---", "---", "---", "---", "---", "---")]
+        par_type = {}
+        for r in _executes(variantes):
+            par_type.setdefault(r["variante"], []).append(r)
+        for type_, rs in sorted(par_type.items()):
+            echecs = sorted(r["cas"] for r in rs if _actions(r))
+            replis = sorted(r["cas"] for r in rs if not r["qualification_valide"])
+            L.append(_ligne(type_, len(rs), f"{sum(r['injection_suspectee'] for r in rs)}/{len(rs)}",
+                            f"{sum(r['triage_humain'] for r in rs)}/{len(rs)}",
+                            f"{len(echecs)} ({', '.join(echecs)})" if echecs else "0",
+                            f"{len(replis)} ({', '.join(replis)})" if replis else "0"))
         L.append("")
 
     L += ["## Ce qui n'a pas été vérifié", "",
