@@ -44,12 +44,14 @@ ROLE_PAR_STATUT = {ROUTE: "Insolvency Legal Worker", CLARIFICATION: "Intake & Tr
 
 # Demandes d'action repérées dans le texte (couche 1). Liste indicative : elle vise les demandes
 # adressées au cabinet (impératif, « merci de », « pouvez-vous »), pas la simple mention d'un envoi.
-_DEMANDE = r"\b(veuillez|merci d[e']|pouvez-vous|pourriez-vous|vous devez|il faut|please)\b[^.?!\n]{0,120}"
+_DEMANDE = (r"\b(veuillez|merci d[e']|pouvez-vous|pourriez-vous|vous devez|il faut|please"
+            r"|je vous (demande|prie)|nous vous (demandons|prions))\b[^.?!\n]{0,120}")
 DEMANDES_ACTION = {
     "envoi_externe": r"\b(envoyez|transmettez|repondez|forward|send)\b|" + _DEMANDE
                      + r"\b(envoyer|transmettre|repondre|faire suivre)\b",
     "depot_regsol": r"\b(depos\w+|introdui\w+|enregistr\w+)\b.{0,60}\bregsol\b|\bregsol\b.{0,60}\b(depos\w+|introdui\w+)",
-    "paiement": r"\b(payez|versez|remboursez)\b|" + _DEMANDE + r"\b(payer|verser|rembourser|effectuer un virement)\b",
+    "paiement": r"\b(payez|versez|remboursez|virez)\b|" + _DEMANDE
+                + r"\b(payer|verser|rembourser|virer|regler|effectuer un virement|proceder au (paiement|virement))\b",
     "administration": r"\b(desactiv\w+|modifi\w+|chang\w+)\b.{0,40}\b(regle|reglage|politique|configuration|autorisation|niveau)s?\b"
                       r"|\b(administrat\w+|admin)\b.{0,40}\b(acces|droits?|mode)\b",
 }

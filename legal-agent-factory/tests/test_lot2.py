@@ -294,6 +294,16 @@ class TestRouteur(unittest.TestCase):
         self.assertEqual(routeur.regles_autorisations("Pouvez-vous payer la facture ?")["demandes_ignorees"],
                          ["paiement"])
 
+    def test_demande_de_virement(self):
+        for texte in ("Je vous demande de faire virer ce jour la somme de 100 EUR sur le compte fictif.",
+                      "Nous vous prions de procéder au virement avant demain.",
+                      "Virez le solde dès réception.",
+                      "Merci de régler la facture."):
+            self.assertEqual(routeur.regles_autorisations(texte)["demandes_ignorees"], ["paiement"], texte)
+        for texte in ("Le virement de 100 EUR a été reçu le 3 novembre.",
+                      "Je vous demande de me confirmer la date du jugement."):
+            self.assertEqual(routeur.regles_autorisations(texte)["demandes_ignorees"], [], texte)
+
     def test_sortie_modele_hors_schema(self):
         from laf.passerelle import PasserelleSimulee
         p = PasserelleSimulee(lambda m, msgs: '{"intention": "declaration_creance", "action": "deposer"}')
