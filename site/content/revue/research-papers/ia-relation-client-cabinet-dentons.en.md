@@ -15,14 +15,14 @@ licence: "CC BY 4.0"
 financement: "none"
 conflits_interets: "none"
 traduction:
-  source: "d73ad43422f790ba281da63cba319ff1607afd72"
+  source: "24eee1807aaf4d1ea1552fed569e6214e34838f3"
 ---
 
 ## 1. The question
 
 The law firm Dentons published in October 2026 a report based on interviews with in-house lawyers from organisations that are mostly Irish, seven of which it names (Dentons, 2026). A [review](/revue/recensions/ia-juristes-entreprise-dentons/) presents its content and limits in the same collection of the Revue. This text starts from another question, which the report raises in its conclusion without addressing it: what does the use of AI, by companies and by law firms, change in what clients expect from their lawyer and in what they are willing to pay?
 
-The report answers with a formula. Clients would expect firms to use the same tools as they do, to use them well, and to be “able to show, credibly, how a human being reviewed the output”; it is, the report concludes, “a question of trust”. The formula is right, in our view, but it leaves the essential open: what showing means, at what cost, and who bears it.
+The report answers with a formula. Clients would expect firms to use the same tools as they do, to use them well, and to be “able to show, credibly, how a human being reviewed the output”; it is, the report concludes, “a trust issue”. The formula is right, in our view, but it leaves the essential open: what showing means, at what cost, and who bears it.
 
 We will not try here to establish what in-house lawyers think, but rather to formulate, from the testimony the report relates, hypotheses precise enough to be tested afterwards.
 
@@ -42,9 +42,9 @@ The value of the report depends on the type of statement. We distinguish three.
 
 Testimony consists of words attributed to a named person, about their own practice (“I built an agent I call the ‘final checker’”). It is the most interesting material in the report, with one reservation: we do not know the question that prompted it nor what was cut.
 
-Editorial assertions are generalisations by the report itself (“the question of volume was raised by practically every interviewee”). They summarise the interviews, without any way of checking the summary.
+Editorial assertions are generalisations by the report itself (“The volume issue was cited by virtually every interviewee”). They summarise the interviews, without any way of checking the summary.
 
-Projections concern the future (“I think the whole token economics will mean we will probably hire people to monitor the cost of AI”). They say what one person thinks.
+Projections concern the future (“I think the whole token economics will mean we'll probably hire people to monitor AI cost in a big law firm”). They say what one person thinks.
 
 ### 2.3 Classification of some key statements
 
@@ -56,7 +56,7 @@ The table below classifies the statements on which the hypotheses that follow re
 | Successful uses are narrow, reworked tasks | Editorial assertion | Examples from Uniphar, eir, IMRO, Mastercard |
 | Governance becomes the business of several functions | Editorial assertion | eir (governance forum), Gilead |
 | AI-assisted drafting touches “the majority” of incoming requests | Editorial assertion | No count; testimony |
-| Volume was raised by “practically every interviewee” | Editorial assertion | Six testimonies |
+| Volume was cited by “virtually every interviewee” | Editorial assertion | Six testimonies |
 | AI costs rising two- to fivefold within two years | Projection attributed to C. Grossmann | Absent from the body of the text, which mentions a “cost cliff” without a figure |
 | A dashboard could save 200,000 dollars on one matter | Projection by its author, not named | Absent from the body of the text |
 | Nobody has demonstrated a return on investment | Testimony (R. Dobson) | Taken up by the report |
@@ -74,11 +74,11 @@ The hypotheses that follow therefore start from testimony, and their scope is th
 
 ### 4.1 What the report says
 
-Three passages point in the same direction. Máire Neary (Flipdish) expects firms to use AI, but “I want to see responsible use of it”. Jessica Williams (Mastercard) envisages outside lawyers one day becoming “the auditors of our AI output”. And the conclusion makes the ability to show how a human reviewed the output the condition of trust.
+Three passages point in the same direction. Máire Neary (Flipdish) expects firms to use AI, but “I want to see responsible use of it”. Jessica Williams (Mastercard) envisages outside lawyers one day becoming “auditors to our AI production”. And the conclusion makes the ability to show how a human reviewed the output the condition of trust.
 
 ### 4.2 Proposed analysis
 
-Lawyers have always reviewed what they signed, and nobody asked them to prove it: the signature stood for review. The hypothesis we put forward is that AI weakens this presumption. When clients know that a first draft can be produced in a few seconds, and produce such drafts themselves, they can no longer infer from the apparent quality of a text that a lawyer has examined it. The report says so in its own way, about incoming correspondence: AI produces “content that sometimes looks good, but isn't always” (Deirdre MacCarthy, Wayflyer). What holds for the letters the company receives holds for the opinions it receives from its lawyers.
+Lawyers have always reviewed what they signed, and nobody asked them to prove it: the signature stood for review. The hypothesis we put forward is that AI weakens this presumption. When clients know that a first draft can be produced in a few seconds, and produce such drafts themselves, they can no longer infer from the apparent quality of a text that a lawyer has examined it. The report says so in its own way, about incoming correspondence: AI produces “content that sometimes looks good, but may not always be good” (Deirdre MacCarthy, Wayflyer). What holds for the letters the company receives holds for the opinions it receives from its lawyers.
 
 If the hypothesis is right, review changes status. It remains a duty of care, but it also becomes an element of the service that clients want to be able to see. Several forms are conceivable, from the lightest to the heaviest: a statement in the engagement letter on the use of AI and review; an indication, in each opinion, of what was checked against the sources and by whom; a retained record of the checks carried out, which the client can ask for. The [AI governance](/outils/gouvernance-ia/) toolkit of jerlash.labs already proposes checks of this kind within the firm; the hypothesis here is that some of them may have to be shown to the client.
 
@@ -92,7 +92,7 @@ We see three limits to this hypothesis. It rests on two testimonies and one sent
 
 ### 5.1 What the report says
 
-Chapter 3 is devoted to what the report calls “the volume problem”. Data subject access requests, customer complaints and employee grievances drafted with AI arrive in greater numbers and are longer. The foreword adds that the law often requires a response “point by point, even when only one or two points have substance”. Sorcha Nic Mhurchú (eir) places the cost: one has to work out “line by line, what is relevant”. Máire Neary (Flipdish) draws an organisational consequence: human resources will need a more legal approach, and lawyers an approach more attentive to people. David Kirton (Dentons) adds that the requester does not necessarily gain from it: a long letter in legal vocabulary “more often than not […] will not really help them advance their case”.
+Chapter 3 is devoted to what the report calls “the volume problem”. Data subject access requests, customer complaints and employee grievances drafted with AI arrive in greater numbers and are longer. The foreword adds that the law often requires a response “point by point even where only one or two points have substance”. Sorcha Nic Mhurchú (eir) places the cost: one has to work out “line by line, what is relevant”. Máire Neary (Flipdish) draws an organisational consequence: human resources will need a more legal approach, and lawyers an approach more attentive to people. David Kirton (Dentons) adds that the requester does not necessarily gain from it: a long letter in legal vocabulary “more often than not it won't actually help them advance their case”.
 
 ### 5.2 Proposed analysis
 
@@ -102,19 +102,19 @@ The right of access under the GDPR is the best ground on which to examine it, be
 
 If that is the case, the answer is organisational, and the report describes two. The first is to respond with the same tools: IMRO has built a chatbot on its website for common questions. The second is to outsource: Dentons now offers a managed service for high-volume complaints. Both answers have a consequence that must be named: requests produced by AI are handled by AI, which raises once again the question of review (hypothesis 1), this time for responses that commit the company towards a person exercising a right.
 
-The report also points to an internal volume. Sergey Kinchin (Uniphar) describes a meeting where five people came with six AI-generated opinions on a regulatory question, and where the tool, asked to reconcile them, “had more or less confused itself”. For an in-house lawyer, AI therefore multiplies non-legal opinions on legal questions, even before the lawyer is consulted.
+The report also points to an internal volume. Sergey Kinchin (Uniphar) describes a meeting where five people came with six AI-generated opinions on a regulatory question, and where the tool, asked to reconcile them, “had essentially confused itself”. For an in-house lawyer, AI therefore multiplies non-legal opinions on legal questions, even before the lawyer is consulted.
 
 ### 5.3 Limits
 
-The report quantifies nothing. The executive summary's assertion that AI-assisted drafting touches “the majority” of incoming requests has no support in the body of the text. The hypothesis holds for recipients who receive many requests, large companies and public administrations; it says little about a firm of a few lawyers. Finally, the point of view is exclusively that of the recipient. The report gives no voice to requesters, for whom AI can also be a means of exercising a right they would not have known how to formulate, which Seán Donegan acknowledges in passing (“if it levels the playing field […], that's a good thing for society”).
+The report quantifies nothing. The executive summary's assertion that AI-assisted drafting touches “the majority” of incoming requests has no support in the body of the text. The hypothesis holds for recipients who receive many requests, large companies and public administrations; it says little about a firm of a few lawyers. Finally, the point of view is exclusively that of the recipient. The report gives no voice to requesters, for whom AI can also be a means of exercising a right they would not have known how to formulate, which Seán Donegan acknowledges in passing (“If it levels up the playing field for people who don't have access to professional services, hey, that's a good thing for society”).
 
 ## 6. Hypothesis 3: the cost of use raises a question of expenses that the debate on the hourly rate does not address
 
 ### 6.1 What the report says
 
-The report announces the shift from licence-based pricing of tools to consumption-based pricing. The testimony describes the resulting uncertainty: Jessica Williams (Mastercard) asks vendors for means of control to “establish a predictable budget line”; Sorcha Nic Mhurchú (eir) fears getting onto “a treadmill where you just keep paying more and more fees”; Deirdre MacCarthy (Wayflyer) announces work on choosing the right model for each task, at the right price.
+The report announces the shift from licence-based pricing of tools to consumption-based pricing. The testimony describes the resulting uncertainty: Jessica Williams (Mastercard) asks vendors for means of control to “create a predictable budget line”; Sorcha Nic Mhurchú (eir) fears being “on a treadmill of just paying more fees”; Deirdre MacCarthy (Wayflyer) announces work on choosing the right model for each task, at the right price.
 
-On the hourly rate, two positions are opposed. Cornelius Grossmann (Dentons) argues that the billable hour passes productivity gains on to the client by itself, provided it is applied fairly: “fewer hours, lower bills”. Rebekah Dobson (Gilead Sciences) replies that she pays not for the output but for the expertise, and that the billable hour “has to go, on both sides”. David Kirton (Dentons) states that most of his team's work is already billed on an estimate or a fixed-fee basis.
+On the hourly rate, two positions are opposed. Cornelius Grossmann (Dentons) argues that the billable hour passes productivity gains on to the client by itself, provided it is applied fairly: “fewer hours, lower bills”. Rebekah Dobson (Gilead Sciences) replies that she pays not for the output but for the expertise, and that the billable hour “needs to die from both sides”. David Kirton (Dentons) states that most of his team's work is already billed on an estimate or a fixed-fee basis.
 
 ### 6.2 Proposed analysis
 
@@ -132,11 +132,11 @@ This hypothesis rests on a price trend that the report announces without demonst
 
 ### 7.1 What the report says
 
-Cornelius Grossmann (Dentons) formulates the risk of a “judgement gap”: current gains come from experienced partners using AI and spotting its errors; without experience or training, no judgement, and without judgement, no benefit from AI. Junior lawyers learn faster with AI, he adds, but if they learn “too fast”, they do not develop that judgement. The report specifies that other interviewees expressed the same concern, without naming them. Máire Neary (Flipdish), for her part, presents AI as “a junior colleague”, while recalling that it is the lawyer who remains “in the driving seat”.
+Cornelius Grossmann (Dentons) formulates the risk of a “judgement gap”: current gains come from experienced partners using AI and spotting its errors; without experience or training, no judgement, and without judgement, no benefit from AI. Junior lawyers learn faster with AI, he adds, but if they learn “too fast”, they do not develop that judgement. The report specifies that other interviewees expressed the same concern, without naming them. Máire Neary (Flipdish), for her part, presents AI as “a junior colleague”, while recalling that one remains “the lawyer in charge at the end of the day”.
 
 ### 7.2 Proposed analysis
 
-The hypothesis is that the benefit of AI in legal work is self-limiting: it rests on a judgement formed through the practice of tasks that AI now takes over. If the formative tasks disappear without being replaced by something else, the judgement that makes AI useful forms less well, and the gain declines as the generation trained without AI leaves the profession. Grossmann says it in one sentence: there will never be “a moment where we get as much benefit out of AI as we do today”.
+The hypothesis is that the benefit of AI in legal work is self-limiting: it rests on a judgement formed through the practice of tasks that AI now takes over. If the formative tasks disappear without being replaced by something else, the judgement that makes AI useful forms less well, and the gain declines as the generation trained without AI leaves the profession. Grossmann says it in one sentence: there will never be “a time where you get as much benefit from AI as you have right now”.
 
 This hypothesis ties in directly with the question of the Agency & AI programme: under what conditions does the use of AI strengthen judgement rather than replace it? The report provides an element that runs counter to intuition: Rebekah Dobson (Gilead Sciences) observes that neither seniority, nor geography, nor sector predicts who adopts AI well. If adoption does not depend on age, the risk of the judgement gap does not concern only beginners; it concerns anyone who delegates a task they have never known how to do themselves.
 
